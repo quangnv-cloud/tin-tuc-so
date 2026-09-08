@@ -1,0 +1,69 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+
+    .hk-photo { position: absolute; left: 0; right: 0; top: 0; height: 940px; overflow: hidden; background: #05070c; }
+    .hk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 52% 24%; }
+    .hk-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,14,20,0.12) 0%, rgba(11,14,20,0.25) 48%, rgba(11,14,20,0.99) 100%); }
+    .hk-tint { position: absolute; inset: 0; background: radial-gradient(120% 70% at 78% 20%, rgba(76,141,255,0.14), transparent 58%); mix-blend-mode: screen; }
+
+    .hk-panel { position: absolute; left: 0; right: 0; top: 882px; bottom: 0; background: #0B0E14; padding: 74px 60px 90px; display: flex; flex-direction: column; align-items: flex-start; }
+    .hk-masthead { display: flex; align-items: center; gap: 13px; margin-bottom: 24px; opacity: 0; }
+    .hk-logo { width: 52px; height: 52px; flex: none; }
+    .hk-logo img { display: block; width: 100%; height: 100%; }
+    .hk-mw { font-weight: 800; font-size: 30px; letter-spacing: 0.01em; color: #fff; }
+
+    .hk-badge { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; border-radius: 9px; border: 1.5px solid rgba(76,141,255,0.85); background: rgba(76,141,255,0.12); margin-bottom: 28px; opacity: 0; }
+    .hk-badge .d { width: 8px; height: 8px; border-radius: 50%; background: #4C8DFF; flex: none; }
+    .hk-badge span { font-weight: 500; font-size: 21px; letter-spacing: 0.03em; color: #fff; white-space: nowrap; }
+
+    .hk-name { font-weight: 900; font-size: 208px; line-height: 1; letter-spacing: -0.02em; color: #4C8DFF; }
+    .hk-name-wrap { overflow: hidden; }
+    .hk-tags { display: flex; gap: 16px; margin-top: 22px; }
+    .hk-tag { font-weight: 800; font-size: 44px; line-height: 1; color: #fff; opacity: 0; }
+    .hk-tag.warn { color: #FF8A5B; }
+    .hk-tag .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: currentColor; margin: 0 14px 8px 0; vertical-align: middle; }
+  </style>
+
+  <div data-hf-id="hf-qxrg" id="root" data-composition-id="01-hook" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-0e74" class="hk-photo">
+      <img data-hf-id="hf-wdgs" src="assets/img/article-hero.jpg" alt="">
+      <div data-hf-id="hf-xn8e" class="hk-scrim"></div>
+      <div data-hf-id="hf-5sur" class="hk-tint"></div>
+    </div>
+
+    <div data-hf-id="hf-u3em" class="hk-panel">
+      <div data-hf-id="hf-kj79" class="hk-masthead">
+        <div data-hf-id="hf-nq0p" class="hk-logo"><img data-hf-id="hf-8iod" src="public/logo.png" alt=""></div>
+        <div data-hf-id="hf-z9qe" class="hk-mw">Công Nghệ Số</div>
+      </div>
+      <div data-hf-id="hf-5onh" class="hk-badge"><span data-hf-id="hf-5jqr" class="d"></span><span data-hf-id="hf-0sda">Nguồn: TechCrunch · 3/9/2026</span></div>
+      <div data-hf-id="hf-q5v2" class="hk-name-wrap"><div data-hf-id="hf-unht" class="hk-name" id="hk-name">Astra</div></div>
+      <div data-hf-id="hf-row7" class="hk-tags">
+        <div data-hf-id="hf-zcai" class="hk-tag" id="hk-t1"><span data-hf-id="hf-9gry" class="dot"></span>Mạnh nhất</div>
+        <div data-hf-id="hf-bj2h" class="hk-tag warn" id="hk-t2"><span data-hf-id="hf-zcc2" class="dot"></span>Tranh cãi nhất</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.hk-photo', { autoAlpha: 0.5, scale: 1.1 }, { autoAlpha: 1, scale: 1, duration: 0.95, ease: 'power2.out' }, 0);
+    tl.fromTo('.hk-panel', { y: 48 }, { y: 0, duration: 0.55, ease: 'power3.out' }, 0.08);
+    tl.fromTo('.hk-masthead', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.28);
+    tl.fromTo('.hk-badge', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.36, ease: 'back.out(1.7)' }, 0.5);
+    tl.fromTo('#hk-name', { yPercent: 118 }, { yPercent: 0, duration: 0.7, ease: 'power4.out' }, 0.82);
+    tl.fromTo('#hk-t1', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 1.45);
+    tl.fromTo('#hk-t2', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 1.7);
+    window.__timelines['01-hook'] = tl;
+  </script>
+</template>

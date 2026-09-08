@@ -1,0 +1,17 @@
+{
+  "_comment": "Bản sao cho người đọc. Con trỏ THẬT do Apps Script quản lý (Script Property STYLE_CURSOR, cấp qua POST {action:claim_style}). Xem CONSTRUCTION-STYLES.md. Tuyến Tin Tức Số bắt đầu từ đầu vòng xoay — claim_style đầu tiên trả index 0.",
+  "rotation": [
+    "1-card-and-bar",
+    "2-chip-and-leaderboard",
+    "3-ticker-tape",
+    "4-split-comparison",
+    "5-map-and-geo",
+    "6-ring-progress",
+    "7-timeline-chronology",
+    "8-icon-grid",
+    "9-editorial-clipping",
+    "10-stock-terminal"
+  ],
+  "last_used_index": null,
+  "log": []
+}
