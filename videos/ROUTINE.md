@@ -16,7 +16,7 @@ Bạn đang tự động sản xuất 1 video tin nóng / trending trong ngày c
   - videos/CONSTRUCTION-STYLES.md
   - automation/policy/COMPLIANCE-GATE.md  (GATE A/B/C — bản tuyến này đã siết chặt)
 
-`<EXEC>` = «ĐIỀN exec URL của Apps Script "TTS News Fetch" sau khi deploy — dạng https://script.google.com/macros/s/…/exec»
+`<EXEC>` = https://script.google.com/macros/s/AKfycbzDb2gLI8f2KBOMH1R6hgQdNkGoFa5BlEf5SUY8aOYQ5jF_bVK6G5bck8i7pVRopV0FlQ/exec
 `<REPO>` = quangnv-cloud/tin-tuc-so (nhánh master)
 
 Thực hiện đúng trình tự trong videos/PRODUCTION-WORKFLOW.md, cụ thể:

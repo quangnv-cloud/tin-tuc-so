@@ -4,8 +4,8 @@ Runbook thao tác cho MỌI video tin nóng / trending trong ngày. Toàn bộ q
 `BRAND-SYSTEM.md`, 10 cách dựng ở `CONSTRUCTION-STYLES.md`, trình tự routine đầy đủ ở `ROUTINE.md`
 — đọc song song, không lặp lại ở đây.
 
-`<EXEC>` = exec URL của Apps Script "TTS News Fetch": «điền sau khi deploy — dạng
-`https://script.google.com/macros/s/…/exec`»
+`<EXEC>` = exec URL của Apps Script "TTS News Fetch":
+`https://script.google.com/macros/s/AKfycbzDb2gLI8f2KBOMH1R6hgQdNkGoFa5BlEf5SUY8aOYQ5jF_bVK6G5bck8i7pVRopV0FlQ/exec`
 `<REPO>` = `quangnv-cloud/tin-tuc-so` (nhánh `master`)
 
 ## 0. Trước khi bắt đầu

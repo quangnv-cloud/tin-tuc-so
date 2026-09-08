@@ -24,7 +24,8 @@ Deploy bằng **Gmail cá nhân** `minhanhh1108@gmail.com` (cùng tài khoản 2
      Trends, cột `trafficApprox` + `related` có dữ liệu) và `category = news`.
 5. Dropdown → `installHourlyTrigger` → **Run** một lần (lịch chạy `fetchAndStore` mỗi giờ).
 6. **Triển khai → Tùy chọn triển khai mới** → Web app · Execute as **Me** · Who has access
-   **Anyone** → Deploy → copy **exec URL** (`https://script.google.com/macros/s/…/exec`).
+   **Anyone** → Deploy → copy **exec URL**.
+   Đã deploy (08/09/2026, Phiên bản 2): `https://script.google.com/macros/s/AKfycbzDb2gLI8f2KBOMH1R6hgQdNkGoFa5BlEf5SUY8aOYQ5jF_bVK6G5bck8i7pVRopV0FlQ/exec`
 7. Mở exec URL ở tab ẩn danh → thấy `{"items":[...]}`. Thử `?category=trend` và `?category=news`.
    *(Test bằng `curl` từ máy cá nhân VN có thể trả 403 do ISP chặn `script.google.com` — verify từ
    cloud sandbox mới chính xác.)*
