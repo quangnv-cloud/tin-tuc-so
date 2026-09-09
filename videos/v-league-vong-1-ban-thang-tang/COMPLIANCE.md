@@ -2,7 +2,7 @@
 
 ```
 policy_version: youtube v1.0 / meta v3.0
-checked_at: 2026-09-09T07:10:00Z
+checked_at: 2026-09-09T07:15:00Z
 platforms: [facebook_reel, youtube_shorts]
 
 GATE A (topic pick): GREEN
@@ -28,5 +28,7 @@ claims_verified:
   - "HLV Kim Sang-sik đang tìm nhân tố mới cho đội tuyển Việt Nam, hướng tới giải bóng đá vô địch Đông Nam Á sắp tới — nêu là bối cảnh có thật (giải đấu sắp diễn ra), KHÔNG suy đoán kết quả tương lai của đội tuyển, đối chiếu BRIEF.md"
 sensitive_flags: []
 vietnam_legal_flags: []
-notes: "Nhóm A2 (kết quả thể thao có yếu tố VN, giải trong nước) — không đụng đời tư cầu thủ, không yếu tố hình sự/chính trị. Ảnh hero không phải ảnh của 3 trận đấu cụ thể được nêu trong script (do ?image= của item trending/news đúng chủ đề đều không dùng được — xem BRIEF.md mục Ảnh minh hoạ) — đã xử lý bằng caption trung lập 'Mùa giải 2026-2027' và không gắn tên đội/cầu thủ cạnh ảnh, giữ badge nguồn nội dung là Thanh Niên xuyên suốt (tiền lệ tương tự video iphone-18-ra-mat-viet-nam dùng ảnh Dân Trí trong khi badge nguồn là VnExpress). Voiceover giữ đúng SCRIPT.md đã chốt (không viết tắt V-League/VAR trong lời đọc); verify phiên âm ngược (Gemini gemini-flash-latest, transcribe từng dòng line1-7.mp3 riêng) khớp chính xác nội dung 7 dòng, không phát hiện lỗi đọc lắp/đánh vần/sai nghĩa."
+notes: "Nhóm A2 (kết quả thể thao có yếu tố VN, giải trong nước) — không đụng đời tư cầu thủ, không yếu tố hình sự/chính trị. Ảnh hero không phải ảnh của 3 trận đấu cụ thể được nêu trong script (do ?image= của item trending/news đúng chủ đề đều không dùng được — xem BRIEF.md mục Ảnh minh hoạ) — đã xử lý bằng caption trung lập 'Mùa giải 2026-2027' và không gắn tên đội/cầu thủ cạnh ảnh, giữ badge nguồn nội dung là Thanh Niên xuyên suốt (tiền lệ tương tự video iphone-18-ra-mat-viet-nam dùng ảnh Dân Trí trong khi badge nguồn là VnExpress). Voiceover giữ đúng SCRIPT.md đã chốt (không viết tắt V-League/VAR trong lời đọc); verify phiên âm ngược (Gemini gemini-flash-latest, transcribe từng dòng line1-7.mp3 riêng) khớp chính xác nội dung 7 dòng, không phát hiện lỗi đọc lắp/đánh vần/sai nghĩa.
+
+SỬA SAU KHI REVIEW (phiên điều phối chính, trước khi đăng): frame 'Key facts' (compositions/frames/03-facts.html) có dòng tóm tắt trên-màn-hình (KHÔNG phải lời đọc — chỉ là text đồ hoạ do agent dựng tự thêm, không có trong SCRIPT.md/BRIEF.md) ghi 'Cả 3 trận đều ghi từ 5 bàn trở lên' — SAI, vì trận Nam Định 4-0 HAGL chỉ có tổng 4 bàn, mâu thuẫn với chính 3 tỷ số hiển thị ngay phía trên trong cùng frame (vi phạm GATE B1 — số liệu không truy được về nguồn, tự mâu thuẫn nội tại). Đã sửa thành 'Cả 3 trận đều có từ 4 bàn thắng trở lên' (đúng: tổng bàn mỗi trận là 4, 5, 5 — tất cả ≥4), re-render toàn bộ (duration không đổi 56.333s, không đụng audio/timing nên transcript và silencedetect vẫn hợp lệ), đã trích lại frame tại mốc lỗi để xác nhận bằng mắt. Toàn bộ 7 act đã được xem lại qua frame thật trích từ file render (không chỉ dựa self-report của bước dựng) trước khi duyệt đăng."
 ```
