@@ -38,10 +38,23 @@ vietnam_legal_flags: []
 notes: "Nguyên nhân giá dầu thế giới được viết ở mức khái quát ('đà biến động thị trường năng lượng
   thế giới', theo đúng cách VnExpress đóng khung) — KHÔNG nêu chi tiết xung đột vũ trang cụ thể dù bài
   gốc Tuổi Trẻ/VnExpress có nhắc căng thẳng Mỹ-Iran, để giữ trọng tâm video 100% ở chủ đề giá xăng dầu
-  trong nước (A2) và tránh chạm nhóm A1 'xung đột vũ trang/đối ngoại'. Verify 4 bước: (1) ffprobe
-  duration 58.47s khớp thiết kế 58.44s; (2) silencedetect noise=-35dB/d=0.6 — không phát hiện khoảng
-  lặng chết; (3) 9 frame trích xuất khớp thiết kế, không phần tử bịa, cân bằng dọc đạt (nội dung kết
-  thúc trong khoảng top 1400-1680px mọi frame, đã sửa 2 lỗi bố cục ở act Impact và CTA trước khi
-  render cuối); (4) transcript (Gemini gemini-flash-latest, do Whisper host có thể bị chặn ở sandbox)
-  khớp SCRIPT.md, không câu nào 'chế thêm'. LẦN CHẠY TEST — KHÔNG đăng Facebook/YouTube (bước 14-16 bị bỏ qua có chủ đích theo yêu cầu)."
+  trong nước (A2) và tránh chạm nhóm A1 'xung đột vũ trang/đối ngoại'.
+
+  [Vòng review với người dùng sau bản render đầu] Người dùng phản hồi 2 lỗi trên bản render đầu
+  (58.44s): (1) dấu thanh của tiêu đề Hook ('GIÁ XĂNG'/'DẦU TĂNG', Montserrat 900/140px) bị cắt phần
+  trên do `line-height:1` quá chật bên trong wrapper `overflow:hidden` dùng cho hiệu ứng slide-up —
+  sửa `line-height` lên 1.22 cho `.hk-name`, xác nhận lại bằng Studio thumbnail: dấu hiện đầy đủ,
+  không cắt. (2) đoạn kết bị cụt gấp — pad sau voice line 7 chỉ 0.4s trước khi cắt cứng — tăng
+  `data-duration` act CTA từ 6.93s lên 8.70s (thêm ~1.8s), tổng video từ 58.44s lên 60.21s; sinh lại
+  BGM Lyria (preset/negative-prompt giữ nguyên) đủ độ dài mới, retrim + fade-out 2.5s cuối tại
+  57.71-60.21s, chạy lại `carve.mjs --strength 0.4` sau khi đổi timing/audio theo đúng quy định.
+  `npm run check` PASS lại sau cả 2 fix (0 lỗi lint/runtime/layout/motion, contrast 45/45 AA).
+  Render lại bản cuối (60.23s) và verify lại đầy đủ 4 bước: (1) ffprobe duration 60.23s khớp thiết
+  kế 60.21s; (2) silencedetect noise=-35dB/d=0.6 — không phát hiện khoảng lặng chết; (3) trích frame
+  Hook (t=3.5s) xác nhận dấu không còn bị cắt, frame gần cuối (t=59.5s) xác nhận CTA giữ ổn định,
+  không cắt gấp; (4) transcript (Gemini gemini-flash-latest) khớp SCRIPT.md, không câu nào 'chế
+  thêm' — nội dung audio không đổi so với bản đầu, chỉ kéo dài phần giữ hình tĩnh cuối act CTA.
+  Xuất lại thumbnail từ bản render cuối (t=3.5s, dấu hiển thị đầy đủ).
+
+  LẦN CHẠY TEST — KHÔNG đăng Facebook/YouTube (bước 14-16 bị bỏ qua có chủ đích theo yêu cầu)."
 ```
