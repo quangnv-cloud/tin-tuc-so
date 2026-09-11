@@ -1,0 +1,72 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+
+    .ct-kicker { position: absolute; left: 60px; top: 300px; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .ct-head { position: absolute; left: 60px; right: 60px; top: 356px; font-weight: 800; font-size: 46px; line-height: 1.28; color: #fff; opacity: 0; }
+    .ct-note { position: absolute; left: 60px; right: 60px; top: 540px; font-weight: 500; font-size: 28px; line-height: 1.4; color: rgba(255,255,255,0.62); opacity: 0; }
+
+    .ct-grid { position: absolute; left: 60px; right: 60px; top: 640px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px; height: 820px; }
+    .ct-cell { border-radius: 20px; border: 1.5px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.04); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; opacity: 0; transform: scale(0.9); }
+    .ct-cell.now { border-color: rgba(255,90,31,0.75); background: rgba(255,90,31,0.12); }
+    .ct-cell .pin { width: 40px; height: 40px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 4px solid #FF5A1F; }
+    .ct-cell.now .pin { background: #FF5A1F; }
+    .ct-cell .name { font-weight: 700; font-size: 26px; letter-spacing: 0.02em; color: rgba(255,255,255,0.78); text-transform: uppercase; text-align: center; }
+    .ct-cell .price { font-weight: 900; font-size: 40px; color: #fff; text-align: center; }
+    .ct-cell.now .price { color: #FF5A1F; }
+  </style>
+
+  <div data-hf-id="hf-c-r0" id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+    <div data-hf-id="hf-c-kc" class="ct-kicker">So sánh giá xăng cùng ngày</div>
+    <div data-hf-id="hf-c-hd" class="ct-head">Giá xăng Việt Nam vẫn thấp hơn khu vực</div>
+    <div data-hf-id="hf-c-nt" class="ct-note">Nguyên nhân chính: đà biến động của thị trường năng lượng thế giới những ngày qua.</div>
+
+    <div data-hf-id="hf-c-gr" class="ct-grid">
+      <div data-hf-id="hf-c-c1" class="ct-cell now" id="ct-c1">
+        <div data-hf-id="hf-c-p1" class="pin"></div>
+        <div data-hf-id="hf-c-n1" class="name">Việt Nam</div>
+        <div data-hf-id="hf-c-v1" class="price">23.744 – 24.239đ</div>
+      </div>
+      <div data-hf-id="hf-c-c2" class="ct-cell" id="ct-c2">
+        <div data-hf-id="hf-c-p2" class="pin"></div>
+        <div data-hf-id="hf-c-n2" class="name">Campuchia &amp; Thái Lan</div>
+        <div data-hf-id="hf-c-v2" class="price">28.330 – 30.000đ</div>
+      </div>
+      <div data-hf-id="hf-c-c3" class="ct-cell" id="ct-c3">
+        <div data-hf-id="hf-c-p3" class="pin"></div>
+        <div data-hf-id="hf-c-n3" class="name">Trung Quốc</div>
+        <div data-hf-id="hf-c-v3" class="price">Hơn 32.870đ</div>
+      </div>
+      <div data-hf-id="hf-c-c4" class="ct-cell" id="ct-c4">
+        <div data-hf-id="hf-c-p4" class="pin"></div>
+        <div data-hf-id="hf-c-n4" class="name">Lào</div>
+        <div data-hf-id="hf-c-v4" class="price">Tới 48.210đ</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.ct-kicker', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.36 }, 0);
+    tl.fromTo('.ct-head', { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.46, ease: 'power3.out' }, 0.2);
+    tl.fromTo('.ct-note', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.55);
+    tl.fromTo('#ct-c1', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'back.out(1.6)' }, 2.0);
+    tl.fromTo('#ct-c2', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'back.out(1.6)' }, 2.2);
+    tl.fromTo('#ct-c3', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'back.out(1.6)' }, 5.2);
+    tl.fromTo('#ct-c4', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'back.out(1.6)' }, 5.4);
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
