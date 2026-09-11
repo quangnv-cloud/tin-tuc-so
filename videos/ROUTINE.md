@@ -96,6 +96,20 @@ Thực hiện đúng trình tự trong videos/PRODUCTION-WORKFLOW.md, cụ thể
    Hệ thống tự viết hoa toàn bộ tiêu đề trước khi đăng — không cần tự viết hoa. Chỉ gọi SAU KHI bước 13 push xong. Nếu lệnh thất bại toàn bộ, hoặc chỉ phần thumbnail báo lỗi 403 youtube.thumbnail (quyền custom thumbnail của kênh mới chỉ mở sau ~24h kể từ khi xác minh SĐT), KHÔNG coi cả routine là thất bại — video vẫn đăng thành công dù thiếu thumbnail tùy chỉnh; ghi rõ trạng thái vào tóm tắt.
    TUYẾN NÀY CHƯA đăng Instagram / Threads — KHÔNG gọi publish_instagram / publish_threads.
 
+   ⚠️ **QUY TẮC BẮT BUỘC chống đăng trùng (sự cố thật đã xảy ra 11/9/2026 — 1 video lên YouTube 2 lần)**:
+   upload video lên YouTube qua `<EXEC>` thường mất 1.5-3 phút; ở nhiều lần gọi, kết nối HTTP phía client
+   bị timeout/`RemoteDisconnected` DÙ video đã upload thành công ở phía server (Apps Script vẫn chạy xong
+   `videos.insert`, chỉ là response không kịp trả về trước khi client bỏ cuộc). Nếu KHÔNG kiểm tra trước
+   khi gọi lại, việc "thử lại vì tưởng lỗi" sẽ tạo ra 2 video thật trên kênh (đã xảy ra: video A đăng lúc
+   T, request timeout ở T+2p, agent gọi lại ngay và tạo video B ở T+2p30 — cả 2 đều public, agent chỉ biết
+   về video B).
+   **Do đó**: nếu `publish_youtube` báo lỗi kiểu timeout/connection-drop/`RemoteDisconnected` (KHÔNG phải
+   lỗi JSON rõ ràng như 401/403 từ chính API) → **TUYỆT ĐỐI KHÔNG gọi lại `publish_youtube` ngay** — trước
+   tiên gọi `{"action":"list_yt_content","limit":5}` (read-only, không đăng/xoá gì) để xem 5 video mới nhất
+   trên kênh có video nào title trùng + thời gian đăng (`publishedAt`) nằm trong vài phút gần đây không.
+   Nếu ĐÃ THẤY video đó → dùng `video_id` đó cho bước 16, KHÔNG gọi `publish_youtube` lần 2. Chỉ gọi lại
+   `publish_youtube` nếu `list_yt_content` xác nhận thật sự chưa có video nào khớp.
+
 16. Chốt thumbnail YouTube: xem result.thumbnail (và result.thumbnail_attempts) trong phản hồi publish_youtube. Nếu code != 200 (hoặc để chắc chắn), SAU khi đăng xong đợi ~90s rồi gọi POST `<EXEC>` `{"action":"yt_set_thumbnail","video_id":"<id YouTube>","thumbnail_url":"https://raw.githubusercontent.com/quangnv-cloud/tin-tuc-so/master/videos/<slug>/output/thumbnail.jpg"}`. code:200 là xong. Nếu vẫn 403 youtube.thumbnail → ghi "chưa dính do quyền kênh chưa mở", không coi là lỗi routine.
 
 17. Kết thúc bằng 1 bản tóm tắt ngắn: **từ khoá trending đã chọn + vị trí/approx_traffic** (hoặc "chọn từ category=news, lý do …"), tin + nguồn báo thật (+ "đã dịch từ <nguồn>" nếu tiếng Anh), style + index từ claim_style, thời lượng video, **kết quả GATE A/B/C (risk_level + decision)**, kết quả verify 4 bước, đường dẫn file trong repo, kết quả đăng Facebook (Reel — thành công/lỗi + post id), kết quả đăng YouTube (thành công/lỗi + video id/link + trạng thái thumbnail). Nếu là **skip slot** (GATE A không có chủ đề an toàn) → chỉ cần nêu rõ đã skip + liệt kê vài từ khoá trending đã xét và lý do loại. Nếu BẤT KỲ bước 1-13 thất bại — HOẶC **GATE A/B/C không PASS/APPROVE** — DỪNG LẠI ở đó, KHÔNG thực hiện bước 14-16, không hạ thấp tiêu chuẩn brand / không bỏ bước verify / **không "nới" cổng chính sách** — báo lỗi rõ ràng trong tóm tắt thay vì giao 1 video lỗi hoặc đăng nội dung vi phạm.
