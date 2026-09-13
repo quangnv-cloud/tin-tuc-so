@@ -115,7 +115,7 @@ Giới hạn tổng: **dưới 75 giây** (nhỉnh hơn tuyến kinh doanh vì c
 | 4. Data moment | Con số / benchmark / mốc quan trọng nhất thành focal point — NUMBER > GRAPHIC. |
 | 5. Context | Vì sao / nền tảng — timeline, so sánh, trích dẫn, sơ đồ. |
 | 6. Impact | Ý nghĩa với người dùng / ngành / thị trường VN. **Act cuối phải là SỰ THẬT đã xảy ra** — không suy đoán "liệu... có... không". |
-| 7. CTA | Đặt lại câu hỏi tranh luận của tin ("bước tiến hay mối lo?") + 2 lựa chọn đối lập (icon CSS: mũi tên lên cam / tam giác cảnh báo đỏ) + pill **"Bình luận quan điểm của bạn"** + chữ ký logo. ~5–7s. |
+| 7. CTA | Đặt lại câu hỏi tranh luận của tin ("bước tiến hay mối lo?") + 2 lựa chọn đối lập (icon CSS: mũi tên lên cam / tam giác cảnh báo đỏ) + pill **"Bình luận quan điểm của bạn"** + chữ ký logo. ~5–7s là khởi điểm, KHÔNG phải trần cứng — thực tế đã tới ~8,7s khi cần đủ chỗ cho voice CTA đọc hết + pulse animation chạy đủ vòng + không cắt gấp đoạn kết. Ưu tiên "voice đọc trọn + nhịp animation đủ + kết thúc mượt" hơn ép đúng khung 5–7s. |
 
 **Khớp khung hình với giọng đọc thật**: `data-duration` mỗi frame = độ dài file voice thật của
 dòng đó (`ffprobe`) + đệm ~0.3–0.5s. KHÔNG copy khung giờ từ video trước (để lại khoảng lặng chết
