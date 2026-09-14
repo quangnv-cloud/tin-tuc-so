@@ -69,6 +69,21 @@
       "slug": "iphone-18-pro-thay-doi-so-voi-17-pro",
       "date": "2026-09-13",
       "trending_keyword": "18 pro max"
+    },
+    {
+      "index": 6,
+      "style": "7-timeline-chronology",
+      "slug": "quy-dinh-moi-xu-phat-khong-khai-bao-luu-tru",
+      "date": "2026-09-14",
+      "trending_keyword": "luật cư trú",
+      "note": "claimed nhưng KHÔNG dựng — chủ đề bị bỏ vì ảnh chỉ có thumbnail Google 259x194 (không đạt chuẩn brand) và không có item category=news cùng chủ đề để lấy ảnh báo thay thế; đổi sang chủ đề lãi suất ngân hàng"
+    },
+    {
+      "index": 7,
+      "style": "8-icon-grid",
+      "slug": "lai-suat-lien-ngan-hang-giam-manh-tiet-kiem-van-cao",
+      "date": "2026-09-14",
+      "trending_keyword": "lãi suất ngân hàng"
     }
   ]
 }
