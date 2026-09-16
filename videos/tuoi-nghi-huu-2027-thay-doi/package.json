@@ -1,0 +1,17 @@
+{
+  "name": "tuoi-nghi-huu-2027-thay-doi",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.41 preview",
+    "check": "npx --yes hyperframes@0.8.41 check",
+    "render": "npx --yes hyperframes@0.8.41 render",
+    "publish": "npx --yes hyperframes@0.8.41 publish"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "^0.8.41"
+  }
+}
