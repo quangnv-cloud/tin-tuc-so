@@ -205,6 +205,107 @@ thủ chính sách YouTube/Google + Meta (Facebook/Instagram/Threads) — bản 
 động: "inauthentic / mass-produced" (mỗi video phải có góc nhìn riêng, không chỉ đọc lại tiêu đề
 báo) và AI synthetic media (KHÔNG tái dựng cảnh thật/người thật như ảnh chụp).
 
+## Kỹ thuật hình ảnh nâng cao (BẮT BUỘC — mọi video, từ video tiếp theo trở đi)
+
+**[Thêm 2026-09-16]** Đúc kết từ video mẫu `mau-tin-tuc-so-nang-cap` (phiên 2026-09-15/16, đạt
+~95/100 theo chuẩn quốc tế) — trước đây các kỹ thuật này chỉ tồn tại trong 1 video mẫu dựng tay,
+CHƯA từng ghi thành quy tắc nên video routine hàng ngày không áp dụng, vẫn trông "phong cách cũ"
+(nền phẳng, không glow, không caption, trống đen nửa dưới khung — xác nhận qua frame thật ngày
+16/9 của 2 video `tuoi-nghi-huu-2027-thay-doi` và Công Nghệ Số `ai-tuyen-dung-han-quoc`). Từ giờ
+BẮT BUỘC, không phải tùy chọn.
+
+### 1. Nền có chiều sâu (depth background) — mount 1 lần ở root `index.html`, phía sau mọi scene
+
+2-3 blob mờ trôi rất chậm + hạt sao tĩnh nhấp nháy nhẹ — KHÔNG phải "particle explosion":
+
+```html
+<div id="bg-depth" style="position:absolute;inset:0;overflow:hidden;z-index:0;">
+  <div class="blob" style="position:absolute;width:640px;height:640px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,90,31,0.20), transparent 70%);
+    filter:blur(60px); top:-120px; left:-160px;"></div>
+  <div class="blob" style="position:absolute;width:560px;height:560px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,68,56,0.16), transparent 70%);
+    filter:blur(60px); top:900px; right:-200px;"></div>
+  <div class="blob" style="position:absolute;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,90,31,0.12), transparent 70%);
+    filter:blur(60px); bottom:-180px; left:200px;"></div>
+  <svg id="bg-stars" viewBox="0 0 1080 1920" style="position:absolute;inset:0;width:100%;height:100%;">
+    <!-- 35-45 <circle r="1.5..3" fill="#fff" opacity="0.15..0.4">, toạ độ sinh bằng PRNG seed
+         cố định bên dưới — KHÔNG dùng Math.random()/Date.now() (vi phạm deterministic render) -->
+  </svg>
+</div>
+```
+
+```js
+function mulberry32(seed) { // đổi seed mỗi video để bố cục hạt khác nhau
+  return function () {
+    seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+    var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+var rand = mulberry32(20260916); // rand() sinh cx/cy 35-45 particle trong 0..1080 / 0..1920
+
+// repeat:-1 CHỈ an toàn ở index.html gốc (có data-duration riêng), KHÔNG trong sub-composition
+// thiếu data-duration (gây lỗi lint gsap_infinite_repeat).
+tl.to(".blob", { x: "+=40", y: "-=30", duration: 18, ease: "sine.inOut", repeat: -1, yoyo: true, stagger: 3 }, 0);
+tl.to("#bg-stars circle", { opacity: "+=0.25", duration: 4, ease: "sine.inOut", repeat: -1, yoyo: true, stagger: { each: 0.15, from: "random" } }, 0);
+```
+
+### 2. Glow accent bằng chính màu brand (không đổi hue theo từng cảnh)
+
+```css
+.evidence-card, .article-image-wrap {
+  box-shadow: 0 0 40px rgba(255, 90, 31, 0.14);
+}
+```
+
+### 3. Caption karaoke đồng bộ giọng đọc (BẮT BUỘC cho mọi video từ giờ)
+
+1. Sau khi có voice từng dòng, gọi ElevenLabs STT lấy timestamp từng TỪ: `POST
+   https://api.elevenlabs.io/v1/speech-to-text` với `model_id=scribe_v1`,
+   `timestamps_granularity=word`, file = từng `lineN.mp3`.
+2. Cộng `data-start` của dòng đó vào timestamp cục bộ → timestamp TUYỆT ĐỐI theo composition.
+3. Gom từ thành chunk 3-6 từ (đủ ngắn vừa 1 dòng ở độ rộng safe-zone), mỗi chunk là 1 `.cap-chunk`,
+   hiện từ lúc từ đầu chunk bắt đầu tới khi từ cuối kết thúc + ~0.3s đệm.
+4. Mỗi từ là 1 `<span class="w">`, mặc định trắng/mờ, tween sang màu brand (`#FF5A1F`) ĐÚNG lúc từ
+   đó được đọc (`duration` ~0.08-0.12s, ease đơn giản).
+5. Vị trí: trong safe-zone (xem mục "Chuẩn xuất bản video" bên dưới — tránh ~11-17% đáy khung).
+6. Không giọng đọc ở đoạn nào = không caption đoạn đó.
+
+### 4. Smash-cut nội bộ cho act dài (>10s) — chỉ khi có điểm chuyển nội dung thật
+
+```css
+.cutflash { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: 0;
+  background: linear-gradient(180deg, rgba(255,90,31,0.4), rgba(255,68,56,0.18)); }
+```
+```js
+tl.fromTo("#cutflash", { opacity: 0 }, { opacity: 0.55, duration: 0.05, ease: "none" }, T);
+tl.to("#cutflash", { opacity: 0, duration: 0.16, ease: "power1.in" }, T + 0.05);
+tl.fromTo("#content", { scale: 1 }, { scale: 0.986, duration: 0.06, ease: "power1.out" }, T);
+tl.to("#content", { scale: 1, duration: 0.14, ease: "power2.out" }, T + 0.061);
+```
+Kèm 1 SFX click riêng đúng lúc `T`.
+
+### 5. Bằng chứng thật đa dạng — không lặp lại 1 ảnh cho nhiều cảnh
+
+Tìm qua nhiều nguồn tin độc lập nếu cần; đa dạng loại (ảnh hiện trường, văn bản/tài liệu, biểu đồ)
+qua các act khác nhau thay vì dùng đi dùng lại 1 ảnh.
+
+### 6. Biểu đồ tỉ lệ động thay thẻ số tĩnh khi có ≥2 số liệu để so sánh
+
+`scaleY` từ 0, `transform-origin: bottom`, chiều cao tỉ lệ đúng số liệu thật — trực quan hơn 2 thẻ
+số đặt cạnh nhau.
+
+### 7. Cân bằng dọc — GATE đo được (bổ sung cho mục "Cân bằng dọc" ở trên)
+
+Mục "Cân bằng dọc" phía trên đã có quy tắc nhưng lỗi vẫn tái diễn vì chỉ dựa "tự hỏi mình" lúc soát
+Studio. Từ giờ **BẮT BUỘC** ở bước Verify (`PRODUCTION-WORKFLOW.md` §7): trích 1 frame thật ở CUỐI
+animation-reveal của MỖI act giữa (không chỉ đầu act) bằng `ffmpeg -ss <t> ... out.png` rồi xem
+bằng Read tool — xác nhận phần tử cuối cùng kết thúc trong `top: 1400-1680px`. Nếu dừng sớm hơn
+~1000px, PHẢI thêm phần tử bổ sung trước khi coi là xong, không chỉ ghi chú "cân nhắc sau".
+
 ## Chuẩn xuất bản video (CỐ ĐỊNH — dùng chung cho MỌI kênh: BOT BÁN HÀNG, Công Nghệ Số, Tin Tức Số,
 Kinh Tế Số, Retify — không đổi theo từng video)
 
@@ -245,7 +346,8 @@ nội dung) · Audio (BGM nhẹ không lấn giọng, không vocal, VO không đ
 hỏi bám đúng góc tranh luận của tin, pill bình luận rõ) · Editorial (tin là trung tâm, không bịa
 số liệu / nguồn, act cuối nội dung là sự thật) · **Xuất bản** (đúng 1080×1920/30fps, render bằng
 `--quality high --video-bitrate 10M`, loudness -14 LUFS ±1 LU, không caption/anchor lấn safe zone
-đáy/phải).
+đáy/phải) · **Hình ảnh nâng cao** (nền có chiều sâu, glow brand-color, caption karaoke đồng bộ
+giọng đọc, cân bằng dọc đã verify bằng frame thật — xem mục "Kỹ thuật hình ảnh nâng cao").
 
 ## Nguyên tắc cốt lõi
 

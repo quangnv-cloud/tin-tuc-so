@@ -121,6 +121,10 @@ python -m whisper audio.wav --model base --language Vietnamese --output_format t
 file. Ở bước 4, mọi hiệu ứng chớp nhanh (<0.2s, vd smash-cut) cần soát bằng chuỗi frame liên tiếp
 (fps=30 qua vài trăm ms quanh mốc), không chỉ 1 ảnh đơn — dễ bị bỏ lỡ nếu chỉ chụp 1 frame ước lượng.
 
+**4b) Cân bằng dọc (BẮT BUỘC, xem BRAND-SYSTEM.md mục "Kỹ thuật hình ảnh nâng cao" #7)**: trích 1
+frame ở CUỐI animation-reveal của MỖI act giữa, xác nhận phần tử cuối cùng kết thúc trong
+`top: 1400-1680px` — không dừng sớm để lại mảng đen trống nửa dưới khung.
+
 Whisper model host (`openaipublic.azureedge.net`) có thể bị chặn ở sandbox → thay bằng Gemini
 multimodal: `POST generativelanguage.googleapis.com/.../models/<model>:generateContent` với
 `inline_data` audio/wav. Gọi `GET /v1beta/models` trước để lấy tên model còn dùng được (vd.
