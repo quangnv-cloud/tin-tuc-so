@@ -97,27 +97,36 @@ frame có số liệu dài / nền ảnh + text (contrast WCAG AA).
 
 ## 6. Render
 
+**Chuẩn xuất bản cố định — xem BRAND-SYSTEM.md mục "Chuẩn xuất bản video".** Không chạy `npm run
+render` trơn (mặc định thấp hơn chuẩn); luôn truyền `--quality high --video-bitrate 10M
+--browser-timeout 60`:
+
 ```bash
 npx hyperframes preview --stop
-npm run render
+npx --yes hyperframes@<pinned-version> render --quality high --video-bitrate 10M --browser-timeout 60
 ```
 `ffmpeg` chưa có trên sandbox → `sudo apt-get update && sudo apt-get install -y ffmpeg` (có root).
 
-## 7. Verify file render THẬT (bắt buộc đủ 4 bước)
+## 7. Verify file render THẬT (bắt buộc đủ 5 bước)
 
 ```bash
 ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 <mp4>   # 1) thời lượng
-ffmpeg -i <mp4> -af silencedetect=noise=-35dB:d=0.6 -f null -                          # 2) không có lặng chết giữa video
-ffmpeg -y -ss <t> -i <mp4> -frames:v 1 -q:v 2 out.png                                  # 3) trích frame, xem bằng Read
-ffmpeg -y -i <mp4> -vn -ac 1 -ar 16000 audio.wav                                       # 4) transcript
+ffmpeg -i <mp4> -af silencedetect=noise=-40dB:d=0.6 -f null -                          # 2) không có lặng chết giữa video
+ffmpeg -i <mp4> -af loudnorm=print_format=summary -f null -                            # 3) loudness -14 LUFS ±1 LU, True Peak ≤ -1.0 dBTP
+ffmpeg -y -ss <t> -i <mp4> -frames:v 1 -q:v 2 out.png                                  # 4) trích frame, xem bằng Read
+ffmpeg -y -i <mp4> -vn -ac 1 -ar 16000 audio.wav                                       # 5) transcript
 python -m whisper audio.wav --model base --language Vietnamese --output_format txt
 ```
+"Input Integrated" ở bước 3 lệch quá ±1 LU so với -14.0 → chạy `loudnorm` 2-pass trước khi giao
+file. Ở bước 4, mọi hiệu ứng chớp nhanh (<0.2s, vd smash-cut) cần soát bằng chuỗi frame liên tiếp
+(fps=30 qua vài trăm ms quanh mốc), không chỉ 1 ảnh đơn — dễ bị bỏ lỡ nếu chỉ chụp 1 frame ước lượng.
+
 Whisper model host (`openaipublic.azureedge.net`) có thể bị chặn ở sandbox → thay bằng Gemini
 multimodal: `POST generativelanguage.googleapis.com/.../models/<model>:generateContent` với
 `inline_data` audio/wav. Gọi `GET /v1beta/models` trước để lấy tên model còn dùng được (vd.
 `gemini-flash-latest` — tên có timestamp như `gemini-2.5-flash` dễ bị "no longer available").
 
-Chỉ coi "xong" khi cả 4 bước sạch — không báo hoàn thành chỉ dựa `npm run check` / thumbnail.
+Chỉ coi "xong" khi cả 5 bước sạch — không báo hoàn thành chỉ dựa `npm run check` / thumbnail.
 
 ## 7.5. Thumbnail
 
