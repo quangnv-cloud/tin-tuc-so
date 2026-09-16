@@ -205,6 +205,36 @@ thủ chính sách YouTube/Google + Meta (Facebook/Instagram/Threads) — bản 
 động: "inauthentic / mass-produced" (mỗi video phải có góc nhìn riêng, không chỉ đọc lại tiêu đề
 báo) và AI synthetic media (KHÔNG tái dựng cảnh thật/người thật như ảnh chụp).
 
+## Chuẩn xuất bản video (CỐ ĐỊNH — dùng chung cho MỌI kênh: BOT BÁN HÀNG, Công Nghệ Số, Tin Tức Số,
+Kinh Tế Số, Retify — không đổi theo từng video)
+
+Một tỉ lệ khung hình + một mức chất lượng duy nhất, vì FB Reels/TikTok/YouTube Shorts đều dùng
+chung 9:16 — không tối ưu riêng theo nền tảng.
+
+- **Tỉ lệ khung hình / độ phân giải**: 9:16 dọc, cố định **1080×1920** (`data-width`/`data-height`
+  trên `#root`). Không hạ xuống 720×1280.
+- **Frame rate**: 30fps.
+- **Lệnh render bắt buộc** (KHÔNG chạy `npm run render` trơn — mặc định của hyperframes thấp hơn
+  chuẩn này):
+  ```bash
+  npx hyperframes preview --stop
+  npx --yes hyperframes@<pinned-version> render --quality high --video-bitrate 10M --browser-timeout 60
+  ```
+- **Audio**: AAC 192kbps. Target loudness **-14 LUFS integrated**, True Peak ≤ **-1.0 dBTP** (đúng
+  chuẩn normalize của FB/TikTok/YouTube). Lệch quá ±1 LU → `loudnorm` 2-pass trước khi giao file.
+- **Vùng an toàn UI nền tảng (safe zone)** — caption/anchor/badge/CTA không đặt trong:
+  - ~11–17% đáy khung hình (thanh mô tả + nút tương tác TikTok/Reels/Shorts đè lên)
+  - ~150–200px cạnh phải (cột icon like/comment/share/follow)
+- **Bản phái sinh** (không bắt buộc, chỉ khi cần đăng chéo nền tảng ngang/vuông): tái khung từ bản
+  1080×1920 gốc bằng kỹ thuật nền blur, không dựng canvas khác trong composition:
+  ```bash
+  ffmpeg -i <goc.mp4> -filter_complex \
+    "[0:v]split=2[bg][fg];[bg]scale=W:H:force_original_aspect_ratio=increase,crop=W:H,gblur=sigma=20[bgb]; \
+     [fg]scale=W:H:force_original_aspect_ratio=decrease[fgs];[bgb][fgs]overlay=(W-w)/2:(H-h)/2,format=yuv420p[v]" \
+    -map "[v]" -map 0:a -c:v libx264 -preset medium -crf 18 -c:a aac -b:a 192k <ra.mp4>
+  ```
+  (1:1 → W=H=1080; 16:9 → W=1920, H=1080)
+
 ## Final QC Checklist
 
 Brand (đúng `#FF5A1F` / `#0B0E14`, logo + tên kênh góc trên-phải, nguồn góc trên-trái) · **Cân
@@ -213,7 +243,9 @@ bằng dọc (nội dung lấp đầy khung, KHÔNG trống đen nửa dưới �
 không lấn text, không effect thừa, không phần tử lộ tĩnh) · Image (ảnh thật trong card, không che
 nội dung) · Audio (BGM nhẹ không lấn giọng, không vocal, VO không đọc tên kênh) · Act 7 CTA (câu
 hỏi bám đúng góc tranh luận của tin, pill bình luận rõ) · Editorial (tin là trung tâm, không bịa
-số liệu / nguồn, act cuối nội dung là sự thật).
+số liệu / nguồn, act cuối nội dung là sự thật) · **Xuất bản** (đúng 1080×1920/30fps, render bằng
+`--quality high --video-bitrate 10M`, loudness -14 LUFS ±1 LU, không caption/anchor lấn safe zone
+đáy/phải).
 
 ## Nguyên tắc cốt lõi
 
