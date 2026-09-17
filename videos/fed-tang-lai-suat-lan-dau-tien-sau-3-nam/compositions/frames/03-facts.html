@@ -1,0 +1,131 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+
+    .kcap-band { position: absolute; left: 90px; right: 90px; top: 130px; text-align: center; z-index: 12; pointer-events: none; }
+    .kcap-chunk { position: absolute; left: 0; right: 0; top: 0; font-weight: 700; font-size: 32px; line-height: 1.35; opacity: 0; visibility: hidden; }
+    .kcap-chunk .w { color: rgba(255,255,255,0.88); text-shadow: 0 2px 14px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.95); margin: 0 3px; }
+
+    .fc-kicker { position: absolute; left: 60px; top: 300px; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+
+    .fc-card { position: absolute; left: 60px; right: 60px; height: 300px; border-radius: 24px; border: 1.5px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.03); padding: 34px 44px 34px 116px; opacity: 0; box-shadow: 0 0 30px rgba(255,90,31,0.1); }
+    .fc-card .badge { position: absolute; left: 32px; top: 34px; width: 56px; height: 56px; border-radius: 14px; background: rgba(255,90,31,0.14); border: 1.5px solid #FF5A1F; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 28px; color: #FF5A1F; }
+    .fc-card .kick { font-weight: 700; font-size: 22px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .fc-card .main { margin-top: 12px; font-weight: 800; font-size: 44px; line-height: 1.22; color: #fff; }
+    .fc-card .sub { margin-top: 12px; font-weight: 500; font-size: 27px; line-height: 1.4; color: rgba(255,255,255,0.66); }
+
+    #fc-1 { top: 440px; }
+    #fc-2 { top: 780px; }
+    #fc-3 { top: 1120px; }
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+    <div class="fc-kicker">Ai quyết định, vì sao</div>
+
+    <div class="kcap-band">
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c1"><span class="w" id="kf-c1-w1">Chủ</span> <span class="w" id="kf-c1-w2">tịch</span> <span class="w" id="kf-c1-w3">Kevin</span> <span class="w" id="kf-c1-w4">Warsh</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c2"><span class="w" id="kf-c2-w1">giải</span> <span class="w" id="kf-c2-w2">thích</span> <span class="w" id="kf-c2-w3">lạm</span> <span class="w" id="kf-c2-w4">phát</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c3"><span class="w" id="kf-c3-w1">Mỹ</span> <span class="w" id="kf-c3-w2">đã</span> <span class="w" id="kf-c3-w3">quá</span> <span class="w" id="kf-c3-w4">cao</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c4"><span class="w" id="kf-c4-w1">trong</span> <span class="w" id="kf-c4-w2">thời</span> <span class="w" id="kf-c4-w3">gian</span> <span class="w" id="kf-c4-w4">quá</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c5"><span class="w" id="kf-c5-w1">dài</span> <span class="w" id="kf-c5-w2">và</span> <span class="w" id="kf-c5-w3">Ủy</span> <span class="w" id="kf-c5-w4">ban</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c6"><span class="w" id="kf-c6-w1">Thị</span> <span class="w" id="kf-c6-w2">trường</span> <span class="w" id="kf-c6-w3">Mở</span> <span class="w" id="kf-c6-w4">Liên</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c7"><span class="w" id="kf-c7-w1">bang</span> <span class="w" id="kf-c7-w2">nhất</span> <span class="w" id="kf-c7-w3">trí</span> <span class="w" id="kf-c7-w4">thông</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kf-c8"><span class="w" id="kf-c8-w1">qua</span> <span class="w" id="kf-c8-w2">quyết</span> <span class="w" id="kf-c8-w3">định</span></div>
+    </div>
+
+    <div class="fc-card" id="fc-1">
+      <div class="badge">1</div>
+      <div class="kick">Người đứng đầu</div>
+      <div class="main">Chủ tịch Fed Kevin Warsh</div>
+      <div class="sub">Lạm phát Mỹ đã quá cao trong thời gian quá dài</div>
+    </div>
+
+    <div class="fc-card" id="fc-2">
+      <div class="badge">2</div>
+      <div class="kick">Quyết định</div>
+      <div class="main">Ủy ban Thị trường Mở Liên bang nhất trí</div>
+      <div class="sub">Tăng lãi suất tham chiếu thêm 0,25 điểm phần trăm</div>
+    </div>
+
+    <div class="fc-card" id="fc-3">
+      <div class="badge">3</div>
+      <div class="kick">Thời điểm</div>
+      <div class="main">Ngày 16 tháng 9 năm 2026</div>
+      <div class="sub">Lần tăng lãi suất đầu tiên kể từ năm 2023</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.fc-kicker', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.36 }, 0);
+
+    tl.fromTo('#fc-1', { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 0.46, ease: 'power3.out' }, 0.3);
+    tl.fromTo('#fc-2', { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 0.46, ease: 'power3.out' }, 2.9);
+    tl.fromTo('#fc-3', { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 0.46, ease: 'power3.out' }, 5.6);
+
+    tl.set('#kf-c1', {autoAlpha:0}, 0);
+    tl.to('#kf-c1', {autoAlpha:1, duration:0.12}, 0.080);
+    tl.to('#kf-c1', {autoAlpha:0, duration:0.12}, 1.400);
+    tl.to('#kf-c1-w1', {color:'#FF5A1F', duration:0.1}, 0.080);
+    tl.to('#kf-c1-w2', {color:'#FF5A1F', duration:0.1}, 0.240);
+    tl.to('#kf-c1-w3', {color:'#FF5A1F', duration:0.1}, 0.480);
+    tl.to('#kf-c1-w4', {color:'#FF5A1F', duration:0.1}, 0.840);
+    tl.set('#kf-c2', {autoAlpha:0}, 0);
+    tl.to('#kf-c2', {autoAlpha:1, duration:0.12}, 1.300);
+    tl.to('#kf-c2', {autoAlpha:0, duration:0.12}, 2.660);
+    tl.to('#kf-c2-w1', {color:'#FF5A1F', duration:0.1}, 1.300);
+    tl.to('#kf-c2-w2', {color:'#FF5A1F', duration:0.1}, 1.520);
+    tl.to('#kf-c2-w3', {color:'#FF5A1F', duration:0.1}, 2.040);
+    tl.to('#kf-c2-w4', {color:'#FF5A1F', duration:0.1}, 2.220);
+    tl.set('#kf-c3', {autoAlpha:0}, 0);
+    tl.to('#kf-c3', {autoAlpha:1, duration:0.12}, 2.440);
+    tl.to('#kf-c3', {autoAlpha:0, duration:0.12}, 3.680);
+    tl.to('#kf-c3-w1', {color:'#FF5A1F', duration:0.1}, 2.440);
+    tl.to('#kf-c3-w2', {color:'#FF5A1F', duration:0.1}, 2.680);
+    tl.to('#kf-c3-w3', {color:'#FF5A1F', duration:0.1}, 2.880);
+    tl.to('#kf-c3-w4', {color:'#FF5A1F', duration:0.1}, 3.160);
+    tl.set('#kf-c4', {autoAlpha:0}, 0);
+    tl.to('#kf-c4', {autoAlpha:1, duration:0.12}, 3.460);
+    tl.to('#kf-c4', {autoAlpha:0, duration:0.12}, 4.500);
+    tl.to('#kf-c4-w1', {color:'#FF5A1F', duration:0.1}, 3.460);
+    tl.to('#kf-c4-w2', {color:'#FF5A1F', duration:0.1}, 3.640);
+    tl.to('#kf-c4-w3', {color:'#FF5A1F', duration:0.1}, 3.820);
+    tl.to('#kf-c4-w4', {color:'#FF5A1F', duration:0.1}, 4.059);
+    tl.set('#kf-c5', {autoAlpha:0}, 0);
+    tl.to('#kf-c5', {autoAlpha:1, duration:0.12}, 4.300);
+    tl.to('#kf-c5', {autoAlpha:0, duration:0.12}, 5.820);
+    tl.to('#kf-c5-w1', {color:'#FF5A1F', duration:0.1}, 4.300);
+    tl.to('#kf-c5-w2', {color:'#FF5A1F', duration:0.1}, 4.920);
+    tl.to('#kf-c5-w3', {color:'#FF5A1F', duration:0.1}, 5.180);
+    tl.to('#kf-c5-w4', {color:'#FF5A1F', duration:0.1}, 5.360);
+    tl.set('#kf-c6', {autoAlpha:0}, 0);
+    tl.to('#kf-c6', {autoAlpha:1, duration:0.12}, 5.540);
+    tl.to('#kf-c6', {autoAlpha:0, duration:0.12}, 6.580);
+    tl.to('#kf-c6-w1', {color:'#FF5A1F', duration:0.1}, 5.540);
+    tl.to('#kf-c6-w2', {color:'#FF5A1F', duration:0.1}, 5.700);
+    tl.to('#kf-c6-w3', {color:'#FF5A1F', duration:0.1}, 5.920);
+    tl.to('#kf-c6-w4', {color:'#FF5A1F', duration:0.1}, 6.120);
+    tl.set('#kf-c7', {autoAlpha:0}, 0);
+    tl.to('#kf-c7', {autoAlpha:1, duration:0.12}, 6.360);
+    tl.to('#kf-c7', {autoAlpha:0, duration:0.12}, 7.580);
+    tl.to('#kf-c7-w1', {color:'#FF5A1F', duration:0.1}, 6.360);
+    tl.to('#kf-c7-w2', {color:'#FF5A1F', duration:0.1}, 6.640);
+    tl.to('#kf-c7-w3', {color:'#FF5A1F', duration:0.1}, 6.860);
+    tl.to('#kf-c7-w4', {color:'#FF5A1F', duration:0.1}, 7.100);
+    tl.set('#kf-c8', {autoAlpha:0}, 0);
+    tl.to('#kf-c8', {autoAlpha:1, duration:0.12}, 7.300);
+    tl.to('#kf-c8', {autoAlpha:0, duration:0.12}, 8.100);
+    tl.to('#kf-c8-w1', {color:'#FF5A1F', duration:0.1}, 7.300);
+    tl.to('#kf-c8-w2', {color:'#FF5A1F', duration:0.1}, 7.500);
+    tl.to('#kf-c8-w3', {color:'#FF5A1F', duration:0.1}, 7.640);
+
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>

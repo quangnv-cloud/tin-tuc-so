@@ -97,6 +97,21 @@
       "slug": "the-cong-viettel-hoa-melbourne-victory-cup-c2",
       "date": "2026-09-17",
       "trending_keyword": "thể công gặp melbourne victory"
+    },
+    {
+      "index": 9,
+      "style": "10-stock-terminal",
+      "slug": "test-probe-ignore",
+      "date": "2026-09-17",
+      "trending_keyword": "",
+      "note": "KHÔNG phải video thật — 1 lệnh POST thăm dò cú pháp claim_style gọi nhầm với slug giả đã vô tình tiêu tốn lượt xoay vòng này. Ghi lại để giải thích vì sao chỉ số nhảy từ 6 lên 0 (bỏ qua 7,8,9) ở dòng dưới."
+    },
+    {
+      "index": 0,
+      "style": "1-card-and-bar",
+      "slug": "fed-tang-lai-suat-lan-dau-tien-sau-3-nam",
+      "date": "2026-09-17",
+      "trending_keyword": "fed tăng lãi suất"
     }
   ]
 }
