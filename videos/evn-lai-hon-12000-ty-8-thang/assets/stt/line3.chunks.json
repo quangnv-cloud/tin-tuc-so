@@ -1,0 +1,254 @@
+[
+  {
+    "start": 0.14,
+    "end": 1.66,
+    "words": [
+      {
+        "text": "Doanh",
+        "start": 0.14,
+        "end": 0.3
+      },
+      {
+        "text": "thu",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "toàn",
+        "start": 0.64,
+        "end": 0.8
+      },
+      {
+        "text": "tập",
+        "start": 0.84,
+        "end": 0.98
+      },
+      {
+        "text": "đoàn",
+        "start": 1.02,
+        "end": 1.26
+      },
+      {
+        "text": "đạt",
+        "start": 1.48,
+        "end": 1.66
+      }
+    ]
+  },
+  {
+    "start": 1.72,
+    "end": 2.98,
+    "words": [
+      {
+        "text": "hơn",
+        "start": 1.72,
+        "end": 1.92
+      },
+      {
+        "text": "bốn",
+        "start": 2.0,
+        "end": 2.14
+      },
+      {
+        "text": "trăm",
+        "start": 2.2,
+        "end": 2.36
+      },
+      {
+        "text": "tám",
+        "start": 2.48,
+        "end": 2.64
+      },
+      {
+        "text": "mươi",
+        "start": 2.66,
+        "end": 2.78
+      },
+      {
+        "text": "hai",
+        "start": 2.82,
+        "end": 2.98
+      }
+    ]
+  },
+  {
+    "start": 3.04,
+    "end": 4.44,
+    "words": [
+      {
+        "text": "nghìn",
+        "start": 3.04,
+        "end": 3.22
+      },
+      {
+        "text": "tỷ",
+        "start": 3.28,
+        "end": 3.38
+      },
+      {
+        "text": "đồng,",
+        "start": 3.42,
+        "end": 3.6
+      },
+      {
+        "text": "bằng",
+        "start": 3.88,
+        "end": 4.08
+      },
+      {
+        "text": "bảy",
+        "start": 4.12,
+        "end": 4.26
+      },
+      {
+        "text": "mươi",
+        "start": 4.3,
+        "end": 4.44
+      }
+    ]
+  },
+  {
+    "start": 4.46,
+    "end": 5.4,
+    "words": [
+      {
+        "text": "phần",
+        "start": 4.46,
+        "end": 4.58
+      },
+      {
+        "text": "trăm",
+        "start": 4.64,
+        "end": 4.8
+      },
+      {
+        "text": "kế",
+        "start": 4.88,
+        "end": 4.98
+      },
+      {
+        "text": "hoạch",
+        "start": 5.0,
+        "end": 5.16
+      },
+      {
+        "text": "năm.",
+        "start": 5.22,
+        "end": 5.4
+      }
+    ]
+  },
+  {
+    "start": 5.96,
+    "end": 7.26,
+    "words": [
+      {
+        "text": "Còn",
+        "start": 5.96,
+        "end": 6.14
+      },
+      {
+        "text": "tập",
+        "start": 6.24,
+        "end": 6.38
+      },
+      {
+        "text": "đoàn",
+        "start": 6.42,
+        "end": 6.64
+      },
+      {
+        "text": "đã",
+        "start": 6.82,
+        "end": 6.94
+      },
+      {
+        "text": "nộp",
+        "start": 6.98,
+        "end": 7.12
+      },
+      {
+        "text": "ngân",
+        "start": 7.14,
+        "end": 7.26
+      }
+    ]
+  },
+  {
+    "start": 7.32,
+    "end": 8.52,
+    "words": [
+      {
+        "text": "sách",
+        "start": 7.32,
+        "end": 7.46
+      },
+      {
+        "text": "nhà",
+        "start": 7.48,
+        "end": 7.62
+      },
+      {
+        "text": "nước",
+        "start": 7.66,
+        "end": 7.9
+      },
+      {
+        "text": "khoảng",
+        "start": 7.94,
+        "end": 8.2
+      },
+      {
+        "text": "mười",
+        "start": 8.24,
+        "end": 8.36
+      },
+      {
+        "text": "bảy",
+        "start": 8.4,
+        "end": 8.52
+      }
+    ]
+  },
+  {
+    "start": 8.6,
+    "end": 10.26,
+    "words": [
+      {
+        "text": "nghìn",
+        "start": 8.6,
+        "end": 8.82
+      },
+      {
+        "text": "một",
+        "start": 9.02,
+        "end": 9.16
+      },
+      {
+        "text": "trăm",
+        "start": 9.18,
+        "end": 9.38
+      },
+      {
+        "text": "sáu",
+        "start": 9.5,
+        "end": 9.66
+      },
+      {
+        "text": "mươi",
+        "start": 9.7,
+        "end": 9.82
+      },
+      {
+        "text": "tỷ",
+        "start": 9.92,
+        "end": 10.02
+      },
+      {
+        "text": "đồng",
+        "start": 10.06,
+        "end": 10.26
+      }
+    ]
+  }
+]

@@ -1,0 +1,154 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+
+    .kcap-band { position: absolute; left: 90px; right: 90px; top: 130px; text-align: center; z-index: 12; pointer-events: none; }
+    .kcap-chunk { position: absolute; left: 50%; top: 0; transform: translateX(-50%); font-weight: 700; font-size: 32px; line-height: 1.35; opacity: 0; visibility: hidden; white-space: nowrap; background: rgba(5,7,12,0.78); padding: 8px 20px; border-radius: 10px; }
+    .kcap-chunk .w { color: rgba(255,255,255,0.97); text-shadow: 0 2px 14px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.95); margin: 0 3px; }
+
+    .d-focal { position: absolute; left: 64px; right: 64px; top: 290px; }
+    .d-kicker { font-weight: 700; font-size: 27px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; margin-bottom: 22px; }
+    .d-num-row { display: flex; align-items: baseline; gap: 16px; opacity: 0; }
+    .d-num { font-weight: 900; font-size: 170px; line-height: 0.95; letter-spacing: -0.02em; color: #FF5A1F; }
+    .d-unit { font-weight: 800; font-size: 44px; color: rgba(255,255,255,0.7); }
+    .d-cap { margin-top: 20px; font-weight: 600; font-size: 28px; line-height: 1.4; color: rgba(255,255,255,0.78); opacity: 0; }
+
+    .d-rows { position: absolute; left: 64px; right: 64px; top: 820px; display: flex; flex-direction: column; gap: 56px; }
+    .d-row { padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.14); opacity: 0; }
+    .d-row-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+    .d-row-label { font-weight: 600; font-size: 29px; color: rgba(255,255,255,0.72); }
+    .d-row-value { font-weight: 800; font-size: 42px; color: #fff; }
+    .d-track { position: relative; height: 26px; border-radius: 13px; background: rgba(255,255,255,0.08); overflow: hidden; }
+    .d-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0%; border-radius: 13px; background: rgba(255,255,255,0.35); }
+
+    .d-row.hi { border: none; padding: 42px 34px; border-radius: 22px; background: rgba(255,90,31,0.14); border: 1.5px solid rgba(255,90,31,0.75); }
+    .d-row.hi .d-row-value { color: #FF5A1F; font-size: 48px; }
+    .d-row.hi .d-fill { background: #FF5A1F; }
+  </style>
+
+  <div id="root" data-composition-id="04-data" data-width="1080" data-height="1920">
+    <div class="kcap-band" style="top:130px;">
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kdc1"><span class="w" id="kdc1-w1">So</span> <span class="w" id="kdc1-w2">với</span> <span class="w" id="kdc1-w3">mức</span> <span class="w" id="kdc1-w4">lãi</span> <span class="w" id="kdc1-w5">hơn</span> <span class="w" id="kdc1-w6">tám</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kdc2"><span class="w" id="kdc2-w1">nghìn</span> <span class="w" id="kdc2-w2">sáu</span> <span class="w" id="kdc2-w3">trăm</span> <span class="w" id="kdc2-w4">tỷ</span> <span class="w" id="kdc2-w5">đồng</span> <span class="w" id="kdc2-w6">nửa</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kdc3"><span class="w" id="kdc3-w1">đầu</span> <span class="w" id="kdc3-w2">năm</span> <span class="w" id="kdc3-w3">của</span> <span class="w" id="kdc3-w4">công</span> <span class="w" id="kdc3-w5">ty</span> <span class="w" id="kdc3-w6">mẹ,</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kdc4"><span class="w" id="kdc4-w1">đã</span> <span class="w" id="kdc4-w2">tăng</span> <span class="w" id="kdc4-w3">rõ</span> <span class="w" id="kdc4-w4">rệt</span> <span class="w" id="kdc4-w5">và</span> <span class="w" id="kdc4-w6">mục</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kdc5"><span class="w" id="kdc5-w1">tiêu</span> <span class="w" id="kdc5-w2">cả</span> <span class="w" id="kdc5-w3">năm</span> <span class="w" id="kdc5-w4">là</span> <span class="w" id="kdc5-w5">lợi</span> <span class="w" id="kdc5-w6">nhuận</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="kdc6"><span class="w" id="kdc6-w1">hơn</span> <span class="w" id="kdc6-w2">mười</span> <span class="w" id="kdc6-w3">ba</span> <span class="w" id="kdc6-w4">nghìn</span> <span class="w" id="kdc6-w5">năm</span> <span class="w" id="kdc6-w6">trăm</span> <span class="w" id="kdc6-w7">tỷ</span> <span class="w" id="kdc6-w8">đồng</span></div>
+    </div>
+
+    <div class="d-focal">
+      <div class="d-kicker" id="d-kicker">Mốc lợi nhuận 8 tháng</div>
+      <div class="d-num-row" id="d-numrow"><span class="d-num"><span id="d-num">0</span></span><span class="d-unit">tỷ đồng</span></div>
+      <div class="d-cap" id="d-cap">Toàn tập đoàn, 8 tháng đầu năm 2026 — đạt <b style="color:#FF5A1F">103%</b> kế hoạch năm</div>
+    </div>
+
+    <div class="d-rows">
+      <div class="d-row" id="d-r1">
+        <div class="d-row-top"><span class="d-row-label">Công ty mẹ · 6 tháng đầu năm</span><span class="d-row-value">8.631 tỷ</span></div>
+        <div class="d-track"><div class="d-fill" id="d-fill1"></div></div>
+      </div>
+      <div class="d-row hi" id="d-r2">
+        <div class="d-row-top"><span class="d-row-label">Toàn tập đoàn · 8 tháng</span><span class="d-row-value"><span id="d-num2">0</span> tỷ</span></div>
+        <div class="d-track"><div class="d-fill" id="d-fill2"></div></div>
+      </div>
+      <div class="d-row" id="d-r3">
+        <div class="d-row-top"><span class="d-row-label">Mục tiêu cả năm 2026</span><span class="d-row-value">&gt;13.500 tỷ</span></div>
+        <div class="d-track"><div class="d-fill" id="d-fill3"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const numEl = document.getElementById('d-num');
+    const num2El = document.getElementById('d-num2');
+    const c = { v: 0 };
+
+    tl.fromTo('#d-kicker', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.38, ease: 'power2.out' }, 0);
+    tl.fromTo('#d-numrow', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: 'back.out(1.5)' }, 0.3);
+    tl.fromTo('#d-cap', { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.75);
+
+    tl.fromTo('#d-r1', { autoAlpha: 0, x: 26 }, { autoAlpha: 1, x: 0, duration: 0.42, ease: 'power2.out' }, 1.3);
+    tl.fromTo('#d-fill1', { width: '0%' }, { width: '64%', duration: 0.6, ease: 'power2.inOut' }, 1.45);
+
+    tl.fromTo('#d-r2', { autoAlpha: 0, x: 26, scale: 0.97 }, { autoAlpha: 1, x: 0, scale: 1, duration: 0.42, ease: 'back.out(1.4)' }, 2.2);
+    tl.fromTo('#d-fill2', { width: '0%' }, { width: '90%', duration: 0.85, ease: 'power2.inOut' }, 2.35);
+    tl.fromTo(c, { v: 0 }, { v: 12215, duration: 1.0, ease: 'power1.out',
+      onUpdate() { const r = Math.round(c.v).toLocaleString('vi-VN'); numEl.textContent = r; num2El.textContent = r; } }, 2.35);
+
+    tl.fromTo('#d-r3', { autoAlpha: 0, x: 26 }, { autoAlpha: 1, x: 0, duration: 0.42, ease: 'power2.out' }, 3.5);
+    tl.fromTo('#d-fill3', { width: '0%' }, { width: '100%', duration: 0.6, ease: 'power2.inOut' }, 3.65);
+
+    tl.set('#kdc1', {autoAlpha:0}, 0);
+    tl.to('#kdc1', {autoAlpha:1, duration:0.12}, 0.160);
+    tl.to('#kdc1', {autoAlpha:0, duration:0.12}, 1.370);
+    tl.to('#kdc1-w1', {color:'#FF5A1F', duration:0.1}, 0.160);
+    tl.to('#kdc1-w2', {color:'#FF5A1F', duration:0.1}, 0.320);
+    tl.to('#kdc1-w3', {color:'#FF5A1F', duration:0.1}, 0.480);
+    tl.to('#kdc1-w4', {color:'#FF5A1F', duration:0.1}, 0.680);
+    tl.to('#kdc1-w5', {color:'#FF5A1F', duration:0.1}, 0.960);
+    tl.to('#kdc1-w6', {color:'#FF5A1F', duration:0.1}, 1.260);
+    tl.set('#kdc2', {autoAlpha:0}, 0);
+    tl.to('#kdc2', {autoAlpha:1, duration:0.12}, 1.520);
+    tl.to('#kdc2', {autoAlpha:0, duration:0.12}, 2.790);
+    tl.to('#kdc2-w1', {color:'#FF5A1F', duration:0.1}, 1.520);
+    tl.to('#kdc2-w2', {color:'#FF5A1F', duration:0.1}, 1.860);
+    tl.to('#kdc2-w3', {color:'#FF5A1F', duration:0.1}, 2.080);
+    tl.to('#kdc2-w4', {color:'#FF5A1F', duration:0.1}, 2.300);
+    tl.to('#kdc2-w5', {color:'#FF5A1F', duration:0.1}, 2.460);
+    tl.to('#kdc2-w6', {color:'#FF5A1F', duration:0.1}, 2.760);
+    tl.set('#kdc3', {autoAlpha:0}, 0);
+    tl.to('#kdc3', {autoAlpha:1, duration:0.12}, 2.940);
+    tl.to('#kdc3', {autoAlpha:0, duration:0.12}, 4.310);
+    tl.to('#kdc3-w1', {color:'#FF5A1F', duration:0.1}, 2.940);
+    tl.to('#kdc3-w2', {color:'#FF5A1F', duration:0.1}, 3.120);
+    tl.to('#kdc3-w3', {color:'#FF5A1F', duration:0.1}, 3.380);
+    tl.to('#kdc3-w4', {color:'#FF5A1F', duration:0.1}, 3.520);
+    tl.to('#kdc3-w5', {color:'#FF5A1F', duration:0.1}, 3.680);
+    tl.to('#kdc3-w6', {color:'#FF5A1F', duration:0.1}, 3.860);
+    tl.set('#kdc4', {autoAlpha:0}, 0);
+    tl.to('#kdc4', {autoAlpha:1, duration:0.12}, 4.460);
+    tl.to('#kdc4', {autoAlpha:0, duration:0.12}, 5.830);
+    tl.to('#kdc4-w1', {color:'#FF5A1F', duration:0.1}, 4.460);
+    tl.to('#kdc4-w2', {color:'#FF5A1F', duration:0.1}, 4.660);
+    tl.to('#kdc4-w3', {color:'#FF5A1F', duration:0.1}, 4.900);
+    tl.to('#kdc4-w4', {color:'#FF5A1F', duration:0.1}, 5.100);
+    tl.to('#kdc4-w5', {color:'#FF5A1F', duration:0.1}, 5.620);
+    tl.to('#kdc4-w6', {color:'#FF5A1F', duration:0.1}, 5.800);
+    tl.set('#kdc5', {autoAlpha:0}, 0);
+    tl.to('#kdc5', {autoAlpha:1, duration:0.12}, 5.980);
+    tl.to('#kdc5', {autoAlpha:0, duration:0.12}, 7.270);
+    tl.to('#kdc5-w1', {color:'#FF5A1F', duration:0.1}, 5.980);
+    tl.to('#kdc5-w2', {color:'#FF5A1F', duration:0.1}, 6.180);
+    tl.to('#kdc5-w3', {color:'#FF5A1F', duration:0.1}, 6.340);
+    tl.to('#kdc5-w4', {color:'#FF5A1F', duration:0.1}, 6.760);
+    tl.to('#kdc5-w5', {color:'#FF5A1F', duration:0.1}, 6.920);
+    tl.to('#kdc5-w6', {color:'#FF5A1F', duration:0.1}, 7.100);
+    tl.set('#kdc6', {autoAlpha:0}, 0);
+    tl.to('#kdc6', {autoAlpha:1, duration:0.12}, 7.420);
+    tl.to('#kdc6', {autoAlpha:0, duration:0.12}, 9.460);
+    tl.to('#kdc6-w1', {color:'#FF5A1F', duration:0.1}, 7.420);
+    tl.to('#kdc6-w2', {color:'#FF5A1F', duration:0.1}, 7.700);
+    tl.to('#kdc6-w3', {color:'#FF5A1F', duration:0.1}, 7.900);
+    tl.to('#kdc6-w4', {color:'#FF5A1F', duration:0.1}, 8.100);
+    tl.to('#kdc6-w5', {color:'#FF5A1F', duration:0.1}, 8.420);
+    tl.to('#kdc6-w6', {color:'#FF5A1F', duration:0.1}, 8.600);
+    tl.to('#kdc6-w7', {color:'#FF5A1F', duration:0.1}, 8.840);
+    tl.to('#kdc6-w8', {color:'#FF5A1F', duration:0.1}, 8.980);
+
+    window.__timelines['04-data'] = tl;
+  </script>
+</template>

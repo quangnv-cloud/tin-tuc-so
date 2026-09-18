@@ -1,0 +1,228 @@
+[
+  {
+    "start": 0.16,
+    "end": 1.46,
+    "words": [
+      {
+        "text": "So",
+        "start": 0.16,
+        "end": 0.26
+      },
+      {
+        "text": "với",
+        "start": 0.32,
+        "end": 0.44
+      },
+      {
+        "text": "mức",
+        "start": 0.48,
+        "end": 0.62
+      },
+      {
+        "text": "lãi",
+        "start": 0.68,
+        "end": 0.9
+      },
+      {
+        "text": "hơn",
+        "start": 0.96,
+        "end": 1.16
+      },
+      {
+        "text": "tám",
+        "start": 1.26,
+        "end": 1.46
+      }
+    ]
+  },
+  {
+    "start": 1.52,
+    "end": 2.9,
+    "words": [
+      {
+        "text": "nghìn",
+        "start": 1.52,
+        "end": 1.72
+      },
+      {
+        "text": "sáu",
+        "start": 1.86,
+        "end": 2.0
+      },
+      {
+        "text": "trăm",
+        "start": 2.08,
+        "end": 2.22
+      },
+      {
+        "text": "tỷ",
+        "start": 2.3,
+        "end": 2.4
+      },
+      {
+        "text": "đồng",
+        "start": 2.46,
+        "end": 2.7
+      },
+      {
+        "text": "nửa",
+        "start": 2.76,
+        "end": 2.9
+      }
+    ]
+  },
+  {
+    "start": 2.94,
+    "end": 4.019,
+    "words": [
+      {
+        "text": "đầu",
+        "start": 2.94,
+        "end": 3.08
+      },
+      {
+        "text": "năm",
+        "start": 3.12,
+        "end": 3.28
+      },
+      {
+        "text": "của",
+        "start": 3.38,
+        "end": 3.5
+      },
+      {
+        "text": "công",
+        "start": 3.52,
+        "end": 3.62
+      },
+      {
+        "text": "ty",
+        "start": 3.68,
+        "end": 3.82
+      },
+      {
+        "text": "mẹ,",
+        "start": 3.86,
+        "end": 4.019
+      }
+    ]
+  },
+  {
+    "start": 4.46,
+    "end": 5.96,
+    "words": [
+      {
+        "text": "đã",
+        "start": 4.46,
+        "end": 4.62
+      },
+      {
+        "text": "tăng",
+        "start": 4.66,
+        "end": 4.84
+      },
+      {
+        "text": "rõ",
+        "start": 4.9,
+        "end": 5.02
+      },
+      {
+        "text": "rệt",
+        "start": 5.1,
+        "end": 5.3
+      },
+      {
+        "text": "và",
+        "start": 5.62,
+        "end": 5.72
+      },
+      {
+        "text": "mục",
+        "start": 5.8,
+        "end": 5.96
+      }
+    ]
+  },
+  {
+    "start": 5.98,
+    "end": 7.36,
+    "words": [
+      {
+        "text": "tiêu",
+        "start": 5.98,
+        "end": 6.14
+      },
+      {
+        "text": "cả",
+        "start": 6.18,
+        "end": 6.28
+      },
+      {
+        "text": "năm",
+        "start": 6.34,
+        "end": 6.52
+      },
+      {
+        "text": "là",
+        "start": 6.76,
+        "end": 6.84
+      },
+      {
+        "text": "lợi",
+        "start": 6.92,
+        "end": 7.06
+      },
+      {
+        "text": "nhuận",
+        "start": 7.1,
+        "end": 7.36
+      }
+    ]
+  },
+  {
+    "start": 7.42,
+    "end": 9.16,
+    "words": [
+      {
+        "text": "hơn",
+        "start": 7.42,
+        "end": 7.62
+      },
+      {
+        "text": "mười",
+        "start": 7.7,
+        "end": 7.88
+      },
+      {
+        "text": "ba",
+        "start": 7.9,
+        "end": 8.02
+      },
+      {
+        "text": "nghìn",
+        "start": 8.1,
+        "end": 8.36
+      },
+      {
+        "text": "năm",
+        "start": 8.42,
+        "end": 8.52
+      },
+      {
+        "text": "trăm",
+        "start": 8.6,
+        "end": 8.74
+      },
+      {
+        "text": "tỷ",
+        "start": 8.84,
+        "end": 8.94
+      },
+      {
+        "text": "đồng",
+        "start": 8.98,
+        "end": 9.16
+      }
+    ]
+  }
+]

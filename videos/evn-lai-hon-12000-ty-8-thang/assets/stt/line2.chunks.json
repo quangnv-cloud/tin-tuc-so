@@ -1,0 +1,223 @@
+[
+  {
+    "start": 0.06,
+    "end": 1.4,
+    "words": [
+      {
+        "text": "Trong",
+        "start": 0.06,
+        "end": 0.26
+      },
+      {
+        "text": "tám",
+        "start": 0.36,
+        "end": 0.52
+      },
+      {
+        "text": "tháng",
+        "start": 0.58,
+        "end": 0.82
+      },
+      {
+        "text": "đầu",
+        "start": 0.9,
+        "end": 1.02
+      },
+      {
+        "text": "năm",
+        "start": 1.06,
+        "end": 1.16
+      },
+      {
+        "text": "nay,",
+        "start": 1.22,
+        "end": 1.4
+      }
+    ]
+  },
+  {
+    "start": 1.68,
+    "end": 2.9,
+    "words": [
+      {
+        "text": "toàn",
+        "start": 1.68,
+        "end": 1.84
+      },
+      {
+        "text": "Tập",
+        "start": 1.88,
+        "end": 2.02
+      },
+      {
+        "text": "đoàn",
+        "start": 2.06,
+        "end": 2.28
+      },
+      {
+        "text": "ước",
+        "start": 2.34,
+        "end": 2.46
+      },
+      {
+        "text": "đạt",
+        "start": 2.52,
+        "end": 2.7
+      },
+      {
+        "text": "lợi",
+        "start": 2.74,
+        "end": 2.9
+      }
+    ]
+  },
+  {
+    "start": 2.92,
+    "end": 4.28,
+    "words": [
+      {
+        "text": "nhuận",
+        "start": 2.92,
+        "end": 3.16
+      },
+      {
+        "text": "hơn",
+        "start": 3.22,
+        "end": 3.42
+      },
+      {
+        "text": "mười",
+        "start": 3.46,
+        "end": 3.62
+      },
+      {
+        "text": "hai",
+        "start": 3.68,
+        "end": 3.82
+      },
+      {
+        "text": "nghìn",
+        "start": 3.88,
+        "end": 4.1
+      },
+      {
+        "text": "hai",
+        "start": 4.14,
+        "end": 4.28
+      }
+    ]
+  },
+  {
+    "start": 4.34,
+    "end": 5.9,
+    "words": [
+      {
+        "text": "trăm",
+        "start": 4.34,
+        "end": 4.48
+      },
+      {
+        "text": "tỷ",
+        "start": 4.56,
+        "end": 4.66
+      },
+      {
+        "text": "đồng",
+        "start": 4.72,
+        "end": 4.9
+      },
+      {
+        "text": "và",
+        "start": 5.34,
+        "end": 5.5
+      },
+      {
+        "text": "đến",
+        "start": 5.56,
+        "end": 5.72
+      },
+      {
+        "text": "cuối",
+        "start": 5.74,
+        "end": 5.9
+      }
+    ]
+  },
+  {
+    "start": 5.92,
+    "end": 7.46,
+    "words": [
+      {
+        "text": "tháng",
+        "start": 5.92,
+        "end": 6.04
+      },
+      {
+        "text": "Sáu",
+        "start": 6.16,
+        "end": 6.38
+      },
+      {
+        "text": "đã",
+        "start": 6.6,
+        "end": 6.76
+      },
+      {
+        "text": "xử",
+        "start": 6.88,
+        "end": 7.02
+      },
+      {
+        "text": "lý",
+        "start": 7.06,
+        "end": 7.2
+      },
+      {
+        "text": "hết",
+        "start": 7.28,
+        "end": 7.46
+      }
+    ]
+  },
+  {
+    "start": 7.52,
+    "end": 9.16,
+    "words": [
+      {
+        "text": "lỗ",
+        "start": 7.52,
+        "end": 7.74
+      },
+      {
+        "text": "lũy",
+        "start": 7.78,
+        "end": 8.0
+      },
+      {
+        "text": "kế",
+        "start": 8.039,
+        "end": 8.26
+      },
+      {
+        "text": "tồn",
+        "start": 8.38,
+        "end": 8.54
+      },
+      {
+        "text": "đọng",
+        "start": 8.58,
+        "end": 8.74
+      },
+      {
+        "text": "nhiều",
+        "start": 8.78,
+        "end": 8.94
+      },
+      {
+        "text": "năm",
+        "start": 9.0,
+        "end": 9.16
+      }
+    ]
+  }
+]
