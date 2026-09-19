@@ -1,0 +1,200 @@
+[
+  {
+    "words": [
+      {
+        "text": "Đội",
+        "start": 0.1
+      },
+      {
+        "text": "tuyển",
+        "start": 0.24
+      },
+      {
+        "text": "Việt",
+        "start": 0.42
+      },
+      {
+        "text": "Nam",
+        "start": 0.62
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 0.84
+  },
+  {
+    "words": [
+      {
+        "text": "bất",
+        "start": 0.84
+      },
+      {
+        "text": "ngờ",
+        "start": 1.02
+      },
+      {
+        "text": "vắng",
+        "start": 1.32
+      },
+      {
+        "text": "hàng",
+        "start": 1.54
+      }
+    ],
+    "fadein": 0.84,
+    "fadeout": 1.78
+  },
+  {
+    "words": [
+      {
+        "text": "loạt",
+        "start": 1.78
+      },
+      {
+        "text": "trụ",
+        "start": 1.96
+      },
+      {
+        "text": "cột",
+        "start": 2.14
+      },
+      {
+        "text": "quen",
+        "start": 2.32
+      }
+    ],
+    "fadein": 1.78,
+    "fadeout": 2.52
+  },
+  {
+    "words": [
+      {
+        "text": "thuộc",
+        "start": 2.52
+      },
+      {
+        "text": "trong",
+        "start": 2.8
+      },
+      {
+        "text": "danh",
+        "start": 2.98
+      },
+      {
+        "text": "sách",
+        "start": 3.18
+      }
+    ],
+    "fadein": 2.52,
+    "fadeout": 3.38
+  },
+  {
+    "words": [
+      {
+        "text": "chuẩn",
+        "start": 3.38
+      },
+      {
+        "text": "bị",
+        "start": 3.62
+      },
+      {
+        "text": "cho",
+        "start": 3.84
+      },
+      {
+        "text": "FIFA",
+        "start": 4.059
+      }
+    ],
+    "fadein": 3.38,
+    "fadeout": 4.54
+  },
+  {
+    "words": [
+      {
+        "text": "ASEAN",
+        "start": 4.54
+      },
+      {
+        "text": "Cup,",
+        "start": 4.94
+      },
+      {
+        "text": "nhưng",
+        "start": 5.44
+      },
+      {
+        "text": "lại",
+        "start": 5.7
+      }
+    ],
+    "fadein": 4.54,
+    "fadeout": 5.9
+  },
+  {
+    "words": [
+      {
+        "text": "chào",
+        "start": 5.9
+      },
+      {
+        "text": "đón",
+        "start": 6.08
+      },
+      {
+        "text": "hai",
+        "start": 6.36
+      },
+      {
+        "text": "gương",
+        "start": 6.56
+      }
+    ],
+    "fadein": 5.9,
+    "fadeout": 6.74
+  },
+  {
+    "words": [
+      {
+        "text": "mặt",
+        "start": 6.74
+      },
+      {
+        "text": "Việt",
+        "start": 6.9
+      },
+      {
+        "text": "kiều",
+        "start": 7.1
+      },
+      {
+        "text": "lần",
+        "start": 7.4
+      }
+    ],
+    "fadein": 6.74,
+    "fadeout": 7.6
+  },
+  {
+    "words": [
+      {
+        "text": "đầu",
+        "start": 7.6
+      },
+      {
+        "text": "được",
+        "start": 7.82
+      },
+      {
+        "text": "gọi",
+        "start": 7.94
+      },
+      {
+        "text": "tên.",
+        "start": 8.14
+      }
+    ],
+    "fadein": 7.6,
+    "fadeout": 8.69
+  }
+]

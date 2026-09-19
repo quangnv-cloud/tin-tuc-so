@@ -1,0 +1,148 @@
+[
+  {
+    "words": [
+      {
+        "text": "Đội",
+        "start": 0.1
+      },
+      {
+        "text": "tuyển",
+        "start": 0.26
+      },
+      {
+        "text": "Việt",
+        "start": 0.44
+      },
+      {
+        "text": "Nam",
+        "start": 0.62
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 0.94
+  },
+  {
+    "words": [
+      {
+        "text": "sẽ",
+        "start": 0.94
+      },
+      {
+        "text": "đá",
+        "start": 1.1
+      },
+      {
+        "text": "3",
+        "start": 1.34
+      },
+      {
+        "text": "trận",
+        "start": 1.56
+      }
+    ],
+    "fadein": 0.94,
+    "fadeout": 1.82
+  },
+  {
+    "words": [
+      {
+        "text": "trong",
+        "start": 1.82
+      },
+      {
+        "text": "vòng",
+        "start": 2.06
+      },
+      {
+        "text": "7",
+        "start": 2.24
+      },
+      {
+        "text": "ngày,",
+        "start": 2.44
+      }
+    ],
+    "fadein": 1.82,
+    "fadeout": 2.96
+  },
+  {
+    "words": [
+      {
+        "text": "gặp",
+        "start": 2.96
+      },
+      {
+        "text": "Philippines,",
+        "start": 3.14
+      },
+      {
+        "text": "Thái",
+        "start": 3.78
+      },
+      {
+        "text": "Lan",
+        "start": 4.0
+      }
+    ],
+    "fadein": 2.96,
+    "fadeout": 4.34
+  },
+  {
+    "words": [
+      {
+        "text": "và",
+        "start": 4.34
+      },
+      {
+        "text": "Pakistan",
+        "start": 4.5
+      },
+      {
+        "text": "ở",
+        "start": 5.22
+      },
+      {
+        "text": "bảng",
+        "start": 5.32
+      }
+    ],
+    "fadein": 4.34,
+    "fadeout": 5.52
+  },
+  {
+    "words": [
+      {
+        "text": "B,",
+        "start": 5.52
+      },
+      {
+        "text": "hạng",
+        "start": 5.96
+      },
+      {
+        "text": "đấu",
+        "start": 6.18
+      },
+      {
+        "text": "cao",
+        "start": 6.44
+      }
+    ],
+    "fadein": 5.52,
+    "fadeout": 6.6
+  },
+  {
+    "words": [
+      {
+        "text": "nhất",
+        "start": 6.6
+      },
+      {
+        "text": "giải.",
+        "start": 6.8
+      }
+    ],
+    "fadein": 6.6,
+    "fadeout": 7.37
+  }
+]

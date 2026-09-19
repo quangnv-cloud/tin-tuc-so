@@ -1,0 +1,244 @@
+[
+  {
+    "words": [
+      {
+        "text": "Hai",
+        "start": 0.08
+      },
+      {
+        "text": "tân",
+        "start": 0.24
+      },
+      {
+        "text": "binh",
+        "start": 0.42
+      },
+      {
+        "text": "là",
+        "start": 0.68
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 0.88
+  },
+  {
+    "words": [
+      {
+        "text": "Adou",
+        "start": 0.88
+      },
+      {
+        "text": "Minh,",
+        "start": 1.2
+      },
+      {
+        "text": "trung",
+        "start": 1.6
+      },
+      {
+        "text": "vệ",
+        "start": 1.86
+      }
+    ],
+    "fadein": 0.88,
+    "fadeout": 2.12
+  },
+  {
+    "words": [
+      {
+        "text": "Việt",
+        "start": 2.12
+      },
+      {
+        "text": "kiều",
+        "start": 2.34
+      },
+      {
+        "text": "Pháp",
+        "start": 2.58
+      },
+      {
+        "text": "của",
+        "start": 2.88
+      }
+    ],
+    "fadein": 2.12,
+    "fadeout": 3.06
+  },
+  {
+    "words": [
+      {
+        "text": "câu",
+        "start": 3.06
+      },
+      {
+        "text": "lạc",
+        "start": 3.18
+      },
+      {
+        "text": "bộ",
+        "start": 3.34
+      },
+      {
+        "text": "Công",
+        "start": 3.56
+      }
+    ],
+    "fadein": 3.06,
+    "fadeout": 3.74
+  },
+  {
+    "words": [
+      {
+        "text": "An",
+        "start": 3.74
+      },
+      {
+        "text": "Hà",
+        "start": 3.88
+      },
+      {
+        "text": "Nội,",
+        "start": 4.019
+      },
+      {
+        "text": "và",
+        "start": 4.5
+      }
+    ],
+    "fadein": 3.74,
+    "fadeout": 4.76
+  },
+  {
+    "words": [
+      {
+        "text": "Williams",
+        "start": 4.76
+      },
+      {
+        "text": "Minh",
+        "start": 5.4
+      },
+      {
+        "text": "Hoàng,",
+        "start": 5.6
+      },
+      {
+        "text": "hậu",
+        "start": 6.1
+      }
+    ],
+    "fadein": 4.76,
+    "fadeout": 6.32
+  },
+  {
+    "words": [
+      {
+        "text": "vệ",
+        "start": 6.32
+      },
+      {
+        "text": "Việt",
+        "start": 6.56
+      },
+      {
+        "text": "kiều",
+        "start": 6.78
+      },
+      {
+        "text": "Anh",
+        "start": 7.06
+      }
+    ],
+    "fadein": 6.32,
+    "fadeout": 7.4
+  },
+  {
+    "words": [
+      {
+        "text": "cao",
+        "start": 7.4
+      },
+      {
+        "text": "một",
+        "start": 7.58
+      },
+      {
+        "text": "mét",
+        "start": 7.74
+      },
+      {
+        "text": "chín",
+        "start": 7.92
+      }
+    ],
+    "fadein": 7.4,
+    "fadeout": 8.16
+  },
+  {
+    "words": [
+      {
+        "text": "mươi",
+        "start": 8.16
+      },
+      {
+        "text": "của",
+        "start": 8.46
+      },
+      {
+        "text": "câu",
+        "start": 8.62
+      },
+      {
+        "text": "lạc",
+        "start": 8.76
+      }
+    ],
+    "fadein": 8.16,
+    "fadeout": 8.92
+  },
+  {
+    "words": [
+      {
+        "text": "bộ",
+        "start": 8.92
+      },
+      {
+        "text": "Công",
+        "start": 9.16
+      },
+      {
+        "text": "An",
+        "start": 9.36
+      },
+      {
+        "text": "Thành",
+        "start": 9.54
+      }
+    ],
+    "fadein": 8.92,
+    "fadeout": 9.74
+  },
+  {
+    "words": [
+      {
+        "text": "phố",
+        "start": 9.74
+      },
+      {
+        "text": "Hồ",
+        "start": 9.9
+      },
+      {
+        "text": "Chí",
+        "start": 10.08
+      },
+      {
+        "text": "Minh.",
+        "start": 10.22
+      }
+    ],
+    "fadein": 9.74,
+    "fadeout": 10.75
+  }
+]
