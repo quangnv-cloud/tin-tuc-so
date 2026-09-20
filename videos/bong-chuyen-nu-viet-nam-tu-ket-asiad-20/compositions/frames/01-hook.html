@@ -1,0 +1,76 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+
+    .hk-photo { position: absolute; left: 0; right: 0; top: 0; height: 780px; overflow: hidden; background: #05070c; }
+    .hk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; }
+    .hk-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,14,20,0.10) 0%, rgba(11,14,20,0.32) 55%, rgba(11,14,20,0.99) 100%); }
+
+    .hk-panel { position: absolute; left: 0; right: 0; top: 780px; bottom: 0; background: #0B0E14; padding: 70px 60px 80px; display: flex; flex-direction: column; align-items: flex-start; }
+
+    .hk-masthead { display: flex; align-items: center; gap: 13px; margin-bottom: 40px; opacity: 0; }
+    .hk-logo { width: 52px; height: 52px; flex: none; }
+    .hk-logo img { display: block; width: 100%; height: 100%; }
+    .hk-mw { font-weight: 800; font-size: 30px; letter-spacing: 0.01em; color: #fff; }
+
+    .hk-badge { display: inline-flex; align-items: center; gap: 12px; padding: 8px 18px 8px 8px; border-radius: 100px; border: 1.5px solid rgba(255,90,31,0.85); background: rgba(255,90,31,0.1); margin-bottom: 56px; opacity: 0; }
+    .hk-badge .ring { width: 30px; height: 30px; border-radius: 50%; border: 3px solid #FF5A1F; display: flex; align-items: center; justify-content: center; flex: none; }
+    .hk-badge .ring .dot { width: 7px; height: 7px; border-radius: 50%; background: #FF5A1F; }
+    .hk-badge span.lbl { font-weight: 500; font-size: 21px; letter-spacing: 0.03em; color: #fff; white-space: nowrap; }
+
+    .hk-name-wrap { overflow: hidden; }
+    .hk-name-wrap + .hk-name-wrap { margin-top: 4px; }
+    .hk-name { font-weight: 900; font-size: 100px; line-height: 1.22; letter-spacing: -0.02em; color: #FF5A1F; white-space: nowrap; }
+
+    .hk-tags { display: flex; flex-direction: column; gap: 28px; margin-top: 130px; }
+    .hk-tag { display: flex; align-items: center; font-weight: 800; font-size: 46px; line-height: 1.2; opacity: 0; }
+    .hk-tag.warn { color: #FF4438; }
+    .hk-tag.hot { color: #FF5A1F; }
+    .hk-tag .dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: currentColor; margin-right: 18px; flex: none; }
+  </style>
+
+  <div id="root" data-composition-id="01-hook" data-width="1080" data-height="1920">
+    <div class="hk-photo">
+      <img src="assets/img/article-hero.jpg" alt="">
+      <div class="hk-scrim"></div>
+    </div>
+
+    <div class="hk-panel">
+      <div class="hk-masthead">
+        <div class="hk-logo"><img src="public/logo.png" alt=""></div>
+        <div class="hk-mw">Tin Tức Số</div>
+      </div>
+      <div class="hk-badge"><span class="ring"><span class="dot"></span></span><span class="lbl">Nguồn: VnExpress Thể thao · 20/9/2026</span></div>
+      <div class="hk-name-wrap"><div class="hk-name" id="hk-name1">BÓNG CHUYỀN NỮ</div></div>
+      <div class="hk-name-wrap"><div class="hk-name" id="hk-name2">VIỆT NAM</div></div>
+      <div class="hk-tags">
+        <div class="hk-tag warn" id="hk-t1"><span class="dot"></span>Thua kịch tính</div>
+        <div class="hk-tag hot" id="hk-t2"><span class="dot"></span>Tứ kết hôm nay</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.hk-photo', { autoAlpha: 0.5, scale: 1.12 }, { autoAlpha: 1, scale: 1, duration: 1.0, ease: 'power2.out' }, 0);
+    tl.fromTo('.hk-panel', { y: 48 }, { y: 0, duration: 0.55, ease: 'power3.out' }, 0.1);
+    tl.fromTo('.hk-masthead', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.3);
+    tl.fromTo('.hk-badge', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.36, ease: 'back.out(1.7)' }, 0.52);
+    tl.fromTo('#hk-name1', { yPercent: 118 }, { yPercent: 0, duration: 0.65, ease: 'power4.out' }, 0.8);
+    tl.fromTo('#hk-name2', { yPercent: 118 }, { yPercent: 0, duration: 0.65, ease: 'power4.out' }, 0.94);
+    tl.fromTo('#hk-t1', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 1.68);
+    tl.fromTo('#hk-t2', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 1.92);
+    window.__timelines['01-hook'] = tl;
+  </script>
+</template>
