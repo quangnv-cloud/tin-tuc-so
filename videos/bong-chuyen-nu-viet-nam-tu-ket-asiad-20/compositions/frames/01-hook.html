@@ -38,6 +38,10 @@
     .hk-tag.warn { color: #FF4438; }
     .hk-tag.hot { color: #FF5A1F; }
     .hk-tag .dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: currentColor; margin-right: 18px; flex: none; }
+
+    .cap-wrap { position: absolute; left: 56px; right: 56px; top: 1730px; min-height: 96px; z-index: 40; display: flex; align-items: center; justify-content: center; text-align: center; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 6px; opacity: 0; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 38px; line-height: 1.3; letter-spacing: -0.005em; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 26px rgba(0,0,0,0.6); }
+    .cap-chunk .w { color: rgba(255,255,255,0.55); }
   </style>
 
   <div id="root" data-composition-id="01-hook" data-width="1080" data-height="1920">
@@ -59,6 +63,16 @@
         <div class="hk-tag hot" id="hk-t2"><span class="dot"></span>Tứ kết hôm nay</div>
       </div>
     </div>
+    <div class="cap-wrap">
+      <div class="cap-chunk" id="cap1-1"><span class="w" id="cap1-1-w1">Đội</span><span class="w" id="cap1-1-w2">tuyển</span><span class="w" id="cap1-1-w3">bóng</span><span class="w" id="cap1-1-w4">chuyền</span><span class="w" id="cap1-1-w5">nữ</span></div>
+      <div class="cap-chunk" id="cap1-2"><span class="w" id="cap1-2-w1">Việt</span><span class="w" id="cap1-2-w2">Nam</span><span class="w" id="cap1-2-w3">khép</span><span class="w" id="cap1-2-w4">lại</span><span class="w" id="cap1-2-w5">vòng</span></div>
+      <div class="cap-chunk" id="cap1-3"><span class="w" id="cap1-3-w1">bảng</span><span class="w" id="cap1-3-w2">Asiad</span><span class="w" id="cap1-3-w3">20</span><span class="w" id="cap1-3-w4">bằng</span><span class="w" id="cap1-3-w5">một</span></div>
+      <div class="cap-chunk" id="cap1-4"><span class="w" id="cap1-4-w1">trận</span><span class="w" id="cap1-4-w2">thua</span><span class="w" id="cap1-4-w3">kịch</span><span class="w" id="cap1-4-w4">tính</span><span class="w" id="cap1-4-w5">trước</span></div>
+      <div class="cap-chunk" id="cap1-5"><span class="w" id="cap1-5-w1">Hàn</span><span class="w" id="cap1-5-w2">Quốc</span><span class="w" id="cap1-5-w3">để</span><span class="w" id="cap1-5-w4">rồi</span><span class="w" id="cap1-5-w5">bước</span></div>
+      <div class="cap-chunk" id="cap1-6"><span class="w" id="cap1-6-w1">vào</span><span class="w" id="cap1-6-w2">tứ</span><span class="w" id="cap1-6-w3">kết</span><span class="w" id="cap1-6-w4">gặp</span><span class="w" id="cap1-6-w5">đối</span></div>
+      <div class="cap-chunk" id="cap1-7"><span class="w" id="cap1-7-w1">thủ</span><span class="w" id="cap1-7-w2">mạnh</span><span class="w" id="cap1-7-w3">nhất</span><span class="w" id="cap1-7-w4">giải</span><span class="w" id="cap1-7-w5">ngay</span></div>
+      <div class="cap-chunk" id="cap1-8"><span class="w" id="cap1-8-w1">hôm</span><span class="w" id="cap1-8-w2">nay</span></div>
+    </div>
   </div>
 
   <script>
@@ -71,6 +85,68 @@
     tl.fromTo('#hk-name2', { yPercent: 118 }, { yPercent: 0, duration: 0.65, ease: 'power4.out' }, 0.94);
     tl.fromTo('#hk-t1', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 1.68);
     tl.fromTo('#hk-t2', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 1.92);
+    
+    tl.fromTo('#cap1-1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 0.080);
+    tl.fromTo('#cap1-1-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.080);
+    tl.fromTo('#cap1-1-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.260);
+    tl.fromTo('#cap1-1-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.480);
+    tl.fromTo('#cap1-1-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.640);
+    tl.fromTo('#cap1-1-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.860);
+    tl.set('#cap1-1', { autoAlpha: 0 }, 1.020);
+
+    tl.fromTo('#cap1-2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 1.020);
+    tl.fromTo('#cap1-2-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.020);
+    tl.fromTo('#cap1-2-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.220);
+    tl.fromTo('#cap1-2-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.480);
+    tl.fromTo('#cap1-2-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.680);
+    tl.fromTo('#cap1-2-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.880);
+    tl.set('#cap1-2', { autoAlpha: 0 }, 2.060);
+
+    tl.fromTo('#cap1-3', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 2.060);
+    tl.fromTo('#cap1-3-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.060);
+    tl.fromTo('#cap1-3-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.360);
+    tl.fromTo('#cap1-3-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.920);
+    tl.fromTo('#cap1-3-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.480);
+    tl.fromTo('#cap1-3-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.700);
+    tl.set('#cap1-3', { autoAlpha: 0 }, 3.860);
+
+    tl.fromTo('#cap1-4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 3.860);
+    tl.fromTo('#cap1-4-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.860);
+    tl.fromTo('#cap1-4-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.080);
+    tl.fromTo('#cap1-4-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.340);
+    tl.fromTo('#cap1-4-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.540);
+    tl.fromTo('#cap1-4-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.760);
+    tl.set('#cap1-4', { autoAlpha: 0 }, 4.940);
+
+    tl.fromTo('#cap1-5', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 4.940);
+    tl.fromTo('#cap1-5-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.940);
+    tl.fromTo('#cap1-5-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.160);
+    tl.fromTo('#cap1-5-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.680);
+    tl.fromTo('#cap1-5-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.860);
+    tl.fromTo('#cap1-5-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.120);
+    tl.set('#cap1-5', { autoAlpha: 0 }, 6.300);
+
+    tl.fromTo('#cap1-6', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 6.300);
+    tl.fromTo('#cap1-6-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.300);
+    tl.fromTo('#cap1-6-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.500);
+    tl.fromTo('#cap1-6-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.700);
+    tl.fromTo('#cap1-6-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.980);
+    tl.fromTo('#cap1-6-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.140);
+    tl.set('#cap1-6', { autoAlpha: 0 }, 7.280);
+
+    tl.fromTo('#cap1-7', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 7.280);
+    tl.fromTo('#cap1-7-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.280);
+    tl.fromTo('#cap1-7-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.560);
+    tl.fromTo('#cap1-7-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.740);
+    tl.fromTo('#cap1-7-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.960);
+    tl.fromTo('#cap1-7-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.280);
+    tl.set('#cap1-7', { autoAlpha: 0 }, 8.440);
+
+    tl.fromTo('#cap1-8', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 8.440);
+    tl.fromTo('#cap1-8-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.440);
+    tl.fromTo('#cap1-8-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.580);
+    tl.to('#cap1-8', { autoAlpha: 0, duration: 0.12 }, 9.040);
+
     window.__timelines['01-hook'] = tl;
   </script>
 </template>
