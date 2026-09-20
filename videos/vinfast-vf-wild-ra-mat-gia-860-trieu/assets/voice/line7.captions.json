@@ -1,0 +1,302 @@
+[
+  {
+    "words": [
+      {
+        "text": "Một",
+        "start": 0.08
+      },
+      {
+        "text": "chiếc",
+        "start": 0.22
+      },
+      {
+        "text": "xe",
+        "start": 0.4
+      },
+      {
+        "text": "điện",
+        "start": 0.56
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 0.84
+  },
+  {
+    "words": [
+      {
+        "text": "phải",
+        "start": 0.84
+      },
+      {
+        "text": "mang",
+        "start": 1.08
+      },
+      {
+        "text": "theo",
+        "start": 1.26
+      },
+      {
+        "text": "cả",
+        "start": 1.52
+      }
+    ],
+    "fadein": 0.84,
+    "fadeout": 1.66
+  },
+  {
+    "words": [
+      {
+        "text": "động",
+        "start": 1.66
+      },
+      {
+        "text": "cơ",
+        "start": 1.84
+      },
+      {
+        "text": "xăng",
+        "start": 2.04
+      },
+      {
+        "text": "để",
+        "start": 2.46
+      }
+    ],
+    "fadein": 1.66,
+    "fadeout": 2.58
+  },
+  {
+    "words": [
+      {
+        "text": "người",
+        "start": 2.58
+      },
+      {
+        "text": "dùng",
+        "start": 2.78
+      },
+      {
+        "text": "yên",
+        "start": 3.02
+      },
+      {
+        "text": "tâm",
+        "start": 3.2
+      }
+    ],
+    "fadein": 2.58,
+    "fadeout": 3.42
+  },
+  {
+    "words": [
+      {
+        "text": "hơn",
+        "start": 3.42
+      },
+      {
+        "text": "về",
+        "start": 3.7
+      },
+      {
+        "text": "phạm",
+        "start": 3.86
+      },
+      {
+        "text": "vi",
+        "start": 4.059
+      }
+    ],
+    "fadein": 3.42,
+    "fadeout": 4.18
+  },
+  {
+    "words": [
+      {
+        "text": "hoạt",
+        "start": 4.18
+      },
+      {
+        "text": "động,",
+        "start": 4.38
+      },
+      {
+        "text": "đây",
+        "start": 4.84
+      },
+      {
+        "text": "là",
+        "start": 5.04
+      }
+    ],
+    "fadein": 4.18,
+    "fadeout": 5.18
+  },
+  {
+    "words": [
+      {
+        "text": "bước",
+        "start": 5.18
+      },
+      {
+        "text": "đi",
+        "start": 5.38
+      },
+      {
+        "text": "khôn",
+        "start": 5.52
+      },
+      {
+        "text": "ngoan,",
+        "start": 5.76
+      }
+    ],
+    "fadein": 5.18,
+    "fadeout": 6.26
+  },
+  {
+    "words": [
+      {
+        "text": "hay",
+        "start": 6.26
+      },
+      {
+        "text": "dấu",
+        "start": 6.54
+      },
+      {
+        "text": "hiệu",
+        "start": 6.7
+      },
+      {
+        "text": "cho",
+        "start": 6.86
+      }
+    ],
+    "fadein": 6.26,
+    "fadeout": 7.02
+  },
+  {
+    "words": [
+      {
+        "text": "thấy",
+        "start": 7.02
+      },
+      {
+        "text": "xe",
+        "start": 7.5
+      },
+      {
+        "text": "điện",
+        "start": 7.66
+      },
+      {
+        "text": "vẫn",
+        "start": 7.92
+      }
+    ],
+    "fadein": 7.02,
+    "fadeout": 8.16
+  },
+  {
+    "words": [
+      {
+        "text": "chưa",
+        "start": 8.16
+      },
+      {
+        "text": "thể",
+        "start": 8.38
+      },
+      {
+        "text": "tự",
+        "start": 8.64
+      },
+      {
+        "text": "tin",
+        "start": 8.82
+      }
+    ],
+    "fadein": 8.16,
+    "fadeout": 9.06
+  },
+  {
+    "words": [
+      {
+        "text": "đứng",
+        "start": 9.06
+      },
+      {
+        "text": "một",
+        "start": 9.22
+      },
+      {
+        "text": "mình?",
+        "start": 9.4
+      },
+      {
+        "text": "Hãy",
+        "start": 9.96
+      }
+    ],
+    "fadein": 9.06,
+    "fadeout": 10.12
+  },
+  {
+    "words": [
+      {
+        "text": "để",
+        "start": 10.12
+      },
+      {
+        "text": "lại",
+        "start": 10.26
+      },
+      {
+        "text": "bình",
+        "start": 10.44
+      },
+      {
+        "text": "luận,",
+        "start": 10.6
+      }
+    ],
+    "fadein": 10.12,
+    "fadeout": 10.98
+  },
+  {
+    "words": [
+      {
+        "text": "chia",
+        "start": 10.98
+      },
+      {
+        "text": "sẻ",
+        "start": 11.18
+      },
+      {
+        "text": "góc",
+        "start": 11.34
+      },
+      {
+        "text": "nhìn",
+        "start": 11.5
+      }
+    ],
+    "fadein": 10.98,
+    "fadeout": 11.7
+  },
+  {
+    "words": [
+      {
+        "text": "của",
+        "start": 11.7
+      },
+      {
+        "text": "bạn.",
+        "start": 11.8
+      }
+    ],
+    "fadein": 11.7,
+    "fadeout": 12.31
+  }
+]

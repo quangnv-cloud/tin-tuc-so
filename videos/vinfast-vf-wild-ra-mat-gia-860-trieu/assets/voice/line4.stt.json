@@ -1,0 +1,520 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "VFY chạy điện thuần được hơn hai trăm năm mươi km. Sau đó một động cơ xăng chỉ để phát điện sạc pin, nâng tổng quãng đường mỗi lần nạp năng lượng lên hơn một nghìn km",
+  "words": [
+    {
+      "text": "VFY",
+      "start": 0.12,
+      "end": 0.82,
+      "type": "word",
+      "logprob": -0.19053390622138977
+    },
+    {
+      "text": " ",
+      "start": 0.82,
+      "end": 1.04,
+      "type": "spacing",
+      "logprob": -0.000163541772053577
+    },
+    {
+      "text": "chạy",
+      "start": 1.04,
+      "end": 1.26,
+      "type": "word",
+      "logprob": -0.000163541772053577
+    },
+    {
+      "text": " ",
+      "start": 1.26,
+      "end": 1.3,
+      "type": "spacing",
+      "logprob": -2.47952248173533e-05
+    },
+    {
+      "text": "điện",
+      "start": 1.3,
+      "end": 1.48,
+      "type": "word",
+      "logprob": -2.47952248173533e-05
+    },
+    {
+      "text": " ",
+      "start": 1.48,
+      "end": 1.5,
+      "type": "spacing",
+      "logprob": -0.0002337421028641984
+    },
+    {
+      "text": "thuần",
+      "start": 1.5,
+      "end": 1.74,
+      "type": "word",
+      "logprob": -0.0002337421028641984
+    },
+    {
+      "text": " ",
+      "start": 1.74,
+      "end": 1.94,
+      "type": "spacing",
+      "logprob": -2.0265558760002023e-06
+    },
+    {
+      "text": "được",
+      "start": 1.96,
+      "end": 2.08,
+      "type": "word",
+      "logprob": -2.0265558760002023e-06
+    },
+    {
+      "text": " ",
+      "start": 2.08,
+      "end": 2.14,
+      "type": "spacing",
+      "logprob": -2.3841830625315197e-06
+    },
+    {
+      "text": "hơn",
+      "start": 2.14,
+      "end": 2.32,
+      "type": "word",
+      "logprob": -2.3841830625315197e-06
+    },
+    {
+      "text": " ",
+      "start": 2.32,
+      "end": 2.36,
+      "type": "spacing",
+      "logprob": -0.07894472032785416
+    },
+    {
+      "text": "hai",
+      "start": 2.36,
+      "end": 2.48,
+      "type": "word",
+      "logprob": -0.07894472032785416
+    },
+    {
+      "text": " ",
+      "start": 2.48,
+      "end": 2.54,
+      "type": "spacing",
+      "logprob": -0.0008679436868987978
+    },
+    {
+      "text": "trăm",
+      "start": 2.54,
+      "end": 2.72,
+      "type": "word",
+      "logprob": -0.0008679436868987978
+    },
+    {
+      "text": " ",
+      "start": 2.72,
+      "end": 2.76,
+      "type": "spacing",
+      "logprob": -0.0001554368354845792
+    },
+    {
+      "text": "năm",
+      "start": 2.76,
+      "end": 2.86,
+      "type": "word",
+      "logprob": -0.0001554368354845792
+    },
+    {
+      "text": " ",
+      "start": 2.86,
+      "end": 2.9,
+      "type": "spacing",
+      "logprob": -2.9802276912960224e-06
+    },
+    {
+      "text": "mươi",
+      "start": 2.9,
+      "end": 3.06,
+      "type": "word",
+      "logprob": -0.00020134746478106536
+    },
+    {
+      "text": " ",
+      "start": 3.06,
+      "end": 3.08,
+      "type": "spacing",
+      "logprob": -0.1945224404335022
+    },
+    {
+      "text": "km.",
+      "start": 3.08,
+      "end": 3.56,
+      "type": "word",
+      "logprob": -0.34062639872233075
+    },
+    {
+      "text": " ",
+      "start": 3.56,
+      "end": 3.96,
+      "type": "spacing",
+      "logprob": -0.0004152389301452786
+    },
+    {
+      "text": "Sau",
+      "start": 3.96,
+      "end": 4.1,
+      "type": "word",
+      "logprob": -0.0004152389301452786
+    },
+    {
+      "text": " ",
+      "start": 4.1,
+      "end": 4.14,
+      "type": "spacing",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": "đó",
+      "start": 4.14,
+      "end": 4.5,
+      "type": "word",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": " ",
+      "start": 4.5,
+      "end": 4.56,
+      "type": "spacing",
+      "logprob": -0.02975955791771412
+    },
+    {
+      "text": "một",
+      "start": 4.56,
+      "end": 4.68,
+      "type": "word",
+      "logprob": -0.02975955791771412
+    },
+    {
+      "text": " ",
+      "start": 4.68,
+      "end": 4.72,
+      "type": "spacing",
+      "logprob": -7.629365427419543e-06
+    },
+    {
+      "text": "động",
+      "start": 4.72,
+      "end": 4.88,
+      "type": "word",
+      "logprob": -7.629365427419543e-06
+    },
+    {
+      "text": " ",
+      "start": 4.88,
+      "end": 4.92,
+      "type": "spacing",
+      "logprob": -4.7205765440594405e-05
+    },
+    {
+      "text": "cơ",
+      "start": 4.92,
+      "end": 5.02,
+      "type": "word",
+      "logprob": -4.7205765440594405e-05
+    },
+    {
+      "text": " ",
+      "start": 5.02,
+      "end": 5.14,
+      "type": "spacing",
+      "logprob": -0.00024005869636312127
+    },
+    {
+      "text": "xăng",
+      "start": 5.14,
+      "end": 5.42,
+      "type": "word",
+      "logprob": -0.00024005869636312127
+    },
+    {
+      "text": " ",
+      "start": 5.42,
+      "end": 5.46,
+      "type": "spacing",
+      "logprob": -7.629365427419543e-06
+    },
+    {
+      "text": "chỉ",
+      "start": 5.46,
+      "end": 5.6,
+      "type": "word",
+      "logprob": -7.629365427419543e-06
+    },
+    {
+      "text": " ",
+      "start": 5.6,
+      "end": 5.64,
+      "type": "spacing",
+      "logprob": -7.271740287251305e-06
+    },
+    {
+      "text": "để",
+      "start": 5.64,
+      "end": 5.8,
+      "type": "word",
+      "logprob": -7.271740287251305e-06
+    },
+    {
+      "text": " ",
+      "start": 5.8,
+      "end": 5.84,
+      "type": "spacing",
+      "logprob": -4.625213477993384e-05
+    },
+    {
+      "text": "phát",
+      "start": 5.84,
+      "end": 6.0,
+      "type": "word",
+      "logprob": -4.625213477993384e-05
+    },
+    {
+      "text": " ",
+      "start": 6.0,
+      "end": 6.06,
+      "type": "spacing",
+      "logprob": -9.30981186684221e-05
+    },
+    {
+      "text": "điện",
+      "start": 6.06,
+      "end": 6.28,
+      "type": "word",
+      "logprob": -9.30981186684221e-05
+    },
+    {
+      "text": " ",
+      "start": 6.28,
+      "end": 6.36,
+      "type": "spacing",
+      "logprob": -2.706014311115723e-05
+    },
+    {
+      "text": "sạc",
+      "start": 6.36,
+      "end": 6.5,
+      "type": "word",
+      "logprob": -0.00011010186123409464
+    },
+    {
+      "text": " ",
+      "start": 6.5,
+      "end": 6.56,
+      "type": "spacing",
+      "logprob": -0.00019894051365554333
+    },
+    {
+      "text": "pin,",
+      "start": 6.56,
+      "end": 6.76,
+      "type": "word",
+      "logprob": -0.0001500398489042709
+    },
+    {
+      "text": " ",
+      "start": 6.76,
+      "end": 6.76,
+      "type": "spacing",
+      "logprob": -5.6265202147187665e-05
+    },
+    {
+      "text": "nâng",
+      "start": 7.2,
+      "end": 7.34,
+      "type": "word",
+      "logprob": -5.6265202147187665e-05
+    },
+    {
+      "text": " ",
+      "start": 7.34,
+      "end": 7.44,
+      "type": "spacing",
+      "logprob": -2.0861407392658293e-05
+    },
+    {
+      "text": "tổng",
+      "start": 7.44,
+      "end": 7.62,
+      "type": "word",
+      "logprob": -2.0861407392658293e-05
+    },
+    {
+      "text": " ",
+      "start": 7.62,
+      "end": 7.64,
+      "type": "spacing",
+      "logprob": -0.0001003691868390888
+    },
+    {
+      "text": "quãng",
+      "start": 7.64,
+      "end": 7.82,
+      "type": "word",
+      "logprob": -0.0001003691868390888
+    },
+    {
+      "text": " ",
+      "start": 7.82,
+      "end": 7.86,
+      "type": "spacing",
+      "logprob": -1.311301275563892e-06
+    },
+    {
+      "text": "đường",
+      "start": 7.86,
+      "end": 8.08,
+      "type": "word",
+      "logprob": -1.311301275563892e-06
+    },
+    {
+      "text": " ",
+      "start": 8.08,
+      "end": 8.119,
+      "type": "spacing",
+      "logprob": -1.1444026313256472e-05
+    },
+    {
+      "text": "mỗi",
+      "start": 8.119,
+      "end": 8.26,
+      "type": "word",
+      "logprob": -1.1444026313256472e-05
+    },
+    {
+      "text": " ",
+      "start": 8.26,
+      "end": 8.3,
+      "type": "spacing",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": "lần",
+      "start": 8.3,
+      "end": 8.44,
+      "type": "word",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": " ",
+      "start": 8.44,
+      "end": 8.5,
+      "type": "spacing",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": "nạp",
+      "start": 8.5,
+      "end": 8.64,
+      "type": "word",
+      "logprob": -1.9073221816749236e-05
+    },
+    {
+      "text": " ",
+      "start": 8.64,
+      "end": 8.68,
+      "type": "spacing",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": "năng",
+      "start": 8.68,
+      "end": 8.82,
+      "type": "word",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": " ",
+      "start": 8.82,
+      "end": 8.86,
+      "type": "spacing",
+      "logprob": -1.823885577323381e-05
+    },
+    {
+      "text": "lượng",
+      "start": 8.86,
+      "end": 9.16,
+      "type": "word",
+      "logprob": -1.823885577323381e-05
+    },
+    {
+      "text": " ",
+      "start": 9.16,
+      "end": 9.22,
+      "type": "spacing",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": "lên",
+      "start": 9.22,
+      "end": 9.38,
+      "type": "word",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": " ",
+      "start": 9.38,
+      "end": 9.42,
+      "type": "spacing",
+      "logprob": -3.933898824470816e-06
+    },
+    {
+      "text": "hơn",
+      "start": 9.42,
+      "end": 9.64,
+      "type": "word",
+      "logprob": -3.933898824470816e-06
+    },
+    {
+      "text": " ",
+      "start": 9.64,
+      "end": 9.7,
+      "type": "spacing",
+      "logprob": -0.00048387263086624444
+    },
+    {
+      "text": "một",
+      "start": 9.7,
+      "end": 9.84,
+      "type": "word",
+      "logprob": -0.00048387263086624444
+    },
+    {
+      "text": " ",
+      "start": 9.84,
+      "end": 9.88,
+      "type": "spacing",
+      "logprob": -0.00853202398866415
+    },
+    {
+      "text": "nghìn",
+      "start": 9.88,
+      "end": 10.06,
+      "type": "word",
+      "logprob": -0.0051195481790728085
+    },
+    {
+      "text": " ",
+      "start": 10.06,
+      "end": 10.14,
+      "type": "spacing",
+      "logprob": -0.003049249993637204
+    },
+    {
+      "text": "km",
+      "start": 10.14,
+      "end": 10.22,
+      "type": "word",
+      "logprob": -0.003049249993637204
+    }
+  ],
+  "transcription_id": "QSFoDlRwpJEVJCWvc7Kf",
+  "audio_duration_secs": 10.64
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "words": [
+      {
+        "text": "VF",
+        "start": 0.08
+      },
+      {
+        "text": "Wild",
+        "start": 0.41
+      },
+      {
+        "text": "từng",
+        "start": 1.02
+      },
+      {
+        "text": "là",
+        "start": 1.22
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 1.36
+  },
+  {
+    "words": [
+      {
+        "text": "mẫu",
+        "start": 1.36
+      },
+      {
+        "text": "concept",
+        "start": 1.56
+      },
+      {
+        "text": "tại",
+        "start": 2.08
+      },
+      {
+        "text": "một",
+        "start": 2.32
+      }
+    ],
+    "fadein": 1.36,
+    "fadeout": 2.46
+  },
+  {
+    "words": [
+      {
+        "text": "triển",
+        "start": 2.46
+      },
+      {
+        "text": "lãm",
+        "start": 2.66
+      },
+      {
+        "text": "điện",
+        "start": 2.84
+      },
+      {
+        "text": "tử",
+        "start": 3.04
+      }
+    ],
+    "fadein": 2.46,
+    "fadeout": 3.24
+  },
+  {
+    "words": [
+      {
+        "text": "tiêu",
+        "start": 3.24
+      },
+      {
+        "text": "dùng",
+        "start": 3.44
+      },
+      {
+        "text": "ở",
+        "start": 3.7
+      },
+      {
+        "text": "Mỹ",
+        "start": 3.82
+      }
+    ],
+    "fadein": 3.24,
+    "fadeout": 4.14
+  },
+  {
+    "words": [
+      {
+        "text": "đầu",
+        "start": 4.14
+      },
+      {
+        "text": "năm",
+        "start": 4.32
+      },
+      {
+        "text": "2024,",
+        "start": 4.6
+      },
+      {
+        "text": "lấy",
+        "start": 5.96
+      }
+    ],
+    "fadein": 4.14,
+    "fadeout": 6.14
+  },
+  {
+    "words": [
+      {
+        "text": "cảm",
+        "start": 6.14
+      },
+      {
+        "text": "hứng",
+        "start": 6.34
+      },
+      {
+        "text": "thiết",
+        "start": 6.5
+      },
+      {
+        "text": "kế",
+        "start": 6.72
+      }
+    ],
+    "fadein": 6.14,
+    "fadeout": 7.0
+  },
+  {
+    "words": [
+      {
+        "text": "từ",
+        "start": 7.0
+      },
+      {
+        "text": "chuyển",
+        "start": 7.18
+      },
+      {
+        "text": "động",
+        "start": 7.42
+      },
+      {
+        "text": "của",
+        "start": 7.64
+      }
+    ],
+    "fadein": 7.0,
+    "fadeout": 7.78
+  },
+  {
+    "words": [
+      {
+        "text": "một",
+        "start": 7.78
+      },
+      {
+        "text": "chiếc",
+        "start": 7.96
+      },
+      {
+        "text": "áo",
+        "start": 8.22
+      },
+      {
+        "text": "choàng",
+        "start": 8.36
+      }
+    ],
+    "fadein": 7.78,
+    "fadeout": 8.76
+  },
+  {
+    "words": [
+      {
+        "text": "tung",
+        "start": 8.76
+      },
+      {
+        "text": "bay",
+        "start": 8.96
+      },
+      {
+        "text": "trong",
+        "start": 9.14
+      },
+      {
+        "text": "gió.",
+        "start": 9.34
+      }
+    ],
+    "fadein": 8.76,
+    "fadeout": 9.91
+  }
+]

@@ -1,0 +1,380 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "VinFast VF Wild sẽ cạnh tranh trực tiếp với nhóm bán tải phổ thông tại Việt Nam: Ford Ranger, Toyota Hilux, Mitsubishi Triton, Nissan Navara, Isuzu D-Max",
+  "words": [
+    {
+      "text": "VinFast",
+      "start": 0.1,
+      "end": 0.56,
+      "type": "word",
+      "logprob": -0.05135541966384543
+    },
+    {
+      "text": " ",
+      "start": 0.56,
+      "end": 0.62,
+      "type": "spacing",
+      "logprob": -0.003877741051837802
+    },
+    {
+      "text": "VF",
+      "start": 0.62,
+      "end": 0.88,
+      "type": "word",
+      "logprob": -0.003877741051837802
+    },
+    {
+      "text": " ",
+      "start": 0.88,
+      "end": 0.94,
+      "type": "spacing",
+      "logprob": -0.26269832253456116
+    },
+    {
+      "text": "Wild",
+      "start": 0.94,
+      "end": 1.2,
+      "type": "word",
+      "logprob": -0.26269832253456116
+    },
+    {
+      "text": " ",
+      "start": 1.2,
+      "end": 1.46,
+      "type": "spacing",
+      "logprob": -0.00024041623692028224
+    },
+    {
+      "text": "sẽ",
+      "start": 1.46,
+      "end": 1.68,
+      "type": "word",
+      "logprob": -0.00024041623692028224
+    },
+    {
+      "text": " ",
+      "start": 1.68,
+      "end": 1.72,
+      "type": "spacing",
+      "logprob": -4.494089080253616e-05
+    },
+    {
+      "text": "cạnh",
+      "start": 1.72,
+      "end": 1.86,
+      "type": "word",
+      "logprob": -4.494089080253616e-05
+    },
+    {
+      "text": " ",
+      "start": 1.86,
+      "end": 1.9,
+      "type": "spacing",
+      "logprob": -9.214453893946484e-05
+    },
+    {
+      "text": "tranh",
+      "start": 1.9,
+      "end": 2.08,
+      "type": "word",
+      "logprob": -9.214453893946484e-05
+    },
+    {
+      "text": " ",
+      "start": 2.08,
+      "end": 2.12,
+      "type": "spacing",
+      "logprob": -1.2755313036905136e-05
+    },
+    {
+      "text": "trực",
+      "start": 2.12,
+      "end": 2.28,
+      "type": "word",
+      "logprob": -1.2755313036905136e-05
+    },
+    {
+      "text": " ",
+      "start": 2.28,
+      "end": 2.32,
+      "type": "spacing",
+      "logprob": -7.390948667307384e-06
+    },
+    {
+      "text": "tiếp",
+      "start": 2.32,
+      "end": 2.56,
+      "type": "word",
+      "logprob": -7.390948667307384e-06
+    },
+    {
+      "text": " ",
+      "start": 2.56,
+      "end": 2.62,
+      "type": "spacing",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": "với",
+      "start": 2.62,
+      "end": 2.8,
+      "type": "word",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": " ",
+      "start": 2.8,
+      "end": 2.84,
+      "type": "spacing",
+      "logprob": -5.8412379075889476e-06
+    },
+    {
+      "text": "nhóm",
+      "start": 2.84,
+      "end": 3.08,
+      "type": "word",
+      "logprob": -5.8412379075889476e-06
+    },
+    {
+      "text": " ",
+      "start": 3.08,
+      "end": 3.12,
+      "type": "spacing",
+      "logprob": -8.821448318485636e-06
+    },
+    {
+      "text": "bán",
+      "start": 3.12,
+      "end": 3.24,
+      "type": "word",
+      "logprob": -8.821448318485636e-06
+    },
+    {
+      "text": " ",
+      "start": 3.24,
+      "end": 3.32,
+      "type": "spacing",
+      "logprob": -0.0002584123576525599
+    },
+    {
+      "text": "tải",
+      "start": 3.32,
+      "end": 3.52,
+      "type": "word",
+      "logprob": -0.0002584123576525599
+    },
+    {
+      "text": " ",
+      "start": 3.52,
+      "end": 3.54,
+      "type": "spacing",
+      "logprob": -1.8596476365928538e-05
+    },
+    {
+      "text": "phổ",
+      "start": 3.54,
+      "end": 3.68,
+      "type": "word",
+      "logprob": -1.8596476365928538e-05
+    },
+    {
+      "text": " ",
+      "start": 3.68,
+      "end": 3.7,
+      "type": "spacing",
+      "logprob": -0.0015387610765174031
+    },
+    {
+      "text": "thông",
+      "start": 3.7,
+      "end": 3.92,
+      "type": "word",
+      "logprob": -0.0015387610765174031
+    },
+    {
+      "text": " ",
+      "start": 3.92,
+      "end": 3.94,
+      "type": "spacing",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": "tại",
+      "start": 3.94,
+      "end": 4.059,
+      "type": "word",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": " ",
+      "start": 4.059,
+      "end": 4.1,
+      "type": "spacing",
+      "logprob": -6.723177648382261e-05
+    },
+    {
+      "text": "Việt",
+      "start": 4.1,
+      "end": 4.22,
+      "type": "word",
+      "logprob": -6.723177648382261e-05
+    },
+    {
+      "text": " ",
+      "start": 4.22,
+      "end": 4.26,
+      "type": "spacing",
+      "logprob": -1.6689286894688848e-06
+    },
+    {
+      "text": "Nam:",
+      "start": 4.26,
+      "end": 4.48,
+      "type": "word",
+      "logprob": -0.0002524484287960149
+    },
+    {
+      "text": " ",
+      "start": 4.48,
+      "end": 4.48,
+      "type": "spacing",
+      "logprob": -4.23184028477408e-05
+    },
+    {
+      "text": "Ford",
+      "start": 4.92,
+      "end": 5.12,
+      "type": "word",
+      "logprob": -4.23184028477408e-05
+    },
+    {
+      "text": " ",
+      "start": 5.12,
+      "end": 5.2,
+      "type": "spacing",
+      "logprob": -5.054346183896996e-05
+    },
+    {
+      "text": "Ranger,",
+      "start": 5.2,
+      "end": 5.62,
+      "type": "word",
+      "logprob": -4.5196243783201293e-05
+    },
+    {
+      "text": " ",
+      "start": 5.62,
+      "end": 5.92,
+      "type": "spacing",
+      "logprob": -8.713819261174649e-05
+    },
+    {
+      "text": "Toyota",
+      "start": 5.92,
+      "end": 6.32,
+      "type": "word",
+      "logprob": -8.713819261174649e-05
+    },
+    {
+      "text": " ",
+      "start": 6.32,
+      "end": 6.4,
+      "type": "spacing",
+      "logprob": -0.007132780738174915
+    },
+    {
+      "text": "Hilux,",
+      "start": 6.42,
+      "end": 6.8,
+      "type": "word",
+      "logprob": -0.003611210439885326
+    },
+    {
+      "text": " ",
+      "start": 6.8,
+      "end": 7.1,
+      "type": "spacing",
+      "logprob": -3.6477376852417365e-05
+    },
+    {
+      "text": "Mitsubishi",
+      "start": 7.1,
+      "end": 7.74,
+      "type": "word",
+      "logprob": -3.6477376852417365e-05
+    },
+    {
+      "text": " ",
+      "start": 7.74,
+      "end": 7.84,
+      "type": "spacing",
+      "logprob": -2.4437606043647975e-05
+    },
+    {
+      "text": "Triton,",
+      "start": 7.84,
+      "end": 8.3,
+      "type": "word",
+      "logprob": -2.2325934618753047e-05
+    },
+    {
+      "text": " ",
+      "start": 8.3,
+      "end": 8.6,
+      "type": "spacing",
+      "logprob": -6.210611172718927e-05
+    },
+    {
+      "text": "Nissan",
+      "start": 8.6,
+      "end": 8.98,
+      "type": "word",
+      "logprob": -6.210611172718927e-05
+    },
+    {
+      "text": " ",
+      "start": 8.98,
+      "end": 9.04,
+      "type": "spacing",
+      "logprob": -0.0006831934442743659
+    },
+    {
+      "text": "Navara,",
+      "start": 9.04,
+      "end": 9.5,
+      "type": "word",
+      "logprob": -0.00029528354688019523
+    },
+    {
+      "text": " ",
+      "start": 9.5,
+      "end": 9.86,
+      "type": "spacing",
+      "logprob": -0.00018773700867313892
+    },
+    {
+      "text": "Isuzu",
+      "start": 9.86,
+      "end": 10.28,
+      "type": "word",
+      "logprob": -0.00010749501307145692
+    },
+    {
+      "text": " ",
+      "start": 10.28,
+      "end": 10.36,
+      "type": "spacing",
+      "logprob": -4.529942543740617e-06
+    },
+    {
+      "text": "D-Max",
+      "start": 10.36,
+      "end": 10.7,
+      "type": "word",
+      "logprob": -0.0011912834358554392
+    }
+  ],
+  "transcription_id": "lQjY81V7kXG8FMU33dU0",
+  "audio_duration_secs": 10.8
+}

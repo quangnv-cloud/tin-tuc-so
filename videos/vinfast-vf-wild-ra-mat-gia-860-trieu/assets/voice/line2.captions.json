@@ -1,0 +1,174 @@
+[
+  {
+    "words": [
+      {
+        "text": "Sáng",
+        "start": 0.1
+      },
+      {
+        "text": "ngày",
+        "start": 0.28
+      },
+      {
+        "text": "19",
+        "start": 0.46
+      },
+      {
+        "text": "tháng",
+        "start": 0.82
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 1.02
+  },
+  {
+    "words": [
+      {
+        "text": "9,",
+        "start": 1.02
+      },
+      {
+        "text": "VinFast",
+        "start": 1.58
+      },
+      {
+        "text": "chính",
+        "start": 2.08
+      },
+      {
+        "text": "thức",
+        "start": 2.26
+      }
+    ],
+    "fadein": 1.02,
+    "fadeout": 2.46
+  },
+  {
+    "words": [
+      {
+        "text": "trình",
+        "start": 2.46
+      },
+      {
+        "text": "làng",
+        "start": 2.7
+      },
+      {
+        "text": "VF",
+        "start": 3.0
+      },
+      {
+        "text": "Wild",
+        "start": 3.32
+      }
+    ],
+    "fadein": 2.46,
+    "fadeout": 3.86
+  },
+  {
+    "words": [
+      {
+        "text": "tại",
+        "start": 3.86
+      },
+      {
+        "text": "thị",
+        "start": 4.1
+      },
+      {
+        "text": "trường",
+        "start": 4.24
+      },
+      {
+        "text": "Việt",
+        "start": 4.44
+      }
+    ],
+    "fadein": 3.86,
+    "fadeout": 4.62
+  },
+  {
+    "words": [
+      {
+        "text": "Nam,",
+        "start": 4.62
+      },
+      {
+        "text": "mẫu",
+        "start": 5.24
+      },
+      {
+        "text": "bán",
+        "start": 5.48
+      },
+      {
+        "text": "tải",
+        "start": 5.66
+      }
+    ],
+    "fadein": 4.62,
+    "fadeout": 5.88
+  },
+  {
+    "words": [
+      {
+        "text": "đầu",
+        "start": 5.88
+      },
+      {
+        "text": "tiên",
+        "start": 6.06
+      },
+      {
+        "text": "của",
+        "start": 6.26
+      },
+      {
+        "text": "hãng,",
+        "start": 6.42
+      }
+    ],
+    "fadein": 5.88,
+    "fadeout": 6.94
+  },
+  {
+    "words": [
+      {
+        "text": "với",
+        "start": 6.94
+      },
+      {
+        "text": "giá",
+        "start": 7.14
+      },
+      {
+        "text": "bán",
+        "start": 7.34
+      },
+      {
+        "text": "từ",
+        "start": 7.64
+      }
+    ],
+    "fadein": 6.94,
+    "fadeout": 7.9
+  },
+  {
+    "words": [
+      {
+        "text": "860",
+        "start": 7.9
+      },
+      {
+        "text": "triệu",
+        "start": 8.66
+      },
+      {
+        "text": "đồng.",
+        "start": 8.84
+      }
+    ],
+    "fadein": 7.9,
+    "fadeout": 9.35
+  }
+]
