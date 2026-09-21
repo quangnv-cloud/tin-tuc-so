@@ -1,5 +1,9 @@
 # Quy trình sản xuất — TIN TỨC SỐ
 
+**[Đọc trước 2026-09-21]** `videos/VIDEO-PRODUCTION-STANDARD.md` — chuẩn kỹ thuật xuất bản, kỹ
+thuật hình ảnh nâng cao (depth bg, glow, caption karaoke, smash-cut), checklist QC đo được, và
+rubric chấm điểm 100 điểm quốc tế dùng chung cho MỌI kênh (cũng là tài liệu đào tạo nhân sự).
+
 Runbook thao tác cho MỌI video tin nóng / trending trong ngày. Toàn bộ quy tắc brand/style ở
 `BRAND-SYSTEM.md`, 10 cách dựng ở `CONSTRUCTION-STYLES.md`, trình tự routine đầy đủ ở `ROUTINE.md`
 — đọc song song, không lặp lại ở đây.
