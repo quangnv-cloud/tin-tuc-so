@@ -1,0 +1,422 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Hòa không bàn thắng trước Thái Lan trên sân Nagai ở Osaka chiều 21 tháng Chín, thầy trò huấn luyện viên Hoàng Văn Phúc hoàn tất mục tiêu đề ra",
+  "words": [
+    {
+      "text": "Hòa",
+      "start": 0.06,
+      "end": 0.26,
+      "type": "word",
+      "logprob": -0.006964150525163859
+    },
+    {
+      "text": " ",
+      "start": 0.26,
+      "end": 0.32,
+      "type": "spacing",
+      "logprob": -0.0006971312686800957
+    },
+    {
+      "text": "không",
+      "start": 0.32,
+      "end": 0.46,
+      "type": "word",
+      "logprob": -0.0006971312686800957
+    },
+    {
+      "text": " ",
+      "start": 0.46,
+      "end": 0.5,
+      "type": "spacing",
+      "logprob": -0.003629645798355341
+    },
+    {
+      "text": "bàn",
+      "start": 0.5,
+      "end": 0.66,
+      "type": "word",
+      "logprob": -0.003629645798355341
+    },
+    {
+      "text": " ",
+      "start": 0.66,
+      "end": 0.68,
+      "type": "spacing",
+      "logprob": -0.00010382589971413836
+    },
+    {
+      "text": "thắng",
+      "start": 0.68,
+      "end": 0.86,
+      "type": "word",
+      "logprob": -0.00010382589971413836
+    },
+    {
+      "text": " ",
+      "start": 0.86,
+      "end": 0.94,
+      "type": "spacing",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": "trước",
+      "start": 0.94,
+      "end": 1.08,
+      "type": "word",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": " ",
+      "start": 1.08,
+      "end": 1.14,
+      "type": "spacing",
+      "logprob": -0.0013575871707871556
+    },
+    {
+      "text": "Thái",
+      "start": 1.14,
+      "end": 1.28,
+      "type": "word",
+      "logprob": -0.0013575871707871556
+    },
+    {
+      "text": " ",
+      "start": 1.28,
+      "end": 1.36,
+      "type": "spacing",
+      "logprob": -2.3841574147809297e-05
+    },
+    {
+      "text": "Lan",
+      "start": 1.36,
+      "end": 1.52,
+      "type": "word",
+      "logprob": -2.3841574147809297e-05
+    },
+    {
+      "text": " ",
+      "start": 1.52,
+      "end": 1.58,
+      "type": "spacing",
+      "logprob": -1.6689286894688848e-06
+    },
+    {
+      "text": "trên",
+      "start": 1.58,
+      "end": 1.72,
+      "type": "word",
+      "logprob": -1.6689286894688848e-06
+    },
+    {
+      "text": " ",
+      "start": 1.72,
+      "end": 1.82,
+      "type": "spacing",
+      "logprob": -3.266281055402942e-05
+    },
+    {
+      "text": "sân",
+      "start": 1.82,
+      "end": 1.96,
+      "type": "word",
+      "logprob": -3.266281055402942e-05
+    },
+    {
+      "text": " ",
+      "start": 1.96,
+      "end": 2.02,
+      "type": "spacing",
+      "logprob": -0.004156522452831268
+    },
+    {
+      "text": "Nagai",
+      "start": 2.02,
+      "end": 2.38,
+      "type": "word",
+      "logprob": -0.002497299001333886
+    },
+    {
+      "text": " ",
+      "start": 2.38,
+      "end": 2.54,
+      "type": "spacing",
+      "logprob": -6.794906312279636e-06
+    },
+    {
+      "text": "ở",
+      "start": 2.54,
+      "end": 2.66,
+      "type": "word",
+      "logprob": -6.794906312279636e-06
+    },
+    {
+      "text": " ",
+      "start": 2.66,
+      "end": 2.68,
+      "type": "spacing",
+      "logprob": -7.188061863416806e-05
+    },
+    {
+      "text": "Osaka",
+      "start": 2.68,
+      "end": 3.14,
+      "type": "word",
+      "logprob": -7.188061863416806e-05
+    },
+    {
+      "text": " ",
+      "start": 3.14,
+      "end": 3.22,
+      "type": "spacing",
+      "logprob": -2.5510462364763953e-05
+    },
+    {
+      "text": "chiều",
+      "start": 3.22,
+      "end": 3.4,
+      "type": "word",
+      "logprob": -2.5510462364763953e-05
+    },
+    {
+      "text": " ",
+      "start": 3.4,
+      "end": 3.54,
+      "type": "spacing",
+      "logprob": -0.0015936305280774832
+    },
+    {
+      "text": "21",
+      "start": 3.54,
+      "end": 3.82,
+      "type": "word",
+      "logprob": -9.059863714355743e-06
+    },
+    {
+      "text": " ",
+      "start": 3.82,
+      "end": 3.86,
+      "type": "spacing",
+      "logprob": -0.0031229318119585514
+    },
+    {
+      "text": "tháng",
+      "start": 3.86,
+      "end": 3.96,
+      "type": "word",
+      "logprob": -0.0031229318119585514
+    },
+    {
+      "text": " ",
+      "start": 3.96,
+      "end": 4.04,
+      "type": "spacing",
+      "logprob": -0.7457045912742615
+    },
+    {
+      "text": "Chín,",
+      "start": 4.04,
+      "end": 4.24,
+      "type": "word",
+      "logprob": -0.29869618546135823
+    },
+    {
+      "text": " ",
+      "start": 4.24,
+      "end": 4.26,
+      "type": "spacing",
+      "logprob": -0.07234687358140945
+    },
+    {
+      "text": "thầy",
+      "start": 4.6,
+      "end": 4.72,
+      "type": "word",
+      "logprob": -0.07234687358140945
+    },
+    {
+      "text": " ",
+      "start": 4.72,
+      "end": 4.78,
+      "type": "spacing",
+      "logprob": -0.0001137191939051263
+    },
+    {
+      "text": "trò",
+      "start": 4.78,
+      "end": 4.94,
+      "type": "word",
+      "logprob": -0.0001137191939051263
+    },
+    {
+      "text": " ",
+      "start": 4.94,
+      "end": 4.98,
+      "type": "spacing",
+      "logprob": -0.004926091525703669
+    },
+    {
+      "text": "huấn",
+      "start": 4.98,
+      "end": 5.08,
+      "type": "word",
+      "logprob": -0.004926091525703669
+    },
+    {
+      "text": " ",
+      "start": 5.08,
+      "end": 5.1,
+      "type": "spacing",
+      "logprob": -0.0006401873542927206
+    },
+    {
+      "text": "luyện",
+      "start": 5.1,
+      "end": 5.26,
+      "type": "word",
+      "logprob": -0.0006401873542927206
+    },
+    {
+      "text": " ",
+      "start": 5.26,
+      "end": 5.3,
+      "type": "spacing",
+      "logprob": -4.529942543740617e-06
+    },
+    {
+      "text": "viên",
+      "start": 5.3,
+      "end": 5.44,
+      "type": "word",
+      "logprob": -4.529942543740617e-06
+    },
+    {
+      "text": " ",
+      "start": 5.44,
+      "end": 5.5,
+      "type": "spacing",
+      "logprob": -0.0004124982515349984
+    },
+    {
+      "text": "Hoàng",
+      "start": 5.5,
+      "end": 5.64,
+      "type": "word",
+      "logprob": -0.0004124982515349984
+    },
+    {
+      "text": " ",
+      "start": 5.64,
+      "end": 5.7,
+      "type": "spacing",
+      "logprob": -0.0009334497735835612
+    },
+    {
+      "text": "Văn",
+      "start": 5.7,
+      "end": 5.8,
+      "type": "word",
+      "logprob": -0.0009334497735835612
+    },
+    {
+      "text": " ",
+      "start": 5.8,
+      "end": 5.88,
+      "type": "spacing",
+      "logprob": -0.0012888943310827017
+    },
+    {
+      "text": "Phúc",
+      "start": 5.88,
+      "end": 6.04,
+      "type": "word",
+      "logprob": -0.0012888943310827017
+    },
+    {
+      "text": " ",
+      "start": 6.04,
+      "end": 6.12,
+      "type": "spacing",
+      "logprob": -8.439661905867979e-05
+    },
+    {
+      "text": "hoàn",
+      "start": 6.12,
+      "end": 6.28,
+      "type": "word",
+      "logprob": -8.439661905867979e-05
+    },
+    {
+      "text": " ",
+      "start": 6.28,
+      "end": 6.36,
+      "type": "spacing",
+      "logprob": -0.0002256377338198945
+    },
+    {
+      "text": "tất",
+      "start": 6.36,
+      "end": 6.54,
+      "type": "word",
+      "logprob": -0.0002256377338198945
+    },
+    {
+      "text": " ",
+      "start": 6.54,
+      "end": 6.58,
+      "type": "spacing",
+      "logprob": -3.635817120084539e-05
+    },
+    {
+      "text": "mục",
+      "start": 6.58,
+      "end": 6.7,
+      "type": "word",
+      "logprob": -3.635817120084539e-05
+    },
+    {
+      "text": " ",
+      "start": 6.7,
+      "end": 6.76,
+      "type": "spacing",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": "tiêu",
+      "start": 6.76,
+      "end": 6.92,
+      "type": "word",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": " ",
+      "start": 6.92,
+      "end": 6.96,
+      "type": "spacing",
+      "logprob": -7.986990567587782e-06
+    },
+    {
+      "text": "đề",
+      "start": 6.96,
+      "end": 7.06,
+      "type": "word",
+      "logprob": -7.986990567587782e-06
+    },
+    {
+      "text": " ",
+      "start": 7.06,
+      "end": 7.14,
+      "type": "spacing",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": "ra",
+      "start": 7.14,
+      "end": 7.3,
+      "type": "word",
+      "logprob": -7.152555099310121e-07
+    }
+  ],
+  "transcription_id": "7eFV7U108dQkaAgpSKej",
+  "audio_duration_secs": 7.36
+}

@@ -1,0 +1,188 @@
+[
+  {
+    "words": [
+      {
+        "text": "Thái",
+        "start": 0.08
+      },
+      {
+        "text": "Lan",
+        "start": 0.28
+      },
+      {
+        "text": "tung",
+        "start": 0.56
+      },
+      {
+        "text": "ra",
+        "start": 0.8
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 1.04
+  },
+  {
+    "words": [
+      {
+        "text": "tới",
+        "start": 1.04
+      },
+      {
+        "text": "8",
+        "start": 1.28
+      },
+      {
+        "text": "cú",
+        "start": 1.54
+      },
+      {
+        "text": "dứt",
+        "start": 1.7
+      }
+    ],
+    "fadein": 1.04,
+    "fadeout": 1.86
+  },
+  {
+    "words": [
+      {
+        "text": "điểm",
+        "start": 1.86
+      },
+      {
+        "text": "so",
+        "start": 2.18
+      },
+      {
+        "text": "với",
+        "start": 2.38
+      },
+      {
+        "text": "3",
+        "start": 2.54
+      }
+    ],
+    "fadein": 1.86,
+    "fadeout": 2.8
+  },
+  {
+    "words": [
+      {
+        "text": "cú",
+        "start": 2.8
+      },
+      {
+        "text": "của",
+        "start": 3.0
+      },
+      {
+        "text": "Việt",
+        "start": 3.1
+      },
+      {
+        "text": "Nam,",
+        "start": 3.3
+      }
+    ],
+    "fadein": 2.8,
+    "fadeout": 3.88
+  },
+  {
+    "words": [
+      {
+        "text": "nhưng",
+        "start": 3.88
+      },
+      {
+        "text": "thủ",
+        "start": 4.12
+      },
+      {
+        "text": "môn",
+        "start": 4.3
+      },
+      {
+        "text": "Kim",
+        "start": 4.52
+      }
+    ],
+    "fadein": 3.88,
+    "fadeout": 4.72
+  },
+  {
+    "words": [
+      {
+        "text": "Thanh",
+        "start": 4.72
+      },
+      {
+        "text": "trấn",
+        "start": 5.02
+      },
+      {
+        "text": "giữ",
+        "start": 5.28
+      },
+      {
+        "text": "khung",
+        "start": 5.52
+      }
+    ],
+    "fadein": 4.72,
+    "fadeout": 5.7
+  },
+  {
+    "words": [
+      {
+        "text": "thành",
+        "start": 5.7
+      },
+      {
+        "text": "chắc",
+        "start": 5.9
+      },
+      {
+        "text": "chắn,",
+        "start": 6.08
+      },
+      {
+        "text": "giúp",
+        "start": 6.56
+      }
+    ],
+    "fadein": 5.7,
+    "fadeout": 6.78
+  },
+  {
+    "words": [
+      {
+        "text": "đội",
+        "start": 6.78
+      },
+      {
+        "text": "nhà",
+        "start": 6.94
+      },
+      {
+        "text": "giữ",
+        "start": 7.24
+      },
+      {
+        "text": "sạch",
+        "start": 7.44
+      }
+    ],
+    "fadein": 6.78,
+    "fadeout": 7.64
+  },
+  {
+    "words": [
+      {
+        "text": "lưới.",
+        "start": 7.64
+      }
+    ],
+    "fadein": 7.64,
+    "fadeout": 8.21
+  }
+]

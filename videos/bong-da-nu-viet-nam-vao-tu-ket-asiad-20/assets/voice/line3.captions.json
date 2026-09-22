@@ -1,0 +1,192 @@
+[
+  {
+    "words": [
+      {
+        "text": "Việt",
+        "start": 0.08
+      },
+      {
+        "text": "Nam",
+        "start": 0.28
+      },
+      {
+        "text": "khép",
+        "start": 0.52
+      },
+      {
+        "text": "lại",
+        "start": 0.74
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 1.0
+  },
+  {
+    "words": [
+      {
+        "text": "bảng",
+        "start": 1.0
+      },
+      {
+        "text": "E",
+        "start": 1.28
+      },
+      {
+        "text": "với",
+        "start": 1.54
+      },
+      {
+        "text": "1",
+        "start": 1.78
+      }
+    ],
+    "fadein": 1.0,
+    "fadeout": 1.96
+  },
+  {
+    "words": [
+      {
+        "text": "điểm,",
+        "start": 1.96
+      },
+      {
+        "text": "hiệu",
+        "start": 2.42
+      },
+      {
+        "text": "số",
+        "start": 2.7
+      },
+      {
+        "text": "âm",
+        "start": 2.94
+      }
+    ],
+    "fadein": 1.96,
+    "fadeout": 3.14
+  },
+  {
+    "words": [
+      {
+        "text": "9,",
+        "start": 3.14
+      },
+      {
+        "text": "nhưng",
+        "start": 3.68
+      },
+      {
+        "text": "vẫn",
+        "start": 3.94
+      },
+      {
+        "text": "đi",
+        "start": 4.1
+      }
+    ],
+    "fadein": 3.14,
+    "fadeout": 4.26
+  },
+  {
+    "words": [
+      {
+        "text": "tiếp",
+        "start": 4.26
+      },
+      {
+        "text": "vì",
+        "start": 4.66
+      },
+      {
+        "text": "là",
+        "start": 4.82
+      },
+      {
+        "text": "một",
+        "start": 5.06
+      }
+    ],
+    "fadein": 4.26,
+    "fadeout": 5.24
+  },
+  {
+    "words": [
+      {
+        "text": "trong",
+        "start": 5.24
+      },
+      {
+        "text": "hai",
+        "start": 5.52
+      },
+      {
+        "text": "đội",
+        "start": 5.74
+      },
+      {
+        "text": "xếp",
+        "start": 6.02
+      }
+    ],
+    "fadein": 5.24,
+    "fadeout": 6.22
+  },
+  {
+    "words": [
+      {
+        "text": "thứ",
+        "start": 6.22
+      },
+      {
+        "text": "ba",
+        "start": 6.42
+      },
+      {
+        "text": "có",
+        "start": 6.82
+      },
+      {
+        "text": "thành",
+        "start": 7.06
+      }
+    ],
+    "fadein": 6.22,
+    "fadeout": 7.24
+  },
+  {
+    "words": [
+      {
+        "text": "tích",
+        "start": 7.24
+      },
+      {
+        "text": "tốt",
+        "start": 7.4
+      },
+      {
+        "text": "nhất,",
+        "start": 7.56
+      },
+      {
+        "text": "vượt",
+        "start": 8.0
+      }
+    ],
+    "fadein": 7.24,
+    "fadeout": 8.22
+  },
+  {
+    "words": [
+      {
+        "text": "qua",
+        "start": 8.22
+      },
+      {
+        "text": "Myanmar.",
+        "start": 8.46
+      }
+    ],
+    "fadein": 8.22,
+    "fadeout": 9.27
+  }
+]

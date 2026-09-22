@@ -1,0 +1,196 @@
+[
+  {
+    "words": [
+      {
+        "text": "Với",
+        "start": 0.12
+      },
+      {
+        "text": "lối",
+        "start": 0.3
+      },
+      {
+        "text": "chơi",
+        "start": 0.5
+      },
+      {
+        "text": "phòng",
+        "start": 0.74
+      }
+    ],
+    "fadein": 0.12,
+    "fadeout": 0.92
+  },
+  {
+    "words": [
+      {
+        "text": "ngự",
+        "start": 0.92
+      },
+      {
+        "text": "kỷ",
+        "start": 1.16
+      },
+      {
+        "text": "luật",
+        "start": 1.32
+      },
+      {
+        "text": "vừa",
+        "start": 1.7
+      }
+    ],
+    "fadein": 0.92,
+    "fadeout": 1.92
+  },
+  {
+    "words": [
+      {
+        "text": "giúp",
+        "start": 1.92
+      },
+      {
+        "text": "đội",
+        "start": 2.14
+      },
+      {
+        "text": "đi",
+        "start": 2.32
+      },
+      {
+        "text": "tiếp,",
+        "start": 2.48
+      }
+    ],
+    "fadein": 1.92,
+    "fadeout": 3.02
+  },
+  {
+    "words": [
+      {
+        "text": "liệu",
+        "start": 3.02
+      },
+      {
+        "text": "tuyển",
+        "start": 3.3
+      },
+      {
+        "text": "nữ",
+        "start": 3.48
+      },
+      {
+        "text": "Việt",
+        "start": 3.62
+      }
+    ],
+    "fadein": 3.02,
+    "fadeout": 3.84
+  },
+  {
+    "words": [
+      {
+        "text": "Nam",
+        "start": 3.84
+      },
+      {
+        "text": "có",
+        "start": 4.18
+      },
+      {
+        "text": "thể",
+        "start": 4.3
+      },
+      {
+        "text": "tạo",
+        "start": 4.58
+      }
+    ],
+    "fadein": 3.84,
+    "fadeout": 4.76
+  },
+  {
+    "words": [
+      {
+        "text": "bất",
+        "start": 4.76
+      },
+      {
+        "text": "ngờ",
+        "start": 4.9
+      },
+      {
+        "text": "trước",
+        "start": 5.22
+      },
+      {
+        "text": "một",
+        "start": 5.42
+      }
+    ],
+    "fadein": 4.76,
+    "fadeout": 5.56
+  },
+  {
+    "words": [
+      {
+        "text": "Trung",
+        "start": 5.56
+      },
+      {
+        "text": "Quốc",
+        "start": 5.76
+      },
+      {
+        "text": "mạnh",
+        "start": 6.02
+      },
+      {
+        "text": "hơn",
+        "start": 6.2
+      }
+    ],
+    "fadein": 5.56,
+    "fadeout": 6.36
+  },
+  {
+    "words": [
+      {
+        "text": "hẳn?",
+        "start": 6.36
+      },
+      {
+        "text": "Để",
+        "start": 7.16
+      },
+      {
+        "text": "lại",
+        "start": 7.32
+      },
+      {
+        "text": "góc",
+        "start": 7.56
+      }
+    ],
+    "fadein": 6.36,
+    "fadeout": 7.72
+  },
+  {
+    "words": [
+      {
+        "text": "nhìn",
+        "start": 7.72
+      },
+      {
+        "text": "của",
+        "start": 7.96
+      },
+      {
+        "text": "bạn.",
+        "start": 8.1
+      }
+    ],
+    "fadein": 7.72,
+    "fadeout": 8.59
+  }
+]

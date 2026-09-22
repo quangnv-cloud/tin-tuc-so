@@ -1,0 +1,112 @@
+[
+  {
+    "words": [
+      {
+        "text": "Đội",
+        "start": 0.1
+      },
+      {
+        "text": "tuyển",
+        "start": 0.26
+      },
+      {
+        "text": "bóng",
+        "start": 0.48
+      },
+      {
+        "text": "đá",
+        "start": 0.66
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 0.82
+  },
+  {
+    "words": [
+      {
+        "text": "nữ",
+        "start": 0.82
+      },
+      {
+        "text": "Việt",
+        "start": 0.96
+      },
+      {
+        "text": "Nam",
+        "start": 1.18
+      },
+      {
+        "text": "vừa",
+        "start": 1.46
+      }
+    ],
+    "fadein": 0.82,
+    "fadeout": 1.68
+  },
+  {
+    "words": [
+      {
+        "text": "chính",
+        "start": 1.68
+      },
+      {
+        "text": "thức",
+        "start": 1.88
+      },
+      {
+        "text": "giành",
+        "start": 2.08
+      },
+      {
+        "text": "tấm",
+        "start": 2.32
+      }
+    ],
+    "fadein": 1.68,
+    "fadeout": 2.52
+  },
+  {
+    "words": [
+      {
+        "text": "vé",
+        "start": 2.52
+      },
+      {
+        "text": "vào",
+        "start": 2.82
+      },
+      {
+        "text": "tứ",
+        "start": 3.04
+      },
+      {
+        "text": "kết",
+        "start": 3.24
+      }
+    ],
+    "fadein": 2.52,
+    "fadeout": 3.56
+  },
+  {
+    "words": [
+      {
+        "text": "Á",
+        "start": 3.56
+      },
+      {
+        "text": "vận",
+        "start": 3.68
+      },
+      {
+        "text": "hội",
+        "start": 3.84
+      },
+      {
+        "text": "20.",
+        "start": 4.08
+      }
+    ],
+    "fadein": 3.56,
+    "fadeout": 4.81
+  }
+]
