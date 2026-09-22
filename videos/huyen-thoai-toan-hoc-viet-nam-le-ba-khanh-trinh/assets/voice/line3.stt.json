@@ -1,0 +1,506 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Năm 1979, mới 17 tuổi, chính thầy Trình từng giành giải nhất Olympic Toán học quốc tế tại London với điểm tuyệt đối bốn mươi trên bốn mươi, cùng giải đặc biệt duy nhất năm đó",
+  "words": [
+    {
+      "text": "Năm",
+      "start": 0.06,
+      "end": 0.16,
+      "type": "word",
+      "logprob": -8.141038718652756e-05
+    },
+    {
+      "text": " ",
+      "start": 0.16,
+      "end": 0.26,
+      "type": "spacing",
+      "logprob": -0.0060133966617286205
+    },
+    {
+      "text": "1979,",
+      "start": 0.26,
+      "end": 1.5,
+      "type": "word",
+      "logprob": -7.027471555716147e-05
+    },
+    {
+      "text": " ",
+      "start": 1.5,
+      "end": 1.72,
+      "type": "spacing",
+      "logprob": -2.52720492426306e-05
+    },
+    {
+      "text": "mới",
+      "start": 1.72,
+      "end": 1.84,
+      "type": "word",
+      "logprob": -2.52720492426306e-05
+    },
+    {
+      "text": " ",
+      "start": 1.84,
+      "end": 1.9,
+      "type": "spacing",
+      "logprob": -0.42984840273857117
+    },
+    {
+      "text": "17",
+      "start": 1.9,
+      "end": 2.16,
+      "type": "word",
+      "logprob": -4.172324281626061e-07
+    },
+    {
+      "text": " ",
+      "start": 2.16,
+      "end": 2.26,
+      "type": "spacing",
+      "logprob": -1.5497195136049413e-06
+    },
+    {
+      "text": "tuổi,",
+      "start": 2.26,
+      "end": 2.44,
+      "type": "word",
+      "logprob": -0.00014676520268039895
+    },
+    {
+      "text": " ",
+      "start": 2.44,
+      "end": 2.72,
+      "type": "spacing",
+      "logprob": -0.0003047717036679387
+    },
+    {
+      "text": "chính",
+      "start": 2.72,
+      "end": 2.9,
+      "type": "word",
+      "logprob": -0.0003047717036679387
+    },
+    {
+      "text": " ",
+      "start": 2.9,
+      "end": 2.96,
+      "type": "spacing",
+      "logprob": -0.00039188333903439343
+    },
+    {
+      "text": "thầy",
+      "start": 2.96,
+      "end": 3.08,
+      "type": "word",
+      "logprob": -0.00039188333903439343
+    },
+    {
+      "text": " ",
+      "start": 3.08,
+      "end": 3.16,
+      "type": "spacing",
+      "logprob": -0.001955384388566017
+    },
+    {
+      "text": "Trình",
+      "start": 3.16,
+      "end": 3.36,
+      "type": "word",
+      "logprob": -0.028355253487825395
+    },
+    {
+      "text": " ",
+      "start": 3.36,
+      "end": 3.46,
+      "type": "spacing",
+      "logprob": -1.5616295058862306e-05
+    },
+    {
+      "text": "từng",
+      "start": 3.46,
+      "end": 3.6,
+      "type": "word",
+      "logprob": -1.5616295058862306e-05
+    },
+    {
+      "text": " ",
+      "start": 3.6,
+      "end": 3.66,
+      "type": "spacing",
+      "logprob": -0.007627411279827356
+    },
+    {
+      "text": "giành",
+      "start": 3.66,
+      "end": 3.84,
+      "type": "word",
+      "logprob": -0.007627411279827356
+    },
+    {
+      "text": " ",
+      "start": 3.84,
+      "end": 3.92,
+      "type": "spacing",
+      "logprob": -0.0002615109842736274
+    },
+    {
+      "text": "giải",
+      "start": 3.92,
+      "end": 4.059,
+      "type": "word",
+      "logprob": -0.0002615109842736274
+    },
+    {
+      "text": " ",
+      "start": 4.059,
+      "end": 4.12,
+      "type": "spacing",
+      "logprob": -0.0008010039455257356
+    },
+    {
+      "text": "nhất",
+      "start": 4.12,
+      "end": 4.32,
+      "type": "word",
+      "logprob": -0.0008010039455257356
+    },
+    {
+      "text": " ",
+      "start": 4.32,
+      "end": 4.4,
+      "type": "spacing",
+      "logprob": -0.001408776268362999
+    },
+    {
+      "text": "Olympic",
+      "start": 4.42,
+      "end": 4.82,
+      "type": "word",
+      "logprob": -0.001408776268362999
+    },
+    {
+      "text": " ",
+      "start": 4.82,
+      "end": 4.92,
+      "type": "spacing",
+      "logprob": -0.025535421445965767
+    },
+    {
+      "text": "Toán",
+      "start": 4.92,
+      "end": 5.06,
+      "type": "word",
+      "logprob": -0.025535421445965767
+    },
+    {
+      "text": " ",
+      "start": 5.06,
+      "end": 5.14,
+      "type": "spacing",
+      "logprob": -1.9192511899746023e-05
+    },
+    {
+      "text": "học",
+      "start": 5.14,
+      "end": 5.3,
+      "type": "word",
+      "logprob": -1.9192511899746023e-05
+    },
+    {
+      "text": " ",
+      "start": 5.3,
+      "end": 5.34,
+      "type": "spacing",
+      "logprob": -0.47414547204971313
+    },
+    {
+      "text": "quốc",
+      "start": 5.34,
+      "end": 5.48,
+      "type": "word",
+      "logprob": -0.47414547204971313
+    },
+    {
+      "text": " ",
+      "start": 5.48,
+      "end": 5.56,
+      "type": "spacing",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": "tế",
+      "start": 5.56,
+      "end": 5.76,
+      "type": "word",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": " ",
+      "start": 5.76,
+      "end": 5.84,
+      "type": "spacing",
+      "logprob": 0.0
+    },
+    {
+      "text": "tại",
+      "start": 5.84,
+      "end": 5.98,
+      "type": "word",
+      "logprob": 0.0
+    },
+    {
+      "text": " ",
+      "start": 5.98,
+      "end": 6.0,
+      "type": "spacing",
+      "logprob": -0.002279185689985752
+    },
+    {
+      "text": "London",
+      "start": 6.0,
+      "end": 6.38,
+      "type": "word",
+      "logprob": -0.002279185689985752
+    },
+    {
+      "text": " ",
+      "start": 6.38,
+      "end": 6.6,
+      "type": "spacing",
+      "logprob": -5.722029527532868e-06
+    },
+    {
+      "text": "với",
+      "start": 6.6,
+      "end": 6.74,
+      "type": "word",
+      "logprob": -5.722029527532868e-06
+    },
+    {
+      "text": " ",
+      "start": 6.74,
+      "end": 6.78,
+      "type": "spacing",
+      "logprob": -1.3589766240329482e-05
+    },
+    {
+      "text": "điểm",
+      "start": 6.78,
+      "end": 6.94,
+      "type": "word",
+      "logprob": -1.3589766240329482e-05
+    },
+    {
+      "text": " ",
+      "start": 6.94,
+      "end": 7.02,
+      "type": "spacing",
+      "logprob": -2.7894584491150454e-05
+    },
+    {
+      "text": "tuyệt",
+      "start": 7.02,
+      "end": 7.22,
+      "type": "word",
+      "logprob": -2.7894584491150454e-05
+    },
+    {
+      "text": " ",
+      "start": 7.22,
+      "end": 7.28,
+      "type": "spacing",
+      "logprob": -7.271740287251305e-06
+    },
+    {
+      "text": "đối",
+      "start": 7.28,
+      "end": 7.48,
+      "type": "word",
+      "logprob": -7.271740287251305e-06
+    },
+    {
+      "text": " ",
+      "start": 7.48,
+      "end": 7.64,
+      "type": "spacing",
+      "logprob": -0.3872414529323578
+    },
+    {
+      "text": "bốn",
+      "start": 7.64,
+      "end": 7.78,
+      "type": "word",
+      "logprob": -0.3872414529323578
+    },
+    {
+      "text": " ",
+      "start": 7.78,
+      "end": 7.86,
+      "type": "spacing",
+      "logprob": -1.7523612768854946e-05
+    },
+    {
+      "text": "mươi",
+      "start": 7.86,
+      "end": 8.039,
+      "type": "word",
+      "logprob": -3.6656122574640904e-05
+    },
+    {
+      "text": " ",
+      "start": 8.039,
+      "end": 8.1,
+      "type": "spacing",
+      "logprob": -1.5258672647178173e-05
+    },
+    {
+      "text": "trên",
+      "start": 8.1,
+      "end": 8.26,
+      "type": "word",
+      "logprob": -1.5258672647178173e-05
+    },
+    {
+      "text": " ",
+      "start": 8.26,
+      "end": 8.3,
+      "type": "spacing",
+      "logprob": -0.00010644822759786621
+    },
+    {
+      "text": "bốn",
+      "start": 8.3,
+      "end": 8.42,
+      "type": "word",
+      "logprob": -0.00010644822759786621
+    },
+    {
+      "text": " ",
+      "start": 8.42,
+      "end": 8.5,
+      "type": "spacing",
+      "logprob": -5.125986263010418e-06
+    },
+    {
+      "text": "mươi,",
+      "start": 8.5,
+      "end": 8.72,
+      "type": "word",
+      "logprob": -0.01115494965124526
+    },
+    {
+      "text": " ",
+      "start": 8.72,
+      "end": 8.72,
+      "type": "spacing",
+      "logprob": -0.0008791395812295377
+    },
+    {
+      "text": "cùng",
+      "start": 9.1,
+      "end": 9.22,
+      "type": "word",
+      "logprob": -0.0008791395812295377
+    },
+    {
+      "text": " ",
+      "start": 9.22,
+      "end": 9.3,
+      "type": "spacing",
+      "logprob": -0.004295764956623316
+    },
+    {
+      "text": "giải",
+      "start": 9.3,
+      "end": 9.52,
+      "type": "word",
+      "logprob": -0.004295764956623316
+    },
+    {
+      "text": " ",
+      "start": 9.52,
+      "end": 9.58,
+      "type": "spacing",
+      "logprob": -0.0001461399078834802
+    },
+    {
+      "text": "đặc",
+      "start": 9.58,
+      "end": 9.7,
+      "type": "word",
+      "logprob": -0.0001461399078834802
+    },
+    {
+      "text": " ",
+      "start": 9.7,
+      "end": 9.74,
+      "type": "spacing",
+      "logprob": -2.1815061700181104e-05
+    },
+    {
+      "text": "biệt",
+      "start": 9.74,
+      "end": 9.96,
+      "type": "word",
+      "logprob": -2.1815061700181104e-05
+    },
+    {
+      "text": " ",
+      "start": 9.96,
+      "end": 10.04,
+      "type": "spacing",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": "duy",
+      "start": 10.04,
+      "end": 10.16,
+      "type": "word",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": " ",
+      "start": 10.16,
+      "end": 10.22,
+      "type": "spacing",
+      "logprob": -2.622600959512056e-06
+    },
+    {
+      "text": "nhất",
+      "start": 10.22,
+      "end": 10.38,
+      "type": "word",
+      "logprob": -2.622600959512056e-06
+    },
+    {
+      "text": " ",
+      "start": 10.38,
+      "end": 10.42,
+      "type": "spacing",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": "năm",
+      "start": 10.42,
+      "end": 10.52,
+      "type": "word",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": " ",
+      "start": 10.52,
+      "end": 10.6,
+      "type": "spacing",
+      "logprob": -2.622600959512056e-06
+    },
+    {
+      "text": "đó",
+      "start": 10.6,
+      "end": 10.84,
+      "type": "word",
+      "logprob": -2.622600959512056e-06
+    }
+  ],
+  "transcription_id": "JSg4U4Vex95I6H58a4HC",
+  "audio_duration_secs": 10.96
+}

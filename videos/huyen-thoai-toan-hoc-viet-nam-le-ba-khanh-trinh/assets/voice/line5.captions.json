@@ -1,0 +1,222 @@
+[
+  {
+    "words": [
+      {
+        "text": "Sau",
+        "start": 0.14
+      },
+      {
+        "text": "đó,",
+        "start": 0.34
+      },
+      {
+        "text": "Tuấn",
+        "start": 0.64
+      },
+      {
+        "text": "Huy",
+        "start": 0.82
+      }
+    ],
+    "fadein": 0.14,
+    "fadeout": 1.08
+  },
+  {
+    "words": [
+      {
+        "text": "giành",
+        "start": 1.08
+      },
+      {
+        "text": "thêm",
+        "start": 1.28
+      },
+      {
+        "text": "một",
+        "start": 1.52
+      },
+      {
+        "text": "huy",
+        "start": 1.66
+      }
+    ],
+    "fadein": 1.08,
+    "fadeout": 1.82
+  },
+  {
+    "words": [
+      {
+        "text": "chương",
+        "start": 1.82
+      },
+      {
+        "text": "vàng",
+        "start": 2.04
+      },
+      {
+        "text": "nữa,",
+        "start": 2.24
+      },
+      {
+        "text": "học",
+        "start": 2.76
+      }
+    ],
+    "fadein": 1.82,
+    "fadeout": 3.02
+  },
+  {
+    "words": [
+      {
+        "text": "Stanford",
+        "start": 3.02
+      },
+      {
+        "text": "rồi",
+        "start": 3.6
+      },
+      {
+        "text": "Cambridge",
+        "start": 3.88
+      },
+      {
+        "text": "trước",
+        "start": 4.52
+      }
+    ],
+    "fadein": 3.02,
+    "fadeout": 4.72
+  },
+  {
+    "words": [
+      {
+        "text": "khi",
+        "start": 4.72
+      },
+      {
+        "text": "bảo",
+        "start": 4.96
+      },
+      {
+        "text": "vệ",
+        "start": 5.12
+      },
+      {
+        "text": "tiến",
+        "start": 5.28
+      }
+    ],
+    "fadein": 4.72,
+    "fadeout": 5.54
+  },
+  {
+    "words": [
+      {
+        "text": "sĩ,",
+        "start": 5.54
+      },
+      {
+        "text": "còn",
+        "start": 6.06
+      },
+      {
+        "text": "Thành",
+        "start": 6.32
+      },
+      {
+        "text": "Trung",
+        "start": 6.54
+      }
+    ],
+    "fadein": 5.54,
+    "fadeout": 6.84
+  },
+  {
+    "words": [
+      {
+        "text": "tốt",
+        "start": 6.84
+      },
+      {
+        "text": "nghiệp",
+        "start": 7.02
+      },
+      {
+        "text": "thủ",
+        "start": 7.26
+      },
+      {
+        "text": "khoa",
+        "start": 7.46
+      }
+    ],
+    "fadein": 6.84,
+    "fadeout": 7.76
+  },
+  {
+    "words": [
+      {
+        "text": "Đại",
+        "start": 7.76
+      },
+      {
+        "text": "học",
+        "start": 7.92
+      },
+      {
+        "text": "Duke",
+        "start": 8.2
+      },
+      {
+        "text": "rồi",
+        "start": 8.68
+      }
+    ],
+    "fadein": 7.76,
+    "fadeout": 8.9
+  },
+  {
+    "words": [
+      {
+        "text": "lấy",
+        "start": 8.9
+      },
+      {
+        "text": "tiến",
+        "start": 9.06
+      },
+      {
+        "text": "sĩ",
+        "start": 9.3
+      },
+      {
+        "text": "tại",
+        "start": 9.62
+      }
+    ],
+    "fadein": 8.9,
+    "fadeout": 9.8
+  },
+  {
+    "words": [
+      {
+        "text": "Viện",
+        "start": 9.8
+      },
+      {
+        "text": "Công",
+        "start": 10.04
+      },
+      {
+        "text": "nghệ",
+        "start": 10.18
+      },
+      {
+        "text": "California.",
+        "start": 10.5
+      }
+    ],
+    "fadein": 9.8,
+    "fadeout": 11.67
+  }
+]
