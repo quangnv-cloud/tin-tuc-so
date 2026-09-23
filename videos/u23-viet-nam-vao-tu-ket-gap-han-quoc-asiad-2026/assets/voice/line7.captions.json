@@ -1,0 +1,174 @@
+[
+  {
+    "words": [
+      {
+        "text": "Kỳ",
+        "start": 0.06
+      },
+      {
+        "text": "tích",
+        "start": 0.26
+      },
+      {
+        "text": "thắng",
+        "start": 0.5
+      },
+      {
+        "text": "luân",
+        "start": 0.82
+      }
+    ],
+    "fadein": 0.06,
+    "fadeout": 1.02
+  },
+  {
+    "words": [
+      {
+        "text": "lưu",
+        "start": 1.02
+      },
+      {
+        "text": "Hàn",
+        "start": 1.28
+      },
+      {
+        "text": "Quốc",
+        "start": 1.52
+      },
+      {
+        "text": "hồi",
+        "start": 1.78
+      }
+    ],
+    "fadein": 1.02,
+    "fadeout": 2.0
+  },
+  {
+    "words": [
+      {
+        "text": "tháng",
+        "start": 2.0
+      },
+      {
+        "text": "1",
+        "start": 2.22
+      },
+      {
+        "text": "liệu",
+        "start": 2.58
+      },
+      {
+        "text": "có",
+        "start": 2.88
+      }
+    ],
+    "fadein": 2.0,
+    "fadeout": 3.0
+  },
+  {
+    "words": [
+      {
+        "text": "lặp",
+        "start": 3.0
+      },
+      {
+        "text": "lại,",
+        "start": 3.18
+      },
+      {
+        "text": "khi",
+        "start": 3.74
+      },
+      {
+        "text": "cả",
+        "start": 3.94
+      }
+    ],
+    "fadein": 3.0,
+    "fadeout": 4.1
+  },
+  {
+    "words": [
+      {
+        "text": "hai",
+        "start": 4.1
+      },
+      {
+        "text": "đội",
+        "start": 4.34
+      },
+      {
+        "text": "hình",
+        "start": 4.5
+      },
+      {
+        "text": "đều",
+        "start": 4.8
+      }
+    ],
+    "fadein": 4.1,
+    "fadeout": 5.0
+  },
+  {
+    "words": [
+      {
+        "text": "đã",
+        "start": 5.0
+      },
+      {
+        "text": "thay",
+        "start": 5.16
+      },
+      {
+        "text": "đổi",
+        "start": 5.32
+      },
+      {
+        "text": "rất",
+        "start": 5.5
+      }
+    ],
+    "fadein": 5.0,
+    "fadeout": 5.66
+  },
+  {
+    "words": [
+      {
+        "text": "nhiều?",
+        "start": 5.66
+      },
+      {
+        "text": "Để",
+        "start": 6.22
+      },
+      {
+        "text": "lại",
+        "start": 6.38
+      },
+      {
+        "text": "góc",
+        "start": 6.6
+      }
+    ],
+    "fadein": 5.66,
+    "fadeout": 6.76
+  },
+  {
+    "words": [
+      {
+        "text": "nhìn",
+        "start": 6.76
+      },
+      {
+        "text": "của",
+        "start": 7.02
+      },
+      {
+        "text": "bạn.",
+        "start": 7.14
+      }
+    ],
+    "fadein": 6.76,
+    "fadeout": 7.61
+  }
+]

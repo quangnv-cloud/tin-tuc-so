@@ -1,0 +1,170 @@
+[
+  {
+    "words": [
+      {
+        "text": "U23",
+        "start": 0.08
+      },
+      {
+        "text": "Việt",
+        "start": 0.52
+      },
+      {
+        "text": "Nam",
+        "start": 0.68
+      },
+      {
+        "text": "vừa",
+        "start": 0.98
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 1.16
+  },
+  {
+    "words": [
+      {
+        "text": "nhận",
+        "start": 1.16
+      },
+      {
+        "text": "một",
+        "start": 1.42
+      },
+      {
+        "text": "kết",
+        "start": 1.6
+      },
+      {
+        "text": "quả",
+        "start": 1.78
+      }
+    ],
+    "fadein": 1.16,
+    "fadeout": 2.04
+  },
+  {
+    "words": [
+      {
+        "text": "đầy",
+        "start": 2.04
+      },
+      {
+        "text": "nghịch",
+        "start": 2.2
+      },
+      {
+        "text": "lý",
+        "start": 2.46
+      },
+      {
+        "text": "tại",
+        "start": 2.76
+      }
+    ],
+    "fadein": 2.04,
+    "fadeout": 3.08
+  },
+  {
+    "words": [
+      {
+        "text": "Á",
+        "start": 3.08
+      },
+      {
+        "text": "vận",
+        "start": 3.22
+      },
+      {
+        "text": "hội",
+        "start": 3.38
+      },
+      {
+        "text": "20,",
+        "start": 3.74
+      }
+    ],
+    "fadein": 3.08,
+    "fadeout": 4.34
+  },
+  {
+    "words": [
+      {
+        "text": "đại",
+        "start": 4.34
+      },
+      {
+        "text": "hội",
+        "start": 4.5
+      },
+      {
+        "text": "thể",
+        "start": 4.7
+      },
+      {
+        "text": "thao",
+        "start": 4.86
+      }
+    ],
+    "fadein": 4.34,
+    "fadeout": 5.12
+  },
+  {
+    "words": [
+      {
+        "text": "châu",
+        "start": 5.12
+      },
+      {
+        "text": "Á:",
+        "start": 5.36
+      },
+      {
+        "text": "thua",
+        "start": 5.86
+      },
+      {
+        "text": "trận",
+        "start": 6.08
+      }
+    ],
+    "fadein": 5.12,
+    "fadeout": 6.54
+  },
+  {
+    "words": [
+      {
+        "text": "nhưng",
+        "start": 6.54
+      },
+      {
+        "text": "vẫn",
+        "start": 6.78
+      },
+      {
+        "text": "giành",
+        "start": 6.96
+      },
+      {
+        "text": "vé",
+        "start": 7.22
+      }
+    ],
+    "fadein": 6.54,
+    "fadeout": 7.42
+  },
+  {
+    "words": [
+      {
+        "text": "đi",
+        "start": 7.42
+      },
+      {
+        "text": "tiếp.",
+        "start": 7.56
+      }
+    ],
+    "fadein": 7.42,
+    "fadeout": 8.07
+  }
+]

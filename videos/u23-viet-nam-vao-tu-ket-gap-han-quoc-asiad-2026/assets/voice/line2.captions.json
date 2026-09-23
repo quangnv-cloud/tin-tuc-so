@@ -1,0 +1,166 @@
+[
+  {
+    "words": [
+      {
+        "text": "Tối",
+        "start": 0.08
+      },
+      {
+        "text": "22",
+        "start": 0.42
+      },
+      {
+        "text": "tháng",
+        "start": 0.76
+      },
+      {
+        "text": "9,",
+        "start": 0.94
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 1.38
+  },
+  {
+    "words": [
+      {
+        "text": "U23",
+        "start": 1.38
+      },
+      {
+        "text": "Việt",
+        "start": 1.82
+      },
+      {
+        "text": "Nam",
+        "start": 2.02
+      },
+      {
+        "text": "thua",
+        "start": 2.3
+      }
+    ],
+    "fadein": 1.38,
+    "fadeout": 2.6
+  },
+  {
+    "words": [
+      {
+        "text": "U23",
+        "start": 2.6
+      },
+      {
+        "text": "Uzbekistan",
+        "start": 3.12
+      },
+      {
+        "text": "hai",
+        "start": 3.96
+      },
+      {
+        "text": "bàn",
+        "start": 4.18
+      }
+    ],
+    "fadein": 2.6,
+    "fadeout": 4.38
+  },
+  {
+    "words": [
+      {
+        "text": "không",
+        "start": 4.38
+      },
+      {
+        "text": "gỡ,",
+        "start": 4.58
+      },
+      {
+        "text": "ở",
+        "start": 5.14
+      },
+      {
+        "text": "lượt",
+        "start": 5.24
+      }
+    ],
+    "fadein": 4.38,
+    "fadeout": 5.46
+  },
+  {
+    "words": [
+      {
+        "text": "cuối",
+        "start": 5.46
+      },
+      {
+        "text": "vòng",
+        "start": 5.74
+      },
+      {
+        "text": "bảng",
+        "start": 5.94
+      },
+      {
+        "text": "C",
+        "start": 6.18
+      }
+    ],
+    "fadein": 5.46,
+    "fadeout": 6.5
+  },
+  {
+    "words": [
+      {
+        "text": "môn",
+        "start": 6.5
+      },
+      {
+        "text": "bóng",
+        "start": 6.68
+      },
+      {
+        "text": "đá",
+        "start": 6.84
+      },
+      {
+        "text": "nam",
+        "start": 7.0
+      }
+    ],
+    "fadein": 6.5,
+    "fadeout": 7.28
+  },
+  {
+    "words": [
+      {
+        "text": "Asiad",
+        "start": 7.28
+      },
+      {
+        "text": "20,",
+        "start": 7.8
+      },
+      {
+        "text": "trên",
+        "start": 8.36
+      },
+      {
+        "text": "sân",
+        "start": 8.58
+      }
+    ],
+    "fadein": 7.28,
+    "fadeout": 8.84
+  },
+  {
+    "words": [
+      {
+        "text": "Mizuho.",
+        "start": 8.84
+      }
+    ],
+    "fadein": 8.84,
+    "fadeout": 9.65
+  }
+]

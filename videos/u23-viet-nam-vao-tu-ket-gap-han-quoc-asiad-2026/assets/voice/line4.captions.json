@@ -1,0 +1,196 @@
+[
+  {
+    "words": [
+      {
+        "text": "Bảng",
+        "start": 0.1
+      },
+      {
+        "text": "xếp",
+        "start": 0.3
+      },
+      {
+        "text": "hạng",
+        "start": 0.44
+      },
+      {
+        "text": "cuối",
+        "start": 0.68
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 0.9
+  },
+  {
+    "words": [
+      {
+        "text": "cùng",
+        "start": 0.9
+      },
+      {
+        "text": "của",
+        "start": 1.18
+      },
+      {
+        "text": "bảng",
+        "start": 1.3
+      },
+      {
+        "text": "C:",
+        "start": 1.54
+      }
+    ],
+    "fadein": 0.9,
+    "fadeout": 2.12
+  },
+  {
+    "words": [
+      {
+        "text": "Uzbekistan",
+        "start": 2.12
+      },
+      {
+        "text": "toàn",
+        "start": 3.04
+      },
+      {
+        "text": "thắng,",
+        "start": 3.26
+      },
+      {
+        "text": "dẫn",
+        "start": 3.7
+      }
+    ],
+    "fadein": 2.12,
+    "fadeout": 3.88
+  },
+  {
+    "words": [
+      {
+        "text": "đầu",
+        "start": 3.88
+      },
+      {
+        "text": "với",
+        "start": 4.14
+      },
+      {
+        "text": "9",
+        "start": 4.32
+      },
+      {
+        "text": "điểm;",
+        "start": 4.52
+      }
+    ],
+    "fadein": 3.88,
+    "fadeout": 5.0
+  },
+  {
+    "words": [
+      {
+        "text": "Việt",
+        "start": 5.0
+      },
+      {
+        "text": "Nam",
+        "start": 5.2
+      },
+      {
+        "text": "xếp",
+        "start": 5.5
+      },
+      {
+        "text": "nhì",
+        "start": 5.72
+      }
+    ],
+    "fadein": 5.0,
+    "fadeout": 6.04
+  },
+  {
+    "words": [
+      {
+        "text": "với",
+        "start": 6.04
+      },
+      {
+        "text": "4",
+        "start": 6.24
+      },
+      {
+        "text": "điểm;",
+        "start": 6.42
+      },
+      {
+        "text": "Philippines",
+        "start": 6.9
+      }
+    ],
+    "fadein": 6.04,
+    "fadeout": 7.58
+  },
+  {
+    "words": [
+      {
+        "text": "xếp",
+        "start": 7.58
+      },
+      {
+        "text": "ba",
+        "start": 7.84
+      },
+      {
+        "text": "với",
+        "start": 8.24
+      },
+      {
+        "text": "3",
+        "start": 8.42
+      }
+    ],
+    "fadein": 7.58,
+    "fadeout": 8.6
+  },
+  {
+    "words": [
+      {
+        "text": "điểm;",
+        "start": 8.6
+      },
+      {
+        "text": "Kuwait",
+        "start": 9.02
+      },
+      {
+        "text": "xếp",
+        "start": 9.6
+      },
+      {
+        "text": "chót",
+        "start": 9.84
+      }
+    ],
+    "fadein": 8.6,
+    "fadeout": 10.24
+  },
+  {
+    "words": [
+      {
+        "text": "với",
+        "start": 10.24
+      },
+      {
+        "text": "1",
+        "start": 10.5
+      },
+      {
+        "text": "điểm.",
+        "start": 10.68
+      }
+    ],
+    "fadein": 10.24,
+    "fadeout": 11.19
+  }
+]

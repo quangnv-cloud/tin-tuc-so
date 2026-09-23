@@ -1,0 +1,590 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Tuy nhiên, đội hình hai bên giờ đã khác nhiều. Việt Nam vắng nhiều trụ cột và đổi huấn luyện viên trưởng, còn Hàn Quốc thay tới mười sáu vị trí, tăng cường lực lượng từ các câu lạc bộ châu Âu",
+  "words": [
+    {
+      "text": "Tuy",
+      "start": 0.1,
+      "end": 0.2,
+      "type": "word",
+      "logprob": -0.0043090591207146645
+    },
+    {
+      "text": " ",
+      "start": 0.2,
+      "end": 0.26,
+      "type": "spacing",
+      "logprob": -1.0013530300057027e-05
+    },
+    {
+      "text": "nhiên,",
+      "start": 0.26,
+      "end": 0.48,
+      "type": "word",
+      "logprob": -0.0001806321641500593
+    },
+    {
+      "text": " ",
+      "start": 0.48,
+      "end": 0.62,
+      "type": "spacing",
+      "logprob": -1.3589766240329482e-05
+    },
+    {
+      "text": "đội",
+      "start": 0.62,
+      "end": 0.72,
+      "type": "word",
+      "logprob": -1.3589766240329482e-05
+    },
+    {
+      "text": " ",
+      "start": 0.72,
+      "end": 0.76,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "hình",
+      "start": 0.76,
+      "end": 0.9,
+      "type": "word",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": " ",
+      "start": 0.9,
+      "end": 0.94,
+      "type": "spacing",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": "hai",
+      "start": 0.94,
+      "end": 1.04,
+      "type": "word",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": " ",
+      "start": 1.04,
+      "end": 1.12,
+      "type": "spacing",
+      "logprob": -4.434487345861271e-05
+    },
+    {
+      "text": "bên",
+      "start": 1.12,
+      "end": 1.32,
+      "type": "word",
+      "logprob": -4.434487345861271e-05
+    },
+    {
+      "text": " ",
+      "start": 1.32,
+      "end": 1.4,
+      "type": "spacing",
+      "logprob": -3.814689989667386e-06
+    },
+    {
+      "text": "giờ",
+      "start": 1.4,
+      "end": 1.6,
+      "type": "word",
+      "logprob": -3.814689989667386e-06
+    },
+    {
+      "text": " ",
+      "start": 1.6,
+      "end": 1.66,
+      "type": "spacing",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": "đã",
+      "start": 1.66,
+      "end": 1.76,
+      "type": "word",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": " ",
+      "start": 1.76,
+      "end": 1.78,
+      "type": "spacing",
+      "logprob": -2.7418097943154862e-06
+    },
+    {
+      "text": "khác",
+      "start": 1.78,
+      "end": 1.92,
+      "type": "word",
+      "logprob": -2.7418097943154862e-06
+    },
+    {
+      "text": " ",
+      "start": 1.92,
+      "end": 1.98,
+      "type": "spacing",
+      "logprob": -3.814689989667386e-06
+    },
+    {
+      "text": "nhiều.",
+      "start": 1.98,
+      "end": 2.24,
+      "type": "word",
+      "logprob": -5.270300971460529e-05
+    },
+    {
+      "text": " ",
+      "start": 2.24,
+      "end": 2.24,
+      "type": "spacing",
+      "logprob": -0.00010966652916977182
+    },
+    {
+      "text": "Việt",
+      "start": 2.58,
+      "end": 2.74,
+      "type": "word",
+      "logprob": -0.00010966652916977182
+    },
+    {
+      "text": " ",
+      "start": 2.74,
+      "end": 2.78,
+      "type": "spacing",
+      "logprob": -2.861018856492592e-06
+    },
+    {
+      "text": "Nam",
+      "start": 2.78,
+      "end": 2.98,
+      "type": "word",
+      "logprob": -2.861018856492592e-06
+    },
+    {
+      "text": " ",
+      "start": 2.98,
+      "end": 3.1,
+      "type": "spacing",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": "vắng",
+      "start": 3.1,
+      "end": 3.24,
+      "type": "word",
+      "logprob": -1.209964995041446e-05
+    },
+    {
+      "text": " ",
+      "start": 3.24,
+      "end": 3.34,
+      "type": "spacing",
+      "logprob": -7.867782187531702e-06
+    },
+    {
+      "text": "nhiều",
+      "start": 3.34,
+      "end": 3.5,
+      "type": "word",
+      "logprob": -7.867782187531702e-06
+    },
+    {
+      "text": " ",
+      "start": 3.5,
+      "end": 3.56,
+      "type": "spacing",
+      "logprob": -8.821098163025454e-05
+    },
+    {
+      "text": "trụ",
+      "start": 3.56,
+      "end": 3.66,
+      "type": "word",
+      "logprob": -8.821098163025454e-05
+    },
+    {
+      "text": " ",
+      "start": 3.66,
+      "end": 3.76,
+      "type": "spacing",
+      "logprob": -7.784063927829266e-05
+    },
+    {
+      "text": "cột",
+      "start": 3.76,
+      "end": 3.96,
+      "type": "word",
+      "logprob": -7.784063927829266e-05
+    },
+    {
+      "text": " ",
+      "start": 3.96,
+      "end": 4.1,
+      "type": "spacing",
+      "logprob": -3.576272320060525e-06
+    },
+    {
+      "text": "và",
+      "start": 4.1,
+      "end": 4.24,
+      "type": "word",
+      "logprob": -3.576272320060525e-06
+    },
+    {
+      "text": " ",
+      "start": 4.24,
+      "end": 4.34,
+      "type": "spacing",
+      "logprob": -0.0005482124397531152
+    },
+    {
+      "text": "đổi",
+      "start": 4.34,
+      "end": 4.48,
+      "type": "word",
+      "logprob": -0.0005482124397531152
+    },
+    {
+      "text": " ",
+      "start": 4.48,
+      "end": 4.5,
+      "type": "spacing",
+      "logprob": -0.004528624005615711
+    },
+    {
+      "text": "huấn",
+      "start": 4.5,
+      "end": 4.58,
+      "type": "word",
+      "logprob": -0.004528624005615711
+    },
+    {
+      "text": " ",
+      "start": 4.58,
+      "end": 4.62,
+      "type": "spacing",
+      "logprob": -8.380061626667157e-05
+    },
+    {
+      "text": "luyện",
+      "start": 4.62,
+      "end": 4.74,
+      "type": "word",
+      "logprob": -8.380061626667157e-05
+    },
+    {
+      "text": " ",
+      "start": 4.74,
+      "end": 4.76,
+      "type": "spacing",
+      "logprob": -8.475421054754406e-05
+    },
+    {
+      "text": "viên",
+      "start": 4.76,
+      "end": 4.88,
+      "type": "word",
+      "logprob": -8.475421054754406e-05
+    },
+    {
+      "text": " ",
+      "start": 4.88,
+      "end": 4.92,
+      "type": "spacing",
+      "logprob": -9.560128091834486e-05
+    },
+    {
+      "text": "trưởng,",
+      "start": 4.92,
+      "end": 5.16,
+      "type": "word",
+      "logprob": -0.0007440623511294169
+    },
+    {
+      "text": " ",
+      "start": 5.16,
+      "end": 5.16,
+      "type": "spacing",
+      "logprob": -1.8596476365928538e-05
+    },
+    {
+      "text": "còn",
+      "start": 5.52,
+      "end": 5.68,
+      "type": "word",
+      "logprob": -1.8596476365928538e-05
+    },
+    {
+      "text": " ",
+      "start": 5.68,
+      "end": 5.7,
+      "type": "spacing",
+      "logprob": -9.595887240720913e-05
+    },
+    {
+      "text": "Hàn",
+      "start": 5.7,
+      "end": 5.82,
+      "type": "word",
+      "logprob": -9.595887240720913e-05
+    },
+    {
+      "text": " ",
+      "start": 5.82,
+      "end": 5.92,
+      "type": "spacing",
+      "logprob": -1.6689286894688848e-06
+    },
+    {
+      "text": "Quốc",
+      "start": 5.92,
+      "end": 6.12,
+      "type": "word",
+      "logprob": -1.6689286894688848e-06
+    },
+    {
+      "text": " ",
+      "start": 6.12,
+      "end": 6.22,
+      "type": "spacing",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": "thay",
+      "start": 6.22,
+      "end": 6.38,
+      "type": "word",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": " ",
+      "start": 6.38,
+      "end": 6.48,
+      "type": "spacing",
+      "logprob": -3.933898824470816e-06
+    },
+    {
+      "text": "tới",
+      "start": 6.48,
+      "end": 6.7,
+      "type": "word",
+      "logprob": -3.933898824470816e-06
+    },
+    {
+      "text": " ",
+      "start": 6.7,
+      "end": 6.76,
+      "type": "spacing",
+      "logprob": -0.03016100451350212
+    },
+    {
+      "text": "mười",
+      "start": 6.76,
+      "end": 6.9,
+      "type": "word",
+      "logprob": -0.00775470777443843
+    },
+    {
+      "text": " ",
+      "start": 6.9,
+      "end": 7.0,
+      "type": "spacing",
+      "logprob": -4.577531944960356e-05
+    },
+    {
+      "text": "sáu",
+      "start": 7.0,
+      "end": 7.16,
+      "type": "word",
+      "logprob": -2.0424155688184935e-05
+    },
+    {
+      "text": " ",
+      "start": 7.16,
+      "end": 7.2,
+      "type": "spacing",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": "vị",
+      "start": 7.2,
+      "end": 7.28,
+      "type": "word",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": " ",
+      "start": 7.28,
+      "end": 7.34,
+      "type": "spacing",
+      "logprob": -5.960446742392378e-06
+    },
+    {
+      "text": "trí,",
+      "start": 7.34,
+      "end": 7.58,
+      "type": "word",
+      "logprob": -5.274996453863423e-06
+    },
+    {
+      "text": " ",
+      "start": 7.58,
+      "end": 7.9,
+      "type": "spacing",
+      "logprob": -2.861018856492592e-06
+    },
+    {
+      "text": "tăng",
+      "start": 7.9,
+      "end": 8.0,
+      "type": "word",
+      "logprob": -2.861018856492592e-06
+    },
+    {
+      "text": " ",
+      "start": 8.0,
+      "end": 8.08,
+      "type": "spacing",
+      "logprob": -4.887569048150908e-06
+    },
+    {
+      "text": "cường",
+      "start": 8.08,
+      "end": 8.26,
+      "type": "word",
+      "logprob": -4.887569048150908e-06
+    },
+    {
+      "text": " ",
+      "start": 8.26,
+      "end": 8.3,
+      "type": "spacing",
+      "logprob": -6.437280717364047e-06
+    },
+    {
+      "text": "lực",
+      "start": 8.3,
+      "end": 8.42,
+      "type": "word",
+      "logprob": -6.437280717364047e-06
+    },
+    {
+      "text": " ",
+      "start": 8.42,
+      "end": 8.48,
+      "type": "spacing",
+      "logprob": -1.0490362910786644e-05
+    },
+    {
+      "text": "lượng",
+      "start": 8.48,
+      "end": 8.7,
+      "type": "word",
+      "logprob": -1.0490362910786644e-05
+    },
+    {
+      "text": " ",
+      "start": 8.7,
+      "end": 8.72,
+      "type": "spacing",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": "từ",
+      "start": 8.72,
+      "end": 8.84,
+      "type": "word",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": " ",
+      "start": 8.84,
+      "end": 8.88,
+      "type": "spacing",
+      "logprob": -2.0265558760002023e-06
+    },
+    {
+      "text": "các",
+      "start": 8.88,
+      "end": 9.0,
+      "type": "word",
+      "logprob": -2.0265558760002023e-06
+    },
+    {
+      "text": " ",
+      "start": 9.0,
+      "end": 9.02,
+      "type": "spacing",
+      "logprob": -0.0007337023853324354
+    },
+    {
+      "text": "câu",
+      "start": 9.02,
+      "end": 9.1,
+      "type": "word",
+      "logprob": -0.0007337023853324354
+    },
+    {
+      "text": " ",
+      "start": 9.1,
+      "end": 9.14,
+      "type": "spacing",
+      "logprob": -2.658331868587993e-05
+    },
+    {
+      "text": "lạc",
+      "start": 9.14,
+      "end": 9.26,
+      "type": "word",
+      "logprob": -2.658331868587993e-05
+    },
+    {
+      "text": " ",
+      "start": 9.26,
+      "end": 9.3,
+      "type": "spacing",
+      "logprob": -0.00017653337272349745
+    },
+    {
+      "text": "bộ",
+      "start": 9.3,
+      "end": 9.4,
+      "type": "word",
+      "logprob": -0.00017653337272349745
+    },
+    {
+      "text": " ",
+      "start": 9.4,
+      "end": 9.46,
+      "type": "spacing",
+      "logprob": -0.026308342814445496
+    },
+    {
+      "text": "châu",
+      "start": 9.46,
+      "end": 9.56,
+      "type": "word",
+      "logprob": -0.026308342814445496
+    },
+    {
+      "text": " ",
+      "start": 9.56,
+      "end": 9.66,
+      "type": "spacing",
+      "logprob": -7.271740287251305e-06
+    },
+    {
+      "text": "Âu",
+      "start": 9.66,
+      "end": 9.78,
+      "type": "word",
+      "logprob": -7.271740287251305e-06
+    }
+  ],
+  "transcription_id": "rDp5S9VQppZ0pYX5JCio",
+  "audio_duration_secs": 9.84
+}

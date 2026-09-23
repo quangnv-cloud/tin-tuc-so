@@ -1,0 +1,408 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Tối 22 tháng Chín, U23 Việt Nam thua U23 Uzbekistan hai bàn không gỡ ở lượt cuối vòng bảng C môn bóng đá nam Asiad 20 trên sân Mizuho",
+  "words": [
+    {
+      "text": "Tối",
+      "start": 0.08,
+      "end": 0.24,
+      "type": "word",
+      "logprob": -0.0002103025617543608
+    },
+    {
+      "text": " ",
+      "start": 0.24,
+      "end": 0.42,
+      "type": "spacing",
+      "logprob": -0.0025053799618035555
+    },
+    {
+      "text": "22",
+      "start": 0.42,
+      "end": 0.72,
+      "type": "word",
+      "logprob": -5.304793376126327e-06
+    },
+    {
+      "text": " ",
+      "start": 0.72,
+      "end": 0.76,
+      "type": "spacing",
+      "logprob": -0.0017927302978932858
+    },
+    {
+      "text": "tháng",
+      "start": 0.76,
+      "end": 0.86,
+      "type": "word",
+      "logprob": -0.0017927302978932858
+    },
+    {
+      "text": " ",
+      "start": 0.86,
+      "end": 0.94,
+      "type": "spacing",
+      "logprob": -0.03181229904294014
+    },
+    {
+      "text": "Chín,",
+      "start": 0.94,
+      "end": 1.18,
+      "type": "word",
+      "logprob": -0.01282927395623119
+    },
+    {
+      "text": " ",
+      "start": 1.18,
+      "end": 1.38,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "U23",
+      "start": 1.38,
+      "end": 1.76,
+      "type": "word",
+      "logprob": -0.00031932819782317284
+    },
+    {
+      "text": " ",
+      "start": 1.76,
+      "end": 1.82,
+      "type": "spacing",
+      "logprob": -8.320462075062096e-05
+    },
+    {
+      "text": "Việt",
+      "start": 1.82,
+      "end": 1.96,
+      "type": "word",
+      "logprob": -8.320462075062096e-05
+    },
+    {
+      "text": " ",
+      "start": 1.96,
+      "end": 2.02,
+      "type": "spacing",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": "Nam",
+      "start": 2.02,
+      "end": 2.22,
+      "type": "word",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": " ",
+      "start": 2.22,
+      "end": 2.3,
+      "type": "spacing",
+      "logprob": -3.8265450712060556e-05
+    },
+    {
+      "text": "thua",
+      "start": 2.3,
+      "end": 2.5,
+      "type": "word",
+      "logprob": -3.8265450712060556e-05
+    },
+    {
+      "text": " ",
+      "start": 2.5,
+      "end": 2.6,
+      "type": "spacing",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": "U23",
+      "start": 2.6,
+      "end": 3.04,
+      "type": "word",
+      "logprob": -2.3047102028309987e-06
+    },
+    {
+      "text": " ",
+      "start": 3.04,
+      "end": 3.12,
+      "type": "spacing",
+      "logprob": -0.003491498064249754
+    },
+    {
+      "text": "Uzbekistan",
+      "start": 3.12,
+      "end": 3.88,
+      "type": "word",
+      "logprob": -0.003491498064249754
+    },
+    {
+      "text": " ",
+      "start": 3.88,
+      "end": 3.96,
+      "type": "spacing",
+      "logprob": -9.775113539944869e-06
+    },
+    {
+      "text": "hai",
+      "start": 3.96,
+      "end": 4.1,
+      "type": "word",
+      "logprob": -9.775113539944869e-06
+    },
+    {
+      "text": " ",
+      "start": 4.1,
+      "end": 4.18,
+      "type": "spacing",
+      "logprob": -0.00038092033355496824
+    },
+    {
+      "text": "bàn",
+      "start": 4.18,
+      "end": 4.32,
+      "type": "word",
+      "logprob": -0.00038092033355496824
+    },
+    {
+      "text": " ",
+      "start": 4.32,
+      "end": 4.38,
+      "type": "spacing",
+      "logprob": -2.1457441107486375e-05
+    },
+    {
+      "text": "không",
+      "start": 4.38,
+      "end": 4.52,
+      "type": "word",
+      "logprob": -2.1457441107486375e-05
+    },
+    {
+      "text": " ",
+      "start": 4.52,
+      "end": 4.58,
+      "type": "spacing",
+      "logprob": -9.775113539944869e-06
+    },
+    {
+      "text": "gỡ",
+      "start": 4.58,
+      "end": 4.78,
+      "type": "word",
+      "logprob": -5.8588456795405364e-05
+    },
+    {
+      "text": " ",
+      "start": 4.78,
+      "end": 5.12,
+      "type": "spacing",
+      "logprob": -0.0030979756265878677
+    },
+    {
+      "text": "ở",
+      "start": 5.14,
+      "end": 5.2,
+      "type": "word",
+      "logprob": -0.0030979756265878677
+    },
+    {
+      "text": " ",
+      "start": 5.2,
+      "end": 5.24,
+      "type": "spacing",
+      "logprob": -0.0006007535266689956
+    },
+    {
+      "text": "lượt",
+      "start": 5.24,
+      "end": 5.42,
+      "type": "word",
+      "logprob": -0.0006007535266689956
+    },
+    {
+      "text": " ",
+      "start": 5.42,
+      "end": 5.46,
+      "type": "spacing",
+      "logprob": -2.13382354559144e-05
+    },
+    {
+      "text": "cuối",
+      "start": 5.46,
+      "end": 5.66,
+      "type": "word",
+      "logprob": -2.13382354559144e-05
+    },
+    {
+      "text": " ",
+      "start": 5.66,
+      "end": 5.74,
+      "type": "spacing",
+      "logprob": -5.245195097813848e-06
+    },
+    {
+      "text": "vòng",
+      "start": 5.74,
+      "end": 5.9,
+      "type": "word",
+      "logprob": -5.245195097813848e-06
+    },
+    {
+      "text": " ",
+      "start": 5.9,
+      "end": 5.94,
+      "type": "spacing",
+      "logprob": -0.00014935807848814875
+    },
+    {
+      "text": "bảng",
+      "start": 5.94,
+      "end": 6.06,
+      "type": "word",
+      "logprob": -0.00014935807848814875
+    },
+    {
+      "text": " ",
+      "start": 6.06,
+      "end": 6.18,
+      "type": "spacing",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": "C",
+      "start": 6.18,
+      "end": 6.4,
+      "type": "word",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": " ",
+      "start": 6.4,
+      "end": 6.5,
+      "type": "spacing",
+      "logprob": -9.775113539944869e-06
+    },
+    {
+      "text": "môn",
+      "start": 6.5,
+      "end": 6.62,
+      "type": "word",
+      "logprob": -9.775113539944869e-06
+    },
+    {
+      "text": " ",
+      "start": 6.62,
+      "end": 6.68,
+      "type": "spacing",
+      "logprob": -9.262132516596466e-05
+    },
+    {
+      "text": "bóng",
+      "start": 6.68,
+      "end": 6.8,
+      "type": "word",
+      "logprob": -9.262132516596466e-05
+    },
+    {
+      "text": " ",
+      "start": 6.8,
+      "end": 6.84,
+      "type": "spacing",
+      "logprob": -0.00016532962035853416
+    },
+    {
+      "text": "đá",
+      "start": 6.84,
+      "end": 6.96,
+      "type": "word",
+      "logprob": -0.00016532962035853416
+    },
+    {
+      "text": " ",
+      "start": 6.96,
+      "end": 7.0,
+      "type": "spacing",
+      "logprob": -0.0002115741081070155
+    },
+    {
+      "text": "nam",
+      "start": 7.0,
+      "end": 7.2,
+      "type": "word",
+      "logprob": -0.0002115741081070155
+    },
+    {
+      "text": " ",
+      "start": 7.2,
+      "end": 7.28,
+      "type": "spacing",
+      "logprob": -0.30250972509384155
+    },
+    {
+      "text": "Asiad",
+      "start": 7.28,
+      "end": 7.64,
+      "type": "word",
+      "logprob": -0.12101068492829654
+    },
+    {
+      "text": " ",
+      "start": 7.64,
+      "end": 7.8,
+      "type": "spacing",
+      "logprob": -0.0004929280839860439
+    },
+    {
+      "text": "20",
+      "start": 7.8,
+      "end": 8.08,
+      "type": "word",
+      "logprob": -4.768348844663706e-06
+    },
+    {
+      "text": " ",
+      "start": 8.08,
+      "end": 8.36,
+      "type": "spacing",
+      "logprob": -0.00031704644788987935
+    },
+    {
+      "text": "trên",
+      "start": 8.36,
+      "end": 8.5,
+      "type": "word",
+      "logprob": -0.00031704644788987935
+    },
+    {
+      "text": " ",
+      "start": 8.5,
+      "end": 8.58,
+      "type": "spacing",
+      "logprob": -0.00018606838420964777
+    },
+    {
+      "text": "sân",
+      "start": 8.58,
+      "end": 8.76,
+      "type": "word",
+      "logprob": -0.00018606838420964777
+    },
+    {
+      "text": " ",
+      "start": 8.76,
+      "end": 8.84,
+      "type": "spacing",
+      "logprob": -0.1768379658460617
+    },
+    {
+      "text": "Mizuho",
+      "start": 8.84,
+      "end": 9.3,
+      "type": "word",
+      "logprob": -0.08848914664728606
+    }
+  ],
+  "transcription_id": "mRGgsqri9HwpeI4Enblk",
+  "audio_duration_secs": 9.36
+}

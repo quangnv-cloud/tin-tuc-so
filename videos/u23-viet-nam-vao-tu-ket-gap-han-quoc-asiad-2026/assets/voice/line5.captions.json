@@ -1,0 +1,306 @@
+[
+  {
+    "words": [
+      {
+        "text": "Đối",
+        "start": 0.14
+      },
+      {
+        "text": "thủ",
+        "start": 0.28
+      },
+      {
+        "text": "chờ",
+        "start": 0.54
+      },
+      {
+        "text": "Việt",
+        "start": 0.72
+      }
+    ],
+    "fadein": 0.14,
+    "fadeout": 0.92
+  },
+  {
+    "words": [
+      {
+        "text": "Nam",
+        "start": 0.92
+      },
+      {
+        "text": "ở",
+        "start": 1.22
+      },
+      {
+        "text": "tứ",
+        "start": 1.34
+      },
+      {
+        "text": "kết",
+        "start": 1.52
+      }
+    ],
+    "fadein": 0.92,
+    "fadeout": 1.84
+  },
+  {
+    "words": [
+      {
+        "text": "là",
+        "start": 1.84
+      },
+      {
+        "text": "Hàn",
+        "start": 1.98
+      },
+      {
+        "text": "Quốc,",
+        "start": 2.22
+      },
+      {
+        "text": "đội",
+        "start": 2.72
+      }
+    ],
+    "fadein": 1.84,
+    "fadeout": 3.04
+  },
+  {
+    "words": [
+      {
+        "text": "từng",
+        "start": 3.04
+      },
+      {
+        "text": "toàn",
+        "start": 3.24
+      },
+      {
+        "text": "thắng",
+        "start": 3.46
+      },
+      {
+        "text": "Việt",
+        "start": 3.68
+      }
+    ],
+    "fadein": 3.04,
+    "fadeout": 3.88
+  },
+  {
+    "words": [
+      {
+        "text": "Nam",
+        "start": 3.88
+      },
+      {
+        "text": "ở",
+        "start": 4.24
+      },
+      {
+        "text": "mọi",
+        "start": 4.4
+      },
+      {
+        "text": "lần",
+        "start": 4.6
+      }
+    ],
+    "fadein": 3.88,
+    "fadeout": 4.8
+  },
+  {
+    "words": [
+      {
+        "text": "chạm",
+        "start": 4.8
+      },
+      {
+        "text": "trán",
+        "start": 5.02
+      },
+      {
+        "text": "tại",
+        "start": 5.4
+      },
+      {
+        "text": "Á",
+        "start": 5.7
+      }
+    ],
+    "fadein": 4.8,
+    "fadeout": 5.84
+  },
+  {
+    "words": [
+      {
+        "text": "vận",
+        "start": 5.84
+      },
+      {
+        "text": "hội",
+        "start": 6.0
+      },
+      {
+        "text": "trước",
+        "start": 6.18
+      },
+      {
+        "text": "đây,",
+        "start": 6.4
+      }
+    ],
+    "fadein": 5.84,
+    "fadeout": 7.0
+  },
+  {
+    "words": [
+      {
+        "text": "nhưng",
+        "start": 7.0
+      },
+      {
+        "text": "hồi",
+        "start": 7.28
+      },
+      {
+        "text": "tháng",
+        "start": 7.48
+      },
+      {
+        "text": "1",
+        "start": 7.66
+      }
+    ],
+    "fadein": 7.0,
+    "fadeout": 7.84
+  },
+  {
+    "words": [
+      {
+        "text": "năm",
+        "start": 7.84
+      },
+      {
+        "text": "nay,",
+        "start": 8.0
+      },
+      {
+        "text": "chính",
+        "start": 8.46
+      },
+      {
+        "text": "Việt",
+        "start": 8.64
+      }
+    ],
+    "fadein": 7.84,
+    "fadeout": 8.84
+  },
+  {
+    "words": [
+      {
+        "text": "Nam",
+        "start": 8.84
+      },
+      {
+        "text": "đã",
+        "start": 9.1
+      },
+      {
+        "text": "đánh",
+        "start": 9.24
+      },
+      {
+        "text": "bại",
+        "start": 9.4
+      }
+    ],
+    "fadein": 8.84,
+    "fadeout": 9.6
+  },
+  {
+    "words": [
+      {
+        "text": "Hàn",
+        "start": 9.6
+      },
+      {
+        "text": "Quốc",
+        "start": 9.84
+      },
+      {
+        "text": "trên",
+        "start": 10.1
+      },
+      {
+        "text": "chấm",
+        "start": 10.34
+      }
+    ],
+    "fadein": 9.6,
+    "fadeout": 10.54
+  },
+  {
+    "words": [
+      {
+        "text": "luân",
+        "start": 10.54
+      },
+      {
+        "text": "lưu",
+        "start": 10.72
+      },
+      {
+        "text": "để",
+        "start": 11.16
+      },
+      {
+        "text": "giành",
+        "start": 11.28
+      }
+    ],
+    "fadein": 10.54,
+    "fadeout": 11.52
+  },
+  {
+    "words": [
+      {
+        "text": "huy",
+        "start": 11.52
+      },
+      {
+        "text": "chương",
+        "start": 11.68
+      },
+      {
+        "text": "đồng",
+        "start": 11.9
+      },
+      {
+        "text": "giải",
+        "start": 12.22
+      }
+    ],
+    "fadein": 11.52,
+    "fadeout": 12.54
+  },
+  {
+    "words": [
+      {
+        "text": "U23",
+        "start": 12.54
+      },
+      {
+        "text": "châu",
+        "start": 13.14
+      },
+      {
+        "text": "Á.",
+        "start": 13.36
+      }
+    ],
+    "fadein": 12.54,
+    "fadeout": 13.83
+  }
+]
