@@ -59,7 +59,7 @@ Thực hiện đúng trình tự trong videos/PRODUCTION-WORKFLOW.md, cụ thể
 3. Nhận "cách dựng" (construction style): POST `<EXEC>` với `{"action":"claim_style","video":"<slug>"}` → trả `{"ok":true,"index":N,"style":"N-tên"}`. Dùng ĐÚNG style đó (chi tiết ở videos/CONSTRUCTION-STYLES.md). KHÔNG đọc videos/style-rotation-state.json để lấy chỉ số. Gọi claim_style NGAY SAU bước 1 (đã POST đánh dấu used), trước khi dựng.
 
 4. Viết BRIEF.md + SCRIPT.md + CAPTION.md trong videos/<slug>/. Khởi tạo project qua hyperframes CLI (KHÔNG copy state file từ project cũ).
-   - SCRIPT.md: MỘT dòng = MỘT act (7 dòng, act 7 là CTA), văn phong tin tức. TUYỆT ĐỐI KHÔNG viết tắt — viết đầy đủ đúng cách đọc thành tiếng vì ElevenLabs đọc verbatim: "AI" → "trí tuệ nhân tạo" (hoặc "ây-ai" nếu ngữ cảnh cần, nhất quán trong 1 video), "AGI" → "trí tuệ nhân tạo tổng quát", "API" → "ây-pi-ai", "CEO" → "giám đốc điều hành", "USD" → "đô la Mỹ", "GB"/"TB" → "gi-ga-bai"/"tê-ra-bai" (bảng đầy đủ ở mục "Voiceover" của videos/BRAND-SYSTEM.md). Tên riêng đọc nguyên được thì giữ. Số lớn viết theo cách người Việt đọc ("4.000 tỷ" → "4 nghìn tỷ").
+   - SCRIPT.md: MỘT dòng = MỘT act (7 dòng, act 7 là CTA), văn phong tin tức. TUYỆT ĐỐI KHÔNG viết tắt — viết đầy đủ đúng cách đọc thành tiếng vì TTS đọc verbatim: "AI" → "trí tuệ nhân tạo" (hoặc "ây-ai" nếu ngữ cảnh cần, nhất quán trong 1 video), "AGI" → "trí tuệ nhân tạo tổng quát", "API" → "ây-pi-ai", "CEO" → "giám đốc điều hành", "USD" → "đô la Mỹ", "GB"/"TB" → "gi-ga-bai"/"tê-ra-bai" (bảng đầy đủ ở mục "Voiceover" của videos/BRAND-SYSTEM.md). Tên riêng đọc nguyên được thì giữ. Số lớn viết theo cách người Việt đọc ("4.000 tỷ" → "4 nghìn tỷ").
    - QUAN TRỌNG: lời voice act 7 (CTA) kêu gọi để lại bình luận / nêu quan điểm nhưng KHÔNG được nhắc tên kênh ("Tin Tức Số"). Tên kênh chỉ xuất hiện bằng hình.
    - BRIEF.md và text hiển thị trên video vẫn được viết tắt bình thường — ràng buộc không-viết-tắt CHỈ áp cho SCRIPT.md.
    - CAPTION.md: theo đúng mẫu videos/_reference-astra-openai/CAPTION.md — dòng đầu 1 emoji + tiêu đề IN HOA nêu sự kiện/số liệu chính; 1 dòng trống; 2-3 đoạn ngắn nêu số liệu / bối cảnh / các mặt của vấn đề (mỗi đoạn mở 1 emoji như 📊 ⚠️ 💬); 1 câu hỏi tranh luận mời bình luận; 1 dòng trống; "📌 Nguồn: <tên báo>, <ngày>" (thêm " · dịch" nếu nguồn tiếng Anh); 1 dòng trống; hashtag gồm **#TinTucSo #TinNong #TinTrongNgay** + 4-6 hashtag liên quan chủ đề. Kèm 1 bản rút gọn ≤500 ký tự (mục "Bản rút gọn cho Threads") để dành — tuyến này CHƯA đăng Threads. TUYỆT ĐỐI không bịa số liệu ngoài BRIEF.md/SCRIPT.md.
@@ -68,13 +68,42 @@ Thực hiện đúng trình tự trong videos/PRODUCTION-WORKFLOW.md, cụ thể
 
 **GATE B — kiểm duyệt nội dung trước render** (bắt buộc, `automation/policy/COMPLIANCE-GATE.md` mục GATE B). Trên SCRIPT.md + CAPTION.md + ảnh vừa tải, kiểm: (B1) mọi số liệu / mốc / tên / phát ngôn TRUY ĐƯỢC về `?article=`, `related`, hoặc item `news` — KHÔNG con số nào tự nghĩ; phân biệt cáo buộc/dự đoán vs sự thật; nguồn tiếng Anh dịch đúng nghĩa không thêm kết luận. (B2) không bạo lực / thù ghét / quấy rối / doxxing / nội dung tình dục hoặc liên quan trẻ em; phê bình hành vi-sản phẩm-chính sách không phải con người; tin thiên tai/tai nạn KHÔNG khai thác đau thương / không giật tít thương vong. (B3) KHÔNG giả danh nền tảng / hãng / cơ quan / chuyên gia (kênh là nguồn tin độc lập); không testimonial-doanh-thu-dashboard giả; không engagement bait; không lừa đảo / link độc. (B4 — AI media) giọng AI narrator chung = OK không cần disclosure; ảnh og:image bài báo có dẫn nguồn = OK; ảnh AI minh hoạ ý niệm (bản đồ/sơ đồ/biểu tượng) = OK; ❌ TUYỆT ĐỐI KHÔNG dùng AI tái dựng cảnh thật / người thật như-ảnh-chụp, hiện trường giả, phát ngôn giả, bằng chứng giả — nếu cần hình một sự kiện thật mà không có ảnh thật thì dùng đồ hoạ ý niệm rõ ràng (ngoại lệ bất khả kháng: thêm chữ "Hình ảnh minh hoạ do AI tạo" + khai AI trong YouTube Studio). (B5) ảnh chỉ từ `?image=` / AI tự tạo / stock có quyền — không watermark; nhạc tự sinh (Lyria, hoặc ElevenLabs Music khi Lyria lỗi/hết quota — xem bước 8); SFX repo; không né Content ID; video 100% tự dựng không reup. (B6) tiêu đề = sự kiện/số liệu + tò mò hợp lý, KHÔNG "SỐC!!!"/"CHẤN ĐỘNG"/"100% CHẮC CHẮN"; thumbnail phản ánh đúng nội dung; caption không nhồi/không hashtag lạ. (B7 — nguyên bản, rủi ro cao nhất) video có ≥1 góc nhìn / phân tích / cách trình bày dữ liệu riêng — KHÔNG chỉ đọc lại tiêu đề báo; không trùng bố cục video gần nhất. (B8) flag pháp lý VN nếu chạm an ninh mạng / thông tin sai / dữ liệu cá nhân / quảng cáo có điều kiện — KHÔNG bịa số điều luật. Vi phạm B mà không sửa được → DỪNG, không dựng tiếp.
 
-6. Sinh giọng đọc ElevenLabs — model_id eleven_v3 (KHÔNG eleven_multilingual_v2 — không hỗ trợ tiếng Việt), voice_id RCmOaM1iiIH5xX3QXjIF ("Khánh Lâm - tin tức, thời sự"), voice_settings.speed ~1.09, key từ biến môi trường ELEVENLABS_API_KEY. Tạo TỪNG DÒNG script 1 file mp3 riêng (line1.mp3 … line7.mp3), không gộp. Đo ffprobe từng file (input cho timing frame).
+6. Sinh giọng đọc — **Vbee TTS** (chuyển từ ElevenLabs sang Vbee ngày 2026-09-29), giọng "HN - Minh Quân"
+   (`voice_code`: `hn_male_minhquan_yt-stable`), `speed_rate` 1.09. App ID + Token lấy từ biến môi trường
+   `VBEE_APP_ID` / `VBEE_TOKEN` (KHÔNG tự tìm/nhập credential khác).
+
+   ⚠️ **BẮT BUỘC — lỗi thật đã xảy ra 29/9/2026** (giọng đọc ra hoàn toàn sai/vô nghĩa dù API trả về
+   `status:1`/HTTP 200 bình thường — không có lỗi rõ ràng nào để phát hiện, phải nghe/transcribe mới lộ):
+   TUYỆT ĐỐI KHÔNG gõ `input_text` (tiếng Việt có dấu) thẳng vào tham số dòng lệnh kiểu `curl -d '...'`
+   hay `-d "..."` — dễ bị lệch encoding UTF-8 khi đi qua shell, server nhận text đã méo nên tổng hợp ra
+   giọng sai/vô nghĩa. LUÔN ghi text ra 1 file JSON UTF-8 trước (Write tool, hoặc `cat > lineN.json
+   <<'EOF' ... EOF`), rồi gọi `curl --data-binary @lineN.json`.
+
+   Với MỖI dòng script (line1..line7), tạo file `lineN.json`:
+   ```json
+   {"app_id":"$VBEE_APP_ID","input_text":"<dòng script N, đã viết đầy đủ theo quy tắc trên>","voice_code":"hn_male_minhquan_yt-stable","audio_type":"mp3","bitrate":128,"speed_rate":1.09,"response_type":"direct"}
+   ```
+   rồi gọi:
+   ```bash
+   curl -s --max-time 90 -X POST https://vbee.vn/api/v1/tts \
+     -H "Authorization: Bearer $VBEE_TOKEN" \
+     -H "Content-Type: application/json; charset=utf-8" \
+     --data-binary @lineN.json
+   ```
+   Phản hồi mất khoảng 15-25 giây (BÌNH THƯỜNG — dùng `--max-time 90`, KHÔNG dùng timeout ngắn rồi tưởng
+   lỗi gọi lại nhiều lần). Trả về `{"status":1,"result":{"audio_link":"https://vbee.vn/s/...",...}}`.
+   `audio_link` CHỈ CÓ HIỆU LỰC ~3 PHÚT — tải file NGAY sau khi nhận response:
+   `curl -sL -o lineN.mp3 "<audio_link>"`. Nếu `status:0` → đọc `error_message`/`details` trong response,
+   KHÔNG lặng lẽ bỏ qua lỗi, DỪNG và báo rõ trong tóm tắt cuối.
+
+   Tạo TỪNG DÒNG script 1 file mp3 riêng (line1.mp3 … line7.mp3), không gộp. Đo ffprobe từng file (input
+   cho timing frame).
 
 7. Dựng composition 7 act (Hook → What happened → Key facts → Data moment → Context → Impact → CTA) theo đúng định hướng ẩn dụ hình ảnh của style đã claim ở bước 3. Hook + Brand Anchor (logo + tên kênh "Tin Tức Số" góc trên-phải, "Nguồn:" góc trên-trái) + act 7 CTA giữ cố định theo brand, không thuộc style. Màu nhận diện = cam `#FF5A1F` (KHÔNG dùng xanh của video tham chiếu), cảnh báo/rủi ro = đỏ `#FF4438`. Act 6 (Impact) nội dung là sự thật/số liệu đã xảy ra — KHÔNG suy đoán tương lai. Act 7 CTA: câu hỏi tranh luận của tin + 2 lựa chọn đối lập (icon bằng CSS shape, KHÔNG emoji) + pill "Bình luận quan điểm của bạn" + chữ ký logo (tham chiếu videos/_reference-astra-openai/compositions/frames/07-cta.html cho bố cục, đổi màu sang cam). Ảnh Hook/Article Image Card dùng file đã tải ở bước 5. Logo dùng videos/<slug>/public/logo.png (copy từ videos/_reference-astra-openai/public/logo.png). data-duration mỗi frame = độ dài voice thật (bước 6) + đệm ~0.3-0.5s. Tổng thời lượng dưới 75 giây. VENDOR GSAP LOCAL (assets/vendor/gsap.min.js từ npm i gsap) — KHÔNG dùng <script src="cdn.jsdelivr.net/...">, CDN đó bị chặn ở sandbox. KHÔNG emoji trong composition (thiếu font khi render).
    ⚠️ CÂN BẰNG DỌC (bắt buộc — lỗi đã tái phát 2 lần ở tuyến gốc): nội dung MỖI frame phải LẤP ĐẦY khung 1080×1920, KHÔNG dồn hết lên 55-65% trên rồi để trống đen nửa dưới. Phần tử cuối của frame kết thúc quanh top: 1400-1680px, không dừng ở ~1000px. Frame ít nội dung → căn giữa dọc HOẶC phóng to element. Bám dải phân bố dọc của videos/_reference-astra-openai/compositions/frames/ (top ~220 → ~1290px+). Xem mục "Cân bằng dọc" trong BRAND-SYSTEM.md. Khi soát thumbnail/frame ở bước 10, với MỖI frame tự hỏi "nửa dưới có trống đen không?" — có thì sửa trước khi render.
 
 8. BGM: Google Lyria (lyria-recipe.py, key GEMINI_API_KEY) — recipe CALM: --density 0.25 --brightness 0.4, prompt kiểu "calm ambient news underscore, soft synth pads, sparse, minimal pulse, no drums, instrumental only", LUÔN kèm --negative-prompt "vocals, lyrics, singing, choir, rap, spoken word, humming". BGM ambient NHẸ, ít nhịp — KHÔNG dùng prompt "driving/fast-paced".
-   **[Bắt buộc — 2026-09-22] Fallback sang ElevenLabs Music khi Lyria lỗi/hết quota**: nếu lyria-recipe.py trả lỗi (bất kỳ mã nào — 429/quota=0, 5xx, timeout...) dù đã thử đủ 3 model (lyria-3.5, lyria-3-pro-preview, lyria-3-pro), KHÔNG dừng routine — chuyển sang ElevenLabs Music (cùng domain/key ElevenLabs đã dùng ở bước 6, không cần cấu hình gì thêm):
+   **[Bắt buộc — 2026-09-22] Fallback sang ElevenLabs Music khi Lyria lỗi/hết quota**: nếu lyria-recipe.py trả lỗi (bất kỳ mã nào — 429/quota=0, 5xx, timeout...) dù đã thử đủ 3 model (lyria-3.5, lyria-3-pro-preview, lyria-3-pro), KHÔNG dừng routine — chuyển sang ElevenLabs Music (dùng biến môi trường `ELEVENLABS_API_KEY` — API Music này độc lập với giọng đọc ở bước 6, nay đã chuyển sang Vbee; key ElevenLabs vẫn giữ nguyên trong môi trường chỉ để dùng cho fallback nhạc nền này, không cần cấu hình gì thêm):
    ```bash
    curl -sS -X POST https://api.elevenlabs.io/v1/music \
      -H "xi-api-key: $ELEVENLABS_API_KEY" \
