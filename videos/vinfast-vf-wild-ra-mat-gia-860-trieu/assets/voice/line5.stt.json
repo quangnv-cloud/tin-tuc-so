@@ -1,0 +1,492 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "VFY từng là mẫu concept tại một triển lãm điện tử tiêu dùng ở Mỹ đầu năm 2024, lấy cảm hứng thiết kế từ chuyển động của một chiếc áo choàng tung bay trong gió",
+  "words": [
+    {
+      "text": "VFY",
+      "start": 0.08,
+      "end": 0.74,
+      "type": "word",
+      "logprob": -0.9435974458853403
+    },
+    {
+      "text": " ",
+      "start": 0.74,
+      "end": 1.02,
+      "type": "spacing",
+      "logprob": -0.02065611071884632
+    },
+    {
+      "text": "từng",
+      "start": 1.02,
+      "end": 1.2,
+      "type": "word",
+      "logprob": -0.02065611071884632
+    },
+    {
+      "text": " ",
+      "start": 1.2,
+      "end": 1.22,
+      "type": "spacing",
+      "logprob": -0.0001431601122021675
+    },
+    {
+      "text": "là",
+      "start": 1.22,
+      "end": 1.3,
+      "type": "word",
+      "logprob": -0.0001431601122021675
+    },
+    {
+      "text": " ",
+      "start": 1.3,
+      "end": 1.36,
+      "type": "spacing",
+      "logprob": -9.107174992095679e-05
+    },
+    {
+      "text": "mẫu",
+      "start": 1.36,
+      "end": 1.52,
+      "type": "word",
+      "logprob": -9.107174992095679e-05
+    },
+    {
+      "text": " ",
+      "start": 1.52,
+      "end": 1.56,
+      "type": "spacing",
+      "logprob": -0.00012170527770649642
+    },
+    {
+      "text": "concept",
+      "start": 1.56,
+      "end": 2.04,
+      "type": "word",
+      "logprob": -0.00012170527770649642
+    },
+    {
+      "text": " ",
+      "start": 2.04,
+      "end": 2.08,
+      "type": "spacing",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": "tại",
+      "start": 2.08,
+      "end": 2.28,
+      "type": "word",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": " ",
+      "start": 2.28,
+      "end": 2.32,
+      "type": "spacing",
+      "logprob": -3.8980677345534787e-05
+    },
+    {
+      "text": "một",
+      "start": 2.32,
+      "end": 2.46,
+      "type": "word",
+      "logprob": -3.8980677345534787e-05
+    },
+    {
+      "text": " ",
+      "start": 2.46,
+      "end": 2.46,
+      "type": "spacing",
+      "logprob": -0.001260558608919382
+    },
+    {
+      "text": "triển",
+      "start": 2.46,
+      "end": 2.62,
+      "type": "word",
+      "logprob": -0.001260558608919382
+    },
+    {
+      "text": " ",
+      "start": 2.62,
+      "end": 2.66,
+      "type": "spacing",
+      "logprob": -0.00036197309964336455
+    },
+    {
+      "text": "lãm",
+      "start": 2.66,
+      "end": 2.8,
+      "type": "word",
+      "logprob": -0.00024528901910040685
+    },
+    {
+      "text": " ",
+      "start": 2.8,
+      "end": 2.84,
+      "type": "spacing",
+      "logprob": -0.009141023270785809
+    },
+    {
+      "text": "điện",
+      "start": 2.84,
+      "end": 3.0,
+      "type": "word",
+      "logprob": -0.009141023270785809
+    },
+    {
+      "text": " ",
+      "start": 3.0,
+      "end": 3.04,
+      "type": "spacing",
+      "logprob": -2.1815061700181104e-05
+    },
+    {
+      "text": "tử",
+      "start": 3.04,
+      "end": 3.14,
+      "type": "word",
+      "logprob": -2.1815061700181104e-05
+    },
+    {
+      "text": " ",
+      "start": 3.14,
+      "end": 3.24,
+      "type": "spacing",
+      "logprob": -3.58813522325363e-05
+    },
+    {
+      "text": "tiêu",
+      "start": 3.24,
+      "end": 3.36,
+      "type": "word",
+      "logprob": -3.58813522325363e-05
+    },
+    {
+      "text": " ",
+      "start": 3.36,
+      "end": 3.44,
+      "type": "spacing",
+      "logprob": -0.0005539313424378633
+    },
+    {
+      "text": "dùng",
+      "start": 3.44,
+      "end": 3.64,
+      "type": "word",
+      "logprob": -0.0005539313424378633
+    },
+    {
+      "text": " ",
+      "start": 3.64,
+      "end": 3.7,
+      "type": "spacing",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": "ở",
+      "start": 3.7,
+      "end": 3.78,
+      "type": "word",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": " ",
+      "start": 3.78,
+      "end": 3.82,
+      "type": "spacing",
+      "logprob": -1.0132738680113107e-05
+    },
+    {
+      "text": "Mỹ",
+      "start": 3.82,
+      "end": 4.019,
+      "type": "word",
+      "logprob": -1.0132738680113107e-05
+    },
+    {
+      "text": " ",
+      "start": 4.019,
+      "end": 4.14,
+      "type": "spacing",
+      "logprob": -1.645074735279195e-05
+    },
+    {
+      "text": "đầu",
+      "start": 4.14,
+      "end": 4.28,
+      "type": "word",
+      "logprob": -1.645074735279195e-05
+    },
+    {
+      "text": " ",
+      "start": 4.28,
+      "end": 4.32,
+      "type": "spacing",
+      "logprob": -5.602820692729438e-06
+    },
+    {
+      "text": "năm",
+      "start": 4.32,
+      "end": 4.46,
+      "type": "word",
+      "logprob": -5.602820692729438e-06
+    },
+    {
+      "text": " ",
+      "start": 4.46,
+      "end": 4.6,
+      "type": "spacing",
+      "logprob": -3.2782016205601394e-05
+    },
+    {
+      "text": "2024,",
+      "start": 4.6,
+      "end": 5.54,
+      "type": "word",
+      "logprob": -0.0025273742148669955
+    },
+    {
+      "text": " ",
+      "start": 5.54,
+      "end": 5.54,
+      "type": "spacing",
+      "logprob": -1.5616295058862306e-05
+    },
+    {
+      "text": "lấy",
+      "start": 5.96,
+      "end": 6.1,
+      "type": "word",
+      "logprob": -1.5616295058862306e-05
+    },
+    {
+      "text": " ",
+      "start": 6.1,
+      "end": 6.14,
+      "type": "spacing",
+      "logprob": -0.0001820160250645131
+    },
+    {
+      "text": "cảm",
+      "start": 6.14,
+      "end": 6.28,
+      "type": "word",
+      "logprob": -0.0001820160250645131
+    },
+    {
+      "text": " ",
+      "start": 6.28,
+      "end": 6.32,
+      "type": "spacing",
+      "logprob": -0.0016533766174688935
+    },
+    {
+      "text": "hứng",
+      "start": 6.34,
+      "end": 6.48,
+      "type": "word",
+      "logprob": -0.0016533766174688935
+    },
+    {
+      "text": " ",
+      "start": 6.48,
+      "end": 6.5,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "thiết",
+      "start": 6.5,
+      "end": 6.68,
+      "type": "word",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": " ",
+      "start": 6.68,
+      "end": 6.72,
+      "type": "spacing",
+      "logprob": -1.4662635294371285e-05
+    },
+    {
+      "text": "kế",
+      "start": 6.72,
+      "end": 6.96,
+      "type": "word",
+      "logprob": -1.4662635294371285e-05
+    },
+    {
+      "text": " ",
+      "start": 6.96,
+      "end": 7.0,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "từ",
+      "start": 7.0,
+      "end": 7.1,
+      "type": "word",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": " ",
+      "start": 7.1,
+      "end": 7.18,
+      "type": "spacing",
+      "logprob": -2.2291887944447808e-05
+    },
+    {
+      "text": "chuyển",
+      "start": 7.18,
+      "end": 7.36,
+      "type": "word",
+      "logprob": -2.2291887944447808e-05
+    },
+    {
+      "text": " ",
+      "start": 7.36,
+      "end": 7.42,
+      "type": "spacing",
+      "logprob": -4.5060096454108134e-05
+    },
+    {
+      "text": "động",
+      "start": 7.42,
+      "end": 7.62,
+      "type": "word",
+      "logprob": -4.5060096454108134e-05
+    },
+    {
+      "text": " ",
+      "start": 7.62,
+      "end": 7.64,
+      "type": "spacing",
+      "logprob": -2.0265558760002023e-06
+    },
+    {
+      "text": "của",
+      "start": 7.64,
+      "end": 7.74,
+      "type": "word",
+      "logprob": -2.0265558760002023e-06
+    },
+    {
+      "text": " ",
+      "start": 7.74,
+      "end": 7.78,
+      "type": "spacing",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": "một",
+      "start": 7.78,
+      "end": 7.92,
+      "type": "word",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": " ",
+      "start": 7.92,
+      "end": 7.96,
+      "type": "spacing",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": "chiếc",
+      "start": 7.96,
+      "end": 8.14,
+      "type": "word",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": " ",
+      "start": 8.14,
+      "end": 8.22,
+      "type": "spacing",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": "áo",
+      "start": 8.22,
+      "end": 8.3,
+      "type": "word",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": " ",
+      "start": 8.3,
+      "end": 8.36,
+      "type": "spacing",
+      "logprob": -0.00016080040950328112
+    },
+    {
+      "text": "choàng",
+      "start": 8.36,
+      "end": 8.64,
+      "type": "word",
+      "logprob": -0.000623818370513618
+    },
+    {
+      "text": " ",
+      "start": 8.64,
+      "end": 8.76,
+      "type": "spacing",
+      "logprob": -6.794698856538162e-05
+    },
+    {
+      "text": "tung",
+      "start": 8.76,
+      "end": 8.92,
+      "type": "word",
+      "logprob": -6.794698856538162e-05
+    },
+    {
+      "text": " ",
+      "start": 8.92,
+      "end": 8.96,
+      "type": "spacing",
+      "logprob": -4.887569048150908e-06
+    },
+    {
+      "text": "bay",
+      "start": 8.96,
+      "end": 9.08,
+      "type": "word",
+      "logprob": -4.887569048150908e-06
+    },
+    {
+      "text": " ",
+      "start": 9.08,
+      "end": 9.14,
+      "type": "spacing",
+      "logprob": -6.198863957251888e-06
+    },
+    {
+      "text": "trong",
+      "start": 9.14,
+      "end": 9.28,
+      "type": "word",
+      "logprob": -6.198863957251888e-06
+    },
+    {
+      "text": " ",
+      "start": 9.28,
+      "end": 9.34,
+      "type": "spacing",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": "gió",
+      "start": 9.34,
+      "end": 9.56,
+      "type": "word",
+      "logprob": -2.145764938177308e-06
+    }
+  ],
+  "transcription_id": "DCe8f4DSTH44c3za4fIl",
+  "audio_duration_secs": 9.6
+}
