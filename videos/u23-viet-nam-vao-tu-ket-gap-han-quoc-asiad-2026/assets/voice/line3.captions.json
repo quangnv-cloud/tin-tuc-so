@@ -1,0 +1,152 @@
+[
+  {
+    "words": [
+      {
+        "text": "Dù",
+        "start": 0.12
+      },
+      {
+        "text": "thua",
+        "start": 0.3
+      },
+      {
+        "text": "trận,",
+        "start": 0.46
+      },
+      {
+        "text": "Việt",
+        "start": 0.86
+      }
+    ],
+    "fadein": 0.12,
+    "fadeout": 1.04
+  },
+  {
+    "words": [
+      {
+        "text": "Nam",
+        "start": 1.04
+      },
+      {
+        "text": "vẫn",
+        "start": 1.32
+      },
+      {
+        "text": "khép",
+        "start": 1.5
+      },
+      {
+        "text": "lại",
+        "start": 1.72
+      }
+    ],
+    "fadein": 1.04,
+    "fadeout": 1.9
+  },
+  {
+    "words": [
+      {
+        "text": "vòng",
+        "start": 1.9
+      },
+      {
+        "text": "bảng",
+        "start": 2.1
+      },
+      {
+        "text": "với",
+        "start": 2.4
+      },
+      {
+        "text": "4",
+        "start": 2.62
+      }
+    ],
+    "fadein": 1.9,
+    "fadeout": 2.82
+  },
+  {
+    "words": [
+      {
+        "text": "điểm,",
+        "start": 2.82
+      },
+      {
+        "text": "xếp",
+        "start": 3.22
+      },
+      {
+        "text": "nhì",
+        "start": 3.44
+      },
+      {
+        "text": "bảng",
+        "start": 3.66
+      }
+    ],
+    "fadein": 2.82,
+    "fadeout": 3.9
+  },
+  {
+    "words": [
+      {
+        "text": "C,",
+        "start": 3.9
+      },
+      {
+        "text": "hơn",
+        "start": 4.4
+      },
+      {
+        "text": "Philippines",
+        "start": 4.62
+      },
+      {
+        "text": "đúng",
+        "start": 5.16
+      }
+    ],
+    "fadein": 3.9,
+    "fadeout": 5.34
+  },
+  {
+    "words": [
+      {
+        "text": "1",
+        "start": 5.34
+      },
+      {
+        "text": "điểm",
+        "start": 5.52
+      },
+      {
+        "text": "và",
+        "start": 5.9
+      },
+      {
+        "text": "hơn",
+        "start": 6.08
+      }
+    ],
+    "fadein": 5.34,
+    "fadeout": 6.3
+  },
+  {
+    "words": [
+      {
+        "text": "Kuwait",
+        "start": 6.3
+      },
+      {
+        "text": "3",
+        "start": 6.76
+      },
+      {
+        "text": "điểm.",
+        "start": 6.94
+      }
+    ],
+    "fadein": 6.3,
+    "fadeout": 7.43
+  }
+]

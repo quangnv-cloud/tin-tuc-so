@@ -1,0 +1,232 @@
+[
+  {
+    "words": [
+      {
+        "text": "Tuy",
+        "start": 0.1
+      },
+      {
+        "text": "nhiên",
+        "start": 0.26
+      },
+      {
+        "text": "đội",
+        "start": 0.62
+      },
+      {
+        "text": "hình",
+        "start": 0.76
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 0.94
+  },
+  {
+    "words": [
+      {
+        "text": "hai",
+        "start": 0.94
+      },
+      {
+        "text": "bên",
+        "start": 1.12
+      },
+      {
+        "text": "giờ",
+        "start": 1.4
+      },
+      {
+        "text": "đã",
+        "start": 1.66
+      }
+    ],
+    "fadein": 0.94,
+    "fadeout": 1.78
+  },
+  {
+    "words": [
+      {
+        "text": "khác",
+        "start": 1.78
+      },
+      {
+        "text": "nhiều:",
+        "start": 1.98
+      },
+      {
+        "text": "Việt",
+        "start": 2.58
+      },
+      {
+        "text": "Nam",
+        "start": 2.78
+      }
+    ],
+    "fadein": 1.78,
+    "fadeout": 3.1
+  },
+  {
+    "words": [
+      {
+        "text": "vắng",
+        "start": 3.1
+      },
+      {
+        "text": "nhiều",
+        "start": 3.34
+      },
+      {
+        "text": "trụ",
+        "start": 3.56
+      },
+      {
+        "text": "cột",
+        "start": 3.76
+      }
+    ],
+    "fadein": 3.1,
+    "fadeout": 4.1
+  },
+  {
+    "words": [
+      {
+        "text": "và",
+        "start": 4.1
+      },
+      {
+        "text": "đổi",
+        "start": 4.34
+      },
+      {
+        "text": "huấn",
+        "start": 4.5
+      },
+      {
+        "text": "luyện",
+        "start": 4.62
+      }
+    ],
+    "fadein": 4.1,
+    "fadeout": 4.76
+  },
+  {
+    "words": [
+      {
+        "text": "viên",
+        "start": 4.76
+      },
+      {
+        "text": "trưởng,",
+        "start": 4.92
+      },
+      {
+        "text": "còn",
+        "start": 5.52
+      },
+      {
+        "text": "Hàn",
+        "start": 5.7
+      }
+    ],
+    "fadein": 4.76,
+    "fadeout": 5.92
+  },
+  {
+    "words": [
+      {
+        "text": "Quốc",
+        "start": 5.92
+      },
+      {
+        "text": "thay",
+        "start": 6.22
+      },
+      {
+        "text": "tới",
+        "start": 6.48
+      },
+      {
+        "text": "16",
+        "start": 6.76
+      }
+    ],
+    "fadein": 5.92,
+    "fadeout": 7.2
+  },
+  {
+    "words": [
+      {
+        "text": "vị",
+        "start": 7.2
+      },
+      {
+        "text": "trí,",
+        "start": 7.34
+      },
+      {
+        "text": "tăng",
+        "start": 7.9
+      },
+      {
+        "text": "cường",
+        "start": 8.08
+      }
+    ],
+    "fadein": 7.2,
+    "fadeout": 8.3
+  },
+  {
+    "words": [
+      {
+        "text": "lực",
+        "start": 8.3
+      },
+      {
+        "text": "lượng",
+        "start": 8.48
+      },
+      {
+        "text": "từ",
+        "start": 8.72
+      },
+      {
+        "text": "các",
+        "start": 8.88
+      }
+    ],
+    "fadein": 8.3,
+    "fadeout": 9.02
+  },
+  {
+    "words": [
+      {
+        "text": "câu",
+        "start": 9.02
+      },
+      {
+        "text": "lạc",
+        "start": 9.14
+      },
+      {
+        "text": "bộ",
+        "start": 9.3
+      },
+      {
+        "text": "châu",
+        "start": 9.46
+      }
+    ],
+    "fadein": 9.02,
+    "fadeout": 9.66
+  },
+  {
+    "words": [
+      {
+        "text": "Âu.",
+        "start": 9.66
+      }
+    ],
+    "fadein": 9.66,
+    "fadeout": 10.13
+  }
+]
