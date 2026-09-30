@@ -1,0 +1,203 @@
+[
+  {
+    "start": 0.14,
+    "end": 1.26,
+    "words": [
+      {
+        "text": "Với",
+        "start": 0.14,
+        "end": 0.3
+      },
+      {
+        "text": "bức",
+        "start": 0.36,
+        "end": 0.48
+      },
+      {
+        "text": "tranh",
+        "start": 0.5,
+        "end": 0.7
+      },
+      {
+        "text": "tài",
+        "start": 0.72,
+        "end": 0.84
+      },
+      {
+        "text": "chính",
+        "start": 0.9,
+        "end": 1.06
+      },
+      {
+        "text": "cải",
+        "start": 1.1,
+        "end": 1.26
+      }
+    ]
+  },
+  {
+    "start": 1.28,
+    "end": 2.62,
+    "words": [
+      {
+        "text": "thiện,",
+        "start": 1.28,
+        "end": 1.48
+      },
+      {
+        "text": "tập",
+        "start": 1.74,
+        "end": 1.88
+      },
+      {
+        "text": "đoàn",
+        "start": 1.92,
+        "end": 2.12
+      },
+      {
+        "text": "đã",
+        "start": 2.16,
+        "end": 2.26
+      },
+      {
+        "text": "báo",
+        "start": 2.3,
+        "end": 2.4
+      },
+      {
+        "text": "cáo",
+        "start": 2.48,
+        "end": 2.62
+      }
+    ]
+  },
+  {
+    "start": 2.68,
+    "end": 3.94,
+    "words": [
+      {
+        "text": "Bộ",
+        "start": 2.68,
+        "end": 2.78
+      },
+      {
+        "text": "Công",
+        "start": 2.84,
+        "end": 2.96
+      },
+      {
+        "text": "thương",
+        "start": 3.0,
+        "end": 3.24
+      },
+      {
+        "text": "phương",
+        "start": 3.38,
+        "end": 3.56
+      },
+      {
+        "text": "án",
+        "start": 3.64,
+        "end": 3.76
+      },
+      {
+        "text": "giá",
+        "start": 3.84,
+        "end": 3.94
+      }
+    ]
+  },
+  {
+    "start": 4.019,
+    "end": 5.08,
+    "words": [
+      {
+        "text": "bán",
+        "start": 4.019,
+        "end": 4.12
+      },
+      {
+        "text": "lẻ",
+        "start": 4.18,
+        "end": 4.3
+      },
+      {
+        "text": "điện",
+        "start": 4.34,
+        "end": 4.52
+      },
+      {
+        "text": "bình",
+        "start": 4.54,
+        "end": 4.7
+      },
+      {
+        "text": "quân",
+        "start": 4.74,
+        "end": 4.9
+      },
+      {
+        "text": "năm",
+        "start": 4.96,
+        "end": 5.08
+      }
+    ]
+  },
+  {
+    "start": 5.22,
+    "end": 7.64,
+    "words": [
+      {
+        "text": "2026",
+        "start": 5.22,
+        "end": 6.22
+      },
+      {
+        "text": "theo",
+        "start": 6.66,
+        "end": 6.8
+      },
+      {
+        "text": "đúng",
+        "start": 6.88,
+        "end": 7.0
+      },
+      {
+        "text": "cơ",
+        "start": 7.08,
+        "end": 7.18
+      },
+      {
+        "text": "chế",
+        "start": 7.26,
+        "end": 7.44
+      },
+      {
+        "text": "điều",
+        "start": 7.5,
+        "end": 7.64
+      }
+    ]
+  },
+  {
+    "start": 7.68,
+    "end": 8.28,
+    "words": [
+      {
+        "text": "chỉnh",
+        "start": 7.68,
+        "end": 7.86
+      },
+      {
+        "text": "định",
+        "start": 7.9,
+        "end": 8.02
+      },
+      {
+        "text": "kỳ",
+        "start": 8.1,
+        "end": 8.28
+      }
+    ]
+  }
+]
