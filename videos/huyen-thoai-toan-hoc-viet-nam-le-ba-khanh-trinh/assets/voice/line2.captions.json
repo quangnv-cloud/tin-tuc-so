@@ -1,0 +1,192 @@
+[
+  {
+    "words": [
+      {
+        "text": "Ảnh",
+        "start": 0.12
+      },
+      {
+        "text": "chụp",
+        "start": 0.28
+      },
+      {
+        "text": "tiến",
+        "start": 0.54
+      },
+      {
+        "text": "sĩ",
+        "start": 0.8
+      }
+    ],
+    "fadein": 0.12,
+    "fadeout": 1.04
+  },
+  {
+    "words": [
+      {
+        "text": "Lê",
+        "start": 1.04
+      },
+      {
+        "text": "Bá",
+        "start": 1.26
+      },
+      {
+        "text": "Khánh",
+        "start": 1.4
+      },
+      {
+        "text": "Trình",
+        "start": 1.62
+      }
+    ],
+    "fadein": 1.04,
+    "fadeout": 1.98
+  },
+  {
+    "words": [
+      {
+        "text": "cùng",
+        "start": 1.98
+      },
+      {
+        "text": "hai",
+        "start": 2.24
+      },
+      {
+        "text": "học",
+        "start": 2.4
+      },
+      {
+        "text": "trò",
+        "start": 2.58
+      }
+    ],
+    "fadein": 1.98,
+    "fadeout": 3.12
+  },
+  {
+    "words": [
+      {
+        "text": "Cấn",
+        "start": 3.12
+      },
+      {
+        "text": "Trần",
+        "start": 3.3
+      },
+      {
+        "text": "Thành",
+        "start": 3.58
+      },
+      {
+        "text": "Trung,",
+        "start": 3.78
+      }
+    ],
+    "fadein": 3.12,
+    "fadeout": 4.18
+  },
+  {
+    "words": [
+      {
+        "text": "Phạm",
+        "start": 4.18
+      },
+      {
+        "text": "Tuấn",
+        "start": 4.42
+      },
+      {
+        "text": "Huy,",
+        "start": 4.62
+      },
+      {
+        "text": "ngay",
+        "start": 5.16
+      }
+    ],
+    "fadein": 4.18,
+    "fadeout": 5.4
+  },
+  {
+    "words": [
+      {
+        "text": "sau",
+        "start": 5.4
+      },
+      {
+        "text": "khi",
+        "start": 5.56
+      },
+      {
+        "text": "cả",
+        "start": 5.86
+      },
+      {
+        "text": "hai",
+        "start": 6.02
+      }
+    ],
+    "fadein": 5.4,
+    "fadeout": 6.26
+  },
+  {
+    "words": [
+      {
+        "text": "cùng",
+        "start": 6.26
+      },
+      {
+        "text": "giành",
+        "start": 6.42
+      },
+      {
+        "text": "huy",
+        "start": 6.66
+      },
+      {
+        "text": "chương",
+        "start": 6.84
+      }
+    ],
+    "fadein": 6.26,
+    "fadeout": 7.06
+  },
+  {
+    "words": [
+      {
+        "text": "vàng",
+        "start": 7.06
+      },
+      {
+        "text": "Olympic",
+        "start": 7.4
+      },
+      {
+        "text": "Toán",
+        "start": 7.84
+      },
+      {
+        "text": "học",
+        "start": 8.039
+      }
+    ],
+    "fadein": 7.06,
+    "fadeout": 8.26
+  },
+  {
+    "words": [
+      {
+        "text": "quốc",
+        "start": 8.26
+      },
+      {
+        "text": "tế.",
+        "start": 8.46
+      }
+    ],
+    "fadein": 8.26,
+    "fadeout": 9.05
+  }
+]
