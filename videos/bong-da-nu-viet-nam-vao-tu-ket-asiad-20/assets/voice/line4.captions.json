@@ -1,0 +1,152 @@
+[
+  {
+    "words": [
+      {
+        "text": "Trong",
+        "start": 0.06
+      },
+      {
+        "text": "90",
+        "start": 0.36
+      },
+      {
+        "text": "phút",
+        "start": 0.7
+      },
+      {
+        "text": "thi",
+        "start": 0.86
+      }
+    ],
+    "fadein": 0.06,
+    "fadeout": 1.02
+  },
+  {
+    "words": [
+      {
+        "text": "đấu,",
+        "start": 1.02
+      },
+      {
+        "text": "đội",
+        "start": 1.5
+      },
+      {
+        "text": "tuyển",
+        "start": 1.64
+      },
+      {
+        "text": "nữ",
+        "start": 1.82
+      }
+    ],
+    "fadein": 1.02,
+    "fadeout": 1.98
+  },
+  {
+    "words": [
+      {
+        "text": "Việt",
+        "start": 1.98
+      },
+      {
+        "text": "Nam",
+        "start": 2.2
+      },
+      {
+        "text": "cầm",
+        "start": 2.46
+      },
+      {
+        "text": "bóng",
+        "start": 2.64
+      }
+    ],
+    "fadein": 1.98,
+    "fadeout": 2.9
+  },
+  {
+    "words": [
+      {
+        "text": "51",
+        "start": 2.9
+      },
+      {
+        "text": "phần",
+        "start": 3.3
+      },
+      {
+        "text": "trăm",
+        "start": 3.48
+      },
+      {
+        "text": "thời",
+        "start": 3.66
+      }
+    ],
+    "fadein": 2.9,
+    "fadeout": 3.82
+  },
+  {
+    "words": [
+      {
+        "text": "gian,",
+        "start": 3.82
+      },
+      {
+        "text": "nhỉnh",
+        "start": 4.34
+      },
+      {
+        "text": "hơn",
+        "start": 4.54
+      },
+      {
+        "text": "con",
+        "start": 4.76
+      }
+    ],
+    "fadein": 3.82,
+    "fadeout": 4.96
+  },
+  {
+    "words": [
+      {
+        "text": "số",
+        "start": 4.96
+      },
+      {
+        "text": "49",
+        "start": 5.2
+      },
+      {
+        "text": "phần",
+        "start": 5.68
+      },
+      {
+        "text": "trăm",
+        "start": 5.86
+      }
+    ],
+    "fadein": 4.96,
+    "fadeout": 6.12
+  },
+  {
+    "words": [
+      {
+        "text": "của",
+        "start": 6.12
+      },
+      {
+        "text": "Thái",
+        "start": 6.22
+      },
+      {
+        "text": "Lan.",
+        "start": 6.4
+      }
+    ],
+    "fadein": 6.12,
+    "fadeout": 6.81
+  }
+]
