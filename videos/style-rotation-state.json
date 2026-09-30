@@ -71,46 +71,11 @@
       "trending_keyword": "18 pro max"
     },
     {
-      "index": 0,
-      "style": "1-card-and-bar",
-      "slug": "mien-bac-mua-lon-ngap-ha-noi",
-      "date": "2026-09-15",
-      "trending_keyword": "vùng áp thấp"
-    },
-    {
-      "index": 3,
-      "style": "4-split-comparison",
-      "slug": "u23-viet-nam-hoa-1-1-kuwait-o-asiad-2026",
-      "date": "2026-09-16",
-      "trending_keyword": "u-23 việt nam đấu với đội tuyển bóng đá u-23 quốc gia kuwait"
-    },
-    {
-      "index": 4,
-      "style": "5-map-and-geo",
-      "slug": "tuoi-nghi-huu-2027-thay-doi",
-      "date": "2026-09-16",
-      "trending_keyword": "bảo hiểm xã hội"
-    },
-    {
-      "index": 6,
-      "style": "7-timeline-chronology",
-      "slug": "the-cong-viettel-hoa-melbourne-victory-cup-c2",
-      "date": "2026-09-17",
-      "trending_keyword": "thể công gặp melbourne victory"
-    },
-    {
-      "index": 2,
-      "style": "3-ticker-tape",
-      "slug": "cay-dien-cuc-thinh-giac-than-nao-dau-tien-o-viet-nam",
-      "date": "2026-09-18",
-      "trending_keyword": ""
-    },
-    {
-      "index": 6,
-      "style": "7-timeline-chronology",
-      "slug": "bong-chuyen-nu-viet-nam-tu-ket-asiad-20",
-      "date": "2026-09-20",
-      "trending_keyword": "bóng chuyền nữ"
+      "index": 8,
+      "style": "9-editorial-clipping",
+      "slug": "tuoi-nghi-huu-nam-2027-thay-doi",
+      "date": "2026-09-14",
+      "trending_keyword": "nghỉ hưu"
     }
   ]
 }
