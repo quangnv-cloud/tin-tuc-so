@@ -1,0 +1,174 @@
+[
+  {
+    "words": [
+      {
+        "text": "Một",
+        "start": 0.1
+      },
+      {
+        "text": "bức",
+        "start": 0.26
+      },
+      {
+        "text": "ảnh",
+        "start": 0.46
+      },
+      {
+        "text": "chụp",
+        "start": 0.66
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 0.88
+  },
+  {
+    "words": [
+      {
+        "text": "năm",
+        "start": 0.88
+      },
+      {
+        "text": "2013",
+        "start": 1.14
+      },
+      {
+        "text": "giữa",
+        "start": 2.28
+      },
+      {
+        "text": "người",
+        "start": 2.48
+      }
+    ],
+    "fadein": 0.88,
+    "fadeout": 2.7
+  },
+  {
+    "words": [
+      {
+        "text": "thầy",
+        "start": 2.7
+      },
+      {
+        "text": "huyền",
+        "start": 2.88
+      },
+      {
+        "text": "thoại",
+        "start": 3.1
+      },
+      {
+        "text": "của",
+        "start": 3.44
+      }
+    ],
+    "fadein": 2.7,
+    "fadeout": 3.6
+  },
+  {
+    "words": [
+      {
+        "text": "Toán",
+        "start": 3.6
+      },
+      {
+        "text": "học",
+        "start": 3.78
+      },
+      {
+        "text": "Việt",
+        "start": 3.94
+      },
+      {
+        "text": "Nam",
+        "start": 4.14
+      }
+    ],
+    "fadein": 3.6,
+    "fadeout": 4.46
+  },
+  {
+    "words": [
+      {
+        "text": "và",
+        "start": 4.46
+      },
+      {
+        "text": "hai",
+        "start": 4.68
+      },
+      {
+        "text": "học",
+        "start": 4.84
+      },
+      {
+        "text": "trò",
+        "start": 5.0
+      }
+    ],
+    "fadein": 4.46,
+    "fadeout": 5.52
+  },
+  {
+    "words": [
+      {
+        "text": "đang",
+        "start": 5.52
+      },
+      {
+        "text": "bất",
+        "start": 5.72
+      },
+      {
+        "text": "ngờ",
+        "start": 5.88
+      },
+      {
+        "text": "gây",
+        "start": 6.16
+      }
+    ],
+    "fadein": 5.52,
+    "fadeout": 6.38
+  },
+  {
+    "words": [
+      {
+        "text": "sốt",
+        "start": 6.38
+      },
+      {
+        "text": "trở",
+        "start": 6.56
+      },
+      {
+        "text": "lại",
+        "start": 6.78
+      },
+      {
+        "text": "trên",
+        "start": 7.0
+      }
+    ],
+    "fadein": 6.38,
+    "fadeout": 7.22
+  },
+  {
+    "words": [
+      {
+        "text": "mạng",
+        "start": 7.22
+      },
+      {
+        "text": "xã",
+        "start": 7.42
+      },
+      {
+        "text": "hội.",
+        "start": 7.54
+      }
+    ],
+    "fadein": 7.22,
+    "fadeout": 8.07
+  }
+]

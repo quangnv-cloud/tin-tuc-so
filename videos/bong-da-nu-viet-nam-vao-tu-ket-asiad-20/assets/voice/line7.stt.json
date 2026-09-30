@@ -1,0 +1,492 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Với lối chơi phòng ngự kỷ luật vừa giúp đội đi tiếp, liệu tuyển nữ Việt Nam có thể tạo bất ngờ trước một Trung Quốc mạnh hơn hẳn? Để lại góc nhìn của bạn",
+  "words": [
+    {
+      "text": "Với",
+      "start": 0.12,
+      "end": 0.26,
+      "type": "word",
+      "logprob": -0.0016755126416683197
+    },
+    {
+      "text": " ",
+      "start": 0.26,
+      "end": 0.3,
+      "type": "spacing",
+      "logprob": -2.539125671319198e-05
+    },
+    {
+      "text": "lối",
+      "start": 0.3,
+      "end": 0.44,
+      "type": "word",
+      "logprob": -2.539125671319198e-05
+    },
+    {
+      "text": " ",
+      "start": 0.44,
+      "end": 0.5,
+      "type": "spacing",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": "chơi",
+      "start": 0.5,
+      "end": 0.68,
+      "type": "word",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": " ",
+      "start": 0.68,
+      "end": 0.74,
+      "type": "spacing",
+      "logprob": -2.6225699912174605e-05
+    },
+    {
+      "text": "phòng",
+      "start": 0.74,
+      "end": 0.88,
+      "type": "word",
+      "logprob": -2.6225699912174605e-05
+    },
+    {
+      "text": " ",
+      "start": 0.88,
+      "end": 0.92,
+      "type": "spacing",
+      "logprob": -0.00029774048016406596
+    },
+    {
+      "text": "ngự",
+      "start": 0.92,
+      "end": 1.06,
+      "type": "word",
+      "logprob": -0.0002241226660165315
+    },
+    {
+      "text": " ",
+      "start": 1.06,
+      "end": 1.16,
+      "type": "spacing",
+      "logprob": -0.00033861625706776977
+    },
+    {
+      "text": "kỷ",
+      "start": 1.16,
+      "end": 1.26,
+      "type": "word",
+      "logprob": -0.00033861625706776977
+    },
+    {
+      "text": " ",
+      "start": 1.26,
+      "end": 1.32,
+      "type": "spacing",
+      "logprob": -0.00011872540198964998
+    },
+    {
+      "text": "luật",
+      "start": 1.32,
+      "end": 1.5,
+      "type": "word",
+      "logprob": -0.00011872540198964998
+    },
+    {
+      "text": " ",
+      "start": 1.5,
+      "end": 1.7,
+      "type": "spacing",
+      "logprob": -0.00018261195509694517
+    },
+    {
+      "text": "vừa",
+      "start": 1.7,
+      "end": 1.84,
+      "type": "word",
+      "logprob": -0.00018261195509694517
+    },
+    {
+      "text": " ",
+      "start": 1.84,
+      "end": 1.92,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "giúp",
+      "start": 1.92,
+      "end": 2.08,
+      "type": "word",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": " ",
+      "start": 2.08,
+      "end": 2.14,
+      "type": "spacing",
+      "logprob": -1.966933996300213e-05
+    },
+    {
+      "text": "đội",
+      "start": 2.14,
+      "end": 2.28,
+      "type": "word",
+      "logprob": -1.966933996300213e-05
+    },
+    {
+      "text": " ",
+      "start": 2.28,
+      "end": 2.32,
+      "type": "spacing",
+      "logprob": -3.6954811548639555e-06
+    },
+    {
+      "text": "đi",
+      "start": 2.32,
+      "end": 2.44,
+      "type": "word",
+      "logprob": -3.6954811548639555e-06
+    },
+    {
+      "text": " ",
+      "start": 2.44,
+      "end": 2.48,
+      "type": "spacing",
+      "logprob": -1.728519782773219e-05
+    },
+    {
+      "text": "tiếp,",
+      "start": 2.48,
+      "end": 2.68,
+      "type": "word",
+      "logprob": -0.0013977694063214586
+    },
+    {
+      "text": " ",
+      "start": 2.68,
+      "end": 3.02,
+      "type": "spacing",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": "liệu",
+      "start": 3.02,
+      "end": 3.24,
+      "type": "word",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": " ",
+      "start": 3.24,
+      "end": 3.3,
+      "type": "spacing",
+      "logprob": -0.0010382506297901273
+    },
+    {
+      "text": "tuyển",
+      "start": 3.3,
+      "end": 3.44,
+      "type": "word",
+      "logprob": -0.0010382506297901273
+    },
+    {
+      "text": " ",
+      "start": 3.44,
+      "end": 3.48,
+      "type": "spacing",
+      "logprob": -0.0007033258443698287
+    },
+    {
+      "text": "nữ",
+      "start": 3.48,
+      "end": 3.6,
+      "type": "word",
+      "logprob": -0.0007033258443698287
+    },
+    {
+      "text": " ",
+      "start": 3.6,
+      "end": 3.62,
+      "type": "spacing",
+      "logprob": -0.00011526874004630372
+    },
+    {
+      "text": "Việt",
+      "start": 3.62,
+      "end": 3.8,
+      "type": "word",
+      "logprob": -0.00011526874004630372
+    },
+    {
+      "text": " ",
+      "start": 3.8,
+      "end": 3.84,
+      "type": "spacing",
+      "logprob": -1.9430925021879375e-05
+    },
+    {
+      "text": "Nam",
+      "start": 3.84,
+      "end": 4.04,
+      "type": "word",
+      "logprob": -1.9430925021879375e-05
+    },
+    {
+      "text": " ",
+      "start": 4.04,
+      "end": 4.18,
+      "type": "spacing",
+      "logprob": -4.768370445162873e-07
+    },
+    {
+      "text": "có",
+      "start": 4.18,
+      "end": 4.28,
+      "type": "word",
+      "logprob": -4.768370445162873e-07
+    },
+    {
+      "text": " ",
+      "start": 4.28,
+      "end": 4.3,
+      "type": "spacing",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": "thể",
+      "start": 4.3,
+      "end": 4.54,
+      "type": "word",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": " ",
+      "start": 4.54,
+      "end": 4.58,
+      "type": "spacing",
+      "logprob": -2.50339189733495e-06
+    },
+    {
+      "text": "tạo",
+      "start": 4.58,
+      "end": 4.72,
+      "type": "word",
+      "logprob": -2.50339189733495e-06
+    },
+    {
+      "text": " ",
+      "start": 4.72,
+      "end": 4.76,
+      "type": "spacing",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": "bất",
+      "start": 4.76,
+      "end": 4.84,
+      "type": "word",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": " ",
+      "start": 4.84,
+      "end": 4.9,
+      "type": "spacing",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": "ngờ",
+      "start": 4.9,
+      "end": 5.14,
+      "type": "word",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": " ",
+      "start": 5.14,
+      "end": 5.22,
+      "type": "spacing",
+      "logprob": -1.549708758830093e-05
+    },
+    {
+      "text": "trước",
+      "start": 5.22,
+      "end": 5.38,
+      "type": "word",
+      "logprob": -1.549708758830093e-05
+    },
+    {
+      "text": " ",
+      "start": 5.38,
+      "end": 5.42,
+      "type": "spacing",
+      "logprob": -2.0265373677830212e-05
+    },
+    {
+      "text": "một",
+      "start": 5.42,
+      "end": 5.54,
+      "type": "word",
+      "logprob": -2.0265373677830212e-05
+    },
+    {
+      "text": " ",
+      "start": 5.54,
+      "end": 5.56,
+      "type": "spacing",
+      "logprob": -8.5588610090781e-05
+    },
+    {
+      "text": "Trung",
+      "start": 5.56,
+      "end": 5.68,
+      "type": "word",
+      "logprob": -8.5588610090781e-05
+    },
+    {
+      "text": " ",
+      "start": 5.68,
+      "end": 5.76,
+      "type": "spacing",
+      "logprob": -4.529942543740617e-06
+    },
+    {
+      "text": "Quốc",
+      "start": 5.76,
+      "end": 5.92,
+      "type": "word",
+      "logprob": -4.529942543740617e-06
+    },
+    {
+      "text": " ",
+      "start": 5.92,
+      "end": 6.02,
+      "type": "spacing",
+      "logprob": -5.245195097813848e-06
+    },
+    {
+      "text": "mạnh",
+      "start": 6.02,
+      "end": 6.18,
+      "type": "word",
+      "logprob": -5.245195097813848e-06
+    },
+    {
+      "text": " ",
+      "start": 6.18,
+      "end": 6.2,
+      "type": "spacing",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": "hơn",
+      "start": 6.2,
+      "end": 6.32,
+      "type": "word",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": " ",
+      "start": 6.32,
+      "end": 6.36,
+      "type": "spacing",
+      "logprob": -4.875540980719961e-05
+    },
+    {
+      "text": "hẳn?",
+      "start": 6.36,
+      "end": 6.52,
+      "type": "word",
+      "logprob": -4.2705760279204696e-05
+    },
+    {
+      "text": " ",
+      "start": 6.52,
+      "end": 6.54,
+      "type": "spacing",
+      "logprob": -0.005403200164437294
+    },
+    {
+      "text": "Để",
+      "start": 7.16,
+      "end": 7.24,
+      "type": "word",
+      "logprob": -0.005403200164437294
+    },
+    {
+      "text": " ",
+      "start": 7.24,
+      "end": 7.32,
+      "type": "spacing",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": "lại",
+      "start": 7.32,
+      "end": 7.5,
+      "type": "word",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": " ",
+      "start": 7.5,
+      "end": 7.56,
+      "type": "spacing",
+      "logprob": -5.6503606174374e-05
+    },
+    {
+      "text": "góc",
+      "start": 7.56,
+      "end": 7.7,
+      "type": "word",
+      "logprob": -5.6503606174374e-05
+    },
+    {
+      "text": " ",
+      "start": 7.7,
+      "end": 7.72,
+      "type": "spacing",
+      "logprob": 0.0
+    },
+    {
+      "text": "nhìn",
+      "start": 7.72,
+      "end": 7.94,
+      "type": "word",
+      "logprob": 0.0
+    },
+    {
+      "text": " ",
+      "start": 7.94,
+      "end": 7.96,
+      "type": "spacing",
+      "logprob": 0.0
+    },
+    {
+      "text": "của",
+      "start": 7.96,
+      "end": 8.06,
+      "type": "word",
+      "logprob": 0.0
+    },
+    {
+      "text": " ",
+      "start": 8.06,
+      "end": 8.1,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "bạn",
+      "start": 8.1,
+      "end": 8.24,
+      "type": "word",
+      "logprob": -3.576278118089249e-07
+    }
+  ],
+  "transcription_id": "Pc9S5DpOR0HhKtIZ4Vih",
+  "audio_duration_secs": 8.32
+}
