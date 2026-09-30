@@ -106,11 +106,18 @@
       "trending_keyword": ""
     },
     {
-      "index": 3,
-      "style": "4-split-comparison",
-      "slug": "u23-viet-nam-thang-philippines-vao-tu-ket-asiad-2026",
-      "date": "2026-09-19",
-      "trending_keyword": "đội tuyển bóng đá u-23 quốc gia philippines đấu với u-23 việt nam"
+      "index": 6,
+      "style": "7-timeline-chronology",
+      "slug": "bong-chuyen-nu-viet-nam-tu-ket-asiad-20",
+      "date": "2026-09-20",
+      "trending_keyword": "bóng chuyền nữ"
+    },
+    {
+      "index": 7,
+      "style": "8-icon-grid",
+      "slug": "tp-hcm-tang-81-bac-xep-hang-thanh-pho-toan-cau",
+      "date": "2026-09-21",
+      "trending_keyword": ""
     }
   ]
 }
