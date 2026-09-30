@@ -1,0 +1,842 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Việc vắng những gương mặt quen thuộc như thủ môn Văn Lâm, hậu vệ Đoàn Văn Hậu cùng vài cầu thủ khác đang dự Á vận hội hoặc dính chấn thương không ngăn huấn luyện viên Kim Sang Sik giữ ổn định lối chơi, đồng thời mở cửa cho lứa cầu thủ Việt kiều hội nhập đội tuyển quốc gia",
+  "words": [
+    {
+      "text": "Việc",
+      "start": 0.1,
+      "end": 0.28,
+      "type": "word",
+      "logprob": -0.0008073158969637007
+    },
+    {
+      "text": " ",
+      "start": 0.28,
+      "end": 0.38,
+      "type": "spacing",
+      "logprob": -2.0265558760002023e-06
+    },
+    {
+      "text": "vắng",
+      "start": 0.38,
+      "end": 0.54,
+      "type": "word",
+      "logprob": -6.139256754522648e-06
+    },
+    {
+      "text": " ",
+      "start": 0.54,
+      "end": 0.6,
+      "type": "spacing",
+      "logprob": -3.576272320060525e-06
+    },
+    {
+      "text": "những",
+      "start": 0.6,
+      "end": 0.76,
+      "type": "word",
+      "logprob": -3.576272320060525e-06
+    },
+    {
+      "text": " ",
+      "start": 0.76,
+      "end": 0.78,
+      "type": "spacing",
+      "logprob": -2.002696055569686e-05
+    },
+    {
+      "text": "gương",
+      "start": 0.78,
+      "end": 0.92,
+      "type": "word",
+      "logprob": -2.002696055569686e-05
+    },
+    {
+      "text": " ",
+      "start": 0.92,
+      "end": 0.96,
+      "type": "spacing",
+      "logprob": -6.794906312279636e-06
+    },
+    {
+      "text": "mặt",
+      "start": 0.96,
+      "end": 1.06,
+      "type": "word",
+      "logprob": -6.794906312279636e-06
+    },
+    {
+      "text": " ",
+      "start": 1.06,
+      "end": 1.14,
+      "type": "spacing",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": "quen",
+      "start": 1.14,
+      "end": 1.28,
+      "type": "word",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": " ",
+      "start": 1.28,
+      "end": 1.34,
+      "type": "spacing",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": "thuộc",
+      "start": 1.34,
+      "end": 1.58,
+      "type": "word",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": " ",
+      "start": 1.58,
+      "end": 1.66,
+      "type": "spacing",
+      "logprob": -5.364403477869928e-06
+    },
+    {
+      "text": "như",
+      "start": 1.66,
+      "end": 1.82,
+      "type": "word",
+      "logprob": -5.364403477869928e-06
+    },
+    {
+      "text": " ",
+      "start": 1.82,
+      "end": 1.86,
+      "type": "spacing",
+      "logprob": -0.00020930961181875318
+    },
+    {
+      "text": "thủ",
+      "start": 1.86,
+      "end": 1.96,
+      "type": "word",
+      "logprob": -0.00020930961181875318
+    },
+    {
+      "text": " ",
+      "start": 1.96,
+      "end": 2.04,
+      "type": "spacing",
+      "logprob": -1.680836794548668e-05
+    },
+    {
+      "text": "môn",
+      "start": 2.04,
+      "end": 2.2,
+      "type": "word",
+      "logprob": -1.680836794548668e-05
+    },
+    {
+      "text": " ",
+      "start": 2.2,
+      "end": 2.26,
+      "type": "spacing",
+      "logprob": -0.00014733182615600526
+    },
+    {
+      "text": "Văn",
+      "start": 2.26,
+      "end": 2.38,
+      "type": "word",
+      "logprob": -0.00014733182615600526
+    },
+    {
+      "text": " ",
+      "start": 2.38,
+      "end": 2.44,
+      "type": "spacing",
+      "logprob": -0.00019822540343739092
+    },
+    {
+      "text": "Lâm,",
+      "start": 2.44,
+      "end": 2.6,
+      "type": "word",
+      "logprob": -0.00014938430729216634
+    },
+    {
+      "text": " ",
+      "start": 2.6,
+      "end": 2.86,
+      "type": "spacing",
+      "logprob": -1.0013530300057027e-05
+    },
+    {
+      "text": "hậu",
+      "start": 2.86,
+      "end": 3.0,
+      "type": "word",
+      "logprob": -1.0013530300057027e-05
+    },
+    {
+      "text": " ",
+      "start": 3.0,
+      "end": 3.04,
+      "type": "spacing",
+      "logprob": -5.3881147323409095e-05
+    },
+    {
+      "text": "vệ",
+      "start": 3.04,
+      "end": 3.18,
+      "type": "word",
+      "logprob": -5.3881147323409095e-05
+    },
+    {
+      "text": " ",
+      "start": 3.18,
+      "end": 3.26,
+      "type": "spacing",
+      "logprob": -0.003895434318110347
+    },
+    {
+      "text": "Đoàn",
+      "start": 3.26,
+      "end": 3.4,
+      "type": "word",
+      "logprob": -0.003895434318110347
+    },
+    {
+      "text": " ",
+      "start": 3.4,
+      "end": 3.46,
+      "type": "spacing",
+      "logprob": -0.0005659647285938263
+    },
+    {
+      "text": "Văn",
+      "start": 3.46,
+      "end": 3.56,
+      "type": "word",
+      "logprob": -0.0005659647285938263
+    },
+    {
+      "text": " ",
+      "start": 3.56,
+      "end": 3.64,
+      "type": "spacing",
+      "logprob": -6.079655122448457e-06
+    },
+    {
+      "text": "Hậu",
+      "start": 3.64,
+      "end": 3.78,
+      "type": "word",
+      "logprob": -0.0001352892175721839
+    },
+    {
+      "text": " ",
+      "start": 3.78,
+      "end": 4.1,
+      "type": "spacing",
+      "logprob": -1.1920858014491387e-05
+    },
+    {
+      "text": "cùng",
+      "start": 4.1,
+      "end": 4.3,
+      "type": "word",
+      "logprob": -1.1920858014491387e-05
+    },
+    {
+      "text": " ",
+      "start": 4.3,
+      "end": 4.34,
+      "type": "spacing",
+      "logprob": -2.288792165927589e-05
+    },
+    {
+      "text": "vài",
+      "start": 4.34,
+      "end": 4.5,
+      "type": "word",
+      "logprob": -2.288792165927589e-05
+    },
+    {
+      "text": " ",
+      "start": 4.5,
+      "end": 4.54,
+      "type": "spacing",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": "cầu",
+      "start": 4.54,
+      "end": 4.66,
+      "type": "word",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": " ",
+      "start": 4.66,
+      "end": 4.68,
+      "type": "spacing",
+      "logprob": -0.00012289722508285195
+    },
+    {
+      "text": "thủ",
+      "start": 4.68,
+      "end": 4.84,
+      "type": "word",
+      "logprob": -0.00012289722508285195
+    },
+    {
+      "text": " ",
+      "start": 4.84,
+      "end": 4.86,
+      "type": "spacing",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": "khác",
+      "start": 4.86,
+      "end": 5.12,
+      "type": "word",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": " ",
+      "start": 5.12,
+      "end": 5.18,
+      "type": "spacing",
+      "logprob": -5.960446742392378e-06
+    },
+    {
+      "text": "đang",
+      "start": 5.18,
+      "end": 5.32,
+      "type": "word",
+      "logprob": -5.960446742392378e-06
+    },
+    {
+      "text": " ",
+      "start": 5.32,
+      "end": 5.4,
+      "type": "spacing",
+      "logprob": -0.001878165639936924
+    },
+    {
+      "text": "dự",
+      "start": 5.4,
+      "end": 5.54,
+      "type": "word",
+      "logprob": -0.001878165639936924
+    },
+    {
+      "text": " ",
+      "start": 5.54,
+      "end": 5.62,
+      "type": "spacing",
+      "logprob": -0.0023764721117913723
+    },
+    {
+      "text": "Á",
+      "start": 5.62,
+      "end": 5.72,
+      "type": "word",
+      "logprob": -0.0023764721117913723
+    },
+    {
+      "text": " ",
+      "start": 5.72,
+      "end": 5.74,
+      "type": "spacing",
+      "logprob": -0.00040558696491643786
+    },
+    {
+      "text": "vận",
+      "start": 5.74,
+      "end": 5.88,
+      "type": "word",
+      "logprob": -0.00040558696491643786
+    },
+    {
+      "text": " ",
+      "start": 5.88,
+      "end": 5.92,
+      "type": "spacing",
+      "logprob": -0.002144776750355959
+    },
+    {
+      "text": "hội",
+      "start": 5.92,
+      "end": 6.1,
+      "type": "word",
+      "logprob": -0.002144776750355959
+    },
+    {
+      "text": " ",
+      "start": 6.1,
+      "end": 6.34,
+      "type": "spacing",
+      "logprob": -8.940656698541716e-06
+    },
+    {
+      "text": "hoặc",
+      "start": 6.34,
+      "end": 6.54,
+      "type": "word",
+      "logprob": -8.940656698541716e-06
+    },
+    {
+      "text": " ",
+      "start": 6.54,
+      "end": 6.64,
+      "type": "spacing",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": "dính",
+      "start": 6.64,
+      "end": 6.76,
+      "type": "word",
+      "logprob": -1.281498981597906e-06
+    },
+    {
+      "text": " ",
+      "start": 6.76,
+      "end": 6.82,
+      "type": "spacing",
+      "logprob": -0.00015567521040793508
+    },
+    {
+      "text": "chấn",
+      "start": 6.82,
+      "end": 6.98,
+      "type": "word",
+      "logprob": -7.825483754686502e-05
+    },
+    {
+      "text": " ",
+      "start": 6.98,
+      "end": 7.0,
+      "type": "spacing",
+      "logprob": -2.861018856492592e-06
+    },
+    {
+      "text": "thương",
+      "start": 7.0,
+      "end": 7.22,
+      "type": "word",
+      "logprob": -2.861018856492592e-06
+    },
+    {
+      "text": " ",
+      "start": 7.22,
+      "end": 7.48,
+      "type": "spacing",
+      "logprob": -0.0004232226056046784
+    },
+    {
+      "text": "không",
+      "start": 7.48,
+      "end": 7.64,
+      "type": "word",
+      "logprob": -0.0004232226056046784
+    },
+    {
+      "text": " ",
+      "start": 7.64,
+      "end": 7.7,
+      "type": "spacing",
+      "logprob": -4.088794958079234e-05
+    },
+    {
+      "text": "ngăn",
+      "start": 7.7,
+      "end": 7.88,
+      "type": "word",
+      "logprob": -4.088794958079234e-05
+    },
+    {
+      "text": " ",
+      "start": 7.88,
+      "end": 7.92,
+      "type": "spacing",
+      "logprob": -0.0006598440813831985
+    },
+    {
+      "text": "huấn",
+      "start": 7.92,
+      "end": 8.02,
+      "type": "word",
+      "logprob": -0.0006598440813831985
+    },
+    {
+      "text": " ",
+      "start": 8.02,
+      "end": 8.039,
+      "type": "spacing",
+      "logprob": -9.97731985989958e-05
+    },
+    {
+      "text": "luyện",
+      "start": 8.039,
+      "end": 8.2,
+      "type": "word",
+      "logprob": -9.97731985989958e-05
+    },
+    {
+      "text": " ",
+      "start": 8.2,
+      "end": 8.24,
+      "type": "spacing",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": "viên",
+      "start": 8.24,
+      "end": 8.42,
+      "type": "word",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": " ",
+      "start": 8.42,
+      "end": 8.52,
+      "type": "spacing",
+      "logprob": -0.00208850996568799
+    },
+    {
+      "text": "Kim",
+      "start": 8.52,
+      "end": 8.66,
+      "type": "word",
+      "logprob": -0.00208850996568799
+    },
+    {
+      "text": " ",
+      "start": 8.66,
+      "end": 8.76,
+      "type": "spacing",
+      "logprob": -0.0013168720761314034
+    },
+    {
+      "text": "Sang",
+      "start": 8.76,
+      "end": 8.92,
+      "type": "word",
+      "logprob": -0.0013168720761314034
+    },
+    {
+      "text": " ",
+      "start": 8.92,
+      "end": 9.0,
+      "type": "spacing",
+      "logprob": -0.03803601861000061
+    },
+    {
+      "text": "Sik",
+      "start": 9.0,
+      "end": 9.22,
+      "type": "word",
+      "logprob": -0.03803601861000061
+    },
+    {
+      "text": " ",
+      "start": 9.22,
+      "end": 9.3,
+      "type": "spacing",
+      "logprob": -3.3378044463461265e-05
+    },
+    {
+      "text": "giữ",
+      "start": 9.3,
+      "end": 9.42,
+      "type": "word",
+      "logprob": -3.3378044463461265e-05
+    },
+    {
+      "text": " ",
+      "start": 9.42,
+      "end": 9.5,
+      "type": "spacing",
+      "logprob": -7.510157047363464e-06
+    },
+    {
+      "text": "ổn",
+      "start": 9.5,
+      "end": 9.6,
+      "type": "word",
+      "logprob": -7.510157047363464e-06
+    },
+    {
+      "text": " ",
+      "start": 9.6,
+      "end": 9.64,
+      "type": "spacing",
+      "logprob": -4.482168878894299e-05
+    },
+    {
+      "text": "định",
+      "start": 9.64,
+      "end": 9.78,
+      "type": "word",
+      "logprob": -4.482168878894299e-05
+    },
+    {
+      "text": " ",
+      "start": 9.78,
+      "end": 9.82,
+      "type": "spacing",
+      "logprob": -1.8358061424805783e-05
+    },
+    {
+      "text": "lối",
+      "start": 9.82,
+      "end": 9.98,
+      "type": "word",
+      "logprob": -1.8358061424805783e-05
+    },
+    {
+      "text": " ",
+      "start": 9.98,
+      "end": 10.02,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "chơi,",
+      "start": 10.02,
+      "end": 10.26,
+      "type": "word",
+      "logprob": -2.193441787312622e-06
+    },
+    {
+      "text": " ",
+      "start": 10.26,
+      "end": 10.26,
+      "type": "spacing",
+      "logprob": -7.390948667307384e-06
+    },
+    {
+      "text": "đồng",
+      "start": 10.72,
+      "end": 10.86,
+      "type": "word",
+      "logprob": -7.390948667307384e-06
+    },
+    {
+      "text": " ",
+      "start": 10.86,
+      "end": 10.9,
+      "type": "spacing",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": "thời",
+      "start": 10.9,
+      "end": 11.16,
+      "type": "word",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": " ",
+      "start": 11.16,
+      "end": 11.22,
+      "type": "spacing",
+      "logprob": -4.768370445162873e-07
+    },
+    {
+      "text": "mở",
+      "start": 11.22,
+      "end": 11.42,
+      "type": "word",
+      "logprob": -4.768370445162873e-07
+    },
+    {
+      "text": " ",
+      "start": 11.42,
+      "end": 11.46,
+      "type": "spacing",
+      "logprob": -1.4662635294371285e-05
+    },
+    {
+      "text": "cửa",
+      "start": 11.46,
+      "end": 11.6,
+      "type": "word",
+      "logprob": -1.4662635294371285e-05
+    },
+    {
+      "text": " ",
+      "start": 11.6,
+      "end": 11.66,
+      "type": "spacing",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": "cho",
+      "start": 11.66,
+      "end": 11.78,
+      "type": "word",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": " ",
+      "start": 11.78,
+      "end": 11.82,
+      "type": "spacing",
+      "logprob": -5.376194530981593e-05
+    },
+    {
+      "text": "lứa",
+      "start": 11.82,
+      "end": 11.98,
+      "type": "word",
+      "logprob": -4.152367061275678e-05
+    },
+    {
+      "text": " ",
+      "start": 11.98,
+      "end": 12.02,
+      "type": "spacing",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": "cầu",
+      "start": 12.02,
+      "end": 12.16,
+      "type": "word",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": " ",
+      "start": 12.16,
+      "end": 12.18,
+      "type": "spacing",
+      "logprob": -4.6491513785440475e-06
+    },
+    {
+      "text": "thủ",
+      "start": 12.18,
+      "end": 12.3,
+      "type": "word",
+      "logprob": -4.6491513785440475e-06
+    },
+    {
+      "text": " ",
+      "start": 12.3,
+      "end": 12.36,
+      "type": "spacing",
+      "logprob": -0.00026008085114881396
+    },
+    {
+      "text": "Việt",
+      "start": 12.36,
+      "end": 12.52,
+      "type": "word",
+      "logprob": -0.00026008085114881396
+    },
+    {
+      "text": " ",
+      "start": 12.52,
+      "end": 12.56,
+      "type": "spacing",
+      "logprob": -0.004512840881943703
+    },
+    {
+      "text": "kiều",
+      "start": 12.56,
+      "end": 12.82,
+      "type": "word",
+      "logprob": -0.0022844934410386486
+    },
+    {
+      "text": " ",
+      "start": 12.82,
+      "end": 12.88,
+      "type": "spacing",
+      "logprob": -0.0006816447712481022
+    },
+    {
+      "text": "hội",
+      "start": 12.88,
+      "end": 13.04,
+      "type": "word",
+      "logprob": -0.0006816447712481022
+    },
+    {
+      "text": " ",
+      "start": 13.04,
+      "end": 13.06,
+      "type": "spacing",
+      "logprob": -8.77341881277971e-05
+    },
+    {
+      "text": "nhập",
+      "start": 13.08,
+      "end": 13.26,
+      "type": "word",
+      "logprob": -8.77341881277971e-05
+    },
+    {
+      "text": " ",
+      "start": 13.26,
+      "end": 13.3,
+      "type": "spacing",
+      "logprob": -4.708655978902243e-05
+    },
+    {
+      "text": "đội",
+      "start": 13.3,
+      "end": 13.42,
+      "type": "word",
+      "logprob": -4.708655978902243e-05
+    },
+    {
+      "text": " ",
+      "start": 13.42,
+      "end": 13.46,
+      "type": "spacing",
+      "logprob": -2.0146166207268834e-05
+    },
+    {
+      "text": "tuyển",
+      "start": 13.46,
+      "end": 13.64,
+      "type": "word",
+      "logprob": -2.0146166207268834e-05
+    },
+    {
+      "text": " ",
+      "start": 13.64,
+      "end": 13.66,
+      "type": "spacing",
+      "logprob": -0.0006478118011727929
+    },
+    {
+      "text": "quốc",
+      "start": 13.66,
+      "end": 13.8,
+      "type": "word",
+      "logprob": -0.0006478118011727929
+    },
+    {
+      "text": " ",
+      "start": 13.8,
+      "end": 13.84,
+      "type": "spacing",
+      "logprob": -2.169585604860913e-05
+    },
+    {
+      "text": "gia",
+      "start": 13.84,
+      "end": 14.04,
+      "type": "word",
+      "logprob": -2.169585604860913e-05
+    }
+  ],
+  "transcription_id": "Uq7NqST6EtnSaqiKUJ6H",
+  "audio_duration_secs": 14.16
+}

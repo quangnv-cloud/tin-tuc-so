@@ -1,0 +1,17 @@
+{
+  "name": "ap-thap-nhiet-doi-do-bo-mien-trung-13-9",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.36 preview",
+    "check": "npx --yes hyperframes@0.8.36 check",
+    "render": "npx --yes hyperframes@0.8.36 render",
+    "publish": "npx --yes hyperframes@0.8.36 publish"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "^0.8.36"
+  }
+}

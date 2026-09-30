@@ -1,0 +1,126 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+
+    #root::before { content: ""; position: absolute; inset: 0; background: radial-gradient(90% 55% at 22% 10%, rgba(255,90,31,0.10), transparent 60%); }
+
+    .wh-photo { position: absolute; left: 84px; top: 190px; width: 900px; height: 540px; overflow: hidden; background: #05070c; border: 9px solid #f4f2ee; border-radius: 2px; box-shadow: 0 24px 46px rgba(0,0,0,0.55), 0 0 40px rgba(255,90,31,0.16); transform: rotate(-1.9deg); opacity: 0; }
+    .wh-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+    .wh-tape { position: absolute; left: 700px; top: 150px; width: 150px; height: 46px; background: rgba(255,90,31,0.85); transform: rotate(38deg); box-shadow: 0 6px 14px rgba(0,0,0,0.35); opacity: 0; z-index: 5; }
+
+    .wh-kicker { position: absolute; left: 64px; top: 800px; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .wh-qmark { position: absolute; left: 44px; top: 824px; font-weight: 900; font-size: 220px; line-height: 0.6; color: #FF5A1F; opacity: 0; filter: blur(1px); }
+
+    .wh-head { position: absolute; left: 64px; right: 64px; top: 928px; font-weight: 800; font-size: 58px; line-height: 1.22; color: #fff; z-index: 2; }
+    .wh-head .row { overflow: hidden; }
+    .wh-head .row > span { display: block; }
+    .wh-head b { color: #FF5A1F; }
+
+    .wh-sub { position: absolute; left: 64px; right: 64px; top: 1148px; font-weight: 600; font-size: 34px; line-height: 1.42; color: rgba(255,255,255,0.88); opacity: 0; z-index: 2; }
+
+    .wh-chip { position: absolute; left: 64px; top: 1360px; display: inline-flex; align-items: center; gap: 22px; padding: 22px 34px; border-radius: 14px; background: #121724; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 34px rgba(255,90,31,0.12); opacity: 0; }
+    .wh-chip .n { font-weight: 900; font-size: 46px; line-height: 1; color: #FF5A1F; }
+    .wh-chip .s { font-weight: 700; font-size: 32px; color: rgba(255,255,255,0.35); }
+    .wh-chip .lab { margin-left: 8px; font-weight: 600; font-size: 26px; color: rgba(255,255,255,0.7); }
+
+    .cap-wrap { position: absolute; left: 56px; right: 56px; top: 1730px; min-height: 96px; z-index: 40; display: flex; align-items: center; justify-content: center; text-align: center; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 6px; opacity: 0; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 38px; line-height: 1.3; letter-spacing: -0.005em; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 26px rgba(0,0,0,0.6); }
+    .cap-chunk .w { color: rgba(255,255,255,0.55); }
+  </style>
+
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+    <div class="wh-photo" id="wh-photo"><img src="assets/img/article-hero.jpg" alt=""></div>
+    <div class="wh-tape" id="wh-tape"></div>
+
+    <div class="wh-kicker" id="wh-kicker">Ra mắt</div>
+    <div class="wh-qmark" id="wh-qmark">&ldquo;</div>
+    <div class="wh-head">
+      <div class="row" data-layout-allow-overflow=""><span id="wh-h1">Qiyuan <b>mở bán</b></span></div>
+      <div class="row" data-layout-allow-overflow=""><span id="wh-h2">robot cá nhân Q1 &amp; T1</span></div>
+    </div>
+    <div class="wh-sub" id="wh-sub">Công bố chính thức ngày 20/9/2026 tại Trung Quốc — hai mẫu robot cá nhân đầu tiên chính thức mở bán.</div>
+
+    <div class="wh-chip" id="wh-chip"><span class="n">2</span><span class="s">mẫu</span><span class="lab">Qiyuan Q1 &middot; Qiyuan T1</span></div>
+
+    <div class="cap-wrap">
+      <div class="cap-chunk" id="cap2-1"><span class="w" id="cap2-1-w1">Ngày</span><span class="w" id="cap2-1-w2">20</span><span class="w" id="cap2-1-w3">tháng</span><span class="w" id="cap2-1-w4">9,</span></div>
+      <div class="cap-chunk" id="cap2-2"><span class="w" id="cap2-2-w1">công</span><span class="w" id="cap2-2-w2">ty</span><span class="w" id="cap2-2-w3">Qiyuan</span><span class="w" id="cap2-2-w4">Robotics</span><span class="w" id="cap2-2-w5">tại</span></div>
+      <div class="cap-chunk" id="cap2-3"><span class="w" id="cap2-3-w1">Trung</span><span class="w" id="cap2-3-w2">Quốc</span><span class="w" id="cap2-3-w3">chính</span><span class="w" id="cap2-3-w4">thức</span><span class="w" id="cap2-3-w5">giới</span></div>
+      <div class="cap-chunk" id="cap2-4"><span class="w" id="cap2-4-w1">thiệu</span><span class="w" id="cap2-4-w2">và</span><span class="w" id="cap2-4-w3">mở</span><span class="w" id="cap2-4-w4">bán</span><span class="w" id="cap2-4-w5">hai</span></div>
+      <div class="cap-chunk" id="cap2-5"><span class="w" id="cap2-5-w1">mẫu</span><span class="w" id="cap2-5-w2">robot</span><span class="w" id="cap2-5-w3">cá</span><span class="w" id="cap2-5-w4">nhân</span><span class="w" id="cap2-5-w5">mang</span></div>
+      <div class="cap-chunk" id="cap2-6"><span class="w" id="cap2-6-w1">tên</span><span class="w" id="cap2-6-w2">Qiyuan</span><span class="w" id="cap2-6-w3">Q1</span><span class="w" id="cap2-6-w4">và</span><span class="w" id="cap2-6-w5">Qiyuan</span></div>
+      <div class="cap-chunk" id="cap2-7"><span class="w" id="cap2-7-w1">T1</span></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#wh-photo', { autoAlpha: 0, y: 30, rotate: -1.9 }, { autoAlpha: 1, y: 0, rotate: -1.9, duration: 0.6, ease: 'power3.out' }, 0);
+    tl.fromTo('#wh-tape', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, 0.35);
+    tl.fromTo('#wh-kicker', { autoAlpha: 0, x: -16 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.55);
+    tl.fromTo('#wh-qmark', { autoAlpha: 0, scale: 0.7 }, { autoAlpha: 0.16, scale: 1, duration: 0.5, ease: 'back.out(2)' }, 0.7);
+    tl.fromTo('#wh-h1', { yPercent: 118 }, { yPercent: 0, duration: 0.6, ease: 'power4.out' }, 0.85);
+    tl.fromTo('#wh-h2', { yPercent: 118 }, { yPercent: 0, duration: 0.6, ease: 'power4.out' }, 1.0);
+    tl.fromTo('#wh-sub', { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 1.7);
+    tl.fromTo('#wh-chip', { autoAlpha: 0, y: 22, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: 'back.out(1.5)' }, 2.3);
+
+    tl.fromTo('#cap2-1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 0.080);
+    tl.fromTo('#cap2-1-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.080);
+    tl.fromTo('#cap2-1-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.440);
+    tl.fromTo('#cap2-1-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.660);
+    tl.fromTo('#cap2-1-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.840);
+    tl.set('#cap2-1', { autoAlpha: 0 }, 1.260);
+    tl.fromTo('#cap2-2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 1.260);
+    tl.fromTo('#cap2-2-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.260);
+    tl.fromTo('#cap2-2-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.480);
+    tl.fromTo('#cap2-2-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.820);
+    tl.fromTo('#cap2-2-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.340);
+    tl.fromTo('#cap2-2-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.000);
+    tl.set('#cap2-2', { autoAlpha: 0 }, 3.260);
+    tl.fromTo('#cap2-3', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 3.260);
+    tl.fromTo('#cap2-3-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.260);
+    tl.fromTo('#cap2-3-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.480);
+    tl.fromTo('#cap2-3-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.760);
+    tl.fromTo('#cap2-3-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.960);
+    tl.fromTo('#cap2-3-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.140);
+    tl.set('#cap2-3', { autoAlpha: 0 }, 4.320);
+    tl.fromTo('#cap2-4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 4.320);
+    tl.fromTo('#cap2-4-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.320);
+    tl.fromTo('#cap2-4-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.620);
+    tl.fromTo('#cap2-4-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.780);
+    tl.fromTo('#cap2-4-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.980);
+    tl.fromTo('#cap2-4-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.260);
+    tl.set('#cap2-4', { autoAlpha: 0 }, 5.500);
+    tl.fromTo('#cap2-5', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 5.500);
+    tl.fromTo('#cap2-5-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.500);
+    tl.fromTo('#cap2-5-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.700);
+    tl.fromTo('#cap2-5-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.080);
+    tl.fromTo('#cap2-5-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.240);
+    tl.fromTo('#cap2-5-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.600);
+    tl.set('#cap2-5', { autoAlpha: 0 }, 6.820);
+    tl.fromTo('#cap2-6', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 6.820);
+    tl.fromTo('#cap2-6-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.820);
+    tl.fromTo('#cap2-6-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.240);
+    tl.fromTo('#cap2-6-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.860);
+    tl.fromTo('#cap2-6-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.460);
+    tl.fromTo('#cap2-6-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.720);
+    tl.set('#cap2-6', { autoAlpha: 0 }, 9.320);
+    tl.fromTo('#cap2-7', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 9.320);
+    tl.fromTo('#cap2-7-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.320);
+    tl.to('#cap2-7', { autoAlpha: 0, duration: 0.12 }, 9.660);
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>
