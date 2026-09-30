@@ -64,18 +64,11 @@
       "trending_keyword": "cpi mỹ"
     },
     {
-      "index": 3,
-      "style": "4-split-comparison",
-      "slug": "iphone-18-pro-thay-doi-so-voi-17-pro",
-      "date": "2026-09-13",
-      "trending_keyword": "18 pro max"
-    },
-    {
-      "index": 5,
-      "style": "6-ring-progress",
-      "slug": "ap-thap-nhiet-doi-do-bo-mien-trung-13-9",
-      "date": "2026-09-13",
-      "trending_keyword": "dự báo áp thấp nhiệt đới"
+      "index": 2,
+      "style": "3-ticker-tape",
+      "slug": "ap-thap-nhiet-doi-hinh-thanh-bien-dong",
+      "date": "2026-09-12",
+      "trending_keyword": "áp thấp nhiệt đới"
     }
   ]
 }

@@ -1,0 +1,69 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+    #root::before { content: ""; position: absolute; inset: 0; background: radial-gradient(85% 45% at 80% 8%, rgba(255,90,31,0.1), transparent 62%); }
+
+    .i-kicker { position: absolute; left: 64px; right: 64px; top: 300px; font-weight: 700; font-size: 26px; letter-spacing: 0.2em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .i-lead { position: absolute; left: 64px; right: 64px; top: 360px; font-weight: 800; font-size: 44px; line-height: 1.3; color: #fff; opacity: 0; }
+
+    .i-list { position: absolute; left: 64px; right: 64px; top: 610px; display: flex; flex-direction: column; }
+    .i-row { padding: 40px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; opacity: 0; }
+    .i-row:last-child { border-bottom: none; }
+    .i-left { max-width: 460px; }
+    .i-label { font-weight: 700; font-size: 28px; color: rgba(255,255,255,0.55); }
+    .i-value { margin-top: 10px; font-weight: 800; font-size: 34px; line-height: 1.3; color: #fff; }
+    .i-ico { width: 42px; height: 42px; flex: none; position: relative; margin-top: 6px; }
+    .i-row.risk .i-ico::before { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 0; border-left: 21px solid transparent; border-right: 21px solid transparent; border-bottom: 38px solid #FF4438; }
+    .i-row.risk .i-ico::after { content: "!"; position: absolute; left: 0; right: 0; bottom: -1px; text-align: center; font-weight: 900; font-size: 23px; color: #0B0E14; }
+    .i-row.action .i-ico { border: 4px solid #FF5A1F; border-radius: 50%; }
+    .i-row.action .i-ico::after { content: ""; position: absolute; left: 50%; top: 12px; width: 12px; height: 12px; border-top: 4px solid #FF5A1F; border-right: 4px solid #FF5A1F; transform: translateX(-50%) rotate(-45deg); }
+
+    .i-foot { position: absolute; left: 64px; right: 64px; top: 1460px; font-weight: 500; font-size: 25px; color: rgba(255,255,255,0.4); opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+    <div class="i-kicker" id="i-kicker">Phản ứng đã triển khai</div>
+    <div class="i-lead" id="i-lead">Ban Chỉ đạo Phòng thủ dân sự quốc gia đã ra chỉ đạo ứng phó khẩn cấp.</div>
+
+    <div class="i-list">
+      <div class="i-row risk" id="i-r1">
+        <div class="i-left"><div class="i-label">Vùng biển nguy hiểm</div><div class="i-value">Gió cấp 6, giật cấp 8, sóng cao 2&ndash;4m</div></div>
+        <div class="i-ico"></div>
+      </div>
+      <div class="i-row action" id="i-r2">
+        <div class="i-left"><div class="i-label">Địa phương ven biển</div><div class="i-value">Đã yêu cầu di dời dân ở khu vực nguy cơ cao</div></div>
+        <div class="i-ico"></div>
+      </div>
+      <div class="i-row action" id="i-r3">
+        <div class="i-left"><div class="i-label">Công trình, hồ chứa</div><div class="i-value">Kiểm tra an toàn hồ chứa và các tuyến đê xung yếu</div></div>
+        <div class="i-ico"></div>
+      </div>
+    </div>
+
+    <div class="i-foot" id="i-foot">Nguồn: VnExpress</div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#i-kicker', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#i-lead', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 0.22);
+
+    tl.fromTo('#i-r1', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 1.1);
+    tl.fromTo('#i-r2', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 1.7);
+    tl.fromTo('#i-r3', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 2.3);
+    tl.fromTo('#i-foot', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35 }, 2.95);
+
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
