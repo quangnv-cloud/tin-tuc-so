@@ -1,0 +1,366 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Đội tuyển Việt Nam sẽ đá ba trận trong vòng bảy ngày, gặp Philippines, Thái Lan và Pakistan ở bảng B, hạng đấu cao nhất giải",
+  "words": [
+    {
+      "text": "Đội",
+      "start": 0.1,
+      "end": 0.2,
+      "type": "word",
+      "logprob": -0.0011357270802060764
+    },
+    {
+      "text": " ",
+      "start": 0.2,
+      "end": 0.26,
+      "type": "spacing",
+      "logprob": -7.688703772146255e-05
+    },
+    {
+      "text": "tuyển",
+      "start": 0.26,
+      "end": 0.38,
+      "type": "word",
+      "logprob": -7.688703772146255e-05
+    },
+    {
+      "text": " ",
+      "start": 0.38,
+      "end": 0.44,
+      "type": "spacing",
+      "logprob": -0.00015567521040793508
+    },
+    {
+      "text": "Việt",
+      "start": 0.44,
+      "end": 0.58,
+      "type": "word",
+      "logprob": -0.00015567521040793508
+    },
+    {
+      "text": " ",
+      "start": 0.58,
+      "end": 0.62,
+      "type": "spacing",
+      "logprob": -3.099436753473128e-06
+    },
+    {
+      "text": "Nam",
+      "start": 0.62,
+      "end": 0.84,
+      "type": "word",
+      "logprob": -3.099436753473128e-06
+    },
+    {
+      "text": " ",
+      "start": 0.84,
+      "end": 0.94,
+      "type": "spacing",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": "sẽ",
+      "start": 0.94,
+      "end": 1.06,
+      "type": "word",
+      "logprob": -9.536738616588991e-07
+    },
+    {
+      "text": " ",
+      "start": 1.06,
+      "end": 1.1,
+      "type": "spacing",
+      "logprob": -3.814689989667386e-06
+    },
+    {
+      "text": "đá",
+      "start": 1.1,
+      "end": 1.24,
+      "type": "word",
+      "logprob": -3.814689989667386e-06
+    },
+    {
+      "text": " ",
+      "start": 1.24,
+      "end": 1.34,
+      "type": "spacing",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": "ba",
+      "start": 1.34,
+      "end": 1.48,
+      "type": "word",
+      "logprob": -2.145764938177308e-06
+    },
+    {
+      "text": " ",
+      "start": 1.48,
+      "end": 1.56,
+      "type": "spacing",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": "trận",
+      "start": 1.56,
+      "end": 1.76,
+      "type": "word",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": " ",
+      "start": 1.76,
+      "end": 1.82,
+      "type": "spacing",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": "trong",
+      "start": 1.82,
+      "end": 2.02,
+      "type": "word",
+      "logprob": -1.0728830375228426e-06
+    },
+    {
+      "text": " ",
+      "start": 2.02,
+      "end": 2.06,
+      "type": "spacing",
+      "logprob": -2.6940935640595853e-05
+    },
+    {
+      "text": "vòng",
+      "start": 2.06,
+      "end": 2.2,
+      "type": "word",
+      "logprob": -2.6940935640595853e-05
+    },
+    {
+      "text": " ",
+      "start": 2.2,
+      "end": 2.24,
+      "type": "spacing",
+      "logprob": -0.0009027220075950027
+    },
+    {
+      "text": "bảy",
+      "start": 2.24,
+      "end": 2.36,
+      "type": "word",
+      "logprob": -0.0009027220075950027
+    },
+    {
+      "text": " ",
+      "start": 2.36,
+      "end": 2.42,
+      "type": "spacing",
+      "logprob": -1.0490362910786644e-05
+    },
+    {
+      "text": "ngày,",
+      "start": 2.44,
+      "end": 2.64,
+      "type": "word",
+      "logprob": -0.09917999501631129
+    },
+    {
+      "text": " ",
+      "start": 2.64,
+      "end": 2.64,
+      "type": "spacing",
+      "logprob": -1.8000440832111053e-05
+    },
+    {
+      "text": "gặp",
+      "start": 2.96,
+      "end": 3.1,
+      "type": "word",
+      "logprob": -1.8000440832111053e-05
+    },
+    {
+      "text": " ",
+      "start": 3.1,
+      "end": 3.14,
+      "type": "spacing",
+      "logprob": -0.016270821914076805
+    },
+    {
+      "text": "Philippines,",
+      "start": 3.14,
+      "end": 3.6,
+      "type": "word",
+      "logprob": -0.014915168440211346
+    },
+    {
+      "text": " ",
+      "start": 3.6,
+      "end": 3.78,
+      "type": "spacing",
+      "logprob": -7.664863369427621e-05
+    },
+    {
+      "text": "Thái",
+      "start": 3.78,
+      "end": 3.92,
+      "type": "word",
+      "logprob": -7.664863369427621e-05
+    },
+    {
+      "text": " ",
+      "start": 3.92,
+      "end": 4.0,
+      "type": "spacing",
+      "logprob": -1.156323378381785e-05
+    },
+    {
+      "text": "Lan",
+      "start": 4.0,
+      "end": 4.22,
+      "type": "word",
+      "logprob": -1.156323378381785e-05
+    },
+    {
+      "text": " ",
+      "start": 4.22,
+      "end": 4.32,
+      "type": "spacing",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": "và",
+      "start": 4.34,
+      "end": 4.42,
+      "type": "word",
+      "logprob": -7.152531907195225e-06
+    },
+    {
+      "text": " ",
+      "start": 4.42,
+      "end": 4.5,
+      "type": "spacing",
+      "logprob": -0.0024370038881897926
+    },
+    {
+      "text": "Pakistan",
+      "start": 4.5,
+      "end": 5.16,
+      "type": "word",
+      "logprob": -0.0024370038881897926
+    },
+    {
+      "text": " ",
+      "start": 5.16,
+      "end": 5.22,
+      "type": "spacing",
+      "logprob": -2.7418097943154862e-06
+    },
+    {
+      "text": "ở",
+      "start": 5.22,
+      "end": 5.28,
+      "type": "word",
+      "logprob": -2.7418097943154862e-06
+    },
+    {
+      "text": " ",
+      "start": 5.28,
+      "end": 5.32,
+      "type": "spacing",
+      "logprob": -0.0003502947511151433
+    },
+    {
+      "text": "bảng",
+      "start": 5.32,
+      "end": 5.46,
+      "type": "word",
+      "logprob": -0.0003502947511151433
+    },
+    {
+      "text": " ",
+      "start": 5.46,
+      "end": 5.52,
+      "type": "spacing",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": "B,",
+      "start": 5.52,
+      "end": 5.7,
+      "type": "word",
+      "logprob": -0.0043196706101262805
+    },
+    {
+      "text": " ",
+      "start": 5.7,
+      "end": 5.96,
+      "type": "spacing",
+      "logprob": -0.02809246815741062
+    },
+    {
+      "text": "hạng",
+      "start": 5.96,
+      "end": 6.14,
+      "type": "word",
+      "logprob": -0.02809246815741062
+    },
+    {
+      "text": " ",
+      "start": 6.14,
+      "end": 6.18,
+      "type": "spacing",
+      "logprob": -3.135155202471651e-05
+    },
+    {
+      "text": "đấu",
+      "start": 6.18,
+      "end": 6.4,
+      "type": "word",
+      "logprob": -3.135155202471651e-05
+    },
+    {
+      "text": " ",
+      "start": 6.4,
+      "end": 6.44,
+      "type": "spacing",
+      "logprob": -1.6689286894688848e-06
+    },
+    {
+      "text": "cao",
+      "start": 6.44,
+      "end": 6.56,
+      "type": "word",
+      "logprob": -1.6689286894688848e-06
+    },
+    {
+      "text": " ",
+      "start": 6.56,
+      "end": 6.6,
+      "type": "spacing",
+      "logprob": -5.8412379075889476e-06
+    },
+    {
+      "text": "nhất",
+      "start": 6.6,
+      "end": 6.76,
+      "type": "word",
+      "logprob": -5.8412379075889476e-06
+    },
+    {
+      "text": " ",
+      "start": 6.76,
+      "end": 6.8,
+      "type": "spacing",
+      "logprob": -0.00011324241495458409
+    },
+    {
+      "text": "giải",
+      "start": 6.8,
+      "end": 7.02,
+      "type": "word",
+      "logprob": -0.00011324241495458409
+    }
+  ],
+  "transcription_id": "toiQvODrLlcimASTtyoM",
+  "audio_duration_secs": 7.12
+}

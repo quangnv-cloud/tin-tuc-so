@@ -1,0 +1,196 @@
+[
+  {
+    "words": [
+      {
+        "text": "Sáng",
+        "start": 0.1
+      },
+      {
+        "text": "18",
+        "start": 0.4
+      },
+      {
+        "text": "tháng",
+        "start": 0.78
+      },
+      {
+        "text": "9,",
+        "start": 0.96
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 1.38
+  },
+  {
+    "words": [
+      {
+        "text": "huấn",
+        "start": 1.38
+      },
+      {
+        "text": "luyện",
+        "start": 1.54
+      },
+      {
+        "text": "viên",
+        "start": 1.72
+      },
+      {
+        "text": "Kim",
+        "start": 1.96
+      }
+    ],
+    "fadein": 1.38,
+    "fadeout": 2.18
+  },
+  {
+    "words": [
+      {
+        "text": "Sang",
+        "start": 2.18
+      },
+      {
+        "text": "Sik",
+        "start": 2.42
+      },
+      {
+        "text": "chính",
+        "start": 2.72
+      },
+      {
+        "text": "thức",
+        "start": 2.9
+      }
+    ],
+    "fadein": 2.18,
+    "fadeout": 3.12
+  },
+  {
+    "words": [
+      {
+        "text": "công",
+        "start": 3.12
+      },
+      {
+        "text": "bố",
+        "start": 3.3
+      },
+      {
+        "text": "danh",
+        "start": 3.54
+      },
+      {
+        "text": "sách",
+        "start": 3.76
+      }
+    ],
+    "fadein": 3.12,
+    "fadeout": 4.019
+  },
+  {
+    "words": [
+      {
+        "text": "23",
+        "start": 4.019
+      },
+      {
+        "text": "cầu",
+        "start": 4.52
+      },
+      {
+        "text": "thủ",
+        "start": 4.66
+      },
+      {
+        "text": "tham",
+        "start": 4.96
+      }
+    ],
+    "fadein": 4.019,
+    "fadeout": 5.22
+  },
+  {
+    "words": [
+      {
+        "text": "dự",
+        "start": 5.22
+      },
+      {
+        "text": "FIFA",
+        "start": 5.44
+      },
+      {
+        "text": "ASEAN",
+        "start": 5.98
+      },
+      {
+        "text": "Cup,",
+        "start": 6.4
+      }
+    ],
+    "fadein": 5.22,
+    "fadeout": 6.84
+  },
+  {
+    "words": [
+      {
+        "text": "giữ",
+        "start": 6.84
+      },
+      {
+        "text": "phần",
+        "start": 7.0
+      },
+      {
+        "text": "lớn",
+        "start": 7.22
+      },
+      {
+        "text": "bộ",
+        "start": 7.48
+      }
+    ],
+    "fadein": 6.84,
+    "fadeout": 7.66
+  },
+  {
+    "words": [
+      {
+        "text": "khung",
+        "start": 7.66
+      },
+      {
+        "text": "vừa",
+        "start": 8.039
+      },
+      {
+        "text": "vô",
+        "start": 8.22
+      },
+      {
+        "text": "địch",
+        "start": 8.36
+      }
+    ],
+    "fadein": 7.66,
+    "fadeout": 8.54
+  },
+  {
+    "words": [
+      {
+        "text": "giải",
+        "start": 8.54
+      },
+      {
+        "text": "đấu",
+        "start": 8.72
+      },
+      {
+        "text": "này.",
+        "start": 8.86
+      }
+    ],
+    "fadein": 8.54,
+    "fadeout": 9.29
+  }
+]
