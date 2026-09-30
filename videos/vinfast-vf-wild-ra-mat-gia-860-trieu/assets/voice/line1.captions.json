@@ -1,0 +1,156 @@
+[
+  {
+    "words": [
+      {
+        "text": "VinFast",
+        "start": 0.1
+      },
+      {
+        "text": "lần",
+        "start": 0.62
+      },
+      {
+        "text": "đầu",
+        "start": 0.8
+      },
+      {
+        "text": "tiên",
+        "start": 0.98
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 1.24
+  },
+  {
+    "words": [
+      {
+        "text": "ra",
+        "start": 1.24
+      },
+      {
+        "text": "mắt",
+        "start": 1.4
+      },
+      {
+        "text": "xe",
+        "start": 1.62
+      },
+      {
+        "text": "bán",
+        "start": 1.82
+      }
+    ],
+    "fadein": 1.24,
+    "fadeout": 2.0
+  },
+  {
+    "words": [
+      {
+        "text": "tải,",
+        "start": 2.0
+      },
+      {
+        "text": "và",
+        "start": 2.56
+      },
+      {
+        "text": "đây",
+        "start": 2.72
+      },
+      {
+        "text": "cũng",
+        "start": 2.92
+      }
+    ],
+    "fadein": 2.0,
+    "fadeout": 3.1
+  },
+  {
+    "words": [
+      {
+        "text": "là",
+        "start": 3.1
+      },
+      {
+        "text": "mẫu",
+        "start": 3.26
+      },
+      {
+        "text": "xe",
+        "start": 3.48
+      },
+      {
+        "text": "điện",
+        "start": 3.62
+      }
+    ],
+    "fadein": 3.1,
+    "fadeout": 3.86
+  },
+  {
+    "words": [
+      {
+        "text": "đầu",
+        "start": 3.86
+      },
+      {
+        "text": "tiên",
+        "start": 4.059
+      },
+      {
+        "text": "của",
+        "start": 4.32
+      },
+      {
+        "text": "hãng",
+        "start": 4.5
+      }
+    ],
+    "fadein": 3.86,
+    "fadeout": 4.84
+  },
+  {
+    "words": [
+      {
+        "text": "phải",
+        "start": 4.84
+      },
+      {
+        "text": "mang",
+        "start": 5.04
+      },
+      {
+        "text": "theo",
+        "start": 5.22
+      },
+      {
+        "text": "cả",
+        "start": 5.52
+      }
+    ],
+    "fadein": 4.84,
+    "fadeout": 5.72
+  },
+  {
+    "words": [
+      {
+        "text": "một",
+        "start": 5.72
+      },
+      {
+        "text": "động",
+        "start": 5.88
+      },
+      {
+        "text": "cơ",
+        "start": 6.06
+      },
+      {
+        "text": "xăng.",
+        "start": 6.24
+      }
+    ],
+    "fadein": 5.72,
+    "fadeout": 6.81
+  }
+]

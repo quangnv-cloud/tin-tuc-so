@@ -1,0 +1,492 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Bảng xếp hạng cuối cùng của bảng C. Uzbekistan toàn thắng dẫn đầu với chín điểm, Việt Nam xếp nhì với bốn điểm, Philippines xếp ba với ba điểm, Kuwait xếp chót với một điểm",
+  "words": [
+    {
+      "text": "Bảng",
+      "start": 0.1,
+      "end": 0.22,
+      "type": "word",
+      "logprob": -0.0005768243081547553
+    },
+    {
+      "text": " ",
+      "start": 0.22,
+      "end": 0.3,
+      "type": "spacing",
+      "logprob": -8.702239938429557e-06
+    },
+    {
+      "text": "xếp",
+      "start": 0.3,
+      "end": 0.4,
+      "type": "word",
+      "logprob": -8.702239938429557e-06
+    },
+    {
+      "text": " ",
+      "start": 0.4,
+      "end": 0.44,
+      "type": "spacing",
+      "logprob": -0.00047874910524114966
+    },
+    {
+      "text": "hạng",
+      "start": 0.44,
+      "end": 0.6,
+      "type": "word",
+      "logprob": -0.00047874910524114966
+    },
+    {
+      "text": " ",
+      "start": 0.6,
+      "end": 0.68,
+      "type": "spacing",
+      "logprob": -4.768360213347478e-06
+    },
+    {
+      "text": "cuối",
+      "start": 0.68,
+      "end": 0.8,
+      "type": "word",
+      "logprob": -4.768360213347478e-06
+    },
+    {
+      "text": " ",
+      "start": 0.8,
+      "end": 0.9,
+      "type": "spacing",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": "cùng",
+      "start": 0.9,
+      "end": 1.1,
+      "type": "word",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": " ",
+      "start": 1.1,
+      "end": 1.18,
+      "type": "spacing",
+      "logprob": 0.0
+    },
+    {
+      "text": "của",
+      "start": 1.18,
+      "end": 1.26,
+      "type": "word",
+      "logprob": 0.0
+    },
+    {
+      "text": " ",
+      "start": 1.26,
+      "end": 1.3,
+      "type": "spacing",
+      "logprob": -0.00021479207498487085
+    },
+    {
+      "text": "bảng",
+      "start": 1.3,
+      "end": 1.42,
+      "type": "word",
+      "logprob": -0.00021479207498487085
+    },
+    {
+      "text": " ",
+      "start": 1.42,
+      "end": 1.54,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "C.",
+      "start": 1.54,
+      "end": 1.74,
+      "type": "word",
+      "logprob": -0.16527643799778957
+    },
+    {
+      "text": " ",
+      "start": 1.74,
+      "end": 2.12,
+      "type": "spacing",
+      "logprob": -0.00163433444686234
+    },
+    {
+      "text": "Uzbekistan",
+      "start": 2.12,
+      "end": 2.94,
+      "type": "word",
+      "logprob": -0.00163433444686234
+    },
+    {
+      "text": " ",
+      "start": 2.94,
+      "end": 3.04,
+      "type": "spacing",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": "toàn",
+      "start": 3.04,
+      "end": 3.2,
+      "type": "word",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": " ",
+      "start": 3.2,
+      "end": 3.26,
+      "type": "spacing",
+      "logprob": -3.480850500636734e-05
+    },
+    {
+      "text": "thắng",
+      "start": 3.26,
+      "end": 3.5,
+      "type": "word",
+      "logprob": -3.480850500636734e-05
+    },
+    {
+      "text": " ",
+      "start": 3.5,
+      "end": 3.7,
+      "type": "spacing",
+      "logprob": -0.0015051951631903648
+    },
+    {
+      "text": "dẫn",
+      "start": 3.7,
+      "end": 3.84,
+      "type": "word",
+      "logprob": -0.0015051951631903648
+    },
+    {
+      "text": " ",
+      "start": 3.84,
+      "end": 3.88,
+      "type": "spacing",
+      "logprob": -6.758938252460212e-05
+    },
+    {
+      "text": "đầu",
+      "start": 3.88,
+      "end": 4.04,
+      "type": "word",
+      "logprob": -6.758938252460212e-05
+    },
+    {
+      "text": " ",
+      "start": 4.04,
+      "end": 4.14,
+      "type": "spacing",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": "với",
+      "start": 4.14,
+      "end": 4.24,
+      "type": "word",
+      "logprob": -7.152555099310121e-07
+    },
+    {
+      "text": " ",
+      "start": 4.24,
+      "end": 4.32,
+      "type": "spacing",
+      "logprob": -0.0011592342052608728
+    },
+    {
+      "text": "chín",
+      "start": 4.32,
+      "end": 4.46,
+      "type": "word",
+      "logprob": -0.0011592342052608728
+    },
+    {
+      "text": " ",
+      "start": 4.46,
+      "end": 4.52,
+      "type": "spacing",
+      "logprob": -1.0609570381348021e-05
+    },
+    {
+      "text": "điểm,",
+      "start": 4.52,
+      "end": 4.72,
+      "type": "word",
+      "logprob": -0.0696978926207521
+    },
+    {
+      "text": " ",
+      "start": 4.72,
+      "end": 5.0,
+      "type": "spacing",
+      "logprob": -0.0005584587925113738
+    },
+    {
+      "text": "Việt",
+      "start": 5.0,
+      "end": 5.14,
+      "type": "word",
+      "logprob": -0.0005584587925113738
+    },
+    {
+      "text": " ",
+      "start": 5.14,
+      "end": 5.2,
+      "type": "spacing",
+      "logprob": -4.410734163684538e-06
+    },
+    {
+      "text": "Nam",
+      "start": 5.2,
+      "end": 5.4,
+      "type": "word",
+      "logprob": -4.410734163684538e-06
+    },
+    {
+      "text": " ",
+      "start": 5.4,
+      "end": 5.5,
+      "type": "spacing",
+      "logprob": -2.288792165927589e-05
+    },
+    {
+      "text": "xếp",
+      "start": 5.5,
+      "end": 5.66,
+      "type": "word",
+      "logprob": -2.288792165927589e-05
+    },
+    {
+      "text": " ",
+      "start": 5.66,
+      "end": 5.72,
+      "type": "spacing",
+      "logprob": -9.202533692587167e-05
+    },
+    {
+      "text": "nhì",
+      "start": 5.72,
+      "end": 6.0,
+      "type": "word",
+      "logprob": -6.297941429996475e-05
+    },
+    {
+      "text": " ",
+      "start": 6.0,
+      "end": 6.04,
+      "type": "spacing",
+      "logprob": -1.4305104514278355e-06
+    },
+    {
+      "text": "với",
+      "start": 6.04,
+      "end": 6.2,
+      "type": "word",
+      "logprob": -1.4305104514278355e-06
+    },
+    {
+      "text": " ",
+      "start": 6.2,
+      "end": 6.24,
+      "type": "spacing",
+      "logprob": -5.9126061387360096e-05
+    },
+    {
+      "text": "bốn",
+      "start": 6.24,
+      "end": 6.38,
+      "type": "word",
+      "logprob": -5.9126061387360096e-05
+    },
+    {
+      "text": " ",
+      "start": 6.38,
+      "end": 6.42,
+      "type": "spacing",
+      "logprob": -6.580135959666222e-05
+    },
+    {
+      "text": "điểm,",
+      "start": 6.42,
+      "end": 6.62,
+      "type": "word",
+      "logprob": -0.0013970134197734297
+    },
+    {
+      "text": " ",
+      "start": 6.62,
+      "end": 6.9,
+      "type": "spacing",
+      "logprob": -0.013216509483754635
+    },
+    {
+      "text": "Philippines",
+      "start": 6.9,
+      "end": 7.52,
+      "type": "word",
+      "logprob": -0.013216509483754635
+    },
+    {
+      "text": " ",
+      "start": 7.52,
+      "end": 7.58,
+      "type": "spacing",
+      "logprob": -1.4543427823809907e-05
+    },
+    {
+      "text": "xếp",
+      "start": 7.58,
+      "end": 7.78,
+      "type": "word",
+      "logprob": -1.4543427823809907e-05
+    },
+    {
+      "text": " ",
+      "start": 7.78,
+      "end": 7.84,
+      "type": "spacing",
+      "logprob": -6.079655122448457e-06
+    },
+    {
+      "text": "ba",
+      "start": 7.84,
+      "end": 8.039,
+      "type": "word",
+      "logprob": -6.079655122448457e-06
+    },
+    {
+      "text": " ",
+      "start": 8.039,
+      "end": 8.24,
+      "type": "spacing",
+      "logprob": -3.218599158572033e-05
+    },
+    {
+      "text": "với",
+      "start": 8.24,
+      "end": 8.38,
+      "type": "word",
+      "logprob": -3.218599158572033e-05
+    },
+    {
+      "text": " ",
+      "start": 8.38,
+      "end": 8.42,
+      "type": "spacing",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": "ba",
+      "start": 8.42,
+      "end": 8.52,
+      "type": "word",
+      "logprob": -1.7881377516459906e-06
+    },
+    {
+      "text": " ",
+      "start": 8.52,
+      "end": 8.6,
+      "type": "spacing",
+      "logprob": -1.597391747054644e-05
+    },
+    {
+      "text": "điểm,",
+      "start": 8.6,
+      "end": 8.8,
+      "type": "word",
+      "logprob": -9.89488820778206e-05
+    },
+    {
+      "text": " ",
+      "start": 8.8,
+      "end": 9.02,
+      "type": "spacing",
+      "logprob": -0.0010711177019402385
+    },
+    {
+      "text": "Kuwait",
+      "start": 9.02,
+      "end": 9.5,
+      "type": "word",
+      "logprob": -0.0010711177019402385
+    },
+    {
+      "text": " ",
+      "start": 9.5,
+      "end": 9.6,
+      "type": "spacing",
+      "logprob": -8.451581379631534e-05
+    },
+    {
+      "text": "xếp",
+      "start": 9.6,
+      "end": 9.8,
+      "type": "word",
+      "logprob": -8.451581379631534e-05
+    },
+    {
+      "text": " ",
+      "start": 9.8,
+      "end": 9.84,
+      "type": "spacing",
+      "logprob": -3.9457496313843876e-05
+    },
+    {
+      "text": "chót",
+      "start": 9.84,
+      "end": 10.16,
+      "type": "word",
+      "logprob": -0.000614110456808703
+    },
+    {
+      "text": " ",
+      "start": 10.16,
+      "end": 10.24,
+      "type": "spacing",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": "với",
+      "start": 10.24,
+      "end": 10.44,
+      "type": "word",
+      "logprob": -1.1920922133867862e-06
+    },
+    {
+      "text": " ",
+      "start": 10.44,
+      "end": 10.5,
+      "type": "spacing",
+      "logprob": -3.158996332786046e-05
+    },
+    {
+      "text": "một",
+      "start": 10.5,
+      "end": 10.64,
+      "type": "word",
+      "logprob": -3.158996332786046e-05
+    },
+    {
+      "text": " ",
+      "start": 10.64,
+      "end": 10.68,
+      "type": "spacing",
+      "logprob": -8.106198947643861e-06
+    },
+    {
+      "text": "điểm",
+      "start": 10.68,
+      "end": 10.84,
+      "type": "word",
+      "logprob": -8.106198947643861e-06
+    }
+  ],
+  "transcription_id": "DslFIITAVWNwGwHMWHkB",
+  "audio_duration_secs": 10.88
+}
