@@ -57,25 +57,11 @@
       "trending_keyword": "giá xăng dầu"
     },
     {
-      "index": 1,
-      "style": "2-chip-and-leaderboard",
-      "slug": "cpi-my-thang-8-fed-tang-lai-suat",
-      "date": "2026-09-12",
-      "trending_keyword": "cpi mỹ"
-    },
-    {
-      "index": 3,
-      "style": "4-split-comparison",
-      "slug": "iphone-18-pro-thay-doi-so-voi-17-pro",
-      "date": "2026-09-13",
-      "trending_keyword": "18 pro max"
-    },
-    {
-      "index": 8,
-      "style": "9-editorial-clipping",
-      "slug": "tuoi-nghi-huu-nam-2027-thay-doi",
-      "date": "2026-09-14",
-      "trending_keyword": "nghỉ hưu"
+      "index": 0,
+      "style": "1-card-and-bar",
+      "slug": "cau-thu-viet-kieu-nhap-tich-tuyen-viet-nam",
+      "date": "2026-09-11",
+      "trending_keyword": "nhập tịch"
     }
   ]
 }
