@@ -1,0 +1,366 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Tấm vé này đưa tuyển nữ Việt Nam bước vào tứ kết Á vận hội 20 để chạm trán Trung Quốc vào ngày 25 tháng Chín",
+  "words": [
+    {
+      "text": "Tấm",
+      "start": 0.08,
+      "end": 0.2,
+      "type": "word",
+      "logprob": -0.00019991693746608993
+    },
+    {
+      "text": " ",
+      "start": 0.2,
+      "end": 0.26,
+      "type": "spacing",
+      "logprob": -4.3987260141875595e-05
+    },
+    {
+      "text": "vé",
+      "start": 0.26,
+      "end": 0.36,
+      "type": "word",
+      "logprob": -4.3987260141875595e-05
+    },
+    {
+      "text": " ",
+      "start": 0.36,
+      "end": 0.44,
+      "type": "spacing",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": "này",
+      "start": 0.44,
+      "end": 0.64,
+      "type": "word",
+      "logprob": -5.960462772236497e-07
+    },
+    {
+      "text": " ",
+      "start": 0.64,
+      "end": 0.74,
+      "type": "spacing",
+      "logprob": -1.4066597032069694e-05
+    },
+    {
+      "text": "đưa",
+      "start": 0.76,
+      "end": 0.92,
+      "type": "word",
+      "logprob": -1.4066597032069694e-05
+    },
+    {
+      "text": " ",
+      "start": 0.92,
+      "end": 1.0,
+      "type": "spacing",
+      "logprob": -0.0004465774691198021
+    },
+    {
+      "text": "tuyển",
+      "start": 1.0,
+      "end": 1.18,
+      "type": "word",
+      "logprob": -0.0004465774691198021
+    },
+    {
+      "text": " ",
+      "start": 1.18,
+      "end": 1.22,
+      "type": "spacing",
+      "logprob": -0.0001793938863556832
+    },
+    {
+      "text": "nữ",
+      "start": 1.22,
+      "end": 1.34,
+      "type": "word",
+      "logprob": -0.0001793938863556832
+    },
+    {
+      "text": " ",
+      "start": 1.34,
+      "end": 1.4,
+      "type": "spacing",
+      "logprob": -0.00016378014697693288
+    },
+    {
+      "text": "Việt",
+      "start": 1.4,
+      "end": 1.54,
+      "type": "word",
+      "logprob": -0.00016378014697693288
+    },
+    {
+      "text": " ",
+      "start": 1.54,
+      "end": 1.6,
+      "type": "spacing",
+      "logprob": -6.794906312279636e-06
+    },
+    {
+      "text": "Nam",
+      "start": 1.62,
+      "end": 1.8,
+      "type": "word",
+      "logprob": -6.794906312279636e-06
+    },
+    {
+      "text": " ",
+      "start": 1.8,
+      "end": 1.86,
+      "type": "spacing",
+      "logprob": -6.079655122448457e-06
+    },
+    {
+      "text": "bước",
+      "start": 1.86,
+      "end": 2.0,
+      "type": "word",
+      "logprob": -6.079655122448457e-06
+    },
+    {
+      "text": " ",
+      "start": 2.0,
+      "end": 2.06,
+      "type": "spacing",
+      "logprob": 0.0
+    },
+    {
+      "text": "vào",
+      "start": 2.06,
+      "end": 2.18,
+      "type": "word",
+      "logprob": 0.0
+    },
+    {
+      "text": " ",
+      "start": 2.18,
+      "end": 2.26,
+      "type": "spacing",
+      "logprob": -0.00412019481882453
+    },
+    {
+      "text": "tứ",
+      "start": 2.26,
+      "end": 2.36,
+      "type": "word",
+      "logprob": -0.00412019481882453
+    },
+    {
+      "text": " ",
+      "start": 2.36,
+      "end": 2.44,
+      "type": "spacing",
+      "logprob": -0.00010609064338495955
+    },
+    {
+      "text": "kết",
+      "start": 2.44,
+      "end": 2.66,
+      "type": "word",
+      "logprob": -0.00010609064338495955
+    },
+    {
+      "text": " ",
+      "start": 2.66,
+      "end": 2.74,
+      "type": "spacing",
+      "logprob": -0.0006073060794733465
+    },
+    {
+      "text": "Á",
+      "start": 2.74,
+      "end": 2.8,
+      "type": "word",
+      "logprob": -0.0006073060794733465
+    },
+    {
+      "text": " ",
+      "start": 2.8,
+      "end": 2.84,
+      "type": "spacing",
+      "logprob": -0.00026675479602999985
+    },
+    {
+      "text": "vận",
+      "start": 2.84,
+      "end": 2.96,
+      "type": "word",
+      "logprob": -0.00026675479602999985
+    },
+    {
+      "text": " ",
+      "start": 2.96,
+      "end": 3.0,
+      "type": "spacing",
+      "logprob": -0.0006578188622370362
+    },
+    {
+      "text": "hội",
+      "start": 3.0,
+      "end": 3.16,
+      "type": "word",
+      "logprob": -0.0006578188622370362
+    },
+    {
+      "text": " ",
+      "start": 3.16,
+      "end": 3.34,
+      "type": "spacing",
+      "logprob": -0.08904153108596802
+    },
+    {
+      "text": "20",
+      "start": 3.34,
+      "end": 3.62,
+      "type": "word",
+      "logprob": -3.3974574762396514e-06
+    },
+    {
+      "text": " ",
+      "start": 3.62,
+      "end": 3.78,
+      "type": "spacing",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": "để",
+      "start": 3.78,
+      "end": 3.94,
+      "type": "word",
+      "logprob": -1.9073468138230965e-06
+    },
+    {
+      "text": " ",
+      "start": 3.94,
+      "end": 4.019,
+      "type": "spacing",
+      "logprob": -3.969590397900902e-05
+    },
+    {
+      "text": "chạm",
+      "start": 4.019,
+      "end": 4.18,
+      "type": "word",
+      "logprob": -3.969590397900902e-05
+    },
+    {
+      "text": " ",
+      "start": 4.18,
+      "end": 4.24,
+      "type": "spacing",
+      "logprob": -0.00012182447244413197
+    },
+    {
+      "text": "trán",
+      "start": 4.24,
+      "end": 4.42,
+      "type": "word",
+      "logprob": -6.192551416006609e-05
+    },
+    {
+      "text": " ",
+      "start": 4.42,
+      "end": 4.46,
+      "type": "spacing",
+      "logprob": -3.862306402879767e-05
+    },
+    {
+      "text": "Trung",
+      "start": 4.46,
+      "end": 4.6,
+      "type": "word",
+      "logprob": -3.862306402879767e-05
+    },
+    {
+      "text": " ",
+      "start": 4.6,
+      "end": 4.68,
+      "type": "spacing",
+      "logprob": -4.410734163684538e-06
+    },
+    {
+      "text": "Quốc",
+      "start": 4.68,
+      "end": 4.84,
+      "type": "word",
+      "logprob": -4.410734163684538e-06
+    },
+    {
+      "text": " ",
+      "start": 4.84,
+      "end": 5.16,
+      "type": "spacing",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": "vào",
+      "start": 5.16,
+      "end": 5.3,
+      "type": "word",
+      "logprob": -2.3841855067985307e-07
+    },
+    {
+      "text": " ",
+      "start": 5.3,
+      "end": 5.32,
+      "type": "spacing",
+      "logprob": -3.099393507000059e-05
+    },
+    {
+      "text": "ngày",
+      "start": 5.32,
+      "end": 5.52,
+      "type": "word",
+      "logprob": -3.099393507000059e-05
+    },
+    {
+      "text": " ",
+      "start": 5.52,
+      "end": 5.66,
+      "type": "spacing",
+      "logprob": -2.9802276912960224e-06
+    },
+    {
+      "text": "25",
+      "start": 5.66,
+      "end": 5.94,
+      "type": "word",
+      "logprob": -2.0265557054699457e-06
+    },
+    {
+      "text": " ",
+      "start": 5.94,
+      "end": 5.98,
+      "type": "spacing",
+      "logprob": -0.016634928062558174
+    },
+    {
+      "text": "tháng",
+      "start": 5.98,
+      "end": 6.08,
+      "type": "word",
+      "logprob": -0.016634928062558174
+    },
+    {
+      "text": " ",
+      "start": 6.08,
+      "end": 6.16,
+      "type": "spacing",
+      "logprob": -0.15552064776420593
+    },
+    {
+      "text": "Chín",
+      "start": 6.16,
+      "end": 6.4,
+      "type": "word",
+      "logprob": -0.07776133716004097
+    }
+  ],
+  "transcription_id": "xX6CTFDyungrcfOSaeo0",
+  "audio_duration_secs": 6.48
+}
