@@ -1,0 +1,506 @@
+{
+  "language_code": "vie",
+  "language_probability": 1.0,
+  "text": "Hiện Tuấn Huy là nghiên cứu viên Viện Toán học Clay tại Mỹ, còn Thành Trung đã về giảng dạy tại Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "words": [
+    {
+      "text": "Hiện",
+      "start": 0.06,
+      "end": 0.24,
+      "type": "word",
+      "logprob": -0.0013299677520990372
+    },
+    {
+      "text": " ",
+      "start": 0.24,
+      "end": 0.3,
+      "type": "spacing",
+      "logprob": -0.00013779645087197423
+    },
+    {
+      "text": "Tuấn",
+      "start": 0.3,
+      "end": 0.46,
+      "type": "word",
+      "logprob": -0.00012551943291327916
+    },
+    {
+      "text": " ",
+      "start": 0.46,
+      "end": 0.52,
+      "type": "spacing",
+      "logprob": -0.0006505518686026335
+    },
+    {
+      "text": "Huy",
+      "start": 0.52,
+      "end": 0.7,
+      "type": "word",
+      "logprob": -0.0006505518686026335
+    },
+    {
+      "text": " ",
+      "start": 0.7,
+      "end": 0.78,
+      "type": "spacing",
+      "logprob": -3.576272320060525e-06
+    },
+    {
+      "text": "là",
+      "start": 0.78,
+      "end": 0.9,
+      "type": "word",
+      "logprob": -3.576272320060525e-06
+    },
+    {
+      "text": " ",
+      "start": 0.9,
+      "end": 0.96,
+      "type": "spacing",
+      "logprob": -0.0029963618144392967
+    },
+    {
+      "text": "nghiên",
+      "start": 0.96,
+      "end": 1.1,
+      "type": "word",
+      "logprob": -0.0029963618144392967
+    },
+    {
+      "text": " ",
+      "start": 1.1,
+      "end": 1.18,
+      "type": "spacing",
+      "logprob": -0.00018845213344320655
+    },
+    {
+      "text": "cứu",
+      "start": 1.18,
+      "end": 1.28,
+      "type": "word",
+      "logprob": -0.00018845213344320655
+    },
+    {
+      "text": " ",
+      "start": 1.28,
+      "end": 1.36,
+      "type": "spacing",
+      "logprob": -0.0003914067056030035
+    },
+    {
+      "text": "viên",
+      "start": 1.36,
+      "end": 1.54,
+      "type": "word",
+      "logprob": -0.0003914067056030035
+    },
+    {
+      "text": " ",
+      "start": 1.54,
+      "end": 1.62,
+      "type": "spacing",
+      "logprob": -0.003146936884149909
+    },
+    {
+      "text": "Viện",
+      "start": 1.62,
+      "end": 1.8,
+      "type": "word",
+      "logprob": -0.0015878925578363123
+    },
+    {
+      "text": " ",
+      "start": 1.8,
+      "end": 1.84,
+      "type": "spacing",
+      "logprob": -0.02639252133667469
+    },
+    {
+      "text": "Toán",
+      "start": 1.84,
+      "end": 1.98,
+      "type": "word",
+      "logprob": -0.02639252133667469
+    },
+    {
+      "text": " ",
+      "start": 1.98,
+      "end": 2.04,
+      "type": "spacing",
+      "logprob": -0.000444551813416183
+    },
+    {
+      "text": "học",
+      "start": 2.04,
+      "end": 2.2,
+      "type": "word",
+      "logprob": -0.000444551813416183
+    },
+    {
+      "text": " ",
+      "start": 2.2,
+      "end": 2.28,
+      "type": "spacing",
+      "logprob": -0.0011938833631575108
+    },
+    {
+      "text": "Clay",
+      "start": 2.28,
+      "end": 2.52,
+      "type": "word",
+      "logprob": -0.0011938833631575108
+    },
+    {
+      "text": " ",
+      "start": 2.52,
+      "end": 2.58,
+      "type": "spacing",
+      "logprob": -2.50339189733495e-06
+    },
+    {
+      "text": "tại",
+      "start": 2.58,
+      "end": 2.7,
+      "type": "word",
+      "logprob": -2.50339189733495e-06
+    },
+    {
+      "text": " ",
+      "start": 2.7,
+      "end": 2.76,
+      "type": "spacing",
+      "logprob": -1.5497195136049413e-06
+    },
+    {
+      "text": "Mỹ,",
+      "start": 2.8,
+      "end": 2.98,
+      "type": "word",
+      "logprob": -0.0233234092584856
+    },
+    {
+      "text": " ",
+      "start": 2.98,
+      "end": 2.98,
+      "type": "spacing",
+      "logprob": -5.006777428206988e-06
+    },
+    {
+      "text": "còn",
+      "start": 3.46,
+      "end": 3.64,
+      "type": "word",
+      "logprob": -5.006777428206988e-06
+    },
+    {
+      "text": " ",
+      "start": 3.64,
+      "end": 3.72,
+      "type": "spacing",
+      "logprob": -0.021187398582696915
+    },
+    {
+      "text": "Thành",
+      "start": 3.72,
+      "end": 3.84,
+      "type": "word",
+      "logprob": -0.021187398582696915
+    },
+    {
+      "text": " ",
+      "start": 3.84,
+      "end": 3.92,
+      "type": "spacing",
+      "logprob": -0.42969822883605957
+    },
+    {
+      "text": "Trung",
+      "start": 3.92,
+      "end": 4.14,
+      "type": "word",
+      "logprob": -0.42969822883605957
+    },
+    {
+      "text": " ",
+      "start": 4.14,
+      "end": 4.3,
+      "type": "spacing",
+      "logprob": -7.867782187531702e-06
+    },
+    {
+      "text": "đã",
+      "start": 4.3,
+      "end": 4.4,
+      "type": "word",
+      "logprob": -7.867782187531702e-06
+    },
+    {
+      "text": " ",
+      "start": 4.4,
+      "end": 4.44,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "về",
+      "start": 4.44,
+      "end": 4.56,
+      "type": "word",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": " ",
+      "start": 4.56,
+      "end": 4.64,
+      "type": "spacing",
+      "logprob": -3.6238969187252223e-05
+    },
+    {
+      "text": "giảng",
+      "start": 4.64,
+      "end": 4.8,
+      "type": "word",
+      "logprob": -3.6238969187252223e-05
+    },
+    {
+      "text": " ",
+      "start": 4.8,
+      "end": 4.88,
+      "type": "spacing",
+      "logprob": -1.8954096958623268e-05
+    },
+    {
+      "text": "dạy",
+      "start": 4.88,
+      "end": 5.06,
+      "type": "word",
+      "logprob": -1.8954096958623268e-05
+    },
+    {
+      "text": " ",
+      "start": 5.06,
+      "end": 5.16,
+      "type": "spacing",
+      "logprob": 0.0
+    },
+    {
+      "text": "tại",
+      "start": 5.16,
+      "end": 5.3,
+      "type": "word",
+      "logprob": 0.0
+    },
+    {
+      "text": " ",
+      "start": 5.3,
+      "end": 5.36,
+      "type": "spacing",
+      "logprob": -0.0012059090659022331
+    },
+    {
+      "text": "Đại",
+      "start": 5.36,
+      "end": 5.46,
+      "type": "word",
+      "logprob": -0.0012059090659022331
+    },
+    {
+      "text": " ",
+      "start": 5.46,
+      "end": 5.48,
+      "type": "spacing",
+      "logprob": -0.0007538337376900017
+    },
+    {
+      "text": "học",
+      "start": 5.48,
+      "end": 5.62,
+      "type": "word",
+      "logprob": -0.0007538337376900017
+    },
+    {
+      "text": " ",
+      "start": 5.62,
+      "end": 5.66,
+      "type": "spacing",
+      "logprob": -0.0004351384413894266
+    },
+    {
+      "text": "Khoa",
+      "start": 5.66,
+      "end": 5.78,
+      "type": "word",
+      "logprob": -0.0003354433738422813
+    },
+    {
+      "text": " ",
+      "start": 5.78,
+      "end": 5.82,
+      "type": "spacing",
+      "logprob": -0.2064884603023529
+    },
+    {
+      "text": "học",
+      "start": 5.82,
+      "end": 5.94,
+      "type": "word",
+      "logprob": -0.2064884603023529
+    },
+    {
+      "text": " ",
+      "start": 5.94,
+      "end": 6.0,
+      "type": "spacing",
+      "logprob": -0.008672904223203659
+    },
+    {
+      "text": "Tự",
+      "start": 6.0,
+      "end": 6.1,
+      "type": "word",
+      "logprob": -0.004372511622932507
+    },
+    {
+      "text": " ",
+      "start": 6.1,
+      "end": 6.18,
+      "type": "spacing",
+      "logprob": -2.9801878554280847e-05
+    },
+    {
+      "text": "nhiên,",
+      "start": 6.18,
+      "end": 6.4,
+      "type": "word",
+      "logprob": -2.678197248921303e-05
+    },
+    {
+      "text": " ",
+      "start": 6.4,
+      "end": 6.56,
+      "type": "spacing",
+      "logprob": -0.0009090343955904245
+    },
+    {
+      "text": "Đại",
+      "start": 6.56,
+      "end": 6.66,
+      "type": "word",
+      "logprob": -0.0009090343955904245
+    },
+    {
+      "text": " ",
+      "start": 6.66,
+      "end": 6.68,
+      "type": "spacing",
+      "logprob": -0.00010334911348763853
+    },
+    {
+      "text": "học",
+      "start": 6.68,
+      "end": 6.8,
+      "type": "word",
+      "logprob": -0.00010334911348763853
+    },
+    {
+      "text": " ",
+      "start": 6.8,
+      "end": 6.86,
+      "type": "spacing",
+      "logprob": -0.0005595310358330607
+    },
+    {
+      "text": "Quốc",
+      "start": 6.86,
+      "end": 6.98,
+      "type": "word",
+      "logprob": -0.0005595310358330607
+    },
+    {
+      "text": " ",
+      "start": 6.98,
+      "end": 7.04,
+      "type": "spacing",
+      "logprob": -8.95221673999913e-05
+    },
+    {
+      "text": "gia",
+      "start": 7.04,
+      "end": 7.24,
+      "type": "word",
+      "logprob": -8.95221673999913e-05
+    },
+    {
+      "text": " ",
+      "start": 7.24,
+      "end": 7.3,
+      "type": "spacing",
+      "logprob": -0.479722261428833
+    },
+    {
+      "text": "Thành",
+      "start": 7.3,
+      "end": 7.44,
+      "type": "word",
+      "logprob": -0.479722261428833
+    },
+    {
+      "text": " ",
+      "start": 7.44,
+      "end": 7.5,
+      "type": "spacing",
+      "logprob": -2.7894584491150454e-05
+    },
+    {
+      "text": "phố",
+      "start": 7.5,
+      "end": 7.58,
+      "type": "word",
+      "logprob": -2.7894584491150454e-05
+    },
+    {
+      "text": " ",
+      "start": 7.58,
+      "end": 7.62,
+      "type": "spacing",
+      "logprob": -4.660974445869215e-05
+    },
+    {
+      "text": "Hồ",
+      "start": 7.62,
+      "end": 7.7,
+      "type": "word",
+      "logprob": -4.660974445869215e-05
+    },
+    {
+      "text": " ",
+      "start": 7.7,
+      "end": 7.78,
+      "type": "spacing",
+      "logprob": -5.411955135059543e-05
+    },
+    {
+      "text": "Chí",
+      "start": 7.78,
+      "end": 7.86,
+      "type": "word",
+      "logprob": -5.411955135059543e-05
+    },
+    {
+      "text": " ",
+      "start": 7.86,
+      "end": 7.94,
+      "type": "spacing",
+      "logprob": -0.00011681827891152352
+    },
+    {
+      "text": "Minh",
+      "start": 7.94,
+      "end": 8.119,
+      "type": "word",
+      "logprob": -0.00011681827891152352
+    }
+  ],
+  "transcription_id": "VYMpPMUIS4U9StXUIId4",
+  "audio_duration_secs": 8.4
+}
