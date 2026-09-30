@@ -1,0 +1,192 @@
+[
+  {
+    "words": [
+      {
+        "text": "Xe",
+        "start": 0.1
+      },
+      {
+        "text": "có",
+        "start": 0.32
+      },
+      {
+        "text": "giá",
+        "start": 0.44
+      },
+      {
+        "text": "từ",
+        "start": 0.76
+      }
+    ],
+    "fadein": 0.1,
+    "fadeout": 1.0
+  },
+  {
+    "words": [
+      {
+        "text": "860",
+        "start": 1.0
+      },
+      {
+        "text": "triệu",
+        "start": 1.74
+      },
+      {
+        "text": "đồng,",
+        "start": 1.94
+      },
+      {
+        "text": "nhưng",
+        "start": 2.36
+      }
+    ],
+    "fadein": 1.0,
+    "fadeout": 2.58
+  },
+  {
+    "words": [
+      {
+        "text": "đặt",
+        "start": 2.58
+      },
+      {
+        "text": "cọc",
+        "start": 2.78
+      },
+      {
+        "text": "sớm",
+        "start": 3.0
+      },
+      {
+        "text": "từ",
+        "start": 3.28
+      }
+    ],
+    "fadein": 2.58,
+    "fadeout": 3.4
+  },
+  {
+    "words": [
+      {
+        "text": "ngày",
+        "start": 3.4
+      },
+      {
+        "text": "25",
+        "start": 3.72
+      },
+      {
+        "text": "đến",
+        "start": 4.2
+      },
+      {
+        "text": "30",
+        "start": 4.52
+      }
+    ],
+    "fadein": 3.4,
+    "fadeout": 4.7
+  },
+  {
+    "words": [
+      {
+        "text": "tháng",
+        "start": 4.7
+      },
+      {
+        "text": "9",
+        "start": 5.1
+      },
+      {
+        "text": "sẽ",
+        "start": 5.36
+      },
+      {
+        "text": "được",
+        "start": 5.52
+      }
+    ],
+    "fadein": 4.7,
+    "fadeout": 5.7
+  },
+  {
+    "words": [
+      {
+        "text": "giảm",
+        "start": 5.7
+      },
+      {
+        "text": "ngay",
+        "start": 5.96
+      },
+      {
+        "text": "61",
+        "start": 6.28
+      },
+      {
+        "text": "triệu",
+        "start": 6.7
+      }
+    ],
+    "fadein": 5.7,
+    "fadeout": 6.9
+  },
+  {
+    "words": [
+      {
+        "text": "đồng,",
+        "start": 6.9
+      },
+      {
+        "text": "đưa",
+        "start": 7.32
+      },
+      {
+        "text": "giá",
+        "start": 7.5
+      },
+      {
+        "text": "khởi",
+        "start": 7.74
+      }
+    ],
+    "fadein": 6.9,
+    "fadeout": 7.96
+  },
+  {
+    "words": [
+      {
+        "text": "điểm",
+        "start": 7.96
+      },
+      {
+        "text": "xuống",
+        "start": 8.28
+      },
+      {
+        "text": "còn",
+        "start": 8.5
+      },
+      {
+        "text": "799",
+        "start": 8.86
+      }
+    ],
+    "fadein": 7.96,
+    "fadeout": 9.9
+  },
+  {
+    "words": [
+      {
+        "text": "triệu",
+        "start": 9.9
+      },
+      {
+        "text": "đồng.",
+        "start": 10.12
+      }
+    ],
+    "fadein": 9.9,
+    "fadeout": 10.63
+  }
+]
