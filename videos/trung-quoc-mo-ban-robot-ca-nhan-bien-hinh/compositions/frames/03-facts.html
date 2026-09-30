@@ -1,0 +1,120 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: #0B0E14; }
+
+    .kf-kicker { position: absolute; left: 64px; top: 300px; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+
+    .kf-note { position: absolute; left: 64px; right: 100px; padding: 40px 48px 46px; background: #121724; border: 1px solid rgba(255,255,255,0.09); box-shadow: 0 18px 34px rgba(0,0,0,0.5); clip-path: polygon(0% 5%, 4% 0%, 9% 4%, 15% 0%, 22% 4%, 29% 0%, 36% 4%, 44% 0%, 52% 4%, 60% 0%, 68% 4%, 76% 0%, 84% 4%, 92% 0%, 100% 5%, 100% 95%, 95% 100%, 88% 96%, 80% 100%, 72% 96%, 64% 100%, 56% 96%, 48% 100%, 40% 96%, 32% 100%, 24% 96%, 16% 100%, 8% 96%, 0% 100%); opacity: 0; }
+    .kf-note .tt { display: inline-flex; align-items: center; gap: 12px; }
+    .kf-note .tt .pin { width: 14px; height: 14px; border-radius: 50%; background: #FF5A1F; flex: none; }
+    .kf-note .ttl { font-weight: 800; font-size: 42px; color: #FF5A1F; }
+    .kf-note .desc { margin-top: 18px; font-weight: 600; font-size: 32px; line-height: 1.4; color: #fff; }
+
+    #kf-n1 { top: 420px; transform: rotate(-1.6deg); z-index: 3; }
+    #kf-n2 { top: 830px; left: 104px; right: 60px; transform: rotate(1.3deg); z-index: 2; }
+    #kf-n3 { top: 1260px; transform: rotate(-1deg); z-index: 1; }
+
+    .cap-wrap { position: absolute; left: 56px; right: 56px; top: 1730px; min-height: 96px; z-index: 40; display: flex; align-items: center; justify-content: center; text-align: center; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 6px; opacity: 0; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 38px; line-height: 1.3; letter-spacing: -0.005em; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 26px rgba(0,0,0,0.6); }
+    .cap-chunk .w { color: rgba(255,255,255,0.55); }
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+    <div class="kf-kicker" id="kf-kicker">Đặc điểm hai mẫu robot</div>
+
+    <div class="kf-note" id="kf-n1">
+      <div class="tt"><span class="pin"></span><span class="ttl">Qiyuan Q1</span></div>
+      <div class="desc">Cao 88cm, gập lại được để bỏ vào ba lô, tuỳ chỉnh ngoại hình.</div>
+    </div>
+
+    <div class="kf-note" id="kf-n2">
+      <div class="tt"><span class="pin"></span><span class="ttl">Qiyuan T1</span></div>
+      <div class="desc">Chuyển đổi giữa dạng người có bánh xe và dạng bốn chân.</div>
+    </div>
+
+    <div class="kf-note" id="kf-n3">
+      <div class="tt"><span class="pin"></span><span class="ttl">Cả hai mẫu</span></div>
+      <div class="desc">Người dùng tuỳ chỉnh được một số bộ phận cấu trúc riêng.</div>
+    </div>
+
+    <div class="cap-wrap">
+      <div class="cap-chunk" id="cap3-1"><span class="w" id="cap3-1-w1">Theo</span><span class="w" id="cap3-1-w2">Qiyuan</span><span class="w" id="cap3-1-w3">Robotics,</span></div>
+      <div class="cap-chunk" id="cap3-2"><span class="w" id="cap3-2-w1">mẫu</span><span class="w" id="cap3-2-w2">Q1</span><span class="w" id="cap3-2-w3">cao</span><span class="w" id="cap3-2-w4">88</span><span class="w" id="cap3-2-w5">cm,</span></div>
+      <div class="cap-chunk" id="cap3-3"><span class="w" id="cap3-3-w1">gập</span><span class="w" id="cap3-3-w2">lại</span><span class="w" id="cap3-3-w3">được</span><span class="w" id="cap3-3-w4">để</span><span class="w" id="cap3-3-w5">bỏ</span></div>
+      <div class="cap-chunk" id="cap3-4"><span class="w" id="cap3-4-w1">vào</span><span class="w" id="cap3-4-w2">ba</span><span class="w" id="cap3-4-w3">lô,</span><span class="w" id="cap3-4-w4">còn</span><span class="w" id="cap3-4-w5">mẫu</span></div>
+      <div class="cap-chunk" id="cap3-5"><span class="w" id="cap3-5-w1">T1</span><span class="w" id="cap3-5-w2">có</span><span class="w" id="cap3-5-w3">thể</span><span class="w" id="cap3-5-w4">chuyển</span><span class="w" id="cap3-5-w5">đổi</span></div>
+      <div class="cap-chunk" id="cap3-6"><span class="w" id="cap3-6-w1">giữa</span><span class="w" id="cap3-6-w2">dạng</span><span class="w" id="cap3-6-w3">người</span><span class="w" id="cap3-6-w4">có</span><span class="w" id="cap3-6-w5">bánh</span></div>
+      <div class="cap-chunk" id="cap3-7"><span class="w" id="cap3-7-w1">xe</span><span class="w" id="cap3-7-w2">và</span><span class="w" id="cap3-7-w3">dạng</span><span class="w" id="cap3-7-w4">bốn</span><span class="w" id="cap3-7-w5">chân</span></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#kf-kicker', { autoAlpha: 0, x: -14 }, { autoAlpha: 1, x: 0, duration: 0.38, ease: 'power2.out' }, 0);
+    tl.fromTo('#kf-n1', { autoAlpha: 0, y: 34, rotate: -1.6 }, { autoAlpha: 1, y: 0, rotate: -1.6, duration: 0.5, ease: 'power3.out' }, 0.3);
+    tl.fromTo('#kf-n2', { autoAlpha: 0, y: 34, rotate: 1.3 }, { autoAlpha: 1, y: 0, rotate: 1.3, duration: 0.5, ease: 'power3.out' }, 5.6);
+    tl.fromTo('#kf-n3', { autoAlpha: 0, y: 34, rotate: -1 }, { autoAlpha: 1, y: 0, rotate: -1, duration: 0.5, ease: 'power3.out' }, 8.2);
+
+    tl.fromTo('#cap3-1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 0.060);
+    tl.fromTo('#cap3-1-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.060);
+    tl.fromTo('#cap3-1-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.380);
+    tl.fromTo('#cap3-1-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.920);
+    tl.set('#cap3-1', { autoAlpha: 0 }, 1.660);
+    tl.fromTo('#cap3-2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 1.780);
+    tl.fromTo('#cap3-2-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.780);
+    tl.fromTo('#cap3-2-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.000);
+    tl.fromTo('#cap3-2-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.480);
+    tl.fromTo('#cap3-2-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.740);
+    tl.fromTo('#cap3-2-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.280);
+    tl.set('#cap3-2', { autoAlpha: 0 }, 3.940);
+    tl.fromTo('#cap3-3', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 3.940);
+    tl.fromTo('#cap3-3-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.940);
+    tl.fromTo('#cap3-3-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.160);
+    tl.fromTo('#cap3-3-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.580);
+    tl.fromTo('#cap3-3-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.800);
+    tl.fromTo('#cap3-3-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.940);
+    tl.set('#cap3-3', { autoAlpha: 0 }, 5.120);
+    tl.fromTo('#cap3-4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 5.120);
+    tl.fromTo('#cap3-4-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.120);
+    tl.fromTo('#cap3-4-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.260);
+    tl.fromTo('#cap3-4-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.440);
+    tl.fromTo('#cap3-4-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.020);
+    tl.fromTo('#cap3-4-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.280);
+    tl.set('#cap3-4', { autoAlpha: 0 }, 6.560);
+    tl.fromTo('#cap3-5', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 6.560);
+    tl.fromTo('#cap3-5-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.560);
+    tl.fromTo('#cap3-5-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.060);
+    tl.fromTo('#cap3-5-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.180);
+    tl.fromTo('#cap3-5-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.420);
+    tl.fromTo('#cap3-5-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.660);
+    tl.set('#cap3-5', { autoAlpha: 0 }, 7.940);
+    tl.fromTo('#cap3-6', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 7.940);
+    tl.fromTo('#cap3-6-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.940);
+    tl.fromTo('#cap3-6-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.240);
+    tl.fromTo('#cap3-6-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.500);
+    tl.fromTo('#cap3-6-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.820);
+    tl.fromTo('#cap3-6-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.960);
+    tl.set('#cap3-6', { autoAlpha: 0 }, 9.180);
+    tl.fromTo('#cap3-7', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 9.180);
+    tl.fromTo('#cap3-7-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.180);
+    tl.fromTo('#cap3-7-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.540);
+    tl.fromTo('#cap3-7-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.720);
+    tl.fromTo('#cap3-7-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.940);
+    tl.fromTo('#cap3-7-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 10.140);
+    tl.to('#cap3-7', { autoAlpha: 0, duration: 0.12 }, 10.520);
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>
