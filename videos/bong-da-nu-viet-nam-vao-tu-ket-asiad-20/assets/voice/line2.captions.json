@@ -1,0 +1,170 @@
+[
+  {
+    "words": [
+      {
+        "text": "Hoà",
+        "start": 0.06
+      },
+      {
+        "text": "không",
+        "start": 0.32
+      },
+      {
+        "text": "bàn",
+        "start": 0.5
+      },
+      {
+        "text": "thắng",
+        "start": 0.68
+      }
+    ],
+    "fadein": 0.06,
+    "fadeout": 0.94
+  },
+  {
+    "words": [
+      {
+        "text": "trước",
+        "start": 0.94
+      },
+      {
+        "text": "Thái",
+        "start": 1.14
+      },
+      {
+        "text": "Lan",
+        "start": 1.36
+      },
+      {
+        "text": "trên",
+        "start": 1.58
+      }
+    ],
+    "fadein": 0.94,
+    "fadeout": 1.82
+  },
+  {
+    "words": [
+      {
+        "text": "sân",
+        "start": 1.82
+      },
+      {
+        "text": "Nagai",
+        "start": 2.02
+      },
+      {
+        "text": "ở",
+        "start": 2.54
+      },
+      {
+        "text": "Osaka",
+        "start": 2.68
+      }
+    ],
+    "fadein": 1.82,
+    "fadeout": 3.22
+  },
+  {
+    "words": [
+      {
+        "text": "chiều",
+        "start": 3.22
+      },
+      {
+        "text": "21",
+        "start": 3.54
+      },
+      {
+        "text": "tháng",
+        "start": 3.86
+      },
+      {
+        "text": "9,",
+        "start": 4.04
+      }
+    ],
+    "fadein": 3.22,
+    "fadeout": 4.6
+  },
+  {
+    "words": [
+      {
+        "text": "thầy",
+        "start": 4.6
+      },
+      {
+        "text": "trò",
+        "start": 4.78
+      },
+      {
+        "text": "huấn",
+        "start": 4.98
+      },
+      {
+        "text": "luyện",
+        "start": 5.1
+      }
+    ],
+    "fadein": 4.6,
+    "fadeout": 5.3
+  },
+  {
+    "words": [
+      {
+        "text": "viên",
+        "start": 5.3
+      },
+      {
+        "text": "Hoàng",
+        "start": 5.5
+      },
+      {
+        "text": "Văn",
+        "start": 5.7
+      },
+      {
+        "text": "Phúc",
+        "start": 5.88
+      }
+    ],
+    "fadein": 5.3,
+    "fadeout": 6.12
+  },
+  {
+    "words": [
+      {
+        "text": "hoàn",
+        "start": 6.12
+      },
+      {
+        "text": "tất",
+        "start": 6.36
+      },
+      {
+        "text": "mục",
+        "start": 6.58
+      },
+      {
+        "text": "tiêu",
+        "start": 6.76
+      }
+    ],
+    "fadein": 6.12,
+    "fadeout": 6.96
+  },
+  {
+    "words": [
+      {
+        "text": "đề",
+        "start": 6.96
+      },
+      {
+        "text": "ra.",
+        "start": 7.14
+      }
+    ],
+    "fadein": 6.96,
+    "fadeout": 7.65
+  }
+]
