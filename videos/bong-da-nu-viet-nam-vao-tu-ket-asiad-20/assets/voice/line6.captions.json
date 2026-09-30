@@ -1,0 +1,148 @@
+[
+  {
+    "words": [
+      {
+        "text": "Tấm",
+        "start": 0.08
+      },
+      {
+        "text": "vé",
+        "start": 0.26
+      },
+      {
+        "text": "này",
+        "start": 0.44
+      },
+      {
+        "text": "đưa",
+        "start": 0.76
+      }
+    ],
+    "fadein": 0.08,
+    "fadeout": 1.0
+  },
+  {
+    "words": [
+      {
+        "text": "tuyển",
+        "start": 1.0
+      },
+      {
+        "text": "nữ",
+        "start": 1.22
+      },
+      {
+        "text": "Việt",
+        "start": 1.4
+      },
+      {
+        "text": "Nam",
+        "start": 1.62
+      }
+    ],
+    "fadein": 1.0,
+    "fadeout": 1.86
+  },
+  {
+    "words": [
+      {
+        "text": "bước",
+        "start": 1.86
+      },
+      {
+        "text": "vào",
+        "start": 2.06
+      },
+      {
+        "text": "tứ",
+        "start": 2.26
+      },
+      {
+        "text": "kết",
+        "start": 2.44
+      }
+    ],
+    "fadein": 1.86,
+    "fadeout": 2.74
+  },
+  {
+    "words": [
+      {
+        "text": "Á",
+        "start": 2.74
+      },
+      {
+        "text": "vận",
+        "start": 2.84
+      },
+      {
+        "text": "hội",
+        "start": 3.0
+      },
+      {
+        "text": "20",
+        "start": 3.34
+      }
+    ],
+    "fadein": 2.74,
+    "fadeout": 3.78
+  },
+  {
+    "words": [
+      {
+        "text": "để",
+        "start": 3.78
+      },
+      {
+        "text": "chạm",
+        "start": 4.019
+      },
+      {
+        "text": "trán",
+        "start": 4.24
+      },
+      {
+        "text": "Trung",
+        "start": 4.46
+      }
+    ],
+    "fadein": 3.78,
+    "fadeout": 4.68
+  },
+  {
+    "words": [
+      {
+        "text": "Quốc,",
+        "start": 4.68
+      },
+      {
+        "text": "vào",
+        "start": 5.16
+      },
+      {
+        "text": "ngày",
+        "start": 5.32
+      },
+      {
+        "text": "25",
+        "start": 5.66
+      }
+    ],
+    "fadein": 4.68,
+    "fadeout": 5.98
+  },
+  {
+    "words": [
+      {
+        "text": "tháng",
+        "start": 5.98
+      },
+      {
+        "text": "9.",
+        "start": 6.16
+      }
+    ],
+    "fadein": 5.98,
+    "fadeout": 6.75
+  }
+]

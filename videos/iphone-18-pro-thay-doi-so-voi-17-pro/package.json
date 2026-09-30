@@ -1,0 +1,17 @@
+{
+  "name": "iphone-18-pro-thay-doi-so-voi-17-pro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.35 preview",
+    "check": "npx --yes hyperframes@0.8.35 check",
+    "render": "npx --yes hyperframes@0.8.35 render",
+    "publish": "npx --yes hyperframes@0.8.35 publish"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "^0.8.35"
+  }
+}

@@ -115,8 +115,11 @@ Tin có diễn biến qua nhiều mốc: các đời model, lộ trình rollout,
   fact xuất hiện).
 - **Data moment**: con số chính tại 1 node lớn trên trục NGANG giữa khung, trục vẽ dần trái→phải rồi
   dừng tại node khi số chốt.
-- **Context**: trục thời gian ngang đầy đủ 4–5 mốc (node + nhãn năm/phiên bản dưới, giá trị trên),
-  node sau đậm/to hơn nếu số liệu tăng dần.
+- **Context**: trục thời gian đầy đủ 4–5 mốc (node + nhãn năm/phiên bản/mốc, giá trị đi kèm), node
+  sau đậm/to hơn nếu số liệu tăng dần. **Trên canvas dọc 1080×1920, dựng trục THEO CHIỀU DỌC** (trục
+  ngang thật sự chật hẹp trên khung 1080px hẹp) — xem code thật + kỹ thuật "trục vẽ dần theo scaleY"
+  ở mục 6.5 của `TECHNICAL-CONSTRUCTION-GUIDE.md`. "Ngang/dọc" ở đây chỉ là hướng trục, không đổi
+  ẩn dụ timeline.
 - **Impact**: 2 node cuối trục phóng to thành 2 khối tác động, vẫn giữ đường trục phía sau.
 
 ## Style 7 — Icon Grid
