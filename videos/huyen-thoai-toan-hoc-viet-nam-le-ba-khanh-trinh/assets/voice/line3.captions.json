@@ -1,0 +1,196 @@
+[
+  {
+    "words": [
+      {
+        "text": "Năm",
+        "start": 0.06
+      },
+      {
+        "text": "1979,",
+        "start": 0.26
+      },
+      {
+        "text": "mới",
+        "start": 1.72
+      },
+      {
+        "text": "17",
+        "start": 1.9
+      }
+    ],
+    "fadein": 0.06,
+    "fadeout": 2.26
+  },
+  {
+    "words": [
+      {
+        "text": "tuổi,",
+        "start": 2.26
+      },
+      {
+        "text": "chính",
+        "start": 2.72
+      },
+      {
+        "text": "thầy",
+        "start": 2.96
+      },
+      {
+        "text": "Trình",
+        "start": 3.16
+      }
+    ],
+    "fadein": 2.26,
+    "fadeout": 3.46
+  },
+  {
+    "words": [
+      {
+        "text": "từng",
+        "start": 3.46
+      },
+      {
+        "text": "giành",
+        "start": 3.66
+      },
+      {
+        "text": "giải",
+        "start": 3.92
+      },
+      {
+        "text": "Nhất",
+        "start": 4.12
+      }
+    ],
+    "fadein": 3.46,
+    "fadeout": 4.42
+  },
+  {
+    "words": [
+      {
+        "text": "Olympic",
+        "start": 4.42
+      },
+      {
+        "text": "Toán",
+        "start": 4.92
+      },
+      {
+        "text": "học",
+        "start": 5.14
+      },
+      {
+        "text": "quốc",
+        "start": 5.34
+      }
+    ],
+    "fadein": 4.42,
+    "fadeout": 5.56
+  },
+  {
+    "words": [
+      {
+        "text": "tế",
+        "start": 5.56
+      },
+      {
+        "text": "tại",
+        "start": 5.84
+      },
+      {
+        "text": "Luân",
+        "start": 6.0
+      },
+      {
+        "text": "Đôn",
+        "start": 6.0
+      }
+    ],
+    "fadein": 5.56,
+    "fadeout": 6.6
+  },
+  {
+    "words": [
+      {
+        "text": "với",
+        "start": 6.6
+      },
+      {
+        "text": "điểm",
+        "start": 6.78
+      },
+      {
+        "text": "tuyệt",
+        "start": 7.02
+      },
+      {
+        "text": "đối",
+        "start": 7.28
+      }
+    ],
+    "fadein": 6.6,
+    "fadeout": 7.64
+  },
+  {
+    "words": [
+      {
+        "text": "40",
+        "start": 7.64
+      },
+      {
+        "text": "trên",
+        "start": 8.1
+      },
+      {
+        "text": "40,",
+        "start": 8.3
+      },
+      {
+        "text": "cùng",
+        "start": 9.1
+      }
+    ],
+    "fadein": 7.64,
+    "fadeout": 9.3
+  },
+  {
+    "words": [
+      {
+        "text": "giải",
+        "start": 9.3
+      },
+      {
+        "text": "Đặc",
+        "start": 9.58
+      },
+      {
+        "text": "biệt",
+        "start": 9.74
+      },
+      {
+        "text": "duy",
+        "start": 10.04
+      }
+    ],
+    "fadein": 9.3,
+    "fadeout": 10.22
+  },
+  {
+    "words": [
+      {
+        "text": "nhất",
+        "start": 10.22
+      },
+      {
+        "text": "năm",
+        "start": 10.42
+      },
+      {
+        "text": "đó.",
+        "start": 10.6
+      }
+    ],
+    "fadein": 10.22,
+    "fadeout": 11.19
+  }
+]
