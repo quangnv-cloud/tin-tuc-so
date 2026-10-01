@@ -1,0 +1,74 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+
+    .c-kick { position: absolute; left: 60px; top: 320px; font-weight: 700; font-size: 27px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .c-row { position: absolute; left: 60px; right: 60px; height: 320px; border-radius: 20px; background: #121724; border: 1.5px solid rgba(255,255,255,0.09); padding: 30px 34px; opacity: 0; }
+    .c-row.r1 { top: 390px; } .c-row.r2 { top: 740px; } .c-row.r3 { top: 1090px; }
+    .c-idx { position: absolute; right: 30px; top: 22px; font-weight: 900; font-size: 54px; color: rgba(255,255,255,0.14); }
+    .c-name { font-weight: 900; font-size: 50px; line-height: 1.1; color: #fff; }
+    .c-ev { margin-top: 6px; font-weight: 500; font-size: 28px; color: rgba(255,255,255,0.62); }
+    .c-path { position: absolute; left: 34px; right: 34px; bottom: 30px; height: 120px; }
+    .c-pline { position: absolute; left: 30px; right: 30px; top: 26px; height: 4px; background: rgba(255,255,255,0.16); border-radius: 2px; }
+    .c-pfill { position: absolute; left: 30px; top: 26px; height: 4px; width: 0; background: #FF5A1F; border-radius: 2px; }
+    .c-node { position: absolute; top: 8px; width: 40px; height: 40px; border-radius: 50%; border: 4px solid #FF5A1F; background: #0B0E14; opacity: 0; }
+    .c-node.bad { border-color: #FF4438; background: #FF4438; }
+    .c-node.n1 { left: 10px; } .c-node.n2 { left: calc(50% - 20px); } .c-node.n3 { right: 10px; }
+    .c-nl { position: absolute; top: 62px; width: 33%; font-weight: 700; font-size: 24px; line-height: 1.2; color: rgba(255,255,255,0.88); text-align: center; opacity: 0; }
+    .c-nl.l1 { left: -3%; } .c-nl.l2 { left: 33.5%; } .c-nl.l3 { right: -3%; }
+    .c-nl b { color: #FF4438; font-weight: 900; }
+
+  </style>
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+    <div class="c-kick" id="c-kick">Sát cửa huy chương</div>
+    <div class="c-row r1" id="c-r1"><div class="c-idx">01</div><div class="c-name">Phạm Quang Huy</div><div class="c-ev">Bắn súng · 25m súng ngắn nam</div>
+      <div class="c-path"><div class="c-pline"></div><div class="c-pfill"></div>
+        <div class="c-node n1"></div><div class="c-node n2 bad"></div><div class="c-node n3 bad"></div><div class="c-nl l1">Vào chung kết</div><div class="c-nl l2">Hạng 4<br>20 điểm</div><div class="c-nl l3"><b>Kém HCĐ<br>1 điểm</b></div></div></div>
+    <div class="c-row r2" id="c-r2"><div class="c-idx">02</div><div class="c-name">Phùng Thị Huệ</div><div class="c-ev">Jujitsu · hạng 48kg nữ</div>
+      <div class="c-path"><div class="c-pline"></div><div class="c-pfill"></div>
+        <div class="c-node n1"></div><div class="c-node n2 bad"></div><div class="c-node n3 bad"></div><div class="c-nl l1">Thắng tứ kết</div><div class="c-nl l2">Thua bán kết<br>2–4</div><div class="c-nl l3"><b>Tranh HCĐ<br>thua 4–6</b></div></div></div>
+    <div class="c-row r3" id="c-r3"><div class="c-idx">03</div><div class="c-name">Đặng Công Đức</div><div class="c-ev">Bắn cung · cung ba dây nam</div>
+      <div class="c-path"><div class="c-pline"></div><div class="c-pfill"></div>
+        <div class="c-node n1"></div><div class="c-node n2 bad"></div><div class="c-node n3 bad"></div><div class="c-nl l1">Thắng tứ kết</div><div class="c-nl l2">Thua bán kết</div><div class="c-nl l3"><b>Tranh HCĐ<br>thua VĐV Ấn Độ</b></div></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#c-kick', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.05);
+    tl.fromTo('#c-r1', { autoAlpha: 0, y: 36 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.7);
+    tl.fromTo('#c-r1 .c-pfill', { width: 0 }, { width: 'calc(100% - 60px)', duration: 1.1, ease: 'power1.inOut' }, 1.1);
+    tl.fromTo('#c-r1 .c-node.n1', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 1.1);
+    tl.fromTo('#c-r1 .c-node.n2', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 1.6);
+    tl.fromTo('#c-r1 .c-node.n3', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 2.0999999999999996);
+    tl.to('#c-r1 .c-nl.l1', { autoAlpha: 1, duration: 0.3 }, 1.2);
+    tl.to('#c-r1 .c-nl.l2', { autoAlpha: 1, duration: 0.3 }, 1.7);
+    tl.to('#c-r1 .c-nl.l3', { autoAlpha: 1, duration: 0.3 }, 2.2);
+    tl.fromTo('#c-r2', { autoAlpha: 0, y: 36 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 3.5);
+    tl.fromTo('#c-r2 .c-pfill', { width: 0 }, { width: 'calc(100% - 60px)', duration: 1.1, ease: 'power1.inOut' }, 3.9);
+    tl.fromTo('#c-r2 .c-node.n1', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 3.9);
+    tl.fromTo('#c-r2 .c-node.n2', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 4.4);
+    tl.fromTo('#c-r2 .c-node.n3', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 4.9);
+    tl.to('#c-r2 .c-nl.l1', { autoAlpha: 1, duration: 0.3 }, 4.0);
+    tl.to('#c-r2 .c-nl.l2', { autoAlpha: 1, duration: 0.3 }, 4.5);
+    tl.to('#c-r2 .c-nl.l3', { autoAlpha: 1, duration: 0.3 }, 5.0);
+    tl.fromTo('#c-r3', { autoAlpha: 0, y: 36 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 5.9);
+    tl.fromTo('#c-r3 .c-pfill', { width: 0 }, { width: 'calc(100% - 60px)', duration: 1.1, ease: 'power1.inOut' }, 6.300000000000001);
+    tl.fromTo('#c-r3 .c-node.n1', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 6.300000000000001);
+    tl.fromTo('#c-r3 .c-node.n2', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 6.800000000000001);
+    tl.fromTo('#c-r3 .c-node.n3', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 7.300000000000001);
+    tl.to('#c-r3 .c-nl.l1', { autoAlpha: 1, duration: 0.3 }, 6.4);
+    tl.to('#c-r3 .c-nl.l2', { autoAlpha: 1, duration: 0.3 }, 6.9);
+    tl.to('#c-r3 .c-nl.l3', { autoAlpha: 1, duration: 0.3 }, 7.4);
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
