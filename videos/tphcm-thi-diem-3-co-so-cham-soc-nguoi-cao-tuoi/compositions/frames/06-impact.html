@@ -1,0 +1,138 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .cell { position: absolute; border-radius: 26px; border: 1.5px solid rgba(255,255,255,0.16); background: rgba(18,23,36,0.92); box-shadow: 0 0 40px rgba(255,90,31,0.14); opacity: 0; }
+    .cell.hl { border-color: rgba(255,90,31,0.85); background: linear-gradient(160deg, rgba(255,90,31,0.16), rgba(18,23,36,0.95) 60%); }
+    .kicker { position: absolute; left: 60px; top: 292px; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .ico { position: relative; flex: none; }
+    .im { top: 350px; width: 462px; height: 1010px; padding: 56px 34px 0; text-align: center; }
+    .im .ib { width: 200px; height: 200px; margin: 0 auto; border-radius: 44px; border: 1.5px solid rgba(255,90,31,0.5); background: rgba(255,90,31,0.1); display: flex; align-items: center; justify-content: center; }
+    .im .v { margin-top: 56px; font-weight: 900; font-size: 112px; line-height: 1.05; color: #FF5A1F; letter-spacing: -0.02em; }
+    .im .t { margin-top: 18px; font-weight: 800; font-size: 40px; line-height: 1.2; color: #fff; }
+    .im .l { margin-top: 24px; font-weight: 500; font-size: 28px; line-height: 1.4; color: rgba(255,255,255,0.78); }
+    #m1 { left: 60px; } #m2 { left: 558px; }
+    #im-note { position: absolute; left: 60px; right: 60px; top: 1392px; padding: 26px 30px; border-radius: 20px; border: 1.5px solid rgba(255,255,255,0.14); background: rgba(18,23,36,0.9); font-weight: 600; font-size: 25px; line-height: 1.4; color: rgba(255,255,255,0.8); text-align: center; opacity: 0; }
+
+    .cap-wrap { position: absolute; left: 56px; right: 56px; top: 1548px; min-height: 100px; z-index: 40; display: flex; align-items: center; justify-content: center; text-align: center; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 6px; opacity: 0; font-weight: 800; font-size: 38px; line-height: 1.3; letter-spacing: -0.005em; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 26px rgba(0,0,0,0.6); }
+    .cap-chunk .w { color: rgba(255,255,255,0.55); }
+    .cutflash { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: 0; background: linear-gradient(180deg, rgba(255,90,31,0.4), rgba(255,68,56,0.18)); }
+  </style>
+
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+    <div class="kicker" id="kk">Bối cảnh và động thái mới</div>
+    <div class="cell im hl" id="m1"><div class="ib"><svg width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#FF5A1F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="22" r="8"/><circle cx="43" cy="26" r="6"/><path d="M8 54c0-9 7-15 16-15s16 6 16 15"/><path d="M42 40c8 0 14 5 14 13"/></svg></div><div class="v">11,4%</div><div class="t">dân số TP.HCM là người cao tuổi</div><div class="l">Khoảng 1,57 triệu người, theo thống kê năm 2025</div></div>
+    <div class="cell im" id="m2"><div class="ib"><svg width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#FF5A1F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30L32 10l24 20"/><path d="M14 26v28h36V26"/><path d="M27 54V38h10v16"/></svg></div><div class="v">Tại nhà</div><div class="t">Bộ Y tế cho phép khám sức khỏe</div><div class="l">Địa phương được tổ chức khám tại nhà hoặc khám lưu động cho người cao tuổi, người nằm một chỗ</div></div>
+    <div id="im-note">Phương án thí điểm vẫn là dự thảo, cần theo dõi thông báo chính thức</div>
+    <div class="cutflash" id="cutflash"></div>
+    <div class="cap-wrap">
+      <div class="cap-chunk" id="cap06-1"><span class="w" id="cap06-1-w1">Năm</span><span class="w" id="cap06-1-w2">hai</span><span class="w" id="cap06-1-w3">nghìn</span><span class="w" id="cap06-1-w4">không</span><span class="w" id="cap06-1-w5">trăm</span></div>
+      <div class="cap-chunk" id="cap06-2"><span class="w" id="cap06-2-w1">hai</span><span class="w" id="cap06-2-w2">mươi</span><span class="w" id="cap06-2-w3">lăm,</span></div>
+      <div class="cap-chunk" id="cap06-3"><span class="w" id="cap06-3-w1">người</span><span class="w" id="cap06-3-w2">cao</span><span class="w" id="cap06-3-w3">tuổi</span><span class="w" id="cap06-3-w4">chiếm</span><span class="w" id="cap06-3-w5">mười</span></div>
+      <div class="cap-chunk" id="cap06-4"><span class="w" id="cap06-4-w1">một</span><span class="w" id="cap06-4-w2">phẩy</span><span class="w" id="cap06-4-w3">bốn</span><span class="w" id="cap06-4-w4">phần</span><span class="w" id="cap06-4-w5">trăm</span></div>
+      <div class="cap-chunk" id="cap06-5"><span class="w" id="cap06-5-w1">dân</span><span class="w" id="cap06-5-w2">số</span><span class="w" id="cap06-5-w3">thành</span><span class="w" id="cap06-5-w4">phố.</span></div>
+      <div class="cap-chunk" id="cap06-6"><span class="w" id="cap06-6-w1">Ngày</span><span class="w" id="cap06-6-w2">ba</span><span class="w" id="cap06-6-w3">mươi</span><span class="w" id="cap06-6-w4">tháng</span><span class="w" id="cap06-6-w5">chín,</span></div>
+      <div class="cap-chunk" id="cap06-7"><span class="w" id="cap06-7-w1">Bộ</span><span class="w" id="cap06-7-w2">Y</span><span class="w" id="cap06-7-w3">tế</span><span class="w" id="cap06-7-w4">cũng</span><span class="w" id="cap06-7-w5">cho</span></div>
+      <div class="cap-chunk" id="cap06-8"><span class="w" id="cap06-8-w1">phép</span><span class="w" id="cap06-8-w2">địa</span><span class="w" id="cap06-8-w3">phương</span><span class="w" id="cap06-8-w4">khám</span><span class="w" id="cap06-8-w5">sức</span></div>
+      <div class="cap-chunk" id="cap06-9"><span class="w" id="cap06-9-w1">khỏe</span><span class="w" id="cap06-9-w2">tại</span><span class="w" id="cap06-9-w3">nhà</span><span class="w" id="cap06-9-w4">cho</span><span class="w" id="cap06-9-w5">người</span></div>
+      <div class="cap-chunk" id="cap06-10"><span class="w" id="cap06-10-w1">cao</span><span class="w" id="cap06-10-w2">tuổi</span><span class="w" id="cap06-10-w3">và</span><span class="w" id="cap06-10-w4">người</span><span class="w" id="cap06-10-w5">nằm</span></div>
+      <div class="cap-chunk" id="cap06-11"><span class="w" id="cap06-11-w1">một</span><span class="w" id="cap06-11-w2">chỗ.</span></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#kk', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.36 }, 0.05);
+    tl.fromTo('#m1', { autoAlpha: 0, y: 36, scale: 0.95 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: 'back.out(1.4)' }, 0.25);
+    tl.fromTo('#m2', { autoAlpha: 0, y: 36, scale: 0.95 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: 'back.out(1.4)' }, 4.34);
+    tl.fromTo('#im-note', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 5.64);
+    tl.fromTo('#cutflash', { opacity: 0 }, { opacity: 0.55, duration: 0.05, ease: 'none' }, 4.32);
+    tl.to('#cutflash', { opacity: 0, duration: 0.16, ease: 'power1.in' }, 4.37);
+    tl.fromTo('#cap06-1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 0.050);
+    tl.fromTo('#cap06-1-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.050);
+    tl.fromTo('#cap06-1-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.200);
+    tl.fromTo('#cap06-1-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.314);
+    tl.fromTo('#cap06-1-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.503);
+    tl.fromTo('#cap06-1-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.692);
+    tl.set('#cap06-1', { autoAlpha: 0 }, 0.844);
+    tl.fromTo('#cap06-2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 0.844);
+    tl.fromTo('#cap06-2-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.844);
+    tl.fromTo('#cap06-2-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 0.957);
+    tl.fromTo('#cap06-2-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.109);
+    tl.set('#cap06-2', { autoAlpha: 0 }, 1.260);
+    tl.fromTo('#cap06-3', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 1.260);
+    tl.fromTo('#cap06-3-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.260);
+    tl.fromTo('#cap06-3-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.500);
+    tl.fromTo('#cap06-3-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.700);
+    tl.fromTo('#cap06-3-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 1.970);
+    tl.fromTo('#cap06-3-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.290);
+    tl.set('#cap06-3', { autoAlpha: 0 }, 2.435);
+    tl.fromTo('#cap06-4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 2.435);
+    tl.fromTo('#cap06-4-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.435);
+    tl.fromTo('#cap06-4-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.545);
+    tl.fromTo('#cap06-4-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.690);
+    tl.fromTo('#cap06-4-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.799);
+    tl.fromTo('#cap06-4-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 2.945);
+    tl.set('#cap06-4', { autoAlpha: 0 }, 3.090);
+    tl.fromTo('#cap06-5', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 3.090);
+    tl.fromTo('#cap06-5-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.090);
+    tl.fromTo('#cap06-5-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.290);
+    tl.fromTo('#cap06-5-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.430);
+    tl.fromTo('#cap06-5-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 3.830);
+    tl.set('#cap06-5', { autoAlpha: 0 }, 4.440);
+    tl.fromTo('#cap06-6', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 4.440);
+    tl.fromTo('#cap06-6-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.440);
+    tl.fromTo('#cap06-6-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.510);
+    tl.fromTo('#cap06-6-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.587);
+    tl.fromTo('#cap06-6-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.740);
+    tl.fromTo('#cap06-6-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 4.960);
+    tl.set('#cap06-6', { autoAlpha: 0 }, 5.550);
+    tl.fromTo('#cap06-7', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 5.550);
+    tl.fromTo('#cap06-7-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.550);
+    tl.fromTo('#cap06-7-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.620);
+    tl.fromTo('#cap06-7-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.710);
+    tl.fromTo('#cap06-7-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 5.800);
+    tl.fromTo('#cap06-7-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.040);
+    tl.set('#cap06-7', { autoAlpha: 0 }, 6.220);
+    tl.fromTo('#cap06-8', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 6.220);
+    tl.fromTo('#cap06-8-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.220);
+    tl.fromTo('#cap06-8-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.460);
+    tl.fromTo('#cap06-8-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 6.760);
+    tl.fromTo('#cap06-8-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.000);
+    tl.fromTo('#cap06-8-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.240);
+    tl.set('#cap06-8', { autoAlpha: 0 }, 7.470);
+    tl.fromTo('#cap06-9', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 7.470);
+    tl.fromTo('#cap06-9-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.470);
+    tl.fromTo('#cap06-9-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.660);
+    tl.fromTo('#cap06-9-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 7.840);
+    tl.fromTo('#cap06-9-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.120);
+    tl.fromTo('#cap06-9-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.250);
+    tl.set('#cap06-9', { autoAlpha: 0 }, 8.470);
+    tl.fromTo('#cap06-10', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 8.470);
+    tl.fromTo('#cap06-10-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.470);
+    tl.fromTo('#cap06-10-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.620);
+    tl.fromTo('#cap06-10-w3', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.880);
+    tl.fromTo('#cap06-10-w4', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 8.980);
+    tl.fromTo('#cap06-10-w5', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.310);
+    tl.set('#cap06-10', { autoAlpha: 0 }, 9.440);
+    tl.fromTo('#cap06-11', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08 }, 9.440);
+    tl.fromTo('#cap06-11-w1', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.440);
+    tl.fromTo('#cap06-11-w2', { color: 'rgba(255,255,255,0.55)' }, { color: '#FF5A1F', duration: 0.1 }, 9.750);
+    tl.set('#cap06-11', { autoAlpha: 0 }, 10.450);
+
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
