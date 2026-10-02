@@ -1,0 +1,139 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .kcap-band { position: absolute; left: 90px; right: 90px; top: 128px; text-align: center; z-index: 12; pointer-events: none; }
+    .kcap-chunk { position: absolute; left: 0; right: 0; top: 0; font-weight: 700; font-size: 32px; line-height: 1.35; opacity: 0; visibility: hidden; }
+    .kcap-chunk .w { color: rgba(255,255,255,0.88); text-shadow: 0 2px 14px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.95); margin: 0 3px; }
+
+
+    .wh-wrap { position: absolute; left: 60px; right: 60px; top: 300px; }
+    .wh-card { position: relative; border-radius: 24px; overflow: hidden; background: #121724; box-shadow: 0 0 40px rgba(255,90,31,0.14); opacity: 0; }
+    .wh-card img { display: block; width: 100%; height: 600px; object-fit: cover; object-position: 50% 55%; }
+    .wh-card .fr { position: absolute; inset: 0; border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); }
+    .wh-panel { margin-top: 28px; padding: 40px 40px 44px; border-radius: 24px; background: #121724; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 0 40px rgba(255,90,31,0.10); opacity: 0; }
+    .wh-kicker { font-weight: 700; font-size: 26px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; }
+    .wh-head { margin-top: 22px; font-weight: 800; font-size: 54px; line-height: 1.28; color: #fff; }
+    .wh-head .ln { overflow: hidden; }
+    .wh-head .ln > span { display: block; opacity: 0; }
+    .wh-head .hi { color: #FF5A1F; }
+    .wh-sub { margin-top: 26px; font-weight: 500; font-size: 34px; line-height: 1.45; color: rgba(255,255,255,0.74); opacity: 0; }
+
+  </style>
+
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+    <div class="kcap-band">
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-1"><span class="w" id="c2-1-w1">Theo</span> <span class="w" id="c2-1-w2">Trung</span> <span class="w" id="c2-1-w3">tâm</span> <span class="w" id="c2-1-w4">Dự</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-2"><span class="w" id="c2-2-w1">báo</span> <span class="w" id="c2-2-w2">khí</span> <span class="w" id="c2-2-w3">tượng</span> <span class="w" id="c2-2-w4">thủy</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-3"><span class="w" id="c2-3-w1">văn</span> <span class="w" id="c2-3-w2">quốc</span> <span class="w" id="c2-3-w3">gia,</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-4"><span class="w" id="c2-4-w1">khoảng</span> <span class="w" id="c2-4-w2">đêm</span> <span class="w" id="c2-4-w3">4</span> <span class="w" id="c2-4-w4">và</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-5"><span class="w" id="c2-5-w1">rạng</span> <span class="w" id="c2-5-w2">sáng</span> <span class="w" id="c2-5-w3">5</span> <span class="w" id="c2-5-w4">tháng</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-6"><span class="w" id="c2-6-w1">10,</span> <span class="w" id="c2-6-w2">không</span> <span class="w" id="c2-6-w3">khí</span> <span class="w" id="c2-6-w4">lạnh</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-7"><span class="w" id="c2-7-w1">cường</span> <span class="w" id="c2-7-w2">độ</span> <span class="w" id="c2-7-w3">khá</span> <span class="w" id="c2-7-w4">mạnh</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-8"><span class="w" id="c2-8-w1">sẽ</span> <span class="w" id="c2-8-w2">tràn</span> <span class="w" id="c2-8-w3">xuống</span> <span class="w" id="c2-8-w4">miền</span></div>
+      <div class="kcap-chunk" data-layout-allow-overlap="" id="c2-9"><span class="w" id="c2-9-w1">Bắc,</span> <span class="w" id="c2-9-w2">kéo</span> <span class="w" id="c2-9-w3">theo</span> <span class="w" id="c2-9-w4">mưa</span> <span class="w" id="c2-9-w5">dông.</span></div>
+    </div>
+
+    <div class="wh-wrap">
+      <div class="wh-card" id="wh-card"><img src="assets/img/article-hero.jpg" alt=""><div class="fr"></div></div>
+      <div class="wh-panel" id="wh-panel">
+        <div class="wh-kicker">Chuyện gì xảy ra</div>
+        <div class="wh-head">
+          <div class="ln"><span id="wh-h1">Không khí lạnh <span class="hi">khá mạnh</span></span></div>
+          <div class="ln"><span id="wh-h2">tràn xuống miền Bắc</span></div>
+          <div class="ln"><span id="wh-h3">đêm 4 &ndash; rạng sáng <span class="hi">5/10</span></span></div>
+        </div>
+        <div class="wh-sub" id="wh-sub">Kéo theo mưa dông, theo Trung tâm Dự báo khí tượng thủy văn quốc gia.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#wh-card', { autoAlpha: 0, y: 30, scale: 0.97 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.55, ease: 'power3.out' }, 0);
+    tl.fromTo('#wh-panel', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.4);
+    tl.fromTo('#wh-h1', { yPercent: 118 }, { yPercent: 0, autoAlpha: 1, duration: 0.5, ease: 'power4.out' }, 0.9);
+    tl.fromTo('#wh-h2', { yPercent: 118 }, { yPercent: 0, autoAlpha: 1, duration: 0.5, ease: 'power4.out' }, 1.05);
+    tl.fromTo('#wh-h3', { yPercent: 118 }, { yPercent: 0, autoAlpha: 1, duration: 0.5, ease: 'power4.out' }, 1.2);
+    tl.fromTo('#wh-sub', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 1.7);
+
+
+    tl.set('#c2-1', {autoAlpha:0}, 0);
+    tl.to('#c2-1', {autoAlpha:1, duration:0.12}, 0.0);
+    tl.to('#c2-1', {autoAlpha:0, duration:0.12}, 0.622);
+    tl.to('#c2-1-w1', {color:'#FF5A1F', duration:0.1}, 0.0);
+    tl.to('#c2-1-w2', {color:'#FF5A1F', duration:0.1}, 0.155);
+    tl.to('#c2-1-w3', {color:'#FF5A1F', duration:0.1}, 0.311);
+    tl.to('#c2-1-w4', {color:'#FF5A1F', duration:0.1}, 0.466);
+    tl.set('#c2-2', {autoAlpha:0}, 0);
+    tl.to('#c2-2', {autoAlpha:1, duration:0.12}, 0.622);
+    tl.to('#c2-2', {autoAlpha:0, duration:0.12}, 1.243);
+    tl.to('#c2-2-w1', {color:'#FF5A1F', duration:0.1}, 0.622);
+    tl.to('#c2-2-w2', {color:'#FF5A1F', duration:0.1}, 0.777);
+    tl.to('#c2-2-w3', {color:'#FF5A1F', duration:0.1}, 0.933);
+    tl.to('#c2-2-w4', {color:'#FF5A1F', duration:0.1}, 1.088);
+    tl.set('#c2-3', {autoAlpha:0}, 0);
+    tl.to('#c2-3', {autoAlpha:1, duration:0.12}, 1.243);
+    tl.to('#c2-3', {autoAlpha:0, duration:0.12}, 1.749);
+    tl.to('#c2-3-w1', {color:'#FF5A1F', duration:0.1}, 1.243);
+    tl.to('#c2-3-w2', {color:'#FF5A1F', duration:0.1}, 1.399);
+    tl.to('#c2-3-w3', {color:'#FF5A1F', duration:0.1}, 1.554);
+    tl.set('#c2-4', {autoAlpha:0}, 0);
+    tl.to('#c2-4', {autoAlpha:1, duration:0.12}, 1.749);
+    tl.to('#c2-4', {autoAlpha:0, duration:0.12}, 2.979);
+    tl.to('#c2-4-w1', {color:'#FF5A1F', duration:0.1}, 1.749);
+    tl.to('#c2-4-w2', {color:'#FF5A1F', duration:0.1}, 1.904);
+    tl.to('#c2-4-w3', {color:'#FF5A1F', duration:0.1}, 2.342);
+    tl.to('#c2-4-w4', {color:'#FF5A1F', duration:0.1}, 2.684);
+    tl.set('#c2-5', {autoAlpha:0}, 0);
+    tl.to('#c2-5', {autoAlpha:1, duration:0.12}, 2.979);
+    tl.to('#c2-5', {autoAlpha:0, duration:0.12}, 3.787);
+    tl.to('#c2-5-w1', {color:'#FF5A1F', duration:0.1}, 2.979);
+    tl.to('#c2-5-w2', {color:'#FF5A1F', duration:0.1}, 3.135);
+    tl.to('#c2-5-w3', {color:'#FF5A1F', duration:0.1}, 3.29);
+    tl.to('#c2-5-w4', {color:'#FF5A1F', duration:0.1}, 3.632);
+    tl.set('#c2-6', {autoAlpha:0}, 0);
+    tl.to('#c2-6', {autoAlpha:1, duration:0.12}, 3.787);
+    tl.to('#c2-6', {autoAlpha:0, duration:0.12}, 4.963);
+    tl.to('#c2-6-w1', {color:'#FF5A1F', duration:0.1}, 3.787);
+    tl.to('#c2-6-w2', {color:'#FF5A1F', duration:0.1}, 4.496);
+    tl.to('#c2-6-w3', {color:'#FF5A1F', duration:0.1}, 4.652);
+    tl.to('#c2-6-w4', {color:'#FF5A1F', duration:0.1}, 4.807);
+    tl.set('#c2-7', {autoAlpha:0}, 0);
+    tl.to('#c2-7', {autoAlpha:1, duration:0.12}, 4.963);
+    tl.to('#c2-7', {autoAlpha:0, duration:0.12}, 5.584);
+    tl.to('#c2-7-w1', {color:'#FF5A1F', duration:0.1}, 4.963);
+    tl.to('#c2-7-w2', {color:'#FF5A1F', duration:0.1}, 5.118);
+    tl.to('#c2-7-w3', {color:'#FF5A1F', duration:0.1}, 5.274);
+    tl.to('#c2-7-w4', {color:'#FF5A1F', duration:0.1}, 5.429);
+    tl.set('#c2-8', {autoAlpha:0}, 0);
+    tl.to('#c2-8', {autoAlpha:1, duration:0.12}, 5.584);
+    tl.to('#c2-8', {autoAlpha:0, duration:0.12}, 6.206);
+    tl.to('#c2-8-w1', {color:'#FF5A1F', duration:0.1}, 5.584);
+    tl.to('#c2-8-w2', {color:'#FF5A1F', duration:0.1}, 5.74);
+    tl.to('#c2-8-w3', {color:'#FF5A1F', duration:0.1}, 5.895);
+    tl.to('#c2-8-w4', {color:'#FF5A1F', duration:0.1}, 6.051);
+    tl.set('#c2-9', {autoAlpha:0}, 0);
+    tl.to('#c2-9', {autoAlpha:1, duration:0.12}, 6.206);
+    tl.to('#c2-9', {autoAlpha:0, duration:0.12}, 7.613);
+    tl.to('#c2-9-w1', {color:'#FF5A1F', duration:0.1}, 6.206);
+    tl.to('#c2-9-w2', {color:'#FF5A1F', duration:0.1}, 6.4);
+    tl.to('#c2-9-w3', {color:'#FF5A1F', duration:0.1}, 6.808);
+    tl.to('#c2-9-w4', {color:'#FF5A1F', duration:0.1}, 6.964);
+    tl.to('#c2-9-w5', {color:'#FF5A1F', duration:0.1}, 7.119);
+
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>

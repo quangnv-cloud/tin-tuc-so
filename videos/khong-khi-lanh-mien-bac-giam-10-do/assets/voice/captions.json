@@ -1,0 +1,1346 @@
+{
+ "1": [
+  {
+   "words": [
+    {
+     "text": "Một",
+     "start": 0.0
+    },
+    {
+     "text": "đợt",
+     "start": 0.16
+    },
+    {
+     "text": "không",
+     "start": 0.32
+    },
+    {
+     "text": "khí",
+     "start": 0.48
+    }
+   ],
+   "fadein": 0.0,
+   "fadeout": 0.64
+  },
+  {
+   "words": [
+    {
+     "text": "lạnh",
+     "start": 0.64
+    },
+    {
+     "text": "khá",
+     "start": 0.799
+    },
+    {
+     "text": "mạnh",
+     "start": 0.959
+    },
+    {
+     "text": "sắp",
+     "start": 1.119
+    }
+   ],
+   "fadein": 0.64,
+   "fadeout": 1.279
+  },
+  {
+   "words": [
+    {
+     "text": "tràn",
+     "start": 1.279
+    },
+    {
+     "text": "xuống",
+     "start": 1.439
+    },
+    {
+     "text": "miền",
+     "start": 1.599
+    },
+    {
+     "text": "Bắc,",
+     "start": 1.759
+    }
+   ],
+   "fadein": 1.279,
+   "fadeout": 1.959
+  },
+  {
+   "words": [
+    {
+     "text": "nhiệt",
+     "start": 1.959
+    },
+    {
+     "text": "độ",
+     "start": 2.381
+    },
+    {
+     "text": "có",
+     "start": 2.541
+    },
+    {
+     "text": "nơi",
+     "start": 2.701
+    }
+   ],
+   "fadein": 1.959,
+   "fadeout": 2.861
+  },
+  {
+   "words": [
+    {
+     "text": "giảm",
+     "start": 2.861
+    },
+    {
+     "text": "tới",
+     "start": 3.021
+    },
+    {
+     "text": "10",
+     "start": 3.181
+    },
+    {
+     "text": "độ",
+     "start": 3.533
+    },
+    {
+     "text": "C.",
+     "start": 3.692
+    }
+   ],
+   "fadein": 2.861,
+   "fadeout": 4.192
+  }
+ ],
+ "2": [
+  {
+   "words": [
+    {
+     "text": "Theo",
+     "start": 0.0
+    },
+    {
+     "text": "Trung",
+     "start": 0.155
+    },
+    {
+     "text": "tâm",
+     "start": 0.311
+    },
+    {
+     "text": "Dự",
+     "start": 0.466
+    }
+   ],
+   "fadein": 0.0,
+   "fadeout": 0.622
+  },
+  {
+   "words": [
+    {
+     "text": "báo",
+     "start": 0.622
+    },
+    {
+     "text": "khí",
+     "start": 0.777
+    },
+    {
+     "text": "tượng",
+     "start": 0.933
+    },
+    {
+     "text": "thủy",
+     "start": 1.088
+    }
+   ],
+   "fadein": 0.622,
+   "fadeout": 1.243
+  },
+  {
+   "words": [
+    {
+     "text": "văn",
+     "start": 1.243
+    },
+    {
+     "text": "quốc",
+     "start": 1.399
+    },
+    {
+     "text": "gia,",
+     "start": 1.554
+    }
+   ],
+   "fadein": 1.243,
+   "fadeout": 1.749
+  },
+  {
+   "words": [
+    {
+     "text": "khoảng",
+     "start": 1.749
+    },
+    {
+     "text": "đêm",
+     "start": 1.904
+    },
+    {
+     "text": "4",
+     "start": 2.342
+    },
+    {
+     "text": "và",
+     "start": 2.684
+    }
+   ],
+   "fadein": 1.749,
+   "fadeout": 2.979
+  },
+  {
+   "words": [
+    {
+     "text": "rạng",
+     "start": 2.979
+    },
+    {
+     "text": "sáng",
+     "start": 3.135
+    },
+    {
+     "text": "5",
+     "start": 3.29
+    },
+    {
+     "text": "tháng",
+     "start": 3.632
+    }
+   ],
+   "fadein": 2.979,
+   "fadeout": 3.787
+  },
+  {
+   "words": [
+    {
+     "text": "10,",
+     "start": 3.787
+    },
+    {
+     "text": "không",
+     "start": 4.496
+    },
+    {
+     "text": "khí",
+     "start": 4.652
+    },
+    {
+     "text": "lạnh",
+     "start": 4.807
+    }
+   ],
+   "fadein": 3.787,
+   "fadeout": 4.963
+  },
+  {
+   "words": [
+    {
+     "text": "cường",
+     "start": 4.963
+    },
+    {
+     "text": "độ",
+     "start": 5.118
+    },
+    {
+     "text": "khá",
+     "start": 5.274
+    },
+    {
+     "text": "mạnh",
+     "start": 5.429
+    }
+   ],
+   "fadein": 4.963,
+   "fadeout": 5.584
+  },
+  {
+   "words": [
+    {
+     "text": "sẽ",
+     "start": 5.584
+    },
+    {
+     "text": "tràn",
+     "start": 5.74
+    },
+    {
+     "text": "xuống",
+     "start": 5.895
+    },
+    {
+     "text": "miền",
+     "start": 6.051
+    }
+   ],
+   "fadein": 5.584,
+   "fadeout": 6.206
+  },
+  {
+   "words": [
+    {
+     "text": "Bắc,",
+     "start": 6.206
+    },
+    {
+     "text": "kéo",
+     "start": 6.4
+    },
+    {
+     "text": "theo",
+     "start": 6.808
+    },
+    {
+     "text": "mưa",
+     "start": 6.964
+    },
+    {
+     "text": "dông.",
+     "start": 7.119
+    }
+   ],
+   "fadein": 6.206,
+   "fadeout": 7.613
+  }
+ ],
+ "3": [
+  {
+   "words": [
+    {
+     "text": "Từ",
+     "start": 0.0
+    },
+    {
+     "text": "chiều",
+     "start": 0.15
+    },
+    {
+     "text": "tối",
+     "start": 0.3
+    },
+    {
+     "text": "4",
+     "start": 0.45
+    }
+   ],
+   "fadein": 0.0,
+   "fadeout": 0.78
+  },
+  {
+   "words": [
+    {
+     "text": "đến",
+     "start": 0.78
+    },
+    {
+     "text": "trưa",
+     "start": 0.93
+    },
+    {
+     "text": "5",
+     "start": 1.08
+    },
+    {
+     "text": "tháng",
+     "start": 1.41
+    }
+   ],
+   "fadein": 0.78,
+   "fadeout": 1.56
+  },
+  {
+   "words": [
+    {
+     "text": "10,",
+     "start": 1.56
+    },
+    {
+     "text": "Bắc",
+     "start": 2.226
+    },
+    {
+     "text": "Bộ",
+     "start": 2.376
+    },
+    {
+     "text": "có",
+     "start": 2.526
+    }
+   ],
+   "fadein": 1.56,
+   "fadeout": 2.942
+  },
+  {
+   "words": [
+    {
+     "text": "mưa",
+     "start": 2.942
+    },
+    {
+     "text": "vừa,",
+     "start": 3.092
+    },
+    {
+     "text": "một",
+     "start": 3.28
+    },
+    {
+     "text": "số",
+     "start": 3.43
+    }
+   ],
+   "fadein": 2.942,
+   "fadeout": 3.58
+  },
+  {
+   "words": [
+    {
+     "text": "nơi",
+     "start": 3.58
+    },
+    {
+     "text": "mưa",
+     "start": 3.73
+    },
+    {
+     "text": "to",
+     "start": 3.88
+    },
+    {
+     "text": "và",
+     "start": 4.03
+    }
+   ],
+   "fadein": 3.58,
+   "fadeout": 4.18
+  },
+  {
+   "words": [
+    {
+     "text": "dông;",
+     "start": 4.18
+    },
+    {
+     "text": "khu",
+     "start": 4.656
+    },
+    {
+     "text": "vực",
+     "start": 4.806
+    },
+    {
+     "text": "phía",
+     "start": 4.956
+    }
+   ],
+   "fadein": 4.18,
+   "fadeout": 5.106
+  },
+  {
+   "words": [
+    {
+     "text": "đông",
+     "start": 5.106
+    },
+    {
+     "text": "Bắc",
+     "start": 5.256
+    },
+    {
+     "text": "Bộ",
+     "start": 5.406
+    },
+    {
+     "text": "chịu",
+     "start": 5.557
+    }
+   ],
+   "fadein": 5.106,
+   "fadeout": 5.707
+  },
+  {
+   "words": [
+    {
+     "text": "ảnh",
+     "start": 5.707
+    },
+    {
+     "text": "hưởng",
+     "start": 5.857
+    },
+    {
+     "text": "rõ",
+     "start": 6.007
+    },
+    {
+     "text": "rệt",
+     "start": 6.157
+    },
+    {
+     "text": "nhất.",
+     "start": 6.307
+    }
+   ],
+   "fadein": 5.707,
+   "fadeout": 6.794
+  }
+ ],
+ "4": [
+  {
+   "words": [
+    {
+     "text": "Nhiệt",
+     "start": 0.0
+    },
+    {
+     "text": "độ",
+     "start": 0.142
+    },
+    {
+     "text": "miền",
+     "start": 0.285
+    },
+    {
+     "text": "Bắc",
+     "start": 0.427
+    }
+   ],
+   "fadein": 0.0,
+   "fadeout": 0.569
+  },
+  {
+   "words": [
+    {
+     "text": "dự",
+     "start": 0.569
+    },
+    {
+     "text": "báo",
+     "start": 0.711
+    },
+    {
+     "text": "giảm",
+     "start": 0.854
+    },
+    {
+     "text": "mạnh",
+     "start": 0.996
+    }
+   ],
+   "fadein": 0.569,
+   "fadeout": 1.138
+  },
+  {
+   "words": [
+    {
+     "text": "từ",
+     "start": 1.138
+    },
+    {
+     "text": "8",
+     "start": 1.28
+    },
+    {
+     "text": "đến",
+     "start": 1.593
+    },
+    {
+     "text": "10",
+     "start": 1.736
+    }
+   ],
+   "fadein": 1.138,
+   "fadeout": 2.049
+  },
+  {
+   "words": [
+    {
+     "text": "độ",
+     "start": 2.049
+    },
+    {
+     "text": "C.",
+     "start": 2.191
+    },
+    {
+     "text": "Hà",
+     "start": 2.369
+    },
+    {
+     "text": "Nội",
+     "start": 2.511
+    }
+   ],
+   "fadein": 2.049,
+   "fadeout": 3.111
+  },
+  {
+   "words": [
+    {
+     "text": "ngày",
+     "start": 3.111
+    },
+    {
+     "text": "2",
+     "start": 3.253
+    },
+    {
+     "text": "tháng",
+     "start": 3.566
+    },
+    {
+     "text": "10",
+     "start": 3.709
+    }
+   ],
+   "fadein": 3.111,
+   "fadeout": 4.022
+  },
+  {
+   "words": [
+    {
+     "text": "cao",
+     "start": 4.022
+    },
+    {
+     "text": "nhất",
+     "start": 4.313
+    },
+    {
+     "text": "32",
+     "start": 4.455
+    },
+    {
+     "text": "đến",
+     "start": 4.768
+    }
+   ],
+   "fadein": 4.022,
+   "fadeout": 4.91
+  },
+  {
+   "words": [
+    {
+     "text": "34",
+     "start": 4.91
+    },
+    {
+     "text": "độ",
+     "start": 5.223
+    },
+    {
+     "text": "C,",
+     "start": 5.365
+    }
+   ],
+   "fadein": 4.91,
+   "fadeout": 5.815
+  },
+  {
+   "words": [
+    {
+     "text": "nhưng",
+     "start": 5.815
+    },
+    {
+     "text": "ngày",
+     "start": 5.957
+    },
+    {
+     "text": "4",
+     "start": 6.1
+    },
+    {
+     "text": "tháng",
+     "start": 6.413
+    }
+   ],
+   "fadein": 5.815,
+   "fadeout": 6.555
+  },
+  {
+   "words": [
+    {
+     "text": "10",
+     "start": 6.555
+    },
+    {
+     "text": "chỉ",
+     "start": 6.868
+    },
+    {
+     "text": "còn",
+     "start": 7.01
+    },
+    {
+     "text": "khoảng",
+     "start": 7.152
+    }
+   ],
+   "fadein": 6.555,
+   "fadeout": 7.295
+  },
+  {
+   "words": [
+    {
+     "text": "27",
+     "start": 7.295
+    },
+    {
+     "text": "độ",
+     "start": 7.608
+    },
+    {
+     "text": "C.",
+     "start": 7.75
+    }
+   ],
+   "fadein": 7.295,
+   "fadeout": 8.228
+  }
+ ],
+ "5": [
+  {
+   "words": [
+    {
+     "text": "Ngày",
+     "start": 0.0
+    },
+    {
+     "text": "5",
+     "start": 0.139
+    },
+    {
+     "text": "và",
+     "start": 0.446
+    },
+    {
+     "text": "6",
+     "start": 0.585
+    }
+   ],
+   "fadein": 0.0,
+   "fadeout": 0.891
+  },
+  {
+   "words": [
+    {
+     "text": "tháng",
+     "start": 0.891
+    },
+    {
+     "text": "10,",
+     "start": 1.03
+    },
+    {
+     "text": "miền",
+     "start": 1.686
+    },
+    {
+     "text": "Bắc",
+     "start": 1.825
+    }
+   ],
+   "fadein": 0.891,
+   "fadeout": 1.964
+  },
+  {
+   "words": [
+    {
+     "text": "đêm",
+     "start": 1.964
+    },
+    {
+     "text": "và",
+     "start": 2.103
+    },
+    {
+     "text": "sáng",
+     "start": 2.243
+    },
+    {
+     "text": "trời",
+     "start": 2.382
+    }
+   ],
+   "fadein": 1.964,
+   "fadeout": 2.521
+  },
+  {
+   "words": [
+    {
+     "text": "lạnh,",
+     "start": 2.521
+    },
+    {
+     "text": "vùng",
+     "start": 2.951
+    },
+    {
+     "text": "núi",
+     "start": 3.09
+    },
+    {
+     "text": "trời",
+     "start": 3.23
+    }
+   ],
+   "fadein": 2.521,
+   "fadeout": 3.369
+  },
+  {
+   "words": [
+    {
+     "text": "rét.",
+     "start": 3.369
+    },
+    {
+     "text": "Từ",
+     "start": 4.004
+    },
+    {
+     "text": "đêm",
+     "start": 4.143
+    },
+    {
+     "text": "4",
+     "start": 4.283
+    }
+   ],
+   "fadein": 3.369,
+   "fadeout": 4.589
+  },
+  {
+   "words": [
+    {
+     "text": "đến",
+     "start": 4.589
+    },
+    {
+     "text": "ngày",
+     "start": 4.728
+    },
+    {
+     "text": "6,",
+     "start": 4.867
+    }
+   ],
+   "fadein": 4.589,
+   "fadeout": 5.499
+  },
+  {
+   "words": [
+    {
+     "text": "khu",
+     "start": 5.499
+    },
+    {
+     "text": "vực",
+     "start": 5.638
+    },
+    {
+     "text": "Thanh",
+     "start": 5.778
+    },
+    {
+     "text": "Hóa",
+     "start": 5.917
+    }
+   ],
+   "fadein": 5.499,
+   "fadeout": 6.056
+  },
+  {
+   "words": [
+    {
+     "text": "đến",
+     "start": 6.056
+    },
+    {
+     "text": "Quảng",
+     "start": 6.195
+    },
+    {
+     "text": "Trị",
+     "start": 6.335
+    },
+    {
+     "text": "cũng",
+     "start": 6.474
+    }
+   ],
+   "fadein": 6.056,
+   "fadeout": 6.613
+  },
+  {
+   "words": [
+    {
+     "text": "có",
+     "start": 6.613
+    },
+    {
+     "text": "mưa",
+     "start": 6.752
+    },
+    {
+     "text": "rào",
+     "start": 6.892
+    },
+    {
+     "text": "và",
+     "start": 7.031
+    }
+   ],
+   "fadein": 6.613,
+   "fadeout": 7.17
+  },
+  {
+   "words": [
+    {
+     "text": "dông,",
+     "start": 7.17
+    },
+    {
+     "text": "một",
+     "start": 7.611
+    },
+    {
+     "text": "số",
+     "start": 7.75
+    },
+    {
+     "text": "nơi",
+     "start": 7.889
+    }
+   ],
+   "fadein": 7.17,
+   "fadeout": 8.028
+  },
+  {
+   "words": [
+    {
+     "text": "mưa",
+     "start": 8.028
+    },
+    {
+     "text": "to.",
+     "start": 8.168
+    }
+   ],
+   "fadein": 8.028,
+   "fadeout": 8.642
+  }
+ ],
+ "6": [
+  {
+   "words": [
+    {
+     "text": "Dù",
+     "start": 0.0
+    },
+    {
+     "text": "vậy,",
+     "start": 0.177
+    },
+    {
+     "text": "cơ",
+     "start": 0.644
+    },
+    {
+     "text": "quan",
+     "start": 0.821
+    }
+   ],
+   "fadein": 0.0,
+   "fadeout": 0.998
+  },
+  {
+   "words": [
+    {
+     "text": "khí",
+     "start": 0.998
+    },
+    {
+     "text": "tượng",
+     "start": 1.175
+    },
+    {
+     "text": "nhận",
+     "start": 1.352
+    },
+    {
+     "text": "định",
+     "start": 1.53
+    }
+   ],
+   "fadein": 0.998,
+   "fadeout": 1.707
+  },
+  {
+   "words": [
+    {
+     "text": "cả",
+     "start": 1.707
+    },
+    {
+     "text": "tháng",
+     "start": 1.884
+    },
+    {
+     "text": "10",
+     "start": 2.061
+    },
+    {
+     "text": "nhiệt",
+     "start": 2.451
+    }
+   ],
+   "fadein": 1.707,
+   "fadeout": 2.628
+  },
+  {
+   "words": [
+    {
+     "text": "độ",
+     "start": 2.628
+    },
+    {
+     "text": "trung",
+     "start": 2.805
+    },
+    {
+     "text": "bình",
+     "start": 2.983
+    },
+    {
+     "text": "cả",
+     "start": 3.16
+    }
+   ],
+   "fadein": 2.628,
+   "fadeout": 3.337
+  },
+  {
+   "words": [
+    {
+     "text": "nước",
+     "start": 3.337
+    },
+    {
+     "text": "vẫn",
+     "start": 3.514
+    },
+    {
+     "text": "cao",
+     "start": 3.691
+    },
+    {
+     "text": "hơn",
+     "start": 3.869
+    }
+   ],
+   "fadein": 3.337,
+   "fadeout": 4.046
+  },
+  {
+   "words": [
+    {
+     "text": "trung",
+     "start": 4.046
+    },
+    {
+     "text": "bình",
+     "start": 4.395
+    },
+    {
+     "text": "nhiều",
+     "start": 4.572
+    },
+    {
+     "text": "năm",
+     "start": 4.75
+    }
+   ],
+   "fadein": 4.046,
+   "fadeout": 4.927
+  },
+  {
+   "words": [
+    {
+     "text": "từ",
+     "start": 4.927
+    },
+    {
+     "text": "0,5",
+     "start": 5.104
+    },
+    {
+     "text": "đến",
+     "start": 5.494
+    },
+    {
+     "text": "1,5",
+     "start": 5.671
+    }
+   ],
+   "fadein": 4.927,
+   "fadeout": 6.061
+  },
+  {
+   "words": [
+    {
+     "text": "độ",
+     "start": 6.061
+    },
+    {
+     "text": "C.",
+     "start": 6.238
+    },
+    {
+     "text": "Người",
+     "start": 6.916
+    },
+    {
+     "text": "dân",
+     "start": 7.093
+    }
+   ],
+   "fadein": 6.061,
+   "fadeout": 7.27
+  },
+  {
+   "words": [
+    {
+     "text": "cần",
+     "start": 7.27
+    },
+    {
+     "text": "đề",
+     "start": 7.447
+    },
+    {
+     "text": "phòng",
+     "start": 7.625
+    },
+    {
+     "text": "tố,",
+     "start": 7.802
+    }
+   ],
+   "fadein": 7.27,
+   "fadeout": 8.295
+  },
+  {
+   "words": [
+    {
+     "text": "lốc,",
+     "start": 8.295
+    },
+    {
+     "text": "mưa",
+     "start": 8.783
+    },
+    {
+     "text": "đá",
+     "start": 8.961
+    },
+    {
+     "text": "và",
+     "start": 9.138
+    }
+   ],
+   "fadein": 8.295,
+   "fadeout": 9.315
+  },
+  {
+   "words": [
+    {
+     "text": "gió",
+     "start": 9.315
+    },
+    {
+     "text": "giật",
+     "start": 9.492
+    },
+    {
+     "text": "mạnh.",
+     "start": 9.669
+    }
+   ],
+   "fadein": 9.315,
+   "fadeout": 10.191
+  }
+ ],
+ "7": [
+  {
+   "words": [
+    {
+     "text": "Thời",
+     "start": 0.0
+    },
+    {
+     "text": "tiết",
+     "start": 0.164
+    },
+    {
+     "text": "đổi",
+     "start": 0.327
+    },
+    {
+     "text": "nhanh",
+     "start": 0.491
+    }
+   ],
+   "fadein": 0.0,
+   "fadeout": 0.654
+  },
+  {
+   "words": [
+    {
+     "text": "như",
+     "start": 0.654
+    },
+    {
+     "text": "vậy,",
+     "start": 0.818
+    },
+    {
+     "text": "bạn",
+     "start": 1.023
+    },
+    {
+     "text": "đã",
+     "start": 1.441
+    }
+   ],
+   "fadein": 0.654,
+   "fadeout": 1.605
+  },
+  {
+   "words": [
+    {
+     "text": "chuẩn",
+     "start": 1.605
+    },
+    {
+     "text": "bị",
+     "start": 1.768
+    },
+    {
+     "text": "đón",
+     "start": 1.932
+    },
+    {
+     "text": "lạnh",
+     "start": 2.095
+    }
+   ],
+   "fadein": 1.605,
+   "fadeout": 2.259
+  },
+  {
+   "words": [
+    {
+     "text": "chưa,",
+     "start": 2.259
+    },
+    {
+     "text": "hay",
+     "start": 2.464
+    },
+    {
+     "text": "vẫn",
+     "start": 2.895
+    },
+    {
+     "text": "muốn",
+     "start": 3.059
+    }
+   ],
+   "fadein": 2.259,
+   "fadeout": 3.222
+  },
+  {
+   "words": [
+    {
+     "text": "nắng",
+     "start": 3.222
+    },
+    {
+     "text": "thêm?",
+     "start": 3.386
+    },
+    {
+     "text": "Hãy",
+     "start": 3.59
+    },
+    {
+     "text": "để",
+     "start": 4.23
+    }
+   ],
+   "fadein": 3.222,
+   "fadeout": 4.394
+  },
+  {
+   "words": [
+    {
+     "text": "lại",
+     "start": 4.394
+    },
+    {
+     "text": "quan",
+     "start": 4.557
+    },
+    {
+     "text": "điểm",
+     "start": 4.721
+    },
+    {
+     "text": "của",
+     "start": 4.885
+    }
+   ],
+   "fadein": 4.394,
+   "fadeout": 5.048
+  },
+  {
+   "words": [
+    {
+     "text": "bạn",
+     "start": 5.048
+    },
+    {
+     "text": "trong",
+     "start": 5.212
+    },
+    {
+     "text": "phần",
+     "start": 5.375
+    },
+    {
+     "text": "bình",
+     "start": 5.539
+    },
+    {
+     "text": "luận.",
+     "start": 5.703
+    }
+   ],
+   "fadein": 5.048,
+   "fadeout": 6.207
+  }
+ ]
+}
