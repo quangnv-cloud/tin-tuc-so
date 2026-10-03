@@ -1,0 +1,63 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .abs { position: absolute; }
+    .cutflash { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: 0; background: linear-gradient(180deg, rgba(255,90,31,0.4), rgba(255,68,56,0.18)); }
+    .kicker { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .pin { position: relative; width: 34px; height: 34px; flex: none; }
+    .pin::before { content: ""; position: absolute; left: 4px; top: 0; width: 26px; height: 26px; background: #FF5A1F; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
+    .pin::after { content: ""; position: absolute; left: 12px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: #0B0E14; }
+    .pin.red::before { background: #FF4438; }
+
+.w-card { position: absolute; left: 60px; top: 300px; width: 960px; height: 640px; border-radius: 22px; overflow: hidden; border: 1.5px solid rgba(255,90,31,0.55); box-shadow: 0 0 40px rgba(255,90,31,0.14); background: #121724; opacity: 0; }
+    .w-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+    .w-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 62%, rgba(11,14,20,0.75) 100%); }
+    .w-loc { position: absolute; left: 60px; top: 972px; display: inline-flex; align-items: center; gap: 16px; padding: 14px 26px 14px 20px; border-radius: 100px; background: #121724; border: 1.5px solid rgba(255,255,255,0.14); opacity: 0; }
+    .w-loc span.t { font-weight: 700; font-size: 28px; color: #fff; }
+    .w-loc span.s { font-weight: 500; font-size: 24px; color: rgba(255,255,255,0.6); }
+    .w-date { position: absolute; right: 60px; top: 972px; padding: 14px 26px; border-radius: 14px; background: #121724; border: 1px solid rgba(255,255,255,0.1); font-weight: 900; font-size: 32px; color: #fff; opacity: 0; }
+    .w-head { position: absolute; left: 60px; right: 60px; top: 1090px; font-weight: 900; font-size: 92px; line-height: 1.06; color: #fff; }
+    .w-head .row { overflow: hidden; padding-bottom: 6px; }
+    .w-head .row > span { display: block; }
+    .w-head b { color: #FF5A1F; font-weight: 900; }
+    .w-sub { position: absolute; left: 60px; right: 60px; top: 1330px; font-weight: 600; font-size: 36px; line-height: 1.35; color: rgba(255,255,255,0.88); opacity: 0; }
+    .w-sub b { color: #FF5A1F; font-weight: 700; }
+  </style>
+
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+    <div id="content">
+      <div class="kicker abs" id="w-kicker" style="left:60px; top:222px;">Kết quả chung kết</div>
+      <div class="w-card" id="w-card"><img src="assets/img/article-hero.jpg" alt=""></div>
+      <div class="w-loc" id="w-loc"><span class="pin"></span><span class="t">Nagoya, Nhật Bản</span><span class="s">Asiad 20</span></div>
+      <div class="w-date" id="w-date">03/10/2026</div>
+      <div class="w-head">
+        <div class="row" data-layout-allow-overflow=""><span id="w-h1">Việt Nam thắng</span></div>
+        <div class="row" data-layout-allow-overflow=""><span id="w-h2">Thái Lan <b>2-1</b></span></div>
+      </div>
+      <div class="w-sub" id="w-sub">Chung kết cầu mây <b>quadrant nữ</b></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#w-kicker', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#w-card', { autoAlpha: 0, y: 40, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' }, 0.15);
+    tl.fromTo('#w-date', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.5);
+    tl.fromTo('#w-loc', { autoAlpha: 0, y: 14, scale: 0.92 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: 'back.out(1.6)' }, 1.1);
+    tl.fromTo('#w-h1', { yPercent: 118 }, { yPercent: 0, duration: 0.6, ease: 'power4.out' }, 2.2);
+    tl.fromTo('#w-h2', { yPercent: 118 }, { yPercent: 0, duration: 0.6, ease: 'power4.out' }, 4.15);
+    tl.fromTo('#w-sub', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 4.9);
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>

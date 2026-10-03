@@ -1,0 +1,262 @@
+[
+  {
+    "text": "Tội",
+    "start": 0.05,
+    "end": 0.15
+  },
+  {
+    "text": "hình",
+    "start": 0.15,
+    "end": 0.36
+  },
+  {
+    "text": "xuất",
+    "start": 0.36,
+    "end": 0.56
+  },
+  {
+    "text": "phát",
+    "start": 0.56,
+    "end": 0.76
+  },
+  {
+    "text": "gồm",
+    "start": 0.76,
+    "end": 0.91
+  },
+  {
+    "text": "Nguyễn",
+    "start": 0.91,
+    "end": 1.22
+  },
+  {
+    "text": "Thị",
+    "start": 1.22,
+    "end": 1.37
+  },
+  {
+    "text": "Minh",
+    "start": 1.37,
+    "end": 1.44
+  },
+  {
+    "text": "là",
+    "start": 1.44,
+    "end": 1.69
+  },
+  {
+    "text": "Trần",
+    "start": 1.69,
+    "end": 1.84
+  },
+  {
+    "text": "Thị",
+    "start": 1.88,
+    "end": 2.03
+  },
+  {
+    "text": "Ngọc",
+    "start": 2.03,
+    "end": 2.23
+  },
+  {
+    "text": "Yến,",
+    "start": 2.23,
+    "end": 2.63
+  },
+  {
+    "text": "Nguyễn",
+    "start": 2.66,
+    "end": 2.86
+  },
+  {
+    "text": "Thị",
+    "start": 2.86,
+    "end": 2.92
+  },
+  {
+    "text": "Yến",
+    "start": 2.98,
+    "end": 3.24
+  },
+  {
+    "text": "và",
+    "start": 3.24,
+    "end": 3.64
+  },
+  {
+    "text": "Nguyễn",
+    "start": 3.64,
+    "end": 3.66
+  },
+  {
+    "text": "Thị",
+    "start": 3.66,
+    "end": 3.67
+  },
+  {
+    "text": "Ngọc",
+    "start": 3.67,
+    "end": 3.7
+  },
+  {
+    "text": "Huyền",
+    "start": 3.79,
+    "end": 4.28
+  },
+  {
+    "text": "giới",
+    "start": 4.33,
+    "end": 4.5
+  },
+  {
+    "text": "sự",
+    "start": 4.5,
+    "end": 4.55
+  },
+  {
+    "text": "dẫn",
+    "start": 4.61,
+    "end": 4.68
+  },
+  {
+    "text": "dắt",
+    "start": 4.78,
+    "end": 4.88
+  },
+  {
+    "text": "của",
+    "start": 5.01,
+    "end": 5.09
+  },
+  {
+    "text": "hối",
+    "start": 5.09,
+    "end": 5.25
+  },
+  {
+    "text": "luận",
+    "start": 5.25,
+    "end": 5.47
+  },
+  {
+    "text": "viên",
+    "start": 5.47,
+    "end": 5.69
+  },
+  {
+    "text": "Trần",
+    "start": 5.69,
+    "end": 5.91
+  },
+  {
+    "text": "Thị",
+    "start": 5.96,
+    "end": 6.07
+  },
+  {
+    "text": "Vui.",
+    "start": 6.07,
+    "end": 6.46
+  },
+  {
+    "text": "Chiếc",
+    "start": 6.51,
+    "end": 6.73
+  },
+  {
+    "text": "đó,",
+    "start": 6.73,
+    "end": 6.86
+  },
+  {
+    "text": "đội",
+    "start": 6.96,
+    "end": 7.06
+  },
+  {
+    "text": "đã",
+    "start": 7.19,
+    "end": 7.22
+  },
+  {
+    "text": "thắng",
+    "start": 7.22,
+    "end": 7.5
+  },
+  {
+    "text": "Thái",
+    "start": 7.5,
+    "end": 7.72
+  },
+  {
+    "text": "Lan",
+    "start": 7.72,
+    "end": 7.89
+  },
+  {
+    "text": "2-0",
+    "start": 7.89,
+    "end": 8.28
+  },
+  {
+    "text": "ở",
+    "start": 8.28,
+    "end": 8.3
+  },
+  {
+    "text": "vòng",
+    "start": 8.34,
+    "end": 8.54
+  },
+  {
+    "text": "bảng",
+    "start": 8.6,
+    "end": 8.84
+  },
+  {
+    "text": "và",
+    "start": 8.84,
+    "end": 9.01
+  },
+  {
+    "text": "hại",
+    "start": 9.01,
+    "end": 9.1
+  },
+  {
+    "text": "chủ",
+    "start": 9.13,
+    "end": 9.33
+  },
+  {
+    "text": "nhà",
+    "start": 9.33,
+    "end": 9.47
+  },
+  {
+    "text": "Nhật",
+    "start": 9.47,
+    "end": 9.64
+  },
+  {
+    "text": "Bản",
+    "start": 9.65,
+    "end": 9.78
+  },
+  {
+    "text": "ở",
+    "start": 9.78,
+    "end": 9.82
+  },
+  {
+    "text": "Ban",
+    "start": 9.82,
+    "end": 9.93
+  },
+  {
+    "text": "Kết.",
+    "start": 9.98,
+    "end": 10.34
+  }
+]

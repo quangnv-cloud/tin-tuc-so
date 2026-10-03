@@ -1,0 +1,69 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .abs { position: absolute; }
+    .cutflash { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: 0; background: linear-gradient(180deg, rgba(255,90,31,0.4), rgba(255,68,56,0.18)); }
+    .kicker { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .pin { position: relative; width: 34px; height: 34px; flex: none; }
+    .pin::before { content: ""; position: absolute; left: 4px; top: 0; width: 26px; height: 26px; background: #FF5A1F; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
+    .pin::after { content: ""; position: absolute; left: 12px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: #0B0E14; }
+    .pin.red::before { background: #FF4438; }
+
+.c-mapwrap { position: absolute; left: 0; top: 270px; width: 1080px; height: 820px; overflow: hidden; opacity: 0; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
+    .c-map { position: absolute; left: 0; top: 0; width: 1080px; height: 900px; transform-origin: 0 0; transform: translate(-220px, -711px) scale(1.9); }
+    .c-map img { position: absolute; left: 0; top: 0; width: 1080px; height: 900px; }
+    .c-map img.hl { opacity: 0; }
+    .c-pin { position: absolute; display: flex; align-items: center; gap: 10px; opacity: 0; }
+    .c-pin .lb { font-weight: 800; font-size: 30px; color: #fff; padding: 8px 16px; border-radius: 10px; background: rgba(11,14,20,0.86); border: 1.5px solid #FF5A1F; white-space: nowrap; }
+    .c-card { position: absolute; left: 60px; right: 60px; height: 150px; border-radius: 18px; background: rgba(18,23,36,0.94); border: 1.5px solid rgba(255,90,31,0.55); box-shadow: 0 0 40px rgba(255,90,31,0.14); display: flex; align-items: center; gap: 26px; padding: 0 34px; opacity: 0; }
+    .c-card .num { font-weight: 900; font-size: 64px; line-height: 1; color: #FF5A1F; width: 210px; flex: none; }
+    .c-card .tx { font-weight: 700; font-size: 32px; line-height: 1.3; color: #fff; }
+    .c-card .tx small { display: block; font-weight: 500; font-size: 24px; color: rgba(255,255,255,0.65); margin-top: 4px; }
+  </style>
+
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+    <div id="content">
+      <div class="kicker abs" id="c-kicker" style="left:60px; top:222px;">Bối cảnh</div>
+      <div class="c-mapwrap" id="c-mapwrap">
+        <div class="c-map">
+          <img src="assets/img/map-base.svg" alt="">
+          <img class="hl" id="c-vn" src="assets/img/map-VN.svg" alt="">
+          <img class="hl" id="c-ph" src="assets/img/map-PH.svg" alt="">
+          <div class="c-pin" id="c-pvn" style="left:226px; top:490px; transform: scale(0.526); transform-origin: 0 0;"><span class="pin"></span><span class="lb">Việt Nam</span></div>
+          <div class="c-pin" id="c-pph" style="left:520px; top:620px; transform: scale(0.526); transform-origin: 0 0;"><span class="pin"></span><span class="lb">Philippines</span></div>
+        </div>
+      </div>
+      <div class="c-card" id="c-c1" style="top:1130px;"><span class="num">Lần 3</span><span class="tx">Việt Nam vô địch nội dung 4 nữ tại Asiad<small>Bảo vệ tấm HCV từ Asiad 19</small></span></div>
+      <div class="c-card" id="c-c2" style="top:1300px;"><span class="num">29/9</span><span class="tx">HCV đôi nữ, hạ Philippines ở chung kết<small>Sau 20 năm chờ đợi ở nội dung này</small></span></div>
+    </div>
+    <div class="cutflash" id="cutflash"></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#c-kicker', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#c-mapwrap', { opacity: 0 }, { opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#c-vn', { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.out' }, 0.6);
+    tl.fromTo('#c-pvn', { autoAlpha: 0, y: -30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'bounce.out' }, 0.9);
+    tl.fromTo('#c-c1', { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }, 1.0);
+    tl.fromTo('#cutflash', { opacity: 0 }, { opacity: 0.55, duration: 0.05, ease: 'none' }, 6.0);
+    tl.to('#cutflash', { opacity: 0, duration: 0.16, ease: 'power1.in' }, 6.05);
+    tl.fromTo('#content', { scale: 1 }, { scale: 0.986, duration: 0.06, ease: 'power1.out' }, 6.0);
+    tl.to('#content', { scale: 1, duration: 0.14, ease: 'power2.out' }, 6.061);
+    tl.fromTo('#c-ph', { opacity: 0 }, { opacity: 1, duration: 0.6, ease: 'power2.out' }, 6.4);
+    tl.fromTo('#c-pph', { autoAlpha: 0, y: -30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'bounce.out' }, 6.7);
+    tl.fromTo('#c-c2', { autoAlpha: 0, x: 50 }, { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }, 6.9);
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>

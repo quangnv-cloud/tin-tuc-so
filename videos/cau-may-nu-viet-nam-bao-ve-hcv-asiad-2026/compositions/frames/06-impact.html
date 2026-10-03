@@ -1,0 +1,76 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .abs { position: absolute; }
+    .cutflash { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: 0; background: linear-gradient(180deg, rgba(255,90,31,0.4), rgba(255,68,56,0.18)); }
+    .kicker { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .pin { position: relative; width: 34px; height: 34px; flex: none; }
+    .pin::before { content: ""; position: absolute; left: 4px; top: 0; width: 26px; height: 26px; background: #FF5A1F; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
+    .pin::after { content: ""; position: absolute; left: 12px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: #0B0E14; }
+    .pin.red::before { background: #FF4438; }
+
+.i-map { position: absolute; left: 0; top: 520px; width: 1080px; height: 900px; opacity: 0; }
+    .i-map img { width: 100%; height: 100%; display: block; }
+    .i-card { position: absolute; left: 60px; right: 60px; height: 520px; border-radius: 24px; background: rgba(18,23,36,0.95); border: 1.5px solid rgba(255,90,31,0.55); box-shadow: 0 0 40px rgba(255,90,31,0.14); padding: 36px 44px; opacity: 0; }
+    .i-card .hd { display: flex; align-items: center; gap: 16px; }
+    .i-card .hd .n { font-weight: 800; font-size: 24px; letter-spacing: 0.2em; text-transform: uppercase; color: #FF5A1F; }
+    .i-big { margin-top: 20px; font-weight: 900; font-size: 190px; line-height: 1; color: #fff; letter-spacing: -0.02em; white-space: nowrap; }
+    .i-big small { font-size: 66px; font-weight: 800; letter-spacing: 0; color: rgba(255,255,255,0.85); margin-left: 14px; }
+    .i-big s { text-decoration-thickness: 8px; text-decoration-color: #FF4438; color: rgba(255,255,255,0.45); }
+    .i-sub { margin-top: 20px; font-weight: 600; font-size: 34px; line-height: 1.35; color: rgba(255,255,255,0.9); }
+    .i-sub b { color: #FF5A1F; font-weight: 800; }
+    .i-chips { display: flex; gap: 16px; margin-top: 22px; }
+    .i-chip { padding: 12px 22px; border-radius: 100px; border: 1.5px solid rgba(255,90,31,0.7); background: rgba(255,90,31,0.12); font-weight: 800; font-size: 30px; color: #fff; opacity: 0; }
+    .i-chip b { color: #FF5A1F; font-weight: 900; }
+  </style>
+
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+    <div id="content">
+      <div class="i-map" id="i-map"><img src="assets/img/map-base.svg" alt=""></div>
+      <div class="kicker abs" id="i-kicker" style="left:60px; top:222px;">Ý nghĩa với thể thao Việt Nam</div>
+      <div class="i-card" id="i-a" style="top:300px;">
+        <div class="hd"><span class="pin"></span><span class="n">Bảng tổng sắp Asiad 20</span></div>
+        <div class="i-big"><span id="i-rank-old"><s>21</s></span><span id="i-rank-new" style="display:none;">19</span><small>hạng</small></div>
+        <div class="i-chips"><span class="i-chip" id="i-g"><b>3</b> vàng</span><span class="i-chip" id="i-s"><b>3</b> bạc</span><span class="i-chip" id="i-b"><b>19</b> đồng</span></div>
+      </div>
+      <div class="i-card" id="i-b2" style="top:860px;">
+        <div class="hd"><span class="pin red"></span><span class="n">Tiền thưởng cho mỗi vận động viên</span></div>
+        <div class="i-big"><span id="i-money">0</span><small>triệu đồng</small></div>
+        <div class="i-sub">Theo <b>Dân Trí</b>, mức thưởng cho vận động viên giành HCV Asiad</div>
+      </div>
+    </div>
+    <div class="cutflash" id="cutflash"></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#i-map', { opacity: 0 }, { opacity: 0.22, duration: 1.0, ease: 'power2.out' }, 0);
+    tl.fromTo('#i-kicker', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#i-a', { autoAlpha: 0, x: -80 }, { autoAlpha: 1, x: 0, duration: 0.6, ease: 'power3.out' }, 0.5);
+    tl.to('#i-rank-old', { opacity: 0, duration: 0.2 }, 3.35);
+    tl.set('#i-rank-old', { display: 'none' }, 3.56);
+    tl.fromTo('#i-rank-new', { opacity: 0, display: 'inline' }, { opacity: 1, duration: 0.3, ease: 'power2.out' }, 3.6);
+    tl.fromTo('#i-g', { autoAlpha: 0, scale: 0.8 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(1.8)' }, 4.7);
+    tl.fromTo('#i-s', { autoAlpha: 0, scale: 0.8 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(1.8)' }, 5.4);
+    tl.fromTo('#i-b', { autoAlpha: 0, scale: 0.8 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(1.8)' }, 6.0);
+    tl.fromTo('#cutflash', { opacity: 0 }, { opacity: 0.55, duration: 0.05, ease: 'none' }, 6.75);
+    tl.to('#cutflash', { opacity: 0, duration: 0.16, ease: 'power1.in' }, 6.8);
+    tl.fromTo('#content', { scale: 1 }, { scale: 0.986, duration: 0.06, ease: 'power1.out' }, 6.75);
+    tl.to('#content', { scale: 1, duration: 0.14, ease: 'power2.out' }, 6.811);
+    tl.fromTo('#i-b2', { autoAlpha: 0, x: 80 }, { autoAlpha: 1, x: 0, duration: 0.6, ease: 'power3.out' }, 6.85);
+    const m = { v: 0 };
+    tl.to(m, { v: 280, duration: 1.0, ease: 'power2.out', onUpdate: function () { document.getElementById('i-money').textContent = Math.round(m.v); } }, 8.5);
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
