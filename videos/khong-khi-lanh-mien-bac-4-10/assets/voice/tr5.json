@@ -1,0 +1,302 @@
+[
+  {
+    "text": "không",
+    "start": 0.05,
+    "end": 0.14
+  },
+  {
+    "text": "khí",
+    "start": 0.23,
+    "end": 0.36
+  },
+  {
+    "text": "lạnh",
+    "start": 0.36,
+    "end": 0.45
+  },
+  {
+    "text": "kéo",
+    "start": 0.58,
+    "end": 0.67
+  },
+  {
+    "text": "theo",
+    "start": 0.67,
+    "end": 0.86
+  },
+  {
+    "text": "mưa",
+    "start": 0.86,
+    "end": 0.99
+  },
+  {
+    "text": "dòng.",
+    "start": 0.99,
+    "end": 1.21
+  },
+  {
+    "text": "Bác",
+    "start": 1.38,
+    "end": 1.56
+  },
+  {
+    "text": "bộ",
+    "start": 1.62,
+    "end": 1.68
+  },
+  {
+    "text": "mưa",
+    "start": 1.68,
+    "end": 1.86
+  },
+  {
+    "text": "từ",
+    "start": 1.86,
+    "end": 1.97
+  },
+  {
+    "text": "ngày",
+    "start": 1.98,
+    "end": 2.14
+  },
+  {
+    "text": "4",
+    "start": 2.22,
+    "end": 2.4
+  },
+  {
+    "text": "đến",
+    "start": 2.4,
+    "end": 2.58
+  },
+  {
+    "text": "sáng",
+    "start": 2.58,
+    "end": 2.82
+  },
+  {
+    "text": "5",
+    "start": 2.82,
+    "end": 3
+  },
+  {
+    "text": "tháng",
+    "start": 3,
+    "end": 3.3
+  },
+  {
+    "text": "10,",
+    "start": 3.3,
+    "end": 3.76
+  },
+  {
+    "text": "còn",
+    "start": 3.81,
+    "end": 3.9
+  },
+  {
+    "text": "từ",
+    "start": 3.99,
+    "end": 4.03
+  },
+  {
+    "text": "thanh",
+    "start": 4.03,
+    "end": 4.3
+  },
+  {
+    "text": "hóa",
+    "start": 4.35,
+    "end": 4.45
+  },
+  {
+    "text": "đến",
+    "start": 4.45,
+    "end": 4.6
+  },
+  {
+    "text": "huế",
+    "start": 4.61,
+    "end": 4.76
+  },
+  {
+    "text": "mưa",
+    "start": 4.77,
+    "end": 4.92
+  },
+  {
+    "text": "từ",
+    "start": 4.92,
+    "end": 4.97
+  },
+  {
+    "text": "đêm",
+    "start": 5.09,
+    "end": 5.2
+  },
+  {
+    "text": "4",
+    "start": 5.2,
+    "end": 5.44
+  },
+  {
+    "text": "đến",
+    "start": 5.44,
+    "end": 5.52
+  },
+  {
+    "text": "ngày",
+    "start": 5.55,
+    "end": 5.73
+  },
+  {
+    "text": "6",
+    "start": 5.74,
+    "end": 5.9
+  },
+  {
+    "text": "tháng",
+    "start": 5.9,
+    "end": 6.17
+  },
+  {
+    "text": "10.",
+    "start": 6.17,
+    "end": 6.76
+  },
+  {
+    "text": "Nhật",
+    "start": 6.81,
+    "end": 7
+  },
+  {
+    "text": "độ",
+    "start": 7,
+    "end": 7.12
+  },
+  {
+    "text": "thấp",
+    "start": 7.12,
+    "end": 7.35
+  },
+  {
+    "text": "nhất",
+    "start": 7.35,
+    "end": 7.6
+  },
+  {
+    "text": "ở",
+    "start": 7.6,
+    "end": 7.66
+  },
+  {
+    "text": "bác",
+    "start": 7.66,
+    "end": 7.84
+  },
+  {
+    "text": "bộ",
+    "start": 7.84,
+    "end": 7.96
+  },
+  {
+    "text": "và",
+    "start": 7.96,
+    "end": 7.97
+  },
+  {
+    "text": "thanh",
+    "start": 8.32,
+    "end": 8.38
+  },
+  {
+    "text": "hóa",
+    "start": 8.43,
+    "end": 8.56
+  },
+  {
+    "text": "phổ",
+    "start": 8.56,
+    "end": 8.73
+  },
+  {
+    "text": "biến",
+    "start": 8.74,
+    "end": 9.04
+  },
+  {
+    "text": "từ",
+    "start": 9.04,
+    "end": 9.19
+  },
+  {
+    "text": "19",
+    "start": 9.19,
+    "end": 9.61
+  },
+  {
+    "text": "đến",
+    "start": 9.7,
+    "end": 9.86
+  },
+  {
+    "text": "22",
+    "start": 9.86,
+    "end": 10.31
+  },
+  {
+    "text": "độ",
+    "start": 10.31,
+    "end": 10.36
+  },
+  {
+    "text": "C,",
+    "start": 10.56,
+    "end": 10.67
+  },
+  {
+    "text": "vùng",
+    "start": 10.67,
+    "end": 10.92
+  },
+  {
+    "text": "núi",
+    "start": 10.92,
+    "end": 11.14
+  },
+  {
+    "text": "cao",
+    "start": 11.14,
+    "end": 11.2
+  },
+  {
+    "text": "từ",
+    "start": 11.2,
+    "end": 11.4
+  },
+  {
+    "text": "14",
+    "start": 11.42,
+    "end": 11.7
+  },
+  {
+    "text": "đến",
+    "start": 11.7,
+    "end": 11.79
+  },
+  {
+    "text": "17",
+    "start": 11.91,
+    "end": 12.28
+  },
+  {
+    "text": "độ",
+    "start": 12.28,
+    "end": 12.42
+  },
+  {
+    "text": "C.",
+    "start": 12.42,
+    "end": 12.7
+  }
+]

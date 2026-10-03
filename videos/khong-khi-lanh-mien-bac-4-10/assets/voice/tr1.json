@@ -1,0 +1,92 @@
+[
+  {
+    "text": "sau",
+    "start": 0.05,
+    "end": 0.15
+  },
+  {
+    "text": "một",
+    "start": 0.15,
+    "end": 0.22
+  },
+  {
+    "text": "tuần",
+    "start": 0.3,
+    "end": 0.5
+  },
+  {
+    "text": "nắng",
+    "start": 0.5,
+    "end": 0.7
+  },
+  {
+    "text": "nóng,",
+    "start": 0.7,
+    "end": 1
+  },
+  {
+    "text": "không",
+    "start": 1.08,
+    "end": 1.2
+  },
+  {
+    "text": "khí",
+    "start": 1.25,
+    "end": 1.4
+  },
+  {
+    "text": "lạnh",
+    "start": 1.4,
+    "end": 1.54
+  },
+  {
+    "text": "sắp",
+    "start": 1.6,
+    "end": 1.74
+  },
+  {
+    "text": "tràn",
+    "start": 1.76,
+    "end": 1.92
+  },
+  {
+    "text": "xuống",
+    "start": 1.99,
+    "end": 2.2
+  },
+  {
+    "text": "miền",
+    "start": 2.2,
+    "end": 2.42
+  },
+  {
+    "text": "bắt",
+    "start": 2.42,
+    "end": 2.55
+  },
+  {
+    "text": "từ",
+    "start": 2.55,
+    "end": 2.64
+  },
+  {
+    "text": "đêm",
+    "start": 2.64,
+    "end": 2.77
+  },
+  {
+    "text": "4",
+    "start": 2.77,
+    "end": 2.9
+  },
+  {
+    "text": "tháng",
+    "start": 2.9,
+    "end": 3.12
+  },
+  {
+    "text": "10.",
+    "start": 3.12,
+    "end": 3.5
+  }
+]
