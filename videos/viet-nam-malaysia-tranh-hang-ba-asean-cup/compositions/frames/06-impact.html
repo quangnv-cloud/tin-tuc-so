@@ -1,0 +1,181 @@
+<template>
+  <style>
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .cap-wrap { position: absolute; left: 60px; right: 90px; top: 1490px; height: 100px; z-index: 40; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 4px; opacity: 0; visibility: hidden; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.18; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.9); }
+    .cap-chunk .w { color: rgba(255,255,255,0.58); }
+    .kick { display: flex; align-items: center; gap: 16px; opacity: 0; }
+    .kick i { display: block; width: 44px; height: 5px; border-radius: 3px; background: #FF5A1F; }
+    .kick b { font-weight: 800; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .kick.r i { background: #FF4438; } .kick.r b { color: #FF4438; }
+    .paper { position: absolute; background: #121724; border: 1.5px solid rgba(255,255,255,0.14); border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 0 40px rgba(255,90,31,0.10); opacity: 0; }
+    .paper.hot { border-left: 9px solid #FF5A1F; }
+    .paper.warn { border-left: 9px solid #FF4438; box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 0 40px rgba(255,68,56,0.12); }
+    .tape { position: absolute; width: 150px; height: 40px; background: rgba(255,90,31,0.55); top: -20px; left: 50%; margin-left: -75px; transform: rotate(-2deg); }
+    .lab { font-weight: 800; font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; color: #FF5A1F; }
+    .lab.r { color: #FF4438; } .lab.d { color: rgba(255,255,255,0.6); }
+
+
+    .i1 { left: 60px; top: 320px; width: 900px; height: 330px; padding: 30px 40px 0 46px; }
+    .i2 { left: 120px; top: 640px; width: 900px; height: 280px; padding: 28px 40px 0 46px; z-index: 2; }
+    .i-row { display: flex; align-items: center; gap: 18px; margin-top: 20px; font-weight: 800; font-size: 40px; line-height: 1.15; opacity: 0; }
+    .i-row .d { width: 16px; height: 16px; border-radius: 50%; background: #FF4438; flex: none; }
+    .i-row.o .d { background: #FF5A1F; }
+    .i-row small { display: block; margin-top: 4px; font-weight: 600; font-size: 24px; color: rgba(255,255,255,0.65); }
+    .i3 { left: 60px; top: 980px; width: 960px; height: 480px; padding: 28px 40px 0 44px; z-index: 1; }
+    .h-plot { position: absolute; left: 44px; right: 40px; top: 96px; height: 380px; }
+    .h-grid { position: absolute; left: 0; right: 0; border-top: 1.5px dashed rgba(255,255,255,0.25); }
+    .h-grid span { position: absolute; right: 0; top: -30px; font-weight: 600; font-size: 21px; color: rgba(255,255,255,0.6); }
+    .h-bars { position: absolute; left: 0; right: 120px; bottom: 36px; height: 300px; display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; }
+    .h-bar { position: relative; flex: 1; border-radius: 10px 10px 0 0; background: rgba(255,255,255,0.78); transform-origin: bottom; opacity: 0; }
+    .h-bar.o { background: #FF5A1F; box-shadow: 0 0 28px rgba(255,90,31,0.45); }
+    .h-bar .v { position: absolute; left: 0; right: 0; top: -40px; text-align: center; font-weight: 900; font-size: 32px; color: #fff; }
+    .h-bar.o .v { color: #FF5A1F; }
+    .h-names { position: absolute; left: 0; right: 120px; bottom: 0; height: 36px; display: flex; justify-content: space-between; gap: 22px; }
+    .h-names span { flex: 1; text-align: center; font-weight: 700; font-size: 17px; line-height: 1.1; color: rgba(255,255,255,0.75); }
+    
+  </style>
+
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+
+    <div class="paper warn i1" id="i1"><div class="tape"></div>
+      <span class="lab r">Việt Nam thiếu quân</span>
+      <div class="i-row" id="i1a"><span class="d"></span><span>Hoàng Hên<small>không kịp hồi phục</small></span></div>
+      <div class="i-row" id="i1b"><span class="d"></span><span>Việt Anh<small>chấn thương cơ đùi sau</small></span></div>
+    </div>
+    <div class="paper hot i2" id="i2">
+      <span class="lab">Malaysia cũng vắng</span>
+      <div class="i-row o" id="i2a"><span class="d"></span><span>Dion Cools<small>đội trưởng</small></span></div>
+      <div class="i-row o" id="i2b"><span class="d"></span><span>Faisal Halim</span></div>
+    </div>
+    <div class="paper i3" id="i3">
+      <div class="f-lab" style="display:flex;justify-content:space-between"><span class="lab">Chiều cao (tính từ mốc 1m70)</span><span class="lab d">Dân Trí</span></div>
+      <div class="h-plot">
+        <div class="h-grid" style="top:184px"><span>1m80</span></div>
+        <div class="h-grid" style="top:44px"><span>1m90</span></div>
+        <div class="h-bars">
+          <div class="h-bar o" id="hb1" style="height:230px"><div class="v">1m85</div></div>
+          <div class="h-bar" id="hb2" style="height:244px"><div class="v">1m86</div></div>
+          <div class="h-bar" id="hb3" style="height:202px"><div class="v">1m83</div></div>
+          <div class="h-bar" id="hb4" style="height:160px"><div class="v">1m80</div></div>
+        </div>
+        <div class="h-names"><span>Việt Anh<br>(hậu vệ VN)</span><span>Tierney<br>(Malaysia)</span><span>Paulo Josue<br>(Malaysia)</span><span>Bergson<br>(Malaysia)</span></div>
+      </div>
+    </div>
+    <div class="cap-wrap">
+      <div class="cap-chunk" id="fc1"><span class="w" id="fc1-w1">Việt</span><span class="w" id="fc1-w2">Nam</span><span class="w" id="fc1-w3">thiếu</span><span class="w" id="fc1-w4">nhiều</span><span class="w" id="fc1-w5">trụ</span></div>
+      <div class="cap-chunk" id="fc2"><span class="w" id="fc2-w1">cột:</span><span class="w" id="fc2-w2">Hoàng</span><span class="w" id="fc2-w3">Hên</span><span class="w" id="fc2-w4">không</span><span class="w" id="fc2-w5">kịp</span></div>
+      <div class="cap-chunk" id="fc3"><span class="w" id="fc3-w1">hồi</span><span class="w" id="fc3-w2">phục,</span></div>
+      <div class="cap-chunk" id="fc4"><span class="w" id="fc4-w1">Việt</span><span class="w" id="fc4-w2">Anh</span><span class="w" id="fc4-w3">chấn</span><span class="w" id="fc4-w4">thương</span><span class="w" id="fc4-w5">cơ</span></div>
+      <div class="cap-chunk" id="fc5"><span class="w" id="fc5-w1">đùi</span><span class="w" id="fc5-w2">sau.</span></div>
+      <div class="cap-chunk" id="fc6"><span class="w" id="fc6-w1">Việt</span><span class="w" id="fc6-w2">Anh</span><span class="w" id="fc6-w3">cao</span><span class="w" id="fc6-w4">một</span><span class="w" id="fc6-w5">mét</span></div>
+      <div class="cap-chunk" id="fc7"><span class="w" id="fc7-w1">tám</span><span class="w" id="fc7-w2">lăm,</span></div>
+      <div class="cap-chunk" id="fc8"><span class="w" id="fc8-w1">là</span><span class="w" id="fc8-w2">hậu</span><span class="w" id="fc8-w3">vệ</span><span class="w" id="fc8-w4">duy</span><span class="w" id="fc8-w5">nhất</span></div>
+      <div class="cap-chunk" id="fc9"><span class="w" id="fc9-w1">của</span><span class="w" id="fc9-w2">đội</span><span class="w" id="fc9-w3">ở</span><span class="w" id="fc9-w4">giải</span><span class="w" id="fc9-w5">này</span></div>
+      <div class="cap-chunk" id="fc10"><span class="w" id="fc10-w1">cao</span><span class="w" id="fc10-w2">từ</span><span class="w" id="fc10-w3">một</span><span class="w" id="fc10-w4">mét</span><span class="w" id="fc10-w5">tám</span></div>
+      <div class="cap-chunk" id="fc11"><span class="w" id="fc11-w1">mươi.</span><span class="w" id="fc11-w2">Malaysia</span><span class="w" id="fc11-w3">cũng</span><span class="w" id="fc11-w4">vắng</span></div>
+      <div class="cap-chunk" id="fc12"><span class="w" id="fc12-w1">đội</span><span class="w" id="fc12-w2">trưởng</span><span class="w" id="fc12-w3">Dion</span><span class="w" id="fc12-w4">Cools</span><span class="w" id="fc12-w5">và</span></div>
+      <div class="cap-chunk" id="fc13"><span class="w" id="fc13-w1">Faisal</span><span class="w" id="fc13-w2">Halim.</span></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#i1', { autoAlpha: 0, y: 50, rotation: -3 }, { autoAlpha: 1, y: 0, rotation: -1.0, duration: 0.55, ease: 'power3.out' }, 0.150);
+    tl.fromTo('#i1a', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: 'power3.out' }, 1.378);
+    tl.fromTo('#i1b', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: 'power3.out' }, 2.621);
+    tl.fromTo('#i3', { autoAlpha: 0, y: 50, rotation: 2 }, { autoAlpha: 1, y: 0, rotation: 0.4, duration: 0.55, ease: 'power3.out' }, 3.646);
+    tl.fromTo('.h-bar', { autoAlpha: 0, scaleY: 0 }, { autoAlpha: 1, scaleY: 1, duration: 0.5, ease: 'back.out(1.3)', stagger: 0.12 }, 4.346);
+    tl.fromTo('#i2', { autoAlpha: 0, y: 50, rotation: 3 }, { autoAlpha: 1, y: 0, rotation: 1.0, duration: 0.55, ease: 'power3.out' }, 8.419);
+    tl.fromTo('#i2a', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: 'power3.out' }, 9.812);
+    tl.fromTo('#i2b', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.35, ease: 'power3.out' }, 10.440);
+    tl.set('#fc1', { autoAlpha: 1 }, 0.000);
+    tl.to('#fc1-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.000);
+    tl.to('#fc1-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.196);
+    tl.to('#fc1-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.360);
+    tl.to('#fc1-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.589);
+    tl.to('#fc1-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.818);
+    tl.set('#fc1', { autoAlpha: 0 }, 1.032);
+    tl.set('#fc2', { autoAlpha: 1 }, 0.982);
+    tl.to('#fc2-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.982);
+    tl.to('#fc2-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.378);
+    tl.to('#fc2-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.571);
+    tl.to('#fc2-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.709);
+    tl.to('#fc2-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.903);
+    tl.set('#fc2', { autoAlpha: 0 }, 2.091);
+    tl.set('#fc3', { autoAlpha: 1 }, 2.041);
+    tl.to('#fc3-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.041);
+    tl.to('#fc3-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.179);
+    tl.set('#fc3', { autoAlpha: 0 }, 2.671);
+    tl.set('#fc4', { autoAlpha: 1 }, 2.621);
+    tl.to('#fc4-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.621);
+    tl.to('#fc4-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.793);
+    tl.to('#fc4-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.936);
+    tl.to('#fc4-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.109);
+    tl.to('#fc4-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.338);
+    tl.set('#fc4', { autoAlpha: 0 }, 3.503);
+    tl.set('#fc5', { autoAlpha: 1 }, 3.453);
+    tl.to('#fc5-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.453);
+    tl.to('#fc5-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.597);
+    tl.set('#fc5', { autoAlpha: 0 }, 4.255);
+    tl.set('#fc6', { autoAlpha: 1 }, 4.205);
+    tl.to('#fc6-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.205);
+    tl.to('#fc6-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.391);
+    tl.to('#fc6-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.546);
+    tl.to('#fc6-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.702);
+    tl.to('#fc6-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.857);
+    tl.set('#fc6', { autoAlpha: 0 }, 5.062);
+    tl.set('#fc7', { autoAlpha: 1 }, 5.012);
+    tl.to('#fc7-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.012);
+    tl.to('#fc7-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.167);
+    tl.set('#fc7', { autoAlpha: 0 }, 5.646);
+    tl.set('#fc8', { autoAlpha: 1 }, 5.596);
+    tl.to('#fc8-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.596);
+    tl.to('#fc8-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.720);
+    tl.to('#fc8-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.875);
+    tl.to('#fc8-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.999);
+    tl.to('#fc8-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.155);
+    tl.set('#fc8', { autoAlpha: 0 }, 6.391);
+    tl.set('#fc9', { autoAlpha: 1 }, 6.341);
+    tl.to('#fc9-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.341);
+    tl.to('#fc9-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.496);
+    tl.to('#fc9-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.651);
+    tl.to('#fc9-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.744);
+    tl.to('#fc9-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.931);
+    tl.set('#fc9', { autoAlpha: 0 }, 7.136);
+    tl.set('#fc10', { autoAlpha: 1 }, 7.086);
+    tl.to('#fc10-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.086);
+    tl.to('#fc10-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.241);
+    tl.to('#fc10-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.365);
+    tl.to('#fc10-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.521);
+    tl.to('#fc10-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.676);
+    tl.set('#fc10', { autoAlpha: 0 }, 7.881);
+    tl.set('#fc11', { autoAlpha: 1 }, 7.831);
+    tl.to('#fc11-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.831);
+    tl.to('#fc11-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.519);
+    tl.to('#fc11-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.888);
+    tl.to('#fc11-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.110);
+    tl.set('#fc11', { autoAlpha: 0 }, 9.382);
+    tl.set('#fc12', { autoAlpha: 1 }, 9.332);
+    tl.to('#fc12-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.332);
+    tl.to('#fc12-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.516);
+    tl.to('#fc12-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.812);
+    tl.to('#fc12-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 10.033);
+    tl.to('#fc12-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 10.292);
+    tl.set('#fc12', { autoAlpha: 0 }, 10.490);
+    tl.set('#fc13', { autoAlpha: 1 }, 10.440);
+    tl.to('#fc13-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 10.440);
+    tl.to('#fc13-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 10.735);
+    tl.set('#fc13', { autoAlpha: 0 }, 11.294);
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
