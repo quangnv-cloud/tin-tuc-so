@@ -1,0 +1,7 @@
+Ngân hàng Nhà nước nới trần tỷ lệ cho vay trên tiền gửi từ tám mươi lăm lên chín mươi lăm phần trăm.
+Thông tư số năm mươi có hiệu lực từ đầu tháng mười hai. Trong một trăm đồng huy động được, ngân hàng được cho vay tối đa chín mươi lăm đồng, thay vì tám mươi lăm đồng như hiện nay.
+Thông tư đưa vào hai chỉ tiêu thanh khoản mới: tỷ lệ khả năng chi trả và tỷ lệ nguồn vốn ổn định ròng. Chỉ ngân hàng đăng ký tuân thủ đồng thời cả hai mới được áp mức trần chín mươi lăm phần trăm.
+Theo Công ty Chứng khoán MB, đến ngày hai mươi tám tháng chín, dư nợ tín dụng toàn hệ thống đạt khoảng hai mươi phẩy sáu triệu tỷ đồng, tăng mười ba phẩy hai phần trăm so với đầu năm.
+Hai tỷ lệ mới bắt buộc áp dụng từ tháng mười năm hai nghìn không trăm hai mươi tám, và ngân hàng có thể đăng ký sớm từ cuối năm nay. Nguồn vốn ổn định ròng đạt một trăm phần trăm từ tháng mười năm hai nghìn không trăm ba mươi, khả năng chi trả từ tháng mười năm hai nghìn không trăm ba mươi ba.
+Theo nhóm phân tích này, quy định mới tạo thêm dư địa cho vay, nhưng không có nghĩa là mở rộng tín dụng không giới hạn. Tại hai mươi bảy ngân hàng được nhóm này theo dõi, tỷ lệ cho vay trên tiền gửi cuối quý hai đã tăng hai phẩy năm lăm điểm phần trăm so với đầu năm, vẫn dưới mức trần tám mươi lăm phần trăm.
+Nới trần cho vay lên chín mươi lăm phần trăm: bạn thấy đây là cú hích cho tăng trưởng, hay cần thận trọng với rủi ro thanh khoản? Hãy để lại bình luận của bạn.
