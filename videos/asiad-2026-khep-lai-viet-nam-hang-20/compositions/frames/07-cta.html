@@ -1,0 +1,150 @@
+<template>
+  <style>
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .kick { position: absolute; left: 60px; top: 236px; display: flex; align-items: center; gap: 16px; opacity: 0; }
+    .kick i { display: block; width: 44px; height: 5px; border-radius: 3px; background: #FF5A1F; }
+    .kick b { font-weight: 800; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .cap-wrap { position: absolute; left: 60px; right: 90px; top: 1490px; height: 100px; z-index: 40; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 4px; opacity: 0; visibility: hidden; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.18; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.9); }
+    .cap-chunk .w { color: rgba(255,255,255,0.58); }
+    .card { background: #121724; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 24px; }
+    .cell { position: absolute; background: #121724; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 24px; opacity: 0; box-shadow: 0 0 40px rgba(255,90,31,0.10); }
+    .cell.hot { border-color: rgba(255,90,31,0.85); box-shadow: 0 0 40px rgba(255,90,31,0.16); }
+    .cell.warn { border-color: rgba(255,68,56,0.85); box-shadow: 0 0 40px rgba(255,68,56,0.14); }
+    .lab { font-weight: 800; font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; color: #FF5A1F; }
+    .lab.r { color: #FF4438; } .lab.d { color: rgba(255,255,255,0.6); }
+    svg.ic { display: block; }
+
+    .ct-wrap { position: absolute; left: 60px; right: 60px; top: 390px; text-align: center; }
+    .ct-kick { font-weight: 800; font-size: 26px; letter-spacing: 0.26em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .ct-head { margin-top: 28px; font-weight: 900; font-size: 92px; line-height: 1.12; color: #fff; }
+    .ct-head .ln { overflow: hidden; } .ct-head .ln > span { display: block; }
+    .ct-head em { font-style: normal; color: #FF5A1F; }
+    .ct-opts { display: flex; justify-content: center; align-items: stretch; gap: 18px; margin-top: 80px; }
+    .ct-opt { flex: 1; max-width: 420px; padding: 58px 22px; border-radius: 22px; border: 2.5px solid; opacity: 0; }
+    .ct-opt.up { border-color: rgba(255,90,31,0.85); background: rgba(255,90,31,0.1); }
+    .ct-opt.down { border-color: rgba(255,68,56,0.85); background: rgba(255,68,56,0.1); }
+    .ct-opt .emo { width: 72px; height: 72px; transform: scale(1.25); margin: 0 auto; position: relative; }
+    .ct-opt.up .emo::before { content: ""; position: absolute; left: 50%; top: 0; width: 0; height: 0; border-left: 28px solid transparent; border-right: 28px solid transparent; border-bottom: 30px solid #FF5A1F; transform: translateX(-50%); }
+    .ct-opt.up .emo::after { content: ""; position: absolute; left: 50%; top: 30px; width: 22px; height: 26px; background: #FF5A1F; transform: translateX(-50%); }
+    .ct-opt.down .emo::before { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 0; border-left: 28px solid transparent; border-right: 28px solid transparent; border-bottom: 50px solid #FF4438; }
+    .ct-opt.down .emo::after { content: "!"; position: absolute; left: 0; right: 0; bottom: -2px; text-align: center; font-weight: 900; font-size: 30px; color: #0B0E14; }
+    .ct-opt .lab2 { margin-top: 30px; font-weight: 800; font-size: 40px; line-height: 1.2; color: #fff; }
+    .ct-vs { display: flex; align-items: center; font-weight: 900; font-size: 34px; color: rgba(255,255,255,0.4); opacity: 0; }
+    .ct-cta { display: inline-flex; align-items: center; gap: 18px; margin-top: 90px; padding: 28px 46px; border-radius: 100px; background: #FF5A1F; opacity: 0; }
+    .ct-cta .ico { width: 42px; height: 42px; flex: none; border-radius: 12px 12px 12px 4px; background: #fff; position: relative; }
+    .ct-cta .ico::before { content: ""; position: absolute; left: 10px; top: 13px; right: 10px; height: 4px; border-radius: 2px; background: #FF5A1F; box-shadow: 0 9px 0 #FF5A1F; }
+    .ct-cta span { font-weight: 800; font-size: 36px; color: #0B0E14; }
+    .ct-sign { position: absolute; left: 0; right: 0; top: 1400px; display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; }
+    .ct-sign .m { width: 44px; height: 44px; }
+    .ct-sign .w2 { font-weight: 800; font-size: 30px; color: rgba(255,255,255,0.88); }
+
+  </style>
+
+  <div id="root" data-composition-id="07-cta" data-width="1080" data-height="1920">
+    
+    <div class="ct-wrap">
+      <div class="ct-kick" id="ct-kick">Góc nhìn của bạn</div>
+      <div class="ct-head">
+        <div class="ln"><span id="ct-h1">Hạng 20 Asiad:</span></div>
+        <div class="ln"><span id="ct-h2"><em>giữ thế mạnh</em> hay đổi hướng?</span></div>
+      </div>
+      <div class="ct-opts">
+        <div class="ct-opt up" id="ct-o1"><div class="emo"></div><div class="lab2">Giữ vững cầu mây, karate</div></div>
+        <div class="ct-vs" id="ct-vs">VS</div>
+        <div class="ct-opt down" id="ct-o2"><div class="emo"></div><div class="lab2">Đầu tư mạnh môn Olympic</div></div>
+      </div>
+      <div class="ct-cta" id="ct-cta"><span class="ico"></span><span>Bình luận quan điểm của bạn</span></div>
+    </div>
+    <div class="ct-sign" id="ct-sign"><img class="m" src="public/logo.png" alt=""><span class="w2">Tin Tức Số</span></div>
+    <div class="cap-wrap">
+      <div class="cap-chunk" id="gc1"><span class="w" id="gc1-w1">Ba</span><span class="w" id="gc1-w2">huy</span><span class="w" id="gc1-w3">chương</span><span class="w" id="gc1-w4">vàng,</span></div>
+      <div class="cap-chunk" id="gc2"><span class="w" id="gc2-w1">xếp</span><span class="w" id="gc2-w2">hạng</span><span class="w" id="gc2-w3">hai</span><span class="w" id="gc2-w4">mươi:</span></div>
+      <div class="cap-chunk" id="gc3"><span class="w" id="gc3-w1">thể</span><span class="w" id="gc3-w2">thao</span><span class="w" id="gc3-w3">Việt</span><span class="w" id="gc3-w4">Nam</span><span class="w" id="gc3-w5">nên</span></div>
+      <div class="cap-chunk" id="gc4"><span class="w" id="gc4-w1">giữ</span><span class="w" id="gc4-w2">vững</span><span class="w" id="gc4-w3">thế</span><span class="w" id="gc4-w4">mạnh</span><span class="w" id="gc4-w5">cầu</span></div>
+      <div class="cap-chunk" id="gc5"><span class="w" id="gc5-w1">mây,</span><span class="w" id="gc5-w2">karate,</span><span class="w" id="gc5-w3">hay</span><span class="w" id="gc5-w4">đầu</span><span class="w" id="gc5-w5">tư</span></div>
+      <div class="cap-chunk" id="gc6"><span class="w" id="gc6-w1">mạnh</span><span class="w" id="gc6-w2">hơn</span><span class="w" id="gc6-w3">cho</span><span class="w" id="gc6-w4">các</span><span class="w" id="gc6-w5">môn</span></div>
+      <div class="cap-chunk" id="gc7"><span class="w" id="gc7-w1">Olympic?</span><span class="w" id="gc7-w2">Hãy</span><span class="w" id="gc7-w3">để</span><span class="w" id="gc7-w4">lại</span><span class="w" id="gc7-w5">bình</span></div>
+      <div class="cap-chunk" id="gc8"><span class="w" id="gc8-w1">luận</span><span class="w" id="gc8-w2">của</span><span class="w" id="gc8-w3">bạn.</span></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#ct-kick', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#ct-h1', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 0.2);
+    tl.fromTo('#ct-h2', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 0.36);
+    tl.fromTo('#ct-o1', { autoAlpha: 0, y: 28, scale: 0.92 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.42, ease: 'back.out(1.5)' }, 2.829);
+    tl.fromTo('#ct-vs', { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 4.409);
+    tl.fromTo('#ct-o2', { autoAlpha: 0, y: 28, scale: 0.92 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.42, ease: 'back.out(1.5)' }, 4.781);
+    tl.fromTo('#ct-cta', { autoAlpha: 0, y: 22 }, { autoAlpha: 1, y: 0, duration: 0.44, ease: 'power3.out' }, 6.533);
+    tl.fromTo('#ct-cta', { scale: 1 }, { scale: 1.04, duration: 0.5, yoyo: true, repeat: 3, ease: 'sine.inOut' }, 7.033);
+    tl.fromTo('#ct-sign', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 6.833);
+    tl.set('#gc1', { autoAlpha: 1 }, 0.000);
+    tl.to('#gc1-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.000);
+    tl.to('#gc1-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.115);
+    tl.to('#gc1-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.287);
+    tl.to('#gc1-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.632);
+    tl.set('#gc1', { autoAlpha: 0 }, 1.055);
+    tl.set('#gc2', { autoAlpha: 1 }, 1.005);
+    tl.to('#gc2-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.005);
+    tl.to('#gc2-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.177);
+    tl.to('#gc2-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.407);
+    tl.to('#gc2-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.579);
+    tl.set('#gc2', { autoAlpha: 0 }, 2.003);
+    tl.set('#gc3', { autoAlpha: 1 }, 1.953);
+    tl.to('#gc3-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.953);
+    tl.to('#gc3-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.125);
+    tl.to('#gc3-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.355);
+    tl.to('#gc3-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.584);
+    tl.to('#gc3-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.757);
+    tl.set('#gc3', { autoAlpha: 0 }, 2.979);
+    tl.set('#gc4', { autoAlpha: 1 }, 2.929);
+    tl.to('#gc4-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.929);
+    tl.to('#gc4-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.101);
+    tl.to('#gc4-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.331);
+    tl.to('#gc4-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.503);
+    tl.to('#gc4-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.733);
+    tl.set('#gc4', { autoAlpha: 0 }, 3.955);
+    tl.set('#gc5', { autoAlpha: 1 }, 3.905);
+    tl.to('#gc5-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.905);
+    tl.to('#gc5-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.221);
+    tl.to('#gc5-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.709);
+    tl.to('#gc5-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.881);
+    tl.to('#gc5-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.054);
+    tl.set('#gc5', { autoAlpha: 0 }, 5.219);
+    tl.set('#gc6', { autoAlpha: 1 }, 5.169);
+    tl.to('#gc6-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.169);
+    tl.to('#gc6-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.398);
+    tl.to('#gc6-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.571);
+    tl.to('#gc6-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.743);
+    tl.to('#gc6-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.915);
+    tl.set('#gc6', { autoAlpha: 0 }, 6.137);
+    tl.set('#gc7', { autoAlpha: 1 }, 6.087);
+    tl.to('#gc7-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.087);
+    tl.to('#gc7-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.633);
+    tl.to('#gc7-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.805);
+    tl.to('#gc7-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.920);
+    tl.to('#gc7-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.092);
+    tl.set('#gc7', { autoAlpha: 0 }, 7.372);
+    tl.set('#gc8', { autoAlpha: 1 }, 7.322);
+    tl.to('#gc8-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.322);
+    tl.to('#gc8-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.552);
+    tl.to('#gc8-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.724);
+    tl.set('#gc8', { autoAlpha: 0 }, 8.340);
+    window.__timelines['07-cta'] = tl;
+  </script>
+</template>
