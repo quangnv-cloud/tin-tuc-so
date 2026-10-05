@@ -1,0 +1,38 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+
+    .f-head { position: absolute; left: 70px; top: 330px; width: 840px; }
+    .f-title { margin-top: 18px; font-weight: 900; font-size: 84px; line-height: 1.05; letter-spacing: -0.01em; opacity: 0; }
+    .f-head .kick { opacity: 0; }
+    .f-card { position: absolute; left: 70px; width: 840px; height: 185px; display: flex; align-items: center; gap: 34px; padding: 0 40px; opacity: 0; }
+    .f-n { flex: none; font-weight: 900; font-size: 56px; color: #FF5A1F; letter-spacing: -0.02em; width: 82px; }
+    .f-tx { font-weight: 700; font-size: 40px; line-height: 1.2; color: #fff; }
+
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+    <div class="f-head"><div class="kick" id="f-k">Ai được hưởng</div><div class="f-title" id="f-t"><span class="or">8</span> nhóm đối tượng</div></div>
+    <div class="card f-card" id="fc0" style="top:540px"><div class="f-n">01</div><div class="f-tx">Trẻ em có hoàn cảnh đặc biệt</div></div>
+    <div class="card f-card" id="fc1" style="top:755px"><div class="f-n">02</div><div class="f-tx">Người cao tuổi nghèo khó</div></div>
+    <div class="card f-card" id="fc2" style="top:970px"><div class="f-n">03</div><div class="f-tx">Người nghèo đơn thân nuôi con nhỏ</div></div>
+    <div class="card f-card" id="fc3" style="top:1185px"><div class="f-n">04</div><div class="f-tx">Người khuyết tật nặng</div></div>
+
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#f-k', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#f-t', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.25);
+    tl.fromTo('#fc0', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 2.45);
+    tl.fromTo('#fc1', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.93);
+    tl.fromTo('#fc2', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 5.22);
+    tl.fromTo('#fc3', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 6.52);
+
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>

@@ -1,0 +1,40 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+
+    .w-img { position: absolute; left: 70px; top: 300px; width: 840px; height: 540px; border-radius: 22px; overflow: hidden; box-shadow: 0 0 40px rgba(255,90,31,0.14); border: 1px solid rgba(255,255,255,0.1); opacity: 0; }
+    .w-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
+    .w-img .src { position: absolute; left: 20px; bottom: 18px; padding: 8px 14px; border-radius: 8px; background: rgba(11,14,20,0.75); font-weight: 600; font-size: 20px; color: rgba(255,255,255,0.9); }
+    .w-panel { position: absolute; left: 70px; top: 880px; width: 840px; height: 540px; padding: 0 44px; display: flex; flex-direction: column; justify-content: center; opacity: 0; }
+    .w-panel .kick { margin-bottom: 26px; }
+    .w-head { font-weight: 900; font-size: 64px; line-height: 1.12; letter-spacing: -0.01em; }
+    .w-head .ln { overflow: hidden; } .w-head .ln > span { display: block; }
+    .w-sub { margin-top: 28px; font-weight: 500; font-size: 30px; line-height: 1.45; color: rgba(255,255,255,0.78); }
+    .w-sub b { font-weight: 800; color: #FF5A1F; }
+    .w-bar { position: absolute; left: 44px; top: 0; width: 6px; height: 0; background: #FF5A1F; border-radius: 3px; }
+
+  </style>
+
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+    <div class="w-img"><img src="assets/img/article-hero.jpg" alt=""><div class="src">Ảnh: Dân trí</div></div>
+    <div class="card w-panel" id="w-panel">
+      <div class="kick">Chuyện gì xảy ra</div>
+      <div class="w-head"><div class="ln"><span id="w-h1" class="or">Nghị định 335/2026</span></div><div class="ln"><span id="w-h2">chính thức có hiệu lực</span></div></div>
+      <div class="w-sub" id="w-sub">Từ <b>5/10/2026</b>, mức chuẩn trợ giúp xã hội mới áp dụng cho trẻ em, người cao tuổi, người đơn thân nghèo và người khuyết tật.</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.w-img', { autoAlpha: 0, scale: 1.06 }, { autoAlpha: 1, scale: 1, duration: 0.7, ease: 'power2.out' }, 0.05);
+    tl.fromTo('#w-panel', { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 0.35);
+    tl.fromTo('#w-h1', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 0.2);
+    tl.fromTo('#w-h2', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 1.4);
+    tl.fromTo('#w-sub', { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 2.84);
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>

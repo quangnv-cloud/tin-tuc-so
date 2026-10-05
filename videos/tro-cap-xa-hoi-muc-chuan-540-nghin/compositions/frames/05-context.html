@@ -1,0 +1,42 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+
+    .c-head { position: absolute; left: 70px; top: 330px; width: 840px; }
+    .c-head .kick { opacity: 0; } .c-title { margin-top: 18px; font-weight: 900; font-size: 68px; line-height: 1.05; letter-spacing: -0.01em; opacity: 0; }
+    .c-table { position: absolute; left: 70px; width: 840px; top: 520px; height: 900px; padding: 0 40px; display: flex; flex-direction: column; opacity: 0; }
+    .c-row { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); opacity: 0; }
+    .c-row:last-child { border-bottom: none; }
+    .c-l { font-weight: 700; font-size: 24px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .c-v { font-weight: 700; font-size: 38px; line-height: 1.25; color: #fff; }
+    .c-v b { font-weight: 900; color: #FF5A1F; }
+
+  </style>
+
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+    <div class="c-head"><div class="kick" id="c-k">Thủ tục</div><div class="c-title" id="c-t">Trợ cấp hưu trí xã hội</div></div>
+    <div class="card c-table" id="c-table">
+      <div class="c-row" id="cr0"><div class="c-l">Độ tuổi</div><div class="c-v">Từ đủ <b>75</b> tuổi, hoặc <b>70–dưới 75</b> tuổi nếu thuộc hộ nghèo, cận nghèo</div></div>
+      <div class="c-row" id="cr1"><div class="c-l">Điều kiện</div><div class="c-v">Không hưởng lương hưu, có đơn đề nghị</div></div>
+      <div class="c-row" id="cr2"><div class="c-l">Nơi nộp</div><div class="c-v">Cấp xã: trực tuyến, bưu chính hoặc Một cửa</div></div>
+      <div class="c-row" id="cr3"><div class="c-l">Thời hạn</div><div class="c-v"><b>7</b> ngày làm việc, không mất phí</div></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#c-k', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 0.1);
+    tl.fromTo('#c-t', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.25);
+    tl.fromTo('#c-table', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 0.5);
+    tl.fromTo('#cr0', { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.96);
+    tl.fromTo('#cr1', { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 6.54);
+    tl.fromTo('#cr2', { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 7.51);
+    tl.fromTo('#cr3', { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 9.39);
+
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>

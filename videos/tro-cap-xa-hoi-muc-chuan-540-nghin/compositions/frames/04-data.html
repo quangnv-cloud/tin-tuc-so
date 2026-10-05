@@ -1,0 +1,44 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+
+    .d-k { position: absolute; left: 70px; top: 330px; opacity: 0; }
+    .d-num { position: absolute; left: 0; right: 0; top: 420px; text-align: center; font-weight: 900; font-size: 214px; line-height: 1; letter-spacing: -0.03em; color: #FF5A1F; opacity: 0; white-space: nowrap; }
+    .d-unit { position: absolute; left: 0; right: 0; top: 672px; text-align: center; font-weight: 700; font-size: 44px; color: #fff; opacity: 0; }
+    .d-form { position: absolute; left: 70px; width: 840px; top: 770px; display: flex; align-items: center; justify-content: space-between; opacity: 0; }
+    .d-chip { padding: 20px 22px; border-radius: 16px; border: 2px solid rgba(255,90,31,0.7); background: rgba(255,90,31,0.1); font-weight: 800; font-size: 29px; line-height: 1.15; text-align: center; }
+    .d-chip.pl { border-color: rgba(255,255,255,0.18); background: #121724; }
+    .d-op { font-weight: 900; font-size: 44px; color: rgba(255,255,255,0.4); }
+    .d-bars { position: absolute; left: 70px; width: 840px; top: 960px; height: 400px; padding: 0 28px; display: flex; align-items: flex-end; justify-content: space-between; border-radius: 22px; }
+    .bar { width: 36px; background: rgba(255,90,31,0.4); border-radius: 8px 8px 0 0; transform-origin: bottom; }
+    .bar.top { background: #FF5A1F; }
+    .d-cap { position: absolute; left: 70px; width: 840px; top: 1380px; display: flex; justify-content: space-between; font-weight: 600; font-size: 24px; color: rgba(255,255,255,0.7); opacity: 0; }
+
+  </style>
+
+  <div id="root" data-composition-id="04-data" data-width="1080" data-height="1920">
+    <div class="kick d-k" id="d-k">Mức chuẩn mới</div>
+    <div class="d-num" id="d-num">0</div>
+    <div class="d-unit" id="d-unit">đồng mỗi tháng</div>
+    <div class="d-form" id="d-form"><div class="d-chip">Mức chuẩn</div><div class="d-op">×</div><div class="d-chip pl">Hệ số<br>từng nhóm</div><div class="d-op">=</div><div class="d-chip">Trợ cấp<br>hằng tháng</div></div>
+    <div class="card d-bars" id="d-bars"><div class="bar" style="height:60px"></div><div class="bar" style="height:78px"></div><div class="bar" style="height:96px"></div><div class="bar" style="height:114px"></div><div class="bar" style="height:132px"></div><div class="bar" style="height:150px"></div><div class="bar" style="height:168px"></div><div class="bar" style="height:186px"></div><div class="bar" style="height:204px"></div><div class="bar" style="height:222px"></div><div class="bar" style="height:240px"></div><div class="bar" style="height:258px"></div><div class="bar" style="height:276px"></div><div class="bar" style="height:294px"></div><div class="bar top" style="height:312px"></div></div>
+    <div class="d-cap" id="d-cap"><span>15 mức trợ cấp hằng tháng</span><span>Minh hoạ</span></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#d-k', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 0.1);
+    tl.fromTo('#d-num', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'back.out(1.4)' }, 0.69);
+    const cu = { v: 0 };
+    tl.to(cu, { v: 540000, duration: 1.7, ease: 'power2.out', onUpdate: () => { document.getElementById('d-num').textContent = Math.round(cu.v).toLocaleString('de-DE'); } }, 0.74);
+    tl.fromTo('#d-unit', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 1.51);
+    tl.fromTo('#d-form', { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 2.46);
+    tl.fromTo('.bar', { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: 'power3.out', stagger: 0.05 }, 4.11);
+    tl.fromTo('#d-cap', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 5.34);
+    window.__timelines['04-data'] = tl;
+  </script>
+</template>

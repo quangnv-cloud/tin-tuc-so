@@ -1,0 +1,64 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+
+    #root::before { content: ""; position: absolute; inset: 0; background: radial-gradient(80% 50% at 50% 34%, rgba(255,90,31,0.14), transparent 60%); }
+    .t-wrap { position: absolute; left: 70px; width: 840px; top: 420px; text-align: center; }
+    .t-kicker { font-weight: 700; font-size: 28px; letter-spacing: 0.26em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .t-head { margin-top: 34px; font-weight: 900; font-size: 92px; line-height: 1.1; color: #fff; }
+    .t-head .ln { overflow: hidden; } .t-head .ln > span { display: block; }
+    .t-opts { display: flex; justify-content: center; align-items: stretch; gap: 16px; margin-top: 100px; }
+    .t-opt { flex: 1; max-width: 380px; padding: 62px 20px; border-radius: 18px; border: 2px solid; opacity: 0; }
+    .t-opt.up { border-color: rgba(255,90,31,0.75); background: rgba(255,90,31,0.1); }
+    .t-opt.down { border-color: rgba(255,68,56,0.75); background: rgba(255,68,56,0.1); }
+    .t-opt .emo { width: 56px; height: 56px; margin: 0 auto; position: relative; }
+    .t-opt.up .emo { border: 5px solid #FF5A1F; border-radius: 50%; }
+    .t-opt.up .emo::after { content: ""; position: absolute; left: 50%; top: 14px; width: 15px; height: 15px; border-top: 5px solid #FF5A1F; border-right: 5px solid #FF5A1F; transform: translateX(-50%) rotate(-45deg); }
+    .t-opt.down .emo::before { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 0; border-left: 28px solid transparent; border-right: 28px solid transparent; border-bottom: 50px solid #FF4438; }
+    .t-opt.down .emo::after { content: "!"; position: absolute; left: 0; right: 0; bottom: -2px; text-align: center; font-weight: 900; font-size: 30px; color: #0B0E14; }
+    .t-opt .lab { margin-top: 22px; font-weight: 800; font-size: 38px; line-height: 1.2; color: #fff; }
+    .t-vs { display: flex; align-items: center; font-weight: 900; font-size: 34px; color: rgba(255,255,255,0.35); opacity: 0; }
+    .t-cta { display: inline-flex; align-items: center; gap: 18px; margin-top: 96px; padding: 26px 42px; border-radius: 100px; background: #FF5A1F; opacity: 0; }
+    .t-cta .ico { width: 42px; height: 42px; flex: none; border-radius: 12px 12px 12px 4px; background: #fff; position: relative; }
+    .t-cta .ico::before { content: ""; position: absolute; left: 10px; top: 12px; right: 10px; height: 4px; border-radius: 2px; background: #FF5A1F; box-shadow: 0 10px 0 #FF5A1F; }
+    .t-cta span { font-weight: 800; font-size: 36px; letter-spacing: 0.01em; color: #0B0E14; }
+    .t-sign { position: absolute; left: 0; right: 0; top: 1330px; display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; }
+    .t-sign .m { width: 42px; height: 42px; } .t-sign .w { font-weight: 800; font-size: 30px; color: rgba(255,255,255,0.85); }
+
+  </style>
+
+  <div id="root" data-composition-id="07-cta" data-width="1080" data-height="1920">
+    <div class="t-wrap">
+      <div class="t-kicker" id="t-kicker">Góc nhìn của bạn</div>
+      <div class="t-head">
+        <div class="ln" data-layout-allow-overflow=""><span id="t-h1">Mức chuẩn mới</span></div>
+        <div class="ln" data-layout-allow-overflow=""><span id="t-h2" class="or">đã sát thực tế?</span></div>
+      </div>
+      <div class="t-opts">
+        <div class="t-opt up" id="t-o1"><div class="emo"></div><div class="lab">Đã sát thực tế</div></div>
+        <div class="t-vs" id="t-vs">VS</div>
+        <div class="t-opt down" id="t-o2"><div class="emo"></div><div class="lab">Còn thấp</div></div>
+      </div>
+      <div class="t-cta" id="t-cta"><span class="ico"></span><span>Bình luận quan điểm của bạn</span></div>
+    </div>
+    <div class="t-sign" id="t-sign"><img class="m" src="public/logo.png" alt=""><span class="w">Tin Tức Số</span></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#t-kicker', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#t-h1', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 0.2);
+    tl.fromTo('#t-h2', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 0.36);
+    tl.fromTo('#t-o1', { autoAlpha: 0, y: 28, scale: 0.92 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.42, ease: 'back.out(1.5)' }, 1.0);
+    tl.fromTo('#t-vs', { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 1.25);
+    tl.fromTo('#t-o2', { autoAlpha: 0, y: 28, scale: 0.92 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.42, ease: 'back.out(1.5)' }, 1.4);
+    tl.fromTo('#t-cta', { autoAlpha: 0, y: 22 }, { autoAlpha: 1, y: 0, duration: 0.44, ease: 'power3.out' }, 3.20);
+    tl.fromTo('#t-cta', { scale: 1 }, { scale: 1.04, duration: 0.5, yoyo: true, repeat: 3, ease: 'sine.inOut' }, 3.80);
+    tl.fromTo('#t-sign', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 3.51);
+    window.__timelines['07-cta'] = tl;
+  </script>
+</template>
