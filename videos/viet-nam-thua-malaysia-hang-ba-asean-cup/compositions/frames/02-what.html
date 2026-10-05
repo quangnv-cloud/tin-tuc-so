@@ -1,0 +1,70 @@
+<template>
+  <style>
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+#root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+.card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+.kick { font-weight: 700; font-size: 28px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+.or { color: #FF5A1F; } .rd { color: #FF4438; }
+
+
+.w-img { position: absolute; left: 60px; top: 300px; width: 960px; height: 540px; border-radius: 26px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 44px rgba(255,90,31,0.18); opacity: 0; }
+.w-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.w-img .cr { position: absolute; left: 20px; bottom: 16px; padding: 7px 14px; border-radius: 7px; background: rgba(11,14,20,0.72); font-weight: 500; font-size: 20px; color: rgba(255,255,255,0.88); }
+.w-kick { position: absolute; left: 60px; top: 884px; opacity: 0; }
+.w-head { position: absolute; left: 60px; right: 60px; top: 936px; }
+.w-head .ln { overflow: hidden; padding-bottom: 6px; } .w-head .ln > div { font-weight: 900; font-size: 84px; line-height: 1.06; letter-spacing: -0.01em; white-space: nowrap; }
+.w-chips { position: absolute; left: 60px; top: 1146px; display: flex; gap: 18px; }
+.chip { display: inline-flex; align-items: center; gap: 12px; padding: 15px 28px; border-radius: 100px; border: 2px solid rgba(255,90,31,0.85); background: rgba(255,90,31,0.1); font-weight: 700; font-size: 34px; color: #fff; white-space: nowrap; opacity: 0; }
+.chip .d { width: 11px; height: 11px; border-radius: 50%; background: #FF5A1F; }
+.w-path { position: absolute; left: 60px; right: 60px; top: 1262px; display: flex; gap: 16px; }
+.w-step { flex: 1; padding: 22px 18px 24px; border-radius: 20px; opacity: 0; }
+.w-step .l { font-weight: 600; font-size: 24px; color: rgba(255,255,255,0.7); line-height: 1.2; }
+.w-step .v { margin-top: 10px; font-weight: 900; font-size: 36px; white-space: nowrap; line-height: 1.05; color: #fff; }
+.w-step.hot { border-color: rgba(255,68,56,0.7); } .w-step.hot .v { color: #FF4438; }
+
+  </style>
+
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+
+    <div class="w-img" id="w-img"><img src="assets/img/article-hero.jpg" alt=""><span class="cr">Ảnh: VnExpress</span></div>
+    <div class="w-kick kick" id="w-kick">Tranh hạng ba · FIFA ASEAN Cup</div>
+    <div class="w-head">
+      <div class="ln" data-layout-allow-overflow=""><div id="w-h1">Malaysia thắng</div></div>
+      <div class="ln" data-layout-allow-overflow=""><div id="w-h2">Việt Nam <span class="or">1-0</span></div></div>
+    </div>
+    <div class="w-chips"><span class="chip" id="w-c1"><span class="d"></span>5/10/2026</span><span class="chip" id="w-c2"><span class="d"></span>Sân Bung Karno, Indonesia</span></div>
+    <div class="w-path">
+      <div class="w-step card" id="w-s1"><div class="l">Đương kim vô địch</div><div class="v">Đông Nam Á</div></div>
+      <div class="w-step card hot" id="w-s2"><div class="l">Thua Thái Lan</div><div class="v">0-2</div></div>
+      <div class="w-step card hot" id="w-s3"><div class="l">Chung cuộc</div><div class="v">Hạng tư</div></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#w-img', { autoAlpha: 0, y: 40, scale: 0.97 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' }, 0.1);
+    tl.fromTo('#w-kick', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.5);
+    tl.fromTo('#w-h1', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 0.65);
+    tl.fromTo('#w-h2', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 0.82);
+    tl.fromTo('#w-c1', { autoAlpha: 0, y: 18, scale: 0.9 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.4, ease: 'back.out(1.6)' }, 0.95);
+    tl.fromTo('#w-c2', { autoAlpha: 0, y: 18, scale: 0.9 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.4, ease: 'back.out(1.6)' }, 1.2999999999999998);
+    tl.fromTo('#w-s1', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power3.out' }, 3.38);
+    tl.fromTo('#w-s2', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power3.out' }, 6.65);
+    tl.fromTo('#w-s3', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power3.out' }, 8.02);
+
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>

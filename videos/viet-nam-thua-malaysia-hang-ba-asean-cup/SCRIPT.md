@@ -1,0 +1,7 @@
+Việt Nam thua Malaysia một không ở trận tranh hạng ba Phi-pha A-xê-an Cúp hai nghìn không trăm hai mươi sáu, dù dứt điểm nhiều gấp đôi đối thủ.
+Trận đấu diễn ra chiều năm tháng mười trên sân Bung Karno ở Indonesia. Việt Nam vào giải với tư cách nhà đương kim vô địch Đông Nam Á, nhưng đã thua Thái Lan hai không và chỉ đứng nhì bảng.
+Bàn thắng duy nhất do Fergus Tierney ghi, chỉ khoảng một trăm giây sau khi vào sân thay người ở phút sáu mươi. Cú sút ở mép vòng cấm đi qua khe giữa hai chân Bùi Hoàng Việt Anh, thủ môn Lê Giang không kịp phản ứng.
+Con số nghịch lý: Việt Nam dứt điểm mười bốn lần, Malaysia chỉ bảy lần. Nhưng Việt Nam chỉ có bốn cú trúng đích, còn Malaysia có ba cú và ghi một bàn.
+Ở phút bảy mươi ba, trọng tài ban đầu cho Việt Nam hưởng phạt đền khi Lê Văn Đô ngã trong vòng cấm, rồi rút lại sau khi xem video, vì hậu vệ Malaysia chạm bóng trước. Huấn luyện viên Kim Sang Sik gọi đó là quyết định đáng tiếc, nhưng nói bóng đá là như vậy.
+Huấn luyện viên Kim Sang Sik cho biết đội chỉ có một ngày tập trung trước khi sang Indonesia, thiếu Thành Chung, Quang Hải, Văn Hậu vì chấn thương. Ông xin nhận hoàn toàn trách nhiệm, và nói đây là giải chính thức cuối cùng của đội trong năm hai nghìn không trăm hai mươi sáu.
+Dứt điểm nhiều gấp đôi vẫn thua: theo bạn, nguyên nhân nằm ở quỹ thời gian chuẩn bị quá ngắn, hay đội tuyển cần thay đổi cách chơi? Hãy để lại bình luận quan điểm của bạn.
