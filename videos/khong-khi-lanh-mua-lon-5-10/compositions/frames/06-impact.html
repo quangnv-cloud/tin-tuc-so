@@ -1,0 +1,61 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+
+
+    .i-kick { position: absolute; left: 60px; right: 60px; top: 270px; opacity: 0; }
+    .i-head { position: absolute; left: 60px; right: 60px; top: 330px; font-weight: 800; font-size: 54px; line-height: 1.18; opacity: 0; }
+    .i-head b { color: #FF4438; font-weight: 900; }
+    .i-row { position: absolute; left: 60px; right: 60px; height: 190px; padding: 0 40px; display: flex; align-items: center; gap: 34px; opacity: 0; }
+    .i-ico { width: 78px; height: 78px; flex: none; position: relative; }
+    .i-ico::before { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 0; border-left: 39px solid transparent; border-right: 39px solid transparent; border-bottom: 70px solid #FF4438; }
+    .i-ico::after { content: "!"; position: absolute; left: 0; right: 0; bottom: 2px; text-align: center; font-weight: 900; font-size: 40px; color: #0B0E14; }
+    .i-txt { flex: 1; min-width: 0; }
+    .i-name { font-weight: 900; font-size: 52px; line-height: 1.05; color: #fff; }
+    .i-sub { margin-top: 8px; font-weight: 600; font-size: 29px; color: rgba(255,255,255,0.7); }
+    .i-spark { position: absolute; left: 40px; right: 40px; bottom: 22px; height: 6px; }
+    .i-spark div { height: 100%; border-radius: 3px; background: #FF4438; transform-origin: left; }
+    .i-chips { position: absolute; left: 60px; right: 60px; top: 1190px; display: flex; flex-wrap: wrap; gap: 16px; opacity: 0; }
+    .i-chip { padding: 14px 24px; border-radius: 100px; border: 1.5px solid rgba(255,90,31,0.7); background: rgba(255,90,31,0.1); font-weight: 700; font-size: 28px; color: #fff; white-space: nowrap; }
+    .i-chips-lab { position: absolute; left: 60px; top: 1146px; font-weight: 700; font-size: 22px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); opacity: 0; }
+
+  </style>
+
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+<div class="kick i-kick" id="i-kick">Cảnh báo của cơ quan khí tượng</div>
+    <div class="i-head" id="i-head">Mưa lớn có thể gây <b>ba nguy cơ</b> chính</div>
+    <div class="card i-row" id="i-r1" style="top:480px"><div class="i-ico"></div><div class="i-txt"><div class="i-name">Lũ quét</div><div class="i-sub">Trên các sông, suối nhỏ</div></div><div class="i-spark"><div id="i-s1"></div></div></div>
+    <div class="card i-row" id="i-r2" style="top:700px"><div class="i-ico"></div><div class="i-txt"><div class="i-name">Sạt lở đất</div><div class="i-sub">Trên sườn dốc</div></div><div class="i-spark"><div id="i-s2"></div></div></div>
+    <div class="card i-row" id="i-r3" style="top:920px"><div class="i-ico"></div><div class="i-txt"><div class="i-name">Ngập úng</div><div class="i-sub">Ở vùng trũng, thấp</div></div><div class="i-spark"><div id="i-s3"></div></div></div>
+    <div class="i-chips-lab" id="i-cl">Trong mưa dông còn có thể xảy ra</div>
+    <div class="i-chips" id="i-chips"><span class="i-chip">Lốc</span><span class="i-chip">Sét</span><span class="i-chip">Mưa đá</span><span class="i-chip">Gió giật mạnh</span></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#i-kick', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.35 }, 0.1);
+    tl.fromTo('#i-head', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power3.out' }, 0.3);
+    const row = (i, t) => {
+      tl.fromTo('#i-r'+i, { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power3.out' }, t);
+      tl.fromTo('#i-s'+i, { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: 'power2.out' }, t + 0.15);
+    };
+    row(1, 1.8); row(2, 2.55); row(3, 3.2);
+    tl.fromTo('#i-cl', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35 }, 3.6);
+    tl.fromTo('#i-chips', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 3.7);
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
