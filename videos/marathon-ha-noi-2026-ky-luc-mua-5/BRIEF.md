@@ -1,0 +1,12 @@
+# BRIEF — Marathon Quốc tế Hà Nội mùa 5: kỷ lục marathon nữ, gần 15.000 vận động viên
+- Từ khoá trending: "nguyễn thị oanh" (Google Trends VN, 1000+ / 2000+, vị trí #63/#64 trong list ngày 6/10/2026). Style dựng: 3-ticker-tape (index 2, claim_style).
+- Nguồn chính: Dân Trí "Bứt phá kỷ lục tại giải Marathon Quốc tế Hà Nội Techcombank mùa thứ 5" (id news bbc9c9351066) + Lao Động "Nguyễn Thị Oanh giải cơn khát vô địch sau ASIAD 20" (4/10/2026, qua ?article=c51313b9f2ed).
+- Ngày giải: sáng 4/10/2026 (Hà Nội). Bốn cự ly: marathon 42km, bán marathon 21km, 10km, 5km.
+- Marathon nam: 1 Huỳnh Anh Khôi, 2 Tesfaye Keress (Ethiopia), 3 Đặng Anh Quyết. Marathon nữ: 1 Phạm Thị Hồng Lệ 2:50:41 (kỷ lục nữ của giải), 2 Doãn Thị Oanh, 3 Marta Tinsae Birehan (Ethiopia).
+- Bán marathon nữ: Nguyễn Thị Oanh 1:21:44; nhì Bùi Thị Thu Hà 1:24:53 (chênh 3 phút 9 giây, tính từ số liệu). Nam: Saeki Makino (Nhật Bản) 1:12:54; nhì Nguyễn Trung Cường 1:14:40.
+- Oanh: ngôi vô địch đầu tiên kể từ ASIAD 20 (hạng 6 nội dung 10.000m nữ, 33:44.92).
+- Quy mô: gần 15.000 VĐV, lớn nhất từ trước đến nay (Phó giám đốc Sở VHTTDL Hà Nội Phạm Xuân Tài); Làng Marathon Expo >40.000 lượt người, 3 ngày 2–4/10, 30 gian hàng.
+- Số liệu TÍNH THÊM (đánh dấu rõ là tính từ số liệu gốc): nhịp trung bình marathon nữ kỷ lục = 10.241 giây / 42,195 km ≈ 4 phút 3 giây/km. Nhịp bán marathon của Oanh = 4.904 giây / 21,0975 km ≈ 3 phút 52 giây/km.
+- Góc riêng (B7): chuyển số liệu thành nhịp chạy mỗi ki-lô-mét để người xem hình dung; đặt kỷ lục, quy mô và kết quả vận động viên Việt Nam cạnh nhau.
+- Không dùng tên nhà tài trợ trong lời đọc; "Techcombank" chỉ là một phần tên giải trong nguồn. Không bình luận về cá nhân. Ảnh: ảnh bài báo Dân Trí (người về đích, không nêu tên người trong ảnh).
+- CTA: chạy bộ — thói quen lâu dài hay trào lưu nhất thời?

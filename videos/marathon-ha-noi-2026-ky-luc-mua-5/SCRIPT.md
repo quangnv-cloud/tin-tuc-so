@@ -1,0 +1,7 @@
+Giải marathon quốc tế Hà Nội mùa thứ năm vừa khép lại với kỷ lục marathon nữ mới của giải và gần mười lăm nghìn vận động viên tham dự.
+Giải diễn ra sáng chủ nhật bốn tháng mười với bốn cự ly: marathon bốn mươi hai ki-lô-mét, bán marathon, mười ki-lô-mét và năm ki-lô-mét. Đường chạy đi qua Hồ Gươm, Lăng Bác, phố cổ, cầu Long Biên và cầu Nhật Tân.
+Ở cự ly marathon nam, Huỳnh Anh Khôi giành ngôi vô địch, Tesfaye Keress của Ethiopia về nhì, Đặng Anh Quyết đứng thứ ba. Ở bán marathon, Nguyễn Thị Oanh về nhất nội dung nữ, còn nội dung nam thuộc về Saeki Makino của Nhật Bản.
+Phạm Thị Hồng Lệ về nhất marathon nữ với hai giờ năm mươi phút bốn mươi mốt giây, thiết lập kỷ lục mới của giải. Tính ra, nhịp chạy trung bình khoảng bốn phút ba giây cho mỗi ki-lô-mét.
+Nguyễn Thị Oanh hoàn thành bán marathon trong một giờ hai mươi mốt phút bốn mươi bốn giây, hơn Bùi Thị Thu Hà ở vị trí thứ hai hơn ba phút. Đây là ngôi vô địch đầu tiên của Nguyễn Thị Oanh kể từ Đại hội thể thao châu Á vừa qua, nơi vận động viên này xếp hạng sáu nội dung mười nghìn mét nữ.
+Theo đại diện Sở Văn hóa, Thể thao và Du lịch Hà Nội, năm nay giải có gần mười lăm nghìn vận động viên, đông nhất từ trước đến nay. Khu Làng Marathon đi kèm giải đón hơn bốn mươi nghìn lượt người trong ba ngày, từ mùng hai đến mùng bốn tháng mười.
+Theo bạn, kỷ lục và số người chạy kỷ lục có đủ để biến chạy bộ thành thói quen lâu dài, hay chỉ là một trào lưu nhất thời? Hãy để lại bình luận quan điểm của bạn.
