@@ -1,0 +1,55 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .hk-photo { position: absolute; left: 0; right: 0; top: 0; height: 800px; overflow: hidden; background: #05070c; }
+    .hk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+    .hk-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,14,20,0.10) 0%, rgba(11,14,20,0.22) 50%, rgba(11,14,20,0.99) 100%); }
+    .hk-tint { position: absolute; inset: 0; background: radial-gradient(120% 70% at 78% 18%, rgba(255,90,31,0.20), transparent 58%); mix-blend-mode: screen; }
+    .hk-panel { position: absolute; left: 0; right: 0; top: 760px; bottom: 0; background: #0B0E14; padding: 60px 60px 0; display: flex; flex-direction: column; align-items: flex-start; }
+    .hk-masthead { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; opacity: 0; }
+    .hk-logo { width: 54px; height: 54px; flex: none; }
+    .hk-logo img { display: block; width: 100%; height: 100%; }
+    .hk-mw { font-weight: 800; font-size: 31px; letter-spacing: 0.01em; color: #fff; }
+    .hk-badge { display: inline-flex; align-items: center; gap: 10px; padding: 11px 19px; border-radius: 9px; border: 1.5px solid rgba(255,90,31,0.85); background: rgba(255,90,31,0.12); margin-bottom: 30px; opacity: 0; }
+    .hk-badge .d { width: 8px; height: 8px; border-radius: 50%; background: #FF5A1F; flex: none; }
+    .hk-badge span { font-weight: 500; font-size: 22px; letter-spacing: 0.03em; color: #fff; white-space: nowrap; }
+    .hk-name-wrap { overflow: hidden; padding-bottom: 6px; }
+    .hk-name { font-weight: 900; font-size: 206px; line-height: 1.02; letter-spacing: -0.02em; color: #FF5A1F; }
+    .hk-sub { margin-top: 14px; font-weight: 700; font-size: 45px; line-height: 1.22; color: #fff; opacity: 0; }
+    .hk-tags { display: flex; gap: 26px; margin-top: 30px; }
+    .hk-tag { font-weight: 800; font-size: 38px; line-height: 1; color: #fff; opacity: 0; white-space: nowrap; }
+    .hk-tag.warn { color: #FF4438; }
+    .hk-tag .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: currentColor; margin: 0 12px 7px 0; vertical-align: middle; }
+  </style>
+
+  <div id="root" data-composition-id="01-hook" data-width="1080" data-height="1920">
+    <div class="hk-photo">
+      <img src="assets/img/article-hero.jpg" alt="">
+      <div class="hk-scrim"></div>
+      <div class="hk-tint"></div>
+    </div>
+    <div class="hk-panel">
+      <div class="hk-masthead"><div class="hk-logo"><img src="public/logo.png" alt=""></div><div class="hk-mw">Tin Tức Số</div></div>
+      <div class="hk-badge"><span class="d"></span><span>Nguồn: Tuổi Trẻ · 6/10/2026</span></div>
+      <div class="hk-name-wrap"><div class="hk-name" id="hk-name" data-layout-allow-overlap="">VNeID</div></div>
+      <div class="hk-sub" id="hk-sub">Định danh mức 2, đi công chứng<br>vẫn bị đòi căn cước bản cứng</div>
+      <div class="hk-tags">
+        <div class="hk-tag" id="hk-t1"><span class="dot"></span>Luật cho phép</div>
+        <div class="hk-tag warn" id="hk-t2"><span class="dot"></span>Thực tế vẫn đòi bản cứng</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.hk-photo', { autoAlpha: 0.5, scale: 1.1 }, { autoAlpha: 1, scale: 1, duration: 0.95, ease: 'power2.out' }, 0);
+    tl.fromTo('.hk-panel', { y: 48 }, { y: 0, duration: 0.55, ease: 'power3.out' }, 0.08);
+    tl.fromTo('.hk-masthead', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.28);
+    tl.fromTo('.hk-badge', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.36, ease: 'back.out(1.7)' }, 0.5);
+    tl.fromTo('#hk-name', { yPercent: 118 }, { yPercent: 0, duration: 0.7, ease: 'power4.out' }, 0.82);
+    tl.fromTo('#hk-sub', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 1.5);
+    tl.fromTo('#hk-t1', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 2.1);
+    tl.fromTo('#hk-t2', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 2.4);
+    window.__timelines['01-hook'] = tl;
+  </script>
+</template>

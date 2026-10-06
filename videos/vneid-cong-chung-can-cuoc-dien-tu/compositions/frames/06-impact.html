@@ -1,0 +1,46 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .i-half { position: absolute; left: 40px; right: 40px; height: 548px; border-radius: 24px; background: #121724; border: 1.5px solid rgba(255,255,255,0.08); padding: 40px 44px; opacity: 0; overflow: hidden; }
+    #i-top { top: 258px; box-shadow: 0 0 40px rgba(255,90,31,0.14); border-color: rgba(255,90,31,0.55); }
+    #i-bot { top: 852px; }
+    .i-sep { position: absolute; left: 40px; right: 40px; top: 826px; height: 3px; background: #FF5A1F; transform-origin: left; box-shadow: 0 0 18px rgba(255,90,31,0.6); }
+    .i-k { font-weight: 700; font-size: 23px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; }
+    .i-org { margin-top: 14px; max-width: 590px; font-weight: 800; font-size: 40px; line-height: 1.15; }
+    .i-date { position: absolute; right: 44px; top: 34px; font-weight: 900; font-size: 112px; line-height: 1; color: #FF5A1F; letter-spacing: -0.03em; }
+    .i-doc { margin-top: 96px; font-weight: 600; font-size: 25px; color: rgba(255,255,255,0.6); }
+    .i-txt { margin-top: 12px; font-weight: 700; font-size: 44px; line-height: 1.25; }
+    .i-txt em { font-style: normal; color: #FF5A1F; }
+    #i-bot { display: flex; flex-direction: column; justify-content: center; } #i-bot .i-org { max-width: none; font-size: 46px; } #i-bot .i-txt { margin-top: 36px; font-size: 46px; }
+    .i-pill { align-self: flex-start; margin-top: 42px; padding: 16px 26px; border-radius: 12px; border: 1.5px solid rgba(255,68,56,0.8); background: rgba(255,68,56,0.12); font-weight: 700; font-size: 29px; color: #FF4438; }
+    .cutflash { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: 0; background: linear-gradient(180deg, rgba(255,90,31,0.4), rgba(255,68,56,0.18)); }
+  </style>
+
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+    <div class="i-half" id="i-top">
+      <div class="i-k">Sở Tư pháp TP.HCM</div>
+      <div class="i-org">Công văn đề nghị tăng cường tuyên truyền</div>
+      <div class="i-date" id="i-date">23/9</div>
+      <div class="i-doc">Công văn số 12332/STP-BTTP</div>
+      <div class="i-txt">Dùng căn cước điện tử đã tích hợp trên <em>VNeID</em> trong hoạt động công chứng</div>
+    </div>
+    <div class="i-sep" id="i-sep"></div>
+    <div class="i-half" id="i-bot">
+      <div class="i-k">Hội Công chứng viên TP.HCM</div>
+      <div class="i-org">Cam kết thực hiện đúng công văn</div>
+      <div class="i-txt">Chấp nhận căn cước điện tử <em>không giảm</em> trách nhiệm kiểm tra, xác thực nhân thân</div>
+      <div class="i-pill">Công chứng viên vẫn phải kiểm tra, xác thực đầy đủ</div>
+    </div>
+    <div class="cutflash" id="cutflash"></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#i-top', { autoAlpha: 0, y: -40 }, { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 0.15);
+    tl.fromTo('#i-sep', { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: 'power2.inOut' }, 0.4);
+    tl.fromTo('#cutflash', { opacity: 0 }, { opacity: 0.55, duration: 0.05, ease: 'none' }, 6.2);
+    tl.to('#cutflash', { opacity: 0, duration: 0.16, ease: 'power1.in' }, 6.25);
+    tl.fromTo('#i-bot', { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 6.25);
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>

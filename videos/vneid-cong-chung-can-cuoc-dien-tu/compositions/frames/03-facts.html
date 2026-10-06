@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .f-kicker { position: absolute; left: 60px; top: 262px; font-weight: 700; font-size: 24px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .f-vline { position: absolute; left: 372px; top: 330px; width: 2px; height: 1080px; background: rgba(255,255,255,0.16); transform-origin: top; }
+    .f-row { position: absolute; left: 60px; right: 60px; height: 262px; display: flex; align-items: center; border-top: 1.5px solid rgba(255,255,255,0.12); opacity: 0; }
+    .f-lab { width: 312px; padding-right: 22px; font-weight: 500; font-size: 28px; line-height: 1.25; color: rgba(255,255,255,0.58); }
+    .f-val { flex: 1; padding-left: 40px; font-weight: 800; font-size: 50px; line-height: 1.16; }
+    .f-val em { font-style: normal; color: #FF5A1F; }
+    .f-val .red { color: #FF4438; }
+    .f-val.sm { font-size: 42px; }
+    #f-r1 { top: 330px; } #f-r2 { top: 592px; } #f-r3 { top: 854px; } #f-r4 { top: 1116px; }
+    .f-row .num { position: absolute; left: 0; top: 24px; font-weight: 800; font-size: 20px; color: #FF5A1F; opacity: 0.9; }
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+    <div class="f-kicker" id="f-kicker">Phóng viên khảo sát tại TP.HCM</div>
+    <div class="f-vline" id="f-vline"></div>
+    <div class="f-row" id="f-r1"><div class="f-lab">Số văn phòng được hỏi</div><div class="f-val"><em>3</em> văn phòng công chứng</div></div>
+    <div class="f-row" id="f-r2"><div class="f-lab">Giao dịch cần công chứng</div><div class="f-val">Hợp đồng <em>mua bán xe</em></div></div>
+    <div class="f-row" id="f-r3"><div class="f-lab">Câu trả lời nhận được</div><div class="f-val">Cả 3 đều tư vấn cần <span class="red">căn cước bản cứng</span></div></div>
+    <div class="f-row" id="f-r4"><div class="f-lab">Một người dân</div><div class="f-val sm">Quay về nhà lấy căn cước để công chứng hợp đồng <em>cho mượn nhà</em></div></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#f-kicker', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#f-vline', { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: 'power2.inOut' }, 0.2);
+    tl.fromTo('#f-r1', { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.5);
+    tl.fromTo('#f-r2', { autoAlpha: 0, x: 34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.7);
+    tl.fromTo('#f-r3', { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.0);
+    tl.fromTo('#f-r4', { autoAlpha: 0, x: 34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 5.0);
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>

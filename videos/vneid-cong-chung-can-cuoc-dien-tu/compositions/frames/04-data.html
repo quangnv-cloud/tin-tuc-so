@@ -1,0 +1,60 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .d-col { position: absolute; top: 262px; }
+    .d-k { font-weight: 700; font-size: 22px; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0; }
+    #d-left { left: 50px; width: 350px; } #d-left .d-k { color: rgba(255,255,255,0.55); }
+    #d-right { left: 500px; width: 530px; } #d-right .d-k { color: #FF5A1F; }
+    .d-mid { position: absolute; left: 450px; top: 262px; width: 3px; height: 1140px; background: #FF5A1F; transform-origin: top; box-shadow: 0 0 18px rgba(255,90,31,0.6); }
+    .d-vs { position: absolute; left: 427px; top: 760px; width: 50px; height: 50px; border-radius: 50%; background: #0B0E14; border: 2px solid #FF5A1F; color: #FF5A1F; font-weight: 900; font-size: 18px; display: flex; align-items: center; justify-content: center; opacity: 0; }
+    .d-lnum { margin-top: 440px; font-weight: 900; font-size: 66px; line-height: 1; color: rgba(255,255,255,0.7); opacity: 0; white-space: nowrap; }
+    .d-lcap { margin-top: 22px; font-weight: 600; font-size: 28px; line-height: 1.3; color: rgba(255,255,255,0.6); opacity: 0; }
+    .d-rnum { margin-top: 90px; font-weight: 900; font-size: 290px; line-height: 1; letter-spacing: -0.03em; color: #FF5A1F; white-space: nowrap; opacity: 0; }
+    .d-rcap { margin-top: 44px; font-weight: 700; font-size: 36px; line-height: 1.25; opacity: 0; }
+    .d-note { margin-top: 36px; font-weight: 600; font-size: 26px; color: rgba(255,255,255,0.6); opacity: 0; }
+    .d-chips { margin-top: 18px; display: flex; flex-direction: column; gap: 22px; }
+    .d-chip { display: flex; align-items: center; gap: 18px; padding: 28px 26px; border-radius: 16px; background: #121724; border: 1.5px solid rgba(255,90,31,0.55); font-weight: 700; font-size: 34px; opacity: 0; box-shadow: 0 0 30px rgba(255,90,31,0.10); }
+    .d-chip .b { width: 26px; height: 26px; border-radius: 50%; background: #FF5A1F; flex: none; position: relative; }
+    .d-chip .b::after { content: ""; position: absolute; left: 8px; top: 3px; width: 6px; height: 12px; border-right: 3px solid #0B0E14; border-bottom: 3px solid #0B0E14; transform: rotate(40deg); }
+    .d-chip span { font-weight: 500; color: rgba(255,255,255,0.65); margin-left: auto; font-size: 22px; }
+  </style>
+
+  <div id="root" data-composition-id="04-data" data-width="1080" data-height="1920">
+    <div class="d-mid" id="d-mid"></div>
+    <div class="d-vs" id="d-vs">VS</div>
+    <div class="d-col" id="d-left">
+      <div class="d-k" id="d-lk">Mốc luật mới</div>
+      <div class="d-lnum" id="d-lnum">1-1-2027</div>
+      <div class="d-lcap" id="d-lcap">Luật Công chứng sửa đổi có hiệu lực</div>
+    </div>
+    <div class="d-col" id="d-right">
+      <div class="d-k" id="d-rk">Khảo sát thực tế</div>
+      <div class="d-rnum" id="d-rnum">3/3</div>
+      <div class="d-rcap" id="d-rcap">văn phòng vẫn đòi <span style="color:#FF5A1F">căn cước bản cứng</span></div>
+      <div class="d-note" id="d-note">Hợp đồng mua bán xe, tại các văn phòng ở:</div>
+      <div class="d-chips">
+        <div class="d-chip" id="d-c1"><div class="b"></div>Phường Cầu Kiệu</div>
+        <div class="d-chip" id="d-c2"><div class="b"></div>Phường Tân Định</div>
+        <div class="d-chip" id="d-c3"><div class="b"></div>Phường Nhiêu Lộc</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#d-mid', { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: 'power2.inOut' }, 0.1);
+    tl.fromTo('#d-rk', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.3);
+    tl.fromTo('#d-rnum', { autoAlpha: 0, scale: 0.8, transformOrigin: '0% 50%' }, { autoAlpha: 1, scale: 1, duration: 0.6, ease: 'back.out(1.6)' }, 0.5);
+    tl.fromTo('#d-rcap', { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 1.1);
+    tl.fromTo('#d-note', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 1.4);
+    tl.fromTo('#d-c1', { autoAlpha: 0, x: 30 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power3.out' }, 1.5);
+    tl.fromTo('#d-c2', { autoAlpha: 0, x: 30 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power3.out' }, 1.75);
+    tl.fromTo('#d-c3', { autoAlpha: 0, x: 30 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power3.out' }, 2.0);
+    tl.fromTo('#d-vs', { autoAlpha: 0, scale: 0.4 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(2)' }, 2.9);
+    tl.fromTo('#d-lk', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 3.1);
+    tl.fromTo('#d-lnum', { autoAlpha: 0, x: -24 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.4);
+    tl.fromTo('#d-lcap', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 3.8);
+    tl.fromTo('#d-vs', { scale: 1 }, { scale: 1.18, duration: 0.3, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 3.4);
+    window.__timelines['04-data'] = tl;
+  </script>
+</template>

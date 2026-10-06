@@ -1,0 +1,50 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .c-head { position: absolute; left: 40px; right: 40px; top: 258px; height: 96px; display: flex; gap: 20px; }
+    .c-h { flex: 1; display: flex; align-items: center; justify-content: center; border-radius: 16px; font-weight: 800; font-size: 31px; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0; }
+    .c-h.law { background: rgba(255,90,31,0.16); border: 2px solid #FF5A1F; color: #FF5A1F; }
+    .c-h.real { background: rgba(255,68,56,0.14); border: 2px solid #FF4438; color: #FF4438; }
+    .c-mid { position: absolute; left: 538px; top: 258px; width: 4px; height: 1142px; background: rgba(255,255,255,0.18); transform-origin: top; }
+    .c-row { position: absolute; left: 40px; right: 40px; height: 322px; display: flex; gap: 20px; }
+    #c-r1 { top: 384px; } #c-r2 { top: 726px; } #c-r3 { top: 1068px; }
+    .c-cell { flex: 1; padding: 26px 24px; border-radius: 18px; background: #121724; border: 1.5px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: center; opacity: 0; }
+    .c-cell .t { font-weight: 500; font-size: 21px; letter-spacing: 0.04em; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
+    .c-cell .v { font-weight: 800; font-size: 37px; line-height: 1.18; }
+    .c-cell.law .v em { font-style: normal; color: #FF5A1F; }
+    .c-cell.real .v em { font-style: normal; color: #FF4438; }
+    .c-cell.law { box-shadow: 0 0 34px rgba(255,90,31,0.10); }
+  </style>
+
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+    <div class="c-head"><div class="c-h law" id="c-hl">Luật quy định</div><div class="c-h real" id="c-hr">Thực tế</div></div>
+    <div class="c-mid" id="c-mid"></div>
+
+    <div class="c-row" id="c-r1">
+      <div class="c-cell law" id="c-l1"><div class="t">Căn cước điện tử</div><div class="v">Có giá trị <em>chứng minh căn cước</em></div></div>
+      <div class="c-cell real" id="c-x1"><div class="t">Khi đi công chứng</div><div class="v">Nhiều nơi vẫn đòi <em>bản cứng</em></div></div>
+    </div>
+    <div class="c-row" id="c-r2">
+      <div class="c-cell law" id="c-l2"><div class="t">Giấy tờ đã tích hợp</div><div class="v"><em>Điều 7:</em> nghiêm cấm đòi xuất trình</div></div>
+      <div class="c-cell real" id="c-x2"><div class="t">Sở Tư pháp TP.HCM</div><div class="v">Nhận <em>phản ánh</em> bị từ chối vì chỉ có VNeID</div></div>
+    </div>
+    <div class="c-row" id="c-r3">
+      <div class="c-cell law" id="c-l3"><div class="t">Ngoại lệ</div><div class="v">Thông tin <em>không thống nhất</em>, hoặc luật khác quy định</div></div>
+      <div class="c-cell real" id="c-x3"><div class="t">Trách nhiệm nghề nghiệp</div><div class="v">Công chứng viên vẫn phải <em>kiểm tra, xác thực</em></div></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#c-mid', { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: 'power2.inOut' }, 0.1);
+    tl.fromTo('#c-hl', { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 0.45, ease: 'power3.out' }, 0.2);
+    tl.fromTo('#c-hr', { autoAlpha: 0, x: 30 }, { autoAlpha: 1, x: 0, duration: 0.45, ease: 'power3.out' }, 0.2);
+    tl.fromTo('#c-l1', { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.6);
+    tl.fromTo('#c-x1', { autoAlpha: 0, x: 40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.6);
+    tl.fromTo('#c-l2', { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 4.0);
+    tl.fromTo('#c-x2', { autoAlpha: 0, x: 40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 4.0);
+    tl.fromTo('#c-l3', { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 6.5);
+    tl.fromTo('#c-x3', { autoAlpha: 0, x: 40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 6.5);
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
