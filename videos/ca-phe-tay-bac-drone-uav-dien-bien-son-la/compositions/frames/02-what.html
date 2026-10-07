@@ -1,0 +1,91 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .cap-wrap { position: absolute; left: 60px; right: 90px; top: 1500px; height: 100px; z-index: 40; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 4px; opacity: 0; visibility: hidden; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.15; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.9); }
+    .cap-chunk .w { color: rgba(255,255,255,0.58); }
+    .kick { position: absolute; left: 60px; display: flex; align-items: center; gap: 16px; opacity: 0; }
+    .kick i { display: block; width: 44px; height: 5px; border-radius: 3px; background: #FF5A1F; }
+    .kick b { font-weight: 800; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .o { color: #FF5A1F; } .r { color: #FF4438; }
+
+
+    .badge-t { position: absolute; right: 60px; display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 100px; border: 1.5px solid #FF5A1F; background: rgba(255,90,31,0.1); font-weight: 700; font-size: 24px; color: #fff; opacity: 0; }
+    .badge-t .d { width: 12px; height: 12px; border-radius: 50%; background: #FF5A1F; }
+    .w-card { position: absolute; left: 60px; top: 360px; width: 960px; height: 576px; border-radius: 24px; overflow: hidden; border: 2px solid rgba(255,90,31,0.7); box-shadow: 0 0 40px rgba(255,90,31,0.14); opacity: 0; }
+    .w-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .w-src { position: absolute; left: 20px; bottom: 18px; padding: 8px 16px; border-radius: 8px; background: rgba(11,14,20,0.78); font-weight: 600; font-size: 22px; }
+    .w-panel { position: absolute; left: 60px; top: 972px; width: 960px; height: 470px; border-radius: 24px; background: #121724; border: 1.5px solid rgba(255,255,255,0.08); padding: 40px 44px; opacity: 0; }
+    .w-panel .lab { font-weight: 700; font-size: 24px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+    .w-panel h2 { margin-top: 18px; font-weight: 800; font-size: 68px; line-height: 1.16; }
+    .w-panel p { margin-top: 22px; font-weight: 500; font-size: 33px; line-height: 1.35; color: rgba(255,255,255,0.82); }
+
+  </style>
+
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+    <div class="kick" id="k" style="top:292px"><i></i><b>Chuyện gì xảy ra</b></div>
+    <div class="badge-t" id="bt" style="top:278px"><span class="d"></span>Tháng 9/2026</div>
+    <div class="w-card" id="wc"><img src="assets/img/article-hero.jpg" alt=""><div class="w-src">Ảnh: VnExpress</div></div>
+    <div class="w-panel" id="wp">
+      <div class="lab">Mường Ảng · Điện Biên</div>
+      <h2><span class="o">118 chuyến bay</span> đưa gần <span class="o">6 tấn</span> cà phê xuống núi</h2>
+      <p>Mỗi chuyến tải trọng 50 kg, bay tại những khu vực đã được cấp phép.</p>
+    </div>
+    <div class="cap-wrap"><div class="cap-chunk" id="ac1"><span class="w" id="ac1-w1">Trong</span><span class="w" id="ac1-w2">tháng</span><span class="w" id="ac1-w3">9,</span></div><div class="cap-chunk" id="ac2"><span class="w" id="ac2-w1">118</span><span class="w" id="ac2-w2">chuyến</span><span class="w" id="ac2-w3">bay</span><span class="w" id="ac2-w4">thử</span><span class="w" id="ac2-w5">nghiệm</span></div><div class="cap-chunk" id="ac3"><span class="w" id="ac3-w1">đã</span><span class="w" id="ac3-w2">đưa</span><span class="w" id="ac3-w3">gần</span><span class="w" id="ac3-w4">6</span><span class="w" id="ac3-w5">tấn</span></div><div class="cap-chunk" id="ac4"><span class="w" id="ac4-w1">cà</span><span class="w" id="ac4-w2">phê</span><span class="w" id="ac4-w3">từ</span><span class="w" id="ac4-w4">vùng</span><span class="w" id="ac4-w5">nguyên</span></div><div class="cap-chunk" id="ac5"><span class="w" id="ac5-w1">liệu</span><span class="w" id="ac5-w2">Mường</span><span class="w" id="ac5-w3">Ảng</span><span class="w" id="ac5-w4">xuống</span><span class="w" id="ac5-w5">khu</span></div><div class="cap-chunk" id="ac6"><span class="w" id="ac6-w1">sơ</span><span class="w" id="ac6-w2">chế.</span><span class="w" id="ac6-w3">Mỗi</span><span class="w" id="ac6-w4">chuyến</span><span class="w" id="ac6-w5">chở</span></div><div class="cap-chunk" id="ac7"><span class="w" id="ac7-w1">được</span><span class="w" id="ac7-w2">50</span><span class="w" id="ac7-w3">ki-lô-gam.</span></div></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#k', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.15);
+    tl.fromTo('#bt', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'back.out(1.6)' }, 0.35);
+    tl.fromTo('#wc', { autoAlpha: 0, y: 40, scale: 0.97 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' }, 0.3);
+    tl.fromTo('#wp', { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power3.out' }, 0.32);
+    tl.set('#ac1',{autoAlpha:1},0.050);
+    tl.to('#ac1-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},0.050);
+    tl.to('#ac1-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},0.140);
+    tl.to('#ac1-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},0.280);
+    tl.set('#ac1',{autoAlpha:0},0.710);
+    tl.set('#ac2',{autoAlpha:1},0.820);
+    tl.to('#ac2-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},0.820);
+    tl.to('#ac2-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},1.340);
+    tl.to('#ac2-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},1.560);
+    tl.to('#ac2-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},1.680);
+    tl.to('#ac2-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},1.880);
+    tl.set('#ac2',{autoAlpha:0},2.140);
+    tl.set('#ac3',{autoAlpha:1},2.140);
+    tl.to('#ac3-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},2.140);
+    tl.to('#ac3-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},2.300);
+    tl.to('#ac3-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},2.480);
+    tl.to('#ac3-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},2.660);
+    tl.to('#ac3-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},2.860);
+    tl.set('#ac3',{autoAlpha:0},3.080);
+    tl.set('#ac4',{autoAlpha:1},3.080);
+    tl.to('#ac4-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},3.080);
+    tl.to('#ac4-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},3.280);
+    tl.to('#ac4-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},3.460);
+    tl.to('#ac4-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},3.600);
+    tl.to('#ac4-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},3.800);
+    tl.set('#ac4',{autoAlpha:0},3.980);
+    tl.set('#ac5',{autoAlpha:1},3.980);
+    tl.to('#ac5-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},3.980);
+    tl.to('#ac5-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},4.200);
+    tl.to('#ac5-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},4.513);
+    tl.to('#ac5-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},4.700);
+    tl.to('#ac5-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},4.860);
+    tl.set('#ac5',{autoAlpha:0},5.040);
+    tl.set('#ac6',{autoAlpha:1},5.040);
+    tl.to('#ac6-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},5.040);
+    tl.to('#ac6-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},5.200);
+    tl.to('#ac6-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},5.700);
+    tl.to('#ac6-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},6.060);
+    tl.to('#ac6-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},6.260);
+    tl.set('#ac6',{autoAlpha:0},6.400);
+    tl.set('#ac7',{autoAlpha:1},6.400);
+    tl.to('#ac7-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},6.400);
+    tl.to('#ac7-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},6.500);
+    tl.to('#ac7-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},6.800);
+    tl.set('#ac7',{autoAlpha:0},7.270);
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>

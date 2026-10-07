@@ -1,0 +1,117 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .cap-wrap { position: absolute; left: 60px; right: 90px; top: 1500px; height: 100px; z-index: 40; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 4px; opacity: 0; visibility: hidden; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.15; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.9); }
+    .cap-chunk .w { color: rgba(255,255,255,0.58); }
+    .kick { position: absolute; left: 60px; display: flex; align-items: center; gap: 16px; opacity: 0; }
+    .kick i { display: block; width: 44px; height: 5px; border-radius: 3px; background: #FF5A1F; }
+    .kick b { font-weight: 800; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .o { color: #FF5A1F; } .r { color: #FF4438; }
+
+
+    .hk-photo { position: absolute; left: 0; right: 0; top: 0; height: 800px; overflow: hidden; background: #05070c; }
+    .hk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+    .hk-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,14,20,0.08) 0%, rgba(11,14,20,0.30) 58%, rgba(11,14,20,0.99) 100%); }
+    .hk-panel { position: absolute; left: 0; right: 0; top: 800px; bottom: 0; padding: 36px 60px 0; display: flex; flex-direction: column; align-items: flex-start; }
+    .hk-masthead { display: flex; align-items: center; gap: 13px; margin-bottom: 30px; opacity: 0; }
+    .hk-logo { width: 56px; height: 56px; flex: none; } .hk-logo img { display: block; width: 100%; height: 100%; }
+    .hk-mw { font-weight: 800; font-size: 32px; letter-spacing: 0.01em; color: #fff; }
+    .hk-badge { display: inline-flex; align-items: center; gap: 12px; padding: 8px 18px 8px 8px; border-radius: 100px; border: 1.5px solid rgba(255,90,31,0.85); background: rgba(255,90,31,0.1); margin-bottom: 32px; opacity: 0; }
+    .hk-badge .ring { width: 30px; height: 30px; border-radius: 50%; border: 3px solid #FF5A1F; display: flex; align-items: center; justify-content: center; flex: none; }
+    .hk-badge .ring .dot { width: 7px; height: 7px; border-radius: 50%; background: #FF5A1F; }
+    .hk-badge span.lbl { font-weight: 500; font-size: 22px; letter-spacing: 0.03em; color: #fff; white-space: nowrap; }
+    .hk-name-wrap { overflow: hidden; }
+    .hk-name { font-weight: 900; font-size: 98px; line-height: 1.18; letter-spacing: -0.02em; white-space: nowrap; }
+    .hk-name.a { color: #fff; } .hk-name.b { color: #FF5A1F; }
+    .hk-sub { margin-top: 14px; font-weight: 600; font-size: 38px; color: rgba(255,255,255,0.85); opacity: 0; }
+    .hk-tags { display: flex; flex-direction: column; gap: 22px; margin-top: 44px; }
+    .hk-tag { display: flex; align-items: center; font-weight: 800; font-size: 40px; line-height: 1.2; opacity: 0; }
+    .hk-tag.hot { color: #FF5A1F; } .hk-tag.cool { color: #fff; }
+    .hk-tag .dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: currentColor; margin-right: 18px; flex: none; }
+
+  </style>
+
+  <div id="root" data-composition-id="01-hook" data-width="1080" data-height="1920">
+    <div class="hk-photo"><img src="assets/img/article-hero.jpg" alt=""><div class="hk-scrim"></div></div>
+    <div class="hk-panel">
+      <div class="hk-masthead"><div class="hk-logo"><img src="public/logo.png" alt=""></div><div class="hk-mw">Tin Tức Số</div></div>
+      <div class="hk-badge"><span class="ring"><span class="dot"></span></span><span class="lbl">Nguồn: VnExpress · Dân Trí · 6/10/2026</span></div>
+      <div class="hk-name-wrap"><div class="hk-name a" id="hk-name1">CÀ PHÊ TÂY BẮC</div></div>
+      <div class="hk-name-wrap"><div class="hk-name b" id="hk-name2">GẶP DRONE</div></div>
+      <div class="hk-sub" id="hk-sub">Điện Biên chở hàng · Sơn La trình diễn</div>
+      <div class="hk-tags">
+        <div class="hk-tag hot" id="hk-t1"><span class="dot"></span>Điện Biên: 118 chuyến, gần 6 tấn</div>
+        <div class="hk-tag cool" id="hk-t2"><span class="dot"></span>Sơn La: 500 drone trình diễn</div>
+      </div>
+    </div>
+    <div class="cap-wrap"><div class="cap-chunk" id="ac1"><span class="w" id="ac1-w1">Cà</span><span class="w" id="ac1-w2">phê</span><span class="w" id="ac1-w3">Tây</span><span class="w" id="ac1-w4">Bắc</span><span class="w" id="ac1-w5">đang</span></div><div class="cap-chunk" id="ac2"><span class="w" id="ac2-w1">gặp</span><span class="w" id="ac2-w2">công</span><span class="w" id="ac2-w3">nghệ</span><span class="w" id="ac2-w4">bay:</span></div><div class="cap-chunk" id="ac3"><span class="w" id="ac3-w1">ở</span><span class="w" id="ac3-w2">Điện</span><span class="w" id="ac3-w3">Biên,</span></div><div class="cap-chunk" id="ac4"><span class="w" id="ac4-w1">máy</span><span class="w" id="ac4-w2">bay</span><span class="w" id="ac4-w3">không</span><span class="w" id="ac4-w4">người</span><span class="w" id="ac4-w5">lái</span></div><div class="cap-chunk" id="ac5"><span class="w" id="ac5-w1">chở</span><span class="w" id="ac5-w2">cà</span><span class="w" id="ac5-w3">phê</span><span class="w" id="ac5-w4">xuống</span><span class="w" id="ac5-w5">núi,</span></div><div class="cap-chunk" id="ac6"><span class="w" id="ac6-w1">còn</span><span class="w" id="ac6-w2">ở</span><span class="w" id="ac6-w3">Sơn</span><span class="w" id="ac6-w4">La,</span></div><div class="cap-chunk" id="ac7"><span class="w" id="ac7-w1">năm</span><span class="w" id="ac7-w2">trăm</span><span class="w" id="ac7-w3">chiếc</span><span class="w" id="ac7-w4">drone</span><span class="w" id="ac7-w5">sắp</span></div><div class="cap-chunk" id="ac8"><span class="w" id="ac8-w1">trình</span><span class="w" id="ac8-w2">diễn</span><span class="w" id="ac8-w3">trên</span><span class="w" id="ac8-w4">bầu</span><span class="w" id="ac8-w5">trời.</span></div></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.hk-photo', { autoAlpha: 0.5, scale: 1.12 }, { autoAlpha: 1, scale: 1, duration: 1.0, ease: 'power2.out' }, 0);
+    tl.fromTo('.hk-panel', { y: 48 }, { y: 0, duration: 0.55, ease: 'power3.out' }, 0.1);
+    tl.fromTo('.hk-masthead', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.3);
+    tl.fromTo('.hk-badge', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.36, ease: 'back.out(1.7)' }, 0.52);
+    tl.fromTo('#hk-name1', { yPercent: 118 }, { yPercent: 0, duration: 0.65, ease: 'power4.out' }, 0.8);
+    tl.fromTo('#hk-name2', { yPercent: 118 }, { yPercent: 0, duration: 0.65, ease: 'power4.out' }, 0.94);
+    tl.fromTo('#hk-sub', { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 1.5);
+    tl.fromTo('#hk-t1', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 1.95);
+    tl.fromTo('#hk-t2', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 2.25);
+    tl.set('#ac1',{autoAlpha:1},0.050);
+    tl.to('#ac1-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},0.050);
+    tl.to('#ac1-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},0.160);
+    tl.to('#ac1-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},0.300);
+    tl.to('#ac1-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},0.480);
+    tl.to('#ac1-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},0.600);
+    tl.set('#ac1',{autoAlpha:0},0.740);
+    tl.set('#ac2',{autoAlpha:1},0.740);
+    tl.to('#ac2-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},0.740);
+    tl.to('#ac2-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},0.920);
+    tl.to('#ac2-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},1.040);
+    tl.to('#ac2-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},1.200);
+    tl.set('#ac2',{autoAlpha:0},1.400);
+    tl.set('#ac3',{autoAlpha:1},1.400);
+    tl.to('#ac3-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},1.400);
+    tl.to('#ac3-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},1.780);
+    tl.to('#ac3-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},1.940);
+    tl.set('#ac3',{autoAlpha:0},2.410);
+    tl.set('#ac4',{autoAlpha:1},2.460);
+    tl.to('#ac4-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},2.460);
+    tl.to('#ac4-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},2.580);
+    tl.to('#ac4-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},2.700);
+    tl.to('#ac4-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},2.860);
+    tl.to('#ac4-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},3.100);
+    tl.set('#ac4',{autoAlpha:0},3.380);
+    tl.set('#ac5',{autoAlpha:1},3.380);
+    tl.to('#ac5-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},3.380);
+    tl.to('#ac5-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},3.500);
+    tl.to('#ac5-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},3.660);
+    tl.to('#ac5-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},3.840);
+    tl.to('#ac5-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},4.020);
+    tl.set('#ac5',{autoAlpha:0},4.480);
+    tl.set('#ac6',{autoAlpha:1},4.480);
+    tl.to('#ac6-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},4.480);
+    tl.to('#ac6-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},4.620);
+    tl.to('#ac6-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},4.780);
+    tl.to('#ac6-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},4.960);
+    tl.set('#ac6',{autoAlpha:0},5.140);
+    tl.set('#ac7',{autoAlpha:1},5.140);
+    tl.to('#ac7-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},5.140);
+    tl.to('#ac7-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},5.346);
+    tl.to('#ac7-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},5.620);
+    tl.to('#ac7-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},6.000);
+    tl.to('#ac7-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},6.260);
+    tl.set('#ac7',{autoAlpha:0},6.480);
+    tl.set('#ac8',{autoAlpha:1},6.480);
+    tl.to('#ac8-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},6.480);
+    tl.to('#ac8-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},6.600);
+    tl.to('#ac8-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},6.780);
+    tl.to('#ac8-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},6.860);
+    tl.to('#ac8-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},7.040);
+    tl.set('#ac8',{autoAlpha:0},7.530);
+    window.__timelines['01-hook'] = tl;
+  </script>
+</template>

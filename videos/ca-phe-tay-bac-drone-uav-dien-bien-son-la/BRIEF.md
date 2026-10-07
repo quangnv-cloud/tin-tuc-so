@@ -1,0 +1,11 @@
+# BRIEF — Cà phê Tây Bắc gặp drone: Điện Biên chở gần 6 tấn xuống núi, Sơn La trình diễn 500 drone
+- Từ khoá trending: "cà phê" (Google Trends VN, 100+, vị trí #7 trong list ngày 7/10/2026 00:03 UTC; item trend 58d48f3e20a5). Tín hiệu yếu (100+) và `related` của từ khoá toàn bài sức khỏe → KHÔNG dùng; câu chuyện lấy từ 2 item `category=news` cùng chủ đề cà phê (xem GATE A trong COMPLIANCE.md). Style dựng: 7-timeline-chronology (index 6, claim_style cho slug này; lần claim index 5 trước đó thuộc chủ đề "mưa sao băng" đã bỏ vì ảnh nguồn chỉ là thumbnail 245px).
+- Nguồn 1: VnExpress Khoa học, "Gần 6 tấn cà phê được chuyển bằng UAV xuống núi" (6/10/2026) — id news 85a8c3c06e21, qua ?article=.
+- Nguồn 2: Dân Trí, "500 drone sẽ 'kể chuyện' đưa cà phê Sơn La ra thế giới" (6/10/2026) — id news a7e1b0122f00, qua ?article=.
+- Điện Biên (VnExpress): tháng 9, 118 chuyến UAV đưa cà phê từ vùng nguyên liệu Mường Ảng xuống khu sơ chế, gần 6 tấn, tải trọng 50 kg/chuyến, tại khu vực đã cấp phép. Phun thuốc 1 ha: UAV 7–10 phút, thủ công trên địa hình dốc có thể 3–4 tiếng. Chương trình thử nghiệm có kiểm soát (sandbox) do UBND tỉnh cấp phép hồi tháng 6, kéo dài đến hết tháng 5/2027, mục tiêu khoảng 6.000 chuyến bay. Khó khăn (đại diện Sở Khoa học và Công nghệ Điện Biên): hành lang pháp lý, cơ chế phối hợp liên ngành.
+- Sơn La (Dân Trí): Lễ hội Cà phê Sơn La lần 2 năm 2026, 9–13/10 tại Quảng trường Tây Bắc; tối 10/10 Drone Light Show 500 drone "Arabica Sơn La - Vươn tầm thế giới". Hết 2025: diện tích cà phê 26.120 ha, chiếm 47,5% diện tích Arabica cả nước; năm 2025 xuất khẩu 27.800 tấn Arabica, khoảng 112,38 triệu USD, gần một nửa kim ngạch xuất khẩu hàng hóa của tỉnh. Cà phê là cây chủ lực (Phó Chủ tịch UBND tỉnh).
+- Góc riêng (B7): đặt 2 câu chuyện drone ở 2 tỉnh Tây Bắc cạnh nhau (một bên chở hàng/giảm sức lao động, một bên quảng bá thương hiệu), thêm trục thời gian từ cấp phép tới lễ hội tới mốc kết thúc thử nghiệm; thanh 0–100% thể hiện đúng 47,5%. Không dự đoán, không khuyến nghị đầu tư.
+- Số liệu TÍNH THÊM: không có (không tự tính số liệu mới).
+- Ảnh: ảnh bài báo VnExpress (drone chở hàng), có dẫn nguồn.
+- Lời đọc: UAV → "máy bay không người lái"; "ha" → "héc-ta"; "kg" → "ki-lô-gam"; "USD" → "đô la Mỹ". Không nhắc tên kênh trong lời đọc.
+- CTA: drone giúp cà phê Việt đi xa hơn hay còn nhiều rào cản?

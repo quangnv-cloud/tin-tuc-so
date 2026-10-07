@@ -1,0 +1,88 @@
+<template>
+  <style>
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .cap-wrap { position: absolute; left: 60px; right: 90px; top: 1500px; height: 100px; z-index: 40; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 4px; opacity: 0; visibility: hidden; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.15; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.9); }
+    .cap-chunk .w { color: rgba(255,255,255,0.58); }
+    .kick { position: absolute; left: 60px; display: flex; align-items: center; gap: 16px; opacity: 0; }
+    .kick i { display: block; width: 44px; height: 5px; border-radius: 3px; background: #FF5A1F; }
+    .kick b { font-weight: 800; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .o { color: #FF5A1F; } .r { color: #FF4438; }
+
+
+    .q-q { position: absolute; left: 60px; right: 60px; top: 350px; font-weight: 800; font-size: 74px; line-height: 1.2; opacity: 0; }
+    .q-opt { position: absolute; left: 60px; width: 960px; height: 240px; border-radius: 26px; display: flex; align-items: center; gap: 34px; padding: 0 44px; opacity: 0; background: #121724; }
+    .q-opt.a { border: 3px solid #FF5A1F; box-shadow: 0 0 40px rgba(255,90,31,0.18); }
+    .q-opt.b { border: 3px solid #FF4438; }
+    .q-ico { flex: none; width: 110px; height: 110px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .q-opt.a .q-ico { background: rgba(255,90,31,0.16); } .q-opt.b .q-ico { background: rgba(255,68,56,0.16); }
+    .q-up { width: 0; height: 0; border-left: 28px solid transparent; border-right: 28px solid transparent; border-bottom: 48px solid #FF5A1F; }
+    .q-warn { width: 0; height: 0; border-left: 30px solid transparent; border-right: 30px solid transparent; border-top: 50px solid #FF4438; }
+    .q-opt b { font-weight: 900; font-size: 56px; line-height: 1.15; }
+    .q-pill { position: absolute; left: 160px; width: 760px; top: 1310px; height: 100px; border-radius: 50px; background: #FF5A1F; color: #0B0E14; font-weight: 800; font-size: 36px; display: flex; align-items: center; justify-content: center; opacity: 0; }
+    .q-sig { position: absolute; left: 0; right: 0; top: 1426px; display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; }
+    .q-sig img { width: 46px; height: 46px; display: block; } .q-sig b { font-weight: 800; font-size: 28px; }
+
+  </style>
+
+  <div id="root" data-composition-id="07-cta" data-width="1080" data-height="1920">
+    <div class="kick" id="q-kick" style="top:290px"><i></i><b>Tranh luận</b></div>
+    <div class="q-q" id="q-q">Drone giúp cà phê Việt <span class="o">đi xa hơn</span> hay còn <span class="r">nhiều rào cản</span>?</div>
+    <div class="q-opt a" id="q-a" style="top:700px"><div class="q-ico"><span class="q-up"></span></div><b>Đi xa hơn</b></div>
+    <div class="q-opt b" id="q-b" style="top:980px"><div class="q-ico"><span class="q-warn"></span></div><b>Còn nhiều<br>rào cản</b></div>
+    <div class="q-pill" id="q-pill">Bình luận quan điểm của bạn</div>
+    <div class="q-sig" id="q-sig"><img src="public/logo.png" alt=""><b>Tin Tức Số</b></div>
+    <div class="cap-wrap"><div class="cap-chunk" id="ac1"><span class="w" id="ac1-w1">Theo</span><span class="w" id="ac1-w2">bạn,</span><span class="w" id="ac1-w3">drone</span><span class="w" id="ac1-w4">sẽ</span><span class="w" id="ac1-w5">giúp</span></div><div class="cap-chunk" id="ac2"><span class="w" id="ac2-w1">cà</span><span class="w" id="ac2-w2">phê</span><span class="w" id="ac2-w3">Việt</span><span class="w" id="ac2-w4">đi</span><span class="w" id="ac2-w5">xa</span></div><div class="cap-chunk" id="ac3"><span class="w" id="ac3-w1">hơn,</span><span class="w" id="ac3-w2">hay</span><span class="w" id="ac3-w3">vẫn</span><span class="w" id="ac3-w4">còn</span><span class="w" id="ac3-w5">nhiều</span></div><div class="cap-chunk" id="ac4"><span class="w" id="ac4-w1">rào</span><span class="w" id="ac4-w2">cản</span><span class="w" id="ac4-w3">cần</span><span class="w" id="ac4-w4">gỡ?</span></div><div class="cap-chunk" id="ac5"><span class="w" id="ac5-w1">Hãy</span><span class="w" id="ac5-w2">để</span><span class="w" id="ac5-w3">lại</span><span class="w" id="ac5-w4">bình</span><span class="w" id="ac5-w5">luận</span></div><div class="cap-chunk" id="ac6"><span class="w" id="ac6-w1">của</span><span class="w" id="ac6-w2">bạn.</span></div></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#q-kick', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.2);
+    tl.fromTo('#q-q', { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 0.35);
+    tl.fromTo('#q-a', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }, 0.56);
+    tl.fromTo('#q-b', { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }, 2.42);
+    tl.fromTo('#q-pill', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: 'back.out(1.6)' }, 4.3);
+    tl.to('#q-pill', { scale: 1.05, duration: 0.5, ease: 'sine.inOut', yoyo: true, repeat: 3 }, 4.9);
+    tl.fromTo('#q-sig', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 4.6);
+    tl.set('#ac1',{autoAlpha:1},0.050);
+    tl.to('#ac1-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},0.050);
+    tl.to('#ac1-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},0.100);
+    tl.to('#ac1-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},0.560);
+    tl.to('#ac1-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},0.720);
+    tl.to('#ac1-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},0.940);
+    tl.set('#ac1',{autoAlpha:0},1.140);
+    tl.set('#ac2',{autoAlpha:1},1.140);
+    tl.to('#ac2-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},1.140);
+    tl.to('#ac2-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},1.320);
+    tl.to('#ac2-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},1.480);
+    tl.to('#ac2-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},1.620);
+    tl.to('#ac2-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},1.800);
+    tl.set('#ac2',{autoAlpha:0},2.040);
+    tl.set('#ac3',{autoAlpha:1},2.040);
+    tl.to('#ac3-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},2.040);
+    tl.to('#ac3-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},2.420);
+    tl.to('#ac3-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},2.580);
+    tl.to('#ac3-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},2.720);
+    tl.to('#ac3-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},2.900);
+    tl.set('#ac3',{autoAlpha:0},3.100);
+    tl.set('#ac4',{autoAlpha:1},3.100);
+    tl.to('#ac4-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},3.100);
+    tl.to('#ac4-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},3.320);
+    tl.to('#ac4-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},3.560);
+    tl.to('#ac4-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},3.660);
+    tl.set('#ac4',{autoAlpha:0},4.210);
+    tl.set('#ac5',{autoAlpha:1},4.300);
+    tl.to('#ac5-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},4.300);
+    tl.to('#ac5-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},4.560);
+    tl.to('#ac5-w3',{color:'#FF5A1F',duration:0.1,ease:'none'},4.660);
+    tl.to('#ac5-w4',{color:'#FF5A1F',duration:0.1,ease:'none'},4.860);
+    tl.to('#ac5-w5',{color:'#FF5A1F',duration:0.1,ease:'none'},5.020);
+    tl.set('#ac5',{autoAlpha:0},5.200);
+    tl.set('#ac6',{autoAlpha:1},5.200);
+    tl.to('#ac6-w1',{color:'#FF5A1F',duration:0.1,ease:'none'},5.200);
+    tl.to('#ac6-w2',{color:'#FF5A1F',duration:0.1,ease:'none'},5.300);
+    tl.set('#ac6',{autoAlpha:0},5.690);
+    window.__timelines['07-cta'] = tl;
+  </script>
+</template>
