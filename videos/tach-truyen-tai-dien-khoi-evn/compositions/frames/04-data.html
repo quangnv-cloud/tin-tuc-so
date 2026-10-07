@@ -1,0 +1,68 @@
+<template>
+  <style>
+      @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .kick { position: absolute; font-weight: 700; font-size: 26px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; opacity: 0; white-space: nowrap; }
+    .kick.red { color: #FF4438; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+    .paper { position: absolute; background: #FFFFFF; color: #0B0E14; border-radius: 6px; box-shadow: 0 20px 44px rgba(0,0,0,0.5), 0 0 40px rgba(255,90,31,0.14); opacity: 0; }
+    .paper.dark { background: #121724; color: #fff; border: 1.5px solid rgba(255,90,31,0.55); }
+    .tape { position: absolute; width: 150px; height: 38px; top: -19px; left: 50%; margin-left: -75px; background: rgba(255,90,31,0.6); transform: rotate(-3deg); }
+    .tag { display: inline-block; padding: 8px 18px; border-radius: 4px; font-weight: 800; font-size: 22px; letter-spacing: 0.16em; text-transform: uppercase; color: #fff; background: #FF5A1F; }
+    .tag.red { background: #FF4438; }
+    .big { font-weight: 900; line-height: 1.04; letter-spacing: -0.01em; }
+    .sub { font-weight: 600; line-height: 1.28; }
+
+    #d-k { left: 0; right: 0; top: 330px; text-align: center; }
+    #d-qm { position: absolute; left: 20px; top: 360px; font-weight: 900; font-size: 760px; line-height: 1; color: #FF5A1F; opacity: 0; }
+    #d-han { position: absolute; left: 0; right: 0; top: 440px; text-align: center; font-weight: 700; font-size: 56px; color: rgba(255,255,255,0.85); opacity: 0; }
+    #d-num { position: absolute; left: 0; right: 0; top: 600px; text-align: center; font-weight: 900; font-size: 420px; line-height: 1; letter-spacing: -0.03em; color: #FF5A1F; opacity: 0; }
+    #d-ul { position: absolute; left: 150px; top: 985px; width: 780px; height: 60px; opacity: 0; }
+    #d-sub { position: absolute; left: 90px; right: 90px; top: 1075px; text-align: center; font-weight: 700; font-size: 44px; line-height: 1.25; opacity: 0; }
+    #d-bar { position: absolute; left: 90px; top: 1250px; width: 900px; opacity: 0; }
+    #d-bar .trk { position: relative; height: 70px; border-radius: 10px; background: #121724; border: 2px solid rgba(255,255,255,0.22); overflow: hidden; }
+    #d-bar .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 40%; background: linear-gradient(90deg, #FF5A1F, #FF4438); transform-origin: left center; transform: scaleX(0); }
+    #d-bar .lab { display: flex; justify-content: space-between; margin-top: 18px; font-weight: 700; font-size: 28px; }
+    #d-bar .lab .l { color: #FF5A1F; } #d-bar .lab .r { color: rgba(255,255,255,0.7); }
+    #d-bar .src { margin-top: 26px; font-weight: 600; font-size: 24px; color: rgba(255,255,255,0.6); }
+
+  </style>
+  <div id="root" data-composition-id="04-data" data-width="1080" data-height="1920">
+
+    <div class="kick" id="d-k">Tập đoàn Điện lực Việt Nam</div>
+    <div id="d-qm" data-layout-allow-overlap="">“</div>
+    <div id="d-han">hơn</div>
+    <div id="d-num"><span id="d-n">0</span>%</div>
+    <svg id="d-ul" viewBox="0 0 780 60"><path id="d-ulp" d="M8 36 C 120 12, 230 52, 360 30 S 600 14, 772 34" fill="none" stroke="#FF4438" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg>
+    <div id="d-sub">các dự án nguồn phát điện<br>do EVN sở hữu</div>
+    <div id="d-bar"><div class="trk"><div class="fill" id="d-fill"></div></div><div class="lab"><span class="l">EVN · hơn 40%</span><span class="r">Phần còn lại</span></div><div class="src">Tỉ lệ trên toàn bộ dự án, nguồn phát điện · theo Dân trí</div></div>
+  </div>
+  <script>
+    const C = {"sh": 1.97};
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#d-k', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#d-qm', { autoAlpha: 0, scale: 0.85 }, { autoAlpha: 0.1, scale: 1, duration: 0.8, ease: 'power2.out' }, 0.2);
+    tl.fromTo('#d-han', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, C.sh - 0.2);
+    tl.fromTo('#d-num', { autoAlpha: 0, scale: 0.8 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: 'back.out(1.6)', transformOrigin: '50% 50%' }, C.sh);
+    const o = { v: 0 };
+    tl.to(o, { v: 40, duration: 1.1, ease: 'power2.out', onUpdate: () => { document.getElementById('d-n').textContent = Math.round(o.v); } }, C.sh);
+    tl.fromTo('#d-ul', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, C.sh + 1.0);
+    tl.to('#d-ulp', { strokeDashoffset: 0, duration: 0.6, ease: 'power2.inOut' }, C.sh + 1.0);
+    tl.fromTo('#d-sub', { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, C.sh + 1.4);
+    tl.fromTo('#d-bar', { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, C.sh + 1.9);
+    tl.to('#d-fill', { scaleX: 1, duration: 0.9, ease: 'power3.out' }, C.sh + 2.2);
+
+    window.__timelines['04-data'] = tl;
+  </script>
+</template>
