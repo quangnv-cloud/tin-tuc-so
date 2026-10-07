@@ -1,0 +1,71 @@
+<template>
+  <style>
+/*FONTS*/
+      @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .cell { position: absolute; border-radius: 22px; border: 1.5px solid rgba(255,90,31,0.55); background: #121724; box-shadow: 0 0 40px rgba(255,90,31,0.14); opacity: 0; }
+    .cell.red { border-color: rgba(255,68,56,0.7); box-shadow: 0 0 40px rgba(255,68,56,0.14); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; }
+    .kick.red { color: #FF4438; }
+    .lbl { font-weight: 700; font-size: 38px; line-height: 1.2; color: #fff; }
+    .sub { font-weight: 500; font-size: 30px; line-height: 1.3; color: rgba(255,255,255,0.72); }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+    .ico { position: absolute; width: 96px; height: 96px; border-radius: 22px; background: rgba(255,90,31,0.12); border: 2px solid #FF5A1F; }
+    .ico.red { background: rgba(255,68,56,0.12); border-color: #FF4438; }
+    /* building */
+    .i-bld::before { content: ""; position: absolute; left: 26px; top: 20px; width: 44px; height: 56px; border: 4px solid #FF5A1F; border-radius: 4px; }
+    .i-bld::after { content: ""; position: absolute; left: 36px; top: 32px; width: 8px; height: 8px; background: #FF5A1F; box-shadow: 16px 0 0 #FF5A1F, 0 16px 0 #FF5A1F, 16px 16px 0 #FF5A1F; }
+    /* exchange (two squares) */
+    .i-ex::before { content: ""; position: absolute; left: 18px; top: 24px; width: 38px; height: 38px; border: 4px solid #FF5A1F; border-radius: 8px; }
+    .i-ex::after { content: ""; position: absolute; left: 38px; top: 38px; width: 38px; height: 38px; border: 4px solid #FF5A1F; border-radius: 8px; background: rgba(255,90,31,0.25); }
+    /* person */
+    .i-usr::before { content: ""; position: absolute; left: 34px; top: 16px; width: 22px; height: 22px; border-radius: 50%; border: 4px solid #FF5A1F; }
+    .i-usr::after { content: ""; position: absolute; left: 23px; top: 48px; width: 44px; height: 26px; border: 4px solid #FF5A1F; border-bottom: none; border-radius: 24px 24px 0 0; }
+    /* document */
+    .i-doc::before { content: ""; position: absolute; left: 26px; top: 16px; width: 38px; height: 54px; border: 4px solid #FF5A1F; border-radius: 6px; }
+    .i-doc::after { content: ""; position: absolute; left: 36px; top: 30px; width: 18px; height: 4px; background: #FF5A1F; box-shadow: 0 12px 0 #FF5A1F, 0 24px 0 #FF5A1F; }
+    /* warning triangle */
+    .i-wrn::before { content: ""; position: absolute; left: 22px; top: 22px; width: 0; height: 0; border-left: 24px solid transparent; border-right: 24px solid transparent; border-bottom: 46px solid #FF4438; }
+    .i-wrn::after { content: ""; position: absolute; left: 44px; top: 40px; width: 5px; height: 16px; background: #0B0E14; box-shadow: 0 21px 0 #0B0E14; border-radius: 3px; }
+    /* id card */
+    .i-id::before { content: ""; position: absolute; left: 14px; top: 26px; width: 62px; height: 44px; border: 4px solid #FF5A1F; border-radius: 8px; }
+    .i-id::after { content: ""; position: absolute; left: 24px; top: 36px; width: 14px; height: 14px; border-radius: 50%; background: #FF5A1F; box-shadow: 22px 0 0 -3px #FF5A1F, 22px 12px 0 -3px #FF5A1F; }
+    /* shield / check */
+    .i-chk::before { content: ""; position: absolute; left: 26px; top: 28px; width: 38px; height: 20px; border-left: 6px solid #FF5A1F; border-bottom: 6px solid #FF5A1F; transform: rotate(-45deg); }
+
+    .c-c { width: 458px; height: 380px; }
+    .c-n { position: absolute; right: 30px; top: 18px; font-weight: 900; font-size: 56px; line-height: 1; color: #FF5A1F; }
+    .c-t { position: absolute; left: 28px; right: 26px; top: 154px; font-weight: 800; font-size: 40px; line-height: 1.2; }
+    .c-ban { left: 60px; right: 60px; top: 1128px; height: 312px; border-color: rgba(255,90,31,0.85); background: linear-gradient(135deg, rgba(255,90,31,0.18), rgba(255,68,56,0.10)); }
+    .c-ban .kick { position: absolute; left: 44px; top: 40px; }
+    .c-ban .big { position: absolute; left: 44px; right: 44px; top: 92px; font-weight: 900; font-size: 56px; line-height: 1.16; }
+    .c-ban .big b { color: #FF5A1F; }
+
+  </style>
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+    <div class="cell c-c" id="c1" style="left:60px;top:320px"><div class="ico i-doc" style="left:28px;top:28px"></div><div class="c-n">01</div><div class="c-t">Quyết định giao đất</div></div>
+    <div class="cell c-c" id="c2" style="left:562px;top:320px"><div class="ico i-doc" style="left:28px;top:28px"></div><div class="c-n">02</div><div class="c-t">Quy hoạch chi tiết</div></div>
+    <div class="cell c-c" id="c3" style="left:60px;top:724px"><div class="ico i-doc" style="left:28px;top:28px"></div><div class="c-n">03</div><div class="c-t">Giấy phép xây dựng</div></div>
+    <div class="cell c-c" id="c4" style="left:562px;top:724px"><div class="ico i-doc" style="left:28px;top:28px"></div><div class="c-n">04</div><div class="c-t">Xác nhận đủ điều kiện bán nhà hình thành trong tương lai</div></div>
+    <div class="cell c-ban" id="c-ban"><div class="kick">Vì sao quan trọng</div><div class="big">Tài liệu xác định <b>tình trạng pháp lý</b> của dự án</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#c1', { autoAlpha: 0, y: 30, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: 'power3.out' }, 2.2);
+    tl.fromTo('#c2', { autoAlpha: 0, y: 30, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: 'power3.out' }, 3.0);
+    tl.fromTo('#c3', { autoAlpha: 0, y: 30, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: 'power3.out' }, 3.9);
+    tl.fromTo('#c4', { autoAlpha: 0, y: 30, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.45, ease: 'power3.out' }, 4.85);
+    tl.fromTo('#c-ban', { autoAlpha: 0, y: 30, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: 'power3.out' }, 7.3);
+
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
