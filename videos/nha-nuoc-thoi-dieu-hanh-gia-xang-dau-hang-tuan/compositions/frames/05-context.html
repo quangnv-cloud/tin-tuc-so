@@ -1,0 +1,80 @@
+<template>
+  <style>
+      @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+      @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .kick.red { color: #FF4438; }
+    .or { color: #FF5A1F; } .rd { color: #FF4438; }
+    .card { position: absolute; border-radius: 22px; border: 1.5px solid rgba(255,90,31,0.55); background: #121724; box-shadow: 0 0 40px rgba(255,90,31,0.14); opacity: 0; }
+    .card.red { border-color: rgba(255,68,56,0.7); box-shadow: 0 0 40px rgba(255,68,56,0.14); }
+    .abs { position: absolute; }
+
+
+    .c-kick { position: absolute; left: 60px; top: 205px; }
+    .c-big { position: absolute; left: 60px; right: 60px; top: 255px; white-space: nowrap; opacity: 0; }
+    .c-big .n { font-weight: 900; font-size: 150px; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: #FF5A1F; }
+    .c-big .u { margin-left: 16px; font-weight: 800; font-size: 46px; color: #fff; }
+    .c-sub { position: absolute; left: 60px; top: 450px; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.8); opacity: 0; }
+    .c-chip { position: absolute; top: 540px; width: 470px; height: 190px; border-radius: 22px; background: #121724; border: 1.5px solid rgba(255,90,31,0.6); box-shadow: 0 0 40px rgba(255,90,31,0.14); padding: 28px 26px; opacity: 0; }
+    .c-chip .v { font-weight: 900; font-size: 60px; line-height: 1; color: #FF5A1F; }
+    .c-chip .l { margin-top: 16px; font-weight: 600; font-size: 27px; line-height: 1.3; color: rgba(255,255,255,0.82); }
+    .c-panel { position: absolute; left: 60px; top: 780px; width: 960px; height: 620px; }
+    .c-ptitle { position: absolute; left: 34px; top: 28px; font-weight: 700; font-size: 26px; letter-spacing: 0.04em; color: rgba(255,255,255,0.85); }
+    .c-plot { position: absolute; left: 34px; right: 34px; top: 100px; height: 400px; }
+    .c-base { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: rgba(255,255,255,0.25); }
+    .c-half { position: absolute; left: 0; right: 0; bottom: 200px; height: 0; border-top: 2px dashed rgba(255,255,255,0.35); }
+    .c-half span { position: absolute; right: 0; top: -34px; font-weight: 600; font-size: 22px; color: rgba(255,255,255,0.6); }
+    .c-bar { position: absolute; bottom: 0; width: 260px; border-radius: 10px 10px 0 0; transform-origin: 50% 100%; }
+    .c-bar.a { left: 110px; height: 270px; background: linear-gradient(180deg, #FF5A1F, #d94512); }
+    .c-bar.b { left: 500px; height: 150px; background: linear-gradient(180deg, #FF4438, #b8302a); }
+    .c-bar .t { position: absolute; left: 0; right: 0; top: -46px; text-align: center; font-weight: 800; font-size: 32px; color: #fff; white-space: nowrap; }
+    .c-lab { position: absolute; bottom: -82px; width: 340px; text-align: center; font-weight: 600; font-size: 24px; line-height: 1.25; color: rgba(255,255,255,0.8); }
+
+  </style>
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+
+    <div class="kick c-kick" id="c-k">Điều kiện với thương nhân đầu mối</div>
+    <div class="c-big" id="c-big"><span class="n">300.000</span><span class="u">m³/năm</span></div>
+    <div class="c-sub" id="c-sub">Tổng nguồn cung tối thiểu theo dự thảo</div>
+    <div class="c-chip" id="c-c1" style="left:60px;"><div class="v">Từ 2027</div><div class="l">Dự kiến bắt đầu áp dụng</div></div>
+    <div class="c-chip" id="c-c2" style="left:550px;"><div class="v">2 năm</div><div class="l">Để đầu tư, nâng năng lực đáp ứng điều kiện</div></div>
+    <div class="card c-panel" id="c-panel">
+      <div class="c-ptitle">Thương nhân đầu mối hiện nay</div>
+      <div class="c-plot">
+        <div class="c-half"><span>1/2</span></div>
+        <div class="c-base"></div>
+        <div class="c-bar a" id="c-ba"><div class="t">Hơn một nửa</div></div>
+        <div class="c-bar b" id="c-bb"><div class="t">Còn lại</div></div>
+        <div class="c-lab" style="left:70px;">Đã đáp ứng ngưỡng</div>
+        <div class="c-lab" style="left:460px;">Chưa đáp ứng</div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#c-k', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#c-big', { autoAlpha: 0, y: 36, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.6, ease: 'power3.out' }, 0.3);
+    tl.fromTo('#c-sub', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 1.1);
+    tl.fromTo('#c-c1', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, 3.3);
+    tl.fromTo('#c-c2', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, 4.0);
+    tl.fromTo('#c-panel', { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 5.6);
+    tl.fromTo('#c-ba', { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: 'power3.out' }, 6.0);
+    tl.fromTo('#c-bb', { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: 'power3.out' }, 6.4);
+
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
