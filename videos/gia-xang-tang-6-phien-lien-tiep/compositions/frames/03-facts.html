@@ -1,0 +1,46 @@
+<template>
+  <style>
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+
+    .f-wm { position: absolute; left: 0; right: 0; top: 560px; text-align: center; font-weight: 900; font-size: 430px; line-height: 1; letter-spacing: -0.04em; color: #FF5A1F; opacity: 0; }
+    .f-row { position: absolute; left: 60px; right: 60px; height: 330px; border-radius: 28px; background: rgba(18,23,36,0.92); border: 1.5px solid rgba(255,255,255,0.10); padding: 34px 40px 0; opacity: 0; box-shadow: 0 0 40px rgba(255,90,31,0.10); }
+    .f-row.hl { border: 3px solid #FF5A1F; background: rgba(255,90,31,0.12); }
+    .f-lab { font-weight: 700; font-size: 36px; line-height: 1.2; color: #fff; }
+    .f-sub { margin-top: 6px; font-weight: 500; font-size: 25px; color: rgba(255,255,255,0.6); }
+    .f-price { margin-top: 20px; font-weight: 900; font-size: 112px; line-height: 1; letter-spacing: -0.02em; color: #fff; }
+    .f-price small { font-weight: 700; font-size: 38px; letter-spacing: 0; color: rgba(255,255,255,0.7); margin-left: 12px; }
+    .f-row.hl .f-price { color: #FF5A1F; }
+    .f-delta { position: absolute; right: 40px; top: 36px; display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 100px; font-weight: 800; font-size: 34px; border: 2.5px solid #FF5A1F; color: #FF5A1F; background: rgba(255,90,31,0.10); }
+    .f-delta.dn { border-color: rgba(255,255,255,0.55); color: #fff; background: rgba(255,255,255,0.08); }
+    .f-delta i { display: block; width: 0; height: 0; border-left: 11px solid transparent; border-right: 11px solid transparent; }
+    .f-delta.up i { border-bottom: 18px solid #FF5A1F; } .f-delta.dn i { border-top: 18px solid #fff; }
+    .f-foot { position: absolute; left: 60px; right: 60px; top: 1352px; font-weight: 500; font-size: 27px; line-height: 1.35; color: rgba(255,255,255,0.65); opacity: 0; }
+
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+    <div class="f-wm" id="f-wm" data-layout-allow-occlusion>1.065</div>
+    <div class="f-row" id="f-r1" style="top:240px"><div class="f-lab">Xăng E5 RON 92</div><div class="f-sub">Giá bán tối đa từ 15h ngày 8/10</div><div class="f-price">27.703<small>đ/lít</small></div><div class="f-delta up"><i></i>1.134</div></div>
+    <div class="f-row hl" id="f-r2" style="top:605px"><div class="f-lab">Xăng E10 RON 95-III</div><div class="f-sub">Giá bán tối đa từ 15h ngày 8/10</div><div class="f-price">28.254<small>đ/lít</small></div><div class="f-delta up"><i></i>1.065</div></div>
+    <div class="f-row" id="f-r3" style="top:970px"><div class="f-lab">Dầu diesel 0.05S</div><div class="f-sub">Giá bán tối đa từ 15h ngày 8/10</div><div class="f-price">29.128<small>đ/lít</small></div><div class="f-delta dn"><i></i>589</div></div>
+    <div class="f-foot" id="f-foot">Mức tăng/giảm tính bằng đồng/lít so với giá bán tối đa trước đó. Nguồn số liệu: thông báo của Bộ Công Thương, qua Tuổi Trẻ.</div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#f-wm', { autoAlpha: 0, scale: 0.94 }, { autoAlpha: 0.07, scale: 1, duration: 1.0, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#f-r1', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.07-0.15);
+    tl.fromTo('#f-r2', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.13-0.15);
+    tl.fromTo('#f-r3', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 5.54-0.15);
+    tl.fromTo('#f-foot', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 6.74);
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>
