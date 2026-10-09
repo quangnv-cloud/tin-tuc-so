@@ -1,0 +1,257 @@
+[
+  {
+    "text": "Theo",
+    "start": 0.05,
+    "end": 0.31
+  },
+  {
+    "text": "dự",
+    "start": 0.31,
+    "end": 0.45
+  },
+  {
+    "text": "báo",
+    "start": 0.45,
+    "end": 0.67
+  },
+  {
+    "text": "tuổi",
+    "start": 0.67,
+    "end": 0.97
+  },
+  {
+    "text": "trẻ",
+    "start": 0.97,
+    "end": 1.19
+  },
+  {
+    "text": "dẫn",
+    "start": 1.19,
+    "end": 1.26
+  },
+  {
+    "text": "từ",
+    "start": 1.52,
+    "end": 1.56
+  },
+  {
+    "text": "tháng",
+    "start": 1.56,
+    "end": 1.94
+  },
+  {
+    "text": "10,",
+    "start": 1.94,
+    "end": 2.59
+  },
+  {
+    "text": "một",
+    "start": 2.59,
+    "end": 2.72
+  },
+  {
+    "text": "đồng",
+    "start": 2.72,
+    "end": 2.82
+  },
+  {
+    "text": "bằng",
+    "start": 2.92,
+    "end": 3.05
+  },
+  {
+    "text": "sông",
+    "start": 3.1,
+    "end": 3.23
+  },
+  {
+    "text": "Cửu",
+    "start": 3.23,
+    "end": 3.35
+  },
+  {
+    "text": "Long,",
+    "start": 3.35,
+    "end": 3.69
+  },
+  {
+    "text": "Tây",
+    "start": 3.73,
+    "end": 3.82
+  },
+  {
+    "text": "Nguyên",
+    "start": 3.82,
+    "end": 4.11
+  },
+  {
+    "text": "và",
+    "start": 4.12,
+    "end": 4.2
+  },
+  {
+    "text": "Đông",
+    "start": 4.2,
+    "end": 4.36
+  },
+  {
+    "text": "Nam",
+    "start": 4.36,
+    "end": 4.6
+  },
+  {
+    "text": "Bộ",
+    "start": 4.6,
+    "end": 4.78
+  },
+  {
+    "text": "có",
+    "start": 4.85,
+    "end": 4.88
+  },
+  {
+    "text": "khả",
+    "start": 4.88,
+    "end": 5.15
+  },
+  {
+    "text": "năng",
+    "start": 5.15,
+    "end": 5.51
+  },
+  {
+    "text": "hạn",
+    "start": 5.51,
+    "end": 5.59
+  },
+  {
+    "text": "hán",
+    "start": 5.61,
+    "end": 5.68
+  },
+  {
+    "text": "xâm",
+    "start": 5.73,
+    "end": 5.84
+  },
+  {
+    "text": "nhập",
+    "start": 5.84,
+    "end": 6.06
+  },
+  {
+    "text": "mặt",
+    "start": 6.06,
+    "end": 6.18
+  },
+  {
+    "text": "trên",
+    "start": 6.25,
+    "end": 6.36
+  },
+  {
+    "text": "diện",
+    "start": 6.44,
+    "end": 6.66
+  },
+  {
+    "text": "rộng.",
+    "start": 6.66,
+    "end": 6.93
+  },
+  {
+    "text": "Còn",
+    "start": 7.12,
+    "end": 7.24
+  },
+  {
+    "text": "ở",
+    "start": 7.24,
+    "end": 7.29
+  },
+  {
+    "text": "Trung",
+    "start": 7.34,
+    "end": 7.61
+  },
+  {
+    "text": "Mỹ,",
+    "start": 7.61,
+    "end": 7.85
+  },
+  {
+    "text": "hạn",
+    "start": 7.85,
+    "end": 7.92
+  },
+  {
+    "text": "hán",
+    "start": 8.09,
+    "end": 8.21
+  },
+  {
+    "text": "kéo",
+    "start": 8.21,
+    "end": 8.39
+  },
+  {
+    "text": "dài",
+    "start": 8.39,
+    "end": 8.5
+  },
+  {
+    "text": "đã",
+    "start": 8.6,
+    "end": 8.69
+  },
+  {
+    "text": "khiến",
+    "start": 8.69,
+    "end": 9
+  },
+  {
+    "text": "mùa",
+    "start": 9,
+    "end": 9.15
+  },
+  {
+    "text": "mang",
+    "start": 9.43,
+    "end": 9.54
+  },
+  {
+    "text": "thất",
+    "start": 9.54,
+    "end": 9.79
+  },
+  {
+    "text": "bát,",
+    "start": 9.8,
+    "end": 10.07
+  },
+  {
+    "text": "vật",
+    "start": 10.07,
+    "end": 10.18
+  },
+  {
+    "text": "nuôi",
+    "start": 10.18,
+    "end": 10.32
+  },
+  {
+    "text": "chết",
+    "start": 10.32,
+    "end": 10.47
+  },
+  {
+    "text": "hàng",
+    "start": 10.53,
+    "end": 10.64
+  },
+  {
+    "text": "loạt.",
+    "start": 10.64,
+    "end": 10.96
+  }
+]

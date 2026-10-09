@@ -1,0 +1,7 @@
+Tổ chức Khí tượng Thế giới cảnh báo El Nino đang mạnh lên nhanh chóng và có thể trở thành một trong những đợt mạnh nhất kể từ năm một nghìn chín trăm năm mươi.
+Trong cảnh báo ngày tám tháng mười, tổ chức này cho biết El Nino dự kiến còn tăng cường rồi đạt đỉnh vào cuối năm hai nghìn không trăm hai mươi sáu, kéo theo nguy cơ nắng nóng, hạn hán và lũ lụt trên toàn cầu.
+Tổng thư ký Celeste Saulo cho biết hiện tượng đã hình thành rõ rệt, và gần một trăm phần trăm khả năng nó tiếp diễn đến tháng hai năm hai nghìn không trăm hai mươi bảy.
+Nhiệt độ mặt nước biển ở vùng xích đạo trung tâm và phía Đông Thái Bình Dương cao hơn bình thường hơn một phẩy sáu độ xê vào tháng sáu, lên hai phẩy năm độ xê vào tháng tám, và được dự báo khoảng ba phẩy bảy độ xê trong quý cuối năm.
+Nếu thành hiện thực, mức đó sẽ vượt kỷ lục hai phẩy sáu độ xê của giai đoạn hai nghìn không trăm mười lăm đến hai nghìn không trăm mười sáu. Đợt El Nino trước đã góp phần khiến năm hai nghìn không trăm hai mươi tư thành năm nóng nhất lịch sử quan trắc.
+Theo dự báo Tuổi Trẻ dẫn, từ tháng mười một, Đồng bằng sông Cửu Long, Tây Nguyên và Đông Nam Bộ có khả năng hạn hán, xâm nhập mặn trên diện rộng. Còn ở Trung Mỹ, hạn hán kéo dài đã khiến mùa màng thất bát, vật nuôi chết hàng loạt.
+Với đợt El Nino có thể mạnh nhất hơn bảy mươi năm, theo bạn chúng ta đã chuẩn bị đủ, hay vẫn còn chủ quan? Hãy để lại bình luận quan điểm của bạn nhé.

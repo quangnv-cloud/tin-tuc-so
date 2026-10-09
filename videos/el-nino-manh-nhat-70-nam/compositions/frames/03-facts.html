@@ -1,0 +1,65 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .o { color: #FF5A1F; } .r { color: #FF4438; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.1); border-radius: 26px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .card.hi { border: 2px solid rgba(255,90,31,0.8); background: linear-gradient(180deg, rgba(255,90,31,0.12), #121724 70%); box-shadow: 0 0 56px rgba(255,90,31,0.28); }
+    .card.warn { border: 2px solid rgba(255,68,56,0.8); background: linear-gradient(180deg, rgba(255,68,56,0.12), #121724 70%); box-shadow: 0 0 56px rgba(255,68,56,0.24); }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; }
+
+    .rows { position: absolute; left: 50px; top: 350px; width: 980px; }
+    .row { position: relative; display: flex; height: 330px; margin-bottom: 40px; border-radius: 26px; overflow: hidden; }
+    .row .lab { width: 330px; flex: none; padding: 0 34px; display: flex; flex-direction: column; justify-content: center; gap: 12px; opacity: 0; }
+    .row .lab .n { font-weight: 800; font-size: 24px; letter-spacing: 0.18em; color: #FF5A1F; }
+    .row .lab .t { font-weight: 600; font-size: 28px; line-height: 1.25; color: rgba(255,255,255,0.7); }
+    .row .sep { width: 4px; flex: none; margin: 34px 0; background: #FF5A1F; border-radius: 2px; transform-origin: 50% 0; }
+    .row .val { flex: 1; padding: 0 38px; display: flex; flex-direction: column; justify-content: center; gap: 14px; opacity: 0; }
+    .row .val .v { font-weight: 900; font-size: 56px; line-height: 1.08; }
+    .row .val .v.big { font-size: 88px; white-space: nowrap; }
+    .row .val .s { font-weight: 500; font-size: 28px; line-height: 1.35; color: rgba(255,255,255,0.74); }
+
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+
+    <div class="rows">
+      <div class="row card" id="f-r1"><div class="lab" id="f-l1"><div class="n">01</div><div class="t">Người đưa ra<br>cảnh báo</div></div><div class="sep" id="f-s1"></div><div class="val" id="f-v1"><div class="v">Celeste Saulo</div><div class="s">Tổng thư ký Tổ chức Khí tượng Thế giới (WMO)</div></div></div>
+      <div class="row card" id="f-r2"><div class="lab" id="f-l2"><div class="n">02</div><div class="t">Hiện tượng<br>hiện nay</div></div><div class="sep" id="f-s2"></div><div class="val" id="f-v2"><div class="v">Hình thành<br><span class="o">rõ rệt</span></div><div class="s">và đang mạnh lên nhanh chóng</div></div></div>
+      <div class="row card hi" id="f-r3"><div class="lab" id="f-l3"><div class="n">03</div><div class="t">Khả năng kéo dài<br>đến 2/2027</div></div><div class="sep" id="f-s3"></div><div class="val" id="f-v3"><div class="v big o">Gần 100%</div><div class="s">theo bà Celeste Saulo</div></div></div>
+    </div>
+
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#f-r1', { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.3);
+    tl.fromTo('#f-l1', { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.45);
+    tl.fromTo('#f-s1', { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: 'power2.inOut' }, 0.45);
+    tl.fromTo('#f-v1', { autoAlpha: 0, x: 34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.6);
+    tl.fromTo('#f-r2', { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 1.83);
+    tl.fromTo('#f-l2', { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.98);
+    tl.fromTo('#f-s2', { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: 'power2.inOut' }, 1.98);
+    tl.fromTo('#f-v2', { autoAlpha: 0, x: 34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 2.13);
+    tl.fromTo('#f-r3', { autoAlpha: 0, y: 34 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 3.4499999999999997);
+    tl.fromTo('#f-l3', { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.6);
+    tl.fromTo('#f-s3', { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: 'power2.inOut' }, 3.6);
+    tl.fromTo('#f-v3', { autoAlpha: 0, x: 34 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.75);
+    tl.fromTo('#f-v3 .big', { scale: 0.9 }, { scale: 1, duration: 0.6, ease: 'back.out(1.8)' }, 3.75);
+
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>
