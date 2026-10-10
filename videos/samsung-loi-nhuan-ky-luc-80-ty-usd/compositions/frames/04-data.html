@@ -1,0 +1,66 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+    .glow { box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .kicker { font-weight: 700; font-size: 27px; letter-spacing: 0.26em; text-transform: uppercase; color: #FF5A1F; }
+    .card { background: #121724; border: 1.5px solid rgba(255,90,31,0.35); border-radius: 26px; }
+    .ring-wrap { position: relative; flex: none; }
+    .ring-wrap svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .ring-wrap .ctr { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+
+
+    .d-kick { position: absolute; left: 0; right: 0; top: 300px; text-align: center; opacity: 0; }
+    .d-big { position: absolute; left: 220px; top: 380px; width: 640px; height: 640px; }
+    .d-big .ctr .v { font-weight: 900; font-size: 210px; line-height: 1; color: #fff; letter-spacing: -0.03em; }
+    .d-big .ctr .v span { color: #FF5A1F; font-size: 120px; }
+    .d-big .ctr .pre { font-weight: 800; font-size: 40px; color: rgba(255,255,255,0.8); margin-bottom: 4px; }
+    .d-lab { position: absolute; left: 60px; right: 60px; top: 1050px; text-align: center; font-weight: 800; font-size: 44px; line-height: 1.2; opacity: 0; }
+    .d-lab b { color: #FF5A1F; }
+    .d-row { position: absolute; left: 60px; right: 60px; top: 1190px; height: 220px; padding: 0 40px; display: flex; align-items: center; gap: 34px; opacity: 0; }
+    .d-row .ring-wrap { width: 150px; height: 150px; }
+    .d-row .ring-wrap svg { }
+    .d-row .ctr .n { font-weight: 900; font-size: 38px; color: #FF5A1F; }
+    .d-row .t1 { font-weight: 900; font-size: 44px; line-height: 1.1; }
+    .d-row .t1 b { color: #FF5A1F; }
+    .d-row .t2 { margin-top: 8px; font-weight: 600; font-size: 28px; line-height: 1.25; color: rgba(255,255,255,0.8); }
+
+  </style>
+
+  <div id="root" data-composition-id="04-data" data-width="1080" data-height="1920">
+
+    <div class="kicker d-kick" id="d-kick">Con số nổi bật</div>
+    <div class="d-big ring-wrap glow" id="d-big" style="border-radius:50%"><svg viewBox="0 0 640 640"><circle cx="320.0" cy="320.0" r="298.0" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="44"/><circle id="d-ring" cx="320.0" cy="320.0" r="298.0" fill="none" stroke="#FF5A1F" stroke-width="44" stroke-linecap="round" stroke-dasharray="1872.39" stroke-dashoffset="1872.39" transform="rotate(-90 320.0 320.0)"/></svg><div class="ctr"><div class="pre">hơn</div><div class="v"><span id="d-num">0</span><span>%</span></div></div></div>
+    <div class="d-lab" id="d-lab">Biên lợi nhuận gộp của <b>mảng bán dẫn</b></div>
+    <div class="d-row card glow" id="d-row">
+      <div class="ring-wrap"><svg viewBox="0 0 180 180"><circle cx="90.0" cy="90.0" r="82.0" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="16"/><circle id="d-mini" cx="90.0" cy="90.0" r="82.0" fill="none" stroke="#FF5A1F" stroke-width="16" stroke-linecap="round" stroke-dasharray="515.22" stroke-dashoffset="515.22" transform="rotate(-90 90.0 90.0)"/></svg><div class="ctr"><div class="n">~50%</div></div></div>
+      <div><div class="t1">Chip nhớ băng thông cao: sản lượng bán ra <b>tăng gần 50%</b></div><div class="t2">so với quý trước</div></div>
+    </div>
+
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#d-kick', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#d-big', { autoAlpha: 0, scale: 0.85 }, { autoAlpha: 1, scale: 1, duration: 0.6, ease: 'back.out(1.4)' }, 0.2);
+    tl.to('#d-ring', { strokeDashoffset: 374.48, duration: 1.6, ease: 'power2.out' }, 0.5);
+    const cnt = { v: 0 };
+    tl.to(cnt, { v: 80, duration: 1.6, ease: 'power2.out', onUpdate: function () { document.getElementById('d-num').textContent = Math.round(cnt.v); } }, 0.5);
+    tl.fromTo('#d-lab', { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 2.0);
+    tl.fromTo('#d-row', { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 3.5);
+    tl.to('#d-mini', { strokeDashoffset: 257.61, duration: 1.0, ease: 'power2.out' }, 3.7);
+
+    window.__timelines['04-data'] = tl;
+  </script>
+</template>
