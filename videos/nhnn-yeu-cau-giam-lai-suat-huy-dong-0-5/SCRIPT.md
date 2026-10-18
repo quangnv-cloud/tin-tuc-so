@@ -1,0 +1,7 @@
+Ngân hàng Nhà nước vừa yêu cầu các ngân hàng giảm lãi suất tiết kiệm ít nhất không phẩy năm phần trăm một năm, đồng thời giảm lãi suất cho vay từ một phẩy năm đến hai phần trăm.
+Theo văn bản ban hành ngày mười tám tháng mười, các ngân hàng phải hạ lãi suất tiền gửi niêm yết kỳ hạn từ sáu tháng trở lên, tuyệt đối không đua tăng lãi suất huy động và không cạnh tranh không lành mạnh.
+Về phía cho vay, mức giảm được yêu cầu là từ một phẩy năm đến hai điểm phần trăm mỗi năm, áp dụng với sản xuất kinh doanh và các lĩnh vực ưu tiên. Dòng vốn tín dụng cũng được yêu cầu ưu tiên cho khoa học công nghệ và đổi mới sáng tạo.
+Đặt cạnh nhau, mức giảm yêu cầu với lãi suất cho vay lớn hơn từ ba đến bốn lần mức giảm tối thiểu với lãi suất tiền gửi, là không phẩy năm điểm phần trăm.
+Chỉ đạo này đưa ra khi lãi suất tiết kiệm đã neo cao. Từ cuối tháng tư, lãi suất niêm yết cao nhất hệ thống lên vùng bảy phẩy sáu đến bảy phẩy tám phần trăm một năm, chưa tính tiền gửi lớn. Mức ưu đãi thực tế tại nhiều ngân hàng dao động từ tám phẩy năm đến chín phẩy năm phần trăm.
+Ngân hàng không tuân thủ có thể bị xem xét lại chỉ tiêu tăng trưởng tín dụng năm nay và bị giao chỉ tiêu thấp hơn vào năm hai nghìn không trăm hai mươi bảy. Trước đó, Vietcombank đã cam kết giảm tối thiểu hai phần trăm lãi suất cho vay đến cuối năm.
+Hạ lãi suất để hỗ trợ sản xuất kinh doanh, hay người gửi tiền phải chịu thiệt? Hãy để lại bình luận quan điểm của bạn.
