@@ -72,6 +72,12 @@ Thực hiện đúng trình tự trong videos/PRODUCTION-WORKFLOW.md, cụ thể
    (`voice_code`: `hn_male_minhquan_yt-stable`), `speed_rate` 1.09. App ID + Token lấy từ biến môi trường
    `VBEE_APP_ID` / `VBEE_TOKEN` (KHÔNG tự tìm/nhập credential khác).
 
+   🔁 **[Bắt buộc — 2026-10-22] Tài khoản Vbee TẠM tới hết 30/10/2026**: tài khoản Vbee cũ (`VBEE_APP_ID`/`VBEE_TOKEN`) hết quota API TTS (lỗi 1051) từ 14/10. Từ 22/10 đến hết **30/10/2026 (giờ VN)** dùng tài khoản Vbee tạm ở 2 biến môi trường `VBEE_APP_ID_TAM` / `VBEE_TOKEN_TAM`; từ **31/10/2026** TỰ quay lại tài khoản cũ. Đây là cặp credential duy nhất được phép ngoài cặp gốc. Đặt dòng sau ở ĐẦU MỌI lệnh Bash có gọi Vbee (biến export KHÔNG giữ qua các lệnh Bash khác nhau, nên lặp lại mỗi lệnh — kể cả lệnh chạy `vbee_tts.py`):
+   ```bash
+   if [ "$(TZ=Asia/Ho_Chi_Minh date +%Y%m%d)" -lt 20261031 ] && [ -n "$VBEE_APP_ID_TAM" ] && [ -n "$VBEE_TOKEN_TAM" ]; then export VBEE_APP_ID="$VBEE_APP_ID_TAM" VBEE_TOKEN="$VBEE_TOKEN_TAM"; echo "Vbee: tai khoan TAM"; else echo "Vbee: tai khoan GOC"; fi
+   ```
+   KHÔNG in giá trị credential. Ghi rõ "tài khoản TẠM" hay "tài khoản GỐC" vào tóm tắt cuối. Nếu tài khoản đang dùng trả lỗi (1051 hoặc khác) → DỪNG như cũ, KHÔNG tự thử tài khoản còn lại.
+
    ⚠️ **BẮT BUỘC — lỗi thật đã xảy ra 29/9/2026** (giọng đọc ra hoàn toàn sai/vô nghĩa dù API trả về
    `status:1`/HTTP 200 bình thường — không có lỗi rõ ràng nào để phát hiện, phải nghe/transcribe mới lộ):
    TUYỆT ĐỐI KHÔNG gõ `input_text` (tiếng Việt có dấu) thẳng vào tham số dòng lệnh kiểu `curl -d '...'`
