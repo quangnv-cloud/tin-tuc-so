@@ -1,0 +1,56 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .kick { font-weight: 700; font-size: 26px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; }
+    .glow { box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    
+    .w-card { position: absolute; left: 60px; right: 60px; top: 330px; height: 560px; border-radius: 22px; overflow: hidden; border: 1.5px solid rgba(255,90,31,0.5); opacity: 0; }
+    .w-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%; }
+    .w-card .shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(11,14,20,0.85) 100%); }
+    .w-pill { position: absolute; left: 22px; bottom: 22px; padding: 12px 20px; border-radius: 10px; background: rgba(11,14,20,0.82); border: 1.5px solid rgba(255,90,31,0.7); font-weight: 700; font-size: 25px; opacity: 0; }
+    .w-strip { position: absolute; left: 60px; right: 60px; top: 918px; height: 56px; display: flex; align-items: flex-end; gap: 12px; opacity: 0; }
+    .w-strip i { display: block; width: 14px; border-radius: 3px; transform-origin: bottom; }
+    .w-kick { position: absolute; left: 60px; top: 1004px; opacity: 0; }
+    .w-head { position: absolute; left: 60px; right: 60px; top: 1052px; font-weight: 900; font-size: 70px; line-height: 1.16; }
+    .w-head .ln { overflow: hidden; } .w-head .ln > span { display: block; }
+    .o { color: #FF5A1F; }
+
+  </style>
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+
+    <div class="w-card glow" id="w-card"><img src="assets/img/article-hero.jpg" alt=""><div class="shade"></div><div class="w-pill" id="w-pill">Chuyên Hà Nội - Amsterdam</div></div>
+    <div class="w-strip" id="w-strip"><i style="height:14px;background:#FF4438;opacity:0.35"></i><i style="height:26px;background:#FF5A1F;opacity:0.47"></i><i style="height:18px;background:#FF5A1F;opacity:0.59"></i><i style="height:34px;background:#FF5A1F;opacity:0.71"></i><i style="height:22px;background:#FF5A1F;opacity:0.35"></i><i style="height:40px;background:#FF4438;opacity:0.47"></i><i style="height:28px;background:#FF5A1F;opacity:0.59"></i><i style="height:46px;background:#FF5A1F;opacity:0.71"></i><i style="height:30px;background:#FF5A1F;opacity:0.35"></i><i style="height:38px;background:#FF5A1F;opacity:0.47"></i><i style="height:24px;background:#FF4438;opacity:0.59"></i><i style="height:44px;background:#FF5A1F;opacity:0.71"></i><i style="height:32px;background:#FF5A1F;opacity:0.35"></i><i style="height:50px;background:#FF5A1F;opacity:0.47"></i><i style="height:36px;background:#FF5A1F;opacity:0.59"></i><i style="height:28px;background:#FF4438;opacity:0.71"></i><i style="height:42px;background:#FF5A1F;opacity:0.35"></i><i style="height:34px;background:#FF5A1F;opacity:0.47"></i><i style="height:48px;background:#FF5A1F;opacity:0.59"></i><i style="height:26px;background:#FF5A1F;opacity:0.71"></i><i style="height:38px;background:#FF4438;opacity:0.35"></i><i style="height:30px;background:#FF5A1F;opacity:0.47"></i><i style="height:44px;background:#FF5A1F;opacity:0.59"></i><i style="height:52px;background:#FF5A1F;opacity:0.71"></i></div>
+    <div class="kick w-kick" id="w-kick">Quý IV · Năm thứ 26</div>
+    <div class="w-head">
+      <div class="ln" data-layout-allow-overflow=""><span id="w-l1" class="o">Đoàn Lê Anh Đức</span></div>
+      <div class="ln" data-layout-allow-overflow=""><span id="w-l2">thắng quý IV,</span></div>
+      <div class="ln" data-layout-allow-overflow=""><span id="w-l3">đưa Hà Nội thành</span></div>
+      <div class="ln" data-layout-allow-overflow=""><span id="w-l4">điểm cầu <span class="o" style="display:inline">thứ tư</span></span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#w-card', { autoAlpha: 0, scale: 1.06 }, { autoAlpha: 1, scale: 1, duration: 0.7, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#w-pill', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 3.9);
+    tl.fromTo('#w-strip', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 0.6);
+    tl.fromTo('#w-strip i', { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: 'power2.out', stagger: 0.03 }, 0.6);
+    tl.fromTo('#w-kick', { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 0.9);
+    tl.fromTo('#w-l1', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 2.4);
+    tl.fromTo('#w-l2', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 5.1);
+    tl.fromTo('#w-l3', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 5.8);
+    tl.fromTo('#w-l4', { yPercent: 118 }, { yPercent: 0, duration: 0.55, ease: 'power4.out' }, 6.5);
+
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>
