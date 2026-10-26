@@ -1,0 +1,47 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+
+    .fc-kicker { position: absolute; left: 64px; top: 150px; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+    .fc-card { position: absolute; left: 64px; right: 64px; height: 360px; border-radius: 26px; background: #121724; border: 1px solid rgba(255,255,255,0.09); box-shadow: 0 0 40px rgba(255,90,31,0.14); padding: 44px 48px 0 168px; opacity: 0; }
+    .fc-card .n { position: absolute; left: 48px; top: 44px; width: 78px; height: 78px; border-radius: 50%; border: 3px solid #FF5A1F; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 40px; color: #FF5A1F; }
+    .fc-card .l { font-weight: 700; font-size: 24px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .fc-card .v { margin-top: 24px; font-weight: 800; font-size: 50px; line-height: 1.16; color: #fff; }
+    .fc-card .v .big { display: block; font-weight: 900; font-size: 112px; line-height: 1.02; color: #FF5A1F; letter-spacing: -0.01em; }
+    .fc-card .v .acc { color: #FF5A1F; }
+    .fc-card .s { margin-top: 18px; font-weight: 500; font-size: 28px; color: rgba(255,255,255,0.62); }
+    #fc-c1 { top: 260px; } #fc-c2 { top: 654px; } #fc-c3 { top: 1048px; }
+
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+
+    <div class="fc-kicker" id="fc-kicker">Những điều cần biết</div>
+    <div class="fc-card" id="fc-c1"><div class="n">1</div><div class="l">Nhà thầu · đấu thầu quốc tế</div><div class="v">Voith Hydro Shanghai – <span class="acc">Powerchina</span> Zhongnan</div><div class="s">Liên danh nhà thầu cung cấp thiết bị</div></div>
+    <div class="fc-card" id="fc-c2"><div class="n">2</div><div class="l">Thời gian thực hiện hợp đồng</div><div class="v"><span class="big">51 tháng</span></div><div class="s">Đáp ứng tiến độ chung của dự án</div></div>
+    <div class="fc-card" id="fc-c3"><div class="n">3</div><div class="l">Quy mô dự án</div><div class="v"><span class="acc">4</span> tổ máy · <span class="acc">1.200MW</span></div><div class="s">Tổng công suất của nhà máy</div></div>
+
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#fc-kicker', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#fc-c1', { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.25);
+    tl.fromTo('#fc-c2', { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.9);
+    tl.fromTo('#fc-c3', { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.7);
+
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>
