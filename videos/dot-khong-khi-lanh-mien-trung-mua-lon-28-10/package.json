@@ -1,0 +1,14 @@
+{
+  "name": "dot-khong-khi-lanh-mien-trung-mua-lon-28-10",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.30 preview",
+    "check": "npx --yes hyperframes@0.8.30 check",
+    "render": "npx --yes hyperframes@0.8.30 render",
+    "publish": "npx --yes hyperframes@0.8.30 publish"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "^0.8.212"
+  }
+}
