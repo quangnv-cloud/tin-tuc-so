@@ -1,0 +1,7 @@
+Sáng ba mươi tháng mười, tuyến đường sắt tốc độ cao Bến Thành đi Cần Giờ chính thức thi công đồng loạt trên toàn tuyến.
+Chủ đầu tư VinSpeed cùng liên danh tổng thầu phát lệnh mở rộng thi công nhiều hạng mục cùng lúc, từ ga ngầm Bến Thành, khu cảng Sài Gòn đến các cây cầu phía Cần Giờ. Vào cao điểm, dự kiến có tới mười nghìn công nhân và kỹ sư làm việc đồng thời.
+Tuyến dài năm mươi bốn ki-lô-mét, đi qua chín xã phường, tốc độ tối đa ba trăm năm mươi ki-lô-mét một giờ. Tổng vốn đầu tư khoảng một trăm linh hai nghìn tỷ đồng, chưa gồm gần mười hai nghìn tám trăm tỷ đồng giải phóng mặt bằng.
+Điểm nhấn là bài toán dầm cầu: một nghìn ba trăm dầm hộp đúc sẵn sẽ được sản xuất tại ba bãi đúc trong khoảng mười lăm tháng, mỗi bãi bình quân một đến hai nhịp mỗi ngày. Phiến dầm đầu tiên nặng bảy trăm năm mươi tấn đã được đúc thử thành công.
+Phần ngầm tập trung ở ga Bến Thành, dài khoảng năm trăm sáu mươi sáu mét, hố móng sâu ba mươi bốn mét. Tại khu cảng Sài Gòn, đoạn hầm hơn hai ki-lô-mét sẽ do máy đào hầm đường kính mười ba mét thi công.
+Theo kế hoạch VinSpeed công bố, thi công hoàn thành vào quý bốn năm hai nghìn không trăm hai mươi tám, và đưa vào vận hành năm hai nghìn không trăm hai mươi chín. Đây là một trong tám tuyến đường sắt đô thị thành phố đang triển khai.
+Với dự án vốn lớn và tiến độ gấp rút như vậy, theo bạn điều gì quan trọng hơn: về đích đúng hẹn, hay bảo đảm chất lượng và an toàn từng hạng mục? Hãy để lại bình luận quan điểm của bạn.

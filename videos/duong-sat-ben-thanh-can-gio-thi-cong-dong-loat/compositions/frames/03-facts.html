@@ -1,0 +1,73 @@
+<template>
+  <style>
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+#root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+
+.card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+.kick { font-weight: 700; font-size: 28px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+.or { color: #FF5A1F; } .rd { color: #FF4438; }
+.pin { position: relative; width: 44px; height: 44px; flex: none; }
+.pin::before { content: ""; position: absolute; left: 6px; top: 0; width: 32px; height: 32px; border-radius: 50% 50% 50% 0; background: #FF5A1F; transform: rotate(-45deg); }
+.pin::after { content: ""; position: absolute; left: 16px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: #0B0E14; }
+.mapbg { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+
+.mapbg { opacity: 0; }
+.f-card { position: absolute; left: 60px; width: 660px; height: 250px; display: flex; align-items: center; gap: 26px; padding: 0 30px; opacity: 0; }
+.f-card .txt { min-width: 0; }
+.f-card .n { font-weight: 900; font-size: 70px; line-height: 1; color: #FF5A1F; white-space: nowrap; }
+.f-card .l { margin-top: 10px; font-weight: 600; font-size: 26px; line-height: 1.25; color: rgba(255,255,255,0.88); }
+.f-card .idx { position: absolute; left: 18px; top: 14px; font-weight: 700; font-size: 20px; letter-spacing: 0.2em; color: rgba(255,255,255,0.4); }
+.f-lab { position: absolute; width: 240px; text-align: center; font-weight: 800; font-size: 26px; letter-spacing: 0.16em; text-transform: uppercase; color: #fff; opacity: 0; }
+#f-route { position: absolute; left: 740px; top: 280px; width: 300px; height: 1130px; }
+
+  </style>
+
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+    <svg class="mapbg" viewBox="0 0 1080 1920" aria-hidden="true">
+      <g stroke="rgba(255,255,255,0.045)" stroke-width="2">
+        <line x1="0" y1="420" x2="1080" y2="420"/><line x1="0" y1="720" x2="1080" y2="720"/><line x1="0" y1="1020" x2="1080" y2="1020"/><line x1="0" y1="1320" x2="1080" y2="1320"/>
+        <line x1="270" y1="260" x2="270" y2="1460"/><line x1="540" y1="260" x2="540" y2="1460"/><line x1="810" y1="260" x2="810" y2="1460"/>
+      </g>
+      <path d="M-20 980 C 200 940, 330 1060, 560 1010 S 900 900, 1100 960" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="22" stroke-linecap="round"/>
+      <path d="M-20 1240 C 220 1190, 420 1290, 640 1240 S 960 1160, 1100 1210" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="14" stroke-linecap="round"/>
+    </svg>
+    <svg id="f-route" viewBox="0 0 300 1130" aria-hidden="true">
+      <path id="f-line-bg" d="M150 90 C 150 250, 70 320, 100 470 S 230 680, 170 820 S 90 990, 150 1050" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 18"/>
+      <path id="f-line" pathLength="1" d="M150 90 C 150 250, 70 320, 100 470 S 230 680, 170 820 S 90 990, 150 1050" fill="none" stroke="#FF5A1F" stroke-width="10" stroke-linecap="round" style="stroke-dasharray:1;stroke-dashoffset:1;opacity:0"/>
+      <circle id="f-p1" cx="150" cy="90" r="18" fill="#FF5A1F" style="opacity:0"/><circle id="f-p2" cx="150" cy="1050" r="18" fill="#FF4438" style="opacity:0"/>
+    </svg>
+    <div class="f-lab" id="f-l1" style="left:770px;top:262px">Bến Thành</div>
+    <div class="f-lab" id="f-l2" style="left:770px;top:1352px">Cần Giờ</div>
+    <div class="card f-card" id="f-c1" style="top:300px"><span class="idx">01</span><span class="pin"></span><div class="txt"><div class="n">54 km</div><div class="l">từ Công viên 23/9 đến khu đô thị lấn biển Cần Giờ</div></div></div>
+    <div class="card f-card" id="f-c2" style="top:576px"><span class="idx">02</span><span class="pin"></span><div class="txt"><div class="n">9 xã, phường</div><div class="l">tuyến đi qua</div></div></div>
+    <div class="card f-card" id="f-c3" style="top:852px"><span class="idx">03</span><span class="pin"></span><div class="txt"><div class="n">350 km/h</div><div class="l">tốc độ tối đa · đường đôi, điện khí hóa</div></div></div>
+    <div class="card f-card" id="f-c4" style="top:1128px"><span class="idx">04</span><span class="pin"></span><div class="txt"><div class="n">102.430 tỷ</div><div class="l">vốn đầu tư, chưa gồm gần 12.800 tỷ đồng giải phóng mặt bằng</div></div></div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.mapbg', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.8, ease: 'power1.out' }, 0);
+    tl.fromTo('#f-line', { autoAlpha: 0, strokeDashoffset: 1 }, { autoAlpha: 1, strokeDashoffset: 0, duration: 6.2, ease: 'none' }, 0.5);
+    tl.fromTo('#f-p1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, ease: 'power2.out' }, 0.5);
+    tl.fromTo('#f-l1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 0.6);
+    tl.fromTo('#f-p2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, ease: 'power2.out' }, 6.5);
+    tl.fromTo('#f-l2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, 6.6);
+    tl.fromTo('#f-c1', { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.65);
+    tl.fromTo('#f-c2', { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 2.05);
+    tl.fromTo('#f-c3', { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 3.35);
+    tl.fromTo('#f-c4', { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 5.95);
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>
