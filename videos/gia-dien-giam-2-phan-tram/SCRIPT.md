@@ -1,0 +1,7 @@
+Giá điện hướng tới giảm khoảng hai phần trăm: Chính phủ chỉ đạo Tập đoàn Điện lực Việt Nam rà soát chi phí để hạ giá bán lẻ từ nay đến hết ngày ba mươi mốt tháng ba năm hai nghìn không trăm hai mươi bảy.
+Sáng ba mươi mốt tháng mười, trước Quốc hội, Phó thủ tướng Nguyễn Văn Thắng cho biết Chính phủ đang chỉ đạo tập đoàn này tiết giảm tối đa chi phí. Theo Tuổi Trẻ, mức giảm dự kiến áp dụng từ ngày một tháng mười một.
+Giá bán lẻ điện bình quân hiện hành là hai nghìn hai trăm linh bốn đồng một ki-lô-oát giờ, chưa gồm thuế giá trị gia tăng, áp dụng từ ngày mười tháng năm năm hai nghìn không trăm hai mươi lăm. Giảm hai phần trăm thì còn khoảng hai nghìn một trăm năm mươi chín đồng.
+Chênh lệch khoảng bốn mươi lăm đồng mỗi ki-lô-oát giờ. Giá thành điện năm hai nghìn không trăm hai mươi lăm là hai nghìn không trăm chín mươi hai phẩy bảy đồng, nên giá bán hiện hành cao hơn giá thành năm phẩy ba hai phần trăm.
+Chính phủ cũng dự kiến giảm thuế tiêu thụ đặc biệt với xăng từ bảy phần trăm xuống không phần trăm, từ tháng mười một đến hết năm. Cùng giảm giá điện, việc này tạo thêm dư địa khoảng không phẩy không bảy điểm phần trăm để kiềm chế lạm phát.
+Theo Tuổi Trẻ, trong mười năm qua giá bán lẻ điện bình quân tăng sáu lần và chưa có lần giảm nào. Đây là lần giảm giá duy nhất trong hai mươi năm qua cho mọi đối tượng khách hàng, ngoại trừ năm đợt hỗ trợ thời dịch Cô-vít mười chín.
+Giảm hai phần trăm giá điện: theo bạn, đây là khoản hỗ trợ đủ thiết thực cho người dân và doanh nghiệp, hay mức giảm vẫn còn nhỏ? Hãy để lại bình luận quan điểm của bạn.

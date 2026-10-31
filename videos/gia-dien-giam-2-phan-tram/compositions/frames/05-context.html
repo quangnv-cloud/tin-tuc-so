@@ -1,0 +1,76 @@
+<template>
+  <style>
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+
+#root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+.card { background: #121724; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+.kick { font-weight: 700; font-size: 28px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+.or { color: #FF5A1F; } .rd { color: #FF4438; }
+.ring { display: block; transform: rotate(-90deg); overflow: visible; }
+.ring .bg { fill: none; stroke: rgba(255,255,255,0.10); }
+.ring .fg { fill: none; stroke: #FF5A1F; stroke-linecap: round; }
+.ring .fg.red { stroke: #FF4438; }
+
+
+.c-kick { position: absolute; left: 70px; top: 290px; opacity: 0; }
+.c-rings { position: absolute; left: 40px; right: 40px; top: 350px; display: flex; justify-content: space-between; }
+.c-item { width: 310px; text-align: center; opacity: 0; }
+.c-rw { position: relative; width: 270px; height: 270px; margin: 0 auto; }
+.c-rw .ct { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 54px; color: #fff; }
+.c-rw .ct .b { display: none; }
+.c-item .lb { margin-top: 22px; font-weight: 600; font-size: 28px; line-height: 1.25; color: rgba(255,255,255,0.88); }
+.c-card { position: absolute; left: 60px; right: 60px; top: 800px; height: 600px; padding: 40px 44px; opacity: 0; display: flex; flex-direction: column; justify-content: center; }
+.c-card .rw2 { display: flex; align-items: center; gap: 40px; }
+.c-card .big { position: relative; width: 250px; height: 250px; flex: none; }
+.c-card .big .ct { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 54px; color: #FF5A1F; }
+.c-card .tx b { display: block; font-weight: 900; font-size: 44px; line-height: 1.15; color: #fff; }
+.c-card .tx span { display: block; margin-top: 12px; font-weight: 600; font-size: 30px; line-height: 1.3; color: rgba(255,255,255,0.85); }
+.c-card hr { border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 36px 0; }
+.c-card .note { font-weight: 700; font-size: 38px; line-height: 1.3; color: #fff; }
+.c-card .note em { font-style: normal; color: #FF5A1F; }
+
+  </style>
+
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+    <div class="c-kick kick" id="c-kick">Bối cảnh: thuế xăng và lạm phát</div>
+    <div class="c-rings">
+      <div class="c-item" id="c1"><div class="c-rw"><svg class="ring" width="270" height="270" viewBox="0 0 270 270"><circle class="bg" cx="135" cy="135" r="105" stroke-width="22"/><circle class="fg" id="c1-arc" cx="135" cy="135" r="105" stroke-width="22" stroke-dasharray="659.73" stroke-dashoffset="659.73"/></svg><div class="ct" style="font-size:44px;">7% → 0%</div></div><div class="lb">Thuế tiêu thụ đặc biệt với xăng, tháng 11 đến hết năm</div></div>
+      <div class="c-item" id="c2"><div class="c-rw"><svg class="ring" width="270" height="270" viewBox="0 0 270 270"><circle class="bg" cx="135" cy="135" r="105" stroke-width="22"/><circle class="fg" id="c2-arc" cx="135" cy="135" r="105" stroke-width="22" stroke-dasharray="659.73" stroke-dashoffset="659.73"/></svg><div class="ct" style="font-size:46px;">~4.000</div></div><div class="lb">Tỷ đồng ngân sách dành cho việc giảm thuế này</div></div>
+      <div class="c-item" id="c3"><div class="c-rw"><svg class="ring" width="270" height="270" viewBox="0 0 270 270"><circle class="bg" cx="135" cy="135" r="105" stroke-width="22"/><circle class="fg" id="c3-arc" cx="135" cy="135" r="105" stroke-width="22" stroke-dasharray="659.73" stroke-dashoffset="659.73"/></svg><div class="ct" style="font-size:46px;">0,07</div></div><div class="lb">Điểm phần trăm dư địa thêm cho mục tiêu lạm phát</div></div>
+    </div>
+    <div class="c-card card" id="c-card">
+      <div class="rw2"><div class="big"><svg class="ring" width="250" height="250" viewBox="0 0 250 250"><circle class="bg" cx="125" cy="125" r="98" stroke-width="22"/><circle class="fg" id="cpi-arc" cx="125" cy="125" r="98" stroke-width="22" stroke-dasharray="615.75" stroke-dashoffset="615.75"/></svg><div class="ct">4,52%</div></div>
+      <div class="tx"><b>Chỉ số giá tiêu dùng</b><span>Mức tăng bình quân 9 tháng đầu năm, theo Phó thủ tướng</span></div></div>
+      <hr>
+      <div class="note">Giảm thuế xăng cùng giảm giá điện: thêm khoảng <em>0,07 điểm %</em> dư địa kiểm soát lạm phát.</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#c-kick', { autoAlpha: 0, x: -16 }, { autoAlpha: 1, x: 0, duration: 0.4 }, 0.1);
+    tl.fromTo('#c1', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.5);
+    tl.to('#c1-arc', { strokeDashoffset: 613.55, duration: 0.9, ease: 'power2.inOut' }, 0.7);
+    tl.to('#c1-arc', { strokeDashoffset: 659.73, duration: 0.9, ease: 'power2.inOut' }, 3.2);
+    tl.fromTo('#c2', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 4.6);
+    tl.to('#c2-arc', { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut' }, 4.8);
+    tl.fromTo('#c3', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 6.6);
+    tl.to('#c3-arc', { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut' }, 6.8);
+    tl.fromTo('#c-card', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 8.2);
+    tl.to('#cpi-arc', { strokeDashoffset: 587.92, duration: 1.0, ease: 'power2.inOut' }, 8.5);
+
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
