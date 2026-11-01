@@ -1,0 +1,26 @@
+.f-kick { position: absolute; left: 60px; top: 330px; opacity: 0; }
+.f-axis { position: absolute; left: 104px; top: 420px; width: 6px; height: 950px; background: linear-gradient(180deg, #FF5A1F, rgba(255,90,31,0.25)); border-radius: 3px; transform-origin: top; }
+.f-row { position: absolute; left: 170px; width: 850px; height: 290px; padding: 34px 44px; opacity: 0; }
+.f-node { position: absolute; left: 90px; width: 36px; height: 36px; border-radius: 50%; background: #0B0E14; border: 6px solid #FF5A1F; opacity: 0; box-shadow: 0 0 24px rgba(255,90,31,0.5); }
+.f-node.grey { border-color: rgba(255,255,255,0.45); box-shadow: none; }
+.f-row .nm { font-weight: 600; font-size: 30px; letter-spacing: 0.04em; color: rgba(255,255,255,0.7); }
+.f-row .big { margin-top: 14px; display: flex; align-items: baseline; gap: 16px; }
+.f-row .big b { font-weight: 900; font-size: 120px; line-height: 1; letter-spacing: -0.02em; }
+.f-row .big span { font-weight: 600; font-size: 34px; color: rgba(255,255,255,0.75); }
+.f-row .dl { position: absolute; right: 40px; top: 36px; }
+@@
+    <div class="f-kick kick" id="f-kick">Giá bán lẻ tối đa từ 1/11</div>
+    <div class="f-axis" id="f-axis"></div>
+    <div class="f-node" id="f-n1" style="top: 464px;"></div>
+    <div class="f-node" id="f-n2" style="top: 804px;"></div>
+    <div class="f-node grey" id="f-n3" style="top: 1144px;"></div>
+    <div class="f-row card" id="f-r1" style="top: 420px;"><div class="nm">Xăng E5 RON 92</div><div class="big"><b>24.220</b><span>đồng/lít</span></div><div class="dl chip or">−1.800 đ</div></div>
+    <div class="f-row card" id="f-r2" style="top: 760px;"><div class="nm">Xăng E10 RON 95</div><div class="big"><b>24.150</b><span>đồng/lít</span></div><div class="dl chip or">−1.580 đ</div></div>
+    <div class="f-row card" id="f-r3" style="top: 1100px;"><div class="nm">Dầu diesel</div><div class="big"><b>30.240</b><span>đồng/lít</span></div><div class="dl chip gr">Giữ nguyên</div></div>
+@@
+    tl.fromTo('#f-kick', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#f-axis', { scaleY: 0 }, { scaleY: 1, duration: 7.8, ease: 'none' }, 0.1);
+    [['#f-n1','#f-r1',0.1],['#f-n2','#f-r2',3.6],['#f-n3','#f-r3',7.4]].forEach(function (a) {
+      tl.fromTo(a[0], { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(2.2)' }, a[2]);
+      tl.fromTo(a[1], { autoAlpha: 0, x: 40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, a[2] + 0.08);
+    });

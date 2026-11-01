@@ -1,0 +1,42 @@
+#root { background: #0B0E14; }
+.hk-photo { position: absolute; left: 0; right: 0; top: 0; height: 740px; overflow: hidden; background: #05070c; }
+.hk-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 0% 50%; }
+.hk-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,14,20,0.10) 0%, rgba(11,14,20,0.2) 60%, rgba(11,14,20,0.45) 100%); }
+.hk-tint { position: absolute; inset: 0; background: radial-gradient(120% 70% at 78% 20%, rgba(255,90,31,0.18), transparent 58%); mix-blend-mode: screen; }
+.hk-panel { position: absolute; left: 0; right: 0; top: 740px; bottom: 0; background: #0B0E14; padding: 16px 60px 0; display: flex; flex-direction: column; align-items: flex-start; }
+.hk-masthead { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; opacity: 0; }
+.hk-logo { width: 62px; height: 62px; flex: none; } .hk-logo img { display: block; width: 100%; height: 100%; }
+.hk-mw { font-weight: 800; font-size: 36px; letter-spacing: 0.01em; color: #fff; }
+.hk-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border-radius: 9px; border: 1.5px solid rgba(255,90,31,0.85); background: rgba(255,90,31,0.12); margin-bottom: 34px; opacity: 0; }
+.hk-badge .d { width: 9px; height: 9px; border-radius: 50%; background: #FF5A1F; flex: none; }
+.hk-badge span { font-weight: 500; font-size: 26px; letter-spacing: 0.03em; color: #fff; white-space: nowrap; }
+.hk-name-wrap { overflow: hidden; padding-bottom: 8px; }
+.hk-name { font-weight: 900; font-size: 120px; line-height: 1.06; letter-spacing: -0.02em; color: #fff; white-space: nowrap; }
+.hk-sub { margin-top: 26px; font-weight: 600; font-size: 36px; line-height: 1.3; color: rgba(255,255,255,0.82); opacity: 0; max-width: 940px; }
+.hk-tags { display: flex; flex-direction: column; gap: 18px; margin-top: 40px; }
+.hk-tag { font-weight: 800; font-size: 46px; line-height: 1; color: #fff; opacity: 0; white-space: nowrap; }
+.hk-tag.warn { color: #FF4438; }
+.hk-tag .dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: currentColor; margin: 0 16px 8px 0; vertical-align: middle; }
+@@
+    <div class="hk-photo"><img src="assets/img/article-hero.jpg" alt=""><div class="hk-scrim"></div><div class="hk-tint"></div></div>
+    <div class="hk-panel">
+      <div class="hk-masthead"><div class="hk-logo"><img src="public/logo.png" alt=""></div><div class="hk-mw">Tin Tức Số</div></div>
+      <div class="hk-badge"><span class="d"></span><span>Nguồn: Dân Trí · 31/10/2026</span></div>
+      <div class="hk-name-wrap"><div class="hk-name" id="hk-n1">Xăng <span class="or">−1.800đ</span></div></div>
+      <div class="hk-name-wrap"><div class="hk-name" id="hk-n2">Điện <span class="or">−2%</span></div></div>
+      <div class="hk-sub" id="hk-sub">Từ 0h ngày 1/11/2026: thuế tiêu thụ đặc biệt xăng về 0%, giá điện bình quân còn 2.159,9 đồng/kWh</div>
+      <div class="hk-tags">
+        <div class="hk-tag" id="hk-t1"><span class="dot"></span>Giảm ngay từ 1/11</div>
+        <div class="hk-tag warn" id="hk-t2"><span class="dot"></span>Điện vẫn cao hơn 15,8%</div>
+      </div>
+    </div>
+@@
+    tl.fromTo('.hk-photo', { autoAlpha: 0.5, scale: 1.1 }, { autoAlpha: 1, scale: 1, duration: 0.95, ease: 'power2.out' }, 0);
+    tl.fromTo('.hk-panel', { y: 48 }, { y: 0, duration: 0.55, ease: 'power3.out' }, 0.08);
+    tl.fromTo('.hk-masthead', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.28);
+    tl.fromTo('.hk-badge', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.36, ease: 'back.out(1.7)' }, 0.5);
+    tl.fromTo('#hk-n1', { yPercent: 118 }, { yPercent: 0, duration: 0.65, ease: 'power4.out' }, 0.8);
+    tl.fromTo('#hk-n2', { yPercent: 118 }, { yPercent: 0, duration: 0.65, ease: 'power4.out' }, 0.98);
+    tl.fromTo('#hk-sub', { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 1.5);
+    tl.fromTo('#hk-t1', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 2.0);
+    tl.fromTo('#hk-t2', { autoAlpha: 0, x: -18 }, { autoAlpha: 1, x: 0, duration: 0.36, ease: 'power2.out' }, 2.35);

@@ -1,0 +1,7 @@
+Từ không giờ ngày một tháng mười một năm hai nghìn không trăm hai mươi sáu, xăng và điện cùng giảm giá: xăng E năm giảm một nghìn tám trăm đồng một lít, giá điện bán lẻ bình quân giảm hai phần trăm.
+Tối ngày ba mươi mốt tháng mười, liên Bộ Tài chính và Công Thương công bố giá xăng mới, cùng lúc Nghị quyết bốn mươi lăm đưa thuế tiêu thụ đặc biệt với xăng về không phần trăm có hiệu lực. Tập đoàn Điện lực Việt Nam cũng thông báo hạ giá điện từ cùng ngày.
+Xăng E năm giảm một nghìn tám trăm đồng, còn hai mươi bốn nghìn hai trăm hai mươi đồng một lít. Xăng E mười giảm một nghìn năm trăm tám mươi đồng, còn hai mươi bốn nghìn một trăm năm mươi đồng. Dầu diesel giữ nguyên.
+Với điện, giá bán lẻ bình quân giảm hai phần trăm, xuống còn hai nghìn một trăm năm mươi chín phẩy chín đồng một ki-lô-oát giờ, chưa gồm thuế giá trị gia tăng.
+Trước đó, giá điện đã tăng bốn lần kể từ tháng năm năm hai nghìn không trăm hai mươi ba: ba phần trăm, bốn phẩy năm phần trăm, rồi hai lần bốn phẩy tám phần trăm. Tổng cộng tăng khoảng mười tám phẩy hai phần trăm so với mức một nghìn tám trăm sáu mươi tư đồng.
+Nghị quyết thuế xăng có hiệu lực đến hết ngày ba mươi mốt tháng ba năm hai nghìn không trăm hai mươi bảy, trước đó thuế là tám phần trăm với xăng E năm và bảy phần trăm với xăng E mười. Dù đã giảm, giá điện vẫn cao hơn khoảng mười lăm phẩy tám phần trăm so với trước tháng năm năm hai nghìn không trăm hai mươi ba.
+Xăng và điện cùng giảm: theo bạn, đây là hỗ trợ đủ thiết thực, hay mức giảm vẫn chưa bù được những lần tăng trước? Hãy để lại bình luận quan điểm của bạn.

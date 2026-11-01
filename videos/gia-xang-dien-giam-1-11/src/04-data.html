@@ -1,0 +1,40 @@
+#root::before { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 36% at 50% 36%, rgba(255,90,31,0.16), transparent 64%); }
+.d-kick { position: absolute; left: 0; right: 0; top: 340px; text-align: center; opacity: 0; }
+.d-num { position: absolute; left: 0; right: 0; top: 440px; text-align: center; font-weight: 900; font-size: 210px; line-height: 1; letter-spacing: -0.03em; color: #fff; opacity: 0; }
+.d-unit { position: absolute; left: 0; right: 0; top: 690px; text-align: center; font-weight: 600; font-size: 40px; color: rgba(255,255,255,0.78); opacity: 0; }
+.d-pct { position: absolute; left: 0; right: 0; top: 790px; text-align: center; opacity: 0; }
+.d-pct b { display: inline-block; padding: 8px 56px 14px; border-radius: 100px; font-weight: 900; font-size: 130px; line-height: 1.1; color: #FF5A1F; border: 4px solid rgba(255,90,31,0.85); background: rgba(255,90,31,0.12); }
+.d-axis { position: absolute; left: 150px; top: 1100px; width: 780px; height: 6px; background: linear-gradient(90deg, rgba(255,255,255,0.35), #FF5A1F); border-radius: 3px; transform-origin: left; }
+.d-n { position: absolute; top: 1083px; width: 40px; height: 40px; border-radius: 50%; opacity: 0; }
+.d-n.a { left: 130px; background: #0B0E14; border: 6px solid rgba(255,255,255,0.5); }
+.d-n.b { left: 910px; background: #FF5A1F; box-shadow: 0 0 34px rgba(255,90,31,0.7); }
+.d-l { position: absolute; top: 1150px; width: 380px; opacity: 0; }
+.d-l .t { font-weight: 600; font-size: 28px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+.d-l .v { margin-top: 8px; font-weight: 800; font-size: 56px; color: rgba(255,255,255,0.7); }
+.d-l.a { left: 60px; }
+.d-l.b { right: 60px; text-align: right; } .d-l.b .t { color: #FF5A1F; } .d-l.b .v { color: #fff; }
+.d-note { position: absolute; left: 0; right: 0; top: 1330px; text-align: center; opacity: 0; }
+@@
+    <div class="d-kick kick" id="d-kick">Giá điện bán lẻ bình quân</div>
+    <div class="d-num" id="d-num">2.204,07</div>
+    <div class="d-unit" id="d-unit">đồng/kWh · chưa gồm thuế giá trị gia tăng</div>
+    <div class="d-pct" id="d-pct"><b>−2%</b></div>
+    <div class="d-axis" id="d-axis"></div>
+    <div class="d-n a" id="d-na"></div><div class="d-n b" id="d-nb"></div>
+    <div class="d-l a" id="d-la"><div class="t">Mức cũ</div><div class="v">2.204,07</div></div>
+    <div class="d-l b" id="d-lb"><div class="t">Từ 1/11/2026</div><div class="v">2.159,9</div></div>
+    <div class="d-note" id="d-note"><span class="chip gr">Quyết định 1305/QĐ-EVN ngày 30/10</span></div>
+@@
+    tl.fromTo('#d-kick', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#d-pct', { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)' }, 1.6);
+    tl.fromTo('#d-num', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 1.9);
+    var o = { v: 2204.07 };
+    tl.to(o, { v: 2159.9, duration: 1.6, ease: 'power2.inOut', onUpdate: function () {
+      document.getElementById('d-num').textContent = o.v.toFixed(2).replace('.', ',').replace(/^(\d)(\d{3})/, '$1.$2').replace(/,(\d)0$/, ',$1'); } }, 2.4);
+    tl.fromTo('#d-unit', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 4.0);
+    tl.fromTo('#d-axis', { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: 'power2.inOut' }, 3.0);
+    tl.fromTo('#d-na', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: 'back.out(2)' }, 3.0);
+    tl.fromTo('#d-la', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 3.2);
+    tl.fromTo('#d-nb', { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'back.out(2.4)' }, 4.3);
+    tl.fromTo('#d-lb', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 4.4);
+    tl.fromTo('#d-note', { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 5.6);

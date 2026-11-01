@@ -1,0 +1,33 @@
+.c-kick { position: absolute; left: 60px; top: 330px; opacity: 0; }
+.c-axis { position: absolute; left: 117px; top: 420px; width: 6px; height: 790px; background: linear-gradient(180deg, rgba(255,255,255,0.35), #FF4438 70%, #FF5A1F); border-radius: 3px; transform-origin: top; }
+.c-row { position: absolute; left: 0; width: 1080px; height: 140px; opacity: 0; }
+.c-node { position: absolute; left: 120px; top: 70px; border-radius: 50%; transform: translate(-50%, -50%); background: #0B0E14; border: 6px solid #FF4438; box-shadow: 0 0 22px rgba(255,68,56,0.45); }
+.c-node.base { width: 28px; height: 28px; border-color: rgba(255,255,255,0.55); box-shadow: none; }
+.c-node.s1 { width: 32px; height: 32px; } .c-node.s2 { width: 38px; height: 38px; } .c-node.s3 { width: 44px; height: 44px; } .c-node.s4 { width: 50px; height: 50px; }
+.c-node.cut { width: 54px; height: 54px; border-color: #FF5A1F; box-shadow: 0 0 30px rgba(255,90,31,0.7); }
+.c-date { position: absolute; left: 200px; top: 18px; font-weight: 600; font-size: 26px; letter-spacing: 0.06em; color: rgba(255,255,255,0.62); }
+.c-val { position: absolute; left: 200px; top: 52px; font-weight: 800; font-size: 54px; line-height: 1; color: #fff; }
+.c-val small { font-weight: 600; font-size: 26px; color: rgba(255,255,255,0.6); margin-left: 10px; }
+.c-chip { position: absolute; right: 60px; top: 38px; font-size: 34px; }
+.c-row.cutrow .c-val, .c-row.cutrow .c-date { color: #FF5A1F; }
+.c-sum { position: absolute; left: 60px; width: 960px; top: 1290px; padding: 28px 36px; opacity: 0; display: flex; align-items: center; justify-content: space-between; border-color: rgba(255,68,56,0.6); }
+.c-sum .t { font-weight: 600; font-size: 30px; line-height: 1.25; color: rgba(255,255,255,0.85); }
+.c-sum b { font-weight: 900; font-size: 68px; color: #FF4438; white-space: nowrap; }
+@@
+    <div class="c-kick kick" id="c-kick">Giá điện qua các lần điều chỉnh</div>
+    <div class="c-axis" id="c-axis"></div>
+    <div class="c-row" id="c-r0" style="top: 410px;"><div class="c-node base"></div><div class="c-date">Trước 5/2023</div><div class="c-val">1.864,44<small>đ/kWh</small></div></div>
+    <div class="c-row" id="c-r1" style="top: 550px;"><div class="c-node s1"></div><div class="c-date">Tháng 5/2023</div><div class="c-val">1.920,37<small>đ/kWh</small></div><div class="c-chip chip rd">+3%</div></div>
+    <div class="c-row" id="c-r2" style="top: 690px;"><div class="c-node s2"></div><div class="c-date">Tháng 11/2023</div><div class="c-val">2.006,79<small>đ/kWh</small></div><div class="c-chip chip rd">+4,5%</div></div>
+    <div class="c-row" id="c-r3" style="top: 830px;"><div class="c-node s3"></div><div class="c-date">Tháng 10/2024</div><div class="c-val">2.103,12<small>đ/kWh</small></div><div class="c-chip chip rd">+4,8%</div></div>
+    <div class="c-row" id="c-r4" style="top: 970px;"><div class="c-node s4"></div><div class="c-date">Tháng 5/2025</div><div class="c-val">2.204,07<small>đ/kWh</small></div><div class="c-chip chip rd">+4,8%</div></div>
+    <div class="c-row cutrow" id="c-r5" style="top: 1110px;"><div class="c-node cut"></div><div class="c-date">Từ 1/11/2026</div><div class="c-val">2.159,9<small>đ/kWh</small></div><div class="c-chip chip or">−2%</div></div>
+    <div class="c-sum card" id="c-sum"><div class="t">Tổng 4 lần tăng so với<br>mức 1.864,44 đồng</div><b>~18,2%</b></div>
+@@
+    tl.fromTo('#c-kick', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0);
+    tl.fromTo('#c-axis', { scaleY: 0 }, { scaleY: 1, duration: 9.4, ease: 'none' }, 1.8);
+    [['#c-r0',2.2],['#c-r1',3.5],['#c-r2',4.5],['#c-r3',5.6],['#c-r4',6.3],['#c-r5',8.6]].forEach(function (a) {
+      tl.fromTo(a[0], { autoAlpha: 0, x: 40 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, a[1]);
+    });
+    tl.fromTo('#c-sum', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 7.4);
+    tl.fromTo('#c-r0', { scale: 1 }, { scale: 1.04, duration: 0.3, yoyo: true, repeat: 1, ease: 'sine.inOut', transformOrigin: '120px 70px' }, 10.0);
