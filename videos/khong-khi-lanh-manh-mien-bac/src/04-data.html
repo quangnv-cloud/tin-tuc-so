@@ -1,0 +1,18 @@
+.d-kick { position: absolute; left: 60px; top: 306px; opacity: 0; }
+.d-aux { left: 60px; width: 960px; height: 220px; display: flex; align-items: center; gap: 34px; padding: 0 44px; opacity: 0; }
+.d-aux .ic { width: 96px; height: 96px; flex: none; }
+.d-aux .big { font-size: 96px; } .d-aux .lbl { font-size: 32px; margin-left: 4px; flex: 1; }
+.d-main { left: 60px; top: 646px; width: 960px; height: 620px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-color: rgba(255,90,31,0.55); opacity: 0; box-shadow: 0 0 70px rgba(255,90,31,0.28); }
+.d-main .ic { width: 150px; height: 150px; }
+.d-main .big { font-size: 260px; margin-top: 10px; color: #FF5A1F; }
+.d-main .lbl { font-size: 38px; margin-top: 18px; max-width: 800px; }
+@@
+    <div class="kick d-kick" id="d-kick">Con số đáng chú ý</div>
+    <div class="cell d-aux" id="d-a1" style="top:368px"><div class="ic">{{ICON:thermo}}</div><div class="big">&lt;20°</div><div class="lbl">Nhiệt độ thấp nhất có khả năng xuống</div></div>
+    <div class="cell d-main" id="d-m"><div class="ic">{{ICON:mountain}}</div><div class="big" id="d-num">&lt;18°</div><div class="lbl">Nhiệt độ thấp nhất ở <span class="or">vùng núi phía Bắc</span></div></div>
+    <div class="cell d-aux" id="d-a2" style="top:1288px"><div class="ic red">{{ICON:sun}}</div><div class="big rd">&lt;25°</div><div class="lbl">Nhiệt độ cao nhất trong ngày có nơi chỉ ở mức</div></div>
+@@
+    tl.fromTo('#d-kick', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#d-a1', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 1.1);
+    tl.fromTo('#d-m', { autoAlpha: 0, scale: 0.9 }, { autoAlpha: 1, scale: 1, duration: 0.6, ease: 'back.out(1.6)' }, 2.5);
+    tl.fromTo('#d-a2', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 4.2);

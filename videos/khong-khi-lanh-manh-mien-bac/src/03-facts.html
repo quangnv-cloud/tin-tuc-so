@@ -1,0 +1,16 @@
+.f-row { left: 60px; width: 960px; height: 340px; opacity: 0; display: flex; align-items: center; gap: 36px; padding: 0 44px; }
+.f-row .ic { width: 150px; height: 150px; flex: none; }
+.f-row .tx { flex: 1; }
+.f-row .big { font-size: 92px; }
+.f-row .lbl { font-size: 36px; margin-top: 16px; }
+.f-kick { position: absolute; left: 60px; top: 306px; opacity: 0; }
+@@
+    <div class="kick f-kick" id="f-kick">Ai · cái gì · khi nào</div>
+    <div class="cell f-row" id="f-r1" style="top:368px"><div class="ic">{{ICON:cal}}</div><div class="tx"><div class="big or">6/11</div><div class="lbl">Miền Bắc bắt đầu chịu ảnh hưởng của không khí lạnh</div></div></div>
+    <div class="cell f-row" id="f-r2" style="top:744px"><div class="ic">{{ICON:snow}}</div><div class="tx"><div class="big or">7–8/11</div><div class="lbl">Không khí lạnh tăng cường, nền nhiệt giảm sâu</div></div></div>
+    <div class="cell f-row" id="f-r3" style="top:1120px"><div class="ic red">{{ICON:thermo}}</div><div class="tx"><div class="big rd" style="font-size:72px;line-height:1.1">Đêm và sáng</div><div class="lbl">Trời chuyển lạnh về đêm và sáng</div></div></div>
+@@
+    tl.fromTo('#f-kick', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#f-r1', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }, 0.2);
+    tl.fromTo('#f-r2', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }, 3.3);
+    tl.fromTo('#f-r3', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.55, ease: 'power3.out' }, 6.3);

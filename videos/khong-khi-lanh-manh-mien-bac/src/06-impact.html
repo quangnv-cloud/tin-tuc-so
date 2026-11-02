@@ -1,0 +1,16 @@
+.i-kick { position: absolute; left: 60px; top: 306px; opacity: 0; }
+.i-cell { top: 368px; width: 468px; height: 860px; padding: 44px 36px; opacity: 0; }
+.i-cell .ic { width: 210px; height: 210px; }
+.i-cell .big { font-size: 92px; margin-top: 60px; line-height: 1.06; }
+.i-cell .lbl { font-size: 40px; margin-top: 36px; line-height: 1.38; }
+.i-strip { position: absolute; left: 60px; top: 1268px; width: 960px; height: 130px; border-radius: 22px; background: rgba(255,90,31,0.10); border: 1.5px solid rgba(255,90,31,0.5); display: flex; align-items: center; padding: 0 38px; font-weight: 700; font-size: 30px; line-height: 1.3; opacity: 0; }
+@@
+    <div class="kick i-kick" id="i-kick">Tác động</div>
+    <div class="cell i-cell" id="i-1" style="left:60px"><div class="ic">{{ICON:rain}}</div><div class="big or">8–11/11</div><div class="lbl">Có thể mưa lớn, giông mạnh từ Nghệ An đến Huế và duyên hải Nam Trung Bộ</div></div>
+    <div class="cell i-cell" id="i-2" style="left:552px;border-color:rgba(255,68,56,0.5)"><div class="ic red">{{ICON:warn}}</div><div class="big rd">Đề phòng</div><div class="lbl">Lốc, sét, mưa đá và gió giật mạnh trong các đợt mưa giông</div></div>
+    <div class="i-strip" id="i-strip">Không khí lạnh kết hợp gió đông tăng cường từ ngày 8/11</div>
+@@
+    tl.fromTo('#i-kick', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#i-1', { autoAlpha: 0, y: 40, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.55, ease: 'back.out(1.4)' }, 0.3);
+    tl.fromTo('#i-strip', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 2.4);
+    tl.fromTo('#i-2', { autoAlpha: 0, y: 40, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.55, ease: 'back.out(1.4)' }, 6.5);

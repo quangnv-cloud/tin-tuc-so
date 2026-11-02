@@ -1,0 +1,19 @@
+.c-kick { position: absolute; left: 60px; top: 306px; opacity: 0; }
+.c-cell { width: 468px; height: 540px; padding: 38px 34px; opacity: 0; }
+.c-cell .ic { width: 100px; height: 100px; }
+.c-cell .big { font-size: 96px; margin-top: 28px; }
+.c-cell .lbl { font-size: 30px; margin-top: 18px; }
+.c-cell .tag { margin-top: 16px; font-weight: 600; font-size: 22px; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; }
+.c-cell.dim { box-shadow: none; }
+@@
+    <div class="kick c-kick" id="c-kick">Bối cảnh</div>
+    <div class="cell c-cell" id="c-1" style="left:60px;top:368px"><div class="ic">{{ICON:sun}}</div><div class="big or">29–32°</div><div class="lbl">Đến 5/11 miền Bắc vẫn nắng, nhiệt độ cao nhất phổ biến</div></div>
+    <div class="cell c-cell" id="c-2" style="left:552px;top:368px"><div class="ic">{{ICON:snow}}</div><div class="big or">21–29°</div><div class="lbl">Hà Nội cuối tuần, theo dự báo của AccuWeather</div></div>
+    <div class="cell c-cell dim" id="c-3" style="left:60px;top:932px"><div class="ic">{{ICON:cal}}</div><div class="big" style="color:rgba(255,255,255,0.78)">24–34°</div><div class="lbl">Hà Nội đầu tuần, cùng dự báo</div></div>
+    <div class="cell c-cell" id="c-4" style="left:552px;top:932px;border-color:rgba(255,68,56,0.5)"><div class="ic red">{{ICON:thermo}}</div><div class="big rd">+1–2°</div><div class="lbl">Cả tháng 11, nhiệt độ trung bình cả nước vẫn cao hơn trung bình nhiều năm</div></div>
+@@
+    tl.fromTo('#c-kick', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.1);
+    tl.fromTo('#c-1', { autoAlpha: 0, y: 40, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: 'back.out(1.5)' }, 0.3);
+    tl.fromTo('#c-2', { autoAlpha: 0, y: 40, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: 'back.out(1.5)' }, 5.2);
+    tl.fromTo('#c-3', { autoAlpha: 0, y: 40, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: 'back.out(1.5)' }, 7.0);
+    tl.fromTo('#c-4', { autoAlpha: 0, y: 40, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: 'back.out(1.5)' }, 9.2);

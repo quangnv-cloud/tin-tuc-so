@@ -1,0 +1,8 @@
+#root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+.cell { position: absolute; background: #121724; border: 1.5px solid rgba(255,255,255,0.10); border-radius: 26px; box-shadow: 0 0 40px rgba(255,90,31,0.14); overflow: hidden; }
+.kick { font-weight: 700; font-size: 28px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+.or { color: #FF5A1F; } .rd { color: #FF4438; }
+.ic { display: block; color: #FF5A1F; } .ic svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 3.6; stroke-linecap: round; stroke-linejoin: round; }
+.ic.red { color: #FF4438; }
+.lbl { font-weight: 600; color: rgba(255,255,255,0.82); line-height: 1.3; }
+.big { font-weight: 900; letter-spacing: -0.02em; line-height: 1; }
