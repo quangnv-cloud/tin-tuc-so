@@ -1,0 +1,7 @@
+Không khí lạnh sắp tràn xuống miền Bắc, ngay sau tháng mười nóng nhất sáu mươi lăm năm qua.
+Ngày ba tháng mười một, Trung tâm Dự báo khí tượng thủy văn quốc gia cho biết trong khoảng mười ngày tới, miền Bắc có khả năng đón hai đợt không khí lạnh liên tiếp. Đợt đầu yếu, vào khoảng đêm năm đến sáu tháng mười một, kèm mưa rào và dông rải rác.
+Đợt thứ hai mạnh hơn, vào khoảng ngày tám hoặc chín tháng mười một. Từ khoảng ngày chín, Bắc Bộ chuyển lạnh, vùng núi trời rét, kéo dài tới ít nhất ngày mười ba. Hà Nội giảm khoảng năm đến sáu độ xê, xuống còn hai mươi bốn đến hai mươi sáu độ xê vào ban ngày.
+Nhiệt độ trung bình tháng mười của cả nước là hai mươi sáu phẩy ba độ xê, cao hơn trung bình nhiều năm một phẩy bảy mươi bốn độ xê, mức cao nhất từng ghi nhận kể từ năm một nghìn chín trăm sáu mươi mốt.
+Theo trung tâm, tháng mười vừa qua nóng nhất sáu mươi lăm năm do tác động của En-ni-nhô rất mạnh. Cả nước phổ biến cao hơn một đến hai độ xê, riêng Bắc Bộ cao hơn hai đến ba độ xê.
+Cũng theo trung tâm, En-ni-nhô rất mạnh được dự báo duy trì ít nhất đến tháng một năm hai nghìn không trăm hai mươi bảy. Mùa đông năm nay, không khí lạnh có khả năng hoạt động yếu hơn, rét đậm rét hại đến muộn và ít hơn. Bạn nên theo dõi bản tin dự báo chính thức.
+Rét đang về, nhưng cả mùa đông có thể ít lạnh hơn mọi năm. Bạn mong một mùa đông lạnh đúng nghĩa, hay thấy nhẹ nhõm vì ít rét? Hãy để lại bình luận quan điểm của bạn nhé.

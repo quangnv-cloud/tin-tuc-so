@@ -1,0 +1,60 @@
+<template>
+<style>
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+#root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+.paper { position:absolute; background:#FFFFFF; color:#0B0E14; border-radius:6px; box-shadow:0 18px 44px rgba(0,0,0,.55), 0 0 40px rgba(255,90,31,.14); opacity:0; }
+.paper.dark { background:#121724; color:#fff; border:2px solid rgba(255,90,31,.8); box-shadow:0 18px 44px rgba(0,0,0,.55), 0 0 40px rgba(255,90,31,.14); }
+.paper.warn { border-color:#FF4438; box-shadow:0 18px 44px rgba(0,0,0,.55), 0 0 40px rgba(255,68,56,.16); }
+.tape { position:absolute; width:150px; height:36px; background:rgba(255,90,31,.88); top:-18px; left:50%; margin-left:-75px; border-radius:3px; }
+.kick { font-weight:800; font-size:26px; letter-spacing:.12em; color:#FF5A1F; text-transform:uppercase; }
+.paper:not(.dark) .kick { color:#0B0E14; display:inline-block; border-bottom:5px solid #FF5A1F; padding-bottom:6px; }
+.paper.warn .kick { color:#FF4438; }
+.hl { color:#FF5A1F; } .paper:not(.dark) .hl { color:#0B0E14; background:#FF5A1F; padding:0 8px; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.rd { color:#FF4438; }
+.cutflash { position:absolute; inset:0; z-index:6; pointer-events:none; opacity:0; background:linear-gradient(180deg, rgba(255,90,31,.4), rgba(255,68,56,.18)); }
+.qm { position:absolute; font-weight:900; font-size:330px; line-height:1; color:rgba(255,90,31,.2); }
+
+
+#content { position:absolute; inset:0; }
+#pA { left:90px; top:320px; width:900px; height:470px; padding:40px 48px; }
+#pA .big { margin-top:22px; font-weight:900; font-size:96px; line-height:1.02; letter-spacing:-.02em; }
+#pA .sub { margin-top:22px; font-weight:700; font-size:38px; line-height:1.25; }
+#pB { left:60px; top:760px; width:940px; height:450px; padding:38px 48px; }
+#pB .big { margin-top:20px; font-weight:900; font-size:62px; line-height:1.1; }
+#pB .sub { margin-top:20px; font-weight:600; font-size:36px; line-height:1.25; color:rgba(255,255,255,.86); }
+#pC { left:90px; top:1240px; width:900px; height:232px; padding:30px 44px 30px 150px; }
+#pC .tri { position:absolute; left:44px; top:50px; width:0; height:0; border-left:44px solid transparent; border-right:44px solid transparent; border-bottom:78px solid #FF4438; }
+#pC .tri::after { content:"!"; position:absolute; left:-44px; width:88px; top:24px; text-align:center; font-weight:900; font-size:46px; color:#0B0E14; }
+#pC .t { margin-top:14px; font-weight:700; font-size:32px; line-height:1.3; }
+
+</style>
+<div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+<div id="content">
+
+<div class="paper" id="pA"><div class="tape"></div><div class="kick">Dự báo của trung tâm</div><div class="big">El Nino rất mạnh</div><div class="sub">Duy trì ít nhất đến <span class="hl">tháng 1/2027</span></div></div>
+<div class="paper dark warn" id="pB"><div class="kick">Mùa đông năm nay</div><div class="big">Không khí lạnh có khả năng <span class="rd">yếu hơn</span></div><div class="sub">Rét đậm, rét hại đến muộn và ít hơn</div></div>
+<div class="paper dark" id="pC"><div class="tri"></div><div class="kick">Lưu ý</div><div class="t">Đây là dự báo — cần theo dõi bản tin chính thức</div></div>
+
+</div>
+<div class="cutflash" id="cutflash"></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+const IN = (sel, rot, t, d) => tl.fromTo(sel, {autoAlpha:0, y:46, rotation:rot-3}, {autoAlpha:1, y:0, rotation:rot, duration:d||.55, ease:'power3.out'}, t);
+const FLASH = (t) => { tl.fromTo('#cutflash',{opacity:0},{opacity:.55,duration:.05,ease:'none'},t); tl.to('#cutflash',{opacity:0,duration:.16,ease:'power1.in'},t+.05); tl.fromTo('#content',{scale:1},{scale:.986,duration:.06,ease:'power1.out'},t); tl.to('#content',{scale:1,duration:.14,ease:'power2.out'},t+.061); };
+
+IN('#pA',-1.8,.2,.7); FLASH(5.32-.4); IN('#pB',1.5,5.32-.35,.6); IN('#pC',-.8,9.74-.2,.55);
+
+window.__timelines["06-impact"] = tl;
+</script>
+</template>
