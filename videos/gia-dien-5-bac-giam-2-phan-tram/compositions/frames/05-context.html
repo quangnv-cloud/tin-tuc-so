@@ -1,0 +1,55 @@
+<template>
+<style>
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+#root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: 'Montserrat', sans-serif; color: #fff; }
+.kick { position: absolute; left: 64px; top: 318px; font-weight: 700; font-size: 26px; letter-spacing: 0.26em; text-transform: uppercase; color: #FF5A1F; opacity: 0; }
+
+.ttl { position: absolute; left: 64px; right: 64px; top: 372px; font-weight: 900; font-size: 56px; line-height: 1.12; opacity: 0; }
+.plot { position: absolute; left: 80px; top: 500px; width: 920px; height: 730px; }
+.col { position: absolute; top: 0; width: 160px; height: 730px; }
+.bar { position: absolute; left: 0; right: 0; bottom: 60px; border-radius: 12px 12px 0 0; transform-origin: bottom; box-shadow: 0 0 30px rgba(255,90,31,0.25); }
+.val { position: absolute; top: auto; left: -10px; right: -10px; text-align: center; font-weight: 800; font-size: 32px; opacity: 0; }
+.xl { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font-weight: 700; font-size: 26px; color: rgba(255,255,255,0.75); }
+.base { position: absolute; left: 70px; right: 70px; top: 1230px; height: 3px; background: rgba(255,255,255,0.35); }
+.note { position: absolute; left: 64px; right: 64px; padding: 22px 30px; border-radius: 16px; background: #121724; border: 1px solid rgba(255,255,255,0.1); font-weight: 600; font-size: 30px; line-height: 1.3; opacity: 0; }
+.note b { font-weight: 900; color: #FF5A1F; } .note b.r { color: #FF4438; }
+#n1 { top: 1262px; } #n2 { top: 1348px; }
+
+</style>
+<div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+
+<div class="kick" id="k">Giá từng bậc · đồng/kWh</div>
+<div class="ttl" id="ttl">Bậc cao nhất gấp hơn 2 lần bậc thấp nhất</div>
+<div class="plot" id="plot"><div class="col" style="left:0px"><div class="val" id="v0" style="bottom:329px">1.901</div><div class="bar" id="b0" style="height:257px;background:#FF5A1F;"></div><div class="xl">0–100</div></div><div class="col" style="left:184px"><div class="val" id="v1" style="bottom:382px">2.289</div><div class="bar" id="b1" style="height:310px;background:#FF5A1F;"></div><div class="xl">101–200</div></div><div class="col" style="left:368px"><div class="val" id="v2" style="bottom:463px">2.894</div><div class="bar" id="b2" style="height:391px;background:#FF5A1F;"></div><div class="xl">201–400</div></div><div class="col" style="left:552px"><div class="val" id="v3" style="bottom:540px">3.456</div><div class="bar" id="b3" style="height:468px;background:#FF5A1F;"></div><div class="xl">401–700</div></div><div class="col" style="left:736px"><div class="val" id="v4" style="bottom:592px">3.844</div><div class="bar" id="b4" style="height:520px;background:#FF4438;"></div><div class="xl">701+</div></div></div>
+<div class="base" id="base"></div>
+<div class="note" id="n1">Chênh bậc cao – thấp: <b>1.943 đồng/kWh</b></div>
+<div class="note" id="n2">Mức 201–400 kWh giảm <b>280 đồng/kWh</b> so với biểu cũ</div>
+
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo('#k', { autoAlpha: 0, y: -12 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 0.1);
+tl.fromTo('#ttl', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.3);
+tl.fromTo('#base', { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: 'power2.out' }, 0.7);
+for (let i = 0; i < 5; i++) {
+  tl.fromTo('#b' + i, { scaleY: 0 }, { scaleY: 1, duration: 0.7, ease: 'power3.out' }, 1.2 + i * 0.35);
+  tl.fromTo('#v' + i, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.35 }, 1.6 + i * 0.35);
+}
+tl.fromTo('#n1', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power3.out' }, 4.4);
+tl.fromTo('#n2', { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power3.out' }, 7.0);
+
+window.__timelines['05-context'] = tl;
+</script>
+</template>

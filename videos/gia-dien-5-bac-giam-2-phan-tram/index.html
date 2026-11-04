@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920">
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0B0E14; font-family: "Montserrat", sans-serif; color: #fff; }
+.scene { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; }
+#bg-depth { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+.blob { position: absolute; border-radius: 50%; filter: blur(60px); }
+#brand-anchor { position: absolute; inset: 0; z-index: 90; pointer-events: none; opacity: 0; }
+#ba-source { position: absolute; left: 44px; top: 46px; display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px; border-radius: 8px; background: rgba(11,14,20,0.6); border: 1px solid rgba(255,255,255,0.12); }
+#ba-source .dot { width: 7px; height: 7px; border-radius: 50%; background: #FF5A1F; }
+#ba-source span { font-weight: 500; font-size: 21px; letter-spacing: 0.02em; color: rgba(255,255,255,0.9); white-space: nowrap; }
+#ba-brand { position: absolute; right: 40px; top: 40px; display: inline-flex; align-items: center; gap: 11px; }
+#ba-brand .mark { width: 44px; height: 44px; } #ba-brand .mark img { display: block; width: 100%; height: 100%; }
+#ba-brand .word { font-weight: 800; font-size: 24px; color: #fff; }
+#caps { position: absolute; left: 90px; right: 200px; top: 1450px; height: 110px; z-index: 80; pointer-events: none; }
+.cc { position: absolute; left: 0; right: 0; top: 0; text-align: center; font-weight: 800; font-size: 52px; line-height: 1.15; opacity: 0; text-shadow: 0 2px 14px rgba(0,0,0,0.85); }
+.cc .w { color: rgba(255,255,255,0.88); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="73.77" data-width="1080" data-height="1920">
+<div id="bg-depth">
+  <div class="blob" style="width:640px;height:640px;background:radial-gradient(circle, rgba(255,90,31,0.20), transparent 70%);top:-120px;left:-160px;"></div>
+  <div class="blob" style="width:560px;height:560px;background:radial-gradient(circle, rgba(255,68,56,0.16), transparent 70%);top:900px;right:-200px;"></div>
+  <div class="blob" style="width:520px;height:520px;background:radial-gradient(circle, rgba(255,90,31,0.12), transparent 70%);bottom:-180px;left:200px;"></div>
+  <svg id="bg-stars" viewBox="0 0 1080 1920" style="position:absolute;inset:0;width:100%;height:100%;"><circle cx="800" cy="401" r="2.1" fill="#fff" opacity="0.30"/><circle cx="246" cy="13" r="2.8" fill="#fff" opacity="0.30"/><circle cx="1013" cy="1331" r="1.6" fill="#fff" opacity="0.24"/><circle cx="31" cy="1886" r="3.0" fill="#fff" opacity="0.19"/><circle cx="591" cy="1355" r="2.8" fill="#fff" opacity="0.35"/><circle cx="125" cy="549" r="1.9" fill="#fff" opacity="0.18"/><circle cx="832" cy="614" r="2.3" fill="#fff" opacity="0.27"/><circle cx="568" cy="947" r="2.3" fill="#fff" opacity="0.39"/><circle cx="196" cy="799" r="1.8" fill="#fff" opacity="0.19"/><circle cx="238" cy="70" r="2.9" fill="#fff" opacity="0.28"/><circle cx="780" cy="993" r="2.7" fill="#fff" opacity="0.24"/><circle cx="411" cy="372" r="2.7" fill="#fff" opacity="0.36"/><circle cx="1066" cy="1515" r="1.5" fill="#fff" opacity="0.34"/><circle cx="577" cy="1059" r="2.6" fill="#fff" opacity="0.38"/><circle cx="472" cy="77" r="2.3" fill="#fff" opacity="0.24"/><circle cx="469" cy="1427" r="2.6" fill="#fff" opacity="0.28"/><circle cx="5" cy="1900" r="1.9" fill="#fff" opacity="0.38"/><circle cx="69" cy="153" r="2.6" fill="#fff" opacity="0.24"/><circle cx="336" cy="1905" r="1.9" fill="#fff" opacity="0.26"/><circle cx="179" cy="562" r="2.5" fill="#fff" opacity="0.34"/><circle cx="681" cy="175" r="2.4" fill="#fff" opacity="0.28"/><circle cx="781" cy="1037" r="2.7" fill="#fff" opacity="0.29"/><circle cx="602" cy="1110" r="2.7" fill="#fff" opacity="0.34"/><circle cx="793" cy="1145" r="2.4" fill="#fff" opacity="0.31"/><circle cx="327" cy="1040" r="2.6" fill="#fff" opacity="0.33"/><circle cx="505" cy="999" r="2.5" fill="#fff" opacity="0.17"/><circle cx="180" cy="1887" r="2.0" fill="#fff" opacity="0.27"/><circle cx="129" cy="1769" r="2.5" fill="#fff" opacity="0.19"/><circle cx="147" cy="1892" r="1.6" fill="#fff" opacity="0.29"/><circle cx="502" cy="505" r="2.2" fill="#fff" opacity="0.33"/><circle cx="484" cy="1702" r="1.8" fill="#fff" opacity="0.36"/><circle cx="901" cy="804" r="2.5" fill="#fff" opacity="0.16"/><circle cx="216" cy="374" r="1.9" fill="#fff" opacity="0.36"/><circle cx="377" cy="376" r="3.0" fill="#fff" opacity="0.15"/><circle cx="344" cy="1690" r="2.7" fill="#fff" opacity="0.20"/><circle cx="104" cy="651" r="2.2" fill="#fff" opacity="0.30"/><circle cx="221" cy="1689" r="1.6" fill="#fff" opacity="0.27"/><circle cx="387" cy="1849" r="2.1" fill="#fff" opacity="0.17"/><circle cx="704" cy="649" r="2.1" fill="#fff" opacity="0.29"/><circle cx="73" cy="1058" r="2.4" fill="#fff" opacity="0.32"/></svg>
+</div>
+<div id="el-01-hook" class="scene" data-composition-id="01-hook" data-composition-src="compositions/frames/01-hook.html" data-start="0.0" data-duration="6.95" data-track-index="1"></div>
+<div id="el-02-what" class="scene" data-composition-id="02-what" data-composition-src="compositions/frames/02-what.html" data-start="6.95" data-duration="10.55" data-track-index="1"></div>
+<div id="el-03-facts" class="scene" data-composition-id="03-facts" data-composition-src="compositions/frames/03-facts.html" data-start="17.5" data-duration="11.18" data-track-index="1"></div>
+<div id="el-04-data" class="scene" data-composition-id="04-data" data-composition-src="compositions/frames/04-data.html" data-start="28.68" data-duration="11.85" data-track-index="1"></div>
+<div id="el-05-context" class="scene" data-composition-id="05-context" data-composition-src="compositions/frames/05-context.html" data-start="40.53" data-duration="11.49" data-track-index="1"></div>
+<div id="el-06-impact" class="scene" data-composition-id="06-impact" data-composition-src="compositions/frames/06-impact.html" data-start="52.02" data-duration="13.67" data-track-index="1"></div>
+<div id="el-07-cta" class="scene" data-composition-id="07-cta" data-composition-src="compositions/frames/07-cta.html" data-start="65.69" data-duration="8.08" data-track-index="1"></div>
+
+<div id="brand-anchor">
+  <div id="ba-source"><span class="dot"></span><span>Nguồn: VnExpress</span></div>
+  <div id="ba-brand"><span class="mark"><img src="public/logo.png" alt=""></span><span class="word">Tin Tức Số</span></div>
+</div>
+<div id="caps" data-layout-allow-overlap>
+<div class="cc" id="cc0"><span class="w" id="w0_0">Giá</span> <span class="w" id="w0_1">điện</span> <span class="w" id="w0_2">sinh</span> <span class="w" id="w0_3">hoạt</span> </div>
+<div class="cc" id="cc1"><span class="w" id="w1_0">chuyển</span> <span class="w" id="w1_1">từ</span> <span class="w" id="w1_2">sáu</span> <span class="w" id="w1_3">bậc</span> </div>
+<div class="cc" id="cc2"><span class="w" id="w2_0">xuống</span> <span class="w" id="w2_1">năm</span> <span class="w" id="w2_2">bậc,</span> </div>
+<div class="cc" id="cc3"><span class="w" id="w3_0">kèm</span> <span class="w" id="w3_1">mức</span> <span class="w" id="w3_2">giảm</span> <span class="w" id="w3_3">hai</span> </div>
+<div class="cc" id="cc4"><span class="w" id="w4_0">phần</span> <span class="w" id="w4_1">trăm.</span> </div>
+<div class="cc" id="cc5"><span class="w" id="w5_0">Phần</span> <span class="w" id="w5_1">lớn</span> <span class="w" id="w5_2">hộ</span> <span class="w" id="w5_3">gia</span> </div>
+<div class="cc" id="cc6"><span class="w" id="w6_0">đình</span> <span class="w" id="w6_1">trả</span> <span class="w" id="w6_2">ít</span> <span class="w" id="w6_3">hơn,</span> </div>
+<div class="cc" id="cc7"><span class="w" id="w7_0">nhưng</span> <span class="w" id="w7_1">không</span> <span class="w" id="w7_2">phải</span> <span class="w" id="w7_3">tất</span> </div>
+<div class="cc" id="cc8"><span class="w" id="w8_0">cả.</span> </div>
+<div class="cc" id="cc9"><span class="w" id="w9_0">Từ</span> <span class="w" id="w9_1">ngày</span> <span class="w" id="w9_2">một</span> <span class="w" id="w9_3">tháng</span> </div>
+<div class="cc" id="cc10"><span class="w" id="w10_0">mười</span> <span class="w" id="w10_1">một,</span> </div>
+<div class="cc" id="cc11"><span class="w" id="w11_0">theo</span> <span class="w" id="w11_1">Quyết</span> <span class="w" id="w11_2">định</span> <span class="w" id="w11_3">hai</span> </div>
+<div class="cc" id="cc12"><span class="w" id="w12_0">nghìn</span> <span class="w" id="w12_1">tám</span> <span class="w" id="w12_2">trăm</span> <span class="w" id="w12_3">chín</span> </div>
+<div class="cc" id="cc13"><span class="w" id="w13_0">mươi</span> <span class="w" id="w13_1">hai</span> <span class="w" id="w13_2">của</span> <span class="w" id="w13_3">Bộ</span> </div>
+<div class="cc" id="cc14"><span class="w" id="w14_0">Công</span> <span class="w" id="w14_1">Thương,</span> </div>
+<div class="cc" id="cc15"><span class="w" id="w15_0">giá</span> <span class="w" id="w15_1">bán</span> <span class="w" id="w15_2">lẻ</span> <span class="w" id="w15_3">điện</span> </div>
+<div class="cc" id="cc16"><span class="w" id="w16_0">bình</span> <span class="w" id="w16_1">quân</span> <span class="w" id="w16_2">giảm</span> <span class="w" id="w16_3">hai</span> </div>
+<div class="cc" id="cc17"><span class="w" id="w17_0">phần</span> <span class="w" id="w17_1">trăm,</span> </div>
+<div class="cc" id="cc18"><span class="w" id="w18_0">xuống</span> <span class="w" id="w18_1">còn</span> <span class="w" id="w18_2">hai</span> <span class="w" id="w18_3">nghìn</span> </div>
+<div class="cc" id="cc19"><span class="w" id="w19_0">một</span> <span class="w" id="w19_1">trăm</span> <span class="w" id="w19_2">năm</span> <span class="w" id="w19_3">mươi</span> </div>
+<div class="cc" id="cc20"><span class="w" id="w20_0">chín</span> <span class="w" id="w20_1">phẩy</span> <span class="w" id="w20_2">chín</span> <span class="w" id="w20_3">đồng</span> </div>
+<div class="cc" id="cc21"><span class="w" id="w21_0">mỗi</span> <span class="w" id="w21_1">ki-lô-oát</span> <span class="w" id="w21_2">giờ,</span> </div>
+<div class="cc" id="cc22"><span class="w" id="w22_0">chưa</span> <span class="w" id="w22_1">gồm</span> <span class="w" id="w22_2">thuế</span> <span class="w" id="w22_3">giá</span> </div>
+<div class="cc" id="cc23"><span class="w" id="w23_0">trị</span> <span class="w" id="w23_1">gia</span> <span class="w" id="w23_2">tăng.</span> </div>
+<div class="cc" id="cc24"><span class="w" id="w24_0">Biểu</span> <span class="w" id="w24_1">giá</span> <span class="w" id="w24_2">mới</span> <span class="w" id="w24_3">có</span> </div>
+<div class="cc" id="cc25"><span class="w" id="w25_0">năm</span> <span class="w" id="w25_1">bậc,</span> </div>
+<div class="cc" id="cc26"><span class="w" id="w26_0">từ</span> <span class="w" id="w26_1">một</span> <span class="w" id="w26_2">nghìn</span> <span class="w" id="w26_3">chín</span> </div>
+<div class="cc" id="cc27"><span class="w" id="w27_0">trăm</span> <span class="w" id="w27_1">linh</span> <span class="w" id="w27_2">một</span> <span class="w" id="w27_3">đồng</span> </div>
+<div class="cc" id="cc28"><span class="w" id="w28_0">ở</span> <span class="w" id="w28_1">bậc</span> <span class="w" id="w28_2">đầu,</span> </div>
+<div class="cc" id="cc29"><span class="w" id="w29_0">lên</span> <span class="w" id="w29_1">ba</span> <span class="w" id="w29_2">nghìn</span> <span class="w" id="w29_3">tám</span> </div>
+<div class="cc" id="cc30"><span class="w" id="w30_0">trăm</span> <span class="w" id="w30_1">bốn</span> <span class="w" id="w30_2">mươi</span> <span class="w" id="w30_3">tư</span> </div>
+<div class="cc" id="cc31"><span class="w" id="w31_0">đồng</span> <span class="w" id="w31_1">từ</span> <span class="w" id="w31_2">bảy</span> <span class="w" id="w31_3">trăm</span> </div>
+<div class="cc" id="cc32"><span class="w" id="w32_0">linh</span> <span class="w" id="w32_1">một</span> <span class="w" id="w32_2">ki-lô-oát</span> <span class="w" id="w32_3">giờ</span> </div>
+<div class="cc" id="cc33"><span class="w" id="w33_0">trở</span> <span class="w" id="w33_1">lên.</span> </div>
+<div class="cc" id="cc34"><span class="w" id="w34_0">Hộ</span> <span class="w" id="w34_1">dùng</span> <span class="w" id="w34_2">ba</span> <span class="w" id="w34_3">trăm</span> </div>
+<div class="cc" id="cc35"><span class="w" id="w35_0">ki-lô-oát</span> <span class="w" id="w35_1">giờ</span> <span class="w" id="w35_2">trả</span> <span class="w" id="w35_3">bảy</span> </div>
+<div class="cc" id="cc36"><span class="w" id="w36_0">trăm</span> <span class="w" id="w36_1">linh</span> <span class="w" id="w36_2">tám</span> <span class="w" id="w36_3">nghìn</span> </div>
+<div class="cc" id="cc37"><span class="w" id="w37_0">bốn</span> <span class="w" id="w37_1">trăm</span> <span class="w" id="w37_2">đồng,</span> </div>
+<div class="cc" id="cc38"><span class="w" id="w38_0">chưa</span> <span class="w" id="w38_1">gồm</span> <span class="w" id="w38_2">thuế.</span> </div>
+<div class="cc" id="cc39"><span class="w" id="w39_0">Điểm</span> <span class="w" id="w39_1">hòa</span> <span class="w" id="w39_2">giữa</span> <span class="w" id="w39_3">hai</span> </div>
+<div class="cc" id="cc40"><span class="w" id="w40_0">biểu</span> <span class="w" id="w40_1">giá</span> <span class="w" id="w40_2">nằm</span> <span class="w" id="w40_3">ở</span> </div>
+<div class="cc" id="cc41"><span class="w" id="w41_0">khoảng</span> <span class="w" id="w41_1">chín</span> <span class="w" id="w41_2">trăm</span> <span class="w" id="w41_3">linh</span> </div>
+<div class="cc" id="cc42"><span class="w" id="w42_0">ba</span> <span class="w" id="w42_1">ki-lô-oát</span> <span class="w" id="w42_2">giờ</span> <span class="w" id="w42_3">mỗi</span> </div>
+<div class="cc" id="cc43"><span class="w" id="w43_0">tháng.</span> </div>
+<div class="cc" id="cc44"><span class="w" id="w44_0">Hộ</span> <span class="w" id="w44_1">dùng</span> <span class="w" id="w44_2">bốn</span> <span class="w" id="w44_3">trăm</span> </div>
+<div class="cc" id="cc45"><span class="w" id="w45_0">ki-lô-oát</span> <span class="w" id="w45_1">giờ</span> <span class="w" id="w45_2">giảm</span> <span class="w" id="w45_3">bảy</span> </div>
+<div class="cc" id="cc46"><span class="w" id="w46_0">mươi</span> <span class="w" id="w46_1">sáu</span> <span class="w" id="w46_2">nghìn</span> <span class="w" id="w46_3">bảy</span> </div>
+<div class="cc" id="cc47"><span class="w" id="w47_0">trăm</span> <span class="w" id="w47_1">đồng.</span> </div>
+<div class="cc" id="cc48"><span class="w" id="w48_0">Hộ</span> <span class="w" id="w48_1">dùng</span> <span class="w" id="w48_2">một</span> <span class="w" id="w48_3">nghìn</span> </div>
+<div class="cc" id="cc49"><span class="w" id="w49_0">ki-lô-oát</span> <span class="w" id="w49_1">giờ</span> <span class="w" id="w49_2">lại</span> <span class="w" id="w49_3">tăng</span> </div>
+<div class="cc" id="cc50"><span class="w" id="w50_0">ba</span> <span class="w" id="w50_1">mươi</span> <span class="w" id="w50_2">bảy</span> <span class="w" id="w50_3">nghìn</span> </div>
+<div class="cc" id="cc51"><span class="w" id="w51_0">ba</span> <span class="w" id="w51_1">trăm</span> <span class="w" id="w51_2">đồng,</span> </div>
+<div class="cc" id="cc52"><span class="w" id="w52_0">khoảng</span> <span class="w" id="w52_1">một</span> <span class="w" id="w52_2">phẩy</span> <span class="w" id="w52_3">hai</span> </div>
+<div class="cc" id="cc53"><span class="w" id="w53_0">phần</span> <span class="w" id="w53_1">trăm.</span> </div>
+<div class="cc" id="cc54"><span class="w" id="w54_0">Giá</span> <span class="w" id="w54_1">bậc</span> <span class="w" id="w54_2">cao</span> <span class="w" id="w54_3">nhất</span> </div>
+<div class="cc" id="cc55"><span class="w" id="w55_0">gấp</span> <span class="w" id="w55_1">hơn</span> <span class="w" id="w55_2">hai</span> <span class="w" id="w55_3">lần</span> </div>
+<div class="cc" id="cc56"><span class="w" id="w56_0">bậc</span> <span class="w" id="w56_1">thấp</span> <span class="w" id="w56_2">nhất,</span> </div>
+<div class="cc" id="cc57"><span class="w" id="w57_0">chênh</span> <span class="w" id="w57_1">một</span> <span class="w" id="w57_2">nghìn</span> <span class="w" id="w57_3">chín</span> </div>
+<div class="cc" id="cc58"><span class="w" id="w58_0">trăm</span> <span class="w" id="w58_1">bốn</span> <span class="w" id="w58_2">mươi</span> <span class="w" id="w58_3">ba</span> </div>
+<div class="cc" id="cc59"><span class="w" id="w59_0">đồng</span> <span class="w" id="w59_1">mỗi</span> <span class="w" id="w59_2">ki-lô-oát</span> <span class="w" id="w59_3">giờ.</span> </div>
+<div class="cc" id="cc60"><span class="w" id="w60_0">Mức</span> <span class="w" id="w60_1">giảm</span> <span class="w" id="w60_2">lớn</span> <span class="w" id="w60_3">nhất</span> </div>
+<div class="cc" id="cc61"><span class="w" id="w61_0">nằm</span> <span class="w" id="w61_1">ở</span> <span class="w" id="w61_2">khoảng</span> <span class="w" id="w61_3">dùng</span> </div>
+<div class="cc" id="cc62"><span class="w" id="w62_0">từ</span> <span class="w" id="w62_1">hai</span> <span class="w" id="w62_2">trăm</span> <span class="w" id="w62_3">linh</span> </div>
+<div class="cc" id="cc63"><span class="w" id="w63_0">một</span> <span class="w" id="w63_1">đến</span> <span class="w" id="w63_2">bốn</span> <span class="w" id="w63_3">trăm</span> </div>
+<div class="cc" id="cc64"><span class="w" id="w64_0">ki-lô-oát</span> <span class="w" id="w64_1">giờ,</span> </div>
+<div class="cc" id="cc65"><span class="w" id="w65_0">giảm</span> <span class="w" id="w65_1">hai</span> <span class="w" id="w65_2">trăm</span> <span class="w" id="w65_3">tám</span> </div>
+<div class="cc" id="cc66"><span class="w" id="w66_0">mươi</span> <span class="w" id="w66_1">đồng</span> <span class="w" id="w66_2">mỗi</span> <span class="w" id="w66_3">ki-lô-oát</span> </div>
+<div class="cc" id="cc67"><span class="w" id="w67_0">giờ</span> <span class="w" id="w67_1">so</span> <span class="w" id="w67_2">với</span> <span class="w" id="w67_3">biểu</span> </div>
+<div class="cc" id="cc68"><span class="w" id="w68_0">cũ.</span> </div>
+<div class="cc" id="cc69"><span class="w" id="w69_0">Theo</span> <span class="w" id="w69_1">Tập</span> <span class="w" id="w69_2">đoàn</span> <span class="w" id="w69_3">Điện</span> </div>
+<div class="cc" id="cc70"><span class="w" id="w70_0">lực</span> <span class="w" id="w70_1">Việt</span> <span class="w" id="w70_2">Nam,</span> </div>
+<div class="cc" id="cc71"><span class="w" id="w71_0">hơn</span> <span class="w" id="w71_1">chín</span> <span class="w" id="w71_2">mươi</span> <span class="w" id="w71_3">tám</span> </div>
+<div class="cc" id="cc72"><span class="w" id="w72_0">phẩy</span> <span class="w" id="w72_1">hai</span> <span class="w" id="w72_2">phần</span> <span class="w" id="w72_3">trăm</span> </div>
+<div class="cc" id="cc73"><span class="w" id="w73_0">hộ</span> <span class="w" id="w73_1">dùng</span> <span class="w" id="w73_2">điện</span> <span class="w" id="w73_3">sinh</span> </div>
+<div class="cc" id="cc74"><span class="w" id="w74_0">hoạt</span> <span class="w" id="w74_1">được</span> <span class="w" id="w74_2">giảm</span> <span class="w" id="w74_3">tiền,</span> </div>
+<div class="cc" id="cc75"><span class="w" id="w75_0">cao</span> <span class="w" id="w75_1">nhất</span> <span class="w" id="w75_2">bảy</span> <span class="w" id="w75_3">mươi</span> </div>
+<div class="cc" id="cc76"><span class="w" id="w76_0">bảy</span> <span class="w" id="w76_1">nghìn</span> <span class="w" id="w76_2">chín</span> <span class="w" id="w76_3">trăm</span> </div>
+<div class="cc" id="cc77"><span class="w" id="w77_0">đồng</span> <span class="w" id="w77_1">mỗi</span> <span class="w" id="w77_2">tháng.</span> </div>
+<div class="cc" id="cc78"><span class="w" id="w78_0">Gần</span> <span class="w" id="w78_1">một</span> <span class="w" id="w78_2">phẩy</span> <span class="w" id="w78_3">tám</span> </div>
+<div class="cc" id="cc79"><span class="w" id="w79_0">phần</span> <span class="w" id="w79_1">trăm</span> <span class="w" id="w79_2">hộ</span> <span class="w" id="w79_3">dùng</span> </div>
+<div class="cc" id="cc80"><span class="w" id="w80_0">nhiều</span> <span class="w" id="w80_1">có</span> <span class="w" id="w80_2">thể</span> <span class="w" id="w80_3">phải</span> </div>
+<div class="cc" id="cc81"><span class="w" id="w81_0">trả</span> <span class="w" id="w81_1">thêm.</span> </div>
+<div class="cc" id="cc82"><span class="w" id="w82_0">Doanh</span> <span class="w" id="w82_1">thu</span> <span class="w" id="w82_2">tập</span> <span class="w" id="w82_3">đoàn</span> </div>
+<div class="cc" id="cc83"><span class="w" id="w83_0">dự</span> <span class="w" id="w83_1">kiến</span> <span class="w" id="w83_2">giảm</span> <span class="w" id="w83_3">hơn</span> </div>
+<div class="cc" id="cc84"><span class="w" id="w84_0">một</span> <span class="w" id="w84_1">nghìn</span> <span class="w" id="w84_2">năm</span> <span class="w" id="w84_3">trăm</span> </div>
+<div class="cc" id="cc85"><span class="w" id="w85_0">tỷ</span> <span class="w" id="w85_1">đồng</span> <span class="w" id="w85_2">mỗi</span> <span class="w" id="w85_3">tháng.</span> </div>
+<div class="cc" id="cc86"><span class="w" id="w86_0">Biểu</span> <span class="w" id="w86_1">giá</span> <span class="w" id="w86_2">mới</span> <span class="w" id="w86_3">giúp</span> </div>
+<div class="cc" id="cc87"><span class="w" id="w87_0">hộ</span> <span class="w" id="w87_1">dùng</span> <span class="w" id="w87_2">ít</span> <span class="w" id="w87_3">tiết</span> </div>
+<div class="cc" id="cc88"><span class="w" id="w88_0">kiệm,</span> </div>
+<div class="cc" id="cc89"><span class="w" id="w89_0">hộ</span> <span class="w" id="w89_1">dùng</span> <span class="w" id="w89_2">nhiều</span> <span class="w" id="w89_3">phải</span> </div>
+<div class="cc" id="cc90"><span class="w" id="w90_0">trả</span> <span class="w" id="w90_1">thêm.</span> </div>
+<div class="cc" id="cc91"><span class="w" id="w91_0">Theo</span> <span class="w" id="w91_1">bạn,</span> </div>
+<div class="cc" id="cc92"><span class="w" id="w92_0">đây</span> <span class="w" id="w92_1">là</span> <span class="w" id="w92_2">khuyến</span> <span class="w" id="w92_3">khích</span> </div>
+<div class="cc" id="cc93"><span class="w" id="w93_0">tiết</span> <span class="w" id="w93_1">kiệm</span> <span class="w" id="w93_2">điện</span> <span class="w" id="w93_3">hay</span> </div>
+<div class="cc" id="cc94"><span class="w" id="w94_0">chưa</span> <span class="w" id="w94_1">công</span> <span class="w" id="w94_2">bằng?</span> </div>
+<div class="cc" id="cc95"><span class="w" id="w95_0">Hãy</span> <span class="w" id="w95_1">để</span> <span class="w" id="w95_2">lại</span> <span class="w" id="w95_3">bình</span> </div>
+<div class="cc" id="cc96"><span class="w" id="w96_0">luận</span> <span class="w" id="w96_1">nhé.</span> </div>
+</div>
+<audio id="el-voice-1" src="assets/voice/line1.mp3" data-start="0.0" data-duration="6.60" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-2" src="assets/voice/line2.mp3" data-start="6.95" data-duration="10.15" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-3" src="assets/voice/line3.mp3" data-start="17.5" data-duration="10.78" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-4" src="assets/voice/line4.mp3" data-start="28.68" data-duration="11.45" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-5" src="assets/voice/line5.mp3" data-start="40.53" data-duration="11.09" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-6" src="assets/voice/line6.mp3" data-start="52.02" data-duration="13.27" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-7" src="assets/voice/line7.mp3" data-start="65.69" data-duration="7.58" data-track-index="10" data-audio-group="voiceover"></audio>
+
+<audio id="el-bgm" src="assets/bgm/track.mp3" data-start="0" data-duration="73.77" data-track-index="20" data-volume="0.3" data-fx-carve="{&quot;enabled&quot;:true,&quot;sources&quot;:[&quot;voiceover&quot;],&quot;strength&quot;:0.4}" data-fx-chain="{&quot;version&quot;:1,&quot;nodes&quot;:[{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n1&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:630,&quot;gain&quot;:-4.2,&quot;q&quot;:1.58}},{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n2&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:1600,&quot;gain&quot;:-8.4,&quot;q&quot;:1.58}},{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n3&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:2500,&quot;gain&quot;:-4.2,&quot;q&quot;:1.58}},{&quot;type&quot;:&quot;gain&quot;,&quot;id&quot;:&quot;n4&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;gain&quot;:0}}]}" data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;fx.n1.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.043,&quot;v&quot;:0},{&quot;t&quot;:0.226,&quot;v&quot;:-0.9},{&quot;t&quot;:0.409,&quot;v&quot;:-0.4},{&quot;t&quot;:0.592,&quot;v&quot;:-2.6},{&quot;t&quot;:0.775,&quot;v&quot;:-1.3},{&quot;t&quot;:0.958,&quot;v&quot;:-0.6},{&quot;t&quot;:1.142,&quot;v&quot;:-0.3},{&quot;t&quot;:1.325,&quot;v&quot;:-1.3},{&quot;t&quot;:1.508,&quot;v&quot;:-0.6},{&quot;t&quot;:1.874,&quot;v&quot;:-0.3},{&quot;t&quot;:2.057,&quot;v&quot;:0},{&quot;t&quot;:2.607,&quot;v&quot;:0},{&quot;t&quot;:2.79,&quot;v&quot;:-2.5},{&quot;t&quot;:2.973,&quot;v&quot;:-1.8},{&quot;t&quot;:3.156,&quot;v&quot;:-0.9},{&quot;t&quot;:3.339,&quot;v&quot;:-1.5},{&quot;t&quot;:3.522,&quot;v&quot;:-0.7},{&quot;t&quot;:3.706,&quot;v&quot;:-0.3},{&quot;t&quot;:3.889,&quot;v&quot;:-2.1},{&quot;t&quot;:4.072,&quot;v&quot;:-1.3},{&quot;t&quot;:4.255,&quot;v&quot;:-1.8},{&quot;t&quot;:4.438,&quot;v&quot;:-2.5},{&quot;t&quot;:4.621,&quot;v&quot;:-1.2},{&quot;t&quot;:4.804,&quot;v&quot;:-1.7},{&quot;t&quot;:4.988,&quot;v&quot;:-0.8},{&quot;t&quot;:5.171,&quot;v&quot;:-0.4},{&quot;t&quot;:5.354,&quot;v&quot;:0},{&quot;t&quot;:5.72,&quot;v&quot;:0},{&quot;t&quot;:5.903,&quot;v&quot;:-2.4},{&quot;t&quot;:6.086,&quot;v&quot;:-2.5},{&quot;t&quot;:6.27,&quot;v&quot;:-1.2},{&quot;t&quot;:6.453,&quot;v&quot;:-0.6},{&quot;t&quot;:6.636,&quot;v&quot;:-0.3},{&quot;t&quot;:6.819,&quot;v&quot;:0},{&quot;t&quot;:7.002,&quot;v&quot;:0},{&quot;t&quot;:7.185,&quot;v&quot;:-0.8},{&quot;t&quot;:7.369,&quot;v&quot;:-0.4},{&quot;t&quot;:7.552,&quot;v&quot;:0},{&quot;t&quot;:8.467,&quot;v&quot;:0},{&quot;t&quot;:8.651,&quot;v&quot;:-1.8},{&quot;t&quot;:8.834,&quot;v&quot;:-0.8},{&quot;t&quot;:9.017,&quot;v&quot;:-1.7},{&quot;t&quot;:9.2,&quot;v&quot;:-0.8},{&quot;t&quot;:9.383,&quot;v&quot;:-0.4},{&quot;t&quot;:9.566,&quot;v&quot;:-2.6},{&quot;t&quot;:9.749,&quot;v&quot;:-1.2},{&quot;t&quot;:9.933,&quot;v&quot;:-0.7},{&quot;t&quot;:10.116,&quot;v&quot;:-0.3},{&quot;t&quot;:10.299,&quot;v&quot;:0},{&quot;t&quot;:10.482,&quot;v&quot;:0},{&quot;t&quot;:10.665,&quot;v&quot;:-1.5},{&quot;t&quot;:10.848,&quot;v&quot;:-3.2},{&quot;t&quot;:11.031,&quot;v&quot;:-1.6},{&quot;t&quot;:11.215,&quot;v&quot;:-0.7},{&quot;t&quot;:11.398,&quot;v&quot;:-0.4},{&quot;t&quot;:11.581,&quot;v&quot;:0},{&quot;t&quot;:11.764,&quot;v&quot;:-1.5},{&quot;t&quot;:11.947,&quot;v&quot;:-2.1},{&quot;t&quot;:12.13,&quot;v&quot;:-1},{&quot;t&quot;:12.313,&quot;v&quot;:-0.5},{&quot;t&quot;:12.497,&quot;v&quot;:-0.2},{&quot;t&quot;:12.68,&quot;v&quot;:0},{&quot;t&quot;:13.229,&quot;v&quot;:0},{&quot;t&quot;:13.412,&quot;v&quot;:-1.9},{&quot;t&quot;:13.595,&quot;v&quot;:-0.9},{&quot;t&quot;:13.779,&quot;v&quot;:-0.4},{&quot;t&quot;:13.962,&quot;v&quot;:-0.2},{&quot;t&quot;:14.145,&quot;v&quot;:-2.7},{&quot;t&quot;:14.328,&quot;v&quot;:-1.3},{&quot;t&quot;:14.511,&quot;v&quot;:-0.6},{&quot;t&quot;:14.694,&quot;v&quot;:-0.9},{&quot;t&quot;:14.877,&quot;v&quot;:-2.4},{&quot;t&quot;:15.061,&quot;v&quot;:-1.1},{&quot;t&quot;:15.244,&quot;v&quot;:-0.5},{&quot;t&quot;:15.61,&quot;v&quot;:-0.4},{&quot;t&quot;:15.793,&quot;v&quot;:0},{&quot;t&quot;:16.343,&quot;v&quot;:0},{&quot;t&quot;:16.526,&quot;v&quot;:-2.8},{&quot;t&quot;:16.709,&quot;v&quot;:-1.4},{&quot;t&quot;:16.892,&quot;v&quot;:-0.7},{&quot;t&quot;:17.075,&quot;v&quot;:-0.3},{&quot;t&quot;:17.258,&quot;v&quot;:0},{&quot;t&quot;:17.442,&quot;v&quot;:0},{&quot;t&quot;:17.625,&quot;v&quot;:-1},{&quot;t&quot;:17.808,&quot;v&quot;:-2.7},{&quot;t&quot;:17.991,&quot;v&quot;:-1.5},{&quot;t&quot;:18.174,&quot;v&quot;:-2.1},{&quot;t&quot;:18.357,&quot;v&quot;:-3.7},{&quot;t&quot;:18.54,&quot;v&quot;:-1.8},{&quot;t&quot;:18.724,&quot;v&quot;:-0.9},{&quot;t&quot;:18.907,&quot;v&quot;:-0.4},{&quot;t&quot;:19.09,&quot;v&quot;:0},{&quot;t&quot;:19.273,&quot;v&quot;:-1.2},{&quot;t&quot;:19.456,&quot;v&quot;:-0.6},{&quot;t&quot;:19.639,&quot;v&quot;:-0.3},{&quot;t&quot;:19.822,&quot;v&quot;:0},{&quot;t&quot;:20.006,&quot;v&quot;:0},{&quot;t&quot;:20.189,&quot;v&quot;:-2.4},{&quot;t&quot;:20.372,&quot;v&quot;:-1.1},{&quot;t&quot;:20.555,&quot;v&quot;:-0.5},{&quot;t&quot;:20.738,&quot;v&quot;:-3.7},{&quot;t&quot;:20.921,&quot;v&quot;:-1.8},{&quot;t&quot;:21.104,&quot;v&quot;:-1.5},{&quot;t&quot;:21.288,&quot;v&quot;:-1.3},{&quot;t&quot;:21.471,&quot;v&quot;:-0.6},{&quot;t&quot;:21.654,&quot;v&quot;:-0.3},{&quot;t&quot;:21.837,&quot;v&quot;:-2.9},{&quot;t&quot;:22.02,&quot;v&quot;:-1.4},{&quot;t&quot;:22.203,&quot;v&quot;:-3.6},{&quot;t&quot;:22.386,&quot;v&quot;:-2.2},{&quot;t&quot;:22.57,&quot;v&quot;:-1.1},{&quot;t&quot;:22.753,&quot;v&quot;:-0.5},{&quot;t&quot;:22.936,&quot;v&quot;:-0.2},{&quot;t&quot;:23.119,&quot;v&quot;:-3.5},{&quot;t&quot;:23.302,&quot;v&quot;:-1.7},{&quot;t&quot;:23.485,&quot;v&quot;:-0.8},{&quot;t&quot;:23.668,&quot;v&quot;:-2.7},{&quot;t&quot;:23.852,&quot;v&quot;:-1.3},{&quot;t&quot;:24.035,&quot;v&quot;:-0.6},{&quot;t&quot;:24.218,&quot;v&quot;:-0.3},{&quot;t&quot;:24.401,&quot;v&quot;:0},{&quot;t&quot;:24.951,&quot;v&quot;:0},{&quot;t&quot;:25.134,&quot;v&quot;:-1.9},{&quot;t&quot;:25.317,&quot;v&quot;:-0.9},{&quot;t&quot;:25.5,&quot;v&quot;:-2},{&quot;t&quot;:26.049,&quot;v&quot;:-1.9},{&quot;t&quot;:26.233,&quot;v&quot;:-0.9},{&quot;t&quot;:26.416,&quot;v&quot;:-2.5},{&quot;t&quot;:26.599,&quot;v&quot;:-1.2},{&quot;t&quot;:26.782,&quot;v&quot;:-0.6},{&quot;t&quot;:26.965,&quot;v&quot;:-2.9},{&quot;t&quot;:27.148,&quot;v&quot;:-1.4},{&quot;t&quot;:27.331,&quot;v&quot;:-0.7},{&quot;t&quot;:27.698,&quot;v&quot;:-0.3},{&quot;t&quot;:27.881,&quot;v&quot;:0},{&quot;t&quot;:28.797,&quot;v&quot;:-0.4},{&quot;t&quot;:28.98,&quot;v&quot;:-2.9},{&quot;t&quot;:29.163,&quot;v&quot;:-1.4},{&quot;t&quot;:29.346,&quot;v&quot;:-3.5},{&quot;t&quot;:29.529,&quot;v&quot;:-1.7},{&quot;t&quot;:29.712,&quot;v&quot;:-2.5},{&quot;t&quot;:29.895,&quot;v&quot;:-1.2},{&quot;t&quot;:30.079,&quot;v&quot;:-1.2},{&quot;t&quot;:30.262,&quot;v&quot;:-0.6},{&quot;t&quot;:30.445,&quot;v&quot;:-0.3},{&quot;t&quot;:30.628,&quot;v&quot;:0},{&quot;t&quot;:33.192,&quot;v&quot;:0},{&quot;t&quot;:33.375,&quot;v&quot;:-3.2},{&quot;t&quot;:33.558,&quot;v&quot;:-1.6},{&quot;t&quot;:33.742,&quot;v&quot;:-0.7},{&quot;t&quot;:34.108,&quot;v&quot;:-0.2},{&quot;t&quot;:34.291,&quot;v&quot;:0},{&quot;t&quot;:34.474,&quot;v&quot;:-0.8},{&quot;t&quot;:34.657,&quot;v&quot;:-0.4},{&quot;t&quot;:34.84,&quot;v&quot;:0},{&quot;t&quot;:35.024,&quot;v&quot;:-2},{&quot;t&quot;:35.207,&quot;v&quot;:-1},{&quot;t&quot;:35.39,&quot;v&quot;:-0.5},{&quot;t&quot;:35.573,&quot;v&quot;:-0.2},{&quot;t&quot;:35.756,&quot;v&quot;:0},{&quot;t&quot;:36.306,&quot;v&quot;:0},{&quot;t&quot;:36.489,&quot;v&quot;:-3.6},{&quot;t&quot;:36.672,&quot;v&quot;:-1.7},{&quot;t&quot;:36.855,&quot;v&quot;:-1.1},{&quot;t&quot;:37.038,&quot;v&quot;:-0.6},{&quot;t&quot;:37.221,&quot;v&quot;:-0.3},{&quot;t&quot;:37.404,&quot;v&quot;:-1.4},{&quot;t&quot;:37.588,&quot;v&quot;:-3},{&quot;t&quot;:37.771,&quot;v&quot;:-1.5},{&quot;t&quot;:37.954,&quot;v&quot;:-2.5},{&quot;t&quot;:38.137,&quot;v&quot;:-1.9},{&quot;t&quot;:38.32,&quot;v&quot;:-1},{&quot;t&quot;:38.503,&quot;v&quot;:-0.5},{&quot;t&quot;:38.686,&quot;v&quot;:-1.2},{&quot;t&quot;:38.87,&quot;v&quot;:-0.6},{&quot;t&quot;:39.053,&quot;v&quot;:-0.3},{&quot;t&quot;:39.236,&quot;v&quot;:0},{&quot;t&quot;:39.419,&quot;v&quot;:0},{&quot;t&quot;:39.602,&quot;v&quot;:-3.3},{&quot;t&quot;:39.785,&quot;v&quot;:-1.6},{&quot;t&quot;:39.968,&quot;v&quot;:-0.8},{&quot;t&quot;:40.152,&quot;v&quot;:-0.4},{&quot;t&quot;:40.335,&quot;v&quot;:0},{&quot;t&quot;:40.701,&quot;v&quot;:-0.3},{&quot;t&quot;:40.884,&quot;v&quot;:-3},{&quot;t&quot;:41.25,&quot;v&quot;:-2.7},{&quot;t&quot;:41.434,&quot;v&quot;:-1.7},{&quot;t&quot;:41.617,&quot;v&quot;:-2.1},{&quot;t&quot;:41.8,&quot;v&quot;:-1},{&quot;t&quot;:41.983,&quot;v&quot;:-0.5},{&quot;t&quot;:42.166,&quot;v&quot;:-0.2},{&quot;t&quot;:42.349,&quot;v&quot;:0},{&quot;t&quot;:43.448,&quot;v&quot;:0},{&quot;t&quot;:43.631,&quot;v&quot;:-0.5},{&quot;t&quot;:43.815,&quot;v&quot;:-0.2},{&quot;t&quot;:43.998,&quot;v&quot;:0},{&quot;t&quot;:44.181,&quot;v&quot;:0},{&quot;t&quot;:44.364,&quot;v&quot;:-3},{&quot;t&quot;:44.547,&quot;v&quot;:-2},{&quot;t&quot;:44.73,&quot;v&quot;:-1},{&quot;t&quot;:44.913,&quot;v&quot;:-0.5},{&quot;t&quot;:45.097,&quot;v&quot;:-0.2},{&quot;t&quot;:45.28,&quot;v&quot;:0},{&quot;t&quot;:45.463,&quot;v&quot;:-1},{&quot;t&quot;:45.646,&quot;v&quot;:-0.5},{&quot;t&quot;:45.829,&quot;v&quot;:-0.2},{&quot;t&quot;:46.012,&quot;v&quot;:0},{&quot;t&quot;:46.195,&quot;v&quot;:-0.9},{&quot;t&quot;:46.379,&quot;v&quot;:-0.5},{&quot;t&quot;:46.562,&quot;v&quot;:-0.2},{&quot;t&quot;:46.745,&quot;v&quot;:-0.8},{&quot;t&quot;:46.928,&quot;v&quot;:-0.4},{&quot;t&quot;:47.111,&quot;v&quot;:0},{&quot;t&quot;:47.844,&quot;v&quot;:0},{&quot;t&quot;:48.027,&quot;v&quot;:-1.6},{&quot;t&quot;:48.21,&quot;v&quot;:-0.8},{&quot;t&quot;:48.943,&quot;v&quot;:-0.4},{&quot;t&quot;:49.126,&quot;v&quot;:0},{&quot;t&quot;:49.309,&quot;v&quot;:0},{&quot;t&quot;:49.492,&quot;v&quot;:-2.8},{&quot;t&quot;:49.675,&quot;v&quot;:-1.8},{&quot;t&quot;:49.858,&quot;v&quot;:-0.8},{&quot;t&quot;:50.041,&quot;v&quot;:-1.8},{&quot;t&quot;:50.225,&quot;v&quot;:-0.9},{&quot;t&quot;:50.408,&quot;v&quot;:-0.6},{&quot;t&quot;:50.591,&quot;v&quot;:-0.3},{&quot;t&quot;:52.056,&quot;v&quot;:0},{&quot;t&quot;:52.239,&quot;v&quot;:-3.6},{&quot;t&quot;:52.422,&quot;v&quot;:-3.4},{&quot;t&quot;:52.606,&quot;v&quot;:-1.6},{&quot;t&quot;:52.789,&quot;v&quot;:-0.8},{&quot;t&quot;:53.155,&quot;v&quot;:-0.5},{&quot;t&quot;:53.338,&quot;v&quot;:-0.3},{&quot;t&quot;:53.521,&quot;v&quot;:-2.3},{&quot;t&quot;:53.704,&quot;v&quot;:-1.1},{&quot;t&quot;:53.888,&quot;v&quot;:-0.5},{&quot;t&quot;:54.071,&quot;v&quot;:-2.1},{&quot;t&quot;:54.437,&quot;v&quot;:-2.2},{&quot;t&quot;:54.62,&quot;v&quot;:-1.1},{&quot;t&quot;:54.803,&quot;v&quot;:-0.5},{&quot;t&quot;:54.986,&quot;v&quot;:-0.2},{&quot;t&quot;:55.17,&quot;v&quot;:0},{&quot;t&quot;:57.184,&quot;v&quot;:0},{&quot;t&quot;:57.367,&quot;v&quot;:-2.1},{&quot;t&quot;:57.55,&quot;v&quot;:-1},{&quot;t&quot;:57.734,&quot;v&quot;:-0.5},{&quot;t&quot;:57.917,&quot;v&quot;:-0.2},{&quot;t&quot;:58.1,&quot;v&quot;:0},{&quot;t&quot;:58.832,&quot;v&quot;:0},{&quot;t&quot;:59.016,&quot;v&quot;:-2.9},{&quot;t&quot;:59.199,&quot;v&quot;:-2.3},{&quot;t&quot;:59.382,&quot;v&quot;:-1.1},{&quot;t&quot;:59.565,&quot;v&quot;:-2.1},{&quot;t&quot;:59.748,&quot;v&quot;:-1},{&quot;t&quot;:59.931,&quot;v&quot;:-0.8},{&quot;t&quot;:60.114,&quot;v&quot;:-0.4},{&quot;t&quot;:60.664,&quot;v&quot;:-0.2},{&quot;t&quot;:60.847,&quot;v&quot;:-1.2},{&quot;t&quot;:61.03,&quot;v&quot;:-0.6},{&quot;t&quot;:61.213,&quot;v&quot;:-0.3},{&quot;t&quot;:61.397,&quot;v&quot;:0},{&quot;t&quot;:61.946,&quot;v&quot;:0},{&quot;t&quot;:62.129,&quot;v&quot;:-0.6},{&quot;t&quot;:62.312,&quot;v&quot;:-0.3},{&quot;t&quot;:62.495,&quot;v&quot;:-2},{&quot;t&quot;:62.679,&quot;v&quot;:-2.7},{&quot;t&quot;:62.862,&quot;v&quot;:-1.3},{&quot;t&quot;:63.045,&quot;v&quot;:-0.6},{&quot;t&quot;:63.228,&quot;v&quot;:-0.3},{&quot;t&quot;:63.411,&quot;v&quot;:-1.8},{&quot;t&quot;:63.594,&quot;v&quot;:-1.3},{&quot;t&quot;:63.777,&quot;v&quot;:-0.6},{&quot;t&quot;:63.961,&quot;v&quot;:-2},{&quot;t&quot;:64.144,&quot;v&quot;:-1},{&quot;t&quot;:64.327,&quot;v&quot;:-1},{&quot;t&quot;:64.51,&quot;v&quot;:-0.5},{&quot;t&quot;:64.693,&quot;v&quot;:-1.3},{&quot;t&quot;:64.876,&quot;v&quot;:-0.6},{&quot;t&quot;:65.059,&quot;v&quot;:-0.3},{&quot;t&quot;:65.243,&quot;v&quot;:0},{&quot;t&quot;:65.609,&quot;v&quot;:0},{&quot;t&quot;:65.792,&quot;v&quot;:-1.2},{&quot;t&quot;:65.975,&quot;v&quot;:-2.8},{&quot;t&quot;:66.158,&quot;v&quot;:-1.9},{&quot;t&quot;:66.341,&quot;v&quot;:-0.9},{&quot;t&quot;:66.708,&quot;v&quot;:-0.7},{&quot;t&quot;:66.891,&quot;v&quot;:-0.3},{&quot;t&quot;:68.173,&quot;v&quot;:-0.2},{&quot;t&quot;:68.356,&quot;v&quot;:-1.9},{&quot;t&quot;:68.539,&quot;v&quot;:-2.9},{&quot;t&quot;:68.722,&quot;v&quot;:-1.4},{&quot;t&quot;:68.906,&quot;v&quot;:-0.7},{&quot;t&quot;:69.089,&quot;v&quot;:-0.3},{&quot;t&quot;:69.272,&quot;v&quot;:-4.1},{&quot;t&quot;:69.455,&quot;v&quot;:-2},{&quot;t&quot;:69.638,&quot;v&quot;:-0.9},{&quot;t&quot;:69.821,&quot;v&quot;:-1.9},{&quot;t&quot;:70.004,&quot;v&quot;:-0.9},{&quot;t&quot;:70.188,&quot;v&quot;:-0.4},{&quot;t&quot;:71.836,&quot;v&quot;:0},{&quot;t&quot;:72.019,&quot;v&quot;:-2.1},{&quot;t&quot;:72.202,&quot;v&quot;:-1.2},{&quot;t&quot;:72.385,&quot;v&quot;:-0.6},{&quot;t&quot;:72.568,&quot;v&quot;:-3.7},{&quot;t&quot;:72.752,&quot;v&quot;:-3},{&quot;t&quot;:72.935,&quot;v&quot;:-1.5},{&quot;t&quot;:73.118,&quot;v&quot;:-0.7},{&quot;t&quot;:73.252,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n2.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.043,&quot;v&quot;:-1.1},{&quot;t&quot;:0.226,&quot;v&quot;:-2.9},{&quot;t&quot;:0.409,&quot;v&quot;:-1.9},{&quot;t&quot;:0.592,&quot;v&quot;:-5.9},{&quot;t&quot;:0.775,&quot;v&quot;:-3.9},{&quot;t&quot;:0.958,&quot;v&quot;:-1.9},{&quot;t&quot;:1.142,&quot;v&quot;:-0.9},{&quot;t&quot;:1.325,&quot;v&quot;:-0.4},{&quot;t&quot;:2.607,&quot;v&quot;:0},{&quot;t&quot;:2.79,&quot;v&quot;:-6.9},{&quot;t&quot;:2.973,&quot;v&quot;:-6.5},{&quot;t&quot;:3.156,&quot;v&quot;:-3.4},{&quot;t&quot;:3.339,&quot;v&quot;:-1.7},{&quot;t&quot;:3.522,&quot;v&quot;:-0.8},{&quot;t&quot;:3.706,&quot;v&quot;:-0.4},{&quot;t&quot;:3.889,&quot;v&quot;:-3.2},{&quot;t&quot;:4.072,&quot;v&quot;:-1.7},{&quot;t&quot;:4.255,&quot;v&quot;:-0.8},{&quot;t&quot;:4.438,&quot;v&quot;:-5.3},{&quot;t&quot;:4.621,&quot;v&quot;:-2.5},{&quot;t&quot;:4.804,&quot;v&quot;:-3},{&quot;t&quot;:4.988,&quot;v&quot;:-2.4},{&quot;t&quot;:5.171,&quot;v&quot;:-1.2},{&quot;t&quot;:5.354,&quot;v&quot;:-0.6},{&quot;t&quot;:5.72,&quot;v&quot;:-0.4},{&quot;t&quot;:5.903,&quot;v&quot;:-5.6},{&quot;t&quot;:6.086,&quot;v&quot;:-6.2},{&quot;t&quot;:6.27,&quot;v&quot;:-3},{&quot;t&quot;:6.453,&quot;v&quot;:-1.4},{&quot;t&quot;:6.636,&quot;v&quot;:-0.7},{&quot;t&quot;:6.819,&quot;v&quot;:-0.3},{&quot;t&quot;:7.002,&quot;v&quot;:-2.8},{&quot;t&quot;:7.185,&quot;v&quot;:-4.6},{&quot;t&quot;:7.369,&quot;v&quot;:-2.2},{&quot;t&quot;:7.552,&quot;v&quot;:-1.1},{&quot;t&quot;:7.735,&quot;v&quot;:-0.5},{&quot;t&quot;:7.918,&quot;v&quot;:-0.2},{&quot;t&quot;:8.101,&quot;v&quot;:0},{&quot;t&quot;:8.467,&quot;v&quot;:0},{&quot;t&quot;:8.651,&quot;v&quot;:-5.6},{&quot;t&quot;:8.834,&quot;v&quot;:-2.7},{&quot;t&quot;:9.017,&quot;v&quot;:-3.7},{&quot;t&quot;:9.2,&quot;v&quot;:-1.8},{&quot;t&quot;:9.383,&quot;v&quot;:-0.9},{&quot;t&quot;:9.566,&quot;v&quot;:-8.1},{&quot;t&quot;:9.749,&quot;v&quot;:-3.9},{&quot;t&quot;:9.933,&quot;v&quot;:-1.9},{&quot;t&quot;:10.116,&quot;v&quot;:-0.9},{&quot;t&quot;:10.299,&quot;v&quot;:-0.4},{&quot;t&quot;:10.665,&quot;v&quot;:-0.6},{&quot;t&quot;:10.848,&quot;v&quot;:-6.4},{&quot;t&quot;:11.031,&quot;v&quot;:-3.6},{&quot;t&quot;:11.215,&quot;v&quot;:-1.7},{&quot;t&quot;:11.398,&quot;v&quot;:-0.8},{&quot;t&quot;:11.581,&quot;v&quot;:-0.4},{&quot;t&quot;:11.764,&quot;v&quot;:-4.3},{&quot;t&quot;:11.947,&quot;v&quot;:-6.6},{&quot;t&quot;:12.13,&quot;v&quot;:-3.2},{&quot;t&quot;:12.313,&quot;v&quot;:-1.5},{&quot;t&quot;:12.497,&quot;v&quot;:-0.7},{&quot;t&quot;:12.68,&quot;v&quot;:-0.4},{&quot;t&quot;:12.863,&quot;v&quot;:0},{&quot;t&quot;:13.229,&quot;v&quot;:0},{&quot;t&quot;:13.412,&quot;v&quot;:-4.6},{&quot;t&quot;:13.595,&quot;v&quot;:-2.2},{&quot;t&quot;:13.779,&quot;v&quot;:-1.1},{&quot;t&quot;:13.962,&quot;v&quot;:-0.5},{&quot;t&quot;:14.145,&quot;v&quot;:-4.5},{&quot;t&quot;:14.328,&quot;v&quot;:-2.1},{&quot;t&quot;:14.511,&quot;v&quot;:-1},{&quot;t&quot;:14.694,&quot;v&quot;:-0.7},{&quot;t&quot;:14.877,&quot;v&quot;:-0.4},{&quot;t&quot;:15.793,&quot;v&quot;:0},{&quot;t&quot;:15.976,&quot;v&quot;:-1.4},{&quot;t&quot;:16.16,&quot;v&quot;:-0.7},{&quot;t&quot;:16.343,&quot;v&quot;:-0.3},{&quot;t&quot;:16.526,&quot;v&quot;:-4.5},{&quot;t&quot;:16.709,&quot;v&quot;:-2.2},{&quot;t&quot;:16.892,&quot;v&quot;:-1},{&quot;t&quot;:17.075,&quot;v&quot;:-0.5},{&quot;t&quot;:17.258,&quot;v&quot;:-0.2},{&quot;t&quot;:17.442,&quot;v&quot;:0},{&quot;t&quot;:17.625,&quot;v&quot;:-3.1},{&quot;t&quot;:17.808,&quot;v&quot;:-8.3},{&quot;t&quot;:17.991,&quot;v&quot;:-6.4},{&quot;t&quot;:18.174,&quot;v&quot;:-6},{&quot;t&quot;:18.357,&quot;v&quot;:-4.3},{&quot;t&quot;:18.54,&quot;v&quot;:-2},{&quot;t&quot;:18.724,&quot;v&quot;:-3.4},{&quot;t&quot;:18.907,&quot;v&quot;:-1.6},{&quot;t&quot;:19.09,&quot;v&quot;:-0.8},{&quot;t&quot;:19.273,&quot;v&quot;:-0.4},{&quot;t&quot;:19.456,&quot;v&quot;:0},{&quot;t&quot;:20.372,&quot;v&quot;:0},{&quot;t&quot;:20.555,&quot;v&quot;:-1.7},{&quot;t&quot;:20.738,&quot;v&quot;:-7.4},{&quot;t&quot;:20.921,&quot;v&quot;:-3.5},{&quot;t&quot;:21.104,&quot;v&quot;:-5.8},{&quot;t&quot;:21.288,&quot;v&quot;:-2.8},{&quot;t&quot;:21.471,&quot;v&quot;:-1.3},{&quot;t&quot;:21.654,&quot;v&quot;:-0.6},{&quot;t&quot;:21.837,&quot;v&quot;:-3.2},{&quot;t&quot;:22.02,&quot;v&quot;:-1.5},{&quot;t&quot;:22.203,&quot;v&quot;:-5.8},{&quot;t&quot;:22.386,&quot;v&quot;:-4.3},{&quot;t&quot;:22.57,&quot;v&quot;:-2.5},{&quot;t&quot;:22.753,&quot;v&quot;:-1.2},{&quot;t&quot;:22.936,&quot;v&quot;:-0.8},{&quot;t&quot;:23.119,&quot;v&quot;:-3.6},{&quot;t&quot;:23.302,&quot;v&quot;:-1.7},{&quot;t&quot;:23.485,&quot;v&quot;:-0.8},{&quot;t&quot;:23.668,&quot;v&quot;:-6.4},{&quot;t&quot;:23.852,&quot;v&quot;:-3.1},{&quot;t&quot;:24.035,&quot;v&quot;:-1.5},{&quot;t&quot;:24.218,&quot;v&quot;:-0.7},{&quot;t&quot;:24.401,&quot;v&quot;:-0.3},{&quot;t&quot;:24.584,&quot;v&quot;:0},{&quot;t&quot;:25.317,&quot;v&quot;:0},{&quot;t&quot;:25.5,&quot;v&quot;:-2.9},{&quot;t&quot;:25.683,&quot;v&quot;:-5.1},{&quot;t&quot;:25.866,&quot;v&quot;:-5.5},{&quot;t&quot;:26.049,&quot;v&quot;:-3.9},{&quot;t&quot;:26.233,&quot;v&quot;:-1.9},{&quot;t&quot;:26.416,&quot;v&quot;:-8.2},{&quot;t&quot;:26.599,&quot;v&quot;:-3.9},{&quot;t&quot;:26.782,&quot;v&quot;:-1.9},{&quot;t&quot;:26.965,&quot;v&quot;:-3},{&quot;t&quot;:27.148,&quot;v&quot;:-1.5},{&quot;t&quot;:27.331,&quot;v&quot;:-0.7},{&quot;t&quot;:27.515,&quot;v&quot;:-0.3},{&quot;t&quot;:27.698,&quot;v&quot;:-5.4},{&quot;t&quot;:27.881,&quot;v&quot;:-2.6},{&quot;t&quot;:28.064,&quot;v&quot;:-1.2},{&quot;t&quot;:28.247,&quot;v&quot;:-0.6},{&quot;t&quot;:28.43,&quot;v&quot;:-0.3},{&quot;t&quot;:28.613,&quot;v&quot;:0},{&quot;t&quot;:28.797,&quot;v&quot;:-4.7},{&quot;t&quot;:28.98,&quot;v&quot;:-6.1},{&quot;t&quot;:29.163,&quot;v&quot;:-4},{&quot;t&quot;:29.346,&quot;v&quot;:-8.2},{&quot;t&quot;:29.529,&quot;v&quot;:-4.1},{&quot;t&quot;:29.712,&quot;v&quot;:-7.1},{&quot;t&quot;:29.895,&quot;v&quot;:-3.4},{&quot;t&quot;:30.079,&quot;v&quot;:-1.6},{&quot;t&quot;:30.262,&quot;v&quot;:-0.8},{&quot;t&quot;:30.445,&quot;v&quot;:-0.4},{&quot;t&quot;:30.628,&quot;v&quot;:0},{&quot;t&quot;:33.009,&quot;v&quot;:0},{&quot;t&quot;:33.192,&quot;v&quot;:-2.4},{&quot;t&quot;:33.375,&quot;v&quot;:-2.4},{&quot;t&quot;:33.558,&quot;v&quot;:-1.2},{&quot;t&quot;:33.742,&quot;v&quot;:-0.6},{&quot;t&quot;:33.925,&quot;v&quot;:-0.3},{&quot;t&quot;:34.108,&quot;v&quot;:-4.2},{&quot;t&quot;:34.291,&quot;v&quot;:-2},{&quot;t&quot;:34.474,&quot;v&quot;:-1},{&quot;t&quot;:34.657,&quot;v&quot;:-0.5},{&quot;t&quot;:34.84,&quot;v&quot;:-2.3},{&quot;t&quot;:35.024,&quot;v&quot;:-1.9},{&quot;t&quot;:35.207,&quot;v&quot;:-0.9},{&quot;t&quot;:35.39,&quot;v&quot;:-0.4},{&quot;t&quot;:36.122,&quot;v&quot;:0},{&quot;t&quot;:36.306,&quot;v&quot;:-1},{&quot;t&quot;:36.489,&quot;v&quot;:-2.5},{&quot;t&quot;:36.672,&quot;v&quot;:-1.2},{&quot;t&quot;:37.038,&quot;v&quot;:-0.8},{&quot;t&quot;:37.221,&quot;v&quot;:-0.4},{&quot;t&quot;:37.404,&quot;v&quot;:-1.4},{&quot;t&quot;:37.588,&quot;v&quot;:-6.9},{&quot;t&quot;:37.771,&quot;v&quot;:-3.3},{&quot;t&quot;:38.137,&quot;v&quot;:-3.2},{&quot;t&quot;:38.32,&quot;v&quot;:-1.5},{&quot;t&quot;:38.503,&quot;v&quot;:-0.7},{&quot;t&quot;:38.686,&quot;v&quot;:-0.4},{&quot;t&quot;:38.87,&quot;v&quot;:0},{&quot;t&quot;:39.053,&quot;v&quot;:0},{&quot;t&quot;:39.236,&quot;v&quot;:-2.2},{&quot;t&quot;:39.419,&quot;v&quot;:-2.6},{&quot;t&quot;:39.602,&quot;v&quot;:-6.9},{&quot;t&quot;:39.785,&quot;v&quot;:-3.3},{&quot;t&quot;:39.968,&quot;v&quot;:-1.6},{&quot;t&quot;:40.152,&quot;v&quot;:-0.8},{&quot;t&quot;:40.335,&quot;v&quot;:-0.4},{&quot;t&quot;:40.518,&quot;v&quot;:0},{&quot;t&quot;:40.701,&quot;v&quot;:0},{&quot;t&quot;:40.884,&quot;v&quot;:-6.7},{&quot;t&quot;:41.067,&quot;v&quot;:-6.2},{&quot;t&quot;:41.25,&quot;v&quot;:-4.5},{&quot;t&quot;:41.434,&quot;v&quot;:-3.9},{&quot;t&quot;:41.617,&quot;v&quot;:-6.5},{&quot;t&quot;:41.8,&quot;v&quot;:-3.1},{&quot;t&quot;:41.983,&quot;v&quot;:-1.5},{&quot;t&quot;:42.166,&quot;v&quot;:-0.7},{&quot;t&quot;:42.349,&quot;v&quot;:-0.3},{&quot;t&quot;:42.532,&quot;v&quot;:0},{&quot;t&quot;:43.265,&quot;v&quot;:0},{&quot;t&quot;:43.448,&quot;v&quot;:-2.2},{&quot;t&quot;:43.631,&quot;v&quot;:-4.3},{&quot;t&quot;:43.815,&quot;v&quot;:-2.1},{&quot;t&quot;:43.998,&quot;v&quot;:-1.1},{&quot;t&quot;:44.364,&quot;v&quot;:-1.4},{&quot;t&quot;:44.547,&quot;v&quot;:-2.7},{&quot;t&quot;:44.73,&quot;v&quot;:-1.3},{&quot;t&quot;:44.913,&quot;v&quot;:-0.6},{&quot;t&quot;:45.097,&quot;v&quot;:-0.3},{&quot;t&quot;:45.28,&quot;v&quot;:0},{&quot;t&quot;:45.463,&quot;v&quot;:-3.6},{&quot;t&quot;:45.646,&quot;v&quot;:-2.6},{&quot;t&quot;:45.829,&quot;v&quot;:-1.3},{&quot;t&quot;:46.012,&quot;v&quot;:-0.6},{&quot;t&quot;:46.195,&quot;v&quot;:-0.3},{&quot;t&quot;:46.379,&quot;v&quot;:0},{&quot;t&quot;:46.562,&quot;v&quot;:0},{&quot;t&quot;:46.745,&quot;v&quot;:-4.6},{&quot;t&quot;:46.928,&quot;v&quot;:-2.2},{&quot;t&quot;:47.111,&quot;v&quot;:-1.1},{&quot;t&quot;:47.294,&quot;v&quot;:-0.5},{&quot;t&quot;:47.477,&quot;v&quot;:-0.2},{&quot;t&quot;:47.661,&quot;v&quot;:0},{&quot;t&quot;:47.844,&quot;v&quot;:0},{&quot;t&quot;:48.027,&quot;v&quot;:-1.8},{&quot;t&quot;:48.21,&quot;v&quot;:-0.9},{&quot;t&quot;:48.393,&quot;v&quot;:-0.4},{&quot;t&quot;:48.576,&quot;v&quot;:-3.9},{&quot;t&quot;:48.759,&quot;v&quot;:-1.9},{&quot;t&quot;:48.943,&quot;v&quot;:-0.9},{&quot;t&quot;:49.126,&quot;v&quot;:-0.4},{&quot;t&quot;:49.309,&quot;v&quot;:-0.2},{&quot;t&quot;:49.492,&quot;v&quot;:-1.8},{&quot;t&quot;:49.675,&quot;v&quot;:-0.8},{&quot;t&quot;:49.858,&quot;v&quot;:-0.4},{&quot;t&quot;:50.041,&quot;v&quot;:0},{&quot;t&quot;:50.225,&quot;v&quot;:0},{&quot;t&quot;:50.408,&quot;v&quot;:-1.8},{&quot;t&quot;:50.591,&quot;v&quot;:-0.8},{&quot;t&quot;:50.774,&quot;v&quot;:-1.4},{&quot;t&quot;:50.957,&quot;v&quot;:-0.7},{&quot;t&quot;:51.14,&quot;v&quot;:-0.3},{&quot;t&quot;:51.324,&quot;v&quot;:0},{&quot;t&quot;:52.056,&quot;v&quot;:-0.2},{&quot;t&quot;:52.239,&quot;v&quot;:-4.7},{&quot;t&quot;:52.422,&quot;v&quot;:-3.6},{&quot;t&quot;:52.606,&quot;v&quot;:-3.9},{&quot;t&quot;:52.789,&quot;v&quot;:-1.9},{&quot;t&quot;:52.972,&quot;v&quot;:-0.9},{&quot;t&quot;:53.155,&quot;v&quot;:-0.5},{&quot;t&quot;:53.338,&quot;v&quot;:-0.2},{&quot;t&quot;:53.521,&quot;v&quot;:-1.5},{&quot;t&quot;:53.704,&quot;v&quot;:-0.7},{&quot;t&quot;:53.888,&quot;v&quot;:-2.1},{&quot;t&quot;:54.071,&quot;v&quot;:-7.3},{&quot;t&quot;:54.254,&quot;v&quot;:-6.2},{&quot;t&quot;:54.437,&quot;v&quot;:-6.1},{&quot;t&quot;:54.62,&quot;v&quot;:-2.9},{&quot;t&quot;:54.803,&quot;v&quot;:-1.4},{&quot;t&quot;:54.986,&quot;v&quot;:-0.7},{&quot;t&quot;:55.17,&quot;v&quot;:-0.3},{&quot;t&quot;:55.353,&quot;v&quot;:0},{&quot;t&quot;:56.085,&quot;v&quot;:0},{&quot;t&quot;:56.268,&quot;v&quot;:-4},{&quot;t&quot;:56.452,&quot;v&quot;:-1.9},{&quot;t&quot;:56.635,&quot;v&quot;:-0.9},{&quot;t&quot;:56.818,&quot;v&quot;:-0.9},{&quot;t&quot;:57.001,&quot;v&quot;:-0.4},{&quot;t&quot;:57.184,&quot;v&quot;:-2.8},{&quot;t&quot;:57.367,&quot;v&quot;:-2.3},{&quot;t&quot;:57.55,&quot;v&quot;:-1.1},{&quot;t&quot;:57.734,&quot;v&quot;:-0.5},{&quot;t&quot;:58.1,&quot;v&quot;:-0.4},{&quot;t&quot;:58.283,&quot;v&quot;:-2},{&quot;t&quot;:58.466,&quot;v&quot;:-1},{&quot;t&quot;:58.649,&quot;v&quot;:-0.5},{&quot;t&quot;:58.832,&quot;v&quot;:-0.2},{&quot;t&quot;:59.016,&quot;v&quot;:-7.3},{&quot;t&quot;:59.199,&quot;v&quot;:-3.5},{&quot;t&quot;:59.382,&quot;v&quot;:-3.4},{&quot;t&quot;:59.565,&quot;v&quot;:-7.6},{&quot;t&quot;:59.748,&quot;v&quot;:-3.8},{&quot;t&quot;:59.931,&quot;v&quot;:-1.8},{&quot;t&quot;:60.114,&quot;v&quot;:-0.9},{&quot;t&quot;:60.298,&quot;v&quot;:-0.4},{&quot;t&quot;:60.847,&quot;v&quot;:0},{&quot;t&quot;:61.03,&quot;v&quot;:-1.3},{&quot;t&quot;:61.213,&quot;v&quot;:-0.6},{&quot;t&quot;:61.397,&quot;v&quot;:-0.3},{&quot;t&quot;:61.58,&quot;v&quot;:0},{&quot;t&quot;:61.946,&quot;v&quot;:0},{&quot;t&quot;:62.129,&quot;v&quot;:-3.8},{&quot;t&quot;:62.312,&quot;v&quot;:-1.8},{&quot;t&quot;:62.495,&quot;v&quot;:-2.7},{&quot;t&quot;:62.679,&quot;v&quot;:-4.6},{&quot;t&quot;:62.862,&quot;v&quot;:-2.2},{&quot;t&quot;:63.045,&quot;v&quot;:-1.1},{&quot;t&quot;:63.228,&quot;v&quot;:-0.5},{&quot;t&quot;:63.411,&quot;v&quot;:-5},{&quot;t&quot;:63.594,&quot;v&quot;:-3},{&quot;t&quot;:63.777,&quot;v&quot;:-1.4},{&quot;t&quot;:63.961,&quot;v&quot;:-3.9},{&quot;t&quot;:64.144,&quot;v&quot;:-1.9},{&quot;t&quot;:64.327,&quot;v&quot;:-2.6},{&quot;t&quot;:64.51,&quot;v&quot;:-1.2},{&quot;t&quot;:64.693,&quot;v&quot;:-3.7},{&quot;t&quot;:64.876,&quot;v&quot;:-1.8},{&quot;t&quot;:65.059,&quot;v&quot;:-0.9},{&quot;t&quot;:65.243,&quot;v&quot;:-0.4},{&quot;t&quot;:65.609,&quot;v&quot;:0},{&quot;t&quot;:65.792,&quot;v&quot;:-4.5},{&quot;t&quot;:65.975,&quot;v&quot;:-6.9},{&quot;t&quot;:66.158,&quot;v&quot;:-3.3},{&quot;t&quot;:66.341,&quot;v&quot;:-1.6},{&quot;t&quot;:66.525,&quot;v&quot;:-0.8},{&quot;t&quot;:66.708,&quot;v&quot;:-0.4},{&quot;t&quot;:66.891,&quot;v&quot;:0},{&quot;t&quot;:67.807,&quot;v&quot;:0},{&quot;t&quot;:67.99,&quot;v&quot;:-2.3},{&quot;t&quot;:68.173,&quot;v&quot;:-2},{&quot;t&quot;:68.356,&quot;v&quot;:-5.5},{&quot;t&quot;:68.539,&quot;v&quot;:-6.7},{&quot;t&quot;:68.722,&quot;v&quot;:-3.2},{&quot;t&quot;:68.906,&quot;v&quot;:-1.6},{&quot;t&quot;:69.089,&quot;v&quot;:-0.7},{&quot;t&quot;:69.272,&quot;v&quot;:-6.8},{&quot;t&quot;:69.455,&quot;v&quot;:-3.3},{&quot;t&quot;:69.638,&quot;v&quot;:-2.3},{&quot;t&quot;:69.821,&quot;v&quot;:-4.9},{&quot;t&quot;:70.004,&quot;v&quot;:-3.6},{&quot;t&quot;:70.188,&quot;v&quot;:-1.7},{&quot;t&quot;:70.371,&quot;v&quot;:-0.8},{&quot;t&quot;:70.554,&quot;v&quot;:-0.4},{&quot;t&quot;:70.737,&quot;v&quot;:0},{&quot;t&quot;:71.836,&quot;v&quot;:0},{&quot;t&quot;:72.019,&quot;v&quot;:-3.3},{&quot;t&quot;:72.202,&quot;v&quot;:-2.1},{&quot;t&quot;:72.385,&quot;v&quot;:-1.4},{&quot;t&quot;:72.568,&quot;v&quot;:-1.2},{&quot;t&quot;:72.752,&quot;v&quot;:-6.2},{&quot;t&quot;:72.935,&quot;v&quot;:-3},{&quot;t&quot;:73.118,&quot;v&quot;:-1.4},{&quot;t&quot;:73.252,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n3.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.043,&quot;v&quot;:-0.5},{&quot;t&quot;:0.226,&quot;v&quot;:-3.2},{&quot;t&quot;:0.775,&quot;v&quot;:-2.9},{&quot;t&quot;:0.958,&quot;v&quot;:-1.4},{&quot;t&quot;:1.142,&quot;v&quot;:-0.7},{&quot;t&quot;:1.325,&quot;v&quot;:-0.3},{&quot;t&quot;:1.508,&quot;v&quot;:0},{&quot;t&quot;:1.691,&quot;v&quot;:0},{&quot;t&quot;:1.874,&quot;v&quot;:-0.5},{&quot;t&quot;:2.057,&quot;v&quot;:-0.2},{&quot;t&quot;:2.24,&quot;v&quot;:0},{&quot;t&quot;:2.424,&quot;v&quot;:-0.6},{&quot;t&quot;:2.607,&quot;v&quot;:-0.3},{&quot;t&quot;:2.79,&quot;v&quot;:-2.9},{&quot;t&quot;:2.973,&quot;v&quot;:-2.5},{&quot;t&quot;:3.156,&quot;v&quot;:-1.6},{&quot;t&quot;:3.339,&quot;v&quot;:-1.3},{&quot;t&quot;:3.522,&quot;v&quot;:-0.6},{&quot;t&quot;:3.706,&quot;v&quot;:-0.3},{&quot;t&quot;:3.889,&quot;v&quot;:-1.9},{&quot;t&quot;:4.072,&quot;v&quot;:-1.8},{&quot;t&quot;:4.255,&quot;v&quot;:-0.8},{&quot;t&quot;:4.438,&quot;v&quot;:-1.9},{&quot;t&quot;:4.621,&quot;v&quot;:-0.9},{&quot;t&quot;:4.804,&quot;v&quot;:-1.6},{&quot;t&quot;:4.988,&quot;v&quot;:-1.1},{&quot;t&quot;:5.171,&quot;v&quot;:-0.7},{&quot;t&quot;:5.354,&quot;v&quot;:-0.3},{&quot;t&quot;:5.72,&quot;v&quot;:-0.2},{&quot;t&quot;:5.903,&quot;v&quot;:-1.5},{&quot;t&quot;:6.086,&quot;v&quot;:-2.9},{&quot;t&quot;:6.27,&quot;v&quot;:-1.4},{&quot;t&quot;:6.453,&quot;v&quot;:-0.7},{&quot;t&quot;:6.636,&quot;v&quot;:-0.3},{&quot;t&quot;:6.819,&quot;v&quot;:0},{&quot;t&quot;:7.002,&quot;v&quot;:-1.5},{&quot;t&quot;:7.185,&quot;v&quot;:-3.3},{&quot;t&quot;:7.369,&quot;v&quot;:-1.6},{&quot;t&quot;:7.552,&quot;v&quot;:-0.8},{&quot;t&quot;:7.735,&quot;v&quot;:-0.4},{&quot;t&quot;:7.918,&quot;v&quot;:0},{&quot;t&quot;:8.284,&quot;v&quot;:0},{&quot;t&quot;:8.467,&quot;v&quot;:-2},{&quot;t&quot;:8.651,&quot;v&quot;:-2.9},{&quot;t&quot;:8.834,&quot;v&quot;:-1.4},{&quot;t&quot;:9.017,&quot;v&quot;:-1.5},{&quot;t&quot;:9.2,&quot;v&quot;:-0.7},{&quot;t&quot;:9.383,&quot;v&quot;:-0.3},{&quot;t&quot;:9.566,&quot;v&quot;:-2.9},{&quot;t&quot;:9.749,&quot;v&quot;:-1.4},{&quot;t&quot;:9.933,&quot;v&quot;:-1},{&quot;t&quot;:10.116,&quot;v&quot;:-0.8},{&quot;t&quot;:10.299,&quot;v&quot;:-0.4},{&quot;t&quot;:10.482,&quot;v&quot;:0},{&quot;t&quot;:10.665,&quot;v&quot;:-0.3},{&quot;t&quot;:10.848,&quot;v&quot;:-3.1},{&quot;t&quot;:11.031,&quot;v&quot;:-3.5},{&quot;t&quot;:11.215,&quot;v&quot;:-1.7},{&quot;t&quot;:11.398,&quot;v&quot;:-0.8},{&quot;t&quot;:11.581,&quot;v&quot;:-0.4},{&quot;t&quot;:11.764,&quot;v&quot;:-1.7},{&quot;t&quot;:11.947,&quot;v&quot;:-2.6},{&quot;t&quot;:12.13,&quot;v&quot;:-1.3},{&quot;t&quot;:12.313,&quot;v&quot;:-0.6},{&quot;t&quot;:12.497,&quot;v&quot;:-0.3},{&quot;t&quot;:12.68,&quot;v&quot;:0},{&quot;t&quot;:12.863,&quot;v&quot;:0},{&quot;t&quot;:13.046,&quot;v&quot;:-1.6},{&quot;t&quot;:13.229,&quot;v&quot;:-0.8},{&quot;t&quot;:13.412,&quot;v&quot;:-1.6},{&quot;t&quot;:13.595,&quot;v&quot;:-0.8},{&quot;t&quot;:13.779,&quot;v&quot;:-0.4},{&quot;t&quot;:13.962,&quot;v&quot;:0},{&quot;t&quot;:14.145,&quot;v&quot;:-2},{&quot;t&quot;:14.328,&quot;v&quot;:-1},{&quot;t&quot;:14.511,&quot;v&quot;:-0.5},{&quot;t&quot;:14.694,&quot;v&quot;:-1.8},{&quot;t&quot;:14.877,&quot;v&quot;:-1.6},{&quot;t&quot;:15.061,&quot;v&quot;:-0.7},{&quot;t&quot;:15.244,&quot;v&quot;:-0.4},{&quot;t&quot;:15.427,&quot;v&quot;:0},{&quot;t&quot;:15.793,&quot;v&quot;:0},{&quot;t&quot;:15.976,&quot;v&quot;:-1},{&quot;t&quot;:16.16,&quot;v&quot;:-0.5},{&quot;t&quot;:16.343,&quot;v&quot;:-0.2},{&quot;t&quot;:16.526,&quot;v&quot;:-2.7},{&quot;t&quot;:16.709,&quot;v&quot;:-1.3},{&quot;t&quot;:16.892,&quot;v&quot;:-0.6},{&quot;t&quot;:17.075,&quot;v&quot;:-0.3},{&quot;t&quot;:17.258,&quot;v&quot;:0},{&quot;t&quot;:17.442,&quot;v&quot;:0},{&quot;t&quot;:17.625,&quot;v&quot;:-2.7},{&quot;t&quot;:17.808,&quot;v&quot;:-3.4},{&quot;t&quot;:17.991,&quot;v&quot;:-2.7},{&quot;t&quot;:18.174,&quot;v&quot;:-2.3},{&quot;t&quot;:18.357,&quot;v&quot;:-3.5},{&quot;t&quot;:18.54,&quot;v&quot;:-1.7},{&quot;t&quot;:18.724,&quot;v&quot;:-1.9},{&quot;t&quot;:18.907,&quot;v&quot;:-1},{&quot;t&quot;:19.09,&quot;v&quot;:-2},{&quot;t&quot;:19.273,&quot;v&quot;:-1.1},{&quot;t&quot;:19.456,&quot;v&quot;:-1},{&quot;t&quot;:19.639,&quot;v&quot;:-0.5},{&quot;t&quot;:19.822,&quot;v&quot;:-0.2},{&quot;t&quot;:20.006,&quot;v&quot;:0},{&quot;t&quot;:20.189,&quot;v&quot;:-1.5},{&quot;t&quot;:20.372,&quot;v&quot;:-0.7},{&quot;t&quot;:20.555,&quot;v&quot;:-0.9},{&quot;t&quot;:20.738,&quot;v&quot;:-3.5},{&quot;t&quot;:20.921,&quot;v&quot;:-2.5},{&quot;t&quot;:21.104,&quot;v&quot;:-2.1},{&quot;t&quot;:21.288,&quot;v&quot;:-1},{&quot;t&quot;:21.471,&quot;v&quot;:-0.5},{&quot;t&quot;:21.654,&quot;v&quot;:-0.2},{&quot;t&quot;:21.837,&quot;v&quot;:-2.3},{&quot;t&quot;:22.02,&quot;v&quot;:-1.1},{&quot;t&quot;:22.203,&quot;v&quot;:-3.7},{&quot;t&quot;:22.386,&quot;v&quot;:-2.2},{&quot;t&quot;:22.57,&quot;v&quot;:-2.7},{&quot;t&quot;:22.753,&quot;v&quot;:-1.3},{&quot;t&quot;:22.936,&quot;v&quot;:-1.3},{&quot;t&quot;:23.119,&quot;v&quot;:-2.8},{&quot;t&quot;:23.302,&quot;v&quot;:-1.3},{&quot;t&quot;:23.485,&quot;v&quot;:-0.6},{&quot;t&quot;:23.668,&quot;v&quot;:-3.3},{&quot;t&quot;:23.852,&quot;v&quot;:-1.6},{&quot;t&quot;:24.035,&quot;v&quot;:-0.8},{&quot;t&quot;:24.218,&quot;v&quot;:-0.4},{&quot;t&quot;:24.401,&quot;v&quot;:0},{&quot;t&quot;:24.767,&quot;v&quot;:0},{&quot;t&quot;:24.951,&quot;v&quot;:-1.7},{&quot;t&quot;:25.134,&quot;v&quot;:-1.3},{&quot;t&quot;:25.317,&quot;v&quot;:-0.6},{&quot;t&quot;:25.5,&quot;v&quot;:-2.6},{&quot;t&quot;:25.683,&quot;v&quot;:-2.4},{&quot;t&quot;:25.866,&quot;v&quot;:-3.1},{&quot;t&quot;:26.049,&quot;v&quot;:-2},{&quot;t&quot;:26.233,&quot;v&quot;:-1},{&quot;t&quot;:26.416,&quot;v&quot;:-3.2},{&quot;t&quot;:26.599,&quot;v&quot;:-2.8},{&quot;t&quot;:26.782,&quot;v&quot;:-1.6},{&quot;t&quot;:26.965,&quot;v&quot;:-3.1},{&quot;t&quot;:27.148,&quot;v&quot;:-1.5},{&quot;t&quot;:27.331,&quot;v&quot;:-0.9},{&quot;t&quot;:27.515,&quot;v&quot;:-0.5},{&quot;t&quot;:27.698,&quot;v&quot;:-2.4},{&quot;t&quot;:27.881,&quot;v&quot;:-1.2},{&quot;t&quot;:28.064,&quot;v&quot;:-0.6},{&quot;t&quot;:28.247,&quot;v&quot;:-0.3},{&quot;t&quot;:28.43,&quot;v&quot;:0},{&quot;t&quot;:28.613,&quot;v&quot;:0},{&quot;t&quot;:28.797,&quot;v&quot;:-3},{&quot;t&quot;:28.98,&quot;v&quot;:-3},{&quot;t&quot;:29.163,&quot;v&quot;:-1.6},{&quot;t&quot;:29.346,&quot;v&quot;:-3.7},{&quot;t&quot;:29.529,&quot;v&quot;:-2.8},{&quot;t&quot;:29.712,&quot;v&quot;:-3},{&quot;t&quot;:29.895,&quot;v&quot;:-1.4},{&quot;t&quot;:30.079,&quot;v&quot;:-0.7},{&quot;t&quot;:30.628,&quot;v&quot;:-0.3},{&quot;t&quot;:30.811,&quot;v&quot;:0},{&quot;t&quot;:32.459,&quot;v&quot;:0},{&quot;t&quot;:32.643,&quot;v&quot;:-0.8},{&quot;t&quot;:33.009,&quot;v&quot;:-0.5},{&quot;t&quot;:33.192,&quot;v&quot;:-2},{&quot;t&quot;:33.375,&quot;v&quot;:-2.9},{&quot;t&quot;:33.558,&quot;v&quot;:-1.4},{&quot;t&quot;:33.742,&quot;v&quot;:-0.8},{&quot;t&quot;:33.925,&quot;v&quot;:-0.4},{&quot;t&quot;:34.108,&quot;v&quot;:-2.4},{&quot;t&quot;:34.291,&quot;v&quot;:-1.2},{&quot;t&quot;:34.474,&quot;v&quot;:-0.6},{&quot;t&quot;:34.84,&quot;v&quot;:-0.9},{&quot;t&quot;:35.024,&quot;v&quot;:-2.7},{&quot;t&quot;:35.207,&quot;v&quot;:-1.3},{&quot;t&quot;:35.39,&quot;v&quot;:-0.6},{&quot;t&quot;:35.573,&quot;v&quot;:-0.3},{&quot;t&quot;:35.756,&quot;v&quot;:0},{&quot;t&quot;:35.939,&quot;v&quot;:-0.3},{&quot;t&quot;:36.122,&quot;v&quot;:-1.5},{&quot;t&quot;:36.306,&quot;v&quot;:-1.3},{&quot;t&quot;:36.489,&quot;v&quot;:-2.7},{&quot;t&quot;:36.672,&quot;v&quot;:-1.3},{&quot;t&quot;:36.855,&quot;v&quot;:-2.1},{&quot;t&quot;:37.038,&quot;v&quot;:-1},{&quot;t&quot;:37.221,&quot;v&quot;:-0.5},{&quot;t&quot;:37.404,&quot;v&quot;:-0.9},{&quot;t&quot;:37.588,&quot;v&quot;:-3.6},{&quot;t&quot;:37.771,&quot;v&quot;:-2.3},{&quot;t&quot;:37.954,&quot;v&quot;:-2.2},{&quot;t&quot;:38.137,&quot;v&quot;:-1.6},{&quot;t&quot;:38.32,&quot;v&quot;:-0.9},{&quot;t&quot;:38.503,&quot;v&quot;:-0.4},{&quot;t&quot;:39.053,&quot;v&quot;:0},{&quot;t&quot;:39.236,&quot;v&quot;:-0.9},{&quot;t&quot;:39.419,&quot;v&quot;:-1.2},{&quot;t&quot;:39.602,&quot;v&quot;:-3.6},{&quot;t&quot;:39.785,&quot;v&quot;:-1.7},{&quot;t&quot;:39.968,&quot;v&quot;:-0.8},{&quot;t&quot;:40.152,&quot;v&quot;:-0.4},{&quot;t&quot;:40.335,&quot;v&quot;:0},{&quot;t&quot;:40.701,&quot;v&quot;:0},{&quot;t&quot;:40.884,&quot;v&quot;:-3.7},{&quot;t&quot;:41.067,&quot;v&quot;:-3},{&quot;t&quot;:41.25,&quot;v&quot;:-2.5},{&quot;t&quot;:41.434,&quot;v&quot;:-2.4},{&quot;t&quot;:41.617,&quot;v&quot;:-3.1},{&quot;t&quot;:41.8,&quot;v&quot;:-1.5},{&quot;t&quot;:41.983,&quot;v&quot;:-0.7},{&quot;t&quot;:42.166,&quot;v&quot;:-0.3},{&quot;t&quot;:42.349,&quot;v&quot;:0},{&quot;t&quot;:42.532,&quot;v&quot;:0},{&quot;t&quot;:42.716,&quot;v&quot;:-1.4},{&quot;t&quot;:42.899,&quot;v&quot;:-1},{&quot;t&quot;:43.082,&quot;v&quot;:-0.5},{&quot;t&quot;:43.448,&quot;v&quot;:-0.9},{&quot;t&quot;:43.631,&quot;v&quot;:-2.1},{&quot;t&quot;:43.815,&quot;v&quot;:-1},{&quot;t&quot;:43.998,&quot;v&quot;:-0.8},{&quot;t&quot;:44.181,&quot;v&quot;:-2.1},{&quot;t&quot;:44.547,&quot;v&quot;:-2.5},{&quot;t&quot;:44.73,&quot;v&quot;:-1.2},{&quot;t&quot;:44.913,&quot;v&quot;:-0.6},{&quot;t&quot;:45.097,&quot;v&quot;:-0.3},{&quot;t&quot;:45.28,&quot;v&quot;:0},{&quot;t&quot;:45.463,&quot;v&quot;:-1.1},{&quot;t&quot;:45.646,&quot;v&quot;:-1.3},{&quot;t&quot;:45.829,&quot;v&quot;:-0.6},{&quot;t&quot;:46.012,&quot;v&quot;:-0.3},{&quot;t&quot;:46.195,&quot;v&quot;:0},{&quot;t&quot;:46.562,&quot;v&quot;:0},{&quot;t&quot;:46.745,&quot;v&quot;:-1.6},{&quot;t&quot;:46.928,&quot;v&quot;:-0.8},{&quot;t&quot;:47.111,&quot;v&quot;:-1.5},{&quot;t&quot;:47.294,&quot;v&quot;:-0.7},{&quot;t&quot;:47.477,&quot;v&quot;:-0.3},{&quot;t&quot;:47.661,&quot;v&quot;:0},{&quot;t&quot;:47.844,&quot;v&quot;:0},{&quot;t&quot;:48.027,&quot;v&quot;:-2.4},{&quot;t&quot;:48.21,&quot;v&quot;:-1.3},{&quot;t&quot;:48.393,&quot;v&quot;:-0.6},{&quot;t&quot;:48.576,&quot;v&quot;:-1.2},{&quot;t&quot;:48.759,&quot;v&quot;:-0.6},{&quot;t&quot;:48.943,&quot;v&quot;:-1.2},{&quot;t&quot;:49.126,&quot;v&quot;:-0.6},{&quot;t&quot;:49.309,&quot;v&quot;:-0.3},{&quot;t&quot;:49.492,&quot;v&quot;:-2.7},{&quot;t&quot;:49.675,&quot;v&quot;:-1.3},{&quot;t&quot;:50.041,&quot;v&quot;:-1.1},{&quot;t&quot;:50.225,&quot;v&quot;:-0.5},{&quot;t&quot;:50.408,&quot;v&quot;:-1.5},{&quot;t&quot;:50.591,&quot;v&quot;:-0.7},{&quot;t&quot;:50.957,&quot;v&quot;:-0.2},{&quot;t&quot;:51.14,&quot;v&quot;:0},{&quot;t&quot;:52.056,&quot;v&quot;:0},{&quot;t&quot;:52.239,&quot;v&quot;:-2.7},{&quot;t&quot;:52.606,&quot;v&quot;:-2.3},{&quot;t&quot;:52.789,&quot;v&quot;:-1.1},{&quot;t&quot;:52.972,&quot;v&quot;:-1},{&quot;t&quot;:53.155,&quot;v&quot;:-0.5},{&quot;t&quot;:53.338,&quot;v&quot;:-0.2},{&quot;t&quot;:53.521,&quot;v&quot;:-2.7},{&quot;t&quot;:53.704,&quot;v&quot;:-1.8},{&quot;t&quot;:53.888,&quot;v&quot;:-2.2},{&quot;t&quot;:54.071,&quot;v&quot;:-3},{&quot;t&quot;:54.437,&quot;v&quot;:-2.9},{&quot;t&quot;:54.62,&quot;v&quot;:-1.4},{&quot;t&quot;:54.803,&quot;v&quot;:-0.7},{&quot;t&quot;:54.986,&quot;v&quot;:-0.3},{&quot;t&quot;:55.17,&quot;v&quot;:0},{&quot;t&quot;:56.085,&quot;v&quot;:0},{&quot;t&quot;:56.268,&quot;v&quot;:-3.3},{&quot;t&quot;:56.452,&quot;v&quot;:-1.6},{&quot;t&quot;:56.635,&quot;v&quot;:-0.8},{&quot;t&quot;:56.818,&quot;v&quot;:-0.6},{&quot;t&quot;:57.001,&quot;v&quot;:-0.3},{&quot;t&quot;:57.184,&quot;v&quot;:-1.7},{&quot;t&quot;:57.367,&quot;v&quot;:-2.9},{&quot;t&quot;:57.55,&quot;v&quot;:-1.9},{&quot;t&quot;:57.734,&quot;v&quot;:-1.3},{&quot;t&quot;:57.917,&quot;v&quot;:-0.6},{&quot;t&quot;:58.466,&quot;v&quot;:-0.4},{&quot;t&quot;:58.649,&quot;v&quot;:0},{&quot;t&quot;:58.832,&quot;v&quot;:0},{&quot;t&quot;:59.016,&quot;v&quot;:-4.1},{&quot;t&quot;:59.199,&quot;v&quot;:-3.2},{&quot;t&quot;:59.565,&quot;v&quot;:-2.8},{&quot;t&quot;:59.748,&quot;v&quot;:-1.3},{&quot;t&quot;:59.931,&quot;v&quot;:-0.6},{&quot;t&quot;:60.298,&quot;v&quot;:-0.3},{&quot;t&quot;:60.481,&quot;v&quot;:-1.7},{&quot;t&quot;:60.664,&quot;v&quot;:-0.8},{&quot;t&quot;:61.213,&quot;v&quot;:-0.7},{&quot;t&quot;:61.397,&quot;v&quot;:-0.3},{&quot;t&quot;:61.946,&quot;v&quot;:0},{&quot;t&quot;:62.129,&quot;v&quot;:-2.2},{&quot;t&quot;:62.312,&quot;v&quot;:-1.1},{&quot;t&quot;:62.495,&quot;v&quot;:-2.1},{&quot;t&quot;:62.679,&quot;v&quot;:-2.6},{&quot;t&quot;:62.862,&quot;v&quot;:-1.3},{&quot;t&quot;:63.045,&quot;v&quot;:-1.9},{&quot;t&quot;:63.228,&quot;v&quot;:-0.9},{&quot;t&quot;:63.411,&quot;v&quot;:-2},{&quot;t&quot;:63.594,&quot;v&quot;:-2.2},{&quot;t&quot;:63.777,&quot;v&quot;:-1.2},{&quot;t&quot;:63.961,&quot;v&quot;:-1.5},{&quot;t&quot;:64.144,&quot;v&quot;:-0.7},{&quot;t&quot;:64.327,&quot;v&quot;:-1.5},{&quot;t&quot;:64.51,&quot;v&quot;:-0.7},{&quot;t&quot;:64.693,&quot;v&quot;:-1.5},{&quot;t&quot;:64.876,&quot;v&quot;:-0.7},{&quot;t&quot;:65.059,&quot;v&quot;:-0.4},{&quot;t&quot;:65.243,&quot;v&quot;:0},{&quot;t&quot;:65.609,&quot;v&quot;:0},{&quot;t&quot;:65.792,&quot;v&quot;:-2.6},{&quot;t&quot;:65.975,&quot;v&quot;:-3.1},{&quot;t&quot;:66.158,&quot;v&quot;:-1.7},{&quot;t&quot;:66.341,&quot;v&quot;:-0.9},{&quot;t&quot;:66.525,&quot;v&quot;:-0.4},{&quot;t&quot;:66.708,&quot;v&quot;:-0.8},{&quot;t&quot;:66.891,&quot;v&quot;:-1.5},{&quot;t&quot;:67.074,&quot;v&quot;:-0.7},{&quot;t&quot;:67.807,&quot;v&quot;:-0.6},{&quot;t&quot;:67.99,&quot;v&quot;:-1.4},{&quot;t&quot;:68.173,&quot;v&quot;:-1.1},{&quot;t&quot;:68.356,&quot;v&quot;:-2.7},{&quot;t&quot;:68.539,&quot;v&quot;:-3.6},{&quot;t&quot;:68.722,&quot;v&quot;:-1.7},{&quot;t&quot;:68.906,&quot;v&quot;:-0.8},{&quot;t&quot;:69.089,&quot;v&quot;:-0.4},{&quot;t&quot;:69.272,&quot;v&quot;:-3.5},{&quot;t&quot;:69.455,&quot;v&quot;:-1.7},{&quot;t&quot;:69.638,&quot;v&quot;:-0.8},{&quot;t&quot;:69.821,&quot;v&quot;:-2.5},{&quot;t&quot;:70.004,&quot;v&quot;:-1.8},{&quot;t&quot;:70.188,&quot;v&quot;:-0.8},{&quot;t&quot;:70.371,&quot;v&quot;:-0.4},{&quot;t&quot;:70.554,&quot;v&quot;:0},{&quot;t&quot;:71.836,&quot;v&quot;:0},{&quot;t&quot;:72.019,&quot;v&quot;:-2.1},{&quot;t&quot;:72.385,&quot;v&quot;:-1.9},{&quot;t&quot;:72.568,&quot;v&quot;:-2.8},{&quot;t&quot;:72.752,&quot;v&quot;:-2.8},{&quot;t&quot;:72.935,&quot;v&quot;:-1.3},{&quot;t&quot;:73.118,&quot;v&quot;:-0.6},{&quot;t&quot;:73.252,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n4.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.043,&quot;v&quot;:0},{&quot;t&quot;:0.226,&quot;v&quot;:-3.2},{&quot;t&quot;:0.409,&quot;v&quot;:-9.4},{&quot;t&quot;:2.057,&quot;v&quot;:-9.6},{&quot;t&quot;:2.24,&quot;v&quot;:-8.6},{&quot;t&quot;:2.424,&quot;v&quot;:-9.6},{&quot;t&quot;:3.339,&quot;v&quot;:-9.6},{&quot;t&quot;:3.522,&quot;v&quot;:-8.6},{&quot;t&quot;:3.706,&quot;v&quot;:-7.6},{&quot;t&quot;:3.889,&quot;v&quot;:-9.5},{&quot;t&quot;:5.171,&quot;v&quot;:-9.6},{&quot;t&quot;:5.354,&quot;v&quot;:-8.6},{&quot;t&quot;:5.537,&quot;v&quot;:-9.6},{&quot;t&quot;:6.086,&quot;v&quot;:-9.6},{&quot;t&quot;:6.27,&quot;v&quot;:-8.6},{&quot;t&quot;:6.453,&quot;v&quot;:-7.6},{&quot;t&quot;:6.636,&quot;v&quot;:-6.8},{&quot;t&quot;:6.819,&quot;v&quot;:-6.1},{&quot;t&quot;:7.002,&quot;v&quot;:-9.5},{&quot;t&quot;:7.735,&quot;v&quot;:-9.6},{&quot;t&quot;:7.918,&quot;v&quot;:-8.6},{&quot;t&quot;:8.101,&quot;v&quot;:-7.6},{&quot;t&quot;:8.284,&quot;v&quot;:-9.5},{&quot;t&quot;:10.116,&quot;v&quot;:-9.6},{&quot;t&quot;:10.299,&quot;v&quot;:-8.6},{&quot;t&quot;:10.482,&quot;v&quot;:-7.6},{&quot;t&quot;:10.665,&quot;v&quot;:-9.5},{&quot;t&quot;:12.313,&quot;v&quot;:-9.6},{&quot;t&quot;:12.497,&quot;v&quot;:-8.6},{&quot;t&quot;:12.68,&quot;v&quot;:-9.6},{&quot;t&quot;:15.061,&quot;v&quot;:-9.6},{&quot;t&quot;:15.244,&quot;v&quot;:-8.6},{&quot;t&quot;:15.427,&quot;v&quot;:-9.6},{&quot;t&quot;:16.526,&quot;v&quot;:-9.6},{&quot;t&quot;:16.709,&quot;v&quot;:-8.6},{&quot;t&quot;:16.892,&quot;v&quot;:-7.6},{&quot;t&quot;:17.075,&quot;v&quot;:-6.8},{&quot;t&quot;:17.258,&quot;v&quot;:-6.1},{&quot;t&quot;:17.442,&quot;v&quot;:-5.4},{&quot;t&quot;:17.625,&quot;v&quot;:-9.5},{&quot;t&quot;:18.357,&quot;v&quot;:-9.6},{&quot;t&quot;:18.54,&quot;v&quot;:-8.6},{&quot;t&quot;:18.724,&quot;v&quot;:-9.6},{&quot;t&quot;:20.189,&quot;v&quot;:-9.6},{&quot;t&quot;:20.372,&quot;v&quot;:-8.6},{&quot;t&quot;:20.555,&quot;v&quot;:-9.6},{&quot;t&quot;:23.668,&quot;v&quot;:-9.6},{&quot;t&quot;:23.852,&quot;v&quot;:-8.6},{&quot;t&quot;:24.035,&quot;v&quot;:-7.6},{&quot;t&quot;:24.218,&quot;v&quot;:-6.8},{&quot;t&quot;:24.401,&quot;v&quot;:-9.5},{&quot;t&quot;:25.134,&quot;v&quot;:-9.6},{&quot;t&quot;:25.317,&quot;v&quot;:-8.6},{&quot;t&quot;:25.5,&quot;v&quot;:-9.6},{&quot;t&quot;:26.965,&quot;v&quot;:-9.6},{&quot;t&quot;:27.148,&quot;v&quot;:-8.6},{&quot;t&quot;:27.331,&quot;v&quot;:-9.6},{&quot;t&quot;:27.698,&quot;v&quot;:-9.6},{&quot;t&quot;:27.881,&quot;v&quot;:-8.6},{&quot;t&quot;:28.064,&quot;v&quot;:-7.6},{&quot;t&quot;:28.247,&quot;v&quot;:-6.8},{&quot;t&quot;:28.43,&quot;v&quot;:-6.1},{&quot;t&quot;:28.613,&quot;v&quot;:-5.4},{&quot;t&quot;:28.797,&quot;v&quot;:-9.5},{&quot;t&quot;:30.811,&quot;v&quot;:-9.6},{&quot;t&quot;:30.994,&quot;v&quot;:-8.6},{&quot;t&quot;:31.177,&quot;v&quot;:-9.6},{&quot;t&quot;:31.361,&quot;v&quot;:-8.5},{&quot;t&quot;:31.544,&quot;v&quot;:-9.6},{&quot;t&quot;:31.91,&quot;v&quot;:-9.6},{&quot;t&quot;:32.093,&quot;v&quot;:-8.6},{&quot;t&quot;:32.276,&quot;v&quot;:-7.6},{&quot;t&quot;:32.459,&quot;v&quot;:-9.5},{&quot;t&quot;:35.024,&quot;v&quot;:-9.6},{&quot;t&quot;:35.207,&quot;v&quot;:-8.6},{&quot;t&quot;:35.39,&quot;v&quot;:-7.6},{&quot;t&quot;:35.573,&quot;v&quot;:-6.8},{&quot;t&quot;:35.756,&quot;v&quot;:-9.5},{&quot;t&quot;:38.32,&quot;v&quot;:-9.6},{&quot;t&quot;:38.503,&quot;v&quot;:-8.6},{&quot;t&quot;:38.686,&quot;v&quot;:-9.6},{&quot;t&quot;:39.602,&quot;v&quot;:-9.6},{&quot;t&quot;:39.785,&quot;v&quot;:-8.6},{&quot;t&quot;:39.968,&quot;v&quot;:-7.6},{&quot;t&quot;:40.152,&quot;v&quot;:-6.8},{&quot;t&quot;:40.335,&quot;v&quot;:-6.1},{&quot;t&quot;:40.518,&quot;v&quot;:-5.4},{&quot;t&quot;:40.701,&quot;v&quot;:-9.5},{&quot;t&quot;:41.8,&quot;v&quot;:-9.6},{&quot;t&quot;:41.983,&quot;v&quot;:-8.6},{&quot;t&quot;:42.166,&quot;v&quot;:-9.6},{&quot;t&quot;:42.349,&quot;v&quot;:-8.5},{&quot;t&quot;:42.532,&quot;v&quot;:-9.6},{&quot;t&quot;:44.547,&quot;v&quot;:-9.6},{&quot;t&quot;:44.73,&quot;v&quot;:-8.6},{&quot;t&quot;:44.913,&quot;v&quot;:-7.6},{&quot;t&quot;:45.097,&quot;v&quot;:-6.8},{&quot;t&quot;:45.28,&quot;v&quot;:-9.5},{&quot;t&quot;:50.041,&quot;v&quot;:-9.6},{&quot;t&quot;:50.225,&quot;v&quot;:-8.6},{&quot;t&quot;:50.408,&quot;v&quot;:-9.6},{&quot;t&quot;:50.774,&quot;v&quot;:-9.6},{&quot;t&quot;:50.957,&quot;v&quot;:-8.6},{&quot;t&quot;:51.14,&quot;v&quot;:-9.6},{&quot;t&quot;:51.324,&quot;v&quot;:-8.5},{&quot;t&quot;:51.507,&quot;v&quot;:-7.6},{&quot;t&quot;:51.69,&quot;v&quot;:-6.8},{&quot;t&quot;:51.873,&quot;v&quot;:-6.1},{&quot;t&quot;:52.056,&quot;v&quot;:-9.5},{&quot;t&quot;:53.155,&quot;v&quot;:-9.6},{&quot;t&quot;:53.338,&quot;v&quot;:-8.6},{&quot;t&quot;:53.521,&quot;v&quot;:-9.6},{&quot;t&quot;:56.268,&quot;v&quot;:-9.6},{&quot;t&quot;:56.452,&quot;v&quot;:-8.6},{&quot;t&quot;:56.635,&quot;v&quot;:-9.6},{&quot;t&quot;:58.466,&quot;v&quot;:-9.6},{&quot;t&quot;:58.649,&quot;v&quot;:-8.6},{&quot;t&quot;:58.832,&quot;v&quot;:-7.6},{&quot;t&quot;:59.016,&quot;v&quot;:-9.5},{&quot;t&quot;:60.481,&quot;v&quot;:-9.6},{&quot;t&quot;:60.664,&quot;v&quot;:-8.6},{&quot;t&quot;:60.847,&quot;v&quot;:-9.6},{&quot;t&quot;:61.58,&quot;v&quot;:-9.6},{&quot;t&quot;:61.763,&quot;v&quot;:-8.6},{&quot;t&quot;:61.946,&quot;v&quot;:-7.6},{&quot;t&quot;:62.129,&quot;v&quot;:-9.5},{&quot;t&quot;:64.693,&quot;v&quot;:-9.6},{&quot;t&quot;:64.876,&quot;v&quot;:-8.6},{&quot;t&quot;:65.059,&quot;v&quot;:-7.6},{&quot;t&quot;:65.243,&quot;v&quot;:-6.8},{&quot;t&quot;:65.426,&quot;v&quot;:-6.1},{&quot;t&quot;:65.609,&quot;v&quot;:-5.4},{&quot;t&quot;:65.792,&quot;v&quot;:-9.5},{&quot;t&quot;:67.257,&quot;v&quot;:-9.6},{&quot;t&quot;:67.44,&quot;v&quot;:-8.6},{&quot;t&quot;:67.623,&quot;v&quot;:-9.6},{&quot;t&quot;:68.539,&quot;v&quot;:-9.6},{&quot;t&quot;:68.722,&quot;v&quot;:-8.6},{&quot;t&quot;:68.906,&quot;v&quot;:-7.6},{&quot;t&quot;:69.089,&quot;v&quot;:-9.5},{&quot;t&quot;:69.272,&quot;v&quot;:-9.6},{&quot;t&quot;:69.455,&quot;v&quot;:-8.6},{&quot;t&quot;:69.638,&quot;v&quot;:-9.6},{&quot;t&quot;:71.47,&quot;v&quot;:-9.6},{&quot;t&quot;:71.653,&quot;v&quot;:-8.6},{&quot;t&quot;:71.836,&quot;v&quot;:-7.6},{&quot;t&quot;:72.019,&quot;v&quot;:-9.5},{&quot;t&quot;:72.752,&quot;v&quot;:-9.6},{&quot;t&quot;:72.935,&quot;v&quot;:-8.6},{&quot;t&quot;:73.118,&quot;v&quot;:-7.6},{&quot;t&quot;:73.301,&quot;v&quot;:-6.8},{&quot;t&quot;:73.484,&quot;v&quot;:-6.1},{&quot;t&quot;:73.667,&quot;v&quot;:-5.4},{&quot;t&quot;:73.85,&quot;v&quot;:-4.8},{&quot;t&quot;:74.034,&quot;v&quot;:-4.3},{&quot;t&quot;:74.217,&quot;v&quot;:-3.8},{&quot;t&quot;:74.4,&quot;v&quot;:-3.4},{&quot;t&quot;:74.583,&quot;v&quot;:-3.1},{&quot;t&quot;:74.766,&quot;v&quot;:-2.7},{&quot;t&quot;:74.949,&quot;v&quot;:-2.4},{&quot;t&quot;:75.132,&quot;v&quot;:-2.2},{&quot;t&quot;:75.316,&quot;v&quot;:-1.9},{&quot;t&quot;:75.682,&quot;v&quot;:-1.5},{&quot;t&quot;:75.865,&quot;v&quot;:-1.4},{&quot;t&quot;:76.598,&quot;v&quot;:-0.9},{&quot;t&quot;:76.781,&quot;v&quot;:-0.8},{&quot;t&quot;:77.88,&quot;v&quot;:-0.4},{&quot;t&quot;:78.063,&quot;v&quot;:-0.3},{&quot;t&quot;:78.795,&quot;v&quot;:-0.2},{&quot;t&quot;:78.979,&quot;v&quot;:0}]}]}"></audio>
+<audio id="el-sfx-0" src="assets/sfx/impact-bass-1.mp3" data-start="0.32" data-duration="0.6" data-track-index="30" data-volume="0.35"></audio>
+<audio id="el-sfx-1" src="assets/sfx/whoosh-short.mp3" data-start="6.85" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-2" src="assets/sfx/whoosh-short.mp3" data-start="17.40" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-3" src="assets/sfx/pop.mp3" data-start="29.68" data-duration="0.4" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-4" src="assets/sfx/whoosh-short.mp3" data-start="40.43" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-5" src="assets/sfx/click-soft.mp3" data-start="41.73" data-duration="0.35" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-6" src="assets/sfx/whoosh-short.mp3" data-start="51.92" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-7" src="assets/sfx/impact-bass-1.mp3" data-start="56.62" data-duration="0.6" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-8" src="assets/sfx/whoosh-short.mp3" data-start="65.59" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-9" src="assets/sfx/pop.mp3" data-start="66.79" data-duration="0.35" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-10" src="assets/sfx/click-soft.mp3" data-start="67.14" data-duration="0.35" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-11" src="assets/sfx/chime.mp3" data-start="69.09" data-duration="1.2" data-track-index="30" data-volume="0.32"></audio>
+
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.set('#brand-anchor', { opacity: 1 }, 6.95);
+tl.to('.blob', { x: '+=40', y: '-=30', duration: 18, ease: 'sine.inOut', repeat: -1, yoyo: true, stagger: 3 }, 0);
+tl.to('#bg-stars circle', { opacity: '+=0.25', duration: 4, ease: 'sine.inOut', repeat: -1, yoyo: true, stagger: { each: 0.15, from: 'random' } }, 0);
+tl.fromTo('#cc0', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 0.04);
+tl.to('#cc0', { autoAlpha: 0, duration: 0.05 }, 0.81);
+tl.to('#w0_0', { color: '#FF5A1F', duration: 0.1 }, 0.04);
+tl.to('#w0_1', { color: '#FF5A1F', duration: 0.1 }, 0.21);
+tl.to('#w0_2', { color: '#FF5A1F', duration: 0.1 }, 0.41);
+tl.to('#w0_3', { color: '#FF5A1F', duration: 0.1 }, 0.62);
+tl.fromTo('#cc1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 0.83);
+tl.to('#cc1', { autoAlpha: 0, duration: 0.05 }, 1.56);
+tl.to('#w1_0', { color: '#FF5A1F', duration: 0.1 }, 0.83);
+tl.to('#w1_1', { color: '#FF5A1F', duration: 0.1 }, 1.12);
+tl.to('#w1_2', { color: '#FF5A1F', duration: 0.1 }, 1.25);
+tl.to('#w1_3', { color: '#FF5A1F', duration: 0.1 }, 1.41);
+tl.fromTo('#cc2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 1.58);
+tl.to('#cc2', { autoAlpha: 0, duration: 0.05 }, 2.27);
+tl.to('#w2_0', { color: '#FF5A1F', duration: 0.1 }, 1.58);
+tl.to('#w2_1', { color: '#FF5A1F', duration: 0.1 }, 1.83);
+tl.to('#w2_2', { color: '#FF5A1F', duration: 0.1 }, 2.00);
+tl.fromTo('#cc3', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 2.29);
+tl.to('#cc3', { autoAlpha: 0, duration: 0.05 }, 2.98);
+tl.to('#w3_0', { color: '#FF5A1F', duration: 0.1 }, 2.29);
+tl.to('#w3_1', { color: '#FF5A1F', duration: 0.1 }, 2.46);
+tl.to('#w3_2', { color: '#FF5A1F', duration: 0.1 }, 2.62);
+tl.to('#w3_3', { color: '#FF5A1F', duration: 0.1 }, 2.83);
+tl.fromTo('#cc4', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 3.00);
+tl.to('#cc4', { autoAlpha: 0, duration: 0.05 }, 3.52);
+tl.to('#w4_0', { color: '#FF5A1F', duration: 0.1 }, 3.00);
+tl.to('#w4_1', { color: '#FF5A1F', duration: 0.1 }, 3.20);
+tl.fromTo('#cc5', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 3.54);
+tl.to('#cc5', { autoAlpha: 0, duration: 0.05 }, 4.18);
+tl.to('#w5_0', { color: '#FF5A1F', duration: 0.1 }, 3.54);
+tl.to('#w5_1', { color: '#FF5A1F', duration: 0.1 }, 3.75);
+tl.to('#w5_2', { color: '#FF5A1F', duration: 0.1 }, 3.91);
+tl.to('#w5_3', { color: '#FF5A1F', duration: 0.1 }, 4.04);
+tl.fromTo('#cc6', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 4.20);
+tl.to('#cc6', { autoAlpha: 0, duration: 0.05 }, 4.98);
+tl.to('#w6_0', { color: '#FF5A1F', duration: 0.1 }, 4.20);
+tl.to('#w6_1', { color: '#FF5A1F', duration: 0.1 }, 4.41);
+tl.to('#w6_2', { color: '#FF5A1F', duration: 0.1 }, 4.58);
+tl.to('#w6_3', { color: '#FF5A1F', duration: 0.1 }, 4.70);
+tl.fromTo('#cc7', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 5.00);
+tl.to('#cc7', { autoAlpha: 0, duration: 0.05 }, 5.85);
+tl.to('#w7_0', { color: '#FF5A1F', duration: 0.1 }, 5.00);
+tl.to('#w7_1', { color: '#FF5A1F', duration: 0.1 }, 5.25);
+tl.to('#w7_2', { color: '#FF5A1F', duration: 0.1 }, 5.50);
+tl.to('#w7_3', { color: '#FF5A1F', duration: 0.1 }, 5.70);
+tl.fromTo('#cc8', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 5.87);
+tl.to('#cc8', { autoAlpha: 0, duration: 0.05 }, 6.37);
+tl.to('#w8_0', { color: '#FF5A1F', duration: 0.1 }, 5.87);
+tl.fromTo('#cc9', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 6.99);
+tl.to('#cc9', { autoAlpha: 0, duration: 0.05 }, 7.64);
+tl.to('#w9_0', { color: '#FF5A1F', duration: 0.1 }, 6.99);
+tl.to('#w9_1', { color: '#FF5A1F', duration: 0.1 }, 7.10);
+tl.to('#w9_2', { color: '#FF5A1F', duration: 0.1 }, 7.29);
+tl.to('#w9_3', { color: '#FF5A1F', duration: 0.1 }, 7.44);
+tl.fromTo('#cc10', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 7.66);
+tl.to('#cc10', { autoAlpha: 0, duration: 0.05 }, 8.08);
+tl.to('#w10_0', { color: '#FF5A1F', duration: 0.1 }, 7.66);
+tl.to('#w10_1', { color: '#FF5A1F', duration: 0.1 }, 7.84);
+tl.fromTo('#cc11', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 8.10);
+tl.to('#cc11', { autoAlpha: 0, duration: 0.05 }, 8.83);
+tl.to('#w11_0', { color: '#FF5A1F', duration: 0.1 }, 8.10);
+tl.to('#w11_1', { color: '#FF5A1F', duration: 0.1 }, 8.29);
+tl.to('#w11_2', { color: '#FF5A1F', duration: 0.1 }, 8.51);
+tl.to('#w11_3', { color: '#FF5A1F', duration: 0.1 }, 8.70);
+tl.fromTo('#cc12', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 8.85);
+tl.to('#cc12', { autoAlpha: 0, duration: 0.05 }, 9.57);
+tl.to('#w12_0', { color: '#FF5A1F', duration: 0.1 }, 8.85);
+tl.to('#w12_1', { color: '#FF5A1F', duration: 0.1 }, 9.07);
+tl.to('#w12_2', { color: '#FF5A1F', duration: 0.1 }, 9.22);
+tl.to('#w12_3', { color: '#FF5A1F', duration: 0.1 }, 9.41);
+tl.fromTo('#cc13', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 9.59);
+tl.to('#cc13', { autoAlpha: 0, duration: 0.05 }, 10.17);
+tl.to('#w13_0', { color: '#FF5A1F', duration: 0.1 }, 9.59);
+tl.to('#w13_1', { color: '#FF5A1F', duration: 0.1 }, 9.78);
+tl.to('#w13_2', { color: '#FF5A1F', duration: 0.1 }, 9.93);
+tl.to('#w13_3', { color: '#FF5A1F', duration: 0.1 }, 10.07);
+tl.fromTo('#cc14', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 10.19);
+tl.to('#cc14', { autoAlpha: 0, duration: 0.05 }, 10.72);
+tl.to('#w14_0', { color: '#FF5A1F', duration: 0.1 }, 10.19);
+tl.to('#w14_1', { color: '#FF5A1F', duration: 0.1 }, 10.37);
+tl.fromTo('#cc15', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 10.74);
+tl.to('#cc15', { autoAlpha: 0, duration: 0.05 }, 11.32);
+tl.to('#w15_0', { color: '#FF5A1F', duration: 0.1 }, 10.74);
+tl.to('#w15_1', { color: '#FF5A1F', duration: 0.1 }, 10.89);
+tl.to('#w15_2', { color: '#FF5A1F', duration: 0.1 }, 11.04);
+tl.to('#w15_3', { color: '#FF5A1F', duration: 0.1 }, 11.15);
+tl.fromTo('#cc16', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 11.34);
+tl.to('#cc16', { autoAlpha: 0, duration: 0.05 }, 12.02);
+tl.to('#w16_0', { color: '#FF5A1F', duration: 0.1 }, 11.34);
+tl.to('#w16_1', { color: '#FF5A1F', duration: 0.1 }, 11.52);
+tl.to('#w16_2', { color: '#FF5A1F', duration: 0.1 }, 11.71);
+tl.to('#w16_3', { color: '#FF5A1F', duration: 0.1 }, 11.89);
+tl.fromTo('#cc17', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 12.04);
+tl.to('#cc17', { autoAlpha: 0, duration: 0.05 }, 12.51);
+tl.to('#w17_0', { color: '#FF5A1F', duration: 0.1 }, 12.04);
+tl.to('#w17_1', { color: '#FF5A1F', duration: 0.1 }, 12.23);
+tl.fromTo('#cc18', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 12.53);
+tl.to('#cc18', { autoAlpha: 0, duration: 0.05 }, 13.25);
+tl.to('#w18_0', { color: '#FF5A1F', duration: 0.1 }, 12.53);
+tl.to('#w18_1', { color: '#FF5A1F', duration: 0.1 }, 12.75);
+tl.to('#w18_2', { color: '#FF5A1F', duration: 0.1 }, 12.90);
+tl.to('#w18_3', { color: '#FF5A1F', duration: 0.1 }, 13.05);
+tl.fromTo('#cc19', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 13.27);
+tl.to('#cc19', { autoAlpha: 0, duration: 0.05 }, 13.92);
+tl.to('#w19_0', { color: '#FF5A1F', duration: 0.1 }, 13.27);
+tl.to('#w19_1', { color: '#FF5A1F', duration: 0.1 }, 13.42);
+tl.to('#w19_2', { color: '#FF5A1F', duration: 0.1 }, 13.60);
+tl.to('#w19_3', { color: '#FF5A1F', duration: 0.1 }, 13.75);
+tl.fromTo('#cc20', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 13.94);
+tl.to('#cc20', { autoAlpha: 0, duration: 0.05 }, 14.66);
+tl.to('#w20_0', { color: '#FF5A1F', duration: 0.1 }, 13.94);
+tl.to('#w20_1', { color: '#FF5A1F', duration: 0.1 }, 14.12);
+tl.to('#w20_2', { color: '#FF5A1F', duration: 0.1 }, 14.31);
+tl.to('#w20_3', { color: '#FF5A1F', duration: 0.1 }, 14.50);
+tl.fromTo('#cc21', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 14.68);
+tl.to('#cc21', { autoAlpha: 0, duration: 0.05 }, 15.37);
+tl.to('#w21_0', { color: '#FF5A1F', duration: 0.1 }, 14.68);
+tl.to('#w21_1', { color: '#FF5A1F', duration: 0.1 }, 14.83);
+tl.to('#w21_2', { color: '#FF5A1F', duration: 0.1 }, 15.13);
+tl.fromTo('#cc22', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 15.39);
+tl.to('#cc22', { autoAlpha: 0, duration: 0.05 }, 16.04);
+tl.to('#w22_0', { color: '#FF5A1F', duration: 0.1 }, 15.39);
+tl.to('#w22_1', { color: '#FF5A1F', duration: 0.1 }, 15.57);
+tl.to('#w22_2', { color: '#FF5A1F', duration: 0.1 }, 15.72);
+tl.to('#w22_3', { color: '#FF5A1F', duration: 0.1 }, 15.91);
+tl.fromTo('#cc23', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 16.06);
+tl.to('#cc23', { autoAlpha: 0, duration: 0.05 }, 16.90);
+tl.to('#w23_0', { color: '#FF5A1F', duration: 0.1 }, 16.06);
+tl.to('#w23_1', { color: '#FF5A1F', duration: 0.1 }, 16.20);
+tl.to('#w23_2', { color: '#FF5A1F', duration: 0.1 }, 16.35);
+tl.fromTo('#cc24', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 17.54);
+tl.to('#cc24', { autoAlpha: 0, duration: 0.05 }, 18.18);
+tl.to('#w24_0', { color: '#FF5A1F', duration: 0.1 }, 17.54);
+tl.to('#w24_1', { color: '#FF5A1F', duration: 0.1 }, 17.75);
+tl.to('#w24_2', { color: '#FF5A1F', duration: 0.1 }, 17.91);
+tl.to('#w24_3', { color: '#FF5A1F', duration: 0.1 }, 18.07);
+tl.fromTo('#cc25', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 18.20);
+tl.to('#cc25', { autoAlpha: 0, duration: 0.05 }, 18.63);
+tl.to('#w25_0', { color: '#FF5A1F', duration: 0.1 }, 18.20);
+tl.to('#w25_1', { color: '#FF5A1F', duration: 0.1 }, 18.36);
+tl.fromTo('#cc26', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 18.65);
+tl.to('#cc26', { autoAlpha: 0, duration: 0.05 }, 19.37);
+tl.to('#w26_0', { color: '#FF5A1F', duration: 0.1 }, 18.65);
+tl.to('#w26_1', { color: '#FF5A1F', duration: 0.1 }, 18.77);
+tl.to('#w26_2', { color: '#FF5A1F', duration: 0.1 }, 18.94);
+tl.to('#w26_3', { color: '#FF5A1F', duration: 0.1 }, 19.18);
+tl.fromTo('#cc27', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 19.39);
+tl.to('#cc27', { autoAlpha: 0, duration: 0.05 }, 20.15);
+tl.to('#w27_0', { color: '#FF5A1F', duration: 0.1 }, 19.39);
+tl.to('#w27_1', { color: '#FF5A1F', duration: 0.1 }, 19.59);
+tl.to('#w27_2', { color: '#FF5A1F', duration: 0.1 }, 19.80);
+tl.to('#w27_3', { color: '#FF5A1F', duration: 0.1 }, 19.96);
+tl.fromTo('#cc28', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 20.17);
+tl.to('#cc28', { autoAlpha: 0, duration: 0.05 }, 20.68);
+tl.to('#w28_0', { color: '#FF5A1F', duration: 0.1 }, 20.17);
+tl.to('#w28_1', { color: '#FF5A1F', duration: 0.1 }, 20.25);
+tl.to('#w28_2', { color: '#FF5A1F', duration: 0.1 }, 20.41);
+tl.fromTo('#cc29', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 20.70);
+tl.to('#cc29', { autoAlpha: 0, duration: 0.05 }, 21.38);
+tl.to('#w29_0', { color: '#FF5A1F', duration: 0.1 }, 20.70);
+tl.to('#w29_1', { color: '#FF5A1F', duration: 0.1 }, 20.86);
+tl.to('#w29_2', { color: '#FF5A1F', duration: 0.1 }, 20.99);
+tl.to('#w29_3', { color: '#FF5A1F', duration: 0.1 }, 21.23);
+tl.fromTo('#cc30', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 21.40);
+tl.to('#cc30', { autoAlpha: 0, duration: 0.05 }, 22.08);
+tl.to('#w30_0', { color: '#FF5A1F', duration: 0.1 }, 21.40);
+tl.to('#w30_1', { color: '#FF5A1F', duration: 0.1 }, 21.60);
+tl.to('#w30_2', { color: '#FF5A1F', duration: 0.1 }, 21.77);
+tl.to('#w30_3', { color: '#FF5A1F', duration: 0.1 }, 21.97);
+tl.fromTo('#cc31', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 22.10);
+tl.to('#cc31', { autoAlpha: 0, duration: 0.05 }, 22.77);
+tl.to('#w31_0', { color: '#FF5A1F', duration: 0.1 }, 22.10);
+tl.to('#w31_1', { color: '#FF5A1F', duration: 0.1 }, 22.30);
+tl.to('#w31_2', { color: '#FF5A1F', duration: 0.1 }, 22.42);
+tl.to('#w31_3', { color: '#FF5A1F', duration: 0.1 }, 22.59);
+tl.fromTo('#cc32', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 22.79);
+tl.to('#cc32', { autoAlpha: 0, duration: 0.05 }, 23.63);
+tl.to('#w32_0', { color: '#FF5A1F', duration: 0.1 }, 22.79);
+tl.to('#w32_1', { color: '#FF5A1F', duration: 0.1 }, 23.00);
+tl.to('#w32_2', { color: '#FF5A1F', duration: 0.1 }, 23.16);
+tl.to('#w32_3', { color: '#FF5A1F', duration: 0.1 }, 23.49);
+tl.fromTo('#cc33', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 23.65);
+tl.to('#cc33', { autoAlpha: 0, duration: 0.05 }, 24.09);
+tl.to('#w33_0', { color: '#FF5A1F', duration: 0.1 }, 23.65);
+tl.to('#w33_1', { color: '#FF5A1F', duration: 0.1 }, 23.82);
+tl.fromTo('#cc34', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 24.11);
+tl.to('#cc34', { autoAlpha: 0, duration: 0.05 }, 24.74);
+tl.to('#w34_0', { color: '#FF5A1F', duration: 0.1 }, 24.11);
+tl.to('#w34_1', { color: '#FF5A1F', duration: 0.1 }, 24.23);
+tl.to('#w34_2', { color: '#FF5A1F', duration: 0.1 }, 24.43);
+tl.to('#w34_3', { color: '#FF5A1F', duration: 0.1 }, 24.56);
+tl.fromTo('#cc35', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 24.76);
+tl.to('#cc35', { autoAlpha: 0, duration: 0.05 }, 25.56);
+tl.to('#w35_0', { color: '#FF5A1F', duration: 0.1 }, 24.76);
+tl.to('#w35_1', { color: '#FF5A1F', duration: 0.1 }, 25.09);
+tl.to('#w35_2', { color: '#FF5A1F', duration: 0.1 }, 25.26);
+tl.to('#w35_3', { color: '#FF5A1F', duration: 0.1 }, 25.42);
+tl.fromTo('#cc36', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 25.58);
+tl.to('#cc36', { autoAlpha: 0, duration: 0.05 }, 26.38);
+tl.to('#w36_0', { color: '#FF5A1F', duration: 0.1 }, 25.58);
+tl.to('#w36_1', { color: '#FF5A1F', duration: 0.1 }, 25.79);
+tl.to('#w36_2', { color: '#FF5A1F', duration: 0.1 }, 25.99);
+tl.to('#w36_3', { color: '#FF5A1F', duration: 0.1 }, 26.16);
+tl.fromTo('#cc37', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 26.40);
+tl.to('#cc37', { autoAlpha: 0, duration: 0.05 }, 27.08);
+tl.to('#w37_0', { color: '#FF5A1F', duration: 0.1 }, 26.40);
+tl.to('#w37_1', { color: '#FF5A1F', duration: 0.1 }, 26.57);
+tl.to('#w37_2', { color: '#FF5A1F', duration: 0.1 }, 26.77);
+tl.fromTo('#cc38', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 27.10);
+tl.to('#cc38', { autoAlpha: 0, duration: 0.05 }, 28.05);
+tl.to('#w38_0', { color: '#FF5A1F', duration: 0.1 }, 27.10);
+tl.to('#w38_1', { color: '#FF5A1F', duration: 0.1 }, 27.31);
+tl.to('#w38_2', { color: '#FF5A1F', duration: 0.1 }, 27.47);
+tl.fromTo('#cc39', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 28.72);
+tl.to('#cc39', { autoAlpha: 0, duration: 0.05 }, 29.46);
+tl.to('#w39_0', { color: '#FF5A1F', duration: 0.1 }, 28.72);
+tl.to('#w39_1', { color: '#FF5A1F', duration: 0.1 }, 28.93);
+tl.to('#w39_2', { color: '#FF5A1F', duration: 0.1 }, 29.10);
+tl.to('#w39_3', { color: '#FF5A1F', duration: 0.1 }, 29.31);
+tl.fromTo('#cc40', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 29.48);
+tl.to('#cc40', { autoAlpha: 0, duration: 0.05 }, 30.10);
+tl.to('#w40_0', { color: '#FF5A1F', duration: 0.1 }, 29.48);
+tl.to('#w40_1', { color: '#FF5A1F', duration: 0.1 }, 29.69);
+tl.to('#w40_2', { color: '#FF5A1F', duration: 0.1 }, 29.86);
+tl.to('#w40_3', { color: '#FF5A1F', duration: 0.1 }, 30.03);
+tl.fromTo('#cc41', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 30.12);
+tl.to('#cc41', { autoAlpha: 0, duration: 0.05 }, 31.03);
+tl.to('#w41_0', { color: '#FF5A1F', duration: 0.1 }, 30.12);
+tl.to('#w41_1', { color: '#FF5A1F', duration: 0.1 }, 30.41);
+tl.to('#w41_2', { color: '#FF5A1F', duration: 0.1 }, 30.62);
+tl.to('#w41_3', { color: '#FF5A1F', duration: 0.1 }, 30.84);
+tl.fromTo('#cc42', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 31.05);
+tl.to('#cc42', { autoAlpha: 0, duration: 0.05 }, 31.83);
+tl.to('#w42_0', { color: '#FF5A1F', duration: 0.1 }, 31.05);
+tl.to('#w42_1', { color: '#FF5A1F', duration: 0.1 }, 31.17);
+tl.to('#w42_2', { color: '#FF5A1F', duration: 0.1 }, 31.51);
+tl.to('#w42_3', { color: '#FF5A1F', duration: 0.1 }, 31.68);
+tl.fromTo('#cc43', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 31.85);
+tl.to('#cc43', { autoAlpha: 0, duration: 0.05 }, 32.21);
+tl.to('#w43_0', { color: '#FF5A1F', duration: 0.1 }, 31.85);
+tl.fromTo('#cc44', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 32.23);
+tl.to('#cc44', { autoAlpha: 0, duration: 0.05 }, 32.93);
+tl.to('#w44_0', { color: '#FF5A1F', duration: 0.1 }, 32.23);
+tl.to('#w44_1', { color: '#FF5A1F', duration: 0.1 }, 32.36);
+tl.to('#w44_2', { color: '#FF5A1F', duration: 0.1 }, 32.57);
+tl.to('#w44_3', { color: '#FF5A1F', duration: 0.1 }, 32.74);
+tl.fromTo('#cc45', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 32.95);
+tl.to('#cc45', { autoAlpha: 0, duration: 0.05 }, 33.82);
+tl.to('#w45_0', { color: '#FF5A1F', duration: 0.1 }, 32.95);
+tl.to('#w45_1', { color: '#FF5A1F', duration: 0.1 }, 33.29);
+tl.to('#w45_2', { color: '#FF5A1F', duration: 0.1 }, 33.46);
+tl.to('#w45_3', { color: '#FF5A1F', duration: 0.1 }, 33.67);
+tl.fromTo('#cc46', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 33.84);
+tl.to('#cc46', { autoAlpha: 0, duration: 0.05 }, 34.62);
+tl.to('#w46_0', { color: '#FF5A1F', duration: 0.1 }, 33.84);
+tl.to('#w46_1', { color: '#FF5A1F', duration: 0.1 }, 34.05);
+tl.to('#w46_2', { color: '#FF5A1F', duration: 0.1 }, 34.22);
+tl.to('#w46_3', { color: '#FF5A1F', duration: 0.1 }, 34.48);
+tl.fromTo('#cc47', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 34.64);
+tl.to('#cc47', { autoAlpha: 0, duration: 0.05 }, 35.17);
+tl.to('#w47_0', { color: '#FF5A1F', duration: 0.1 }, 34.64);
+tl.to('#w47_1', { color: '#FF5A1F', duration: 0.1 }, 34.86);
+tl.fromTo('#cc48', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 35.19);
+tl.to('#cc48', { autoAlpha: 0, duration: 0.05 }, 35.94);
+tl.to('#w48_0', { color: '#FF5A1F', duration: 0.1 }, 35.19);
+tl.to('#w48_1', { color: '#FF5A1F', duration: 0.1 }, 35.32);
+tl.to('#w48_2', { color: '#FF5A1F', duration: 0.1 }, 35.53);
+tl.to('#w48_3', { color: '#FF5A1F', duration: 0.1 }, 35.70);
+tl.fromTo('#cc49', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 35.96);
+tl.to('#cc49', { autoAlpha: 0, duration: 0.05 }, 36.82);
+tl.to('#w49_0', { color: '#FF5A1F', duration: 0.1 }, 35.96);
+tl.to('#w49_1', { color: '#FF5A1F', duration: 0.1 }, 36.29);
+tl.to('#w49_2', { color: '#FF5A1F', duration: 0.1 }, 36.46);
+tl.to('#w49_3', { color: '#FF5A1F', duration: 0.1 }, 36.63);
+tl.fromTo('#cc50', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 36.84);
+tl.to('#cc50', { autoAlpha: 0, duration: 0.05 }, 37.59);
+tl.to('#w50_0', { color: '#FF5A1F', duration: 0.1 }, 36.84);
+tl.to('#w50_1', { color: '#FF5A1F', duration: 0.1 }, 36.97);
+tl.to('#w50_2', { color: '#FF5A1F', duration: 0.1 }, 37.18);
+tl.to('#w50_3', { color: '#FF5A1F', duration: 0.1 }, 37.35);
+tl.fromTo('#cc51', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 37.61);
+tl.to('#cc51', { autoAlpha: 0, duration: 0.05 }, 38.26);
+tl.to('#w51_0', { color: '#FF5A1F', duration: 0.1 }, 37.61);
+tl.to('#w51_1', { color: '#FF5A1F', duration: 0.1 }, 37.73);
+tl.to('#w51_2', { color: '#FF5A1F', duration: 0.1 }, 37.95);
+tl.fromTo('#cc52', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 38.28);
+tl.to('#cc52', { autoAlpha: 0, duration: 0.05 }, 39.11);
+tl.to('#w52_0', { color: '#FF5A1F', duration: 0.1 }, 38.28);
+tl.to('#w52_1', { color: '#FF5A1F', duration: 0.1 }, 38.58);
+tl.to('#w52_2', { color: '#FF5A1F', duration: 0.1 }, 38.75);
+tl.to('#w52_3', { color: '#FF5A1F', duration: 0.1 }, 38.96);
+tl.fromTo('#cc53', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 39.13);
+tl.to('#cc53', { autoAlpha: 0, duration: 0.05 }, 39.93);
+tl.to('#w53_0', { color: '#FF5A1F', duration: 0.1 }, 39.13);
+tl.to('#w53_1', { color: '#FF5A1F', duration: 0.1 }, 39.34);
+tl.fromTo('#cc54', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 40.57);
+tl.to('#cc54', { autoAlpha: 0, duration: 0.05 }, 41.24);
+tl.to('#w54_0', { color: '#FF5A1F', duration: 0.1 }, 40.57);
+tl.to('#w54_1', { color: '#FF5A1F', duration: 0.1 }, 40.73);
+tl.to('#w54_2', { color: '#FF5A1F', duration: 0.1 }, 40.89);
+tl.to('#w54_3', { color: '#FF5A1F', duration: 0.1 }, 41.06);
+tl.fromTo('#cc55', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 41.26);
+tl.to('#cc55', { autoAlpha: 0, duration: 0.05 }, 41.89);
+tl.to('#w55_0', { color: '#FF5A1F', duration: 0.1 }, 41.26);
+tl.to('#w55_1', { color: '#FF5A1F', duration: 0.1 }, 41.42);
+tl.to('#w55_2', { color: '#FF5A1F', duration: 0.1 }, 41.59);
+tl.to('#w55_3', { color: '#FF5A1F', duration: 0.1 }, 41.75);
+tl.fromTo('#cc56', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 41.91);
+tl.to('#cc56', { autoAlpha: 0, duration: 0.05 }, 42.58);
+tl.to('#w56_0', { color: '#FF5A1F', duration: 0.1 }, 41.91);
+tl.to('#w56_1', { color: '#FF5A1F', duration: 0.1 }, 42.07);
+tl.to('#w56_2', { color: '#FF5A1F', duration: 0.1 }, 42.28);
+tl.fromTo('#cc57', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 42.60);
+tl.to('#cc57', { autoAlpha: 0, duration: 0.05 }, 43.43);
+tl.to('#w57_0', { color: '#FF5A1F', duration: 0.1 }, 42.60);
+tl.to('#w57_1', { color: '#FF5A1F', duration: 0.1 }, 42.84);
+tl.to('#w57_2', { color: '#FF5A1F', duration: 0.1 }, 43.01);
+tl.to('#w57_3', { color: '#FF5A1F', duration: 0.1 }, 43.25);
+tl.fromTo('#cc58', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 43.45);
+tl.to('#cc58', { autoAlpha: 0, duration: 0.05 }, 44.12);
+tl.to('#w58_0', { color: '#FF5A1F', duration: 0.1 }, 43.45);
+tl.to('#w58_1', { color: '#FF5A1F', duration: 0.1 }, 43.66);
+tl.to('#w58_2', { color: '#FF5A1F', duration: 0.1 }, 43.82);
+tl.to('#w58_3', { color: '#FF5A1F', duration: 0.1 }, 44.02);
+tl.fromTo('#cc59', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 44.14);
+tl.to('#cc59', { autoAlpha: 0, duration: 0.05 }, 45.10);
+tl.to('#w59_0', { color: '#FF5A1F', duration: 0.1 }, 44.14);
+tl.to('#w59_1', { color: '#FF5A1F', duration: 0.1 }, 44.35);
+tl.to('#w59_2', { color: '#FF5A1F', duration: 0.1 }, 44.51);
+tl.to('#w59_3', { color: '#FF5A1F', duration: 0.1 }, 44.83);
+tl.fromTo('#cc60', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 45.12);
+tl.to('#cc60', { autoAlpha: 0, duration: 0.05 }, 45.83);
+tl.to('#w60_0', { color: '#FF5A1F', duration: 0.1 }, 45.12);
+tl.to('#w60_1', { color: '#FF5A1F', duration: 0.1 }, 45.28);
+tl.to('#w60_2', { color: '#FF5A1F', duration: 0.1 }, 45.48);
+tl.to('#w60_3', { color: '#FF5A1F', duration: 0.1 }, 45.65);
+tl.fromTo('#cc61', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 45.85);
+tl.to('#cc61', { autoAlpha: 0, duration: 0.05 }, 46.56);
+tl.to('#w61_0', { color: '#FF5A1F', duration: 0.1 }, 45.85);
+tl.to('#w61_1', { color: '#FF5A1F', duration: 0.1 }, 46.01);
+tl.to('#w61_2', { color: '#FF5A1F', duration: 0.1 }, 46.09);
+tl.to('#w61_3', { color: '#FF5A1F', duration: 0.1 }, 46.38);
+tl.fromTo('#cc62', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 46.58);
+tl.to('#cc62', { autoAlpha: 0, duration: 0.05 }, 47.25);
+tl.to('#w62_0', { color: '#FF5A1F', duration: 0.1 }, 46.58);
+tl.to('#w62_1', { color: '#FF5A1F', duration: 0.1 }, 46.70);
+tl.to('#w62_2', { color: '#FF5A1F', duration: 0.1 }, 46.87);
+tl.to('#w62_3', { color: '#FF5A1F', duration: 0.1 }, 47.07);
+tl.fromTo('#cc63', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 47.27);
+tl.to('#cc63', { autoAlpha: 0, duration: 0.05 }, 47.94);
+tl.to('#w63_0', { color: '#FF5A1F', duration: 0.1 }, 47.27);
+tl.to('#w63_1', { color: '#FF5A1F', duration: 0.1 }, 47.43);
+tl.to('#w63_2', { color: '#FF5A1F', duration: 0.1 }, 47.60);
+tl.to('#w63_3', { color: '#FF5A1F', duration: 0.1 }, 47.76);
+tl.fromTo('#cc64', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 47.96);
+tl.to('#cc64', { autoAlpha: 0, duration: 0.05 }, 48.55);
+tl.to('#w64_0', { color: '#FF5A1F', duration: 0.1 }, 47.96);
+tl.to('#w64_1', { color: '#FF5A1F', duration: 0.1 }, 48.29);
+tl.fromTo('#cc65', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 48.57);
+tl.to('#cc65', { autoAlpha: 0, duration: 0.05 }, 49.28);
+tl.to('#w65_0', { color: '#FF5A1F', duration: 0.1 }, 48.57);
+tl.to('#w65_1', { color: '#FF5A1F', duration: 0.1 }, 48.77);
+tl.to('#w65_2', { color: '#FF5A1F', duration: 0.1 }, 48.94);
+tl.to('#w65_3', { color: '#FF5A1F', duration: 0.1 }, 49.14);
+tl.fromTo('#cc66', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 49.30);
+tl.to('#cc66', { autoAlpha: 0, duration: 0.05 }, 50.18);
+tl.to('#w66_0', { color: '#FF5A1F', duration: 0.1 }, 49.30);
+tl.to('#w66_1', { color: '#FF5A1F', duration: 0.1 }, 49.51);
+tl.to('#w66_2', { color: '#FF5A1F', duration: 0.1 }, 49.71);
+tl.to('#w66_3', { color: '#FF5A1F', duration: 0.1 }, 49.87);
+tl.fromTo('#cc67', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 50.20);
+tl.to('#cc67', { autoAlpha: 0, duration: 0.05 }, 50.83);
+tl.to('#w67_0', { color: '#FF5A1F', duration: 0.1 }, 50.20);
+tl.to('#w67_1', { color: '#FF5A1F', duration: 0.1 }, 50.36);
+tl.to('#w67_2', { color: '#FF5A1F', duration: 0.1 }, 50.48);
+tl.to('#w67_3', { color: '#FF5A1F', duration: 0.1 }, 50.64);
+tl.fromTo('#cc68', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 50.85);
+tl.to('#cc68', { autoAlpha: 0, duration: 0.05 }, 51.34);
+tl.to('#w68_0', { color: '#FF5A1F', duration: 0.1 }, 50.85);
+tl.fromTo('#cc69', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 52.04);
+tl.to('#cc69', { autoAlpha: 0, duration: 0.05 }, 52.80);
+tl.to('#w69_0', { color: '#FF5A1F', duration: 0.1 }, 52.04);
+tl.to('#w69_1', { color: '#FF5A1F', duration: 0.1 }, 52.25);
+tl.to('#w69_2', { color: '#FF5A1F', duration: 0.1 }, 52.41);
+tl.to('#w69_3', { color: '#FF5A1F', duration: 0.1 }, 52.62);
+tl.fromTo('#cc70', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 52.82);
+tl.to('#cc70', { autoAlpha: 0, duration: 0.05 }, 53.47);
+tl.to('#w70_0', { color: '#FF5A1F', duration: 0.1 }, 52.82);
+tl.to('#w70_1', { color: '#FF5A1F', duration: 0.1 }, 52.99);
+tl.to('#w70_2', { color: '#FF5A1F', duration: 0.1 }, 53.20);
+tl.fromTo('#cc71', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 53.49);
+tl.to('#cc71', { autoAlpha: 0, duration: 0.05 }, 54.21);
+tl.to('#w71_0', { color: '#FF5A1F', duration: 0.1 }, 53.49);
+tl.to('#w71_1', { color: '#FF5A1F', duration: 0.1 }, 53.65);
+tl.to('#w71_2', { color: '#FF5A1F', duration: 0.1 }, 53.86);
+tl.to('#w71_3', { color: '#FF5A1F', duration: 0.1 }, 54.06);
+tl.fromTo('#cc72', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 54.23);
+tl.to('#cc72', { autoAlpha: 0, duration: 0.05 }, 54.99);
+tl.to('#w72_0', { color: '#FF5A1F', duration: 0.1 }, 54.23);
+tl.to('#w72_1', { color: '#FF5A1F', duration: 0.1 }, 54.43);
+tl.to('#w72_2', { color: '#FF5A1F', duration: 0.1 }, 54.60);
+tl.to('#w72_3', { color: '#FF5A1F', duration: 0.1 }, 54.81);
+tl.fromTo('#cc73', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 55.01);
+tl.to('#cc73', { autoAlpha: 0, duration: 0.05 }, 55.74);
+tl.to('#w73_0', { color: '#FF5A1F', duration: 0.1 }, 55.01);
+tl.to('#w73_1', { color: '#FF5A1F', duration: 0.1 }, 55.14);
+tl.to('#w73_2', { color: '#FF5A1F', duration: 0.1 }, 55.34);
+tl.to('#w73_3', { color: '#FF5A1F', duration: 0.1 }, 55.55);
+tl.fromTo('#cc74', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 55.76);
+tl.to('#cc74', { autoAlpha: 0, duration: 0.05 }, 56.69);
+tl.to('#w74_0', { color: '#FF5A1F', duration: 0.1 }, 55.76);
+tl.to('#w74_1', { color: '#FF5A1F', duration: 0.1 }, 55.96);
+tl.to('#w74_2', { color: '#FF5A1F', duration: 0.1 }, 56.17);
+tl.to('#w74_3', { color: '#FF5A1F', duration: 0.1 }, 56.38);
+tl.fromTo('#cc75', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 56.71);
+tl.to('#cc75', { autoAlpha: 0, duration: 0.05 }, 57.43);
+tl.to('#w75_0', { color: '#FF5A1F', duration: 0.1 }, 56.71);
+tl.to('#w75_1', { color: '#FF5A1F', duration: 0.1 }, 56.87);
+tl.to('#w75_2', { color: '#FF5A1F', duration: 0.1 }, 57.08);
+tl.to('#w75_3', { color: '#FF5A1F', duration: 0.1 }, 57.24);
+tl.fromTo('#cc76', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 57.45);
+tl.to('#cc76', { autoAlpha: 0, duration: 0.05 }, 58.25);
+tl.to('#w76_0', { color: '#FF5A1F', duration: 0.1 }, 57.45);
+tl.to('#w76_1', { color: '#FF5A1F', duration: 0.1 }, 57.61);
+tl.to('#w76_2', { color: '#FF5A1F', duration: 0.1 }, 57.86);
+tl.to('#w76_3', { color: '#FF5A1F', duration: 0.1 }, 58.07);
+tl.fromTo('#cc77', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 58.27);
+tl.to('#cc77', { autoAlpha: 0, duration: 0.05 }, 59.00);
+tl.to('#w77_0', { color: '#FF5A1F', duration: 0.1 }, 58.27);
+tl.to('#w77_1', { color: '#FF5A1F', duration: 0.1 }, 58.48);
+tl.to('#w77_2', { color: '#FF5A1F', duration: 0.1 }, 58.65);
+tl.fromTo('#cc78', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 59.02);
+tl.to('#cc78', { autoAlpha: 0, duration: 0.05 }, 59.70);
+tl.to('#w78_0', { color: '#FF5A1F', duration: 0.1 }, 59.02);
+tl.to('#w78_1', { color: '#FF5A1F', duration: 0.1 }, 59.18);
+tl.to('#w78_2', { color: '#FF5A1F', duration: 0.1 }, 59.35);
+tl.to('#w78_3', { color: '#FF5A1F', duration: 0.1 }, 59.55);
+tl.fromTo('#cc79', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 59.72);
+tl.to('#cc79', { autoAlpha: 0, duration: 0.05 }, 60.44);
+tl.to('#w79_0', { color: '#FF5A1F', duration: 0.1 }, 59.72);
+tl.to('#w79_1', { color: '#FF5A1F', duration: 0.1 }, 59.93);
+tl.to('#w79_2', { color: '#FF5A1F', duration: 0.1 }, 60.13);
+tl.to('#w79_3', { color: '#FF5A1F', duration: 0.1 }, 60.26);
+tl.fromTo('#cc80', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 60.46);
+tl.to('#cc80', { autoAlpha: 0, duration: 0.05 }, 61.19);
+tl.to('#w80_0', { color: '#FF5A1F', duration: 0.1 }, 60.46);
+tl.to('#w80_1', { color: '#FF5A1F', duration: 0.1 }, 60.71);
+tl.to('#w80_2', { color: '#FF5A1F', duration: 0.1 }, 60.83);
+tl.to('#w80_3', { color: '#FF5A1F', duration: 0.1 }, 61.00);
+tl.fromTo('#cc81', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 61.21);
+tl.to('#cc81', { autoAlpha: 0, duration: 0.05 }, 61.68);
+tl.to('#w81_0', { color: '#FF5A1F', duration: 0.1 }, 61.21);
+tl.to('#w81_1', { color: '#FF5A1F', duration: 0.1 }, 61.37);
+tl.fromTo('#cc82', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 61.70);
+tl.to('#cc82', { autoAlpha: 0, duration: 0.05 }, 62.47);
+tl.to('#w82_0', { color: '#FF5A1F', duration: 0.1 }, 61.70);
+tl.to('#w82_1', { color: '#FF5A1F', duration: 0.1 }, 61.95);
+tl.to('#w82_2', { color: '#FF5A1F', duration: 0.1 }, 62.11);
+tl.to('#w82_3', { color: '#FF5A1F', duration: 0.1 }, 62.28);
+tl.fromTo('#cc83', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 62.49);
+tl.to('#cc83', { autoAlpha: 0, duration: 0.05 }, 63.17);
+tl.to('#w83_0', { color: '#FF5A1F', duration: 0.1 }, 62.49);
+tl.to('#w83_1', { color: '#FF5A1F', duration: 0.1 }, 62.61);
+tl.to('#w83_2', { color: '#FF5A1F', duration: 0.1 }, 62.82);
+tl.to('#w83_3', { color: '#FF5A1F', duration: 0.1 }, 63.02);
+tl.fromTo('#cc84', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 63.19);
+tl.to('#cc84', { autoAlpha: 0, duration: 0.05 }, 63.95);
+tl.to('#w84_0', { color: '#FF5A1F', duration: 0.1 }, 63.19);
+tl.to('#w84_1', { color: '#FF5A1F', duration: 0.1 }, 63.35);
+tl.to('#w84_2', { color: '#FF5A1F', duration: 0.1 }, 63.60);
+tl.to('#w84_3', { color: '#FF5A1F', duration: 0.1 }, 63.77);
+tl.fromTo('#cc85', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 63.97);
+tl.to('#cc85', { autoAlpha: 0, duration: 0.05 }, 65.09);
+tl.to('#w85_0', { color: '#FF5A1F', duration: 0.1 }, 63.97);
+tl.to('#w85_1', { color: '#FF5A1F', duration: 0.1 }, 64.10);
+tl.to('#w85_2', { color: '#FF5A1F', duration: 0.1 }, 64.30);
+tl.to('#w85_3', { color: '#FF5A1F', duration: 0.1 }, 64.47);
+tl.fromTo('#cc86', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 65.73);
+tl.to('#cc86', { autoAlpha: 0, duration: 0.05 }, 66.46);
+tl.to('#w86_0', { color: '#FF5A1F', duration: 0.1 }, 65.73);
+tl.to('#w86_1', { color: '#FF5A1F', duration: 0.1 }, 65.94);
+tl.to('#w86_2', { color: '#FF5A1F', duration: 0.1 }, 66.11);
+tl.to('#w86_3', { color: '#FF5A1F', duration: 0.1 }, 66.27);
+tl.fromTo('#cc87', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 66.48);
+tl.to('#cc87', { autoAlpha: 0, duration: 0.05 }, 67.13);
+tl.to('#w87_0', { color: '#FF5A1F', duration: 0.1 }, 66.48);
+tl.to('#w87_1', { color: '#FF5A1F', duration: 0.1 }, 66.61);
+tl.to('#w87_2', { color: '#FF5A1F', duration: 0.1 }, 66.82);
+tl.to('#w87_3', { color: '#FF5A1F', duration: 0.1 }, 66.94);
+tl.fromTo('#cc88', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 67.15);
+tl.to('#cc88', { autoAlpha: 0, duration: 0.05 }, 67.46);
+tl.to('#w88_0', { color: '#FF5A1F', duration: 0.1 }, 67.15);
+tl.fromTo('#cc89', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 67.48);
+tl.to('#cc89', { autoAlpha: 0, duration: 0.05 }, 68.26);
+tl.to('#w89_0', { color: '#FF5A1F', duration: 0.1 }, 67.48);
+tl.to('#w89_1', { color: '#FF5A1F', duration: 0.1 }, 67.61);
+tl.to('#w89_2', { color: '#FF5A1F', duration: 0.1 }, 67.82);
+tl.to('#w89_3', { color: '#FF5A1F', duration: 0.1 }, 68.07);
+tl.fromTo('#cc90', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 68.28);
+tl.to('#cc90', { autoAlpha: 0, duration: 0.05 }, 68.76);
+tl.to('#w90_0', { color: '#FF5A1F', duration: 0.1 }, 68.28);
+tl.to('#w90_1', { color: '#FF5A1F', duration: 0.1 }, 68.44);
+tl.fromTo('#cc91', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 68.78);
+tl.to('#cc91', { autoAlpha: 0, duration: 0.05 }, 69.26);
+tl.to('#w91_0', { color: '#FF5A1F', duration: 0.1 }, 68.78);
+tl.to('#w91_1', { color: '#FF5A1F', duration: 0.1 }, 68.99);
+tl.fromTo('#cc92', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 69.28);
+tl.to('#cc92', { autoAlpha: 0, duration: 0.05 }, 70.10);
+tl.to('#w92_0', { color: '#FF5A1F', duration: 0.1 }, 69.28);
+tl.to('#w92_1', { color: '#FF5A1F', duration: 0.1 }, 69.45);
+tl.to('#w92_2', { color: '#FF5A1F', duration: 0.1 }, 69.57);
+tl.to('#w92_3', { color: '#FF5A1F', duration: 0.1 }, 69.86);
+tl.fromTo('#cc93', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 70.12);
+tl.to('#cc93', { autoAlpha: 0, duration: 0.05 }, 70.89);
+tl.to('#w93_0', { color: '#FF5A1F', duration: 0.1 }, 70.12);
+tl.to('#w93_1', { color: '#FF5A1F', duration: 0.1 }, 70.32);
+tl.to('#w93_2', { color: '#FF5A1F', duration: 0.1 }, 70.53);
+tl.to('#w93_3', { color: '#FF5A1F', duration: 0.1 }, 70.74);
+tl.fromTo('#cc94', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 70.91);
+tl.to('#cc94', { autoAlpha: 0, duration: 0.05 }, 71.64);
+tl.to('#w94_0', { color: '#FF5A1F', duration: 0.1 }, 70.91);
+tl.to('#w94_1', { color: '#FF5A1F', duration: 0.1 }, 71.12);
+tl.to('#w94_2', { color: '#FF5A1F', duration: 0.1 }, 71.33);
+tl.fromTo('#cc95', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 71.66);
+tl.to('#cc95', { autoAlpha: 0, duration: 0.05 }, 72.31);
+tl.to('#w95_0', { color: '#FF5A1F', duration: 0.1 }, 71.66);
+tl.to('#w95_1', { color: '#FF5A1F', duration: 0.1 }, 71.83);
+tl.to('#w95_2', { color: '#FF5A1F', duration: 0.1 }, 71.95);
+tl.to('#w95_3', { color: '#FF5A1F', duration: 0.1 }, 72.12);
+tl.fromTo('#cc96', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05 }, 72.33);
+tl.to('#cc96', { autoAlpha: 0, duration: 0.05 }, 73.08);
+tl.to('#w96_0', { color: '#FF5A1F', duration: 0.1 }, 72.33);
+tl.to('#w96_1', { color: '#FF5A1F', duration: 0.1 }, 72.54);
+
+window.__timelines['main'] = tl;
+</script>
+</body>
+</html>
