@@ -1,0 +1,52 @@
+<template>
+  <style>
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .kick { font-weight: 800; font-size: 28px; letter-spacing: 0.22em; text-transform: uppercase; color: #FF5A1F; }
+    .card { background: #121724; border: 1px solid rgba(255,255,255,0.09); border-radius: 28px; box-shadow: 0 0 40px rgba(255,90,31,0.14); }
+    .dn { display: inline-block; width: 0; height: 0; border-left: 13px solid transparent; border-right: 13px solid transparent; border-top: 20px solid #FF5A1F; }
+
+
+    .c-kick { position: absolute; left: 60px; top: 304px; }
+    .c-row { position: absolute; left: 60px; width: 900px; height: 190px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 2px solid rgba(255,255,255,0.14); opacity: 0; }
+    .c-l .a { font-weight: 700; font-size: 36px; line-height: 1.2; color: #fff; }
+    .c-l .b { margin-top: 8px; font-weight: 500; font-size: 26px; color: rgba(255,255,255,0.78); }
+    .c-v { font-weight: 900; font-size: 56px; line-height: 1.05; text-align: right; flex: none; }
+    .c-v small { font-size: 28px; font-weight: 700; color: rgba(255,255,255,0.85); }
+
+  </style>
+
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+
+    <div class="kick c-kick" id="c-kick">Vì sao giá giảm?</div>
+    <div class="c-row" id="c-r1" style="top:370px"><div class="c-l"><div class="a">Giá thành phẩm xăng thế giới</div><div class="b">Giữa hai kỳ điều hành 3–5/11</div></div><div class="c-v" style="color:#FF5A1F">−gần 11%</div></div>
+    <div class="c-row" id="c-r2" style="top:570px"><div class="c-l"><div class="a">Xăng RON 95 thế giới</div><div class="b">Dùng pha chế xăng E10</div></div><div class="c-v" style="color:#FF5A1F">113,9 <small>USD/thùng</small></div></div>
+    <div class="c-row" id="c-r3" style="top:770px"><div class="c-l"><div class="a">Thuế tiêu thụ đặc biệt với xăng</div><div class="b">Từ 1/11 đến hết tháng 3/2027</div></div><div class="c-v" style="color:#FF5A1F">0%</div></div>
+    <div class="c-row" id="c-r4" style="top:970px"><div class="c-l"><div class="a">Giảm thuế kéo giá xăng</div><div class="b">Mức giảm áp dụng từ 1/11</div></div><div class="c-v" style="color:#FF5A1F">1.575–1.804 <small>đ/lít</small></div></div>
+    <div class="c-row" id="c-r5" style="top:1170px"><div class="c-l"><div class="a">Ngân sách dự kiến hụt thu</div><div class="b">Do đưa thuế về 0%</div></div><div class="c-v" style="color:#FF4438">hơn 7.672 <small>tỷ đồng</small></div></div>
+
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#c-kick', { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out' }, 0.05);
+    tl.fromTo('#c-r1', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.35);
+    tl.fromTo('#c-r2', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 2.3);
+    tl.fromTo('#c-r3', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 4.75);
+    tl.fromTo('#c-r4', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 6.6);
+    tl.fromTo('#c-r5', { autoAlpha: 0, x: -60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 8.1);
+
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
