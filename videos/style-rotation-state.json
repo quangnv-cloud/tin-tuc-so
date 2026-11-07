@@ -230,6 +230,13 @@
       "slug": "mien-trung-mua-lon-8-11",
       "date": "2026-11-06",
       "trending_keyword": "thời tiết"
+    },
+    {
+      "index": 2,
+      "style": "3-ticker-tape",
+      "slug": "ho-chua-quang-ngai-can-nuoc-el-nino",
+      "date": "2026-11-07",
+      "trending_keyword": "sạt lở (thời tiết miền Trung; tin từ category=news)"
     }
   ]
 }
