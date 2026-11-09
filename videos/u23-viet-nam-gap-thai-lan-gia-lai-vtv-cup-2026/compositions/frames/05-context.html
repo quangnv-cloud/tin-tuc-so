@@ -1,0 +1,160 @@
+<template>
+  <style>
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 500; src: url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 800; src: url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Montserrat'; font-weight: 900; src: url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+    .cap-wrap { position: absolute; left: 60px; right: 90px; top: 1490px; height: 100px; z-index: 40; pointer-events: none; }
+    .cap-chunk { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 14px; row-gap: 4px; opacity: 0; visibility: hidden; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.18; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.9); }
+    .cap-chunk .w { color: rgba(255,255,255,0.58); }
+    .kick { display: flex; align-items: center; gap: 16px; opacity: 0; }
+    .kick i { display: block; width: 44px; height: 5px; border-radius: 3px; background: #FF5A1F; }
+    .kick b { font-weight: 800; font-size: 26px; letter-spacing: 0.24em; text-transform: uppercase; color: #FF5A1F; }
+    .kick.r i { background: #FF4438; } .kick.r b { color: #FF4438; }
+    .card { position: absolute; background: #121724; border: 1.5px solid rgba(255,255,255,0.14); border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 0 40px rgba(255,90,31,0.12); opacity: 0; }
+    .lab { font-weight: 800; font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; color: #FF5A1F; }
+    .lab.d { color: rgba(255,255,255,0.6); } .lab.r { color: #FF4438; }
+    em { font-style: normal; color: #FF5A1F; }
+
+
+    .c-head { position: absolute; left: 0; right: 0; top: 330px; display: flex; }
+    .c-head div { flex: 1; text-align: center; font-weight: 900; font-size: 44px; padding-bottom: 18px; border-bottom: 5px solid; opacity: 0; }
+    .c-head .a { color: #FF5A1F; border-color: #FF5A1F; margin-left: 60px; margin-right: 8px; }
+    .c-head .b { color: #fff; border-color: #fff; margin-right: 60px; margin-left: 8px; }
+    .c-vline { position: absolute; left: 539px; top: 340px; width: 2px; height: 1070px; background: rgba(255,255,255,0.22); transform-origin: top; }
+    .c-row { position: absolute; left: 0; right: 0; height: 300px; }
+    .c-lab { position: absolute; left: 0; right: 0; top: 0; text-align: center; opacity: 0; }
+    .c-lab span { display: inline-block; padding: 8px 20px; background: #0B0E14; font-weight: 800; font-size: 22px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); position: relative; z-index: 2; }
+    .c-cell { position: absolute; top: 60px; width: 450px; height: 220px; padding: 0 20px; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 800; font-size: 40px; line-height: 1.2; border-radius: 14px; background: #121724; border: 1.5px solid rgba(255,255,255,0.14); opacity: 0; }
+    .c-cell.a { left: 60px; border-color: rgba(255,90,31,0.7); } .c-cell.a em { color: #FF5A1F; }
+    .c-cell.b { right: 60px; }
+    
+  </style>
+
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+
+    <div class="c-head"><div class="a" id="c-ha">VIỆT NAM</div><div class="b" id="c-hb">THÁI LAN</div></div>
+    <div class="c-vline" id="c-vl" data-layout-allow-overlap=""></div>
+    <div class="c-row" style="top:400px"><div class="c-lab" id="cl1"><span>Giải này là</span></div><div class="c-cell a" id="ca1"><div>Dịp <em>tích lũy kinh nghiệm</em></div></div><div class="c-cell b" id="cb1"><div>Bước chuẩn bị <em style="color:#fff;text-decoration:underline;text-decoration-color:#FF5A1F">đầu tiên</em></div></div></div>
+<div class="c-row" style="top:745px"><div class="c-lab" id="cl2"><span>Hướng tới</span></div><div class="c-cell a" id="ca2"><div>Năm <em>2027</em>: VCK U23 châu Á</div></div><div class="c-cell b" id="cb2"><div>Vòng loại <em style="color:#fff">U23 châu Á</em></div></div></div>
+<div class="c-row" style="top:1090px"><div class="c-lab" id="cl3"><span>Xa hơn</span></div><div class="c-cell a" id="ca3"><div><em>Olympic</em></div></div><div class="c-cell b" id="cb3"><div>Nhiều cầu thủ trẻ</div></div></div>
+
+    <div class="cap-wrap">
+      <div class="cap-chunk" id="ec1"><span class="w" id="ec1-w1">Hai</span><span class="w" id="ec1-w2">đội,</span></div>
+      <div class="cap-chunk" id="ec2"><span class="w" id="ec2-w1">hai</span><span class="w" id="ec2-w2">mục</span><span class="w" id="ec2-w3">tiêu.</span></div>
+      <div class="cap-chunk" id="ec3"><span class="w" id="ec3-w1">Ông</span><span class="w" id="ec3-w2">Vinh</span><span class="w" id="ec3-w3">nói</span><span class="w" id="ec3-w4">Việt</span><span class="w" id="ec3-w5">Nam</span></div>
+      <div class="cap-chunk" id="ec4"><span class="w" id="ec4-w1">hướng</span><span class="w" id="ec4-w2">đến</span><span class="w" id="ec4-w3">năm</span><span class="w" id="ec4-w4">hai</span><span class="w" id="ec4-w5">nghìn</span></div>
+      <div class="cap-chunk" id="ec5"><span class="w" id="ec5-w1">không</span><span class="w" id="ec5-w2">trăm</span><span class="w" id="ec5-w3">hai</span><span class="w" id="ec5-w4">mươi</span><span class="w" id="ec5-w5">bảy,</span></div>
+      <div class="cap-chunk" id="ec6"><span class="w" id="ec6-w1">với</span><span class="w" id="ec6-w2">vòng</span><span class="w" id="ec6-w3">chung</span><span class="w" id="ec6-w4">kết</span><span class="w" id="ec6-w5">U</span></div>
+      <div class="cap-chunk" id="ec7"><span class="w" id="ec7-w1">hai</span><span class="w" id="ec7-w2">mươi</span><span class="w" id="ec7-w3">ba</span><span class="w" id="ec7-w4">châu</span><span class="w" id="ec7-w5">Á</span></div>
+      <div class="cap-chunk" id="ec8"><span class="w" id="ec8-w1">và</span><span class="w" id="ec8-w2">xa</span><span class="w" id="ec8-w3">hơn</span><span class="w" id="ec8-w4">là</span><span class="w" id="ec8-w5">Olympic.</span></div>
+      <div class="cap-chunk" id="ec9"><span class="w" id="ec9-w1">Thái</span><span class="w" id="ec9-w2">Lan</span><span class="w" id="ec9-w3">coi</span><span class="w" id="ec9-w4">giải</span><span class="w" id="ec9-w5">này</span></div>
+      <div class="cap-chunk" id="ec10"><span class="w" id="ec10-w1">là</span><span class="w" id="ec10-w2">bước</span><span class="w" id="ec10-w3">chuẩn</span><span class="w" id="ec10-w4">bị</span><span class="w" id="ec10-w5">đầu</span></div>
+      <div class="cap-chunk" id="ec11"><span class="w" id="ec11-w1">tiên</span><span class="w" id="ec11-w2">cho</span><span class="w" id="ec11-w3">vòng</span><span class="w" id="ec11-w4">loại</span><span class="w" id="ec11-w5">U</span></div>
+      <div class="cap-chunk" id="ec12"><span class="w" id="ec12-w1">hai</span><span class="w" id="ec12-w2">mươi</span><span class="w" id="ec12-w3">ba</span><span class="w" id="ec12-w4">châu</span><span class="w" id="ec12-w5">Á.</span></div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#c-vl', { scaleY: 0 }, { scaleY: 1, duration: 0.8, ease: 'power2.inOut' }, 0.1);
+    tl.fromTo('#c-ha', { autoAlpha: 0, x: -50 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.25);
+    tl.fromTo('#c-hb', { autoAlpha: 0, x: 50 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 0.25);
+    tl.fromTo('#cl1', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35 }, 1.650);
+    tl.fromTo('#ca1', { autoAlpha: 0, x: -140 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 1.750);
+    tl.fromTo('#cb1', { autoAlpha: 0, x: 140 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 7.493);
+    tl.fromTo('#cl2', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35 }, 2.223);
+    tl.fromTo('#ca2', { autoAlpha: 0, x: -140 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 2.323);
+    tl.fromTo('#cb2', { autoAlpha: 0, x: 140 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 9.111);
+    tl.fromTo('#cl3', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35 }, 5.842);
+    tl.fromTo('#ca3', { autoAlpha: 0, x: -140 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 5.942);
+    tl.fromTo('#cb3', { autoAlpha: 0, x: 140 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: 'power3.out' }, 7.242);
+
+    tl.set('#ec1', { autoAlpha: 1 }, 0.000);
+    tl.to('#ec1-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.000);
+    tl.to('#ec1-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.219);
+    tl.set('#ec1', { autoAlpha: 0 }, 0.676);
+    tl.set('#ec2', { autoAlpha: 1 }, 0.676);
+    tl.to('#ec2-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.676);
+    tl.to('#ec2-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.828);
+    tl.to('#ec2-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 0.980);
+    tl.set('#ec2', { autoAlpha: 0 }, 1.652);
+    tl.set('#ec3', { autoAlpha: 1 }, 1.652);
+    tl.to('#ec3-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.652);
+    tl.to('#ec3-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.777);
+    tl.to('#ec3-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 1.926);
+    tl.to('#ec3-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.050);
+    tl.to('#ec3-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.199);
+    tl.set('#ec3', { autoAlpha: 0 }, 2.323);
+    tl.set('#ec4', { autoAlpha: 1 }, 2.323);
+    tl.to('#ec4-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.323);
+    tl.to('#ec4-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.497);
+    tl.to('#ec4-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.621);
+    tl.to('#ec4-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.746);
+    tl.to('#ec4-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 2.870);
+    tl.set('#ec4', { autoAlpha: 0 }, 3.044);
+    tl.set('#ec5', { autoAlpha: 1 }, 3.044);
+    tl.to('#ec5-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.044);
+    tl.to('#ec5-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.218);
+    tl.to('#ec5-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.367);
+    tl.to('#ec5-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.491);
+    tl.to('#ec5-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 3.640);
+    tl.set('#ec5', { autoAlpha: 0 }, 4.039);
+    tl.set('#ec6', { autoAlpha: 1 }, 4.039);
+    tl.to('#ec6-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.039);
+    tl.to('#ec6-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.211);
+    tl.to('#ec6-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.417);
+    tl.to('#ec6-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.658);
+    tl.to('#ec6-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.830);
+    tl.set('#ec6', { autoAlpha: 0 }, 4.933);
+    tl.set('#ec7', { autoAlpha: 1 }, 4.933);
+    tl.to('#ec7-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 4.933);
+    tl.to('#ec7-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.105);
+    tl.to('#ec7-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.311);
+    tl.to('#ec7-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.448);
+    tl.to('#ec7-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.654);
+    tl.set('#ec7', { autoAlpha: 0 }, 5.757);
+    tl.set('#ec8', { autoAlpha: 1 }, 5.757);
+    tl.to('#ec8-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.757);
+    tl.to('#ec8-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 5.895);
+    tl.to('#ec8-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.032);
+    tl.to('#ec8-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.204);
+    tl.to('#ec8-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 6.342);
+    tl.set('#ec8', { autoAlpha: 0 }, 7.157);
+    tl.set('#ec9', { autoAlpha: 1 }, 7.157);
+    tl.to('#ec9-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.157);
+    tl.to('#ec9-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.340);
+    tl.to('#ec9-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.493);
+    tl.to('#ec9-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.645);
+    tl.to('#ec9-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.828);
+    tl.set('#ec9', { autoAlpha: 0 }, 7.981);
+    tl.set('#ec10', { autoAlpha: 1 }, 7.981);
+    tl.to('#ec10-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 7.981);
+    tl.to('#ec10-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.103);
+    tl.to('#ec10-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.286);
+    tl.to('#ec10-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.500);
+    tl.to('#ec10-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.622);
+    tl.set('#ec10', { autoAlpha: 0 }, 8.775);
+    tl.set('#ec11', { autoAlpha: 1 }, 8.775);
+    tl.to('#ec11-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.775);
+    tl.to('#ec11-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 8.958);
+    tl.to('#ec11-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.111);
+    tl.to('#ec11-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.294);
+    tl.to('#ec11-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.477);
+    tl.set('#ec11', { autoAlpha: 0 }, 9.569);
+    tl.set('#ec12', { autoAlpha: 1 }, 9.569);
+    tl.to('#ec12-w1', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.569);
+    tl.to('#ec12-w2', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.721);
+    tl.to('#ec12-w3', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 9.905);
+    tl.to('#ec12-w4', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 10.027);
+    tl.to('#ec12-w5', { color: '#FF5A1F', duration: 0.1, ease: 'none' }, 10.210);
+    tl.set('#ec12', { autoAlpha: 0 }, 10.602);
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
