@@ -1,0 +1,58 @@
+<template>
+  <style>
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; background: transparent; }
+
+    .cA { position:absolute; left:60px; right:60px; top:330px; height:730px; border-radius:22px; background:#121724; border:1.5px solid rgba(255,90,31,0.4); overflow:hidden; box-shadow:0 0 40px rgba(255,90,31,0.14); opacity:0; }
+    .cA .ph { position:absolute; left:0; right:0; top:0; height:340px; }
+    .cA .ph img { width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
+    .cA .ph::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(18,23,36,0) 55%,#121724 100%); }
+    .tagp { position:absolute; left:26px; top:24px; z-index:2; display:inline-flex; align-items:center; gap:10px; padding:9px 18px; border-radius:100px; background:rgba(11,14,20,0.8); border:1.5px solid #FF5A1F; font-weight:700; font-size:23px; }
+    .tagp i { width:12px; height:12px; border-radius:50%; background:#FF5A1F; }
+    .cA .ttl { position:absolute; left:40px; right:40px; top:352px; font-weight:900; font-size:46px; line-height:1.1; }
+    .cA .ttl b { color:#FF5A1F; }
+    .rw { position:absolute; left:40px; right:40px; height:56px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; border-radius:12px; background:rgba(255,255,255,0.05); font-weight:700; font-size:30px; opacity:0; }
+    .rw.me { background:rgba(255,90,31,0.18); border:2px solid #FF5A1F; font-weight:900; }
+    .rw span:last-child { font-weight:800; }
+    .note { position:absolute; left:40px; bottom:16px; font-weight:500; font-size:19px; color:rgba(255,255,255,0.7); }
+    .cB { position:absolute; left:60px; right:60px; top:1090px; height:370px; border-radius:22px; background:#121724; border:1.5px solid rgba(255,90,31,0.4); padding:30px 40px; box-shadow:0 0 40px rgba(255,90,31,0.14); opacity:0; }
+    .cB .tagp { position:static; display:inline-flex; }
+    .cB .rk { margin-top:10px; display:flex; align-items:flex-end; gap:20px; }
+    .cB .rk .n { font-weight:900; font-size:150px; line-height:0.95; color:#FF5A1F; }
+    .cB .rk .u { font-weight:800; font-size:38px; line-height:1.2; padding-bottom:12px; }
+    .cB .ln { margin-top:14px; font-weight:500; font-size:27px; line-height:1.35; color:rgba(255,255,255,0.78); }
+
+  </style>
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+
+    <div class="cA" id="cA"><div class="ph"><img src="assets/img/article-team.jpg" alt=""></div><div class="tagp"><i></i>Đồng đội · Doha</div>
+      <div class="ttl">Huy chương <b>đồng</b> đồng đội</div>
+      <div class="rw" id="r1" style="top:430px"><span>Ấn Độ</span><span>1.761</span></div>
+      <div class="rw" id="r2" style="top:498px"><span>Hàn Quốc</span><span>1.748</span></div>
+      <div class="rw me" id="r3" style="top:566px"><span>Việt Nam</span><span>1.745</span></div>
+      <div class="rw" id="r4" style="top:634px"><span>Trung Quốc</span><span>1.741</span></div>
+      <div class="note">Điểm Trung Quốc: theo Tuổi Trẻ</div></div>
+    <div class="cB" id="cB"><div class="tagp"><i></i>Bảng huy chương sau 10 ngày</div>
+      <div class="rk"><div class="n" id="rkn">17</div><div class="u">Việt Nam<br>hạng thứ</div></div>
+      <div class="ln">1 huy chương bạc · 1 huy chương đồng. Trung Quốc dẫn đầu với 13 vàng, 6 bạc, 7 đồng.</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#cA',{autoAlpha:0,x:-120},{autoAlpha:1,x:0,duration:0.6,ease:'power3.out'},0.15);
+    ['#r1','#r2','#r3','#r4'].forEach(function(s,i){ tl.fromTo(s,{autoAlpha:0,x:-30},{autoAlpha:1,x:0,duration:0.35,ease:'power2.out'},1.6+i*0.9); });
+    tl.fromTo('#cB',{autoAlpha:0,x:120},{autoAlpha:1,x:0,duration:0.6,ease:'power3.out'},6.4);
+    var o={v:0}; tl.to(o,{v:17,duration:1.0,ease:'power2.out',onUpdate:function(){document.getElementById('rkn').textContent=Math.round(o.v);}},6.9);
+
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
