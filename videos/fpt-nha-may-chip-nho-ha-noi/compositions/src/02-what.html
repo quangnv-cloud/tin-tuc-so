@@ -1,0 +1,44 @@
+<template>
+  <style>
+/*FONTS*/
+    #root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+    .card { position:absolute; left:60px; right:60px; top:300px; height:600px; border-radius:24px; overflow:hidden; box-shadow:0 0 40px rgba(255,90,31,0.14); border:1.5px solid rgba(255,90,31,0.35); opacity:0; }
+    .card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:40% 45%; }
+    .card .sc { position:absolute; inset:0; background:linear-gradient(180deg,rgba(11,14,20,0) 60%,rgba(11,14,20,0.82) 100%); }
+    .cred { position:absolute; left:26px; bottom:22px; font-weight:500; font-size:22px; color:rgba(255,255,255,0.8); }
+    .panel { position:absolute; left:60px; right:60px; top:940px; height:500px; border-radius:24px; background:#121724; border:1px solid rgba(255,255,255,0.08); padding:42px 48px; opacity:0; }
+    .src { display:flex; align-items:center; gap:16px; }
+    .src svg { width:58px; height:58px; flex:none; }
+    .src .t { font-weight:600; font-size:24px; color:rgba(255,255,255,0.82); }
+    .kick { margin-top:26px; font-weight:700; font-size:26px; letter-spacing:0.24em; text-transform:uppercase; color:#FF5A1F; }
+    .head { margin-top:16px; font-weight:900; font-size:72px; line-height:1.08; }
+    .head .x { color:#FF5A1F; }
+    .sub { margin-top:22px; font-weight:500; font-size:32px; line-height:1.4; color:rgba(255,255,255,0.8); opacity:0; }
+    .sub b { color:#fff; font-weight:700; }
+  </style>
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+    <div class="card" id="card"><img src="assets/img/article-hero.jpg" alt=""><div class="sc"></div><div class="cred">Ảnh minh hoạ dây chuyền kiểm thử chip · Tuổi Trẻ</div></div>
+    <div class="panel" id="panel">
+      <div class="src">
+        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="4"/><circle id="srcring" cx="30" cy="30" r="26" fill="none" stroke="#FF5A1F" stroke-width="4" stroke-linecap="round" stroke-dasharray="163.4" stroke-dashoffset="163.4" transform="rotate(-90 30 30)"/><circle cx="30" cy="30" r="8" fill="#FF5A1F"/></svg>
+        <div class="t">Tuổi Trẻ · 11/11/2026</div>
+      </div>
+      <div class="kick" id="kick">Ký ghi nhớ tại Tokyo</div>
+      <div class="head"><span id="h1">FPT</span> <span class="x" id="hx">×</span> <span id="h2">SBI Holdings</span></div>
+      <div class="sub" id="sub">Nghiên cứu khả năng <b>rót vốn</b> vào nhà máy đóng gói &amp; kiểm thử chip nhớ, dự kiến đặt tại <b>Hà Nội</b></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#card',{autoAlpha:0,y:40,scale:0.96},{autoAlpha:1,y:0,scale:1,duration:0.6,ease:'power3.out'},0.05);
+    tl.to('#card img',{scale:1.06,duration:8,ease:'none'},0);
+    tl.fromTo('#panel',{autoAlpha:0,y:40},{autoAlpha:1,y:0,duration:0.55,ease:'power3.out'},0.35);
+    tl.to('#srcring',{strokeDashoffset:0,duration:0.8,ease:'power2.inOut'},0.6);
+    tl.fromTo('#kick',{autoAlpha:0,x:-16},{autoAlpha:1,x:0,duration:0.4,ease:'power2.out'},0.7);
+    tl.fromTo('#h1',{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:0.45,ease:'power3.out'},1.15);
+    tl.fromTo('#hx',{autoAlpha:0,scale:0.4},{autoAlpha:1,scale:1,duration:0.35,ease:'back.out(2)'},1.6);
+    tl.fromTo('#h2',{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:0.45,ease:'power3.out'},2.4);
+    tl.fromTo('#sub',{autoAlpha:0,y:16},{autoAlpha:1,y:0,duration:0.5,ease:'power2.out'},4.6);
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>

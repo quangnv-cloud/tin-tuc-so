@@ -1,0 +1,56 @@
+<template>
+  <style>
+/*FONTS*/
+    #root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+    #content { position:absolute; inset:0; }
+    .kick { position:absolute; left:64px; top:300px; font-weight:700; font-size:26px; letter-spacing:0.24em; text-transform:uppercase; color:#FF5A1F; opacity:0; }
+    .ttl { position:absolute; left:64px; right:64px; top:350px; font-weight:900; font-size:62px; line-height:1.1; opacity:0; }
+    .row { position:absolute; left:60px; right:60px; height:300px; display:flex; align-items:center; gap:36px; padding:0 40px; border-radius:24px; background:#121724; border:1px solid rgba(255,255,255,0.08); opacity:0; }
+    .row.r1 { top:520px; } .row.r2 { top:850px; } .row.r3 { top:1180px; }
+    .mr { position:relative; width:150px; height:150px; flex:none; }
+    .mr svg { position:absolute; inset:0; width:100%; height:100%; }
+    .mr .n { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:52px; color:#FF5A1F; }
+    .row.r3 .mr .n { color:#FF4438; }
+    .tx .a { font-weight:800; font-size:44px; line-height:1.15; }
+    .tx .a b { color:#FF5A1F; }
+    .tx .b { margin-top:12px; font-weight:500; font-size:31px; line-height:1.35; color:rgba(255,255,255,0.78); }
+    .tag { display:inline-block; margin-top:14px; padding:6px 16px; border-radius:100px; border:2px solid #FF4438; color:#FF4438; font-weight:800; font-size:24px; letter-spacing:0.12em; text-transform:uppercase; }
+    .cutflash { position:absolute; inset:0; z-index:6; pointer-events:none; opacity:0; background:linear-gradient(180deg, rgba(255,90,31,0.4), rgba(255,68,56,0.18)); }
+  </style>
+  <div id="root" data-composition-id="03-facts" data-width="1080" data-height="1920">
+    <div id="content">
+      <div class="kick" id="kick">Theo thỏa thuận</div>
+      <div class="ttl" id="ttl">Ai làm gì?</div>
+      <div class="row r1" id="r1">
+        <div class="mr"><svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="64" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="10"/><circle id="c1" cx="75" cy="75" r="64" fill="none" stroke="#FF5A1F" stroke-width="10" stroke-linecap="round" stroke-dasharray="402.1" stroke-dashoffset="402.1" transform="rotate(-90 75 75)"/></svg><div class="n">1</div></div>
+        <div class="tx"><div class="a"><b>SBI Holdings</b></div><div class="b">Xem xét vai trò nhà đầu tư chiến lược</div></div>
+      </div>
+      <div class="row r2" id="r2">
+        <div class="mr"><svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="64" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="10"/><circle id="c2" cx="75" cy="75" r="64" fill="none" stroke="#FF5A1F" stroke-width="10" stroke-linecap="round" stroke-dasharray="402.1" stroke-dashoffset="402.1" transform="rotate(-90 75 75)"/></svg><div class="n">2</div></div>
+        <div class="tx"><div class="a">Liên doanh <b>FPT IS</b><br>+ 2 doanh nghiệp Hàn Quốc</div><div class="b">Xây dựng và vận hành nhà máy</div></div>
+      </div>
+      <div class="row r3" id="r3">
+        <div class="mr"><svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="64" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="10"/><circle id="c3" cx="75" cy="75" r="64" fill="none" stroke="#FF4438" stroke-width="10" stroke-dasharray="14 12" transform="rotate(-90 75 75)" opacity="0"/></svg><div class="n">3</div></div>
+        <div class="tx"><div class="a">Điều khoản chi tiết</div><div class="tag">Đang thảo luận</div></div>
+      </div>
+    </div>
+    <div class="cutflash" id="cutflash"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#kick',{autoAlpha:0,x:-16},{autoAlpha:1,x:0,duration:0.4,ease:'power2.out'},0.05);
+    tl.fromTo('#ttl',{autoAlpha:0,y:20},{autoAlpha:1,y:0,duration:0.45,ease:'power3.out'},0.2);
+    tl.fromTo('#r1',{autoAlpha:0,x:-60},{autoAlpha:1,x:0,duration:0.5,ease:'power3.out'},0.75);
+    tl.to('#c1',{strokeDashoffset:0,duration:0.9,ease:'power2.inOut'},1.0);
+    tl.fromTo('#cutflash',{opacity:0},{opacity:0.55,duration:0.05,ease:'none'},3.25);
+    tl.to('#cutflash',{opacity:0,duration:0.16,ease:'power1.in'},3.3);
+    tl.fromTo('#content',{scale:1},{scale:0.986,duration:0.06,ease:'power1.out'},3.25);
+    tl.to('#content',{scale:1,duration:0.14,ease:'power2.out'},3.311);
+    tl.fromTo('#r2',{autoAlpha:0,x:-60},{autoAlpha:1,x:0,duration:0.5,ease:'power3.out'},3.3);
+    tl.to('#c2',{strokeDashoffset:0,duration:0.9,ease:'power2.inOut'},3.55);
+    tl.fromTo('#r3',{autoAlpha:0,x:-60},{autoAlpha:1,x:0,duration:0.5,ease:'power3.out'},8.55);
+    tl.to('#c3',{opacity:1,duration:0.4,ease:'power2.out'},8.75);
+    tl.to('#c3',{strokeDashoffset:-130,duration:2.0,ease:'none'},8.75);
+    window.__timelines['03-facts'] = tl;
+  </script>
+</template>

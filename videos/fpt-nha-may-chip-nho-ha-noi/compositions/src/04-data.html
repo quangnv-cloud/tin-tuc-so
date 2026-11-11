@@ -1,0 +1,53 @@
+<template>
+  <style>
+/*FONTS*/
+    #root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+    #root::before { content:""; position:absolute; inset:0; background:radial-gradient(60% 34% at 50% 44%, rgba(255,90,31,0.14), transparent 70%); }
+    .kick { position:absolute; left:0; right:0; top:300px; text-align:center; font-weight:700; font-size:26px; letter-spacing:0.24em; text-transform:uppercase; color:#FF5A1F; opacity:0; }
+    .ttl { position:absolute; left:60px; right:60px; top:348px; text-align:center; font-weight:800; font-size:44px; line-height:1.2; opacity:0; }
+    .ring { position:absolute; left:210px; top:470px; width:660px; height:660px; opacity:0; }
+    .ring svg { position:absolute; inset:0; width:100%; height:100%; }
+    .ctr { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .ctr .pre { font-weight:700; font-size:34px; color:rgba(255,255,255,0.75); }
+    .ctr .num { font-weight:900; font-size:190px; line-height:1; color:#FF5A1F; letter-spacing:-0.03em; }
+    .ctr .unit { margin-top:6px; font-weight:800; font-size:46px; }
+    .chip11 { position:absolute; left:50%; top:1150px; transform:translateX(-50%); padding:12px 28px; border-radius:100px; border:2px solid #FF5A1F; background:rgba(255,90,31,0.1); font-weight:800; font-size:32px; white-space:nowrap; opacity:0; }
+    .legend { position:absolute; left:90px; right:90px; top:1240px; display:flex; flex-direction:column; gap:18px; }
+    .lg { display:flex; align-items:center; gap:18px; padding:18px 26px; border-radius:18px; background:#121724; border:1px solid rgba(255,255,255,0.08); opacity:0; }
+    .lg i { width:22px; height:22px; border-radius:50%; flex:none; }
+    .lg .l { font-weight:700; font-size:32px; flex:1; }
+    .lg .v { font-weight:900; font-size:36px; }
+    .lg.jp i { background:#FF5A1F; } .lg.jp .v { color:#FF5A1F; }
+    .lg.vn i { background:#fff; }
+  </style>
+  <div id="root" data-composition-id="04-data" data-width="1080" data-height="1920">
+    <div class="kick" id="kick">Cũng tại Tokyo</div>
+    <div class="ttl" id="ttl">Việt Nam – Nhật Bản đồng tài trợ nghiên cứu bán dẫn</div>
+    <div class="ring" id="ring">
+      <svg viewBox="0 0 660 660">
+        <circle cx="330" cy="330" r="270" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="44"/>
+        <circle id="arcjp" cx="330" cy="330" r="270" fill="none" stroke="#FF5A1F" stroke-width="44" stroke-dasharray="0 1696.5" transform="rotate(-90 330 330)"/>
+        <circle id="arcvn" cx="330" cy="330" r="270" fill="none" stroke="#FFFFFF" stroke-width="44" stroke-dasharray="0 1696.5" transform="rotate(222 330 330)"/>
+      </svg>
+      <div class="ctr"><div class="pre">gần</div><div class="num" id="num">0</div><div class="unit">tỷ đồng</div></div>
+    </div>
+    <div class="chip11" id="chip">11 dự án nghiên cứu · chương trình NEXUS</div>
+    <div class="legend">
+      <div class="lg jp" id="lg1"><i></i><span class="l">Nhật Bản · 2,6 tỷ yên</span><span class="v">~430 tỷ</span></div>
+      <div class="lg vn" id="lg2"><i></i><span class="l">Việt Nam</span><span class="v">67 tỷ</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#kick',{autoAlpha:0,y:-10},{autoAlpha:1,y:0,duration:0.4,ease:'power2.out'},0.05);
+    tl.fromTo('#ttl',{autoAlpha:0,y:16},{autoAlpha:1,y:0,duration:0.45,ease:'power2.out'},0.9);
+    tl.fromTo('#ring',{autoAlpha:0,scale:0.85},{autoAlpha:1,scale:1,duration:0.6,ease:'back.out(1.4)'},1.4);
+    tl.fromTo('#chip',{autoAlpha:0,y:16},{autoAlpha:1,y:0,duration:0.4,ease:'power2.out'},2.5);
+    tl.to('#arcjp',{attr:{'stroke-dasharray':'1460 1696.5'},duration:1.3,ease:'power2.inOut'},4.2);
+    var o={v:0}; tl.to(o,{v:500,duration:1.0,ease:'power2.out',onUpdate:function(){document.getElementById('num').textContent=Math.round(o.v);}},4.2);
+    tl.to('#arcvn',{attr:{'stroke-dasharray':'222 1696.5'},duration:0.6,ease:'power2.out'},5.5);
+    tl.fromTo('#lg1',{autoAlpha:0,x:-40},{autoAlpha:1,x:0,duration:0.45,ease:'power3.out'},5.9);
+    tl.fromTo('#lg2',{autoAlpha:0,x:-40},{autoAlpha:1,x:0,duration:0.45,ease:'power3.out'},6.5);
+    window.__timelines['04-data'] = tl;
+  </script>
+</template>

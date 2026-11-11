@@ -1,0 +1,58 @@
+<template>
+  <style>
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+    #root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+    .card { position:absolute; left:60px; right:60px; top:290px; height:380px; border-radius:22px; overflow:hidden; box-shadow:0 0 40px rgba(255,90,31,0.14); border:1.5px solid rgba(255,90,31,0.35); opacity:0; }
+    .card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
+    .card .sc { position:absolute; inset:0; background:linear-gradient(180deg,rgba(11,14,20,0.05) 25%,rgba(11,14,20,0.72) 60%,rgba(11,14,20,0.96) 100%); }
+    .card .kick { position:absolute; left:28px; bottom:66px; font-weight:700; font-size:26px; letter-spacing:0.24em; text-transform:uppercase; color:#FF5A1F; }
+    .card .cr { position:absolute; left:28px; bottom:24px; font-weight:500; font-size:22px; color:rgba(255,255,255,0.8); }
+    .rings { position:absolute; left:40px; right:40px; top:720px; display:flex; justify-content:space-around; }
+    .rg { width:470px; display:flex; flex-direction:column; align-items:center; opacity:0; }
+    .rg .w { position:relative; width:380px; height:380px; }
+    .rg svg { position:absolute; inset:0; width:100%; height:100%; }
+    .rg .ctr { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .rg .n { font-weight:900; font-size:74px; line-height:1; letter-spacing:-0.02em; }
+    .rg .u { margin-top:8px; font-weight:700; font-size:26px; color:rgba(255,255,255,0.75); text-transform:uppercase; letter-spacing:0.14em; }
+    .rg .c { margin-top:18px; text-align:center; font-weight:600; font-size:29px; line-height:1.3; color:rgba(255,255,255,0.88); }
+    .rg.a .n { color:#fff; } .rg.b .n { color:#FF5A1F; }
+    .jp { position:absolute; left:60px; right:60px; top:1330px; display:flex; align-items:center; gap:22px; padding:22px 30px; border-radius:20px; background:#121724; border:1px solid rgba(255,255,255,0.08); opacity:0; }
+    .jp .bar { width:8px; height:56px; border-radius:4px; background:#FF4438; flex:none; }
+    .jp .t { font-weight:700; font-size:32px; line-height:1.25; }
+    .jp .t b { color:#FF4438; font-weight:900; }
+  </style>
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+    <div class="card" id="card"><img src="assets/img/article-ctx.jpg" alt=""><div class="sc"></div><div class="kick">Bài toán nhân lực</div><div class="cr">Tọa đàm bán dẫn Việt – Nhật tại Tokyo, 9/11 · Ảnh: VnExpress</div></div>
+    <div class="rings">
+      <div class="rg a" id="g1"><div class="w"><svg viewBox="0 0 380 380"><circle cx="190" cy="190" r="164" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="26"/><circle id="p1" cx="190" cy="190" r="164" fill="none" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" stroke-dasharray="1030.4" stroke-dashoffset="1030.4" transform="rotate(-90 190 190)"/></svg><div class="ctr"><div class="n" id="n1">0</div><div class="u">hiện có</div></div></div><div class="c">Kỹ sư thiết kế vi mạch của Việt Nam</div></div>
+      <div class="rg b" id="g2"><div class="w"><svg viewBox="0 0 380 380"><circle cx="190" cy="190" r="164" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="26"/><circle id="p2" cx="190" cy="190" r="164" fill="none" stroke="#FF5A1F" stroke-width="26" stroke-dasharray="18 14" stroke-dashoffset="0" transform="rotate(-90 190 190)" opacity="0"/></svg><div class="ctr"><div class="n" id="n2">0</div><div class="u">mục tiêu 2030</div></div></div><div class="c">Nhân lực bán dẫn Việt Nam đặt mục tiêu</div></div>
+    </div>
+    <div class="jp" id="jp"><span class="bar"></span><div class="t">Trong khi Nhật Bản cần khoảng <b>40.000</b> kỹ sư bán dẫn</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    function fm(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+    tl.fromTo('#card',{autoAlpha:0,y:30,scale:0.97},{autoAlpha:1,y:0,scale:1,duration:0.55,ease:'power3.out'},0.05);
+    tl.to('#card img',{scale:1.06,duration:10,ease:'none'},0);
+    tl.fromTo('#g1',{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:0.45,ease:'power3.out'},1.7);
+    tl.to('#p1',{strokeDashoffset:0,duration:1.0,ease:'power2.inOut'},2.4);
+    var a={v:0}; tl.to(a,{v:7000,duration:1.0,ease:'power2.out',onUpdate:function(){document.getElementById('n1').textContent=fm(Math.round(a.v/100)*100);}},2.5);
+    tl.fromTo('#g2',{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:0.45,ease:'power3.out'},4.4);
+    tl.to('#p2',{opacity:1,duration:0.4},4.8);
+    tl.to('#p2',{strokeDashoffset:-128,duration:5.0,ease:'none'},4.8);
+    var b={v:0}; tl.to(b,{v:50000,duration:1.0,ease:'power2.out',onUpdate:function(){document.getElementById('n2').textContent=fm(Math.round(b.v/1000)*1000);}},4.95);
+    tl.fromTo('#jp',{autoAlpha:0,x:-50},{autoAlpha:1,x:0,duration:0.5,ease:'power3.out'},7.6);
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
