@@ -1,0 +1,72 @@
+<template>
+  <style>
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+
+    #root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+    .w-img { position:absolute; left:64px; right:64px; top:180px; height:600px; border-radius:22px; overflow:hidden; box-shadow:0 0 40px rgba(255,90,31,0.14); border:1px solid rgba(255,255,255,0.1); opacity:0; }
+    .w-img img { width:100%; height:100%; object-fit:cover; object-position:50% 40%; display:block; }
+    .w-img .cap { position:absolute; left:18px; bottom:16px; padding:6px 12px; border-radius:6px; background:rgba(11,14,20,0.72); font-weight:500; font-size:20px; color:rgba(255,255,255,0.85); }
+    .w-body { position:absolute; left:64px; right:64px; top:830px; }
+    .w-row { display:flex; align-items:center; gap:16px; opacity:0; }
+    .w-kick { font-weight:700; font-size:26px; letter-spacing:0.22em; text-transform:uppercase; color:#FF5A1F; }
+    .w-time { display:inline-flex; align-items:center; gap:10px; padding:8px 16px; border-radius:100px; background:#FF5A1F; color:#0B0E14; font-weight:800; font-size:24px; }
+    .w-time .clk { width:22px; height:22px; border-radius:50%; border:3px solid #0B0E14; position:relative; }
+    .w-time .clk::after { content:""; position:absolute; left:7px; top:2px; width:3px; height:8px; background:#0B0E14; }
+    .w-head { margin-top:28px; font-weight:800; font-size:60px; line-height:1.14; }
+    .w-head .ln { overflow:hidden; } .w-head .ln > span { display:block; }
+    .w-head .o { color:#FF5A1F; }
+    .w-sub { margin-top:22px; font-weight:500; font-size:31px; line-height:1.4; color:rgba(255,255,255,0.8); opacity:0; }
+    .w-sub b { color:#fff; font-weight:700; }
+    .w-strip { position:absolute; left:64px; right:64px; top:1350px; height:110px; }
+    .w-line { position:absolute; left:20px; right:20px; top:30px; height:4px; background:rgba(255,255,255,0.18); transform-origin:left center; }
+    .w-dot { position:absolute; top:18px; width:28px; height:28px; margin-left:-14px; border-radius:50%; background:#121724; border:4px solid rgba(255,90,31,0.7); }
+    .w-dot.now { width:40px; height:40px; margin-left:-20px; top:12px; background:#FF5A1F; border-color:#FF5A1F; box-shadow:0 0 24px rgba(255,90,31,0.7); }
+    .w-dl { position:absolute; top:66px; width:200px; margin-left:-100px; text-align:center; font-weight:700; font-size:24px; color:rgba(255,255,255,0.7); }
+    .w-dl.now { color:#FF5A1F; font-weight:800; }
+  </style>
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+    <div class="w-img" id="w-img"><img src="assets/img/article-vne.jpg" alt=""><span class="cap">Ảnh: VnExpress</span></div>
+    <div class="w-body">
+      <div class="w-row" id="w-row"><span class="w-kick">Điều chỉnh giá</span><span class="w-time"><span class="clk"></span>15:00 · 12/11</span></div>
+      <div class="w-head">
+        <div class="ln"><span id="w-h1">Liên Bộ Công Thương –</span></div>
+        <div class="ln"><span id="w-h2">Tài chính hạ giá xăng dầu</span></div>
+        <div class="ln"><span id="w-h3" class="o">lần thứ 4 trong tháng 11</span></div>
+      </div>
+      <div class="w-sub" id="w-sub">Theo đà giảm của giá dầu thế giới: <b>Brent 91,29 USD/thùng</b>, giảm 1,58% (Reuters, qua Dân Trí)</div>
+    </div>
+    <div class="w-strip">
+      <div class="w-line" id="w-line"></div>
+      <div class="w-dot" style="left:6%" id="w-d1"></div><div class="w-dl" style="left:6%" id="w-l1">1/11</div>
+      <div class="w-dot" style="left:35%" id="w-d2"></div><div class="w-dl" style="left:35%" id="w-l2">3/11</div>
+      <div class="w-dot" style="left:64%" id="w-d3"></div><div class="w-dl" style="left:64%" id="w-l3">5/11</div>
+      <div class="w-dot now" style="left:94%" id="w-d4"></div><div class="w-dl now" style="left:94%" id="w-l4">12/11</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#w-img',{autoAlpha:0,y:30,scale:0.97},{autoAlpha:1,y:0,scale:1,duration:0.6,ease:'power3.out'},0);
+    tl.fromTo('#w-img img',{scale:1.08},{scale:1,duration:6,ease:'none'},0);
+    tl.fromTo('#w-row',{autoAlpha:0,x:-20},{autoAlpha:1,x:0,duration:0.4,ease:'power2.out'},0.35);
+    tl.fromTo('#w-h1',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.55);
+    tl.fromTo('#w-h2',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.7);
+    tl.fromTo('#w-h3',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.85);
+    tl.fromTo('#w-sub',{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:0.45,ease:'power2.out'},2.6);
+    tl.fromTo('#w-line',{scaleX:0},{scaleX:1,duration:1.2,ease:'power2.inOut'},1.4);
+    ['1','2','3','4'].forEach(function(n,i){
+      tl.fromTo('#w-d'+n,{autoAlpha:0,scale:0},{autoAlpha:1,scale:1,duration:0.3,ease:'back.out(2.2)'},1.5+i*0.3);
+      tl.fromTo('#w-l'+n,{autoAlpha:0,y:8},{autoAlpha:1,y:0,duration:0.3,ease:'power2.out'},1.6+i*0.3);
+    });
+    tl.to('#w-d4',{scale:1.18,duration:0.45,yoyo:true,repeat:3,ease:'sine.inOut'},2.8);
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>
