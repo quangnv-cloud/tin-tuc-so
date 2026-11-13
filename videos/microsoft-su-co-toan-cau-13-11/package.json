@@ -1,0 +1,17 @@
+{
+  "name": "microsoft-su-co-toan-cau-13-11",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.30 preview",
+    "check": "npx --yes hyperframes@0.8.30 check",
+    "render": "npx --yes hyperframes@0.8.30 render",
+    "publish": "npx --yes hyperframes@0.8.30 publish"
+  },
+  "dependencies": {
+    "gsap": "^3.15.1"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "^0.8.30"
+  }
+}

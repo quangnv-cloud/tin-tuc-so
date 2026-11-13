@@ -1,0 +1,95 @@
+<template>
+  <style>
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+    #root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+    .ic { position:relative; width:72px; height:72px; flex:none; color:#FF5A1F; }
+    .ic.r { color:#FF4438; } .ic.w { color:#fff; }
+    .ic::before, .ic::after { content:""; position:absolute; box-sizing:border-box; }
+    .ic-mail::before { left:6px; top:14px; width:60px; height:44px; border:5px solid currentColor; border-radius:6px; }
+    .ic-mail::after { left:19px; top:-3px; width:34px; height:34px; border-right:5px solid currentColor; border-bottom:5px solid currentColor; transform:rotate(45deg); }
+    .ic-cloud::before { left:6px; top:34px; width:60px; height:28px; border-radius:14px; background:currentColor; }
+    .ic-cloud::after { left:18px; top:12px; width:34px; height:34px; border-radius:50%; background:currentColor; box-shadow:16px 10px 0 -6px currentColor; }
+    .ic-clock::before { left:6px; top:6px; width:60px; height:60px; border:5px solid currentColor; border-radius:50%; }
+    .ic-clock::after { left:34px; top:18px; width:16px; height:22px; border-left:5px solid currentColor; border-bottom:5px solid currentColor; }
+    .ic-globe::before { left:6px; top:6px; width:60px; height:60px; border:5px solid currentColor; border-radius:50%; background:linear-gradient(currentColor,currentColor) center/52px 5px no-repeat; }
+    .ic-globe::after { left:22px; top:6px; width:28px; height:60px; border:5px solid currentColor; border-radius:50%; }
+    .ic-link { background:linear-gradient(currentColor,currentColor) center/28px 6px no-repeat; }
+    .ic-link::before { left:2px; top:22px; width:28px; height:28px; border:6px solid currentColor; border-radius:50%; }
+    .ic-link::after { left:42px; top:22px; width:28px; height:28px; border:6px solid currentColor; border-radius:50%; }
+    .ic-server::before { left:8px; top:8px; width:56px; height:25px; border:5px solid currentColor; border-radius:6px; }
+    .ic-server::after { left:8px; top:40px; width:56px; height:25px; border:5px solid currentColor; border-radius:6px; }
+    .ic-shield::before { left:11px; top:5px; width:50px; height:62px; border:5px solid currentColor; border-radius:8px 8px 26px 26px; }
+    .ic-shield::after { left:26px; top:22px; width:20px; height:12px; border-left:5px solid currentColor; border-bottom:5px solid currentColor; transform:rotate(-45deg); }
+    .ic-search::before { left:6px; top:6px; width:44px; height:44px; border:6px solid currentColor; border-radius:50%; }
+    .ic-search::after { left:50px; top:40px; width:7px; height:28px; background:currentColor; border-radius:3px; transform:rotate(-45deg); }
+    .ic-cal::before { left:7px; top:12px; width:58px; height:54px; border:5px solid currentColor; border-radius:7px; background:linear-gradient(currentColor,currentColor) top/100% 14px no-repeat; }
+    .ic-cal::after { left:20px; top:4px; width:32px; height:14px; border-left:5px solid currentColor; border-right:5px solid currentColor; }
+    .ic-doc::before { left:14px; top:5px; width:44px; height:62px; border:5px solid currentColor; border-radius:5px; }
+    .ic-doc::after { left:24px; top:22px; width:24px; height:5px; background:currentColor; box-shadow:0 11px 0 currentColor, 0 22px 0 currentColor; }
+    .ic-bag::before { left:9px; top:24px; width:54px; height:44px; border:5px solid currentColor; border-radius:7px; }
+    .ic-bag::after { left:23px; top:6px; width:26px; height:26px; border:5px solid currentColor; border-bottom:none; border-radius:13px 13px 0 0; }
+    .ic-bolt::before { left:6px; top:8px; width:0; height:0; border-left:30px solid transparent; border-right:30px solid transparent; border-bottom:54px solid currentColor; }
+    .ic-bolt::after { left:33px; top:26px; width:6px; height:20px; background:#0B0E14; border-radius:3px; box-shadow:0 26px 0 -0px #0B0E14; }
+    .ic-load::before { left:6px; top:40px; width:14px; height:26px; background:currentColor; border-radius:3px; box-shadow:22px -14px 0 currentColor, 44px -30px 0 currentColor; }
+
+    .hk-photo { position:absolute; left:0; right:0; top:0; height:880px; overflow:hidden; background:#05070c; }
+    .hk-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 60%; }
+    .hk-scrim { position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,14,20,0.25) 0%, rgba(11,14,20,0.1) 45%, rgba(11,14,20,0.99) 100%); }
+    .hk-tint { position:absolute; inset:0; background:radial-gradient(110% 70% at 80% 18%, rgba(255,90,31,0.16), transparent 60%); mix-blend-mode:screen; }
+    .hk-panel { position:absolute; left:0; right:0; top:780px; padding:30px 64px 0; display:flex; flex-direction:column; align-items:flex-start; }
+    .hk-masthead { display:flex; align-items:center; gap:14px; margin-bottom:26px; opacity:0; }
+    .hk-logo { width:58px; height:58px; flex:none; } .hk-logo img { display:block; width:100%; height:100%; }
+    .hk-mw { font-weight:800; font-size:33px; color:#fff; }
+    .hk-badge { display:inline-flex; align-items:center; gap:10px; padding:11px 19px; border-radius:9px; border:1.5px solid rgba(255,90,31,0.85); background:rgba(255,90,31,0.12); margin-bottom:30px; opacity:0; }
+    .hk-badge .d { width:8px; height:8px; border-radius:50%; background:#FF5A1F; flex:none; }
+    .hk-badge span { font-weight:500; font-size:23px; letter-spacing:0.03em; color:#fff; white-space:nowrap; }
+    .hk-name-wrap { overflow:hidden; padding-bottom:6px; }
+    .hk-name { font-weight:900; font-size:118px; line-height:1.02; letter-spacing:-0.02em; color:#fff; }
+    .hk-name.o { color:#FF5A1F; font-size:96px; }
+    .hk-sub { margin-top:24px; font-weight:700; font-size:37px; line-height:1.28; color:rgba(255,255,255,0.92); opacity:0; }
+    .hk-sub b { color:#FF5A1F; font-weight:800; }
+    .hk-tags { display:flex; flex-direction:column; gap:22px; margin-top:34px; }
+    .hk-tag { font-weight:800; font-size:44px; line-height:1; color:#FF5A1F; opacity:0; }
+    .hk-tag.warn { color:#FF4438; }
+    .hk-tag .dot { display:inline-block; width:12px; height:12px; border-radius:50%; background:currentColor; margin:0 16px 8px 0; vertical-align:middle; }
+  </style>
+  <div id="root" data-composition-id="01-hook" data-width="1080" data-height="1920">
+    <div class="hk-photo"><img src="assets/img/article-hero.jpg" alt=""><div class="hk-scrim"></div><div class="hk-tint"></div></div>
+    <div class="hk-panel">
+      <div class="hk-masthead"><div class="hk-logo"><img src="public/logo.png" alt=""></div><div class="hk-mw">Tin Tức Số</div></div>
+      <div class="hk-badge"><span class="d"></span><span>Nguồn: VnExpress · 13/11/2026</span></div>
+      <div class="hk-name-wrap"><div class="hk-name" id="hk-n1">Microsoft</div></div>
+      <div class="hk-name-wrap"><div class="hk-name o" id="hk-n2">sự cố toàn cầu</div></div>
+      <div class="hk-sub" id="hk-sub">Outlook, Teams, Microsoft 365 <b>gián đoạn từ 1h sáng</b></div>
+      <div class="hk-tags">
+        <div class="hk-tag" id="hk-t1"><span class="dot"></span>Kéo dài hơn nửa ngày</div>
+        <div class="hk-tag warn" id="hk-t2"><span class="dot"></span>Chưa rõ nguyên nhân gốc</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('.hk-photo',{autoAlpha:0.5,scale:1.1},{autoAlpha:1,scale:1,duration:0.95,ease:'power2.out'},0);
+    tl.fromTo('.hk-panel',{y:48},{y:0,duration:0.55,ease:'power3.out'},0.08);
+    tl.fromTo('.hk-masthead',{autoAlpha:0,y:14},{autoAlpha:1,y:0,duration:0.4,ease:'power2.out'},0.25);
+    tl.fromTo('.hk-badge',{autoAlpha:0,scale:0.9},{autoAlpha:1,scale:1,duration:0.36,ease:'back.out(1.7)'},0.45);
+    tl.fromTo('#hk-n1',{yPercent:118},{yPercent:0,duration:0.65,ease:'power4.out'},0.7);
+    tl.fromTo('#hk-n2',{yPercent:118},{yPercent:0,duration:0.65,ease:'power4.out'},0.88);
+    tl.fromTo('#hk-sub',{autoAlpha:0,y:16},{autoAlpha:1,y:0,duration:0.45,ease:'power2.out'},1.5);
+    tl.fromTo('#hk-t1',{autoAlpha:0,x:-18},{autoAlpha:1,x:0,duration:0.36,ease:'power2.out'},2.1);
+    tl.fromTo('#hk-t2',{autoAlpha:0,x:-18},{autoAlpha:1,x:0,duration:0.36,ease:'power2.out'},2.4);
+    tl.to('.hk-photo img',{scale:1.05,duration:5.5,ease:'none'},0);
+    window.__timelines['01-hook'] = tl;
+  </script>
+</template>
