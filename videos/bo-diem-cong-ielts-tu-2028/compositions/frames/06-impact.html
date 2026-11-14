@@ -1,0 +1,58 @@
+<template>
+  <style>
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+    #root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+    .i-top { position:absolute; left:64px; right:64px; top:270px; }
+    .i-kicker { font-weight:700; font-size:26px; letter-spacing:0.22em; text-transform:uppercase; color:#FF5A1F; opacity:0; }
+    .i-head { margin-top:18px; font-weight:800; font-size:58px; line-height:1.14; overflow:hidden; }
+    .i-head > span { display:block; } .i-head .o { color:#FF5A1F; }
+    .i-a { position:absolute; left:72px; width:860px; top:480px; height:420px; padding:44px 46px; background:#F4F1EC; color:#0B0E14; border-radius:2px; box-shadow:0 22px 50px rgba(0,0,0,0.55); opacity:0; }
+    .i-a .k { font-weight:800; font-size:26px; letter-spacing:0.18em; color:#FF5A1F; }
+    .i-a .t { margin-top:16px; font-weight:900; font-size:52px; line-height:1.14; }
+    .i-a .s { margin-top:20px; font-weight:500; font-size:30px; line-height:1.34; color:rgba(11,14,20,0.75); }
+    .i-a .tag { display:inline-block; margin-top:22px; padding:8px 18px; border:2.5px solid #0B0E14; border-radius:6px; font-weight:800; font-size:28px; }
+    .i-b { position:absolute; right:64px; width:880px; top:935px; height:480px; padding:60px 52px 40px; background:#121724; border:1px solid rgba(255,255,255,0.1); border-radius:4px; box-shadow:0 26px 60px rgba(0,0,0,0.6), 0 0 40px rgba(255,90,31,0.14); overflow:hidden; opacity:0; }
+    .i-b .q { position:absolute; left:26px; top:-70px; font-weight:900; font-size:380px; line-height:1; color:rgba(255,90,31,0.16); }
+    .i-b .t { position:relative; font-weight:800; font-size:50px; line-height:1.22; }
+    .i-b .t b { color:#FF5A1F; font-weight:900; }
+    .i-b .who { position:relative; margin-top:34px; padding-top:22px; border-top:2px solid rgba(255,90,31,0.6); }
+    .i-b .who .n { font-weight:800; font-size:32px; }
+    .i-b .who .r { margin-top:6px; font-weight:500; font-size:26px; color:rgba(255,255,255,0.7); }
+  </style>
+  <div id="root" data-composition-id="06-impact" data-width="1080" data-height="1920">
+    <div class="i-top">
+      <div class="i-kicker" id="i-kicker">Điều không thay đổi</div>
+      <div class="i-head"><span id="i-h1">IELTS <span class="o">vẫn có giá trị</span></span></div>
+    </div>
+    <div class="i-a" id="i-a" data-layout-allow-overlap>
+      <div class="k" data-layout-allow-overlap>VẪN ĐƯỢC PHÉP</div>
+      <div class="t" data-layout-allow-overlap>Quy đổi IELTS thành điểm môn tiếng Anh</div>
+      <div class="s">Nếu phương án tuyển sinh của trường có quy định</div>
+      <div class="tag">Ví dụ: tổ hợp D01</div>
+    </div>
+    <div class="i-b" id="i-b">
+      <div class="q">&ldquo;</div>
+      <div class="t">Quy chế <b>không cấm</b> việc xác định tổ hợp xét tuyển <b>hơn ba môn</b>.</div>
+      <div class="who"><div class="n">Nguyễn Tiến Thảo</div><div class="r">Vụ trưởng Vụ Giáo dục đại học, Bộ GD-ĐT</div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo('#i-kicker',{autoAlpha:0,y:-10},{autoAlpha:1,y:0,duration:0.4,ease:'power2.out'},0.05);
+    tl.fromTo('#i-h1',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.25);
+    tl.fromTo('#i-a',{autoAlpha:0,x:-140,rotation:-8},{autoAlpha:1,x:0,rotation:-2.2,duration:0.6,ease:'power3.out'},0.9);
+    tl.fromTo('#i-b',{autoAlpha:0,x:140,rotation:7},{autoAlpha:1,x:0,rotation:1.6,duration:0.6,ease:'power3.out'},3.6);
+    window.__timelines['06-impact'] = tl;
+  </script>
+</template>
