@@ -1,0 +1,79 @@
+<template>
+  <style>
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+
+#root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+.kick { font-weight:700; font-size:26px; letter-spacing:0.22em; text-transform:uppercase; color:#FF5A1F; }
+.num { font-variant-numeric: tabular-nums; }
+.credit { position:absolute; right:14px; bottom:12px; padding:5px 10px; border-radius:6px; background:rgba(11,14,20,0.78); font-weight:500; font-size:18px; color:rgba(255,255,255,0.9); }
+.ttl { position:absolute; left:64px; right:64px; font-weight:800; font-size:60px; line-height:1.14; letter-spacing:-0.01em; }
+.ttl .ln { overflow:hidden; } .ttl .ln > span { display:block; }
+.ttl b { color:#FF5A1F; font-weight:900; } .ttl b.r { color:#FF4438; }
+.card { border-radius:20px; background:rgba(18,23,36,0.94); border:1px solid rgba(255,255,255,0.10); box-shadow:0 0 40px rgba(255,90,31,0.14); }
+.ring { position:relative; flex:none; }
+.ring svg { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
+.ring .in { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+
+.w-kick { position:absolute; left:64px; top:190px; opacity:0; }
+.w-ttl { top:240px; }
+.w-img { position:absolute; left:64px; right:64px; top:430px; height:560px; border-radius:20px; overflow:hidden; opacity:0; box-shadow:0 0 40px rgba(255,90,31,0.14); }
+.w-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%; }
+.w-src { position:absolute; left:26px; top:26px; display:flex; align-items:center; gap:14px; padding:10px 20px 10px 10px; border-radius:60px; background:rgba(11,14,20,0.82); opacity:0; }
+.w-src .rc { width:62px; height:62px; border-radius:50%; border:3px solid #FF5A1F; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:22px; color:#FF5A1F; }
+.w-src .t { font-weight:700; font-size:26px; color:#fff; }
+.w-src .t small { display:block; font-weight:600; font-size:18px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.6); }
+.w-tiles { position:absolute; left:64px; right:64px; top:1030px; display:flex; gap:20px; }
+.w-tile { flex:1; height:200px; padding:28px 24px; opacity:0; display:flex; flex-direction:column; justify-content:center; }
+.w-tile .v { font-weight:900; font-size:64px; line-height:1; color:#FF5A1F; white-space:nowrap; }
+.w-tile .v.s { font-size:46px; }
+.w-tile .k { margin-top:14px; font-weight:700; font-size:22px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65); }
+.w-vote { position:absolute; left:64px; right:64px; top:1260px; height:210px; display:flex; align-items:center; gap:34px; padding:0 34px; opacity:0; }
+.w-vote .t { font-weight:800; font-size:38px; line-height:1.2; color:#fff; }
+.w-vote .t b { color:#FF5A1F; }
+.w-vote .t small { display:block; margin-top:8px; font-weight:600; font-size:22px; color:rgba(255,255,255,0.6); }
+
+  </style>
+  <div id="root" data-composition-id="02-what" data-width="1080" data-height="1920">
+
+    <div class="kick w-kick" id="w-kick">Chuyện gì xảy ra</div>
+    <div class="ttl w-ttl"><div class="ln"><span id="w-h1">Quốc hội thông qua</span></div><div class="ln"><span id="w-h2"><b>Luật Nhà ở</b> sửa đổi</span></div></div>
+    <div class="w-img" id="w-img"><img src="assets/img/tuoitre.jpg" alt=""><div class="credit">Ảnh: Tuổi Trẻ</div>
+      <div class="w-src" id="w-src"><div class="rc">21/11</div><div class="t"><small>Biểu quyết</small>Sáng 21/11/2026</div></div>
+    </div>
+    <div class="w-tiles">
+      <div class="card w-tile" id="w-t1"><div class="v num">13</div><div class="k">Chương</div></div>
+      <div class="card w-tile" id="w-t2"><div class="v num">129</div><div class="k">Điều</div></div>
+      <div class="card w-tile" id="w-t3"><div class="v s num">1/7/2027</div><div class="k">Hiệu lực</div></div>
+    </div>
+    <div class="card w-vote" id="w-vote"><div class="ring" id="w-r96" style="width:150px;height:150px"><svg viewBox="0 0 150 150"><circle cx="75.0" cy="75.0" r="68.0" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="14"/><circle class="arc" cx="75.0" cy="75.0" r="68.0" fill="none" stroke="#FF5A1F" stroke-width="14" stroke-linecap="butt" stroke-dasharray="427.26" stroke-dashoffset="427.26" transform="rotate(-90 75.0 75.0)"/></svg><div class="in"><div style="font-weight:900;font-size:40px;color:#fff" class="num"><span id="w-96n">0</span>%</div></div></div><div class="t">Hơn <b>96%</b> đại biểu tham gia biểu quyết tán thành<small>Theo VnExpress</small></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#w-kick',{autoAlpha:0,y:-10},{autoAlpha:1,y:0,duration:0.35,ease:'power2.out'},0.05);
+    tl.fromTo('#w-h1',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.15);
+    tl.fromTo('#w-h2',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.3);
+    tl.fromTo('#w-img',{autoAlpha:0,y:40},{autoAlpha:1,y:0,duration:0.6,ease:'power3.out'},0.35);
+    tl.fromTo('#w-img img',{scale:1.14},{scale:1.0,duration:9.79,ease:'none'},0.35);
+    tl.fromTo('#w-src',{autoAlpha:0,x:-30},{autoAlpha:1,x:0,duration:0.45,ease:'power3.out'},0.5);
+    tl.fromTo('#w-vote',{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:0.45,ease:'power3.out'},3.3);
+    tl.fromTo('#w-r96 .arc',{strokeDashoffset:427.26},{strokeDashoffset:17.09,duration:1.2,ease:'power2.out'},3.5);
+    const c96 = { v: 0 }; const n96 = document.getElementById('w-96n');
+    tl.fromTo(c96,{v:0},{v:96,duration:1.2,ease:'power2.out',onUpdate(){ n96.textContent = Math.round(c96.v); }},3.5);
+    tl.fromTo('#w-t1',{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:0.4,ease:'back.out(1.6)'},7.1);
+    tl.fromTo('#w-t2',{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:0.4,ease:'back.out(1.6)'},8.1);
+    tl.fromTo('#w-t3',{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:0.4,ease:'back.out(1.6)'},8.6);
+    window.__timelines['02-what'] = tl;
+  </script>
+</template>

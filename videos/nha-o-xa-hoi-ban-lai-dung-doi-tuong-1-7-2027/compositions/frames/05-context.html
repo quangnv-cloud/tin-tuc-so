@@ -1,0 +1,79 @@
+<template>
+  <style>
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+
+#root { position:absolute; inset:0; width:100%; height:100%; overflow:hidden; font-family:"Montserrat",sans-serif; color:#fff; background:transparent; }
+.kick { font-weight:700; font-size:26px; letter-spacing:0.22em; text-transform:uppercase; color:#FF5A1F; }
+.num { font-variant-numeric: tabular-nums; }
+.credit { position:absolute; right:14px; bottom:12px; padding:5px 10px; border-radius:6px; background:rgba(11,14,20,0.78); font-weight:500; font-size:18px; color:rgba(255,255,255,0.9); }
+.ttl { position:absolute; left:64px; right:64px; font-weight:800; font-size:60px; line-height:1.14; letter-spacing:-0.01em; }
+.ttl .ln { overflow:hidden; } .ttl .ln > span { display:block; }
+.ttl b { color:#FF5A1F; font-weight:900; } .ttl b.r { color:#FF4438; }
+.card { border-radius:20px; background:rgba(18,23,36,0.94); border:1px solid rgba(255,255,255,0.10); box-shadow:0 0 40px rgba(255,90,31,0.14); }
+.ring { position:relative; flex:none; }
+.ring svg { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
+.ring .in { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+
+.x-kick { position:absolute; left:64px; top:190px; opacity:0; }
+.x-ttl { top:240px; }
+.x-rings { position:absolute; left:64px; right:64px; top:440px; display:flex; justify-content:space-between; }
+.x-col { width:290px; display:flex; flex-direction:column; align-items:center; opacity:0; }
+.x-col .rv { font-weight:900; font-size:64px; line-height:1; color:#fff; }
+.x-col .ru { margin-top:4px; font-weight:700; font-size:22px; color:rgba(255,255,255,0.7); }
+#x-col0 .rv { font-size:46px; color:rgba(255,255,255,0.8); }
+.x-col .lab { margin-top:22px; text-align:center; font-weight:700; font-size:26px; line-height:1.3; color:rgba(255,255,255,0.8); }
+.x-card { position:absolute; left:64px; right:64px; top:880px; height:580px; padding:20px 40px; opacity:0; display:flex; flex-direction:column; justify-content:center; }
+.x-row { padding:26px 0; border-bottom:1px solid rgba(255,255,255,0.09); opacity:0; }
+.x-row:last-child { border-bottom:none; }
+.x-row .k { font-weight:700; font-size:24px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.55); }
+.x-row .v { margin-top:10px; font-weight:800; font-size:42px; line-height:1.2; color:#fff; }
+.x-row .v b { color:#FF5A1F; font-weight:900; }
+.x-row .v s { color:#FF4438; text-decoration-thickness:4px; }
+
+  </style>
+  <div id="root" data-composition-id="05-context" data-width="1080" data-height="1920">
+
+    <div class="kick x-kick" id="x-kick">Trước và sau</div>
+    <div class="ttl x-ttl"><div class="ln"><span id="x-t1">Khác gì so với</span></div><div class="ln"><span id="x-t2"><b>hiện nay?</b></span></div></div>
+    <div class="x-rings">
+<div class="x-col" id="x-col0"><div class="ring" id="x-r1" style="width:250px;height:250px"><svg viewBox="0 0 250 250"><circle cx="125.0" cy="125.0" r="115.0" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="20"/><circle class="arc" cx="125.0" cy="125.0" r="115.0" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="20" stroke-linecap="butt" stroke-dasharray="722.57" stroke-dashoffset="722.57" transform="rotate(-90 125.0 125.0)"/></svg><div class="in"><div class="rv">Tự do</div></div></div><div class="lab">Hiện nay<br>sau 5 năm</div></div>
+<div class="x-col" id="x-col1"><div class="ring" id="x-r2" style="width:250px;height:250px"><svg viewBox="0 0 250 250"><circle cx="125.0" cy="125.0" r="115.0" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="20"/><circle class="arc" cx="125.0" cy="125.0" r="115.0" fill="none" stroke="#FF5A1F" stroke-width="20" stroke-linecap="butt" stroke-dasharray="722.57" stroke-dashoffset="722.57" transform="rotate(-90 125.0 125.0)"/><line x1="125.0" y1="30.0" x2="125.0" y2="-10.0" stroke="#0B0E14" stroke-width="5"/><line x1="192.2" y1="57.8" x2="220.5" y2="29.5" stroke="#0B0E14" stroke-width="5"/><line x1="220.0" y1="125.0" x2="260.0" y2="125.0" stroke="#0B0E14" stroke-width="5"/><line x1="192.2" y1="192.2" x2="220.5" y2="220.5" stroke="#0B0E14" stroke-width="5"/><line x1="125.0" y1="220.0" x2="125.0" y2="260.0" stroke="#0B0E14" stroke-width="5"/><line x1="57.8" y1="192.2" x2="29.5" y2="220.5" stroke="#0B0E14" stroke-width="5"/><line x1="30.0" y1="125.0" x2="-10.0" y2="125.0" stroke="#0B0E14" stroke-width="5"/><line x1="57.8" y1="57.8" x2="29.5" y2="29.5" stroke="#0B0E14" stroke-width="5"/></svg><div class="in"><div class="rv">8</div><div class="ru">nhóm</div></div></div><div class="lab">Đối tượng<br>được mua</div></div>
+<div class="x-col" id="x-col2"><div class="ring" id="x-r3" style="width:250px;height:250px"><svg viewBox="0 0 250 250"><circle cx="125.0" cy="125.0" r="115.0" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="20"/><circle class="arc" cx="125.0" cy="125.0" r="115.0" fill="none" stroke="#FF5A1F" stroke-width="20" stroke-linecap="butt" stroke-dasharray="722.57" stroke-dashoffset="722.57" transform="rotate(-90 125.0 125.0)"/></svg><div class="in"><div class="rv">1</div><div class="ru">căn</div></div></div><div class="lab">Mỗi cá nhân,<br>hộ gia đình</div></div>
+    </div>
+    <div class="card x-card" id="x-card">
+<div class="x-row" id="x-row0"><div class="k">Hiện nay · sau 5 năm</div><div class="v"><s>Bán cho bất kỳ ai</s></div></div>
+<div class="x-row" id="x-row1"><div class="k">Từ 1/7/2027 · sau 5 năm</div><div class="v">Chỉ bán cho <b>người thuộc diện được mua</b></div></div>
+<div class="x-row" id="x-row2"><div class="k">Mỗi cá nhân, hộ gia đình</div><div class="v">Chỉ mua hoặc thuê mua <b>1 căn</b></div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo('#x-kick',{autoAlpha:0,y:-10},{autoAlpha:1,y:0,duration:0.35,ease:'power2.out'},0.05);
+    tl.fromTo('#x-t1',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.12);
+    tl.fromTo('#x-t2',{yPercent:115},{yPercent:0,duration:0.55,ease:'power4.out'},0.26);
+    tl.fromTo('#x-card',{autoAlpha:0},{autoAlpha:1,duration:0.35},0.6);
+    tl.fromTo('#x-col0',{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:0.4,ease:'power3.out'},0.1);
+    tl.fromTo('#x-r1 .arc',{strokeDashoffset:722.57},{strokeDashoffset:0.0,duration:0.8,ease:'power2.out'},0.2);
+    tl.fromTo('#x-col1',{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:0.4,ease:'power3.out'},2.4);
+    tl.fromTo('#x-r2 .arc',{strokeDashoffset:722.57},{strokeDashoffset:0.0,duration:0.8,ease:'power2.out'},2.5);
+    tl.fromTo('#x-col2',{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:0.4,ease:'power3.out'},4.4);
+    tl.fromTo('#x-r3 .arc',{strokeDashoffset:722.57},{strokeDashoffset:0.0,duration:0.8,ease:'power2.out'},4.5);
+    tl.fromTo('#x-row0',{autoAlpha:0,x:-30},{autoAlpha:1,x:0,duration:0.4,ease:'power3.out'},0.7);
+    tl.fromTo('#x-row1',{autoAlpha:0,x:-30},{autoAlpha:1,x:0,duration:0.4,ease:'power3.out'},2.4);
+    tl.fromTo('#x-row2',{autoAlpha:0,x:-30},{autoAlpha:1,x:0,duration:0.4,ease:'power3.out'},4.7);
+
+    window.__timelines['05-context'] = tl;
+  </script>
+</template>
