@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, height=1920">
+<script src="assets/vendor/gsap.min.js"></script>
+<style>
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:400;src:url('assets/fonts/Montserrat-400-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:500;src:url('assets/fonts/Montserrat-500-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:600;src:url('assets/fonts/Montserrat-600-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:700;src:url('assets/fonts/Montserrat-700-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:800;src:url('assets/fonts/Montserrat-800-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Montserrat';font-weight:900;src:url('assets/fonts/Montserrat-900-vietnamese.woff2') format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:1080px; height:1920px; overflow:hidden; background:#000; }
+#root { position:relative; width:1080px; height:1920px; overflow:hidden; background:#0B0E14; font-family:"Montserrat",sans-serif; color:#fff; }
+.scene { position:absolute; inset:0; width:100%; height:100%; z-index:2; }
+#bg-depth { position:absolute; inset:0; overflow:hidden; z-index:0; }
+#bg-depth .blob { position:absolute; border-radius:50%; filter:blur(60px); }
+#bg-stars { position:absolute; inset:0; width:100%; height:100%; }
+#brand-anchor { position:absolute; inset:0; z-index:90; pointer-events:none; opacity:0; }
+#ba-source { position:absolute; left:44px; top:46px; display:inline-flex; align-items:center; gap:10px; padding:9px 16px; border-radius:8px; background:rgba(11,14,20,0.6); border:1px solid rgba(255,255,255,0.12); }
+#ba-source .dot { width:7px; height:7px; border-radius:50%; background:#FF5A1F; }
+#ba-source span { font-weight:500; font-size:21px; letter-spacing:0.02em; color:rgba(255,255,255,0.9); white-space:nowrap; }
+#ba-brand { position:absolute; right:40px; top:40px; display:inline-flex; align-items:center; gap:11px; }
+#ba-brand .mark { width:44px; height:44px; flex:none; } #ba-brand .mark img { display:block; width:100%; height:100%; }
+#ba-brand .word { font-weight:800; font-size:24px; color:#fff; }
+#caps { position:absolute; left:80px; right:180px; top:1505px; height:110px; z-index:85; pointer-events:none; }
+.cap { position:absolute; left:0; right:0; top:0; text-align:center; font-weight:800; font-size:42px; line-height:1.2; color:rgba(255,255,255,0.92); text-shadow:0 2px 12px rgba(0,0,0,0.9); opacity:0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="71.98" data-width="1080" data-height="1920">
+<div id="bg-depth">
+  <div class="blob" style="width:640px;height:640px;background:radial-gradient(circle,rgba(255,90,31,0.20),transparent 70%);top:-120px;left:-160px;"></div>
+  <div class="blob" style="width:560px;height:560px;background:radial-gradient(circle,rgba(255,68,56,0.16),transparent 70%);top:900px;right:-200px;"></div>
+  <div class="blob" style="width:520px;height:520px;background:radial-gradient(circle,rgba(255,90,31,0.12),transparent 70%);bottom:-180px;left:200px;"></div>
+  <svg id="bg-stars" viewBox="0 0 1080 1920"><circle cx="198" cy="1851" r="2.5" fill="#fff" opacity="0.38" /><circle cx="898" cy="1418" r="1.9" fill="#fff" opacity="0.31" /><circle cx="543" cy="1514" r="1.6" fill="#fff" opacity="0.37" /><circle cx="332" cy="1072" r="2.8" fill="#fff" opacity="0.29" /><circle cx="924" cy="922" r="2.2" fill="#fff" opacity="0.26" /><circle cx="282" cy="50" r="2.1" fill="#fff" opacity="0.34" /><circle cx="621" cy="1239" r="1.7" fill="#fff" opacity="0.37" /><circle cx="104" cy="259" r="2.3" fill="#fff" opacity="0.22" /><circle cx="667" cy="707" r="2.2" fill="#fff" opacity="0.38" /><circle cx="803" cy="1817" r="2.7" fill="#fff" opacity="0.24" /><circle cx="535" cy="1344" r="2.5" fill="#fff" opacity="0.28" /><circle cx="1033" cy="152" r="2.1" fill="#fff" opacity="0.29" /><circle cx="6" cy="1590" r="2.7" fill="#fff" opacity="0.38" /><circle cx="79" cy="1617" r="1.5" fill="#fff" opacity="0.15" /><circle cx="834" cy="1100" r="1.9" fill="#fff" opacity="0.25" /><circle cx="328" cy="404" r="2.5" fill="#fff" opacity="0.27" /><circle cx="115" cy="379" r="2.7" fill="#fff" opacity="0.16" /><circle cx="800" cy="1703" r="1.8" fill="#fff" opacity="0.36" /><circle cx="833" cy="1536" r="1.8" fill="#fff" opacity="0.27" /><circle cx="653" cy="558" r="2.7" fill="#fff" opacity="0.35" /><circle cx="1076" cy="880" r="2.9" fill="#fff" opacity="0.40" /><circle cx="963" cy="1061" r="3.0" fill="#fff" opacity="0.17" /><circle cx="76" cy="202" r="2.3" fill="#fff" opacity="0.33" /><circle cx="457" cy="403" r="2.9" fill="#fff" opacity="0.16" /><circle cx="960" cy="1630" r="1.5" fill="#fff" opacity="0.31" /><circle cx="516" cy="1088" r="2.7" fill="#fff" opacity="0.15" /><circle cx="124" cy="139" r="2.9" fill="#fff" opacity="0.33" /><circle cx="516" cy="1499" r="2.2" fill="#fff" opacity="0.28" /><circle cx="874" cy="762" r="2.4" fill="#fff" opacity="0.35" /><circle cx="949" cy="1759" r="2.6" fill="#fff" opacity="0.19" /><circle cx="123" cy="1450" r="1.9" fill="#fff" opacity="0.20" /><circle cx="208" cy="390" r="1.9" fill="#fff" opacity="0.16" /><circle cx="196" cy="1549" r="2.1" fill="#fff" opacity="0.36" /><circle cx="434" cy="47" r="2.1" fill="#fff" opacity="0.38" /><circle cx="240" cy="1250" r="2.5" fill="#fff" opacity="0.20" /><circle cx="556" cy="62" r="2.7" fill="#fff" opacity="0.39" /><circle cx="260" cy="1491" r="2.6" fill="#fff" opacity="0.22" /><circle cx="83" cy="223" r="1.9" fill="#fff" opacity="0.34" /><circle cx="528" cy="722" r="1.5" fill="#fff" opacity="0.20" /><circle cx="34" cy="808" r="2.0" fill="#fff" opacity="0.18" /></svg>
+</div>
+<div id="el-01-hook" class="scene clip" data-composition-id="01-hook" data-composition-src="compositions/frames/01-hook.html" data-start="0.0" data-duration="7.22" data-track-index="1"></div>
+<div id="el-02-what" class="scene clip" data-composition-id="02-what" data-composition-src="compositions/frames/02-what.html" data-start="7.22" data-duration="7.22" data-track-index="1"></div>
+<div id="el-03-facts" class="scene clip" data-composition-id="03-facts" data-composition-src="compositions/frames/03-facts.html" data-start="14.44" data-duration="11.3" data-track-index="1"></div>
+<div id="el-04-data" class="scene clip" data-composition-id="04-data" data-composition-src="compositions/frames/04-data.html" data-start="25.74" data-duration="8.3" data-track-index="1"></div>
+<div id="el-05-context" class="scene clip" data-composition-id="05-context" data-composition-src="compositions/frames/05-context.html" data-start="34.04" data-duration="15.21" data-track-index="1"></div>
+<div id="el-06-impact" class="scene clip" data-composition-id="06-impact" data-composition-src="compositions/frames/06-impact.html" data-start="49.25" data-duration="11.73" data-track-index="1"></div>
+<div id="el-07-cta" class="scene clip" data-composition-id="07-cta" data-composition-src="compositions/frames/07-cta.html" data-start="60.98" data-duration="11.0" data-track-index="1"></div>
+<div id="brand-anchor"><div id="ba-source"><span class="dot"></span><span>Nguồn: Dân Trí, Tuổi Trẻ</span></div><div id="ba-brand"><span class="mark"><img src="public/logo.png" alt=""></span><span class="word">Tin Tức Số</span></div></div>
+<div id="caps">
+<div class="cap" id="cap0"><span class="w" id="w0_0">Gió</span> <span class="w" id="w0_1">mùa</span> <span class="w" id="w0_2">đông</span> <span class="w" id="w0_3">bắc</span> <span class="w" id="w0_4">tràn</span></div>
+<div class="cap" id="cap1"><span class="w" id="w1_0">về</span> <span class="w" id="w1_1">từ</span> <span class="w" id="w1_2">sáng</span> <span class="w" id="w1_3">24</span> <span class="w" id="w1_4">tháng</span></div>
+<div class="cap" id="cap2"><span class="w" id="w2_0">11:</span> <span class="w" id="w2_1">miền</span> <span class="w" id="w2_2">Bắc</span> <span class="w" id="w2_3">chuyển</span> <span class="w" id="w2_4">rét,</span></div>
+<div class="cap" id="cap3"><span class="w" id="w3_0">miền</span> <span class="w" id="w3_1">Trung</span> <span class="w" id="w3_2">có</span> <span class="w" id="w3_3">thể</span> <span class="w" id="w3_4">đón</span></div>
+<div class="cap" id="cap4"><span class="w" id="w4_0">hai</span> <span class="w" id="w4_1">đợt</span> <span class="w" id="w4_2">mưa</span> <span class="w" id="w4_3">lớn,</span></div>
+<div class="cap" id="cap5"><span class="w" id="w5_0">còn</span> <span class="w" id="w5_1">miền</span> <span class="w" id="w5_2">Nam</span> <span class="w" id="w5_3">vẫn</span> <span class="w" id="w5_4">ngày</span> <span class="w" id="w5_5">nắng.</span></div>
+<div class="cap" id="cap6"><span class="w" id="w6_0">Theo</span> <span class="w" id="w6_1">Trung</span> <span class="w" id="w6_2">tâm</span> <span class="w" id="w6_3">Dự</span> <span class="w" id="w6_4">báo</span></div>
+<div class="cap" id="cap7"><span class="w" id="w7_0">khí</span> <span class="w" id="w7_1">tượng</span> <span class="w" id="w7_2">thủy</span> <span class="w" id="w7_3">văn</span> <span class="w" id="w7_4">quốc</span></div>
+<div class="cap" id="cap8"><span class="w" id="w8_0">gia,</span> <span class="w" id="w8_1">không</span> <span class="w" id="w8_2">khí</span> <span class="w" id="w8_3">lạnh</span> <span class="w" id="w8_4">ảnh</span></div>
+<div class="cap" id="cap9"><span class="w" id="w9_0">hưởng</span> <span class="w" id="w9_1">Đông</span> <span class="w" id="w9_2">Bắc</span> <span class="w" id="w9_3">Bộ</span> <span class="w" id="w9_4">trước,</span></div>
+<div class="cap" id="cap10"><span class="w" id="w10_0">sau</span> <span class="w" id="w10_1">đó</span> <span class="w" id="w10_2">lan</span> <span class="w" id="w10_3">ra</span> <span class="w" id="w10_4">Tây</span></div>
+<div class="cap" id="cap11"><span class="w" id="w11_0">Bắc</span> <span class="w" id="w11_1">Bộ,</span> <span class="w" id="w11_2">Bắc</span> <span class="w" id="w11_3">Trung</span> <span class="w" id="w11_4">Bộ</span></div>
+<div class="cap" id="cap12"><span class="w" id="w12_0">và</span> <span class="w" id="w12_1">Trung</span> <span class="w" id="w12_2">Trung</span> <span class="w" id="w12_3">Bộ.</span></div>
+<div class="cap" id="cap13"><span class="w" id="w13_0">Bắc</span> <span class="w" id="w13_1">Bộ</span> <span class="w" id="w13_2">và</span> <span class="w" id="w13_3">Bắc</span> <span class="w" id="w13_4">Trung</span></div>
+<div class="cap" id="cap14"><span class="w" id="w14_0">Bộ</span> <span class="w" id="w14_1">trời</span> <span class="w" id="w14_2">chuyển</span> <span class="w" id="w14_3">rét,</span></div>
+<div class="cap" id="cap15"><span class="w" id="w15_0">vùng</span> <span class="w" id="w15_1">núi</span> <span class="w" id="w15_2">có</span> <span class="w" id="w15_3">nơi</span> <span class="w" id="w15_4">rét</span></div>
+<div class="cap" id="cap16"><span class="w" id="w16_0">đậm.</span> <span class="w" id="w16_1">Trung</span> <span class="w" id="w16_2">Bộ</span> <span class="w" id="w16_3">có</span> <span class="w" id="w16_4">thể</span></div>
+<div class="cap" id="cap17"><span class="w" id="w17_0">có</span> <span class="w" id="w17_1">hai</span> <span class="w" id="w17_2">đợt</span> <span class="w" id="w17_3">mưa</span> <span class="w" id="w17_4">lớn</span></div>
+<div class="cap" id="cap18"><span class="w" id="w18_0">từ</span> <span class="w" id="w18_1">ngày</span> <span class="w" id="w18_2">24</span> <span class="w" id="w18_3">đến</span> <span class="w" id="w18_4">ngày</span></div>
+<div class="cap" id="cap19"><span class="w" id="w19_0">30</span> <span class="w" id="w19_1">tháng</span> <span class="w" id="w19_2">11.</span></div>
+<div class="cap" id="cap20"><span class="w" id="w20_0">Nam</span> <span class="w" id="w20_1">Bộ</span> <span class="w" id="w20_2">ngày</span> <span class="w" id="w20_3">nắng,</span></div>
+<div class="cap" id="cap21"><span class="w" id="w21_0">Thành</span> <span class="w" id="w21_1">phố</span> <span class="w" id="w21_2">Hồ</span> <span class="w" id="w21_3">Chí</span> <span class="w" id="w21_4">Minh</span></div>
+<div class="cap" id="cap22"><span class="w" id="w22_0">cao</span> <span class="w" id="w22_1">nhất</span> <span class="w" id="w22_2">32</span> <span class="w" id="w22_3">đến</span> <span class="w" id="w22_4">34</span> <span class="w" id="w22_5">độ.</span></div>
+<div class="cap" id="cap23"><span class="w" id="w23_0">Nhiệt</span> <span class="w" id="w23_1">độ</span> <span class="w" id="w23_2">thấp</span> <span class="w" id="w23_3">nhất</span> <span class="w" id="w23_4">ở</span></div>
+<div class="cap" id="cap24"><span class="w" id="w24_0">Bắc</span> <span class="w" id="w24_1">Bộ</span> <span class="w" id="w24_2">phổ</span> <span class="w" id="w24_3">biến</span> <span class="w" id="w24_4">14</span></div>
+<div class="cap" id="cap25"><span class="w" id="w25_0">đến</span> <span class="w" id="w25_1">17</span> <span class="w" id="w25_2">độ,</span></div>
+<div class="cap" id="cap26"><span class="w" id="w26_0">vùng</span> <span class="w" id="w26_1">núi</span> <span class="w" id="w26_2">11</span> <span class="w" id="w26_3">đến</span> <span class="w" id="w26_4">14</span></div>
+<div class="cap" id="cap27"><span class="w" id="w27_0">độ,</span> <span class="w" id="w27_1">vùng</span> <span class="w" id="w27_2">núi</span> <span class="w" id="w27_3">cao</span> <span class="w" id="w27_4">có</span></div>
+<div class="cap" id="cap28"><span class="w" id="w28_0">nơi</span> <span class="w" id="w28_1">dưới</span> <span class="w" id="w28_2">10</span> <span class="w" id="w28_3">độ.</span></div>
+<div class="cap" id="cap29"><span class="w" id="w29_0">Bắc</span> <span class="w" id="w29_1">Trung</span> <span class="w" id="w29_2">Bộ</span> <span class="w" id="w29_3">phổ</span> <span class="w" id="w29_4">biến</span></div>
+<div class="cap" id="cap30"><span class="w" id="w30_0">15</span> <span class="w" id="w30_1">đến</span> <span class="w" id="w30_2">18</span> <span class="w" id="w30_3">độ.</span></div>
+<div class="cap" id="cap31"><span class="w" id="w31_0">Đợt</span> <span class="w" id="w31_1">mưa</span> <span class="w" id="w31_2">đầu</span> <span class="w" id="w31_3">kéo</span> <span class="w" id="w31_4">dài</span></div>
+<div class="cap" id="cap32"><span class="w" id="w32_0">đến</span> <span class="w" id="w32_1">hết</span> <span class="w" id="w32_2">đêm</span> <span class="w" id="w32_3">25</span> <span class="w" id="w32_4">tháng</span></div>
+<div class="cap" id="cap33"><span class="w" id="w33_0">11,</span> <span class="w" id="w33_1">từ</span> <span class="w" id="w33_2">Huế</span> <span class="w" id="w33_3">đến</span> <span class="w" id="w33_4">phía</span></div>
+<div class="cap" id="cap34"><span class="w" id="w34_0">đông</span> <span class="w" id="w34_1">Quảng</span> <span class="w" id="w34_2">Ngãi</span> <span class="w" id="w34_3">mưa</span> <span class="w" id="w34_4">80</span></div>
+<div class="cap" id="cap35"><span class="w" id="w35_0">đến</span> <span class="w" id="w35_1">180</span> <span class="w" id="w35_2">mm,</span></div>
+<div class="cap" id="cap36"><span class="w" id="w36_0">có</span> <span class="w" id="w36_1">nơi</span> <span class="w" id="w36_2">trên</span> <span class="w" id="w36_3">250</span> <span class="w" id="w36_4">mm.</span></div>
+<div class="cap" id="cap37"><span class="w" id="w37_0">Lũ</span> <span class="w" id="w37_1">sông</span> <span class="w" id="w37_2">Bồ,</span></div>
+<div class="cap" id="cap38"><span class="w" id="w38_0">sông</span> <span class="w" id="w38_1">Hương,</span> <span class="w" id="w38_2">sông</span> <span class="w" id="w38_3">Trà</span> <span class="w" id="w38_4">Khúc,</span></div>
+<div class="cap" id="cap39"><span class="w" id="w39_0">sông</span> <span class="w" id="w39_1">Vệ</span> <span class="w" id="w39_2">có</span> <span class="w" id="w39_3">thể</span> <span class="w" id="w39_4">lên</span></div>
+<div class="cap" id="cap40"><span class="w" id="w40_0">báo</span> <span class="w" id="w40_1">động</span> <span class="w" id="w40_2">2</span> <span class="w" id="w40_3">đến</span> <span class="w" id="w40_4">báo</span></div>
+<div class="cap" id="cap41"><span class="w" id="w41_0">động</span> <span class="w" id="w41_1">3.</span> <span class="w" id="w41_2">Đợt</span> <span class="w" id="w41_3">mưa</span> <span class="w" id="w41_4">thứ</span></div>
+<div class="cap" id="cap42"><span class="w" id="w42_0">hai</span> <span class="w" id="w42_1">từ</span> <span class="w" id="w42_2">ngày</span> <span class="w" id="w42_3">27</span> <span class="w" id="w42_4">đến</span></div>
+<div class="cap" id="cap43"><span class="w" id="w43_0">ngày</span> <span class="w" id="w43_1">30</span> <span class="w" id="w43_2">tháng</span> <span class="w" id="w43_3">11.</span></div>
+<div class="cap" id="cap44"><span class="w" id="w44_0">Chiều</span> <span class="w" id="w44_1">23</span> <span class="w" id="w44_2">tháng</span> <span class="w" id="w44_3">11,</span></div>
+<div class="cap" id="cap45"><span class="w" id="w45_0">Ban</span> <span class="w" id="w45_1">Chỉ</span> <span class="w" id="w45_2">đạo</span> <span class="w" id="w45_3">Phòng</span> <span class="w" id="w45_4">thủ</span></div>
+<div class="cap" id="cap46"><span class="w" id="w46_0">dân</span> <span class="w" id="w46_1">sự</span> <span class="w" id="w46_2">quốc</span> <span class="w" id="w46_3">gia</span> <span class="w" id="w46_4">đã</span></div>
+<div class="cap" id="cap47"><span class="w" id="w47_0">đề</span> <span class="w" id="w47_1">nghị</span> <span class="w" id="w47_2">các</span> <span class="w" id="w47_3">tỉnh,</span></div>
+<div class="cap" id="cap48"><span class="w" id="w48_0">thành</span> <span class="w" id="w48_1">phố</span> <span class="w" id="w48_2">ven</span> <span class="w" id="w48_3">biển</span> <span class="w" id="w48_4">từ</span></div>
+<div class="cap" id="cap49"><span class="w" id="w49_0">Quảng</span> <span class="w" id="w49_1">Ninh</span> <span class="w" id="w49_2">đến</span> <span class="w" id="w49_3">Lâm</span> <span class="w" id="w49_4">Đồng</span></div>
+<div class="cap" id="cap50"><span class="w" id="w50_0">hướng</span> <span class="w" id="w50_1">dẫn</span> <span class="w" id="w50_2">tàu</span> <span class="w" id="w50_3">thuyền</span> <span class="w" id="w50_4">chủ</span></div>
+<div class="cap" id="cap51"><span class="w" id="w51_0">động</span> <span class="w" id="w51_1">phòng</span> <span class="w" id="w51_2">tránh,</span></div>
+<div class="cap" id="cap52"><span class="w" id="w52_0">đồng</span> <span class="w" id="w52_1">thời</span> <span class="w" id="w52_2">rà</span> <span class="w" id="w52_3">soát,</span></div>
+<div class="cap" id="cap53"><span class="w" id="w53_0">sơ</span> <span class="w" id="w53_1">tán</span> <span class="w" id="w53_2">người</span> <span class="w" id="w53_3">dân</span> <span class="w" id="w53_4">ở</span></div>
+<div class="cap" id="cap54"><span class="w" id="w54_0">khu</span> <span class="w" id="w54_1">vực</span> <span class="w" id="w54_2">nguy</span> <span class="w" id="w54_3">cơ</span> <span class="w" id="w54_4">cao</span></div>
+<div class="cap" id="cap55"><span class="w" id="w55_0">ngập</span> <span class="w" id="w55_1">sâu,</span> <span class="w" id="w55_2">lũ</span> <span class="w" id="w55_3">quét,</span></div>
+<div class="cap" id="cap56"><span class="w" id="w56_0">sạt</span> <span class="w" id="w56_1">lở</span> <span class="w" id="w56_2">đất.</span></div>
+<div class="cap" id="cap57"><span class="w" id="w57_0">Cảnh</span> <span class="w" id="w57_1">báo</span> <span class="w" id="w57_2">được</span> <span class="w" id="w57_3">phát</span> <span class="w" id="w57_4">đi</span></div>
+<div class="cap" id="cap58"><span class="w" id="w58_0">từ</span> <span class="w" id="w58_1">chiều</span> <span class="w" id="w58_2">23</span> <span class="w" id="w58_3">tháng</span> <span class="w" id="w58_4">11,</span></div>
+<div class="cap" id="cap59"><span class="w" id="w59_0">trước</span> <span class="w" id="w59_1">khi</span> <span class="w" id="w59_2">không</span> <span class="w" id="w59_3">khí</span> <span class="w" id="w59_4">lạnh</span></div>
+<div class="cap" id="cap60"><span class="w" id="w60_0">tràn</span> <span class="w" id="w60_1">về.</span> <span class="w" id="w60_2">Theo</span> <span class="w" id="w60_3">bạn,</span></div>
+<div class="cap" id="cap61"><span class="w" id="w61_0">như</span> <span class="w" id="w61_1">vậy</span> <span class="w" id="w61_2">đã</span> <span class="w" id="w61_3">đủ</span> <span class="w" id="w61_4">sớm</span></div>
+<div class="cap" id="cap62"><span class="w" id="w62_0">để</span> <span class="w" id="w62_1">chủ</span> <span class="w" id="w62_2">động,</span></div>
+<div class="cap" id="cap63"><span class="w" id="w63_0">hay</span> <span class="w" id="w63_1">người</span> <span class="w" id="w63_2">dân</span> <span class="w" id="w63_3">vẫn</span> <span class="w" id="w63_4">còn</span></div>
+<div class="cap" id="cap64"><span class="w" id="w64_0">bị</span> <span class="w" id="w64_1">động?</span> <span class="w" id="w64_2">Hãy</span> <span class="w" id="w64_3">để</span> <span class="w" id="w64_4">lại</span></div>
+<div class="cap" id="cap65"><span class="w" id="w65_0">bình</span> <span class="w" id="w65_1">luận</span> <span class="w" id="w65_2">quan</span> <span class="w" id="w65_3">điểm</span> <span class="w" id="w65_4">của</span> <span class="w" id="w65_5">bạn.</span></div>
+</div>
+<audio id="el-voice-1" src="assets/voice/line1.mp3" data-start="0.10" data-duration="6.672" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-2" src="assets/voice/line2.mp3" data-start="7.32" data-duration="6.720" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-3" src="assets/voice/line3.mp3" data-start="14.54" data-duration="10.800" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-4" src="assets/voice/line4.mp3" data-start="25.84" data-duration="7.752" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-5" src="assets/voice/line5.mp3" data-start="34.14" data-duration="14.664" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-6" src="assets/voice/line6.mp3" data-start="49.35" data-duration="11.184" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-voice-7" src="assets/voice/line7.mp3" data-start="61.08" data-duration="9.504" data-track-index="10" data-audio-group="voiceover"></audio>
+<audio id="el-bgm" src="assets/bgm/track.mp3" data-start="0" data-duration="71.98" data-track-index="20" data-volume="0.30" data-fx-carve="{&quot;enabled&quot;:true,&quot;sources&quot;:[&quot;voiceover&quot;],&quot;strength&quot;:0.4}" data-fx-chain="{&quot;version&quot;:1,&quot;nodes&quot;:[{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n1&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:400,&quot;gain&quot;:-4.2,&quot;q&quot;:1.58}},{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n2&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:1600,&quot;gain&quot;:-8.4,&quot;q&quot;:1.58}},{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n3&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:2500,&quot;gain&quot;:-4.2,&quot;q&quot;:1.58}},{&quot;type&quot;:&quot;gain&quot;,&quot;id&quot;:&quot;n4&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;gain&quot;:0}}]}" data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;fx.n1.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.219,&quot;v&quot;:0},{&quot;t&quot;:0.396,&quot;v&quot;:-3.5},{&quot;t&quot;:0.572,&quot;v&quot;:-2.3},{&quot;t&quot;:0.748,&quot;v&quot;:-1.1},{&quot;t&quot;:1.63,&quot;v&quot;:-1.3},{&quot;t&quot;:1.807,&quot;v&quot;:-0.6},{&quot;t&quot;:1.983,&quot;v&quot;:-1.9},{&quot;t&quot;:2.336,&quot;v&quot;:-1.9},{&quot;t&quot;:2.513,&quot;v&quot;:-0.9},{&quot;t&quot;:2.865,&quot;v&quot;:-1.3},{&quot;t&quot;:3.042,&quot;v&quot;:-1.8},{&quot;t&quot;:3.218,&quot;v&quot;:-2.4},{&quot;t&quot;:3.395,&quot;v&quot;:-1.2},{&quot;t&quot;:3.571,&quot;v&quot;:-0.6},{&quot;t&quot;:3.747,&quot;v&quot;:-0.3},{&quot;t&quot;:3.924,&quot;v&quot;:0},{&quot;t&quot;:4.1,&quot;v&quot;:-1.7},{&quot;t&quot;:4.277,&quot;v&quot;:-1.3},{&quot;t&quot;:4.453,&quot;v&quot;:-0.7},{&quot;t&quot;:4.63,&quot;v&quot;:-2.6},{&quot;t&quot;:4.806,&quot;v&quot;:-1.3},{&quot;t&quot;:4.982,&quot;v&quot;:-2.6},{&quot;t&quot;:5.159,&quot;v&quot;:-1.3},{&quot;t&quot;:5.335,&quot;v&quot;:-0.7},{&quot;t&quot;:6.217,&quot;v&quot;:-0.3},{&quot;t&quot;:6.394,&quot;v&quot;:0},{&quot;t&quot;:7.276,&quot;v&quot;:0},{&quot;t&quot;:7.452,&quot;v&quot;:-3},{&quot;t&quot;:7.629,&quot;v&quot;:-1.9},{&quot;t&quot;:7.805,&quot;v&quot;:-1.5},{&quot;t&quot;:7.981,&quot;v&quot;:-1.4},{&quot;t&quot;:8.158,&quot;v&quot;:-0.9},{&quot;t&quot;:8.334,&quot;v&quot;:-0.5},{&quot;t&quot;:8.687,&quot;v&quot;:-0.7},{&quot;t&quot;:8.864,&quot;v&quot;:-2.9},{&quot;t&quot;:9.04,&quot;v&quot;:-1.4},{&quot;t&quot;:9.216,&quot;v&quot;:-0.7},{&quot;t&quot;:9.393,&quot;v&quot;:-0.4},{&quot;t&quot;:9.569,&quot;v&quot;:0},{&quot;t&quot;:9.746,&quot;v&quot;:-1},{&quot;t&quot;:9.922,&quot;v&quot;:-0.5},{&quot;t&quot;:10.098,&quot;v&quot;:-0.3},{&quot;t&quot;:10.275,&quot;v&quot;:0},{&quot;t&quot;:10.451,&quot;v&quot;:-0.2},{&quot;t&quot;:10.628,&quot;v&quot;:-3.5},{&quot;t&quot;:10.804,&quot;v&quot;:-3.1},{&quot;t&quot;:10.98,&quot;v&quot;:-1.5},{&quot;t&quot;:11.157,&quot;v&quot;:-0.8},{&quot;t&quot;:11.333,&quot;v&quot;:-1.8},{&quot;t&quot;:11.51,&quot;v&quot;:-2},{&quot;t&quot;:11.686,&quot;v&quot;:-1},{&quot;t&quot;:11.863,&quot;v&quot;:-2},{&quot;t&quot;:12.039,&quot;v&quot;:-1},{&quot;t&quot;:12.215,&quot;v&quot;:-2.3},{&quot;t&quot;:12.392,&quot;v&quot;:-1.1},{&quot;t&quot;:12.568,&quot;v&quot;:-2.3},{&quot;t&quot;:12.745,&quot;v&quot;:-1.7},{&quot;t&quot;:12.921,&quot;v&quot;:-3.7},{&quot;t&quot;:13.098,&quot;v&quot;:-2.3},{&quot;t&quot;:13.274,&quot;v&quot;:-1.1},{&quot;t&quot;:13.45,&quot;v&quot;:-3},{&quot;t&quot;:13.627,&quot;v&quot;:-1.5},{&quot;t&quot;:13.803,&quot;v&quot;:-0.7},{&quot;t&quot;:13.98,&quot;v&quot;:-0.4},{&quot;t&quot;:14.156,&quot;v&quot;:0},{&quot;t&quot;:14.685,&quot;v&quot;:0},{&quot;t&quot;:14.862,&quot;v&quot;:-2.8},{&quot;t&quot;:15.038,&quot;v&quot;:-1.9},{&quot;t&quot;:15.214,&quot;v&quot;:-1},{&quot;t&quot;:15.391,&quot;v&quot;:-3.4},{&quot;t&quot;:15.567,&quot;v&quot;:-1.9},{&quot;t&quot;:15.744,&quot;v&quot;:-0.9},{&quot;t&quot;:15.92,&quot;v&quot;:-0.5},{&quot;t&quot;:16.097,&quot;v&quot;:-2},{&quot;t&quot;:16.273,&quot;v&quot;:-1},{&quot;t&quot;:16.449,&quot;v&quot;:-2.5},{&quot;t&quot;:16.626,&quot;v&quot;:-2.6},{&quot;t&quot;:16.802,&quot;v&quot;:-1.8},{&quot;t&quot;:16.979,&quot;v&quot;:-1.7},{&quot;t&quot;:17.155,&quot;v&quot;:-2.9},{&quot;t&quot;:17.331,&quot;v&quot;:-1.4},{&quot;t&quot;:17.508,&quot;v&quot;:-0.7},{&quot;t&quot;:17.684,&quot;v&quot;:-0.3},{&quot;t&quot;:17.861,&quot;v&quot;:-2.1},{&quot;t&quot;:18.214,&quot;v&quot;:-2.3},{&quot;t&quot;:18.39,&quot;v&quot;:-1.1},{&quot;t&quot;:18.566,&quot;v&quot;:-0.6},{&quot;t&quot;:18.743,&quot;v&quot;:-2.5},{&quot;t&quot;:18.919,&quot;v&quot;:-1.2},{&quot;t&quot;:19.096,&quot;v&quot;:-2.3},{&quot;t&quot;:19.272,&quot;v&quot;:-1.1},{&quot;t&quot;:19.448,&quot;v&quot;:-1.2},{&quot;t&quot;:19.625,&quot;v&quot;:-0.6},{&quot;t&quot;:19.801,&quot;v&quot;:-0.3},{&quot;t&quot;:19.978,&quot;v&quot;:-3.8},{&quot;t&quot;:20.154,&quot;v&quot;:-1.9},{&quot;t&quot;:20.331,&quot;v&quot;:-0.9},{&quot;t&quot;:20.86,&quot;v&quot;:-0.5},{&quot;t&quot;:21.036,&quot;v&quot;:-0.2},{&quot;t&quot;:21.566,&quot;v&quot;:0},{&quot;t&quot;:21.742,&quot;v&quot;:-1.7},{&quot;t&quot;:21.918,&quot;v&quot;:-2.8},{&quot;t&quot;:22.095,&quot;v&quot;:-1.5},{&quot;t&quot;:22.271,&quot;v&quot;:-0.7},{&quot;t&quot;:22.448,&quot;v&quot;:-0.4},{&quot;t&quot;:22.624,&quot;v&quot;:0},{&quot;t&quot;:22.8,&quot;v&quot;:-0.7},{&quot;t&quot;:22.977,&quot;v&quot;:-0.4},{&quot;t&quot;:23.153,&quot;v&quot;:0},{&quot;t&quot;:23.33,&quot;v&quot;:-1.2},{&quot;t&quot;:23.506,&quot;v&quot;:-3.4},{&quot;t&quot;:23.683,&quot;v&quot;:-1.7},{&quot;t&quot;:23.859,&quot;v&quot;:-1.1},{&quot;t&quot;:24.388,&quot;v&quot;:-1},{&quot;t&quot;:24.565,&quot;v&quot;:-2.3},{&quot;t&quot;:24.741,&quot;v&quot;:-2.2},{&quot;t&quot;:24.917,&quot;v&quot;:-1.1},{&quot;t&quot;:25.094,&quot;v&quot;:-0.5},{&quot;t&quot;:25.27,&quot;v&quot;:-0.3},{&quot;t&quot;:25.447,&quot;v&quot;:0},{&quot;t&quot;:25.799,&quot;v&quot;:0},{&quot;t&quot;:25.976,&quot;v&quot;:-1.4},{&quot;t&quot;:26.152,&quot;v&quot;:-0.7},{&quot;t&quot;:26.858,&quot;v&quot;:-0.3},{&quot;t&quot;:27.034,&quot;v&quot;:-1.5},{&quot;t&quot;:27.211,&quot;v&quot;:-1.1},{&quot;t&quot;:27.387,&quot;v&quot;:-2.3},{&quot;t&quot;:27.916,&quot;v&quot;:-2},{&quot;t&quot;:28.093,&quot;v&quot;:-1},{&quot;t&quot;:28.269,&quot;v&quot;:-0.5},{&quot;t&quot;:28.446,&quot;v&quot;:-0.3},{&quot;t&quot;:28.622,&quot;v&quot;:-3.1},{&quot;t&quot;:28.799,&quot;v&quot;:-3},{&quot;t&quot;:28.975,&quot;v&quot;:-2.1},{&quot;t&quot;:29.151,&quot;v&quot;:-2.9},{&quot;t&quot;:29.328,&quot;v&quot;:-1.5},{&quot;t&quot;:29.504,&quot;v&quot;:-0.8},{&quot;t&quot;:29.681,&quot;v&quot;:-0.4},{&quot;t&quot;:29.857,&quot;v&quot;:0},{&quot;t&quot;:30.034,&quot;v&quot;:0},{&quot;t&quot;:30.21,&quot;v&quot;:-1},{&quot;t&quot;:30.386,&quot;v&quot;:-0.8},{&quot;t&quot;:30.563,&quot;v&quot;:-0.4},{&quot;t&quot;:30.739,&quot;v&quot;:-2.1},{&quot;t&quot;:30.916,&quot;v&quot;:-2.9},{&quot;t&quot;:31.092,&quot;v&quot;:-1.5},{&quot;t&quot;:31.268,&quot;v&quot;:-0.7},{&quot;t&quot;:31.798,&quot;v&quot;:-0.2},{&quot;t&quot;:31.974,&quot;v&quot;:0},{&quot;t&quot;:32.151,&quot;v&quot;:-0.4},{&quot;t&quot;:32.327,&quot;v&quot;:-2.7},{&quot;t&quot;:32.503,&quot;v&quot;:-1.6},{&quot;t&quot;:32.68,&quot;v&quot;:-0.9},{&quot;t&quot;:32.856,&quot;v&quot;:-0.7},{&quot;t&quot;:33.033,&quot;v&quot;:-2.9},{&quot;t&quot;:33.209,&quot;v&quot;:-1.4},{&quot;t&quot;:33.385,&quot;v&quot;:-0.7},{&quot;t&quot;:33.562,&quot;v&quot;:-0.4},{&quot;t&quot;:33.738,&quot;v&quot;:0},{&quot;t&quot;:34.091,&quot;v&quot;:0},{&quot;t&quot;:34.267,&quot;v&quot;:-1.1},{&quot;t&quot;:34.444,&quot;v&quot;:-3.9},{&quot;t&quot;:34.62,&quot;v&quot;:-2.2},{&quot;t&quot;:34.797,&quot;v&quot;:-2.1},{&quot;t&quot;:34.973,&quot;v&quot;:-1.5},{&quot;t&quot;:35.15,&quot;v&quot;:-0.7},{&quot;t&quot;:35.855,&quot;v&quot;:-0.5},{&quot;t&quot;:36.032,&quot;v&quot;:-1.3},{&quot;t&quot;:36.208,&quot;v&quot;:-1.8},{&quot;t&quot;:36.385,&quot;v&quot;:-0.9},{&quot;t&quot;:36.561,&quot;v&quot;:-2.9},{&quot;t&quot;:36.737,&quot;v&quot;:-3.5},{&quot;t&quot;:36.914,&quot;v&quot;:-1.7},{&quot;t&quot;:37.09,&quot;v&quot;:-0.9},{&quot;t&quot;:37.443,&quot;v&quot;:-0.5},{&quot;t&quot;:37.619,&quot;v&quot;:-0.2},{&quot;t&quot;:37.972,&quot;v&quot;:-0.4},{&quot;t&quot;:38.149,&quot;v&quot;:-4.1},{&quot;t&quot;:38.325,&quot;v&quot;:-2.8},{&quot;t&quot;:38.502,&quot;v&quot;:-1.4},{&quot;t&quot;:38.678,&quot;v&quot;:-0.7},{&quot;t&quot;:38.854,&quot;v&quot;:-0.3},{&quot;t&quot;:39.031,&quot;v&quot;:-1.3},{&quot;t&quot;:39.207,&quot;v&quot;:-0.8},{&quot;t&quot;:39.384,&quot;v&quot;:-0.4},{&quot;t&quot;:39.56,&quot;v&quot;:-0.2},{&quot;t&quot;:39.736,&quot;v&quot;:-2.1},{&quot;t&quot;:39.913,&quot;v&quot;:-1.9},{&quot;t&quot;:40.089,&quot;v&quot;:-1.3},{&quot;t&quot;:40.266,&quot;v&quot;:-1},{&quot;t&quot;:40.442,&quot;v&quot;:-0.5},{&quot;t&quot;:40.618,&quot;v&quot;:-1.5},{&quot;t&quot;:40.795,&quot;v&quot;:-1.4},{&quot;t&quot;:40.971,&quot;v&quot;:-0.7},{&quot;t&quot;:41.148,&quot;v&quot;:-0.4},{&quot;t&quot;:41.324,&quot;v&quot;:0},{&quot;t&quot;:41.501,&quot;v&quot;:-2.4},{&quot;t&quot;:41.677,&quot;v&quot;:-2.6},{&quot;t&quot;:41.853,&quot;v&quot;:-3.9},{&quot;t&quot;:42.03,&quot;v&quot;:-1.9},{&quot;t&quot;:42.206,&quot;v&quot;:-1},{&quot;t&quot;:42.559,&quot;v&quot;:-0.8},{&quot;t&quot;:42.736,&quot;v&quot;:-0.4},{&quot;t&quot;:42.912,&quot;v&quot;:-1.7},{&quot;t&quot;:43.088,&quot;v&quot;:-0.8},{&quot;t&quot;:43.265,&quot;v&quot;:-0.4},{&quot;t&quot;:43.441,&quot;v&quot;:-0.2},{&quot;t&quot;:43.618,&quot;v&quot;:-0.6},{&quot;t&quot;:43.794,&quot;v&quot;:-1.5},{&quot;t&quot;:43.97,&quot;v&quot;:-1.9},{&quot;t&quot;:44.147,&quot;v&quot;:-3.3},{&quot;t&quot;:44.323,&quot;v&quot;:-1.9},{&quot;t&quot;:44.5,&quot;v&quot;:-1.4},{&quot;t&quot;:44.676,&quot;v&quot;:-0.7},{&quot;t&quot;:44.852,&quot;v&quot;:-2.2},{&quot;t&quot;:45.029,&quot;v&quot;:-2},{&quot;t&quot;:45.205,&quot;v&quot;:-1},{&quot;t&quot;:45.382,&quot;v&quot;:-1},{&quot;t&quot;:45.558,&quot;v&quot;:-0.5},{&quot;t&quot;:45.735,&quot;v&quot;:-0.2},{&quot;t&quot;:45.911,&quot;v&quot;:-1.2},{&quot;t&quot;:46.969,&quot;v&quot;:-1.3},{&quot;t&quot;:47.146,&quot;v&quot;:-1.9},{&quot;t&quot;:47.322,&quot;v&quot;:-1},{&quot;t&quot;:47.499,&quot;v&quot;:-0.7},{&quot;t&quot;:47.675,&quot;v&quot;:-0.3},{&quot;t&quot;:47.852,&quot;v&quot;:-1.4},{&quot;t&quot;:48.028,&quot;v&quot;:-0.7},{&quot;t&quot;:48.204,&quot;v&quot;:-0.3},{&quot;t&quot;:48.381,&quot;v&quot;:0},{&quot;t&quot;:49.263,&quot;v&quot;:0},{&quot;t&quot;:49.439,&quot;v&quot;:-1.8},{&quot;t&quot;:49.616,&quot;v&quot;:-0.9},{&quot;t&quot;:49.792,&quot;v&quot;:-2.2},{&quot;t&quot;:49.969,&quot;v&quot;:-1.1},{&quot;t&quot;:50.145,&quot;v&quot;:-1.2},{&quot;t&quot;:50.321,&quot;v&quot;:-0.6},{&quot;t&quot;:50.498,&quot;v&quot;:-0.3},{&quot;t&quot;:50.674,&quot;v&quot;:-2.3},{&quot;t&quot;:50.851,&quot;v&quot;:-1.7},{&quot;t&quot;:51.027,&quot;v&quot;:-0.8},{&quot;t&quot;:51.203,&quot;v&quot;:-0.7},{&quot;t&quot;:51.38,&quot;v&quot;:-2.4},{&quot;t&quot;:51.556,&quot;v&quot;:-2.1},{&quot;t&quot;:51.733,&quot;v&quot;:-1.6},{&quot;t&quot;:52.086,&quot;v&quot;:-1.2},{&quot;t&quot;:52.262,&quot;v&quot;:-0.6},{&quot;t&quot;:52.438,&quot;v&quot;:-0.3},{&quot;t&quot;:52.615,&quot;v&quot;:-2.7},{&quot;t&quot;:52.791,&quot;v&quot;:-1.3},{&quot;t&quot;:52.968,&quot;v&quot;:-0.7},{&quot;t&quot;:53.144,&quot;v&quot;:-0.7},{&quot;t&quot;:53.321,&quot;v&quot;:-2.7},{&quot;t&quot;:53.673,&quot;v&quot;:-2.7},{&quot;t&quot;:53.85,&quot;v&quot;:-1.5},{&quot;t&quot;:54.026,&quot;v&quot;:-0.7},{&quot;t&quot;:54.203,&quot;v&quot;:-0.8},{&quot;t&quot;:54.379,&quot;v&quot;:-2.1},{&quot;t&quot;:54.555,&quot;v&quot;:-1.6},{&quot;t&quot;:54.732,&quot;v&quot;:-2.8},{&quot;t&quot;:54.908,&quot;v&quot;:-2.3},{&quot;t&quot;:55.085,&quot;v&quot;:-2.8},{&quot;t&quot;:55.261,&quot;v&quot;:-1.4},{&quot;t&quot;:55.438,&quot;v&quot;:-0.9},{&quot;t&quot;:55.614,&quot;v&quot;:-0.4},{&quot;t&quot;:56.32,&quot;v&quot;:-0.5},{&quot;t&quot;:56.496,&quot;v&quot;:-1.9},{&quot;t&quot;:56.672,&quot;v&quot;:-1},{&quot;t&quot;:56.849,&quot;v&quot;:-0.5},{&quot;t&quot;:58.084,&quot;v&quot;:-0.6},{&quot;t&quot;:58.26,&quot;v&quot;:-1.4},{&quot;t&quot;:58.437,&quot;v&quot;:-0.9},{&quot;t&quot;:58.613,&quot;v&quot;:-0.5},{&quot;t&quot;:58.789,&quot;v&quot;:-1.1},{&quot;t&quot;:58.966,&quot;v&quot;:-0.5},{&quot;t&quot;:59.142,&quot;v&quot;:-0.3},{&quot;t&quot;:59.319,&quot;v&quot;:0},{&quot;t&quot;:59.672,&quot;v&quot;:0},{&quot;t&quot;:59.848,&quot;v&quot;:-1.7},{&quot;t&quot;:60.024,&quot;v&quot;:-1.7},{&quot;t&quot;:60.201,&quot;v&quot;:-0.8},{&quot;t&quot;:60.377,&quot;v&quot;:-0.4},{&quot;t&quot;:60.554,&quot;v&quot;:-0.2},{&quot;t&quot;:61.259,&quot;v&quot;:0},{&quot;t&quot;:61.436,&quot;v&quot;:-2.1},{&quot;t&quot;:61.612,&quot;v&quot;:-1.9},{&quot;t&quot;:61.788,&quot;v&quot;:-1.4},{&quot;t&quot;:61.965,&quot;v&quot;:-1.7},{&quot;t&quot;:62.141,&quot;v&quot;:-2.9},{&quot;t&quot;:62.318,&quot;v&quot;:-1.5},{&quot;t&quot;:62.494,&quot;v&quot;:-1.5},{&quot;t&quot;:62.671,&quot;v&quot;:-0.8},{&quot;t&quot;:62.847,&quot;v&quot;:-0.4},{&quot;t&quot;:63.023,&quot;v&quot;:0},{&quot;t&quot;:63.376,&quot;v&quot;:-0.2},{&quot;t&quot;:63.553,&quot;v&quot;:-0.5},{&quot;t&quot;:63.729,&quot;v&quot;:-1.3},{&quot;t&quot;:63.906,&quot;v&quot;:-0.6},{&quot;t&quot;:64.082,&quot;v&quot;:-0.3},{&quot;t&quot;:64.258,&quot;v&quot;:-1.1},{&quot;t&quot;:64.435,&quot;v&quot;:-0.6},{&quot;t&quot;:64.611,&quot;v&quot;:-0.3},{&quot;t&quot;:64.788,&quot;v&quot;:0},{&quot;t&quot;:64.964,&quot;v&quot;:-1.9},{&quot;t&quot;:65.14,&quot;v&quot;:-0.9},{&quot;t&quot;:65.317,&quot;v&quot;:-0.5},{&quot;t&quot;:65.493,&quot;v&quot;:-3.2},{&quot;t&quot;:65.67,&quot;v&quot;:-2.8},{&quot;t&quot;:65.846,&quot;v&quot;:-2},{&quot;t&quot;:66.022,&quot;v&quot;:-1.1},{&quot;t&quot;:66.199,&quot;v&quot;:-2.7},{&quot;t&quot;:66.375,&quot;v&quot;:-2.6},{&quot;t&quot;:66.552,&quot;v&quot;:-1.3},{&quot;t&quot;:66.728,&quot;v&quot;:-2.6},{&quot;t&quot;:66.905,&quot;v&quot;:-1.3},{&quot;t&quot;:67.081,&quot;v&quot;:-0.6},{&quot;t&quot;:68.492,&quot;v&quot;:-0.2},{&quot;t&quot;:68.669,&quot;v&quot;:0},{&quot;t&quot;:68.845,&quot;v&quot;:-4},{&quot;t&quot;:69.022,&quot;v&quot;:-2.5},{&quot;t&quot;:69.198,&quot;v&quot;:-1.4},{&quot;t&quot;:69.374,&quot;v&quot;:-0.7},{&quot;t&quot;:69.551,&quot;v&quot;:-0.3},{&quot;t&quot;:69.727,&quot;v&quot;:0},{&quot;t&quot;:69.904,&quot;v&quot;:0},{&quot;t&quot;:70.08,&quot;v&quot;:-1},{&quot;t&quot;:70.257,&quot;v&quot;:-0.5},{&quot;t&quot;:70.433,&quot;v&quot;:-0.2},{&quot;t&quot;:70.562,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n2.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.043,&quot;v&quot;:0},{&quot;t&quot;:0.219,&quot;v&quot;:-1.7},{&quot;t&quot;:0.396,&quot;v&quot;:-0.8},{&quot;t&quot;:0.572,&quot;v&quot;:-0.4},{&quot;t&quot;:0.748,&quot;v&quot;:-0.2},{&quot;t&quot;:0.925,&quot;v&quot;:-5.1},{&quot;t&quot;:1.101,&quot;v&quot;:-4.1},{&quot;t&quot;:1.278,&quot;v&quot;:-2},{&quot;t&quot;:1.454,&quot;v&quot;:-6.2},{&quot;t&quot;:1.63,&quot;v&quot;:-6},{&quot;t&quot;:1.807,&quot;v&quot;:-3},{&quot;t&quot;:1.983,&quot;v&quot;:-1.7},{&quot;t&quot;:2.16,&quot;v&quot;:-3},{&quot;t&quot;:2.336,&quot;v&quot;:-1.5},{&quot;t&quot;:2.513,&quot;v&quot;:-0.7},{&quot;t&quot;:2.689,&quot;v&quot;:-2.2},{&quot;t&quot;:2.865,&quot;v&quot;:-1.1},{&quot;t&quot;:3.042,&quot;v&quot;:-2.7},{&quot;t&quot;:3.218,&quot;v&quot;:-6.7},{&quot;t&quot;:3.395,&quot;v&quot;:-3.3},{&quot;t&quot;:3.571,&quot;v&quot;:-1.6},{&quot;t&quot;:3.747,&quot;v&quot;:-0.8},{&quot;t&quot;:3.924,&quot;v&quot;:-0.4},{&quot;t&quot;:4.1,&quot;v&quot;:-2.2},{&quot;t&quot;:4.277,&quot;v&quot;:-1.1},{&quot;t&quot;:4.453,&quot;v&quot;:-2.7},{&quot;t&quot;:4.63,&quot;v&quot;:-5.3},{&quot;t&quot;:4.806,&quot;v&quot;:-2.6},{&quot;t&quot;:4.982,&quot;v&quot;:-2.2},{&quot;t&quot;:5.159,&quot;v&quot;:-1.1},{&quot;t&quot;:5.335,&quot;v&quot;:-0.5},{&quot;t&quot;:5.512,&quot;v&quot;:-0.3},{&quot;t&quot;:5.688,&quot;v&quot;:-2.9},{&quot;t&quot;:5.864,&quot;v&quot;:-1.4},{&quot;t&quot;:6.041,&quot;v&quot;:-1.1},{&quot;t&quot;:6.217,&quot;v&quot;:-6.6},{&quot;t&quot;:6.394,&quot;v&quot;:-3.2},{&quot;t&quot;:6.57,&quot;v&quot;:-1.6},{&quot;t&quot;:6.747,&quot;v&quot;:-0.8},{&quot;t&quot;:6.923,&quot;v&quot;:-0.4},{&quot;t&quot;:7.099,&quot;v&quot;:0},{&quot;t&quot;:7.276,&quot;v&quot;:0},{&quot;t&quot;:7.452,&quot;v&quot;:-6.9},{&quot;t&quot;:7.629,&quot;v&quot;:-3.4},{&quot;t&quot;:7.805,&quot;v&quot;:-1.7},{&quot;t&quot;:7.981,&quot;v&quot;:-0.8},{&quot;t&quot;:8.334,&quot;v&quot;:-0.4},{&quot;t&quot;:8.511,&quot;v&quot;:0},{&quot;t&quot;:8.687,&quot;v&quot;:-1.3},{&quot;t&quot;:8.864,&quot;v&quot;:-0.7},{&quot;t&quot;:9.04,&quot;v&quot;:-8.2},{&quot;t&quot;:9.216,&quot;v&quot;:-4},{&quot;t&quot;:9.393,&quot;v&quot;:-2},{&quot;t&quot;:9.569,&quot;v&quot;:-1},{&quot;t&quot;:9.746,&quot;v&quot;:-0.5},{&quot;t&quot;:9.922,&quot;v&quot;:-0.2},{&quot;t&quot;:10.098,&quot;v&quot;:0},{&quot;t&quot;:10.628,&quot;v&quot;:0},{&quot;t&quot;:10.804,&quot;v&quot;:-2.7},{&quot;t&quot;:10.98,&quot;v&quot;:-1.3},{&quot;t&quot;:11.157,&quot;v&quot;:-0.7},{&quot;t&quot;:11.333,&quot;v&quot;:-2.6},{&quot;t&quot;:11.51,&quot;v&quot;:-2.8},{&quot;t&quot;:11.686,&quot;v&quot;:-1.7},{&quot;t&quot;:11.863,&quot;v&quot;:-4.4},{&quot;t&quot;:12.039,&quot;v&quot;:-2.2},{&quot;t&quot;:12.215,&quot;v&quot;:-1.1},{&quot;t&quot;:12.392,&quot;v&quot;:-0.5},{&quot;t&quot;:12.568,&quot;v&quot;:-1.4},{&quot;t&quot;:12.745,&quot;v&quot;:-0.7},{&quot;t&quot;:12.921,&quot;v&quot;:-0.3},{&quot;t&quot;:13.098,&quot;v&quot;:-2.5},{&quot;t&quot;:13.274,&quot;v&quot;:-1.2},{&quot;t&quot;:13.45,&quot;v&quot;:-0.6},{&quot;t&quot;:13.627,&quot;v&quot;:-0.3},{&quot;t&quot;:13.803,&quot;v&quot;:0},{&quot;t&quot;:15.391,&quot;v&quot;:0},{&quot;t&quot;:15.567,&quot;v&quot;:-0.5},{&quot;t&quot;:15.744,&quot;v&quot;:-0.2},{&quot;t&quot;:15.92,&quot;v&quot;:0},{&quot;t&quot;:16.097,&quot;v&quot;:-4.4},{&quot;t&quot;:16.273,&quot;v&quot;:-2.2},{&quot;t&quot;:16.449,&quot;v&quot;:-1.1},{&quot;t&quot;:16.626,&quot;v&quot;:-0.5},{&quot;t&quot;:16.802,&quot;v&quot;:-0.3},{&quot;t&quot;:16.979,&quot;v&quot;:-4.7},{&quot;t&quot;:17.155,&quot;v&quot;:-5.1},{&quot;t&quot;:17.331,&quot;v&quot;:-2.5},{&quot;t&quot;:17.508,&quot;v&quot;:-1.2},{&quot;t&quot;:17.684,&quot;v&quot;:-0.6},{&quot;t&quot;:17.861,&quot;v&quot;:-0.3},{&quot;t&quot;:18.037,&quot;v&quot;:0},{&quot;t&quot;:18.214,&quot;v&quot;:-2.8},{&quot;t&quot;:18.39,&quot;v&quot;:-1.4},{&quot;t&quot;:18.566,&quot;v&quot;:-2.1},{&quot;t&quot;:18.743,&quot;v&quot;:-6.2},{&quot;t&quot;:18.919,&quot;v&quot;:-3.1},{&quot;t&quot;:19.096,&quot;v&quot;:-2.3},{&quot;t&quot;:19.272,&quot;v&quot;:-1.1},{&quot;t&quot;:19.448,&quot;v&quot;:-0.6},{&quot;t&quot;:19.625,&quot;v&quot;:-0.3},{&quot;t&quot;:19.801,&quot;v&quot;:-2},{&quot;t&quot;:19.978,&quot;v&quot;:-3.7},{&quot;t&quot;:20.154,&quot;v&quot;:-1.8},{&quot;t&quot;:20.331,&quot;v&quot;:-1.6},{&quot;t&quot;:20.507,&quot;v&quot;:-0.8},{&quot;t&quot;:21.036,&quot;v&quot;:-0.5},{&quot;t&quot;:21.213,&quot;v&quot;:-0.3},{&quot;t&quot;:21.566,&quot;v&quot;:0},{&quot;t&quot;:21.742,&quot;v&quot;:-7.7},{&quot;t&quot;:21.918,&quot;v&quot;:-3.8},{&quot;t&quot;:22.095,&quot;v&quot;:-3},{&quot;t&quot;:22.271,&quot;v&quot;:-3.3},{&quot;t&quot;:22.448,&quot;v&quot;:-1.6},{&quot;t&quot;:22.624,&quot;v&quot;:-0.8},{&quot;t&quot;:22.8,&quot;v&quot;:-0.4},{&quot;t&quot;:22.977,&quot;v&quot;:0},{&quot;t&quot;:23.153,&quot;v&quot;:0},{&quot;t&quot;:23.33,&quot;v&quot;:-4.3},{&quot;t&quot;:23.506,&quot;v&quot;:-4.2},{&quot;t&quot;:23.683,&quot;v&quot;:-2.1},{&quot;t&quot;:23.859,&quot;v&quot;:-1.2},{&quot;t&quot;:24.035,&quot;v&quot;:-7.3},{&quot;t&quot;:24.212,&quot;v&quot;:-3.6},{&quot;t&quot;:24.388,&quot;v&quot;:-2.6},{&quot;t&quot;:24.565,&quot;v&quot;:-2},{&quot;t&quot;:24.741,&quot;v&quot;:-1.6},{&quot;t&quot;:24.917,&quot;v&quot;:-0.8},{&quot;t&quot;:25.094,&quot;v&quot;:-0.4},{&quot;t&quot;:25.27,&quot;v&quot;:0},{&quot;t&quot;:25.799,&quot;v&quot;:0},{&quot;t&quot;:25.976,&quot;v&quot;:-3.1},{&quot;t&quot;:26.152,&quot;v&quot;:-1.7},{&quot;t&quot;:26.329,&quot;v&quot;:-4.9},{&quot;t&quot;:26.505,&quot;v&quot;:-2.9},{&quot;t&quot;:26.682,&quot;v&quot;:-1.4},{&quot;t&quot;:26.858,&quot;v&quot;:-0.7},{&quot;t&quot;:27.034,&quot;v&quot;:-0.5},{&quot;t&quot;:27.211,&quot;v&quot;:-3.7},{&quot;t&quot;:27.387,&quot;v&quot;:-1.8},{&quot;t&quot;:27.564,&quot;v&quot;:-3.4},{&quot;t&quot;:27.74,&quot;v&quot;:-2},{&quot;t&quot;:27.916,&quot;v&quot;:-2.8},{&quot;t&quot;:28.093,&quot;v&quot;:-1.4},{&quot;t&quot;:28.269,&quot;v&quot;:-0.7},{&quot;t&quot;:28.446,&quot;v&quot;:-0.3},{&quot;t&quot;:28.622,&quot;v&quot;:-4.2},{&quot;t&quot;:28.799,&quot;v&quot;:-2.1},{&quot;t&quot;:28.975,&quot;v&quot;:-2},{&quot;t&quot;:29.151,&quot;v&quot;:-3},{&quot;t&quot;:29.328,&quot;v&quot;:-1.5},{&quot;t&quot;:29.504,&quot;v&quot;:-0.7},{&quot;t&quot;:29.681,&quot;v&quot;:-0.4},{&quot;t&quot;:29.857,&quot;v&quot;:0},{&quot;t&quot;:30.034,&quot;v&quot;:-2.8},{&quot;t&quot;:30.21,&quot;v&quot;:-2.1},{&quot;t&quot;:30.386,&quot;v&quot;:-1.1},{&quot;t&quot;:30.563,&quot;v&quot;:-0.5},{&quot;t&quot;:30.739,&quot;v&quot;:-3.2},{&quot;t&quot;:30.916,&quot;v&quot;:-4.5},{&quot;t&quot;:31.092,&quot;v&quot;:-2.2},{&quot;t&quot;:31.268,&quot;v&quot;:-1.1},{&quot;t&quot;:31.445,&quot;v&quot;:-0.5},{&quot;t&quot;:31.621,&quot;v&quot;:-0.3},{&quot;t&quot;:31.798,&quot;v&quot;:0},{&quot;t&quot;:32.151,&quot;v&quot;:0},{&quot;t&quot;:32.327,&quot;v&quot;:-4.6},{&quot;t&quot;:32.503,&quot;v&quot;:-2.3},{&quot;t&quot;:32.68,&quot;v&quot;:-1.1},{&quot;t&quot;:32.856,&quot;v&quot;:-6.9},{&quot;t&quot;:33.033,&quot;v&quot;:-4.4},{&quot;t&quot;:33.209,&quot;v&quot;:-2.2},{&quot;t&quot;:33.385,&quot;v&quot;:-1.1},{&quot;t&quot;:33.562,&quot;v&quot;:-0.5},{&quot;t&quot;:33.738,&quot;v&quot;:-0.3},{&quot;t&quot;:33.915,&quot;v&quot;:0},{&quot;t&quot;:34.091,&quot;v&quot;:0},{&quot;t&quot;:34.267,&quot;v&quot;:-3.8},{&quot;t&quot;:34.444,&quot;v&quot;:-5.9},{&quot;t&quot;:34.62,&quot;v&quot;:-2.9},{&quot;t&quot;:34.797,&quot;v&quot;:-1.4},{&quot;t&quot;:34.973,&quot;v&quot;:-6.2},{&quot;t&quot;:35.15,&quot;v&quot;:-3.1},{&quot;t&quot;:35.326,&quot;v&quot;:-1.6},{&quot;t&quot;:35.502,&quot;v&quot;:-0.8},{&quot;t&quot;:35.679,&quot;v&quot;:-4.7},{&quot;t&quot;:35.855,&quot;v&quot;:-2.3},{&quot;t&quot;:36.032,&quot;v&quot;:-1.9},{&quot;t&quot;:36.208,&quot;v&quot;:-1},{&quot;t&quot;:36.385,&quot;v&quot;:-0.5},{&quot;t&quot;:36.561,&quot;v&quot;:-0.2},{&quot;t&quot;:36.737,&quot;v&quot;:-4.2},{&quot;t&quot;:36.914,&quot;v&quot;:-2.1},{&quot;t&quot;:37.09,&quot;v&quot;:-2.9},{&quot;t&quot;:37.267,&quot;v&quot;:-1.4},{&quot;t&quot;:37.443,&quot;v&quot;:-5.7},{&quot;t&quot;:37.619,&quot;v&quot;:-2.8},{&quot;t&quot;:37.972,&quot;v&quot;:-2.6},{&quot;t&quot;:38.149,&quot;v&quot;:-2.3},{&quot;t&quot;:38.325,&quot;v&quot;:-1.5},{&quot;t&quot;:38.502,&quot;v&quot;:-0.7},{&quot;t&quot;:38.678,&quot;v&quot;:-0.4},{&quot;t&quot;:38.854,&quot;v&quot;:0},{&quot;t&quot;:39.031,&quot;v&quot;:0},{&quot;t&quot;:39.207,&quot;v&quot;:-1.5},{&quot;t&quot;:39.384,&quot;v&quot;:-0.7},{&quot;t&quot;:39.56,&quot;v&quot;:-0.4},{&quot;t&quot;:39.736,&quot;v&quot;:-4.3},{&quot;t&quot;:39.913,&quot;v&quot;:-3},{&quot;t&quot;:40.089,&quot;v&quot;:-6.1},{&quot;t&quot;:40.266,&quot;v&quot;:-3.1},{&quot;t&quot;:40.442,&quot;v&quot;:-1.5},{&quot;t&quot;:40.618,&quot;v&quot;:-0.7},{&quot;t&quot;:40.795,&quot;v&quot;:-4.4},{&quot;t&quot;:40.971,&quot;v&quot;:-2.2},{&quot;t&quot;:41.148,&quot;v&quot;:-1.1},{&quot;t&quot;:41.324,&quot;v&quot;:-0.5},{&quot;t&quot;:41.501,&quot;v&quot;:-0.3},{&quot;t&quot;:41.677,&quot;v&quot;:0},{&quot;t&quot;:43.618,&quot;v&quot;:0},{&quot;t&quot;:43.794,&quot;v&quot;:-2.6},{&quot;t&quot;:43.97,&quot;v&quot;:-2.5},{&quot;t&quot;:44.147,&quot;v&quot;:-4.4},{&quot;t&quot;:44.323,&quot;v&quot;:-2.8},{&quot;t&quot;:44.5,&quot;v&quot;:-1.5},{&quot;t&quot;:44.676,&quot;v&quot;:-2.8},{&quot;t&quot;:44.852,&quot;v&quot;:-2},{&quot;t&quot;:45.029,&quot;v&quot;:-3.1},{&quot;t&quot;:45.205,&quot;v&quot;:-1.5},{&quot;t&quot;:45.382,&quot;v&quot;:-6.5},{&quot;t&quot;:45.558,&quot;v&quot;:-3.2},{&quot;t&quot;:45.735,&quot;v&quot;:-1.6},{&quot;t&quot;:45.911,&quot;v&quot;:-4.5},{&quot;t&quot;:46.087,&quot;v&quot;:-2.2},{&quot;t&quot;:46.264,&quot;v&quot;:-1.1},{&quot;t&quot;:46.44,&quot;v&quot;:-7.2},{&quot;t&quot;:46.617,&quot;v&quot;:-3.6},{&quot;t&quot;:46.793,&quot;v&quot;:-4.5},{&quot;t&quot;:46.969,&quot;v&quot;:-6.1},{&quot;t&quot;:47.146,&quot;v&quot;:-3.2},{&quot;t&quot;:47.322,&quot;v&quot;:-1.6},{&quot;t&quot;:47.499,&quot;v&quot;:-0.8},{&quot;t&quot;:47.675,&quot;v&quot;:-0.4},{&quot;t&quot;:47.852,&quot;v&quot;:0},{&quot;t&quot;:48.028,&quot;v&quot;:-1},{&quot;t&quot;:48.204,&quot;v&quot;:-0.5},{&quot;t&quot;:48.381,&quot;v&quot;:-0.2},{&quot;t&quot;:48.557,&quot;v&quot;:0},{&quot;t&quot;:49.439,&quot;v&quot;:0},{&quot;t&quot;:49.616,&quot;v&quot;:-2.4},{&quot;t&quot;:49.969,&quot;v&quot;:-2.1},{&quot;t&quot;:50.145,&quot;v&quot;:-1.1},{&quot;t&quot;:50.321,&quot;v&quot;:-0.5},{&quot;t&quot;:50.498,&quot;v&quot;:-0.3},{&quot;t&quot;:50.674,&quot;v&quot;:-6.5},{&quot;t&quot;:50.851,&quot;v&quot;:-3.2},{&quot;t&quot;:51.027,&quot;v&quot;:-1.6},{&quot;t&quot;:51.203,&quot;v&quot;:-0.8},{&quot;t&quot;:51.38,&quot;v&quot;:-2.4},{&quot;t&quot;:51.556,&quot;v&quot;:-1.8},{&quot;t&quot;:51.733,&quot;v&quot;:-0.9},{&quot;t&quot;:51.909,&quot;v&quot;:-6.7},{&quot;t&quot;:52.086,&quot;v&quot;:-5.7},{&quot;t&quot;:52.262,&quot;v&quot;:-2.8},{&quot;t&quot;:52.438,&quot;v&quot;:-2.8},{&quot;t&quot;:52.615,&quot;v&quot;:-4.9},{&quot;t&quot;:52.791,&quot;v&quot;:-2.4},{&quot;t&quot;:52.968,&quot;v&quot;:-1.2},{&quot;t&quot;:53.144,&quot;v&quot;:-0.6},{&quot;t&quot;:53.321,&quot;v&quot;:-6.7},{&quot;t&quot;:53.497,&quot;v&quot;:-5.6},{&quot;t&quot;:53.673,&quot;v&quot;:-4},{&quot;t&quot;:53.85,&quot;v&quot;:-2},{&quot;t&quot;:54.026,&quot;v&quot;:-1},{&quot;t&quot;:54.203,&quot;v&quot;:-5.8},{&quot;t&quot;:54.379,&quot;v&quot;:-3.3},{&quot;t&quot;:54.555,&quot;v&quot;:-1.6},{&quot;t&quot;:54.732,&quot;v&quot;:-4.1},{&quot;t&quot;:54.908,&quot;v&quot;:-3},{&quot;t&quot;:55.085,&quot;v&quot;:-3.6},{&quot;t&quot;:55.261,&quot;v&quot;:-1.8},{&quot;t&quot;:55.438,&quot;v&quot;:-0.9},{&quot;t&quot;:55.614,&quot;v&quot;:-0.4},{&quot;t&quot;:55.79,&quot;v&quot;:-2.8},{&quot;t&quot;:55.967,&quot;v&quot;:-1.4},{&quot;t&quot;:56.143,&quot;v&quot;:-0.7},{&quot;t&quot;:56.32,&quot;v&quot;:-0.3},{&quot;t&quot;:56.496,&quot;v&quot;:-4.3},{&quot;t&quot;:56.672,&quot;v&quot;:-2.1},{&quot;t&quot;:56.849,&quot;v&quot;:-1.1},{&quot;t&quot;:57.025,&quot;v&quot;:-0.5},{&quot;t&quot;:57.378,&quot;v&quot;:-0.9},{&quot;t&quot;:57.554,&quot;v&quot;:-3.1},{&quot;t&quot;:57.731,&quot;v&quot;:-1.5},{&quot;t&quot;:57.907,&quot;v&quot;:-0.8},{&quot;t&quot;:58.26,&quot;v&quot;:-0.8},{&quot;t&quot;:58.437,&quot;v&quot;:-5.6},{&quot;t&quot;:58.613,&quot;v&quot;:-2.8},{&quot;t&quot;:58.789,&quot;v&quot;:-1.5},{&quot;t&quot;:58.966,&quot;v&quot;:-0.7},{&quot;t&quot;:59.142,&quot;v&quot;:-0.4},{&quot;t&quot;:59.319,&quot;v&quot;:0},{&quot;t&quot;:59.848,&quot;v&quot;:0},{&quot;t&quot;:60.024,&quot;v&quot;:-6.1},{&quot;t&quot;:60.201,&quot;v&quot;:-3},{&quot;t&quot;:60.377,&quot;v&quot;:-1.5},{&quot;t&quot;:60.554,&quot;v&quot;:-0.7},{&quot;t&quot;:60.73,&quot;v&quot;:-0.4},{&quot;t&quot;:60.906,&quot;v&quot;:0},{&quot;t&quot;:61.259,&quot;v&quot;:0},{&quot;t&quot;:61.436,&quot;v&quot;:-2.8},{&quot;t&quot;:61.612,&quot;v&quot;:-2.7},{&quot;t&quot;:61.788,&quot;v&quot;:-1.3},{&quot;t&quot;:61.965,&quot;v&quot;:-1.8},{&quot;t&quot;:62.141,&quot;v&quot;:-2.4},{&quot;t&quot;:62.318,&quot;v&quot;:-3},{&quot;t&quot;:62.494,&quot;v&quot;:-5.2},{&quot;t&quot;:62.671,&quot;v&quot;:-3.6},{&quot;t&quot;:62.847,&quot;v&quot;:-1.8},{&quot;t&quot;:63.023,&quot;v&quot;:-0.9},{&quot;t&quot;:63.2,&quot;v&quot;:-0.4},{&quot;t&quot;:64.082,&quot;v&quot;:0},{&quot;t&quot;:64.258,&quot;v&quot;:-4.2},{&quot;t&quot;:64.435,&quot;v&quot;:-2.1},{&quot;t&quot;:64.611,&quot;v&quot;:-1},{&quot;t&quot;:64.788,&quot;v&quot;:-0.5},{&quot;t&quot;:64.964,&quot;v&quot;:-0.3},{&quot;t&quot;:65.14,&quot;v&quot;:0},{&quot;t&quot;:65.317,&quot;v&quot;:0},{&quot;t&quot;:65.493,&quot;v&quot;:-1.5},{&quot;t&quot;:65.67,&quot;v&quot;:-1},{&quot;t&quot;:65.846,&quot;v&quot;:-3.2},{&quot;t&quot;:66.022,&quot;v&quot;:-1.6},{&quot;t&quot;:66.199,&quot;v&quot;:-1.9},{&quot;t&quot;:66.375,&quot;v&quot;:-3},{&quot;t&quot;:66.552,&quot;v&quot;:-1.7},{&quot;t&quot;:66.728,&quot;v&quot;:-3.6},{&quot;t&quot;:66.905,&quot;v&quot;:-1.8},{&quot;t&quot;:67.081,&quot;v&quot;:-1.1},{&quot;t&quot;:67.257,&quot;v&quot;:-0.6},{&quot;t&quot;:67.434,&quot;v&quot;:-2.4},{&quot;t&quot;:67.61,&quot;v&quot;:-1.2},{&quot;t&quot;:67.787,&quot;v&quot;:-0.6},{&quot;t&quot;:67.963,&quot;v&quot;:-0.3},{&quot;t&quot;:68.139,&quot;v&quot;:-5.7},{&quot;t&quot;:68.316,&quot;v&quot;:-2.8},{&quot;t&quot;:68.492,&quot;v&quot;:-1.4},{&quot;t&quot;:68.669,&quot;v&quot;:-0.7},{&quot;t&quot;:68.845,&quot;v&quot;:-3.9},{&quot;t&quot;:69.022,&quot;v&quot;:-2.7},{&quot;t&quot;:69.198,&quot;v&quot;:-1.4},{&quot;t&quot;:69.374,&quot;v&quot;:-0.7},{&quot;t&quot;:69.551,&quot;v&quot;:-0.3},{&quot;t&quot;:69.727,&quot;v&quot;:0},{&quot;t&quot;:69.904,&quot;v&quot;:0},{&quot;t&quot;:70.08,&quot;v&quot;:-7.1},{&quot;t&quot;:70.257,&quot;v&quot;:-3.5},{&quot;t&quot;:70.433,&quot;v&quot;:-1.7},{&quot;t&quot;:70.562,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n3.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.043,&quot;v&quot;:0},{&quot;t&quot;:0.219,&quot;v&quot;:-3},{&quot;t&quot;:0.396,&quot;v&quot;:-2.1},{&quot;t&quot;:0.572,&quot;v&quot;:-1},{&quot;t&quot;:0.748,&quot;v&quot;:-0.5},{&quot;t&quot;:0.925,&quot;v&quot;:-2.5},{&quot;t&quot;:1.101,&quot;v&quot;:-2.2},{&quot;t&quot;:1.278,&quot;v&quot;:-1.1},{&quot;t&quot;:1.454,&quot;v&quot;:-2.3},{&quot;t&quot;:1.63,&quot;v&quot;:-2.3},{&quot;t&quot;:1.807,&quot;v&quot;:-1.1},{&quot;t&quot;:2.336,&quot;v&quot;:-1.3},{&quot;t&quot;:2.513,&quot;v&quot;:-0.6},{&quot;t&quot;:2.689,&quot;v&quot;:-2.7},{&quot;t&quot;:2.865,&quot;v&quot;:-1.3},{&quot;t&quot;:3.042,&quot;v&quot;:-1.2},{&quot;t&quot;:3.218,&quot;v&quot;:-4.1},{&quot;t&quot;:3.395,&quot;v&quot;:-2},{&quot;t&quot;:3.571,&quot;v&quot;:-1},{&quot;t&quot;:3.747,&quot;v&quot;:-0.5},{&quot;t&quot;:3.924,&quot;v&quot;:-0.6},{&quot;t&quot;:4.1,&quot;v&quot;:-1.5},{&quot;t&quot;:4.453,&quot;v&quot;:-1.6},{&quot;t&quot;:4.63,&quot;v&quot;:-3.1},{&quot;t&quot;:4.806,&quot;v&quot;:-1.9},{&quot;t&quot;:4.982,&quot;v&quot;:-3.1},{&quot;t&quot;:5.159,&quot;v&quot;:-1.6},{&quot;t&quot;:5.335,&quot;v&quot;:-0.8},{&quot;t&quot;:5.512,&quot;v&quot;:-0.8},{&quot;t&quot;:5.688,&quot;v&quot;:-1.3},{&quot;t&quot;:5.864,&quot;v&quot;:-0.6},{&quot;t&quot;:6.041,&quot;v&quot;:-1.9},{&quot;t&quot;:6.217,&quot;v&quot;:-2.9},{&quot;t&quot;:6.394,&quot;v&quot;:-1.4},{&quot;t&quot;:6.57,&quot;v&quot;:-0.7},{&quot;t&quot;:6.747,&quot;v&quot;:-0.3},{&quot;t&quot;:6.923,&quot;v&quot;:0},{&quot;t&quot;:7.276,&quot;v&quot;:0},{&quot;t&quot;:7.452,&quot;v&quot;:-2.9},{&quot;t&quot;:7.629,&quot;v&quot;:-1.5},{&quot;t&quot;:7.805,&quot;v&quot;:-1},{&quot;t&quot;:7.981,&quot;v&quot;:-0.5},{&quot;t&quot;:8.158,&quot;v&quot;:-1},{&quot;t&quot;:8.334,&quot;v&quot;:-1.8},{&quot;t&quot;:8.511,&quot;v&quot;:-0.9},{&quot;t&quot;:8.864,&quot;v&quot;:-0.8},{&quot;t&quot;:9.04,&quot;v&quot;:-3.7},{&quot;t&quot;:9.216,&quot;v&quot;:-1.8},{&quot;t&quot;:9.393,&quot;v&quot;:-0.9},{&quot;t&quot;:9.569,&quot;v&quot;:-0.4},{&quot;t&quot;:9.746,&quot;v&quot;:-2.4},{&quot;t&quot;:9.922,&quot;v&quot;:-1.6},{&quot;t&quot;:10.098,&quot;v&quot;:-1},{&quot;t&quot;:10.275,&quot;v&quot;:-0.5},{&quot;t&quot;:10.451,&quot;v&quot;:-0.2},{&quot;t&quot;:10.628,&quot;v&quot;:0},{&quot;t&quot;:10.804,&quot;v&quot;:-2.6},{&quot;t&quot;:10.98,&quot;v&quot;:-1.3},{&quot;t&quot;:11.157,&quot;v&quot;:-0.6},{&quot;t&quot;:11.333,&quot;v&quot;:-2.5},{&quot;t&quot;:11.51,&quot;v&quot;:-2.1},{&quot;t&quot;:11.686,&quot;v&quot;:-1},{&quot;t&quot;:11.863,&quot;v&quot;:-2.5},{&quot;t&quot;:12.039,&quot;v&quot;:-1.3},{&quot;t&quot;:12.215,&quot;v&quot;:-0.6},{&quot;t&quot;:12.392,&quot;v&quot;:-0.3},{&quot;t&quot;:12.568,&quot;v&quot;:-2.1},{&quot;t&quot;:12.745,&quot;v&quot;:-1.6},{&quot;t&quot;:12.921,&quot;v&quot;:-1},{&quot;t&quot;:13.098,&quot;v&quot;:-1.9},{&quot;t&quot;:13.274,&quot;v&quot;:-1},{&quot;t&quot;:13.45,&quot;v&quot;:-0.6},{&quot;t&quot;:13.627,&quot;v&quot;:-0.3},{&quot;t&quot;:14.862,&quot;v&quot;:0},{&quot;t&quot;:15.038,&quot;v&quot;:-1},{&quot;t&quot;:15.214,&quot;v&quot;:-0.5},{&quot;t&quot;:15.391,&quot;v&quot;:-1},{&quot;t&quot;:15.567,&quot;v&quot;:-0.5},{&quot;t&quot;:15.744,&quot;v&quot;:-0.3},{&quot;t&quot;:15.92,&quot;v&quot;:0},{&quot;t&quot;:16.097,&quot;v&quot;:-2.4},{&quot;t&quot;:16.273,&quot;v&quot;:-1.2},{&quot;t&quot;:16.449,&quot;v&quot;:-0.6},{&quot;t&quot;:16.626,&quot;v&quot;:-1},{&quot;t&quot;:16.802,&quot;v&quot;:-1.2},{&quot;t&quot;:16.979,&quot;v&quot;:-2.6},{&quot;t&quot;:17.155,&quot;v&quot;:-2.4},{&quot;t&quot;:17.331,&quot;v&quot;:-1.2},{&quot;t&quot;:17.508,&quot;v&quot;:-0.6},{&quot;t&quot;:17.861,&quot;v&quot;:-0.2},{&quot;t&quot;:18.037,&quot;v&quot;:0},{&quot;t&quot;:18.214,&quot;v&quot;:-1.1},{&quot;t&quot;:18.39,&quot;v&quot;:-0.6},{&quot;t&quot;:18.566,&quot;v&quot;:-1.3},{&quot;t&quot;:18.743,&quot;v&quot;:-3.5},{&quot;t&quot;:18.919,&quot;v&quot;:-2.3},{&quot;t&quot;:19.096,&quot;v&quot;:-2.8},{&quot;t&quot;:19.272,&quot;v&quot;:-1.4},{&quot;t&quot;:19.448,&quot;v&quot;:-0.7},{&quot;t&quot;:19.625,&quot;v&quot;:-1.2},{&quot;t&quot;:19.801,&quot;v&quot;:-2.3},{&quot;t&quot;:19.978,&quot;v&quot;:-2.6},{&quot;t&quot;:20.154,&quot;v&quot;:-1.3},{&quot;t&quot;:20.331,&quot;v&quot;:-1.2},{&quot;t&quot;:20.507,&quot;v&quot;:-0.6},{&quot;t&quot;:20.86,&quot;v&quot;:-0.2},{&quot;t&quot;:21.036,&quot;v&quot;:0},{&quot;t&quot;:21.566,&quot;v&quot;:0},{&quot;t&quot;:21.742,&quot;v&quot;:-3.4},{&quot;t&quot;:21.918,&quot;v&quot;:-1.9},{&quot;t&quot;:22.095,&quot;v&quot;:-3.5},{&quot;t&quot;:22.271,&quot;v&quot;:-2.5},{&quot;t&quot;:22.448,&quot;v&quot;:-1.2},{&quot;t&quot;:22.624,&quot;v&quot;:-0.6},{&quot;t&quot;:22.977,&quot;v&quot;:-1},{&quot;t&quot;:23.153,&quot;v&quot;:-3},{&quot;t&quot;:23.33,&quot;v&quot;:-2.8},{&quot;t&quot;:23.506,&quot;v&quot;:-2.5},{&quot;t&quot;:23.683,&quot;v&quot;:-1.2},{&quot;t&quot;:23.859,&quot;v&quot;:-1.2},{&quot;t&quot;:24.035,&quot;v&quot;:-3.1},{&quot;t&quot;:24.212,&quot;v&quot;:-2.3},{&quot;t&quot;:24.565,&quot;v&quot;:-1.8},{&quot;t&quot;:24.741,&quot;v&quot;:-1.6},{&quot;t&quot;:24.917,&quot;v&quot;:-0.8},{&quot;t&quot;:25.094,&quot;v&quot;:-0.4},{&quot;t&quot;:25.27,&quot;v&quot;:0},{&quot;t&quot;:25.799,&quot;v&quot;:0},{&quot;t&quot;:25.976,&quot;v&quot;:-2.7},{&quot;t&quot;:26.152,&quot;v&quot;:-1.3},{&quot;t&quot;:26.329,&quot;v&quot;:-2},{&quot;t&quot;:26.505,&quot;v&quot;:-2.2},{&quot;t&quot;:26.682,&quot;v&quot;:-1.1},{&quot;t&quot;:26.858,&quot;v&quot;:-0.5},{&quot;t&quot;:27.034,&quot;v&quot;:-1.4},{&quot;t&quot;:27.211,&quot;v&quot;:-2.1},{&quot;t&quot;:27.387,&quot;v&quot;:-1.3},{&quot;t&quot;:27.564,&quot;v&quot;:-2},{&quot;t&quot;:27.74,&quot;v&quot;:-1.4},{&quot;t&quot;:28.093,&quot;v&quot;:-0.9},{&quot;t&quot;:28.269,&quot;v&quot;:-0.4},{&quot;t&quot;:28.446,&quot;v&quot;:-0.3},{&quot;t&quot;:28.622,&quot;v&quot;:-2.3},{&quot;t&quot;:29.151,&quot;v&quot;:-2.1},{&quot;t&quot;:29.328,&quot;v&quot;:-1},{&quot;t&quot;:29.504,&quot;v&quot;:-0.5},{&quot;t&quot;:29.681,&quot;v&quot;:-0.2},{&quot;t&quot;:29.857,&quot;v&quot;:0},{&quot;t&quot;:30.034,&quot;v&quot;:-0.9},{&quot;t&quot;:30.563,&quot;v&quot;:-0.7},{&quot;t&quot;:30.739,&quot;v&quot;:-1.9},{&quot;t&quot;:30.916,&quot;v&quot;:-3.8},{&quot;t&quot;:31.092,&quot;v&quot;:-1.9},{&quot;t&quot;:31.268,&quot;v&quot;:-0.9},{&quot;t&quot;:31.445,&quot;v&quot;:-0.5},{&quot;t&quot;:31.621,&quot;v&quot;:-0.2},{&quot;t&quot;:31.974,&quot;v&quot;:0},{&quot;t&quot;:32.151,&quot;v&quot;:-1.5},{&quot;t&quot;:32.327,&quot;v&quot;:-3.1},{&quot;t&quot;:32.503,&quot;v&quot;:-1.6},{&quot;t&quot;:32.68,&quot;v&quot;:-0.8},{&quot;t&quot;:32.856,&quot;v&quot;:-3},{&quot;t&quot;:33.033,&quot;v&quot;:-2.8},{&quot;t&quot;:33.209,&quot;v&quot;:-1.4},{&quot;t&quot;:33.385,&quot;v&quot;:-0.7},{&quot;t&quot;:33.562,&quot;v&quot;:-0.3},{&quot;t&quot;:33.738,&quot;v&quot;:0},{&quot;t&quot;:34.091,&quot;v&quot;:0},{&quot;t&quot;:34.267,&quot;v&quot;:-1.3},{&quot;t&quot;:34.444,&quot;v&quot;:-2.6},{&quot;t&quot;:34.62,&quot;v&quot;:-1.3},{&quot;t&quot;:34.797,&quot;v&quot;:-0.9},{&quot;t&quot;:34.973,&quot;v&quot;:-3.7},{&quot;t&quot;:35.15,&quot;v&quot;:-2},{&quot;t&quot;:35.326,&quot;v&quot;:-1.6},{&quot;t&quot;:35.502,&quot;v&quot;:-0.8},{&quot;t&quot;:35.679,&quot;v&quot;:-2.8},{&quot;t&quot;:35.855,&quot;v&quot;:-1.4},{&quot;t&quot;:36.032,&quot;v&quot;:-1},{&quot;t&quot;:36.208,&quot;v&quot;:-0.5},{&quot;t&quot;:36.385,&quot;v&quot;:-0.2},{&quot;t&quot;:36.561,&quot;v&quot;:-1.6},{&quot;t&quot;:36.737,&quot;v&quot;:-3.2},{&quot;t&quot;:36.914,&quot;v&quot;:-1.6},{&quot;t&quot;:37.09,&quot;v&quot;:-2.4},{&quot;t&quot;:37.267,&quot;v&quot;:-1.7},{&quot;t&quot;:37.443,&quot;v&quot;:-2},{&quot;t&quot;:37.619,&quot;v&quot;:-1},{&quot;t&quot;:37.972,&quot;v&quot;:-1.2},{&quot;t&quot;:38.149,&quot;v&quot;:-1.9},{&quot;t&quot;:38.325,&quot;v&quot;:-1.6},{&quot;t&quot;:38.502,&quot;v&quot;:-0.8},{&quot;t&quot;:38.678,&quot;v&quot;:-0.4},{&quot;t&quot;:38.854,&quot;v&quot;:0},{&quot;t&quot;:39.031,&quot;v&quot;:-1.9},{&quot;t&quot;:39.207,&quot;v&quot;:-1.9},{&quot;t&quot;:39.384,&quot;v&quot;:-0.9},{&quot;t&quot;:39.56,&quot;v&quot;:-0.5},{&quot;t&quot;:39.736,&quot;v&quot;:-2.3},{&quot;t&quot;:39.913,&quot;v&quot;:-2.9},{&quot;t&quot;:40.089,&quot;v&quot;:-3.7},{&quot;t&quot;:40.266,&quot;v&quot;:-1.8},{&quot;t&quot;:40.442,&quot;v&quot;:-0.9},{&quot;t&quot;:40.618,&quot;v&quot;:-1.5},{&quot;t&quot;:40.795,&quot;v&quot;:-2.5},{&quot;t&quot;:40.971,&quot;v&quot;:-1.3},{&quot;t&quot;:41.148,&quot;v&quot;:-0.6},{&quot;t&quot;:41.324,&quot;v&quot;:-0.3},{&quot;t&quot;:41.501,&quot;v&quot;:0},{&quot;t&quot;:41.677,&quot;v&quot;:0},{&quot;t&quot;:41.853,&quot;v&quot;:-1.8},{&quot;t&quot;:42.03,&quot;v&quot;:-0.9},{&quot;t&quot;:42.206,&quot;v&quot;:-0.4},{&quot;t&quot;:43.618,&quot;v&quot;:0},{&quot;t&quot;:43.794,&quot;v&quot;:-2.4},{&quot;t&quot;:43.97,&quot;v&quot;:-1.7},{&quot;t&quot;:44.147,&quot;v&quot;:-2.8},{&quot;t&quot;:44.323,&quot;v&quot;:-2.4},{&quot;t&quot;:44.5,&quot;v&quot;:-2.1},{&quot;t&quot;:44.676,&quot;v&quot;:-1.7},{&quot;t&quot;:44.852,&quot;v&quot;:-2.7},{&quot;t&quot;:45.029,&quot;v&quot;:-2.9},{&quot;t&quot;:45.205,&quot;v&quot;:-1.5},{&quot;t&quot;:45.382,&quot;v&quot;:-3.1},{&quot;t&quot;:45.558,&quot;v&quot;:-1.5},{&quot;t&quot;:45.735,&quot;v&quot;:-0.7},{&quot;t&quot;:45.911,&quot;v&quot;:-1.4},{&quot;t&quot;:46.087,&quot;v&quot;:-1.4},{&quot;t&quot;:46.264,&quot;v&quot;:-0.7},{&quot;t&quot;:46.44,&quot;v&quot;:-2.5},{&quot;t&quot;:46.617,&quot;v&quot;:-1.2},{&quot;t&quot;:46.793,&quot;v&quot;:-3},{&quot;t&quot;:47.146,&quot;v&quot;:-2.8},{&quot;t&quot;:47.322,&quot;v&quot;:-1.4},{&quot;t&quot;:47.499,&quot;v&quot;:-0.7},{&quot;t&quot;:48.204,&quot;v&quot;:-0.4},{&quot;t&quot;:48.381,&quot;v&quot;:0},{&quot;t&quot;:49.263,&quot;v&quot;:0},{&quot;t&quot;:49.439,&quot;v&quot;:-2.3},{&quot;t&quot;:49.616,&quot;v&quot;:-1.9},{&quot;t&quot;:49.792,&quot;v&quot;:-1.5},{&quot;t&quot;:49.969,&quot;v&quot;:-0.8},{&quot;t&quot;:50.321,&quot;v&quot;:-0.6},{&quot;t&quot;:50.498,&quot;v&quot;:-0.3},{&quot;t&quot;:50.674,&quot;v&quot;:-2.8},{&quot;t&quot;:50.851,&quot;v&quot;:-2.3},{&quot;t&quot;:51.027,&quot;v&quot;:-1.1},{&quot;t&quot;:51.203,&quot;v&quot;:-0.6},{&quot;t&quot;:51.733,&quot;v&quot;:-0.4},{&quot;t&quot;:51.909,&quot;v&quot;:-3},{&quot;t&quot;:52.086,&quot;v&quot;:-2.4},{&quot;t&quot;:52.262,&quot;v&quot;:-1.3},{&quot;t&quot;:52.438,&quot;v&quot;:-1.8},{&quot;t&quot;:52.615,&quot;v&quot;:-3.5},{&quot;t&quot;:52.791,&quot;v&quot;:-1.7},{&quot;t&quot;:52.968,&quot;v&quot;:-0.9},{&quot;t&quot;:53.144,&quot;v&quot;:-0.4},{&quot;t&quot;:53.321,&quot;v&quot;:-3.4},{&quot;t&quot;:53.497,&quot;v&quot;:-3.6},{&quot;t&quot;:53.673,&quot;v&quot;:-2.4},{&quot;t&quot;:53.85,&quot;v&quot;:-1.2},{&quot;t&quot;:54.026,&quot;v&quot;:-1},{&quot;t&quot;:54.203,&quot;v&quot;:-3},{&quot;t&quot;:54.379,&quot;v&quot;:-3.1},{&quot;t&quot;:54.555,&quot;v&quot;:-1.6},{&quot;t&quot;:54.732,&quot;v&quot;:-1.2},{&quot;t&quot;:54.908,&quot;v&quot;:-3},{&quot;t&quot;:55.085,&quot;v&quot;:-2.6},{&quot;t&quot;:55.261,&quot;v&quot;:-1.6},{&quot;t&quot;:55.438,&quot;v&quot;:-0.8},{&quot;t&quot;:55.614,&quot;v&quot;:-0.4},{&quot;t&quot;:55.79,&quot;v&quot;:-2.4},{&quot;t&quot;:55.967,&quot;v&quot;:-1.2},{&quot;t&quot;:56.143,&quot;v&quot;:-0.6},{&quot;t&quot;:56.32,&quot;v&quot;:-0.5},{&quot;t&quot;:56.496,&quot;v&quot;:-1.9},{&quot;t&quot;:56.672,&quot;v&quot;:-0.9},{&quot;t&quot;:56.849,&quot;v&quot;:-0.5},{&quot;t&quot;:57.025,&quot;v&quot;:-0.2},{&quot;t&quot;:57.378,&quot;v&quot;:-0.2},{&quot;t&quot;:57.554,&quot;v&quot;:-1.4},{&quot;t&quot;:57.731,&quot;v&quot;:-1.7},{&quot;t&quot;:57.907,&quot;v&quot;:-0.8},{&quot;t&quot;:58.084,&quot;v&quot;:-0.4},{&quot;t&quot;:58.26,&quot;v&quot;:-1.4},{&quot;t&quot;:58.437,&quot;v&quot;:-3.3},{&quot;t&quot;:58.613,&quot;v&quot;:-1.6},{&quot;t&quot;:58.789,&quot;v&quot;:-3},{&quot;t&quot;:58.966,&quot;v&quot;:-1.5},{&quot;t&quot;:59.142,&quot;v&quot;:-0.7},{&quot;t&quot;:59.319,&quot;v&quot;:-0.4},{&quot;t&quot;:59.495,&quot;v&quot;:0},{&quot;t&quot;:59.672,&quot;v&quot;:0},{&quot;t&quot;:59.848,&quot;v&quot;:-0.6},{&quot;t&quot;:60.024,&quot;v&quot;:-2.7},{&quot;t&quot;:60.201,&quot;v&quot;:-1.3},{&quot;t&quot;:60.377,&quot;v&quot;:-0.7},{&quot;t&quot;:60.554,&quot;v&quot;:-0.3},{&quot;t&quot;:60.73,&quot;v&quot;:0},{&quot;t&quot;:61.083,&quot;v&quot;:0},{&quot;t&quot;:61.259,&quot;v&quot;:-0.7},{&quot;t&quot;:61.436,&quot;v&quot;:-1.4},{&quot;t&quot;:61.612,&quot;v&quot;:-1.3},{&quot;t&quot;:61.788,&quot;v&quot;:-3.4},{&quot;t&quot;:61.965,&quot;v&quot;:-2.3},{&quot;t&quot;:62.141,&quot;v&quot;:-2.9},{&quot;t&quot;:62.318,&quot;v&quot;:-2},{&quot;t&quot;:62.494,&quot;v&quot;:-2.8},{&quot;t&quot;:62.671,&quot;v&quot;:-1.6},{&quot;t&quot;:62.847,&quot;v&quot;:-0.8},{&quot;t&quot;:63.023,&quot;v&quot;:-0.4},{&quot;t&quot;:63.2,&quot;v&quot;:-0.2},{&quot;t&quot;:63.553,&quot;v&quot;:0},{&quot;t&quot;:63.729,&quot;v&quot;:-2.6},{&quot;t&quot;:63.906,&quot;v&quot;:-1.3},{&quot;t&quot;:64.082,&quot;v&quot;:-0.6},{&quot;t&quot;:64.258,&quot;v&quot;:-2.3},{&quot;t&quot;:64.435,&quot;v&quot;:-1.2},{&quot;t&quot;:64.611,&quot;v&quot;:-0.6},{&quot;t&quot;:64.788,&quot;v&quot;:-0.3},{&quot;t&quot;:64.964,&quot;v&quot;:-1.4},{&quot;t&quot;:65.14,&quot;v&quot;:-0.7},{&quot;t&quot;:65.317,&quot;v&quot;:-0.3},{&quot;t&quot;:65.493,&quot;v&quot;:-1.3},{&quot;t&quot;:65.67,&quot;v&quot;:-2.1},{&quot;t&quot;:65.846,&quot;v&quot;:-1.7},{&quot;t&quot;:66.022,&quot;v&quot;:-0.8},{&quot;t&quot;:66.199,&quot;v&quot;:-2.1},{&quot;t&quot;:66.375,&quot;v&quot;:-1.5},{&quot;t&quot;:66.552,&quot;v&quot;:-1},{&quot;t&quot;:66.728,&quot;v&quot;:-3},{&quot;t&quot;:66.905,&quot;v&quot;:-1.5},{&quot;t&quot;:67.081,&quot;v&quot;:-0.9},{&quot;t&quot;:67.61,&quot;v&quot;:-0.6},{&quot;t&quot;:67.787,&quot;v&quot;:-0.3},{&quot;t&quot;:67.963,&quot;v&quot;:0},{&quot;t&quot;:68.139,&quot;v&quot;:-3.2},{&quot;t&quot;:68.316,&quot;v&quot;:-1.6},{&quot;t&quot;:68.492,&quot;v&quot;:-0.8},{&quot;t&quot;:68.669,&quot;v&quot;:-0.4},{&quot;t&quot;:68.845,&quot;v&quot;:-3.6},{&quot;t&quot;:69.022,&quot;v&quot;:-1.8},{&quot;t&quot;:69.198,&quot;v&quot;:-1.2},{&quot;t&quot;:69.374,&quot;v&quot;:-0.6},{&quot;t&quot;:69.551,&quot;v&quot;:-0.3},{&quot;t&quot;:69.727,&quot;v&quot;:-1.3},{&quot;t&quot;:69.904,&quot;v&quot;:-0.7},{&quot;t&quot;:70.08,&quot;v&quot;:-2.9},{&quot;t&quot;:70.257,&quot;v&quot;:-1.5},{&quot;t&quot;:70.433,&quot;v&quot;:-0.7},{&quot;t&quot;:70.562,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n4.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.043,&quot;v&quot;:0},{&quot;t&quot;:0.219,&quot;v&quot;:-4.8},{&quot;t&quot;:0.396,&quot;v&quot;:-6.9},{&quot;t&quot;:0.572,&quot;v&quot;:-9.5},{&quot;t&quot;:2.336,&quot;v&quot;:-9.6},{&quot;t&quot;:2.513,&quot;v&quot;:-8.9},{&quot;t&quot;:2.689,&quot;v&quot;:-9.6},{&quot;t&quot;:3.218,&quot;v&quot;:-9.6},{&quot;t&quot;:3.395,&quot;v&quot;:-8.9},{&quot;t&quot;:3.571,&quot;v&quot;:-9.6},{&quot;t&quot;:5.159,&quot;v&quot;:-9.6},{&quot;t&quot;:5.335,&quot;v&quot;:-8.9},{&quot;t&quot;:5.512,&quot;v&quot;:-9.6},{&quot;t&quot;:6.217,&quot;v&quot;:-9.6},{&quot;t&quot;:6.394,&quot;v&quot;:-8.9},{&quot;t&quot;:6.57,&quot;v&quot;:-8.3},{&quot;t&quot;:6.747,&quot;v&quot;:-7.7},{&quot;t&quot;:6.923,&quot;v&quot;:-7.2},{&quot;t&quot;:7.099,&quot;v&quot;:-6.6},{&quot;t&quot;:7.276,&quot;v&quot;:-6.2},{&quot;t&quot;:7.452,&quot;v&quot;:-9.5},{&quot;t&quot;:9.216,&quot;v&quot;:-9.6},{&quot;t&quot;:9.393,&quot;v&quot;:-8.9},{&quot;t&quot;:9.569,&quot;v&quot;:-9.6},{&quot;t&quot;:10.804,&quot;v&quot;:-9.6},{&quot;t&quot;:10.98,&quot;v&quot;:-8.9},{&quot;t&quot;:11.157,&quot;v&quot;:-9.6},{&quot;t&quot;:12.215,&quot;v&quot;:-9.6},{&quot;t&quot;:12.392,&quot;v&quot;:-8.9},{&quot;t&quot;:12.568,&quot;v&quot;:-9.6},{&quot;t&quot;:13.45,&quot;v&quot;:-9.6},{&quot;t&quot;:13.627,&quot;v&quot;:-8.9},{&quot;t&quot;:13.803,&quot;v&quot;:-8.3},{&quot;t&quot;:13.98,&quot;v&quot;:-7.7},{&quot;t&quot;:14.156,&quot;v&quot;:-7.2},{&quot;t&quot;:14.332,&quot;v&quot;:-6.6},{&quot;t&quot;:14.509,&quot;v&quot;:-6.2},{&quot;t&quot;:14.685,&quot;v&quot;:-9.5},{&quot;t&quot;:16.097,&quot;v&quot;:-9.6},{&quot;t&quot;:16.273,&quot;v&quot;:-8.9},{&quot;t&quot;:16.449,&quot;v&quot;:-9.6},{&quot;t&quot;:17.331,&quot;v&quot;:-9.6},{&quot;t&quot;:17.508,&quot;v&quot;:-8.9},{&quot;t&quot;:17.684,&quot;v&quot;:-8.3},{&quot;t&quot;:17.861,&quot;v&quot;:-9.6},{&quot;t&quot;:21.213,&quot;v&quot;:-9.6},{&quot;t&quot;:21.389,&quot;v&quot;:-8.9},{&quot;t&quot;:21.566,&quot;v&quot;:-8.3},{&quot;t&quot;:21.742,&quot;v&quot;:-9.6},{&quot;t&quot;:22.271,&quot;v&quot;:-9.6},{&quot;t&quot;:22.448,&quot;v&quot;:-8.9},{&quot;t&quot;:22.624,&quot;v&quot;:-9.6},{&quot;t&quot;:24.917,&quot;v&quot;:-9.6},{&quot;t&quot;:25.094,&quot;v&quot;:-8.9},{&quot;t&quot;:25.27,&quot;v&quot;:-8.3},{&quot;t&quot;:25.447,&quot;v&quot;:-7.7},{&quot;t&quot;:25.623,&quot;v&quot;:-7.2},{&quot;t&quot;:25.799,&quot;v&quot;:-6.6},{&quot;t&quot;:25.976,&quot;v&quot;:-9.5},{&quot;t&quot;:28.093,&quot;v&quot;:-9.6},{&quot;t&quot;:28.269,&quot;v&quot;:-8.9},{&quot;t&quot;:28.446,&quot;v&quot;:-9.6},{&quot;t&quot;:29.504,&quot;v&quot;:-9.6},{&quot;t&quot;:29.681,&quot;v&quot;:-8.9},{&quot;t&quot;:29.857,&quot;v&quot;:-9.6},{&quot;t&quot;:31.092,&quot;v&quot;:-9.6},{&quot;t&quot;:31.268,&quot;v&quot;:-8.9},{&quot;t&quot;:31.445,&quot;v&quot;:-8.3},{&quot;t&quot;:31.621,&quot;v&quot;:-9.6},{&quot;t&quot;:33.033,&quot;v&quot;:-9.6},{&quot;t&quot;:33.209,&quot;v&quot;:-8.9},{&quot;t&quot;:33.385,&quot;v&quot;:-8.3},{&quot;t&quot;:33.562,&quot;v&quot;:-7.7},{&quot;t&quot;:33.738,&quot;v&quot;:-7.2},{&quot;t&quot;:33.915,&quot;v&quot;:-6.6},{&quot;t&quot;:34.091,&quot;v&quot;:-6.2},{&quot;t&quot;:34.267,&quot;v&quot;:-9.5},{&quot;t&quot;:36.208,&quot;v&quot;:-9.6},{&quot;t&quot;:36.385,&quot;v&quot;:-8.9},{&quot;t&quot;:36.561,&quot;v&quot;:-9.6},{&quot;t&quot;:37.443,&quot;v&quot;:-9.6},{&quot;t&quot;:37.619,&quot;v&quot;:-8.9},{&quot;t&quot;:37.796,&quot;v&quot;:-9.6},{&quot;t&quot;:39.207,&quot;v&quot;:-9.6},{&quot;t&quot;:39.384,&quot;v&quot;:-8.9},{&quot;t&quot;:39.56,&quot;v&quot;:-8.3},{&quot;t&quot;:39.736,&quot;v&quot;:-9.6},{&quot;t&quot;:40.795,&quot;v&quot;:-9.6},{&quot;t&quot;:40.971,&quot;v&quot;:-8.9},{&quot;t&quot;:41.148,&quot;v&quot;:-8.3},{&quot;t&quot;:41.324,&quot;v&quot;:-7.7},{&quot;t&quot;:41.501,&quot;v&quot;:-9.5},{&quot;t&quot;:41.853,&quot;v&quot;:-9.6},{&quot;t&quot;:42.03,&quot;v&quot;:-8.9},{&quot;t&quot;:42.206,&quot;v&quot;:-8.3},{&quot;t&quot;:42.383,&quot;v&quot;:-9.6},{&quot;t&quot;:42.559,&quot;v&quot;:-9.6},{&quot;t&quot;:42.736,&quot;v&quot;:-8.9},{&quot;t&quot;:42.912,&quot;v&quot;:-9.6},{&quot;t&quot;:43.265,&quot;v&quot;:-9.6},{&quot;t&quot;:43.441,&quot;v&quot;:-8.9},{&quot;t&quot;:43.618,&quot;v&quot;:-9.6},{&quot;t&quot;:45.382,&quot;v&quot;:-9.6},{&quot;t&quot;:45.558,&quot;v&quot;:-8.9},{&quot;t&quot;:45.735,&quot;v&quot;:-8.3},{&quot;t&quot;:45.911,&quot;v&quot;:-9.6},{&quot;t&quot;:48.204,&quot;v&quot;:-9.6},{&quot;t&quot;:48.381,&quot;v&quot;:-8.9},{&quot;t&quot;:48.557,&quot;v&quot;:-8.3},{&quot;t&quot;:48.734,&quot;v&quot;:-7.7},{&quot;t&quot;:48.91,&quot;v&quot;:-7.2},{&quot;t&quot;:49.087,&quot;v&quot;:-6.6},{&quot;t&quot;:49.263,&quot;v&quot;:-6.2},{&quot;t&quot;:49.439,&quot;v&quot;:-9.5},{&quot;t&quot;:50.321,&quot;v&quot;:-9.6},{&quot;t&quot;:50.498,&quot;v&quot;:-8.9},{&quot;t&quot;:50.674,&quot;v&quot;:-9.6},{&quot;t&quot;:52.615,&quot;v&quot;:-9.6},{&quot;t&quot;:52.791,&quot;v&quot;:-8.9},{&quot;t&quot;:52.968,&quot;v&quot;:-9.6},{&quot;t&quot;:55.79,&quot;v&quot;:-9.6},{&quot;t&quot;:55.967,&quot;v&quot;:-8.9},{&quot;t&quot;:56.143,&quot;v&quot;:-9.6},{&quot;t&quot;:56.849,&quot;v&quot;:-9.6},{&quot;t&quot;:57.025,&quot;v&quot;:-8.9},{&quot;t&quot;:57.202,&quot;v&quot;:-9.6},{&quot;t&quot;:58.789,&quot;v&quot;:-9.6},{&quot;t&quot;:58.966,&quot;v&quot;:-8.9},{&quot;t&quot;:59.142,&quot;v&quot;:-9.6},{&quot;t&quot;:59.495,&quot;v&quot;:-9.6},{&quot;t&quot;:59.672,&quot;v&quot;:-8.9},{&quot;t&quot;:59.848,&quot;v&quot;:-9.6},{&quot;t&quot;:60.024,&quot;v&quot;:-9.6},{&quot;t&quot;:60.201,&quot;v&quot;:-8.9},{&quot;t&quot;:60.377,&quot;v&quot;:-8.3},{&quot;t&quot;:60.554,&quot;v&quot;:-7.7},{&quot;t&quot;:60.73,&quot;v&quot;:-7.2},{&quot;t&quot;:60.906,&quot;v&quot;:-6.6},{&quot;t&quot;:61.083,&quot;v&quot;:-6.2},{&quot;t&quot;:61.259,&quot;v&quot;:-9.5},{&quot;t&quot;:63.023,&quot;v&quot;:-9.6},{&quot;t&quot;:63.2,&quot;v&quot;:-8.9},{&quot;t&quot;:63.376,&quot;v&quot;:-9.6},{&quot;t&quot;:64.258,&quot;v&quot;:-9.6},{&quot;t&quot;:64.435,&quot;v&quot;:-8.9},{&quot;t&quot;:64.611,&quot;v&quot;:-8.3},{&quot;t&quot;:64.788,&quot;v&quot;:-9.6},{&quot;t&quot;:65.14,&quot;v&quot;:-9.6},{&quot;t&quot;:65.317,&quot;v&quot;:-8.9},{&quot;t&quot;:65.493,&quot;v&quot;:-9.6},{&quot;t&quot;:66.728,&quot;v&quot;:-9.6},{&quot;t&quot;:66.905,&quot;v&quot;:-8.9},{&quot;t&quot;:67.081,&quot;v&quot;:-9.6},{&quot;t&quot;:68.139,&quot;v&quot;:-9.6},{&quot;t&quot;:68.316,&quot;v&quot;:-8.9},{&quot;t&quot;:68.492,&quot;v&quot;:-8.3},{&quot;t&quot;:68.669,&quot;v&quot;:-9.6},{&quot;t&quot;:70.08,&quot;v&quot;:-9.6},{&quot;t&quot;:70.257,&quot;v&quot;:-8.9},{&quot;t&quot;:70.433,&quot;v&quot;:-8.3},{&quot;t&quot;:70.609,&quot;v&quot;:-7.7},{&quot;t&quot;:70.786,&quot;v&quot;:-7.2},{&quot;t&quot;:70.962,&quot;v&quot;:-6.6},{&quot;t&quot;:71.139,&quot;v&quot;:-6.2},{&quot;t&quot;:71.315,&quot;v&quot;:-5.7},{&quot;t&quot;:71.491,&quot;v&quot;:-5.3},{&quot;t&quot;:71.668,&quot;v&quot;:-5},{&quot;t&quot;:71.844,&quot;v&quot;:-4.6},{&quot;t&quot;:72.021,&quot;v&quot;:-4.3},{&quot;t&quot;:72.197,&quot;v&quot;:-4},{&quot;t&quot;:72.374,&quot;v&quot;:-3.7},{&quot;t&quot;:72.55,&quot;v&quot;:-3.4},{&quot;t&quot;:72.726,&quot;v&quot;:-3.2},{&quot;t&quot;:73.079,&quot;v&quot;:-2.8},{&quot;t&quot;:73.256,&quot;v&quot;:-2.6},{&quot;t&quot;:73.608,&quot;v&quot;:-2.2},{&quot;t&quot;:73.785,&quot;v&quot;:-2.1},{&quot;t&quot;:74.138,&quot;v&quot;:-1.8},{&quot;t&quot;:74.314,&quot;v&quot;:-1.6},{&quot;t&quot;:75.02,&quot;v&quot;:-1.2},{&quot;t&quot;:75.196,&quot;v&quot;:-1.1},{&quot;t&quot;:76.431,&quot;v&quot;:-0.7},{&quot;t&quot;:76.608,&quot;v&quot;:-0.6},{&quot;t&quot;:79.254,&quot;v&quot;:-0.2},{&quot;t&quot;:79.43,&quot;v&quot;:0}]}]}"></audio>
+<audio id="el-sfx-hook" src="assets/sfx/impact-bass-1.mp3" data-start="0.60" data-duration="0.6" data-track-index="31" data-volume="0.35"></audio>
+<audio id="el-sfx-t1" src="assets/sfx/whoosh-short.mp3" data-start="7.12" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-t2" src="assets/sfx/whoosh-short.mp3" data-start="14.34" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-t3" src="assets/sfx/whoosh-short.mp3" data-start="25.64" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-t4" src="assets/sfx/whoosh-short.mp3" data-start="33.94" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-t5" src="assets/sfx/whoosh-short.mp3" data-start="49.15" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-t6" src="assets/sfx/whoosh-short.mp3" data-start="60.88" data-duration="0.5" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-ws2" src="assets/sfx/pop.mp3" data-start="11.42" data-duration="0.4" data-track-index="30" data-volume="0.22"></audio>
+<audio id="el-sfx-f2" src="assets/sfx/click-soft.mp3" data-start="17.69" data-duration="0.35" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-f3" src="assets/sfx/click-soft.mp3" data-start="21.69" data-duration="0.35" data-track-index="31" data-volume="0.3"></audio>
+<audio id="el-sfx-big" src="assets/sfx/impact-bass-1.mp3" data-start="29.74" data-duration="0.6" data-track-index="31" data-volume="0.3"></audio>
+<audio id="el-sfx-x250" src="assets/sfx/pop.mp3" data-start="39.64" data-duration="0.4" data-track-index="30" data-volume="0.24"></audio>
+<audio id="el-sfx-xcut" src="assets/sfx/click-soft.mp3" data-start="41.39" data-duration="0.35" data-track-index="31" data-volume="0.32"></audio>
+<audio id="el-sfx-x2" src="assets/sfx/pop.mp3" data-start="45.94" data-duration="0.4" data-track-index="30" data-volume="0.22"></audio>
+<audio id="el-sfx-i2" src="assets/sfx/click-soft.mp3" data-start="56.15" data-duration="0.35" data-track-index="31" data-volume="0.3"></audio>
+<audio id="el-sfx-o1" src="assets/sfx/pop.mp3" data-start="66.18" data-duration="0.35" data-track-index="30" data-volume="0.3"></audio>
+<audio id="el-sfx-o2" src="assets/sfx/pop.mp3" data-start="67.48" data-duration="0.35" data-track-index="31" data-volume="0.3"></audio>
+<audio id="el-sfx-cta" src="assets/sfx/chime.mp3" data-start="68.68" data-duration="1.2" data-track-index="30" data-volume="0.32"></audio>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused:true });
+tl.set('#brand-anchor',{opacity:1},7.22);
+tl.to('.blob',{x:'+=40',y:'-=30',duration:18,ease:'sine.inOut',repeat:3,yoyo:true,stagger:3},0);
+tl.to('#bg-stars circle',{opacity:'+=0.25',duration:4,ease:'sine.inOut',repeat:17,yoyo:true,stagger:{each:0.15,from:'random'}},0);
+tl.set('#cap0',{autoAlpha:1},0.16);tl.set('#cap0',{autoAlpha:0},1.00);
+tl.to('#w0_0',{color:'#FF5A1F',duration:0.1,ease:'none'},0.16);
+tl.to('#w0_1',{color:'#FF5A1F',duration:0.1,ease:'none'},0.32);
+tl.to('#w0_2',{color:'#FF5A1F',duration:0.1,ease:'none'},0.48);
+tl.to('#w0_3',{color:'#FF5A1F',duration:0.1,ease:'none'},0.62);
+tl.to('#w0_4',{color:'#FF5A1F',duration:0.1,ease:'none'},0.78);
+tl.set('#cap1',{autoAlpha:1},1.02);tl.set('#cap1',{autoAlpha:0},2.12);
+tl.to('#w1_0',{color:'#FF5A1F',duration:0.1,ease:'none'},1.02);
+tl.to('#w1_1',{color:'#FF5A1F',duration:0.1,ease:'none'},1.18);
+tl.to('#w1_2',{color:'#FF5A1F',duration:0.1,ease:'none'},1.36);
+tl.to('#w1_3',{color:'#FF5A1F',duration:0.1,ease:'none'},1.60);
+tl.to('#w1_4',{color:'#FF5A1F',duration:0.1,ease:'none'},2.02);
+tl.set('#cap2',{autoAlpha:1},2.14);tl.set('#cap2',{autoAlpha:0},3.58);
+tl.to('#w2_0',{color:'#FF5A1F',duration:0.1,ease:'none'},2.14);
+tl.to('#w2_1',{color:'#FF5A1F',duration:0.1,ease:'none'},2.62);
+tl.to('#w2_2',{color:'#FF5A1F',duration:0.1,ease:'none'},2.78);
+tl.to('#w2_3',{color:'#FF5A1F',duration:0.1,ease:'none'},2.94);
+tl.to('#w2_4',{color:'#FF5A1F',duration:0.1,ease:'none'},3.18);
+tl.set('#cap3',{autoAlpha:1},3.60);tl.set('#cap3',{autoAlpha:0},4.46);
+tl.to('#w3_0',{color:'#FF5A1F',duration:0.1,ease:'none'},3.60);
+tl.to('#w3_1',{color:'#FF5A1F',duration:0.1,ease:'none'},3.76);
+tl.to('#w3_2',{color:'#FF5A1F',duration:0.1,ease:'none'},3.98);
+tl.to('#w3_3',{color:'#FF5A1F',duration:0.1,ease:'none'},4.08);
+tl.to('#w3_4',{color:'#FF5A1F',duration:0.1,ease:'none'},4.24);
+tl.set('#cap4',{autoAlpha:1},4.48);tl.set('#cap4',{autoAlpha:0},5.42);
+tl.to('#w4_0',{color:'#FF5A1F',duration:0.1,ease:'none'},4.48);
+tl.to('#w4_1',{color:'#FF5A1F',duration:0.1,ease:'none'},4.64);
+tl.to('#w4_2',{color:'#FF5A1F',duration:0.1,ease:'none'},4.82);
+tl.to('#w4_3',{color:'#FF5A1F',duration:0.1,ease:'none'},4.98);
+tl.set('#cap5',{autoAlpha:1},5.44);tl.set('#cap5',{autoAlpha:0},6.64);
+tl.to('#w5_0',{color:'#FF5A1F',duration:0.1,ease:'none'},5.44);
+tl.to('#w5_1',{color:'#FF5A1F',duration:0.1,ease:'none'},5.56);
+tl.to('#w5_2',{color:'#FF5A1F',duration:0.1,ease:'none'},5.70);
+tl.to('#w5_3',{color:'#FF5A1F',duration:0.1,ease:'none'},5.92);
+tl.to('#w5_4',{color:'#FF5A1F',duration:0.1,ease:'none'},6.04);
+tl.to('#w5_5',{color:'#FF5A1F',duration:0.1,ease:'none'},6.20);
+tl.set('#cap6',{autoAlpha:1},7.38);tl.set('#cap6',{autoAlpha:0},8.20);
+tl.to('#w6_0',{color:'#FF5A1F',duration:0.1,ease:'none'},7.38);
+tl.to('#w6_1',{color:'#FF5A1F',duration:0.1,ease:'none'},7.52);
+tl.to('#w6_2',{color:'#FF5A1F',duration:0.1,ease:'none'},7.68);
+tl.to('#w6_3',{color:'#FF5A1F',duration:0.1,ease:'none'},7.88);
+tl.to('#w6_4',{color:'#FF5A1F',duration:0.1,ease:'none'},8.04);
+tl.set('#cap7',{autoAlpha:1},8.22);tl.set('#cap7',{autoAlpha:0},8.96);
+tl.to('#w7_0',{color:'#FF5A1F',duration:0.1,ease:'none'},8.22);
+tl.to('#w7_1',{color:'#FF5A1F',duration:0.1,ease:'none'},8.38);
+tl.to('#w7_2',{color:'#FF5A1F',duration:0.1,ease:'none'},8.54);
+tl.to('#w7_3',{color:'#FF5A1F',duration:0.1,ease:'none'},8.68);
+tl.to('#w7_4',{color:'#FF5A1F',duration:0.1,ease:'none'},8.82);
+tl.set('#cap8',{autoAlpha:1},8.98);tl.set('#cap8',{autoAlpha:0},10.12);
+tl.to('#w8_0',{color:'#FF5A1F',duration:0.1,ease:'none'},8.98);
+tl.to('#w8_1',{color:'#FF5A1F',duration:0.1,ease:'none'},9.42);
+tl.to('#w8_2',{color:'#FF5A1F',duration:0.1,ease:'none'},9.60);
+tl.to('#w8_3',{color:'#FF5A1F',duration:0.1,ease:'none'},9.82);
+tl.to('#w8_4',{color:'#FF5A1F',duration:0.1,ease:'none'},10.02);
+tl.set('#cap9',{autoAlpha:1},10.14);tl.set('#cap9',{autoAlpha:0},11.18);
+tl.to('#w9_0',{color:'#FF5A1F',duration:0.1,ease:'none'},10.14);
+tl.to('#w9_1',{color:'#FF5A1F',duration:0.1,ease:'none'},10.34);
+tl.to('#w9_2',{color:'#FF5A1F',duration:0.1,ease:'none'},10.46);
+tl.to('#w9_3',{color:'#FF5A1F',duration:0.1,ease:'none'},10.60);
+tl.to('#w9_4',{color:'#FF5A1F',duration:0.1,ease:'none'},10.76);
+tl.set('#cap10',{autoAlpha:1},11.20);tl.set('#cap10',{autoAlpha:0},11.94);
+tl.to('#w10_0',{color:'#FF5A1F',duration:0.1,ease:'none'},11.20);
+tl.to('#w10_1',{color:'#FF5A1F',duration:0.1,ease:'none'},11.32);
+tl.to('#w10_2',{color:'#FF5A1F',duration:0.1,ease:'none'},11.54);
+tl.to('#w10_3',{color:'#FF5A1F',duration:0.1,ease:'none'},11.70);
+tl.to('#w10_4',{color:'#FF5A1F',duration:0.1,ease:'none'},11.84);
+tl.set('#cap11',{autoAlpha:1},11.96);tl.set('#cap11',{autoAlpha:0},13.06);
+tl.to('#w11_0',{color:'#FF5A1F',duration:0.1,ease:'none'},11.96);
+tl.to('#w11_1',{color:'#FF5A1F',duration:0.1,ease:'none'},12.12);
+tl.to('#w11_2',{color:'#FF5A1F',duration:0.1,ease:'none'},12.54);
+tl.to('#w11_3',{color:'#FF5A1F',duration:0.1,ease:'none'},12.66);
+tl.to('#w11_4',{color:'#FF5A1F',duration:0.1,ease:'none'},12.86);
+tl.set('#cap12',{autoAlpha:1},13.08);tl.set('#cap12',{autoAlpha:0},13.86);
+tl.to('#w12_0',{color:'#FF5A1F',duration:0.1,ease:'none'},13.08);
+tl.to('#w12_1',{color:'#FF5A1F',duration:0.1,ease:'none'},13.18);
+tl.to('#w12_2',{color:'#FF5A1F',duration:0.1,ease:'none'},13.30);
+tl.to('#w12_3',{color:'#FF5A1F',duration:0.1,ease:'none'},13.46);
+tl.set('#cap13',{autoAlpha:1},14.60);tl.set('#cap13',{autoAlpha:0},15.34);
+tl.to('#w13_0',{color:'#FF5A1F',duration:0.1,ease:'none'},14.60);
+tl.to('#w13_1',{color:'#FF5A1F',duration:0.1,ease:'none'},14.76);
+tl.to('#w13_2',{color:'#FF5A1F',duration:0.1,ease:'none'},14.98);
+tl.to('#w13_3',{color:'#FF5A1F',duration:0.1,ease:'none'},15.08);
+tl.to('#w13_4',{color:'#FF5A1F',duration:0.1,ease:'none'},15.20);
+tl.set('#cap14',{autoAlpha:1},15.36);tl.set('#cap14',{autoAlpha:0},16.38);
+tl.to('#w14_0',{color:'#FF5A1F',duration:0.1,ease:'none'},15.36);
+tl.to('#w14_1',{color:'#FF5A1F',duration:0.1,ease:'none'},15.54);
+tl.to('#w14_2',{color:'#FF5A1F',duration:0.1,ease:'none'},15.74);
+tl.to('#w14_3',{color:'#FF5A1F',duration:0.1,ease:'none'},15.98);
+tl.set('#cap15',{autoAlpha:1},16.40);tl.set('#cap15',{autoAlpha:0},17.22);
+tl.to('#w15_0',{color:'#FF5A1F',duration:0.1,ease:'none'},16.40);
+tl.to('#w15_1',{color:'#FF5A1F',duration:0.1,ease:'none'},16.56);
+tl.to('#w15_2',{color:'#FF5A1F',duration:0.1,ease:'none'},16.78);
+tl.to('#w15_3',{color:'#FF5A1F',duration:0.1,ease:'none'},16.90);
+tl.to('#w15_4',{color:'#FF5A1F',duration:0.1,ease:'none'},17.08);
+tl.set('#cap16',{autoAlpha:1},17.24);tl.set('#cap16',{autoAlpha:0},18.38);
+tl.to('#w16_0',{color:'#FF5A1F',duration:0.1,ease:'none'},17.24);
+tl.to('#w16_1',{color:'#FF5A1F',duration:0.1,ease:'none'},17.76);
+tl.to('#w16_2',{color:'#FF5A1F',duration:0.1,ease:'none'},17.94);
+tl.to('#w16_3',{color:'#FF5A1F',duration:0.1,ease:'none'},18.10);
+tl.to('#w16_4',{color:'#FF5A1F',duration:0.1,ease:'none'},18.20);
+tl.set('#cap17',{autoAlpha:1},18.40);tl.set('#cap17',{autoAlpha:0},19.34);
+tl.to('#w17_0',{color:'#FF5A1F',duration:0.1,ease:'none'},18.40);
+tl.to('#w17_1',{color:'#FF5A1F',duration:0.1,ease:'none'},18.58);
+tl.to('#w17_2',{color:'#FF5A1F',duration:0.1,ease:'none'},18.74);
+tl.to('#w17_3',{color:'#FF5A1F',duration:0.1,ease:'none'},18.94);
+tl.to('#w17_4',{color:'#FF5A1F',duration:0.1,ease:'none'},19.10);
+tl.set('#cap18',{autoAlpha:1},19.36);tl.set('#cap18',{autoAlpha:0},20.52);
+tl.to('#w18_0',{color:'#FF5A1F',duration:0.1,ease:'none'},19.36);
+tl.to('#w18_1',{color:'#FF5A1F',duration:0.1,ease:'none'},19.48);
+tl.to('#w18_2',{color:'#FF5A1F',duration:0.1,ease:'none'},19.76);
+tl.to('#w18_3',{color:'#FF5A1F',duration:0.1,ease:'none'},20.20);
+tl.to('#w18_4',{color:'#FF5A1F',duration:0.1,ease:'none'},20.32);
+tl.set('#cap19',{autoAlpha:1},20.54);tl.set('#cap19',{autoAlpha:0},21.70);
+tl.to('#w19_0',{color:'#FF5A1F',duration:0.1,ease:'none'},20.54);
+tl.to('#w19_1',{color:'#FF5A1F',duration:0.1,ease:'none'},20.84);
+tl.to('#w19_2',{color:'#FF5A1F',duration:0.1,ease:'none'},20.96);
+tl.set('#cap20',{autoAlpha:1},21.72);tl.set('#cap20',{autoAlpha:0},22.60);
+tl.to('#w20_0',{color:'#FF5A1F',duration:0.1,ease:'none'},21.72);
+tl.to('#w20_1',{color:'#FF5A1F',duration:0.1,ease:'none'},21.88);
+tl.to('#w20_2',{color:'#FF5A1F',duration:0.1,ease:'none'},22.02);
+tl.to('#w20_3',{color:'#FF5A1F',duration:0.1,ease:'none'},22.20);
+tl.set('#cap21',{autoAlpha:1},22.62);tl.set('#cap21',{autoAlpha:0},23.30);
+tl.to('#w21_0',{color:'#FF5A1F',duration:0.1,ease:'none'},22.62);
+tl.to('#w21_1',{color:'#FF5A1F',duration:0.1,ease:'none'},22.78);
+tl.to('#w21_2',{color:'#FF5A1F',duration:0.1,ease:'none'},22.96);
+tl.to('#w21_3',{color:'#FF5A1F',duration:0.1,ease:'none'},22.98);
+tl.to('#w21_4',{color:'#FF5A1F',duration:0.1,ease:'none'},23.10);
+tl.set('#cap22',{autoAlpha:1},23.32);tl.set('#cap22',{autoAlpha:0},25.20);
+tl.to('#w22_0',{color:'#FF5A1F',duration:0.1,ease:'none'},23.32);
+tl.to('#w22_1',{color:'#FF5A1F',duration:0.1,ease:'none'},23.48);
+tl.to('#w22_2',{color:'#FF5A1F',duration:0.1,ease:'none'},23.74);
+tl.to('#w22_3',{color:'#FF5A1F',duration:0.1,ease:'none'},24.22);
+tl.to('#w22_4',{color:'#FF5A1F',duration:0.1,ease:'none'},24.40);
+tl.to('#w22_5',{color:'#FF5A1F',duration:0.1,ease:'none'},24.76);
+tl.set('#cap23',{autoAlpha:1},25.90);tl.set('#cap23',{autoAlpha:0},26.54);
+tl.to('#w23_0',{color:'#FF5A1F',duration:0.1,ease:'none'},25.90);
+tl.to('#w23_1',{color:'#FF5A1F',duration:0.1,ease:'none'},26.02);
+tl.to('#w23_2',{color:'#FF5A1F',duration:0.1,ease:'none'},26.14);
+tl.to('#w23_3',{color:'#FF5A1F',duration:0.1,ease:'none'},26.28);
+tl.to('#w23_4',{color:'#FF5A1F',duration:0.1,ease:'none'},26.50);
+tl.set('#cap24',{autoAlpha:1},26.56);tl.set('#cap24',{autoAlpha:0},27.52);
+tl.to('#w24_0',{color:'#FF5A1F',duration:0.1,ease:'none'},26.56);
+tl.to('#w24_1',{color:'#FF5A1F',duration:0.1,ease:'none'},26.72);
+tl.to('#w24_2',{color:'#FF5A1F',duration:0.1,ease:'none'},26.88);
+tl.to('#w24_3',{color:'#FF5A1F',duration:0.1,ease:'none'},27.02);
+tl.to('#w24_4',{color:'#FF5A1F',duration:0.1,ease:'none'},27.18);
+tl.set('#cap25',{autoAlpha:1},27.54);tl.set('#cap25',{autoAlpha:0},28.32);
+tl.to('#w25_0',{color:'#FF5A1F',duration:0.1,ease:'none'},27.54);
+tl.to('#w25_1',{color:'#FF5A1F',duration:0.1,ease:'none'},27.66);
+tl.to('#w25_2',{color:'#FF5A1F',duration:0.1,ease:'none'},27.92);
+tl.set('#cap26',{autoAlpha:1},28.34);tl.set('#cap26',{autoAlpha:0},29.34);
+tl.to('#w26_0',{color:'#FF5A1F',duration:0.1,ease:'none'},28.34);
+tl.to('#w26_1',{color:'#FF5A1F',duration:0.1,ease:'none'},28.48);
+tl.to('#w26_2',{color:'#FF5A1F',duration:0.1,ease:'none'},28.60);
+tl.to('#w26_3',{color:'#FF5A1F',duration:0.1,ease:'none'},28.96);
+tl.to('#w26_4',{color:'#FF5A1F',duration:0.1,ease:'none'},29.08);
+tl.set('#cap27',{autoAlpha:1},29.36);tl.set('#cap27',{autoAlpha:0},30.40);
+tl.to('#w27_0',{color:'#FF5A1F',duration:0.1,ease:'none'},29.36);
+tl.to('#w27_1',{color:'#FF5A1F',duration:0.1,ease:'none'},29.78);
+tl.to('#w27_2',{color:'#FF5A1F',duration:0.1,ease:'none'},29.90);
+tl.to('#w27_3',{color:'#FF5A1F',duration:0.1,ease:'none'},30.06);
+tl.to('#w27_4',{color:'#FF5A1F',duration:0.1,ease:'none'},30.30);
+tl.set('#cap28',{autoAlpha:1},30.42);tl.set('#cap28',{autoAlpha:0},31.54);
+tl.to('#w28_0',{color:'#FF5A1F',duration:0.1,ease:'none'},30.42);
+tl.to('#w28_1',{color:'#FF5A1F',duration:0.1,ease:'none'},30.62);
+tl.to('#w28_2',{color:'#FF5A1F',duration:0.1,ease:'none'},30.80);
+tl.to('#w28_3',{color:'#FF5A1F',duration:0.1,ease:'none'},30.96);
+tl.set('#cap29',{autoAlpha:1},31.56);tl.set('#cap29',{autoAlpha:0},32.26);
+tl.to('#w29_0',{color:'#FF5A1F',duration:0.1,ease:'none'},31.56);
+tl.to('#w29_1',{color:'#FF5A1F',duration:0.1,ease:'none'},31.68);
+tl.to('#w29_2',{color:'#FF5A1F',duration:0.1,ease:'none'},31.84);
+tl.to('#w29_3',{color:'#FF5A1F',duration:0.1,ease:'none'},31.98);
+tl.to('#w29_4',{color:'#FF5A1F',duration:0.1,ease:'none'},32.10);
+tl.set('#cap30',{autoAlpha:1},32.28);tl.set('#cap30',{autoAlpha:0},33.44);
+tl.to('#w30_0',{color:'#FF5A1F',duration:0.1,ease:'none'},32.28);
+tl.to('#w30_1',{color:'#FF5A1F',duration:0.1,ease:'none'},32.58);
+tl.to('#w30_2',{color:'#FF5A1F',duration:0.1,ease:'none'},32.70);
+tl.to('#w30_3',{color:'#FF5A1F',duration:0.1,ease:'none'},33.00);
+tl.set('#cap31',{autoAlpha:1},34.20);tl.set('#cap31',{autoAlpha:0},35.02);
+tl.to('#w31_0',{color:'#FF5A1F',duration:0.1,ease:'none'},34.20);
+tl.to('#w31_1',{color:'#FF5A1F',duration:0.1,ease:'none'},34.36);
+tl.to('#w31_2',{color:'#FF5A1F',duration:0.1,ease:'none'},34.48);
+tl.to('#w31_3',{color:'#FF5A1F',duration:0.1,ease:'none'},34.66);
+tl.to('#w31_4',{color:'#FF5A1F',duration:0.1,ease:'none'},34.84);
+tl.set('#cap32',{autoAlpha:1},35.04);tl.set('#cap32',{autoAlpha:0},35.96);
+tl.to('#w32_0',{color:'#FF5A1F',duration:0.1,ease:'none'},35.04);
+tl.to('#w32_1',{color:'#FF5A1F',duration:0.1,ease:'none'},35.18);
+tl.to('#w32_2',{color:'#FF5A1F',duration:0.1,ease:'none'},35.36);
+tl.to('#w32_3',{color:'#FF5A1F',duration:0.1,ease:'none'},35.54);
+tl.to('#w32_4',{color:'#FF5A1F',duration:0.1,ease:'none'},35.88);
+tl.set('#cap33',{autoAlpha:1},35.98);tl.set('#cap33',{autoAlpha:0},37.04);
+tl.to('#w33_0',{color:'#FF5A1F',duration:0.1,ease:'none'},35.98);
+tl.to('#w33_1',{color:'#FF5A1F',duration:0.1,ease:'none'},36.50);
+tl.to('#w33_2',{color:'#FF5A1F',duration:0.1,ease:'none'},36.64);
+tl.to('#w33_3',{color:'#FF5A1F',duration:0.1,ease:'none'},36.82);
+tl.to('#w33_4',{color:'#FF5A1F',duration:0.1,ease:'none'},36.94);
+tl.set('#cap34',{autoAlpha:1},37.06);tl.set('#cap34',{autoAlpha:0},38.28);
+tl.to('#w34_0',{color:'#FF5A1F',duration:0.1,ease:'none'},37.06);
+tl.to('#w34_1',{color:'#FF5A1F',duration:0.1,ease:'none'},37.20);
+tl.to('#w34_2',{color:'#FF5A1F',duration:0.1,ease:'none'},37.36);
+tl.to('#w34_3',{color:'#FF5A1F',duration:0.1,ease:'none'},37.72);
+tl.to('#w34_4',{color:'#FF5A1F',duration:0.1,ease:'none'},37.88);
+tl.set('#cap35',{autoAlpha:1},38.30);tl.set('#cap35',{autoAlpha:0},39.58);
+tl.to('#w35_0',{color:'#FF5A1F',duration:0.1,ease:'none'},38.30);
+tl.to('#w35_1',{color:'#FF5A1F',duration:0.1,ease:'none'},38.42);
+tl.to('#w35_2',{color:'#FF5A1F',duration:0.1,ease:'none'},38.89);
+tl.set('#cap36',{autoAlpha:1},39.60);tl.set('#cap36',{autoAlpha:0},41.42);
+tl.to('#w36_0',{color:'#FF5A1F',duration:0.1,ease:'none'},39.60);
+tl.to('#w36_1',{color:'#FF5A1F',duration:0.1,ease:'none'},39.72);
+tl.to('#w36_2',{color:'#FF5A1F',duration:0.1,ease:'none'},39.84);
+tl.to('#w36_3',{color:'#FF5A1F',duration:0.1,ease:'none'},40.04);
+tl.to('#w36_4',{color:'#FF5A1F',duration:0.1,ease:'none'},40.49);
+tl.set('#cap37',{autoAlpha:1},41.44);tl.set('#cap37',{autoAlpha:0},42.24);
+tl.to('#w37_0',{color:'#FF5A1F',duration:0.1,ease:'none'},41.44);
+tl.to('#w37_1',{color:'#FF5A1F',duration:0.1,ease:'none'},41.62);
+tl.to('#w37_2',{color:'#FF5A1F',duration:0.1,ease:'none'},41.78);
+tl.set('#cap38',{autoAlpha:1},42.26);tl.set('#cap38',{autoAlpha:0},43.50);
+tl.to('#w38_0',{color:'#FF5A1F',duration:0.1,ease:'none'},42.26);
+tl.to('#w38_1',{color:'#FF5A1F',duration:0.1,ease:'none'},42.40);
+tl.to('#w38_2',{color:'#FF5A1F',duration:0.1,ease:'none'},42.84);
+tl.to('#w38_3',{color:'#FF5A1F',duration:0.1,ease:'none'},42.98);
+tl.to('#w38_4',{color:'#FF5A1F',duration:0.1,ease:'none'},43.12);
+tl.set('#cap39',{autoAlpha:1},43.52);tl.set('#cap39',{autoAlpha:0},44.30);
+tl.to('#w39_0',{color:'#FF5A1F',duration:0.1,ease:'none'},43.52);
+tl.to('#w39_1',{color:'#FF5A1F',duration:0.1,ease:'none'},43.68);
+tl.to('#w39_2',{color:'#FF5A1F',duration:0.1,ease:'none'},43.86);
+tl.to('#w39_3',{color:'#FF5A1F',duration:0.1,ease:'none'},43.96);
+tl.to('#w39_4',{color:'#FF5A1F',duration:0.1,ease:'none'},44.12);
+tl.set('#cap40',{autoAlpha:1},44.32);tl.set('#cap40',{autoAlpha:0},45.06);
+tl.to('#w40_0',{color:'#FF5A1F',duration:0.1,ease:'none'},44.32);
+tl.to('#w40_1',{color:'#FF5A1F',duration:0.1,ease:'none'},44.46);
+tl.to('#w40_2',{color:'#FF5A1F',duration:0.1,ease:'none'},44.68);
+tl.to('#w40_3',{color:'#FF5A1F',duration:0.1,ease:'none'},44.86);
+tl.to('#w40_4',{color:'#FF5A1F',duration:0.1,ease:'none'},44.98);
+tl.set('#cap41',{autoAlpha:1},45.08);tl.set('#cap41',{autoAlpha:0},46.38);
+tl.to('#w41_0',{color:'#FF5A1F',duration:0.1,ease:'none'},45.08);
+tl.to('#w41_1',{color:'#FF5A1F',duration:0.1,ease:'none'},45.26);
+tl.to('#w41_2',{color:'#FF5A1F',duration:0.1,ease:'none'},45.92);
+tl.to('#w41_3',{color:'#FF5A1F',duration:0.1,ease:'none'},46.12);
+tl.to('#w41_4',{color:'#FF5A1F',duration:0.1,ease:'none'},46.26);
+tl.set('#cap42',{autoAlpha:1},46.40);tl.set('#cap42',{autoAlpha:0},47.50);
+tl.to('#w42_0',{color:'#FF5A1F',duration:0.1,ease:'none'},46.40);
+tl.to('#w42_1',{color:'#FF5A1F',duration:0.1,ease:'none'},46.64);
+tl.to('#w42_2',{color:'#FF5A1F',duration:0.1,ease:'none'},46.74);
+tl.to('#w42_3',{color:'#FF5A1F',duration:0.1,ease:'none'},47.02);
+tl.to('#w42_4',{color:'#FF5A1F',duration:0.1,ease:'none'},47.40);
+tl.set('#cap43',{autoAlpha:1},47.52);tl.set('#cap43',{autoAlpha:0},48.68);
+tl.to('#w43_0',{color:'#FF5A1F',duration:0.1,ease:'none'},47.52);
+tl.to('#w43_1',{color:'#FF5A1F',duration:0.1,ease:'none'},47.72);
+tl.to('#w43_2',{color:'#FF5A1F',duration:0.1,ease:'none'},48.00);
+tl.to('#w43_3',{color:'#FF5A1F',duration:0.1,ease:'none'},48.10);
+tl.set('#cap44',{autoAlpha:1},49.41);tl.set('#cap44',{autoAlpha:0},50.59);
+tl.to('#w44_0',{color:'#FF5A1F',duration:0.1,ease:'none'},49.41);
+tl.to('#w44_1',{color:'#FF5A1F',duration:0.1,ease:'none'},49.63);
+tl.to('#w44_2',{color:'#FF5A1F',duration:0.1,ease:'none'},49.95);
+tl.to('#w44_3',{color:'#FF5A1F',duration:0.1,ease:'none'},50.07);
+tl.set('#cap45',{autoAlpha:1},50.61);tl.set('#cap45',{autoAlpha:0},51.35);
+tl.to('#w45_0',{color:'#FF5A1F',duration:0.1,ease:'none'},50.61);
+tl.to('#w45_1',{color:'#FF5A1F',duration:0.1,ease:'none'},50.75);
+tl.to('#w45_2',{color:'#FF5A1F',duration:0.1,ease:'none'},50.89);
+tl.to('#w45_3',{color:'#FF5A1F',duration:0.1,ease:'none'},51.03);
+tl.to('#w45_4',{color:'#FF5A1F',duration:0.1,ease:'none'},51.19);
+tl.set('#cap46',{autoAlpha:1},51.37);tl.set('#cap46',{autoAlpha:0},52.13);
+tl.to('#w46_0',{color:'#FF5A1F',duration:0.1,ease:'none'},51.37);
+tl.to('#w46_1',{color:'#FF5A1F',duration:0.1,ease:'none'},51.53);
+tl.to('#w46_2',{color:'#FF5A1F',duration:0.1,ease:'none'},51.65);
+tl.to('#w46_3',{color:'#FF5A1F',duration:0.1,ease:'none'},51.81);
+tl.to('#w46_4',{color:'#FF5A1F',duration:0.1,ease:'none'},52.03);
+tl.set('#cap47',{autoAlpha:1},52.15);tl.set('#cap47',{autoAlpha:0},52.95);
+tl.to('#w47_0',{color:'#FF5A1F',duration:0.1,ease:'none'},52.15);
+tl.to('#w47_1',{color:'#FF5A1F',duration:0.1,ease:'none'},52.27);
+tl.to('#w47_2',{color:'#FF5A1F',duration:0.1,ease:'none'},52.43);
+tl.to('#w47_3',{color:'#FF5A1F',duration:0.1,ease:'none'},52.57);
+tl.set('#cap48',{autoAlpha:1},52.97);tl.set('#cap48',{autoAlpha:0},53.73);
+tl.to('#w48_0',{color:'#FF5A1F',duration:0.1,ease:'none'},52.97);
+tl.to('#w48_1',{color:'#FF5A1F',duration:0.1,ease:'none'},53.13);
+tl.to('#w48_2',{color:'#FF5A1F',duration:0.1,ease:'none'},53.27);
+tl.to('#w48_3',{color:'#FF5A1F',duration:0.1,ease:'none'},53.43);
+tl.to('#w48_4',{color:'#FF5A1F',duration:0.1,ease:'none'},53.65);
+tl.set('#cap49',{autoAlpha:1},53.75);tl.set('#cap49',{autoAlpha:0},54.51);
+tl.to('#w49_0',{color:'#FF5A1F',duration:0.1,ease:'none'},53.75);
+tl.to('#w49_1',{color:'#FF5A1F',duration:0.1,ease:'none'},53.91);
+tl.to('#w49_2',{color:'#FF5A1F',duration:0.1,ease:'none'},54.07);
+tl.to('#w49_3',{color:'#FF5A1F',duration:0.1,ease:'none'},54.17);
+tl.to('#w49_4',{color:'#FF5A1F',duration:0.1,ease:'none'},54.33);
+tl.set('#cap50',{autoAlpha:1},54.53);tl.set('#cap50',{autoAlpha:0},55.37);
+tl.to('#w50_0',{color:'#FF5A1F',duration:0.1,ease:'none'},54.53);
+tl.to('#w50_1',{color:'#FF5A1F',duration:0.1,ease:'none'},54.71);
+tl.to('#w50_2',{color:'#FF5A1F',duration:0.1,ease:'none'},54.87);
+tl.to('#w50_3',{color:'#FF5A1F',duration:0.1,ease:'none'},55.03);
+tl.to('#w50_4',{color:'#FF5A1F',duration:0.1,ease:'none'},55.25);
+tl.set('#cap51',{autoAlpha:1},55.39);tl.set('#cap51',{autoAlpha:0},56.17);
+tl.to('#w51_0',{color:'#FF5A1F',duration:0.1,ease:'none'},55.39);
+tl.to('#w51_1',{color:'#FF5A1F',duration:0.1,ease:'none'},55.51);
+tl.to('#w51_2',{color:'#FF5A1F',duration:0.1,ease:'none'},55.67);
+tl.set('#cap52',{autoAlpha:1},56.19);tl.set('#cap52',{autoAlpha:0},57.07);
+tl.to('#w52_0',{color:'#FF5A1F',duration:0.1,ease:'none'},56.19);
+tl.to('#w52_1',{color:'#FF5A1F',duration:0.1,ease:'none'},56.31);
+tl.to('#w52_2',{color:'#FF5A1F',duration:0.1,ease:'none'},56.51);
+tl.to('#w52_3',{color:'#FF5A1F',duration:0.1,ease:'none'},56.67);
+tl.set('#cap53',{autoAlpha:1},57.09);tl.set('#cap53',{autoAlpha:0},57.79);
+tl.to('#w53_0',{color:'#FF5A1F',duration:0.1,ease:'none'},57.09);
+tl.to('#w53_1',{color:'#FF5A1F',duration:0.1,ease:'none'},57.23);
+tl.to('#w53_2',{color:'#FF5A1F',duration:0.1,ease:'none'},57.41);
+tl.to('#w53_3',{color:'#FF5A1F',duration:0.1,ease:'none'},57.57);
+tl.to('#w53_4',{color:'#FF5A1F',duration:0.1,ease:'none'},57.75);
+tl.set('#cap54',{autoAlpha:1},57.81);tl.set('#cap54',{autoAlpha:0},58.49);
+tl.to('#w54_0',{color:'#FF5A1F',duration:0.1,ease:'none'},57.81);
+tl.to('#w54_1',{color:'#FF5A1F',duration:0.1,ease:'none'},57.95);
+tl.to('#w54_2',{color:'#FF5A1F',duration:0.1,ease:'none'},58.09);
+tl.to('#w54_3',{color:'#FF5A1F',duration:0.1,ease:'none'},58.25);
+tl.to('#w54_4',{color:'#FF5A1F',duration:0.1,ease:'none'},58.39);
+tl.set('#cap55',{autoAlpha:1},58.51);tl.set('#cap55',{autoAlpha:0},59.71);
+tl.to('#w55_0',{color:'#FF5A1F',duration:0.1,ease:'none'},58.51);
+tl.to('#w55_1',{color:'#FF5A1F',duration:0.1,ease:'none'},58.71);
+tl.to('#w55_2',{color:'#FF5A1F',duration:0.1,ease:'none'},59.17);
+tl.to('#w55_3',{color:'#FF5A1F',duration:0.1,ease:'none'},59.33);
+tl.set('#cap56',{autoAlpha:1},59.73);tl.set('#cap56',{autoAlpha:0},60.41);
+tl.to('#w56_0',{color:'#FF5A1F',duration:0.1,ease:'none'},59.73);
+tl.to('#w56_1',{color:'#FF5A1F',duration:0.1,ease:'none'},59.87);
+tl.to('#w56_2',{color:'#FF5A1F',duration:0.1,ease:'none'},59.99);
+tl.set('#cap57',{autoAlpha:1},61.14);tl.set('#cap57',{autoAlpha:0},61.90);
+tl.to('#w57_0',{color:'#FF5A1F',duration:0.1,ease:'none'},61.14);
+tl.to('#w57_1',{color:'#FF5A1F',duration:0.1,ease:'none'},61.30);
+tl.to('#w57_2',{color:'#FF5A1F',duration:0.1,ease:'none'},61.46);
+tl.to('#w57_3',{color:'#FF5A1F',duration:0.1,ease:'none'},61.60);
+tl.to('#w57_4',{color:'#FF5A1F',duration:0.1,ease:'none'},61.78);
+tl.set('#cap58',{autoAlpha:1},61.92);tl.set('#cap58',{autoAlpha:0},63.22);
+tl.to('#w58_0',{color:'#FF5A1F',duration:0.1,ease:'none'},61.92);
+tl.to('#w58_1',{color:'#FF5A1F',duration:0.1,ease:'none'},62.06);
+tl.to('#w58_2',{color:'#FF5A1F',duration:0.1,ease:'none'},62.30);
+tl.to('#w58_3',{color:'#FF5A1F',duration:0.1,ease:'none'},62.64);
+tl.to('#w58_4',{color:'#FF5A1F',duration:0.1,ease:'none'},62.74);
+tl.set('#cap59',{autoAlpha:1},63.24);tl.set('#cap59',{autoAlpha:0},63.94);
+tl.to('#w59_0',{color:'#FF5A1F',duration:0.1,ease:'none'},63.24);
+tl.to('#w59_1',{color:'#FF5A1F',duration:0.1,ease:'none'},63.38);
+tl.to('#w59_2',{color:'#FF5A1F',duration:0.1,ease:'none'},63.52);
+tl.to('#w59_3',{color:'#FF5A1F',duration:0.1,ease:'none'},63.66);
+tl.to('#w59_4',{color:'#FF5A1F',duration:0.1,ease:'none'},63.82);
+tl.set('#cap60',{autoAlpha:1},63.96);tl.set('#cap60',{autoAlpha:0},65.38);
+tl.to('#w60_0',{color:'#FF5A1F',duration:0.1,ease:'none'},63.96);
+tl.to('#w60_1',{color:'#FF5A1F',duration:0.1,ease:'none'},64.16);
+tl.to('#w60_2',{color:'#FF5A1F',duration:0.1,ease:'none'},64.82);
+tl.to('#w60_3',{color:'#FF5A1F',duration:0.1,ease:'none'},65.00);
+tl.set('#cap61',{autoAlpha:1},65.40);tl.set('#cap61',{autoAlpha:0},66.38);
+tl.to('#w61_0',{color:'#FF5A1F',duration:0.1,ease:'none'},65.40);
+tl.to('#w61_1',{color:'#FF5A1F',duration:0.1,ease:'none'},65.56);
+tl.to('#w61_2',{color:'#FF5A1F',duration:0.1,ease:'none'},65.74);
+tl.to('#w61_3',{color:'#FF5A1F',duration:0.1,ease:'none'},65.90);
+tl.to('#w61_4',{color:'#FF5A1F',duration:0.1,ease:'none'},66.18);
+tl.set('#cap62',{autoAlpha:1},66.40);tl.set('#cap62',{autoAlpha:0},67.08);
+tl.to('#w62_0',{color:'#FF5A1F',duration:0.1,ease:'none'},66.40);
+tl.to('#w62_1',{color:'#FF5A1F',duration:0.1,ease:'none'},66.54);
+tl.to('#w62_2',{color:'#FF5A1F',duration:0.1,ease:'none'},66.72);
+tl.set('#cap63',{autoAlpha:1},67.10);tl.set('#cap63',{autoAlpha:0},67.96);
+tl.to('#w63_0',{color:'#FF5A1F',duration:0.1,ease:'none'},67.10);
+tl.to('#w63_1',{color:'#FF5A1F',duration:0.1,ease:'none'},67.24);
+tl.to('#w63_2',{color:'#FF5A1F',duration:0.1,ease:'none'},67.44);
+tl.to('#w63_3',{color:'#FF5A1F',duration:0.1,ease:'none'},67.64);
+tl.to('#w63_4',{color:'#FF5A1F',duration:0.1,ease:'none'},67.80);
+tl.set('#cap64',{autoAlpha:1},67.98);tl.set('#cap64',{autoAlpha:0},69.24);
+tl.to('#w64_0',{color:'#FF5A1F',duration:0.1,ease:'none'},67.98);
+tl.to('#w64_1',{color:'#FF5A1F',duration:0.1,ease:'none'},68.12);
+tl.to('#w64_2',{color:'#FF5A1F',duration:0.1,ease:'none'},68.70);
+tl.to('#w64_3',{color:'#FF5A1F',duration:0.1,ease:'none'},68.86);
+tl.to('#w64_4',{color:'#FF5A1F',duration:0.1,ease:'none'},69.04);
+tl.set('#cap65',{autoAlpha:1},69.26);tl.set('#cap65',{autoAlpha:0},70.46);
+tl.to('#w65_0',{color:'#FF5A1F',duration:0.1,ease:'none'},69.26);
+tl.to('#w65_1',{color:'#FF5A1F',duration:0.1,ease:'none'},69.42);
+tl.to('#w65_2',{color:'#FF5A1F',duration:0.1,ease:'none'},69.62);
+tl.to('#w65_3',{color:'#FF5A1F',duration:0.1,ease:'none'},69.76);
+tl.to('#w65_4',{color:'#FF5A1F',duration:0.1,ease:'none'},69.92);
+tl.to('#w65_5',{color:'#FF5A1F',duration:0.1,ease:'none'},70.04);
+window.__timelines['main'] = tl;
+</script>
+</body>
+</html>
