@@ -1,0 +1,7 @@
+Giá xăng giảm kỳ thứ sáu liên tiếp trong tháng mười một, nhưng lần này chỉ nhích xuống năm mươi đến một trăm tám mươi đồng một lít, còn dầu diesel giảm gần một nghìn bốn trăm đồng.
+Từ mười lăm giờ chiều hai mươi sáu tháng mười một, liên Bộ Công Thương và Tài chính tiếp tục hạ giá bán lẻ xăng dầu, theo đà giảm của giá thành phẩm thế giới.
+Xăng E năm giảm một trăm tám mươi đồng, còn mười tám nghìn ba trăm chín mươi đồng một lít. Xăng E mười giảm năm mươi đồng, còn mười chín nghìn không trăm năm mươi đồng. Dầu diesel giảm một nghìn ba trăm tám mươi đồng, còn hai mươi bốn nghìn chín trăm sáu mươi đồng.
+Cộng dồn so với cuối tháng trước, mỗi lít xăng E mười đã rẻ hơn gần sáu nghìn bảy trăm đồng, dầu diesel thấp hơn gần năm nghìn ba trăm đồng. Giá xăng trong nước nay về ngang thời điểm ngay trước khi xảy ra xung đột ở Trung Đông.
+Giữa hai kỳ điều hành, giá thành phẩm xăng dầu thế giới bình quân giảm từ tám đến chín phẩy ba phần trăm do lo ngại dư cung. Tuy vậy, riêng phiên hai mươi lăm tháng mười một, dầu Brent đã bật tăng ba phẩy năm phần trăm, lên chín mươi tư phẩy sáu mươi mốt đô la Mỹ một thùng.
+Kỳ này, liên Bộ trích lập trở lại quỹ bình ổn giá một nghìn bốn trăm đồng mỗi lít xăng và năm trăm đồng mỗi lít dầu diesel. Thuế tiêu thụ đặc biệt với xăng vẫn ở mức không phần trăm đến hết tháng ba năm sau.
+Sáu kỳ giảm liên tiếp, nhưng xăng kỳ này chỉ giảm nhẹ: theo bạn, nên để giá giảm sâu hơn ngay, hay trích quỹ bình ổn để dự phòng biến động? Hãy để lại bình luận quan điểm của bạn.
