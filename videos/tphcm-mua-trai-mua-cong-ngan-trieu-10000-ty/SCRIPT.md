@@ -1,0 +1,7 @@
+Mưa trái mùa đổ xuống Thành phố Hồ Chí Minh giữa mùa khô, đúng lúc triều cường còn cao, và hệ thống cống ngăn triều mười nghìn tỷ đồng lập tức vào cuộc.
+Đài Khí tượng Thủy văn Nam Bộ dự báo đợt mưa dông kéo dài từ ngày hai mươi bảy đến hai mươi chín tháng mười một, có nơi có thể trên một trăm mi-li-mét. Chiều hai mươi tám, chủ đầu tư đã đóng các cống để chủ động chống ngập.
+Hệ thống gồm sáu cống lớn và hai cống nhỏ, được thiết kế kiểm soát ngập do triều trên khoảng năm trăm bảy mươi ki-lô-mét vuông, cho khoảng sáu phẩy năm triệu người, cùng ba trạm bơm tổng công suất khoảng một trăm hai mươi mét khối mỗi giây.
+Chiều hai mươi lăm tháng mười một, ngày đầu vận hành liên hoàn, đỉnh triều tại trạm Phú An đạt một phẩy sáu mươi lăm mét, vượt báo động ba, nhưng mực nước hai phía cống chênh nhau tới hơn hai mét.
+Trong hai mươi lăm năm qua, đỉnh triều tại Phú An và Nhà Bè đã tăng trung bình ba mươi mốt đến ba mươi tám xen-ti-mét. Còn dự án khởi công từ năm hai nghìn không trăm mười sáu, từng phải dừng ba lần, kéo dài năm năm.
+Chiều hai mươi tám, đường Trần Xuân Soạn, nơi trước đây thường ngập nhất, không còn ngập do triều, nước mưa có đọng nhưng rút nhanh. Tuy vậy, ở đợt triều ngày hai mươi lăm, một số tuyến dưới chân cầu Phú Mỹ vẫn bị nước dâng, vì vùng bảo vệ chưa khép kín.
+Theo bạn, cống ngăn triều mười nghìn tỷ đã là lời giải chống ngập cho thành phố, hay mới chỉ là bước đầu? Hãy để lại bình luận quan điểm của bạn.
